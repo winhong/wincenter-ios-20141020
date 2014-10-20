@@ -228,9 +228,9 @@
   _backgroundColor       = [UIColor blackColor];
   _outerBorderColor      = [UIColor grayColor];
   _innerBorderColor      = [UIColor blackColor];
-//  _normalBarColor           = [UIColor greenColor];
-//  _warningBarColor          = [UIColor yellowColor];
-//  _dangerBarColor           = [UIColor redColor];
+  _normalBarColor        = [UIColor greenColor];
+  _warningBarColor          = [UIColor yellowColor];
+  _dangerBarColor           = [UIColor redColor];
   
   // Misc.
   self.clearsContextBeforeDrawing = NO;

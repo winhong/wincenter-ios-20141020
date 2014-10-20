@@ -28,7 +28,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-SK-vj9">
-                                    <rect key="frame" x="-1" y="290" width="323" height="42"/>
+                                    <rect key="frame" x="-1" y="60" width="323" height="42"/>
                                     <state key="normal" image="experiential">
                                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

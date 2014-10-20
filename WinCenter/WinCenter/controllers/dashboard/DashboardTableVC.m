@@ -9,6 +9,7 @@
 #import "DashboardTableVC.h"
 #import "MSCalendarViewController.h"
 
+
 @interface DashboardTableVC ()
 
 @end
@@ -18,6 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    EScrollerView *scroller=[[EScrollerView alloc] initWithFrameRect:CGRectMake(0, 20, 320, 150)
+                                                          ImageArray:[NSArray arrayWithObjects:@"EScrollerView_1.jpg",@"EScrollerView_2.jpg",@"EScrollerView_3.jpg", nil]
+                                                          TitleArray:[NSArray arrayWithObjects:@"EScrollerView_1",@"EScrollerView_2",@"EScrollerView_3", nil]];
+    scroller.delegate=self;
+    self.tableView.tableHeaderView = scroller;
     
     [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
         if(allRemote.count>0){
@@ -30,6 +37,12 @@
         }
     }];
 }
+
+-(void)EScrollerViewDidClicked:(NSUInteger)index
+{
+    NSLog(@"index--%d",index);
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

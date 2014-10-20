@@ -11,6 +11,7 @@
 #import "VPImageCropperViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "RAViewController.h"
 #define ORIGINAL_MAX_WIDTH 640.0f
 
 
@@ -42,10 +43,12 @@
     UINavigationController *navigationController = (UINavigationController *)self.frostedViewController.contentViewController;
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-        
-    } else if (indexPath.section == 0 && indexPath.row == 1) {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateInitialViewController];
-        [self presentViewController:vc animated:YES completion:nil];
+  
+    }else if (indexPath.section == 0 && indexPath.row == 1) {
+        [navigationController pushViewController:[RAViewController new] animated:YES];
+    }
+    else if (indexPath.section == 0 && indexPath.row == 2) {
+        [navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateViewController:@"PopOptionsVC"] animated:YES];
     }
     
     
