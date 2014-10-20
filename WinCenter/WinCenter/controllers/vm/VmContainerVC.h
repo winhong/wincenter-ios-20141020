@@ -7,8 +7,12 @@
 //
 
 #import "MasterContainerVC.h"
+#import "RRCircularMenu.h"
 
-@interface VmContainerVC : MasterContainerVC<UIActionSheetDelegate>
+@interface VmContainerVC : MasterContainerVC<UIActionSheetDelegate, RRCircularMenuDelegate>{
+    RRCircularMenu *menu;
+    UITapGestureRecognizer *tap;
+}
 
 @property VmVO *vmVO;
 @property (weak, nonatomic) IBOutlet UIView *vmControlButtons;

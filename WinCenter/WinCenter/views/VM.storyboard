@@ -137,6 +137,13 @@
                                 <action selector="backAction:" destination="rda-j3-bYj" id="5IN-Dl-lLJ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Euw-q8-z8w"/>
+                        <barButtonItem systemItem="action" id="66V-Yn-8RN">
+                            <connections>
+                                <action selector="openMenu:" destination="rda-j3-bYj" id="8JF-gf-ygK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="a1J-Dg-zyV"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="9MO-uX-sLc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

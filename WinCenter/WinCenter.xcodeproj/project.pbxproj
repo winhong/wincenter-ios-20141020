@@ -195,6 +195,22 @@
 		1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824360219F4F774007E4D6C /* RATableViewCell.m */; };
 		1824360819F4F774007E4D6C /* RATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1824360319F4F774007E4D6C /* RATableViewCell.xib */; };
 		1824360919F4F774007E4D6C /* RAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824360519F4F774007E4D6C /* RAViewController.m */; };
+		1824362119F4FE05007E4D6C /* calories.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824360B19F4FE05007E4D6C /* calories.off@2x.png */; };
+		1824362219F4FE05007E4D6C /* calories@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824360C19F4FE05007E4D6C /* calories@2x.png */; };
+		1824362319F4FE05007E4D6C /* RRCircularItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824361019F4FE05007E4D6C /* RRCircularItem.m */; };
+		1824362419F4FE05007E4D6C /* RRCircularMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824361219F4FE05007E4D6C /* RRCircularMenu.m */; };
+		1824362519F4FE05007E4D6C /* RRCircularMenuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824361419F4FE05007E4D6C /* RRCircularMenuLabel.m */; };
+		1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824361619F4FE05007E4D6C /* RRCircularSlider.m */; };
+		1824362719F4FE05007E4D6C /* distance.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361719F4FE05007E4D6C /* distance.off@2x.png */; };
+		1824362819F4FE05007E4D6C /* distance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361819F4FE05007E4D6C /* distance@2x.png */; };
+		1824362919F4FE05007E4D6C /* hr.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361919F4FE05007E4D6C /* hr.off@2x.png */; };
+		1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361A19F4FE05007E4D6C /* hr@2x.png */; };
+		1824362B19F4FE05007E4D6C /* route.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361B19F4FE05007E4D6C /* route.off@2x.png */; };
+		1824362C19F4FE05007E4D6C /* route@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361C19F4FE05007E4D6C /* route@2x.png */; };
+		1824362D19F4FE05007E4D6C /* speed.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361D19F4FE05007E4D6C /* speed.off@2x.png */; };
+		1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361E19F4FE05007E4D6C /* speed@2x.png */; };
+		1824362F19F4FE05007E4D6C /* time.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361F19F4FE05007E4D6C /* time.off@2x.png */; };
+		1824363019F4FE05007E4D6C /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824362019F4FE05007E4D6C /* time@2x.png */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -630,6 +646,27 @@
 		1824360319F4F774007E4D6C /* RATableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RATableViewCell.xib; sourceTree = "<group>"; };
 		1824360419F4F774007E4D6C /* RAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAViewController.h; sourceTree = "<group>"; };
 		1824360519F4F774007E4D6C /* RAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAViewController.m; sourceTree = "<group>"; };
+		1824360B19F4FE05007E4D6C /* calories.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calories.off@2x.png"; sourceTree = "<group>"; };
+		1824360C19F4FE05007E4D6C /* calories@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calories@2x.png"; sourceTree = "<group>"; };
+		1824360E19F4FE05007E4D6C /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		1824360F19F4FE05007E4D6C /* RRCircularItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCircularItem.h; sourceTree = "<group>"; };
+		1824361019F4FE05007E4D6C /* RRCircularItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCircularItem.m; sourceTree = "<group>"; };
+		1824361119F4FE05007E4D6C /* RRCircularMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCircularMenu.h; sourceTree = "<group>"; };
+		1824361219F4FE05007E4D6C /* RRCircularMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCircularMenu.m; sourceTree = "<group>"; };
+		1824361319F4FE05007E4D6C /* RRCircularMenuLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCircularMenuLabel.h; sourceTree = "<group>"; };
+		1824361419F4FE05007E4D6C /* RRCircularMenuLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCircularMenuLabel.m; sourceTree = "<group>"; };
+		1824361519F4FE05007E4D6C /* RRCircularSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCircularSlider.h; sourceTree = "<group>"; };
+		1824361619F4FE05007E4D6C /* RRCircularSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCircularSlider.m; sourceTree = "<group>"; };
+		1824361719F4FE05007E4D6C /* distance.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "distance.off@2x.png"; sourceTree = "<group>"; };
+		1824361819F4FE05007E4D6C /* distance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "distance@2x.png"; sourceTree = "<group>"; };
+		1824361919F4FE05007E4D6C /* hr.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hr.off@2x.png"; sourceTree = "<group>"; };
+		1824361A19F4FE05007E4D6C /* hr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hr@2x.png"; sourceTree = "<group>"; };
+		1824361B19F4FE05007E4D6C /* route.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route.off@2x.png"; sourceTree = "<group>"; };
+		1824361C19F4FE05007E4D6C /* route@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route@2x.png"; sourceTree = "<group>"; };
+		1824361D19F4FE05007E4D6C /* speed.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed.off@2x.png"; sourceTree = "<group>"; };
+		1824361E19F4FE05007E4D6C /* speed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed@2x.png"; sourceTree = "<group>"; };
+		1824361F19F4FE05007E4D6C /* time.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time.off@2x.png"; sourceTree = "<group>"; };
+		1824362019F4FE05007E4D6C /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -1436,6 +1473,42 @@
 			path = RATree;
 			sourceTree = "<group>";
 		};
+		1824360A19F4FE05007E4D6C /* circularMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1824360B19F4FE05007E4D6C /* calories.off@2x.png */,
+				1824360C19F4FE05007E4D6C /* calories@2x.png */,
+				1824360D19F4FE05007E4D6C /* class */,
+				1824361719F4FE05007E4D6C /* distance.off@2x.png */,
+				1824361819F4FE05007E4D6C /* distance@2x.png */,
+				1824361919F4FE05007E4D6C /* hr.off@2x.png */,
+				1824361A19F4FE05007E4D6C /* hr@2x.png */,
+				1824361B19F4FE05007E4D6C /* route.off@2x.png */,
+				1824361C19F4FE05007E4D6C /* route@2x.png */,
+				1824361D19F4FE05007E4D6C /* speed.off@2x.png */,
+				1824361E19F4FE05007E4D6C /* speed@2x.png */,
+				1824361F19F4FE05007E4D6C /* time.off@2x.png */,
+				1824362019F4FE05007E4D6C /* time@2x.png */,
+			);
+			path = circularMenu;
+			sourceTree = "<group>";
+		};
+		1824360D19F4FE05007E4D6C /* class */ = {
+			isa = PBXGroup;
+			children = (
+				1824360E19F4FE05007E4D6C /* Helpers.h */,
+				1824360F19F4FE05007E4D6C /* RRCircularItem.h */,
+				1824361019F4FE05007E4D6C /* RRCircularItem.m */,
+				1824361119F4FE05007E4D6C /* RRCircularMenu.h */,
+				1824361219F4FE05007E4D6C /* RRCircularMenu.m */,
+				1824361319F4FE05007E4D6C /* RRCircularMenuLabel.h */,
+				1824361419F4FE05007E4D6C /* RRCircularMenuLabel.m */,
+				1824361519F4FE05007E4D6C /* RRCircularSlider.h */,
+				1824361619F4FE05007E4D6C /* RRCircularSlider.m */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
 		18763BAD19F4B82300669CC3 /* dialScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -1739,6 +1812,7 @@
 		18C212D819F27C2000FCBD23 /* vm */ = {
 			isa = PBXGroup;
 			children = (
+				1824360A19F4FE05007E4D6C /* circularMenu */,
 				18C212D919F27C2000FCBD23 /* VmCollectionCell.h */,
 				18C212DA19F27C2000FCBD23 /* VmCollectionCell.m */,
 				18C212DB19F27C2000FCBD23 /* VmCollectionVC.h */,
@@ -1859,20 +1933,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */,
 				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
 				181DED4E19F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json in Resources */,
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
 				181DECF419F17CB100998835 /* bmi-80-80.png in Resources */,
+				1824362119F4FE05007E4D6C /* calories.off@2x.png in Resources */,
 				18763BBC19F4B82300669CC3 /* dial-icon3.png in Resources */,
 				181DED5B19F17CB100998835 /* LicenseVO.getLicenseVOAsync.json in Resources */,
 				181DECAB19F17CB100998835 /* index@2x.png in Resources */,
 				181DECF919F17CB100998835 /* health-80-80.png in Resources */,
+				1824362D19F4FE05007E4D6C /* speed.off@2x.png in Resources */,
 				181DECFA19F17CB100998835 /* infoLine-200-1.png in Resources */,
 				18763BBD19F4B82300669CC3 /* dial-icon4.png in Resources */,
 				181DED5519F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json in Resources */,
 				181DED6C19F17CB100998835 /* Images.xcassets in Resources */,
 				181DED6319F17CB100998835 /* PoolVO.getVmListWithlimit.json in Resources */,
+				1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */,
 				181DECC919F17CB100998835 /* heartLiveData.txt in Resources */,
 				181DED5A19F17CB100998835 /* HostVO.getVmListAsync.json in Resources */,
 				181DECEE19F17CB100998835 /* RealtimeCurve.bundle in Resources */,
@@ -1881,18 +1959,23 @@
 				181DED5E19F17CB100998835 /* PoolVO.getPoolElasticAsync.json in Resources */,
 				181DECE319F17CB100998835 /* piechart_shadow.png in Resources */,
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
+				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
+				1824362219F4FE05007E4D6C /* calories@2x.png in Resources */,
 				181DED6619F17CB100998835 /* TemplateIcon2x.png in Resources */,
 				181DED5319F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json in Resources */,
 				181DECE819F17CB100998835 /* select.png in Resources */,
 				181DED9419F17CB100998835 /* Business.storyboard in Resources */,
 				181DED6819F17CB100998835 /* VmVO.getVmNicListAsync.json in Resources */,
+				1824362F19F4FE05007E4D6C /* time.off@2x.png in Resources */,
 				18763C0E19F4E4E400669CC3 /* pageDot@2x.png in Resources */,
 				18763C1119F4E4E400669CC3 /* title2@2x.png in Resources */,
 				181DED5819F17CB100998835 /* HostVO.getHostVOAsync.json in Resources */,
 				18763BC119F4BF2900669CC3 /* dial-icon5.png in Resources */,
+				1824362919F4FE05007E4D6C /* hr.off@2x.png in Resources */,
+				1824362719F4FE05007E4D6C /* distance.off@2x.png in Resources */,
 				181DED5919F17CB100998835 /* HostVO.getStorageListAsync.json in Resources */,
 				181DED9E19F17CB100998835 /* Warning.storyboard in Resources */,
 				181DED4B19F17CB100998835 /* DatacenterVO.getHostListAsync.json in Resources */,
@@ -1911,8 +1994,10 @@
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
+				1824362C19F4FE05007E4D6C /* route@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
 				181DECF319F17CB100998835 /* appoint-80-80.png in Resources */,
+				1824363019F4FE05007E4D6C /* time@2x.png in Resources */,
 				181DED9A19F17CB100998835 /* Setting.storyboard in Resources */,
 				181DED6019F17CB100998835 /* PoolVO.getStorageList.json in Resources */,
 				18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */,
@@ -1946,6 +2031,7 @@
 				181DED5F19F17CB100998835 /* PoolVO.getPoolVOAsync.json in Resources */,
 				18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */,
 				181DECB619F17CB100998835 /* go_0@2x.png in Resources */,
+				1824362B19F4FE05007E4D6C /* route.off@2x.png in Resources */,
 				18763C0F19F4E4E400669CC3 /* skipButton@2x.png in Resources */,
 				18763C0C19F4E4E400669CC3 /* icon3@2x.png in Resources */,
 				181DED6119F17CB100998835 /* PoolVO.getStorageListAsync.json in Resources */,
@@ -2094,6 +2180,7 @@
 				18C2133619F27C2000FCBD23 /* PopOptionsUserInfoVC.m in Sources */,
 				181DECA119F17CB100998835 /* ARLineChartCommon.m in Sources */,
 				18C2130619F27C2000FCBD23 /* BusinessDashboardHeader.m in Sources */,
+				1824362419F4FE05007E4D6C /* RRCircularMenu.m in Sources */,
 				181DECAE19F17CB100998835 /* PoolDatagridCell.m in Sources */,
 				18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				181DECD719F17CB100998835 /* Example1PieView.m in Sources */,
@@ -2186,6 +2273,7 @@
 				18763BBF19F4B82300669CC3 /* DialScrollVC.m in Sources */,
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
 				181DECBF19F17CB100998835 /* Big3RevenueViewController.m in Sources */,
+				1824362519F4FE05007E4D6C /* RRCircularMenuLabel.m in Sources */,
 				18763C1E19F4EE0200669CC3 /* EScrollerView.m in Sources */,
 				18C2133E19F27C2000FCBD23 /* StorageDetailInfoVC.m in Sources */,
 				18763C1519F4E4E400669CC3 /* RootMenuVC.m in Sources */,
@@ -2202,11 +2290,13 @@
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
 				181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */,
 				181DECCF19F17CB100998835 /* JBChartHeaderView.m in Sources */,
+				1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */,
 				181DED8A19F17CB100998835 /* UserListResult.m in Sources */,
 				18C2132919F27C2000FCBD23 /* LoginSettingVC.m in Sources */,
 				181DED8519F17CB100998835 /* RemoteObject.m in Sources */,
 				181DECBD19F17CB100998835 /* F3BarGauge.m in Sources */,
 				18C2130A19F27C2000FCBD23 /* BusinessVmCollectionVC.m in Sources */,
+				1824362319F4FE05007E4D6C /* RRCircularItem.m in Sources */,
 				18C2134819F27C2000FCBD23 /* VmContainerVC.m in Sources */,
 				18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */,
 				181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */,
