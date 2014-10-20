@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *menuStorage;
 @property (weak, nonatomic) IBOutlet UIButton *menuBusiness;
 @property (weak, nonatomic) IBOutlet UIButton *menuNetwork;
+@property (weak, nonatomic) IBOutlet UIButton *menuWarning;
+@property (weak, nonatomic) IBOutlet UIButton *menuSearch;
 @property (weak, nonatomic) IBOutlet UIButton *menuSelect;
 @property (weak, nonatomic) IBOutlet UIButton *menuSetting;
 @property (weak, nonatomic) IBOutlet UIButton *menuExpand;
@@ -39,6 +41,8 @@
                        self.menuStorage,
                        self.menuBusiness,
                        self.menuNetwork,
+                       self.menuWarning,
+                       self.menuSearch,
                        self.menuSelect,
                        self.menuSetting,
                        self.menuExpand];
