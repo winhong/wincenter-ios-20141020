@@ -199,6 +199,25 @@
 		18763BBE19F4B82300669CC3 /* DialScrollImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18763BB519F4B82300669CC3 /* DialScrollImage.m */; };
 		18763BBF19F4B82300669CC3 /* DialScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18763BB719F4B82300669CC3 /* DialScrollVC.m */; };
 		18763BC119F4BF2900669CC3 /* dial-icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BC019F4BF2900669CC3 /* dial-icon5.png */; };
+		18763C0519F4E4E400669CC3 /* bg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BEE19F4E4E400669CC3 /* bg1@2x.png */; };
+		18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BEF19F4E4E400669CC3 /* bg2@2x.png */; };
+		18763C0719F4E4E400669CC3 /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF019F4E4E400669CC3 /* bg3@2x.png */; };
+		18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF119F4E4E400669CC3 /* bg4@2x.png */; };
+		18763C0919F4E4E400669CC3 /* bigLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF219F4E4E400669CC3 /* bigLogo@2x.png */; };
+		18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF319F4E4E400669CC3 /* icon1@2x.png */; };
+		18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF419F4E4E400669CC3 /* icon2@2x.png */; };
+		18763C0C19F4E4E400669CC3 /* icon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF519F4E4E400669CC3 /* icon3@2x.png */; };
+		18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF619F4E4E400669CC3 /* pageDot.png */; };
+		18763C0E19F4E4E400669CC3 /* pageDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF719F4E4E400669CC3 /* pageDot@2x.png */; };
+		18763C0F19F4E4E400669CC3 /* skipButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF819F4E4E400669CC3 /* skipButton@2x.png */; };
+		18763C1019F4E4E400669CC3 /* title1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BF919F4E4E400669CC3 /* title1@2x.png */; };
+		18763C1119F4E4E400669CC3 /* title2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BFA19F4E4E400669CC3 /* title2@2x.png */; };
+		18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BFB19F4E4E400669CC3 /* title3@2x.png */; };
+		18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BFC19F4E4E400669CC3 /* title4@2x.png */; };
+		18763C1419F4E4E400669CC3 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763BFE19F4E4E400669CC3 /* avatar@2x.jpg */; };
+		18763C1519F4E4E400669CC3 /* RootMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18763C0019F4E4E400669CC3 /* RootMenuVC.m */; };
+		18763C1619F4E4E400669CC3 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18763C0219F4E4E400669CC3 /* RootVC.m */; };
+		18763C1719F4E4E400669CC3 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18763C0419F4E4E400669CC3 /* VPImageCropperViewController.m */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -606,6 +625,28 @@
 		18763BB619F4B82300669CC3 /* DialScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialScrollVC.h; sourceTree = "<group>"; };
 		18763BB719F4B82300669CC3 /* DialScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialScrollVC.m; sourceTree = "<group>"; };
 		18763BC019F4BF2900669CC3 /* dial-icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon5.png"; sourceTree = "<group>"; };
+		18763BEE19F4E4E400669CC3 /* bg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg1@2x.png"; sourceTree = "<group>"; };
+		18763BEF19F4E4E400669CC3 /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg2@2x.png"; sourceTree = "<group>"; };
+		18763BF019F4E4E400669CC3 /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg3@2x.png"; sourceTree = "<group>"; };
+		18763BF119F4E4E400669CC3 /* bg4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg4@2x.png"; sourceTree = "<group>"; };
+		18763BF219F4E4E400669CC3 /* bigLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bigLogo@2x.png"; sourceTree = "<group>"; };
+		18763BF319F4E4E400669CC3 /* icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon1@2x.png"; sourceTree = "<group>"; };
+		18763BF419F4E4E400669CC3 /* icon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon2@2x.png"; sourceTree = "<group>"; };
+		18763BF519F4E4E400669CC3 /* icon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon3@2x.png"; sourceTree = "<group>"; };
+		18763BF619F4E4E400669CC3 /* pageDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pageDot.png; sourceTree = "<group>"; };
+		18763BF719F4E4E400669CC3 /* pageDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageDot@2x.png"; sourceTree = "<group>"; };
+		18763BF819F4E4E400669CC3 /* skipButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skipButton@2x.png"; sourceTree = "<group>"; };
+		18763BF919F4E4E400669CC3 /* title1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title1@2x.png"; sourceTree = "<group>"; };
+		18763BFA19F4E4E400669CC3 /* title2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title2@2x.png"; sourceTree = "<group>"; };
+		18763BFB19F4E4E400669CC3 /* title3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title3@2x.png"; sourceTree = "<group>"; };
+		18763BFC19F4E4E400669CC3 /* title4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title4@2x.png"; sourceTree = "<group>"; };
+		18763BFE19F4E4E400669CC3 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		18763BFF19F4E4E400669CC3 /* RootMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootMenuVC.h; sourceTree = "<group>"; };
+		18763C0019F4E4E400669CC3 /* RootMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootMenuVC.m; sourceTree = "<group>"; };
+		18763C0119F4E4E400669CC3 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		18763C0219F4E4E400669CC3 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
+		18763C0319F4E4E400669CC3 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		18763C0419F4E4E400669CC3 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		18C2124919F27C2000FCBD23 /* BusinessContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContainerVC.h; sourceTree = "<group>"; };
@@ -1378,6 +1419,42 @@
 			path = dialScroll;
 			sourceTree = "<group>";
 		};
+		18763BED19F4E4E400669CC3 /* EAIntro */ = {
+			isa = PBXGroup;
+			children = (
+				18763BEE19F4E4E400669CC3 /* bg1@2x.png */,
+				18763BEF19F4E4E400669CC3 /* bg2@2x.png */,
+				18763BF019F4E4E400669CC3 /* bg3@2x.png */,
+				18763BF119F4E4E400669CC3 /* bg4@2x.png */,
+				18763BF219F4E4E400669CC3 /* bigLogo@2x.png */,
+				18763BF319F4E4E400669CC3 /* icon1@2x.png */,
+				18763BF419F4E4E400669CC3 /* icon2@2x.png */,
+				18763BF519F4E4E400669CC3 /* icon3@2x.png */,
+				18763BF619F4E4E400669CC3 /* pageDot.png */,
+				18763BF719F4E4E400669CC3 /* pageDot@2x.png */,
+				18763BF819F4E4E400669CC3 /* skipButton@2x.png */,
+				18763BF919F4E4E400669CC3 /* title1@2x.png */,
+				18763BFA19F4E4E400669CC3 /* title2@2x.png */,
+				18763BFB19F4E4E400669CC3 /* title3@2x.png */,
+				18763BFC19F4E4E400669CC3 /* title4@2x.png */,
+			);
+			path = EAIntro;
+			sourceTree = "<group>";
+		};
+		18763BFD19F4E4E400669CC3 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				18763BFE19F4E4E400669CC3 /* avatar@2x.jpg */,
+				18763BFF19F4E4E400669CC3 /* RootMenuVC.h */,
+				18763C0019F4E4E400669CC3 /* RootMenuVC.m */,
+				18763C0119F4E4E400669CC3 /* RootVC.h */,
+				18763C0219F4E4E400669CC3 /* RootVC.m */,
+				18763C0319F4E4E400669CC3 /* VPImageCropperViewController.h */,
+				18763C0419F4E4E400669CC3 /* VPImageCropperViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		18C2124719F27C2000FCBD23 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1456,6 +1533,8 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				18763BED19F4E4E400669CC3 /* EAIntro */,
+				18763BFD19F4E4E400669CC3 /* Root */,
 				18763BAD19F4B82300669CC3 /* dialScroll */,
 				18C2127019F27C2000FCBD23 /* DashboardMenuVC.h */,
 				18C2127119F27C2000FCBD23 /* DashboardMenuVC.m */,
@@ -1732,6 +1811,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
 				181DED4E19F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json in Resources */,
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
@@ -1752,6 +1832,7 @@
 				181DED9D19F17CB100998835 /* VM.storyboard in Resources */,
 				181DED5E19F17CB100998835 /* PoolVO.getPoolElasticAsync.json in Resources */,
 				181DECE319F17CB100998835 /* piechart_shadow.png in Resources */,
+				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
@@ -1760,6 +1841,8 @@
 				181DECE819F17CB100998835 /* select.png in Resources */,
 				181DED9419F17CB100998835 /* Business.storyboard in Resources */,
 				181DED6819F17CB100998835 /* VmVO.getVmNicListAsync.json in Resources */,
+				18763C0E19F4E4E400669CC3 /* pageDot@2x.png in Resources */,
+				18763C1119F4E4E400669CC3 /* title2@2x.png in Resources */,
 				181DED5819F17CB100998835 /* HostVO.getHostVOAsync.json in Resources */,
 				18763BC119F4BF2900669CC3 /* dial-icon5.png in Resources */,
 				181DED5919F17CB100998835 /* HostVO.getStorageListAsync.json in Resources */,
@@ -1767,6 +1850,8 @@
 				181DED4B19F17CB100998835 /* DatacenterVO.getHostListAsync.json in Resources */,
 				181DECB319F17CB100998835 /* up_white@2x.png in Resources */,
 				18C2131219F27C2000FCBD23 /* MSEventData.json in Resources */,
+				18763C1019F4E4E400669CC3 /* title1@2x.png in Resources */,
+				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
 				1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
@@ -1774,20 +1859,25 @@
 				181DED4619F17CB100998835 /* ControlRecordVO.getControlRecordListViaObject.json in Resources */,
 				181DEAA819F17C4E00998835 /* LaunchScreen.xib in Resources */,
 				181DED6419F17CB100998835 /* StorageVO.getStorageVOAsync.json in Resources */,
+				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
 				181DECF319F17CB100998835 /* appoint-80-80.png in Resources */,
 				181DED9A19F17CB100998835 /* Setting.storyboard in Resources */,
 				181DED6019F17CB100998835 /* PoolVO.getStorageList.json in Resources */,
+				18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */,
 				181DECAA19F17CB100998835 /* down_white@2x.png in Resources */,
+				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				181DED6B19F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json in Resources */,
 				181DED9619F17CB100998835 /* Host.storyboard in Resources */,
+				18763C0519F4E4E400669CC3 /* bg1@2x.png in Resources */,
 				181DED9919F17CB100998835 /* Pool.storyboard in Resources */,
 				181DECA819F17CB100998835 /* Charts.storyboard in Resources */,
 				181DECB219F17CB100998835 /* up_red@2x.png in Resources */,
 				181DED5419F17CB100998835 /* HostVO.getHostNetworkInternalListAsync.json in Resources */,
 				18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */,
+				18763C0919F4E4E400669CC3 /* bigLogo@2x.png in Resources */,
 				181DECB719F17CB100998835 /* go_1@2x.png in Resources */,
 				181DED9519F17CB100998835 /* Datacenter.storyboard in Resources */,
 				181DED9C19F17CB100998835 /* Task.storyboard in Resources */,
@@ -1804,11 +1894,16 @@
 				181DED4D19F17CB100998835 /* DatacenterVO.getPoolListAsync.json in Resources */,
 				181DECF819F17CB100998835 /* greenRound-80-80.png in Resources */,
 				181DED5F19F17CB100998835 /* PoolVO.getPoolVOAsync.json in Resources */,
+				18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */,
 				181DECB619F17CB100998835 /* go_0@2x.png in Resources */,
+				18763C0F19F4E4E400669CC3 /* skipButton@2x.png in Resources */,
+				18763C0C19F4E4E400669CC3 /* icon3@2x.png in Resources */,
 				181DED6119F17CB100998835 /* PoolVO.getStorageListAsync.json in Resources */,
+				18763C1419F4E4E400669CC3 /* avatar@2x.jpg in Resources */,
 				181DED6919F17CB100998835 /* VmVO.getVmVOAsync.json in Resources */,
 				181DED5719F17CB100998835 /* HostVO.getHostStatVOAsync.json in Resources */,
 				181DED5219F17CB100998835 /* DatacenterVO.getVmListAsync.limit.json in Resources */,
+				18763C0719F4E4E400669CC3 /* bg3@2x.png in Resources */,
 				181DED9819F17CB100998835 /* Network.storyboard in Resources */,
 				181DED4F19F17CB100998835 /* DatacenterVO.getStorageListAsync.json in Resources */,
 				181DED4919F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json in Resources */,
@@ -1924,6 +2019,7 @@
 				181DECD819F17CB100998835 /* Example2Controller.m in Sources */,
 				18C2133519F27C2000FCBD23 /* PopOptionLicenseVC.m in Sources */,
 				18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */,
+				18763C1719F4E4E400669CC3 /* VPImageCropperViewController.m in Sources */,
 				181DECC419F17CB100998835 /* Example4.m in Sources */,
 				181DECDB19F17CB100998835 /* MPPlotVC.m in Sources */,
 				18C2132819F27C2000FCBD23 /* HostNicCollectionVC.m in Sources */,
@@ -2010,6 +2106,7 @@
 				181DECDC19F17CB100998835 /* iPadGraphView.m in Sources */,
 				18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */,
 				18C2131819F27C2000FCBD23 /* DashboardVC.m in Sources */,
+				18763C1619F4E4E400669CC3 /* RootVC.m in Sources */,
 				18C2133F19F27C2000FCBD23 /* StorageDiskCollectionCell.m in Sources */,
 				181DED8119F17CB100998835 /* NetworkVO.m in Sources */,
 				181DEA9A19F17C4E00998835 /* main.m in Sources */,
@@ -2035,6 +2132,7 @@
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
 				181DECBF19F17CB100998835 /* Big3RevenueViewController.m in Sources */,
 				18C2133E19F27C2000FCBD23 /* StorageDetailInfoVC.m in Sources */,
+				18763C1519F4E4E400669CC3 /* RootMenuVC.m in Sources */,
 				18C2134919F27C2000FCBD23 /* VmDashboardCell.m in Sources */,
 				18C2131E19F27C2000FCBD23 /* HostCollectionVC.m in Sources */,
 				181DED7D19F17CB100998835 /* LicenseVO.m in Sources */,

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2508BFB69F64FA9B19F9428"
+               BlueprintIdentifier = "59022897606147C7ABF28E34"
                BuildableName = "libPods-WinCenter-SHLineGraphView.a"
                BlueprintName = "Pods-WinCenter-SHLineGraphView"
                ReferencedContainer = "container:Pods.xcodeproj">

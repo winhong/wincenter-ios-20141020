@@ -113,6 +113,9 @@
     }
     [self refresh];
 }
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
 - (IBAction)showSelectForm:(id)sender {
     UIViewController *vc = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
     DatacenterTableVC *tableVC = [[vc childViewControllers] firstObject];
