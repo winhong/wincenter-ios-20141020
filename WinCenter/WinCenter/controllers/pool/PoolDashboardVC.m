@@ -11,6 +11,11 @@
 #import "PoolDashboardCell.h"
 #import "PoolDashboardHeader.h"
 
+@interface PoolDashboardVC ()
+
+@property DatacenterStatWinserver *datacenterStatWinserver;
+
+@end
 
 @implementation PoolDashboardVC
 
@@ -19,6 +24,12 @@
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
         [self.collectionView reloadData];
     }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+    }];
+    
+    
 }
 
 
@@ -78,7 +89,7 @@
     
     PoolDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"PoolDashboardHeader" forIndexPath:indexPath];
     
-    header.poolCount.text = [NSString stringWithFormat:@"%d",0];
+    header.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     header.haPoolCount.text = [NSString stringWithFormat:@"%d",0];
     header.elasticCalPoolCount.text = [NSString stringWithFormat:@"%d",0];
     header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",20.0];

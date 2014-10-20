@@ -34,5 +34,7 @@
 - (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
+
+- (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;
     
 @end
