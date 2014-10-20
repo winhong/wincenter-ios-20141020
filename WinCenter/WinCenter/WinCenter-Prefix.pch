@@ -53,6 +53,8 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "HostListResult.h"
 #import "HostVO.h"
 #import "HostStatVO.h"
+#import "HostSubStateVO.h"
+#import "HostSubVO.h"
 #import "HostNetworkListResult.h"
 #import "HostNetworkVO.h"
 #import "HostNicListResult.h"

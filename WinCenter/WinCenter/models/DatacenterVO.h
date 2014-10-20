@@ -34,6 +34,7 @@
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
 
-- (void) getDatacenterPoolInfoVOAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
 @end

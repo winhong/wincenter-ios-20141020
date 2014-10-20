@@ -25,7 +25,6 @@
 @property float availStorage;
 @property NSString *haEnabled;
 
-@property NSObject *subVO;
 
 -(float)cpuRatio;
 

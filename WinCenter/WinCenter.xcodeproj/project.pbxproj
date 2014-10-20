@@ -317,8 +317,11 @@
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
+		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
+		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
-		847D91AE19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */; };
+		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -847,9 +850,14 @@
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
+		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
+		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
+		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
+		843E6C0919F50E830046A5A0 /* HostSubStateVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubStateVO.h; sourceTree = "<group>"; };
+		843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubStateVO.m; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
-		847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getPoolStatWinserverAsync.json; sourceTree = "<group>"; };
+		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1294,7 +1302,7 @@
 				181DEC2919F17CB100998835 /* DatacenterVO.getStorageListAsync.limit.json */,
 				181DEC2A19F17CB100998835 /* DatacenterVO.getVmListAsync.json */,
 				181DEC2B19F17CB100998835 /* DatacenterVO.getVmListAsync.limit.json */,
-				847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */,
+				847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */,
 				181DEC2C19F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json */,
 				181DEC2D19F17CB100998835 /* HostVO.getHostNetworkInternalListAsync.json */,
 				181DEC2E19F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json */,
@@ -1320,6 +1328,7 @@
 				181DEC4219F17CB100998835 /* VmVO.getVmVOAsync.json */,
 				181DEC4319F17CB100998835 /* VmVO.getVmVolumnListAsync.json */,
 				181DEC4419F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json */,
+				843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1359,6 +1368,10 @@
 				181DEC6419F17CB100998835 /* HostStatVO.m */,
 				181DEC6519F17CB100998835 /* HostVO.h */,
 				181DEC6619F17CB100998835 /* HostVO.m */,
+				843E6C0419F5094F0046A5A0 /* HostSubVO.h */,
+				843E6C0519F5094F0046A5A0 /* HostSubVO.m */,
+				843E6C0919F50E830046A5A0 /* HostSubStateVO.h */,
+				843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */,
 				181DEC6719F17CB100998835 /* LicenseVO.h */,
 				181DEC6819F17CB100998835 /* LicenseVO.m */,
 				181DEC6919F17CB100998835 /* LicenseWciVO.h */,
@@ -1907,6 +1920,7 @@
 				181DECB319F17CB100998835 /* up_white@2x.png in Resources */,
 				18C2131219F27C2000FCBD23 /* MSEventData.json in Resources */,
 				18763C1019F4E4E400669CC3 /* title1@2x.png in Resources */,
+				843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
 				1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */,
@@ -1950,7 +1964,7 @@
 				181DED4819F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json in Resources */,
 				181DED5C19F17CB100998835 /* PoolVO.getHostListAsync.json in Resources */,
 				181DED4D19F17CB100998835 /* DatacenterVO.getPoolListAsync.json in Resources */,
-				847D91AE19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json in Resources */,
+				847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */,
 				181DECF819F17CB100998835 /* greenRound-80-80.png in Resources */,
 				181DED5F19F17CB100998835 /* PoolVO.getPoolVOAsync.json in Resources */,
 				18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */,
@@ -2136,6 +2150,7 @@
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,
 				18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */,
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
+				843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */,
 				18C2131C19F27C2000FCBD23 /* DatacenterTableVC.m in Sources */,
 				18C2130919F27C2000FCBD23 /* BusinessVmCollectionCell.m in Sources */,
 				181DECB019F17CB100998835 /* PoolDatagridSegement.m in Sources */,
@@ -2175,6 +2190,7 @@
 				18C2133F19F27C2000FCBD23 /* StorageDiskCollectionCell.m in Sources */,
 				181DED8119F17CB100998835 /* NetworkVO.m in Sources */,
 				181DEA9A19F17C4E00998835 /* main.m in Sources */,
+				843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */,
 				181DED8919F17CB100998835 /* StorageVolumnVO.m in Sources */,
 				18C2132719F27C2000FCBD23 /* HostNicCollectionCell.m in Sources */,
 				18C2132D19F27C2000FCBD23 /* NetworkCollectionCell.m in Sources */,

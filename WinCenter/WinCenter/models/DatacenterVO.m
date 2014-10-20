@@ -211,9 +211,9 @@
     
 }
 
-- (void) getDatacenterPoolInfoVOAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[PoolSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DatacenterVO.getPoolStatWinserverAsync" ofType:@"json"]]], nil);
+        completionBlock([[PoolSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolSubVO.getPoolSubInfoAsync" ofType:@"json"]]], nil);
         return;
     }
     
@@ -223,5 +223,19 @@
         completionBlock([[PoolSubVO alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
+
+- (void) getHostSubVOAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[HostSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostSubVO.getHostSubInfoAsync" ofType:@"json"]]].state, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.resourcePool.resoucePoolParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[HostSubVO alloc] initWithJSONData:jsonResponse.rawBody].state, error);
+    }];
+}
+
 
 @end

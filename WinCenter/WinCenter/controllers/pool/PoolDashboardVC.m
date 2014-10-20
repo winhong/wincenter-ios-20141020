@@ -30,7 +30,7 @@
         self.datacenterStatWinserver = object;
     }];
     
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterPoolInfoVOAsync:^(id object, NSError *error) {
+    [[RemoteObject getCurrentDatacenterVO] getPoolSubVOAsync:^(id object, NSError *error) {
         self.poolStatWinserver = object;
     }];
     
