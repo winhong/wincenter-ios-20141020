@@ -7,6 +7,7 @@
 //
 
 #import "DAshboardVC.h"
+#import "MSCalendarViewController.h"
 
 @interface DashboardVC ()
 
@@ -59,6 +60,11 @@
     [self.tabBarVC addChildViewController:nav];
     
     //网络
+    [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
+    
+    [self.tabBarVC addChildViewController:[MSCalendarViewController new]];
+    
+    //搜索
     [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
     
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];

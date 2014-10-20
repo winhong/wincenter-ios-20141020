@@ -8,18 +8,13 @@
         <scene sceneID="lA6-gL-mFX">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardMenuVC_iPad" id="teZ-Tc-JZU" customClass="DashboardMenuVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="50" id="S2a-cH-2QV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="S2a-cH-2QV">
                         <rect key="frame" x="0.0" y="0.0" width="55" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="1gZ-e2-wHy">
-                            <rect key="frame" x="0.0" y="0.0" width="55" height="51"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
                         <sections>
                             <tableViewSection id="dlm-na-3DR">
                                 <cells>
@@ -203,12 +198,56 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="gJM-vt-woL">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gJM-vt-woL" id="REk-JJ-Tka">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw3-4p-lvz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
+                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <gestureRecognizers/>
+                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <connections>
+                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="lgZ-Hm-F9f"/>
+                                                        <outletCollection property="gestureRecognizers" destination="umT-ea-aZV" appends="YES" id="RXk-vY-AqW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="FK7-HV-0q4">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FK7-HV-0q4" id="TBd-jQ-b1T">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-qf-XlR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
+                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <gestureRecognizers/>
+                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <connections>
+                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="1e7-6y-0uJ"/>
+                                                        <outletCollection property="gestureRecognizers" destination="QGj-aO-NAz" appends="YES" id="yXE-B3-1bI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="ims-5n-ucO">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ims-5n-ucO" id="qQZ-OB-1on">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl2-XT-XYc">
+                                                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl2-XT-XYc">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
@@ -230,7 +269,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VON-A0-0nC" id="aKR-eD-Tvk">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRV-yn-KP3">
+                                                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRV-yn-KP3">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
@@ -262,10 +301,12 @@
                         <outlet property="menuHost" destination="S1a-xW-YPY" id="F5g-dA-Tfx"/>
                         <outlet property="menuNetwork" destination="pR6-yL-Iuk" id="I9s-h1-RBL"/>
                         <outlet property="menuPool" destination="m68-3y-M3S" id="tSq-C4-ZQb"/>
-                        <outlet property="menuSelect" destination="ut7-W3-8A8" id="pyn-Bp-TDp"/>
+                        <outlet property="menuSearch" destination="yw3-4p-lvz" id="Qgi-yh-k5P"/>
+                        <outlet property="menuSelect" destination="Jp5-qf-XlR" id="2NL-nf-bzw"/>
                         <outlet property="menuSetting" destination="Pl2-XT-XYc" id="8yK-rD-qwW"/>
                         <outlet property="menuStorage" destination="3gc-Ac-R0u" id="OJc-YB-JYY"/>
                         <outlet property="menuVm" destination="rrk-FM-kl2" id="pJ7-5M-GHt"/>
+                        <outlet property="menuWarning" destination="ut7-W3-8A8" id="c4s-hf-ufW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vA-HE-7fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,6 +348,16 @@
                 <tapGestureRecognizer numberOfTapsRequired="2" id="MSm-kz-9gS">
                     <connections>
                         <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="q6l-no-gGF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="umT-ea-aZV">
+                    <connections>
+                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="N5n-xr-faK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="QGj-aO-NAz">
+                    <connections>
+                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="pee-aU-01e"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="LdB-ZM-KjX">
@@ -2071,7 +2122,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="3F28A906-4FF2-4B5C-8752-3A49BF43C321" id="b8q-IF-5E0">
+                        <barButtonItem image="4BB6175C-8AAE-4A59-833B-F4506A2FF074" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="Y7p-c2-ewK"/>
                             </connections>
@@ -4056,7 +4107,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3F28A906-4FF2-4B5C-8752-3A49BF43C321" width="32" height="32">
+        <image name="4BB6175C-8AAE-4A59-833B-F4506A2FF074" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
