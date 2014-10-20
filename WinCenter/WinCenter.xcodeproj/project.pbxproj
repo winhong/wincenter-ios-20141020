@@ -191,6 +191,10 @@
 		181DED9C19F17CB100998835 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181DEC9E19F17CB100998835 /* Task.storyboard */; };
 		181DED9D19F17CB100998835 /* VM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181DEC9F19F17CB100998835 /* VM.storyboard */; };
 		181DED9E19F17CB100998835 /* Warning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181DECA019F17CB100998835 /* Warning.storyboard */; };
+		1824360619F4F774007E4D6C /* RADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824360019F4F774007E4D6C /* RADataObject.m */; };
+		1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824360219F4F774007E4D6C /* RATableViewCell.m */; };
+		1824360819F4F774007E4D6C /* RATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1824360319F4F774007E4D6C /* RATableViewCell.xib */; };
+		1824360919F4F774007E4D6C /* RAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824360519F4F774007E4D6C /* RAViewController.m */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -619,6 +623,13 @@
 		181DEC9E19F17CB100998835 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		181DEC9F19F17CB100998835 /* VM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VM.storyboard; sourceTree = "<group>"; };
 		181DECA019F17CB100998835 /* Warning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Warning.storyboard; sourceTree = "<group>"; };
+		182435FF19F4F774007E4D6C /* RADataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RADataObject.h; sourceTree = "<group>"; };
+		1824360019F4F774007E4D6C /* RADataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RADataObject.m; sourceTree = "<group>"; };
+		1824360119F4F774007E4D6C /* RATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATableViewCell.h; sourceTree = "<group>"; };
+		1824360219F4F774007E4D6C /* RATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATableViewCell.m; sourceTree = "<group>"; };
+		1824360319F4F774007E4D6C /* RATableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RATableViewCell.xib; sourceTree = "<group>"; };
+		1824360419F4F774007E4D6C /* RAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAViewController.h; sourceTree = "<group>"; };
+		1824360519F4F774007E4D6C /* RAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAViewController.m; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -1411,6 +1422,20 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		182435FE19F4F774007E4D6C /* RATree */ = {
+			isa = PBXGroup;
+			children = (
+				182435FF19F4F774007E4D6C /* RADataObject.h */,
+				1824360019F4F774007E4D6C /* RADataObject.m */,
+				1824360119F4F774007E4D6C /* RATableViewCell.h */,
+				1824360219F4F774007E4D6C /* RATableViewCell.m */,
+				1824360319F4F774007E4D6C /* RATableViewCell.xib */,
+				1824360419F4F774007E4D6C /* RAViewController.h */,
+				1824360519F4F774007E4D6C /* RAViewController.m */,
+			);
+			path = RATree;
+			sourceTree = "<group>";
+		};
 		18763BAD19F4B82300669CC3 /* dialScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -1556,6 +1581,7 @@
 			children = (
 				18763C1819F4EE0200669CC3 /* EScrollerView */,
 				18763BED19F4E4E400669CC3 /* EAIntro */,
+				182435FE19F4F774007E4D6C /* RATree */,
 				18763BFD19F4E4E400669CC3 /* Root */,
 				18763BAD19F4B82300669CC3 /* dialScroll */,
 				18C2127019F27C2000FCBD23 /* DashboardMenuVC.h */,
@@ -1933,6 +1959,7 @@
 				181DED4F19F17CB100998835 /* DatacenterVO.getStorageListAsync.json in Resources */,
 				181DED4919F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json in Resources */,
 				181DED6219F17CB100998835 /* PoolVO.getVmListAsync.json in Resources */,
+				1824360819F4F774007E4D6C /* RATableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,6 +2052,7 @@
 				181DECD019F17CB100998835 /* JBChartInformationView.m in Sources */,
 				18C2134519F27C2000FCBD23 /* UIButton+Badge.m in Sources */,
 				18C2133019F27C2000FCBD23 /* PoolContainerVC.m in Sources */,
+				1824360619F4F774007E4D6C /* RADataObject.m in Sources */,
 				18C2131319F27C2000FCBD23 /* MSGridline.m in Sources */,
 				181DED7819F17CB100998835 /* HostNetworkVO.m in Sources */,
 				181DECBE19F17CB100998835 /* F3BarViewController.m in Sources */,
@@ -2070,6 +2098,7 @@
 				18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				181DECD719F17CB100998835 /* Example1PieView.m in Sources */,
 				181DECEB19F17CB100998835 /* PNLineChartView.m in Sources */,
+				1824360919F4F774007E4D6C /* RAViewController.m in Sources */,
 				181DECA519F17CB100998835 /* SimpleLineChartVC.m in Sources */,
 				18C2133D19F27C2000FCBD23 /* StorageDashboardVC.m in Sources */,
 				181DECA219F17CB100998835 /* ARLineChartContentView.m in Sources */,
@@ -2117,6 +2146,7 @@
 				181DED8B19F17CB100998835 /* UserVO.m in Sources */,
 				18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */,
 				18C2134219F27C2000FCBD23 /* PopControlRecordCellForTime.m in Sources */,
+				1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */,
 				181DECAF19F17CB100998835 /* PoolDatagridModel.m in Sources */,
 				181DED7019F17CB100998835 /* ControlRecordListResult.m in Sources */,
 				181DED9119F17CB100998835 /* VmVO.m in Sources */,
