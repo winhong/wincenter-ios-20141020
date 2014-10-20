@@ -1163,14 +1163,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMV-QA-MCc">
-                                                <rect key="frame" x="314" y="68" width="51" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMV-QA-MCc">
+                                                <rect key="frame" x="309" y="68" width="67" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-Or-sb8">
-                                                <rect key="frame" x="309" y="36" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="36" width="67" height="32"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -2123,7 +2123,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="E6AC712E-7641-4937-B89E-B98E8C229984" id="b8q-IF-5E0">
+                        <barButtonItem image="39DE5A78-8DB3-44CC-A5DB-E20732D0F8B6" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="Y7p-c2-ewK"/>
                             </connections>
@@ -4108,9 +4108,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CPU线程-black" width="15" height="15"/>
-        <image name="CPU颗数-black" width="15" height="15"/>
-        <image name="E6AC712E-7641-4937-B89E-B98E8C229984" width="32" height="32">
+        <image name="39DE5A78-8DB3-44CC-A5DB-E20732D0F8B6" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4229,6 +4227,8 @@ XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
 AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
 </mutableData>
         </image>
+        <image name="CPU线程-black" width="15" height="15"/>
+        <image name="CPU颗数-black" width="15" height="15"/>
         <image name="icon-operationLog" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
