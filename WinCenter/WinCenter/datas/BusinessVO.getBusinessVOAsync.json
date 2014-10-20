@@ -1,0 +1,38 @@
+{
+    "busId": 6,
+    "name": "倒萨范德萨",
+    "version": "范德萨",
+    "description": "富士达",
+    "managerId": "袁海娥",
+    "vdcId": null,
+    "ipPoolId": null,
+    "busDomainId": 4,
+    "createUser": "admin",
+    "updateUser": "admin",
+    "createTime": "2014-09-09 14:29:47 000",
+    "updateTime": "2014-09-09 14:31:22 000",
+    "sysSrc": "WINCENTER",
+    "srcId": null,
+    "state": "DOING",
+    "wceBusVms": [
+                  {
+                  "id": 6,
+                  "vmId": 1,
+                  "startOrder": 1,
+                  "delayInterval": 0,
+                  "platform": "winserver",
+                  "busId": 6,
+                  "name": "公测环境勿删勿动",
+                  "description": null,
+                  "state": "OK",
+                  "hostId": 1,
+                  "hostName": "winserver-8",
+                  "uri": null
+                  }
+                  ],
+    "vmNum": 1,
+    "allowed": "NOTSTARTABLE",
+    "handlerType": null,
+    "vmInfos": [],
+    "uri": null
+}

@@ -1,0 +1,41 @@
+{
+    "networks": [
+                 {
+                 "networkId": 1,
+                 "name": "Pool-wide network associated with eth1",
+                 "description": "",
+                 "state": "IN_USED",
+                 "linkState": "DISCONNECTED",
+                 "type": "EXTERNAL",
+                 "vlanId": "-1",
+                 "poolId": 1,
+                 "poolName": "公测资源池234214321432143214321432143",
+                 "pniName": "eth1",
+                 "pniUri": "https://192.168.100.168:8080/wce/api/pnis?networkId=1",
+                 "hostUri": "https://192.168.100.168:8080/wce/api/hosts?networkId=1",
+                 "platform": "winserver",
+                 "hypervisor": "winserver",
+                 "originalId": "58b3a752-9f85-e4a3-a030-7090f2cb67fd",
+                 "uri": "https://192.168.100.168:8080/wce/api/networks/1"
+                 },
+                 {
+                 "networkId": 2,
+                 "name": "20VLAN",
+                 "description": "",
+                 "state": "IN_USED",
+                 "linkState": "CONNECTED",
+                 "type": "EXTERNAL",
+                 "vlanId": "20",
+                 "poolId": 1,
+                 "poolName": "公测资源池234214321432143214321432143",
+                 "pniName": "eth0",
+                 "pniUri": "https://192.168.100.168:8080/wce/api/pnis?networkId=2",
+                 "hostUri": "https://192.168.100.168:8080/wce/api/hosts?networkId=2",
+                 "platform": "winserver",
+                 "hypervisor": "winserver",
+                 "originalId": "7205c3c4-0891-8e64-9fa1-705033ceed39",
+                 "uri": "https://192.168.100.168:8080/wce/api/networks/2"
+                 }
+                 ],
+    "recordTotal": 3
+}

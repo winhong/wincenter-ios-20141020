@@ -1,0 +1,22 @@
+{
+    "balancingId": 1,
+    "poolOriginalId": "f16edc44-a293-11b1-655d-1c47bd30ed2a",
+    "balancingMode": "WLB",
+    "cpuThreshold": 0.8,
+    "memThreshold": 0.8,
+    "state": "ENABLED",
+    "intervalTime": "30,M",
+    "lastStartTime": "2014-09-11 11:42:00 000",
+    "nextStartTime": "2014-09-12 15:28:44 000",
+    "triggerTime": "2014-09-12 15:00:00 000",
+    "operTime": "2014-09-12 15:00:00 000",
+    "remark": null,
+    "adjustInfo": {
+        "consumeTime": 59,
+        "poolName": "公测资源池",
+        "hosts": 2,
+        "vms": 1,
+        "adjustDate": "2014-09-11 11:42:00"
+    },
+    "uri": null
+}

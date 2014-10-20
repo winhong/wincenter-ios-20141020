@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>56D8D685-4F43-43A4-A670-F2731C57C701</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Winhong</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3411C2D104577BF0727A1033CE78E5F17890B33A</key>
+		<string>https://github.com/winhong2/winhong-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Winhong.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3411C2D104577BF0727A1033CE78E5F17890B33A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/winhong2/winhong-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3411C2D104577BF0727A1033CE78E5F17890B33A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3411C2D104577BF0727A1033CE78E5F17890B33A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>winhong-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

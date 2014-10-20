@@ -1,0 +1,1 @@
+../../BMFloatingHeaderCollectionViewLayout/Classes/BMFloatingHeaderCollectionViewLayoutInvalidationContext.h

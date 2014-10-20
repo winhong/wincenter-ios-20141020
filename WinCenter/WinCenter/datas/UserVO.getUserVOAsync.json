@@ -1,0 +1,23 @@
+{
+    "totalNum": 1,
+    "users": [
+        {
+          "id": 1,
+          "name": "云平台管理员",
+          "account": "admin",
+          "password": "WTHtk1eyckFZUs3vFKsDAdiscP16uTGA",
+          "email": "1666@qq.com",
+          "mobilephone": "18665606666",
+          "telephone": null,
+          "remark": "",
+          "createTime": "2014-09-01 17:26:48 000",
+          "lastUpdateTime": "2014-09-09 14:08:33 000",
+          "state": "1",
+          "onLine": null,
+          "role": 1,
+          "roleName": null,
+          "failCount": null,
+          "locked": null
+        }
+    ]
+}
