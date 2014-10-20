@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DatacenterTableVC.h"
 #import "DatacenterDetailInfoVC.h"
+#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface DashboardTableVC : UITableViewController<DatacenterTableVCDelegate>
 @property DatacenterDetailInfoVC *infoVC;

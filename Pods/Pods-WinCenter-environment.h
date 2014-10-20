@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_CupertinoYankee 1
 #define COCOAPODS_VERSION_PATCH_CupertinoYankee 1
 
+// EAIntroView
+#define COCOAPODS_POD_AVAILABLE_EAIntroView
+#define COCOAPODS_VERSION_MAJOR_EAIntroView 2
+#define COCOAPODS_VERSION_MINOR_EAIntroView 6
+#define COCOAPODS_VERSION_PATCH_EAIntroView 3
+
 // EChart
 #define COCOAPODS_POD_AVAILABLE_EChart
 #define COCOAPODS_VERSION_MAJOR_EChart 0
@@ -156,6 +162,18 @@
 #define COCOAPODS_VERSION_MINOR_PNChart 5
 #define COCOAPODS_VERSION_PATCH_PNChart 0
 
+// REFrostedViewController
+#define COCOAPODS_POD_AVAILABLE_REFrostedViewController
+#define COCOAPODS_VERSION_MAJOR_REFrostedViewController 2
+#define COCOAPODS_VERSION_MINOR_REFrostedViewController 4
+#define COCOAPODS_VERSION_PATCH_REFrostedViewController 6
+
+// RNFrostedSidebar
+#define COCOAPODS_POD_AVAILABLE_RNFrostedSidebar
+#define COCOAPODS_VERSION_MAJOR_RNFrostedSidebar 0
+#define COCOAPODS_VERSION_MINOR_RNFrostedSidebar 2
+#define COCOAPODS_VERSION_PATCH_RNFrostedSidebar 0
+
 // SFGaugeView
 #define COCOAPODS_POD_AVAILABLE_SFGaugeView
 #define COCOAPODS_VERSION_MAJOR_SFGaugeView 0
@@ -167,6 +185,12 @@
 #define COCOAPODS_VERSION_MAJOR_SHLineGraphView 1
 #define COCOAPODS_VERSION_MINOR_SHLineGraphView 0
 #define COCOAPODS_VERSION_PATCH_SHLineGraphView 6
+
+// SMPageControl
+#define COCOAPODS_POD_AVAILABLE_SMPageControl
+#define COCOAPODS_VERSION_MAJOR_SMPageControl 1
+#define COCOAPODS_VERSION_MINOR_SMPageControl 2
+#define COCOAPODS_VERSION_PATCH_SMPageControl 0
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD

@@ -70,7 +70,7 @@
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
     [self.tabBarVC addChildViewController:nav];
     
-    nav = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
+    nav = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateInitialViewController];
     [self.tabBarVC addChildViewController:nav];
     
     [self.tabBarVC setSelectedIndex:0];
