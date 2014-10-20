@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B3C06F360B94A21AFBCD444"
+               BlueprintIdentifier = "04713A52022F443C9F4DE460"
                BuildableName = "libPods-WinCenter-JBChartView.a"
                BlueprintName = "Pods-WinCenter-JBChartView"
                ReferencedContainer = "container:Pods.xcodeproj">

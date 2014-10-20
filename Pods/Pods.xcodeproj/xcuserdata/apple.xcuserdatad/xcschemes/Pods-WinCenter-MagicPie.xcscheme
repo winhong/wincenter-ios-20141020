@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD1F209840D346E0934D1F68"
+               BlueprintIdentifier = "AF78041BC2D84B4AA39D810A"
                BuildableName = "libPods-WinCenter-MagicPie.a"
                BlueprintName = "Pods-WinCenter-MagicPie"
                ReferencedContainer = "container:Pods.xcodeproj">

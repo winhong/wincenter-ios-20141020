@@ -93,6 +93,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="pageVCContainer" destination="8Xh-kD-J3a" id="e7h-d2-H0g"/>
+                        <outlet property="topToolBar" destination="G2l-L4-v89" id="Ug3-vg-Cnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZv-4W-gRY" userLabel="First Responder" sceneMemberID="firstResponder"/>

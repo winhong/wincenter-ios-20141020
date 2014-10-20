@@ -43,6 +43,9 @@ target 'WinCenter' do
     pod 'UIColor-HexString', '~> 1.1.0'
     pod 'MSCollectionViewCalendarLayout', '~> 0.1.3'
     
+    pod 'SMVerticalSegmentedControl', '~> 0.1.2'
+    pod 'HMSegmentedControl', '~> 1.4.0'
+    
     pod 'TOWebViewController', '~> 2.0.14'
     pod 'AFViewShaker', '~> 0.0.2'
     pod 'AMScrollingNavbar', '~> 1.0.3'

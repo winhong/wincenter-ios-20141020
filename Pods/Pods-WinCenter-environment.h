@@ -72,6 +72,12 @@
 #define COCOAPODS_VERSION_MINOR_GraphKit 1
 #define COCOAPODS_VERSION_PATCH_GraphKit 1
 
+// HMSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_HMSegmentedControl 4
+#define COCOAPODS_VERSION_PATCH_HMSegmentedControl 0
+
 // JBChartView
 #define COCOAPODS_POD_AVAILABLE_JBChartView
 #define COCOAPODS_VERSION_MAJOR_JBChartView 2
@@ -203,6 +209,12 @@
 #define COCOAPODS_VERSION_MAJOR_SMPageControl 1
 #define COCOAPODS_VERSION_MINOR_SMPageControl 2
 #define COCOAPODS_VERSION_PATCH_SMPageControl 0
+
+// SMVerticalSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_SMVerticalSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_SMVerticalSegmentedControl 0
+#define COCOAPODS_VERSION_MINOR_SMVerticalSegmentedControl 1
+#define COCOAPODS_VERSION_PATCH_SMVerticalSegmentedControl 2
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD

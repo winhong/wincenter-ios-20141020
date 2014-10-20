@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="022-34-wcg"/>
-                                    <barButtonItem title="摘    要" id="UQt-NA-OhQ">
+                                    <barButtonItem title="摘要" id="UQt-NA-OhQ">
                                         <connections>
                                             <action selector="showPageBarItemClick:" destination="4Ve-tC-ML6" id="77c-ZF-jR3"/>
                                         </connections>
@@ -96,6 +96,7 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
                         <outlet property="pageVCContainer" destination="zbR-Ib-os0" id="1eh-0z-0eK"/>
+                        <outlet property="topToolBar" destination="t7w-LR-ffe" id="7PA-B3-Upv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-x6-Pji" userLabel="First Responder" sceneMemberID="firstResponder"/>

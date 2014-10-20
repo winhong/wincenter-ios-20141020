@@ -16,6 +16,7 @@
 #import "HostDetailInfoVC.h"
 #import "VmDetailInfoVC.h"
 #import "VmDetailSnapshootVC.h"
+
 @interface MasterContainerVC ()
 
 @end
@@ -25,7 +26,40 @@
 - (void)viewDidLoad
 {    
     [super viewDidLoad];
+    
+    if(self.topToolBar){
+        NSMutableArray *titles = [[NSMutableArray alloc] initWithCapacity:0];
+        for(UIBarButtonItem *item in self.topToolBar.items){
+            if(item.title && ![item.title isEqualToString:@""]){
+                [titles addObject:item.title];
+            }
+        }
+        self.segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:titles];
+        //HMSegmentedControl *segmentedControl2 = [[HMSegmentedControl alloc] initWithSectionImages:@[[UIImage imageNamed:@"1"], [UIImage imageNamed:@"2"], [UIImage imageNamed:@"3"], [UIImage imageNamed:@"4"]] sectionSelectedImages:@[[UIImage imageNamed:@"1-selected"], [UIImage imageNamed:@"2-selected"], [UIImage imageNamed:@"3-selected"], [UIImage imageNamed:@"4-selected"]]];
+        CGRect rect = self.topToolBar.frame;
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            rect.size.width = 320;
+        }
+        self.segmentedControl.frame = rect;
+        self.segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
+//        self.segmentedControl.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+//        segmentedControl3.selectionIndicatorHeight = 4.0f;
+//        segmentedControl3.backgroundColor = [UIColor colorWithRed:0.1 green:0.4 blue:0.8 alpha:1];
+//        segmentedControl3.textColor = [UIColor whiteColor];
+//        segmentedControl3.selectedTextColor = [UIColor whiteColor];
+//        segmentedControl3.selectionIndicatorColor = [UIColor colorWithRed:0.5 green:0.8 blue:1 alpha:1];
+//        segmentedControl3.selectionStyle = HMSegmentedControlSelectionStyleBox;
+//        segmentedControl3.selectedSegmentIndex = HMSegmentedControlNoSegment;
+//        segmentedControl3.shouldAnimateUserSelection = NO;
+//        self.segmentedControl4.sectionTitles = @[@"Worldwide", @"Local", @"Headlines"];
         
+        self.segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+        __weak typeof(self) weakSelf = self;
+        [self.segmentedControl setIndexChangeBlock:^(NSInteger index) {
+            [weakSelf switchPageVC:index];
+        }];
+        [self.topToolBar.superview addSubview:self.segmentedControl];
+    }
     //for change the bullets color
     [UIPageControl appearance].pageIndicatorTintColor = [UIColor colorWithRed:(129.0/255) green:(129.0/255) blue:(129.0/255) alpha:1.0];
     [UIPageControl appearance].currentPageIndicatorTintColor = [UIColor colorWithRed:(06.0/255) green:(122.0/255) blue:(145.0/255) alpha:1.0];
@@ -85,6 +119,9 @@
             UIButton *subButton = (UIButton*)subView;
             subButton.selected = (subButton.tag == index);
         }
+    }
+    if(self.segmentedControl){
+        [self.segmentedControl setSelectedSegmentIndex:index animated:YES];
     }
 }
 - (IBAction)showPageBarItemClick:(id)sender {

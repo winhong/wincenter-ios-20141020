@@ -1,0 +1,1 @@
+../../SMVerticalSegmentedControl/SMVerticalSegmentedControl/SMVerticalSegmentedControl.h

@@ -157,6 +157,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
+                        <outlet property="topToolBar" destination="9Ur-d1-Age" id="kVm-ub-TEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDO-Z0-sbn" userLabel="First Responder" sceneMemberID="firstResponder"/>

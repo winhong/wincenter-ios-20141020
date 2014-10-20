@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13C0831A3EC945B79EA35E81"
+               BlueprintIdentifier = "E4A190CD7A9C40E8B3557ADE"
                BuildableName = "libPods-WinCenter-EChart.a"
                BlueprintName = "Pods-WinCenter-EChart"
                ReferencedContainer = "container:Pods.xcodeproj">

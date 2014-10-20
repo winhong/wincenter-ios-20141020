@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "DatacenterDetailInfoVC.h"
 #import "DatacenterTableVC.h"
+#import <HMSegmentedControl/HMSegmentedControl.h>
 
 @class DatacenterDetailInfoVC;
 
 @interface MasterContainerVC : UIViewController<UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 - (void)switchPageVC:(NSInteger)index;
+@property (weak, nonatomic) IBOutlet UIToolbar *topToolBar;
+@property HMSegmentedControl *segmentedControl;
 
 @property (weak, nonatomic) IBOutlet UIView *pageVCContainer;
 @property UIPageViewController *pageVC;

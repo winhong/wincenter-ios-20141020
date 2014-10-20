@@ -342,6 +342,7 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
                         <outlet property="pageVCContainer" destination="CEO-rG-YsG" id="pPI-hm-TUi"/>
+                        <outlet property="topToolBar" destination="fyA-AG-8EO" id="DKv-yf-nDm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfj-nX-Bm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
