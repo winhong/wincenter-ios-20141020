@@ -8,7 +8,7 @@
         <!--Split View Controller-->
         <scene sceneID="Xqy-8E-12G">
             <objects>
-                <splitViewController storyboardIdentifier="PopOptionsVC_iPad" id="bp4-kY-Qp4" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="PopOptionsVCNav_iPad" id="bp4-kY-Qp4" sceneMemberID="viewController">
                     <connections>
                         <segue destination="KGz-Ot-Ofg" kind="relationship" relationship="masterViewController" id="t4u-45-0oS"/>
                         <segue destination="QxN-aD-vi6" kind="relationship" relationship="detailViewController" id="7Mw-IM-jBC"/>
@@ -79,10 +79,6 @@
                                             <segue destination="QxN-aD-vi6" kind="replace" splitViewControllerTargetIndex="1" id="DXs-kF-nOV"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="RQR-mU-bSk">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sbG-Z8-BqV" style="IBUITableViewCellStyleDefault" id="b67-Nl-g1p">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -103,10 +99,6 @@
                                             <segue destination="oe8-iH-ppq" kind="replace" splitViewControllerTargetIndex="1" id="TBg-Bn-gLJ"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="bgj-5B-BjL">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0f8-L9-hPp" detailTextLabel="5NB-C7-kFK" style="IBUITableViewCellStyleValue1" id="d1D-3A-Ioc">
                                         <rect key="frame" x="0.0" y="227" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -131,7 +123,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="aya-nF-tQR" kind="push" id="Q0p-77-SSg"/>
+                                            <segue destination="aya-nF-tQR" kind="replace" splitViewControllerTargetIndex="1" id="lMM-aN-4Bt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -158,10 +150,6 @@
                                             <segue destination="ooA-QP-EgP" kind="replace" splitViewControllerTargetIndex="1" id="3VU-M8-kJQ"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="Vsg-n9-XbN">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MgT-gc-yOZ" style="IBUITableViewCellStyleDefault" id="GNC-38-tCl">
                                         <rect key="frame" x="0.0" y="355" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -614,7 +602,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UbJ-g3-z7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3805" y="-3688"/>
+            <point key="canvasLocation" x="-2993" y="-3688"/>
         </scene>
         <!--License信息-->
         <scene sceneID="hOd-7v-Raq">
@@ -816,7 +804,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vZ-gY-wEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3832" y="-2912"/>
+            <point key="canvasLocation" x="-3020" y="-2912"/>
         </scene>
         <!--修改密码-->
         <scene sceneID="5Tt-Sm-6IE">
@@ -1094,7 +1082,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2V7-H6-CAv">
             <objects>
-                <navigationController storyboardIdentifier="PopOptionsVCNav" automaticallyAdjustsScrollViewInsets="NO" id="KGz-Ot-Ofg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KGz-Ot-Ofg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1164,7 +1152,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPm-kW-S7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4644" y="-2912"/>
+            <point key="canvasLocation" x="-5157" y="-3823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QOx-RS-3s8">
@@ -1218,7 +1206,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHR-7m-ZtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4617" y="-3688"/>
+            <point key="canvasLocation" x="-3805" y="-3688"/>
         </scene>
         <!--系统设置-->
         <scene sceneID="YTP-Rp-fcI">
@@ -1463,16 +1451,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhc-z9-PJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="M0M-TA-G26" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-6228" y="-3243"/>
+            <point key="canvasLocation" x="-6206" y="-3221"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kjQ-EB-lUw">
+            <objects>
+                <navigationController storyboardIdentifier="PopOptionsVCNav_iPhone" automaticallyAdjustsScrollViewInsets="NO" id="DOg-ce-T3i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rh0-85-odQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RpT-4z-TE5" kind="relationship" relationship="rootViewController" id="ueG-oL-8V8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sl3-ZI-vCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7022" y="-3221"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="LR4-Bk-ct5"/>
+        <segue reference="DXs-kF-nOV"/>
+        <segue reference="FDj-F1-Eac"/>
         <segue reference="xiw-9q-3p9"/>
-        <segue reference="eem-JX-f0g"/>
         <segue reference="h9v-mu-EsN"/>
         <segue reference="sfL-QP-Kfv"/>
-        <segue reference="gQ8-rg-qih"/>
-        <segue reference="FDj-F1-Eac"/>
-        <segue reference="7Mw-IM-jBC"/>
+        <segue reference="eem-JX-f0g"/>
     </inferredMetricsTieBreakers>
 </document>

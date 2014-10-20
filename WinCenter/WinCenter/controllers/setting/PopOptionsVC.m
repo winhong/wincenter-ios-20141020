@@ -46,7 +46,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section==5){
+    if(indexPath.section==2){
         if(indexPath.row==1){
             TOWebViewController *webView = [[TOWebViewController alloc] initWithURLString:@"http://support.winhong.com"];
             [self.navigationController pushViewController:webView animated:YES];

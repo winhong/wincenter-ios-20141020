@@ -137,7 +137,7 @@
 }
 
 -(IBAction)showOptionsVC:(id)sender{
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateInitialViewController];
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateViewController:@"PopOptionsVCNav"];
     [self presentViewController:vc animated:YES completion:nil];
     
 }
