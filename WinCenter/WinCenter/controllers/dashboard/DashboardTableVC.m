@@ -15,29 +15,9 @@
 
 @implementation DashboardTableVC
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self showNavBarAnimated:NO];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    [self showNavBarAnimated:NO];
-}
-
-- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
-{
-    // This enables the user to scroll down the navbar by tapping the status bar.
-    [self showNavbar];
-    
-    return YES;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self followScrollView:self.tableView];
     
     [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
         if(allRemote.count>0){
