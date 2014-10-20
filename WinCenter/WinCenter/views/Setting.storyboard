@@ -254,11 +254,42 @@
         <!--关于Wincenter-->
         <scene sceneID="9cA-mC-QIY">
             <objects>
-                <tableViewController id="eWt-rJ-IKi" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PopOptionAboutVC" id="eWt-rJ-IKi" customClass="PopOptionAboutVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Fmb-Mg-jpE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="bBc-c4-GGs">
+                            <rect key="frame" x="0.0" y="64" width="600" height="190"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L05-fO-Wc8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-Fd-EuL">
+                                            <rect key="frame" x="240" y="35" width="120" height="120"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="l2f-fD-mie"/>
+                                                <constraint firstAttribute="height" constant="120" id="lgf-kI-dMU"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="7mB-Fd-EuL" secondAttribute="centerY" id="JJD-fV-7RQ"/>
+                                        <constraint firstAttribute="centerX" secondItem="7mB-Fd-EuL" secondAttribute="centerX" id="WlF-hJ-cqZ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="L05-fO-Wc8" secondAttribute="bottom" id="0uZ-KU-mGT"/>
+                                <constraint firstItem="L05-fO-Wc8" firstAttribute="leading" secondItem="bBc-c4-GGs" secondAttribute="leading" id="43c-kj-ZND"/>
+                                <constraint firstAttribute="trailing" secondItem="L05-fO-Wc8" secondAttribute="trailing" id="eL6-u8-ola"/>
+                                <constraint firstItem="L05-fO-Wc8" firstAttribute="top" secondItem="bBc-c4-GGs" secondAttribute="top" id="gGC-2z-8rT"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection headerTitle="wincenter介绍" id="e8q-aT-uRc">
                                 <cells>
@@ -339,6 +370,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="关于Wincenter" id="2hT-6e-FKd"/>
+                    <connections>
+                        <outlet property="qrImage" destination="7mB-Fd-EuL" id="ijv-Mu-96l"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajq-Zc-1gk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1269,10 +1303,6 @@
                                             <segue destination="Rmg-sq-peh" kind="show" id="sfL-QP-Kfv"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="0iJ-Px-UR1">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="SSb-nB-jpC" style="IBUITableViewCellStyleDefault" id="XTe-ud-PIn">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1293,10 +1323,6 @@
                                             <segue destination="rxn-hY-iat" kind="show" id="FDj-F1-Eac"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="GCg-Yk-Gyv">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lLs-zK-f9a" detailTextLabel="Ca3-e7-GTD" style="IBUITableViewCellStyleValue1" id="u5v-bn-UiX">
                                         <rect key="frame" x="0.0" y="227" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1326,7 +1352,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="T9k-tm-mhb">
+                            <tableViewSection id="GCg-Yk-Gyv">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EzS-gl-v7Y" style="IBUITableViewCellStyleDefault" id="Hbr-In-Gfn">
                                         <rect key="frame" x="0.0" y="291" width="540" height="44"/>
@@ -1348,10 +1374,6 @@
                                             <segue destination="UAK-wx-xrw" kind="show" id="h9v-mu-EsN"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="X6o-Xm-8G6">
-                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="evn-8A-Iro" style="IBUITableViewCellStyleDefault" id="nno-gh-cXN">
                                         <rect key="frame" x="0.0" y="355" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1473,12 +1495,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LR4-Bk-ct5"/>
+        <segue reference="fUs-FY-UtL"/>
         <segue reference="DXs-kF-nOV"/>
-        <segue reference="FDj-F1-Eac"/>
         <segue reference="xiw-9q-3p9"/>
-        <segue reference="h9v-mu-EsN"/>
         <segue reference="sfL-QP-Kfv"/>
-        <segue reference="eem-JX-f0g"/>
+        <segue reference="h9v-mu-EsN"/>
+        <segue reference="FDj-F1-Eac"/>
+        <segue reference="gQ8-rg-qih"/>
     </inferredMetricsTieBreakers>
 </document>

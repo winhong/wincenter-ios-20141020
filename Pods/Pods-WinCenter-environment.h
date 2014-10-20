@@ -150,6 +150,12 @@
 #define COCOAPODS_VERSION_MINOR_NSObject_ObjectMap 3
 #define COCOAPODS_VERSION_PATCH_NSObject_ObjectMap 1
 
+// ObjQREncoder
+#define COCOAPODS_POD_AVAILABLE_ObjQREncoder
+#define COCOAPODS_VERSION_MAJOR_ObjQREncoder 0
+#define COCOAPODS_VERSION_MINOR_ObjQREncoder 0
+#define COCOAPODS_VERSION_PATCH_ObjQREncoder 1
+
 // PDKTStickySectionHeadersCollectionViewLayout
 #define COCOAPODS_POD_AVAILABLE_PDKTStickySectionHeadersCollectionViewLayout
 #define COCOAPODS_VERSION_MAJOR_PDKTStickySectionHeadersCollectionViewLayout 0

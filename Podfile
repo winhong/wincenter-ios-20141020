@@ -36,6 +36,7 @@ target 'WinCenter' do
     pod 'RNFrostedSidebar', '~> 0.2.0'
     pod 'REFrostedViewController', '~> 2.4.6'
     pod 'RATreeView', '~> 0.9.1'
+    pod 'ObjQREncoder', '~> 0.0.1'
     
     pod 'CupertinoYankee', '~> 0.1.0'
     pod 'Masonry', '~> 0.5.3'

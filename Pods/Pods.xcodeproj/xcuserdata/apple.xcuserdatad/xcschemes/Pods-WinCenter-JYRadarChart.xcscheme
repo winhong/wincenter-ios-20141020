@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B5FBE2732DD4B7099454238"
+               BlueprintIdentifier = "EDC98D873C524D549FFDA321"
                BuildableName = "libPods-WinCenter-JYRadarChart.a"
                BlueprintName = "Pods-WinCenter-JYRadarChart"
                ReferencedContainer = "container:Pods.xcodeproj">

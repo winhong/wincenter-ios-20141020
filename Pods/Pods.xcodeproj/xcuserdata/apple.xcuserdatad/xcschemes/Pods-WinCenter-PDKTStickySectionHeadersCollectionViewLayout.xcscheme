@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08C611F915184410B673E9C0"
+               BlueprintIdentifier = "B28B9822F90B4942AB9BB727"
                BuildableName = "libPods-WinCenter-PDKTStickySectionHeadersCollectionViewLayout.a"
                BlueprintName = "Pods-WinCenter-PDKTStickySectionHeadersCollectionViewLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -211,6 +211,7 @@
 		1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361E19F4FE05007E4D6C /* speed@2x.png */; };
 		1824362F19F4FE05007E4D6C /* time.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361F19F4FE05007E4D6C /* time.off@2x.png */; };
 		1824363019F4FE05007E4D6C /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824362019F4FE05007E4D6C /* time@2x.png */; };
+		1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824363219F537DF007E4D6C /* PopOptionAboutVC.m */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -667,6 +668,8 @@
 		1824361E19F4FE05007E4D6C /* speed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speed@2x.png"; sourceTree = "<group>"; };
 		1824361F19F4FE05007E4D6C /* time.off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time.off@2x.png"; sourceTree = "<group>"; };
 		1824362019F4FE05007E4D6C /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		1824363119F537DF007E4D6C /* PopOptionAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionAboutVC.h; sourceTree = "<group>"; };
+		1824363219F537DF007E4D6C /* PopOptionAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionAboutVC.m; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -1767,6 +1770,8 @@
 				18C212B719F27C2000FCBD23 /* PopOptionsUserInfoVC.m */,
 				18C212B819F27C2000FCBD23 /* PopOptionsVC.h */,
 				18C212B919F27C2000FCBD23 /* PopOptionsVC.m */,
+				1824363119F537DF007E4D6C /* PopOptionAboutVC.h */,
+				1824363219F537DF007E4D6C /* PopOptionAboutVC.m */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -2266,6 +2271,7 @@
 				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,
 				18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */,
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
+				1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */,
 				181DED6E19F17CB100998835 /* BusinessVmVO.m in Sources */,
 				18C2133219F27C2000FCBD23 /* PoolDashboardHeader.m in Sources */,
 				181DECFB19F17CB100998835 /* UIBaseClass.m in Sources */,
