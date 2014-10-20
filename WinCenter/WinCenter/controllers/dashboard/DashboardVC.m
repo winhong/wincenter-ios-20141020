@@ -7,6 +7,7 @@
 //
 
 #import "DAshboardVC.h"
+#import "DTNavigationController.h"
 #import "MSCalendarViewController.h"
 
 @interface DashboardVC ()
@@ -44,21 +45,17 @@
 - (void)refresh{
     self.title = [RemoteObject getCurrentDatacenterVO].name;
     
-    UINavigationController *nav;
-    
-    nav = [self.storyboard instantiateViewController:@"DatacenterDetailInfoVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    nav = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    nav = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    nav = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    nav = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    nav = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
-    [self.tabBarVC addChildViewController:nav];
-    
+    NSArray *viewControllers = @[@"DatacenterDetailInfoVCNav",
+                                 @"PoolDashboardVCNav",@"HostDashboardVCNav",@"VmDashboardVCNav",
+                                 @"StorageDashboardVCNav", @"BusinessDashboardVCNav"];
+    for(NSString *viewControllerName in viewControllers){
+        UINavigationController *nav = [self.storyboard instantiateViewController:viewControllerName];
+        //UIViewController *vc = [[nav childViewControllers] firstObject];
+        //DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleFixedHomeAndAtionButton];
+        //navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self.tabBarVC addChildViewController:nav];
+    }
+
     //网络
     [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
     
@@ -67,6 +64,7 @@
     //搜索
     [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
     
+    UINavigationController *nav;
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
     [self.tabBarVC addChildViewController:nav];
     

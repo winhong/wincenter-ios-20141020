@@ -212,6 +212,19 @@
 		1824362F19F4FE05007E4D6C /* time.off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824361F19F4FE05007E4D6C /* time.off@2x.png */; };
 		1824363019F4FE05007E4D6C /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824362019F4FE05007E4D6C /* time@2x.png */; };
 		1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824363219F537DF007E4D6C /* PopOptionAboutVC.m */; };
+		1824364A19F544C6007E4D6C /* DTFolderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824363619F544C6007E4D6C /* DTFolderBar.m */; };
+		1824364B19F544C6007E4D6C /* DTFolderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824363919F544C6007E4D6C /* DTFolderItem.m */; };
+		1824364C19F544C6007E4D6C /* DTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824363D19F544C6007E4D6C /* DTNavigationController.m */; };
+		1824364D19F544C6007E4D6C /* ActionBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364019F544C6007E4D6C /* ActionBtn.png */; };
+		1824364E19F544C6007E4D6C /* ActionBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364119F544C6007E4D6C /* ActionBtn@2x.png */; };
+		1824364F19F544C6007E4D6C /* ActionBtnPress.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364219F544C6007E4D6C /* ActionBtnPress.png */; };
+		1824365019F544C6007E4D6C /* ActionBtnPress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364319F544C6007E4D6C /* ActionBtnPress@2x.png */; };
+		1824365119F544C6007E4D6C /* FolderBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364419F544C6007E4D6C /* FolderBar.png */; };
+		1824365219F544C6007E4D6C /* FolderBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364519F544C6007E4D6C /* FolderBar@2x.png */; };
+		1824365319F544C6007E4D6C /* FolderItemBgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364619F544C6007E4D6C /* FolderItemBgImage.png */; };
+		1824365419F544C6007E4D6C /* FolderItemBgImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364719F544C6007E4D6C /* FolderItemBgImage@2x.png */; };
+		1824365519F544C6007E4D6C /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364819F544C6007E4D6C /* Home.png */; };
+		1824365619F544C6007E4D6C /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364919F544C6007E4D6C /* Home@2x.png */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -670,6 +683,26 @@
 		1824362019F4FE05007E4D6C /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		1824363119F537DF007E4D6C /* PopOptionAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionAboutVC.h; sourceTree = "<group>"; };
 		1824363219F537DF007E4D6C /* PopOptionAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionAboutVC.m; sourceTree = "<group>"; };
+		1824363519F544C6007E4D6C /* DTFolderBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFolderBar.h; sourceTree = "<group>"; };
+		1824363619F544C6007E4D6C /* DTFolderBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFolderBar.m; sourceTree = "<group>"; };
+		1824363719F544C6007E4D6C /* DTFolderConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFolderConfig.h; sourceTree = "<group>"; };
+		1824363819F544C6007E4D6C /* DTFolderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFolderItem.h; sourceTree = "<group>"; };
+		1824363919F544C6007E4D6C /* DTFolderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFolderItem.m; sourceTree = "<group>"; };
+		1824363A19F544C6007E4D6C /* DTFolderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFolderStyle.h; sourceTree = "<group>"; };
+		1824363B19F544C6007E4D6C /* DTInstancetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInstancetype.h; sourceTree = "<group>"; };
+		1824363C19F544C6007E4D6C /* DTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNavigationController.h; sourceTree = "<group>"; };
+		1824363D19F544C6007E4D6C /* DTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNavigationController.m; sourceTree = "<group>"; };
+		1824363E19F544C6007E4D6C /* DTRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRelease.h; sourceTree = "<group>"; };
+		1824364019F544C6007E4D6C /* ActionBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionBtn.png; sourceTree = "<group>"; };
+		1824364119F544C6007E4D6C /* ActionBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ActionBtn@2x.png"; sourceTree = "<group>"; };
+		1824364219F544C6007E4D6C /* ActionBtnPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionBtnPress.png; sourceTree = "<group>"; };
+		1824364319F544C6007E4D6C /* ActionBtnPress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ActionBtnPress@2x.png"; sourceTree = "<group>"; };
+		1824364419F544C6007E4D6C /* FolderBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FolderBar.png; sourceTree = "<group>"; };
+		1824364519F544C6007E4D6C /* FolderBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FolderBar@2x.png"; sourceTree = "<group>"; };
+		1824364619F544C6007E4D6C /* FolderItemBgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FolderItemBgImage.png; sourceTree = "<group>"; };
+		1824364719F544C6007E4D6C /* FolderItemBgImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FolderItemBgImage@2x.png"; sourceTree = "<group>"; };
+		1824364819F544C6007E4D6C /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		1824364919F544C6007E4D6C /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -1512,6 +1545,41 @@
 			path = class;
 			sourceTree = "<group>";
 		};
+		1824363419F544C6007E4D6C /* DTNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				1824363519F544C6007E4D6C /* DTFolderBar.h */,
+				1824363619F544C6007E4D6C /* DTFolderBar.m */,
+				1824363719F544C6007E4D6C /* DTFolderConfig.h */,
+				1824363819F544C6007E4D6C /* DTFolderItem.h */,
+				1824363919F544C6007E4D6C /* DTFolderItem.m */,
+				1824363A19F544C6007E4D6C /* DTFolderStyle.h */,
+				1824363B19F544C6007E4D6C /* DTInstancetype.h */,
+				1824363C19F544C6007E4D6C /* DTNavigationController.h */,
+				1824363D19F544C6007E4D6C /* DTNavigationController.m */,
+				1824363E19F544C6007E4D6C /* DTRelease.h */,
+				1824363F19F544C6007E4D6C /* Images */,
+			);
+			path = DTNavigationController;
+			sourceTree = "<group>";
+		};
+		1824363F19F544C6007E4D6C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1824364019F544C6007E4D6C /* ActionBtn.png */,
+				1824364119F544C6007E4D6C /* ActionBtn@2x.png */,
+				1824364219F544C6007E4D6C /* ActionBtnPress.png */,
+				1824364319F544C6007E4D6C /* ActionBtnPress@2x.png */,
+				1824364419F544C6007E4D6C /* FolderBar.png */,
+				1824364519F544C6007E4D6C /* FolderBar@2x.png */,
+				1824364619F544C6007E4D6C /* FolderItemBgImage.png */,
+				1824364719F544C6007E4D6C /* FolderItemBgImage@2x.png */,
+				1824364819F544C6007E4D6C /* Home.png */,
+				1824364919F544C6007E4D6C /* Home@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		18763BAD19F4B82300669CC3 /* dialScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -1655,6 +1723,7 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				1824363419F544C6007E4D6C /* DTNavigationController */,
 				18763C1819F4EE0200669CC3 /* EScrollerView */,
 				18763BED19F4E4E400669CC3 /* EAIntro */,
 				182435FE19F4F774007E4D6C /* RATree */,
@@ -1952,6 +2021,7 @@
 				1824362D19F4FE05007E4D6C /* speed.off@2x.png in Resources */,
 				181DECFA19F17CB100998835 /* infoLine-200-1.png in Resources */,
 				18763BBD19F4B82300669CC3 /* dial-icon4.png in Resources */,
+				1824365519F544C6007E4D6C /* Home.png in Resources */,
 				181DED5519F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json in Resources */,
 				181DED6C19F17CB100998835 /* Images.xcassets in Resources */,
 				181DED6319F17CB100998835 /* PoolVO.getVmListWithlimit.json in Resources */,
@@ -1969,7 +2039,9 @@
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
 				1824362219F4FE05007E4D6C /* calories@2x.png in Resources */,
+				1824365219F544C6007E4D6C /* FolderBar@2x.png in Resources */,
 				181DED6619F17CB100998835 /* TemplateIcon2x.png in Resources */,
+				1824364F19F544C6007E4D6C /* ActionBtnPress.png in Resources */,
 				181DED5319F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json in Resources */,
 				181DECE819F17CB100998835 /* select.png in Resources */,
 				181DED9419F17CB100998835 /* Business.storyboard in Resources */,
@@ -1978,6 +2050,7 @@
 				18763C0E19F4E4E400669CC3 /* pageDot@2x.png in Resources */,
 				18763C1119F4E4E400669CC3 /* title2@2x.png in Resources */,
 				181DED5819F17CB100998835 /* HostVO.getHostVOAsync.json in Resources */,
+				1824364E19F544C6007E4D6C /* ActionBtn@2x.png in Resources */,
 				18763BC119F4BF2900669CC3 /* dial-icon5.png in Resources */,
 				1824362919F4FE05007E4D6C /* hr.off@2x.png in Resources */,
 				1824362719F4FE05007E4D6C /* distance.off@2x.png in Resources */,
@@ -1999,6 +2072,7 @@
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
+				1824365419F544C6007E4D6C /* FolderItemBgImage@2x.png in Resources */,
 				1824362C19F4FE05007E4D6C /* route@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
 				181DECF319F17CB100998835 /* appoint-80-80.png in Resources */,
@@ -2007,15 +2081,18 @@
 				181DED6019F17CB100998835 /* PoolVO.getStorageList.json in Resources */,
 				18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */,
 				181DECAA19F17CB100998835 /* down_white@2x.png in Resources */,
+				1824365619F544C6007E4D6C /* Home@2x.png in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				181DED6B19F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json in Resources */,
 				181DED9619F17CB100998835 /* Host.storyboard in Resources */,
 				18763C0519F4E4E400669CC3 /* bg1@2x.png in Resources */,
 				181DED9919F17CB100998835 /* Pool.storyboard in Resources */,
+				1824365119F544C6007E4D6C /* FolderBar.png in Resources */,
 				181DECA819F17CB100998835 /* Charts.storyboard in Resources */,
 				181DECB219F17CB100998835 /* up_red@2x.png in Resources */,
 				181DED5419F17CB100998835 /* HostVO.getHostNetworkInternalListAsync.json in Resources */,
+				1824364D19F544C6007E4D6C /* ActionBtn.png in Resources */,
 				18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */,
 				18763C0919F4E4E400669CC3 /* bigLogo@2x.png in Resources */,
 				181DECB719F17CB100998835 /* go_1@2x.png in Resources */,
@@ -2028,6 +2105,7 @@
 				181DED4719F17CB100998835 /* DatacenterVO.getBusinessListAsync.json in Resources */,
 				181DECE219F17CB100998835 /* center.png in Resources */,
 				181DED6719F17CB100998835 /* UserVO.getUserVOAsync.json in Resources */,
+				1824365319F544C6007E4D6C /* FolderItemBgImage.png in Resources */,
 				181DED5019F17CB100998835 /* DatacenterVO.getStorageListAsync.limit.json in Resources */,
 				181DED4819F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json in Resources */,
 				181DED5C19F17CB100998835 /* PoolVO.getHostListAsync.json in Resources */,
@@ -2041,6 +2119,7 @@
 				18763C0C19F4E4E400669CC3 /* icon3@2x.png in Resources */,
 				181DED6119F17CB100998835 /* PoolVO.getStorageListAsync.json in Resources */,
 				18763C1419F4E4E400669CC3 /* avatar@2x.jpg in Resources */,
+				1824365019F544C6007E4D6C /* ActionBtnPress@2x.png in Resources */,
 				181DED6919F17CB100998835 /* VmVO.getVmVOAsync.json in Resources */,
 				18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */,
 				181DED5719F17CB100998835 /* HostVO.getHostStatVOAsync.json in Resources */,
@@ -2125,6 +2204,7 @@
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
 				181DECDA19F17CB100998835 /* MyPieElement.m in Sources */,
 				18C2133A19F27C2000FCBD23 /* StorageContainerVC.m in Sources */,
+				1824364C19F544C6007E4D6C /* DTNavigationController.m in Sources */,
 				181DED7919F17CB100998835 /* HostNicListResult.m in Sources */,
 				181DED7619F17CB100998835 /* HostListResult.m in Sources */,
 				18C2130B19F27C2000FCBD23 /* MSCalendarViewController.m in Sources */,
@@ -2139,6 +2219,7 @@
 				18C2131019F27C2000FCBD23 /* MSEvent.m in Sources */,
 				18C2132119F27C2000FCBD23 /* HostDashboardHeader.m in Sources */,
 				181DEA9D19F17C4E00998835 /* AppDelegate.m in Sources */,
+				1824364B19F544C6007E4D6C /* DTFolderItem.m in Sources */,
 				181DECEC19F17CB100998835 /* PNPlot.m in Sources */,
 				181DECD019F17CB100998835 /* JBChartInformationView.m in Sources */,
 				18C2134519F27C2000FCBD23 /* UIButton+Badge.m in Sources */,
@@ -2213,6 +2294,7 @@
 				181DECBC19F17CB100998835 /* EPieChartViewController.m in Sources */,
 				181DECFC19F17CB100998835 /* WeekStatVC.m in Sources */,
 				181DED9019F17CB100998835 /* VmNetworkVO.m in Sources */,
+				1824364A19F544C6007E4D6C /* DTFolderBar.m in Sources */,
 				18C2132519F27C2000FCBD23 /* HostNetworkCollectionCell.m in Sources */,
 				18C2135619F27C2000FCBD23 /* VmNetworkCollectionVC.m in Sources */,
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,

@@ -5,16 +5,16 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Business ContainerVC-->
+        <!--业务系统详情-->
         <scene sceneID="A2y-iO-8yv">
             <objects>
-                <viewController storyboardIdentifier="BusinessContainerVC_iPad" id="5Kv-z6-o09" customClass="BusinessContainerVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessContainerVC_iPad" title="业务系统详情" automaticallyAdjustsScrollViewInsets="NO" id="5Kv-z6-o09" customClass="BusinessContainerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYR-1u-en6"/>
                         <viewControllerLayoutGuide type="bottom" id="5Kf-ER-oi0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t1V-7H-79c">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBv-hy-79D">
@@ -74,6 +74,7 @@
                             <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="w1S-5N-Cwr" secondAttribute="bottom" constant="1" id="p0j-3C-yU3"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="返回" id="HvO-3S-2gZ">
                             <connections>
@@ -517,6 +518,9 @@
                     </collectionView>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbR-E8-RXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

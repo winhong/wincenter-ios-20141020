@@ -5,24 +5,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Vm ContainerVC-->
+        <!--虚拟机详情-->
         <scene sceneID="ezV-Nl-xCt">
             <objects>
-                <viewController storyboardIdentifier="VmContainerVC_iPad" id="rda-j3-bYj" customClass="VmContainerVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VmContainerVC_iPad" title="虚拟机详情" automaticallyAdjustsScrollViewInsets="NO" id="rda-j3-bYj" customClass="VmContainerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="85o-Q7-yNR"/>
                         <viewControllerLayoutGuide type="bottom" id="OWo-MH-yyD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8d5-Yz-syf">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9R9-1v-QAk">
                                 <rect key="frame" x="0.0" y="168" width="969" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-d1-Age">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-d1-Age">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="c2J-zJ-MGN"/>
                                     <barButtonItem title="摘要" id="yca-y7-JZ6">
@@ -131,6 +132,7 @@
                             <constraint firstItem="OWo-MH-yyD" firstAttribute="top" secondItem="9R9-1v-QAk" secondAttribute="bottom" id="jQ4-bc-8SK"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="返回" id="0Ag-or-7ZV">
                             <connections>

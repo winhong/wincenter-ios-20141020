@@ -60,43 +60,15 @@
 }
 
 - (void)gotoPage:(NSNumber*)index{
-    switch (index.intValue) {
-        case 0:{
-            UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController:vc animated:YES completion:nil];
-            break;
-        }
-        case 1:{
-            UIViewController *vc = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
-            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController:vc animated:YES completion:nil];
-            break;
-        }
-        case 2:{
-            UIViewController *vc = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
-            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController:vc animated:YES completion:nil];
-            break;
-        }
-        case 3:{
-            UIViewController *vc = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
-            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController:vc animated:YES completion:nil];
-            break;
-        }
-        case 4:{
-            UIViewController *vc = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
-            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            [self presentViewController:vc animated:YES completion:nil];
-            break;
-        }
-        case 5:{
-
-            break;
-        }
-        default:
-            break;
+    NSArray *viewControllers = @[@"PoolDashboardVCNav",@"HostDashboardVCNav",@"VmDashboardVCNav",
+                                 @"StorageDashboardVCNav", @"BusinessDashboardVCNav", @""];
+    NSString *viewControllerName = viewControllers[index.intValue];
+    if(![viewControllerName isEqualToString:@""]){
+        UINavigationController *nav = [self.storyboard instantiateViewController:viewControllerName];
+        UIViewController *vc = [[nav childViewControllers] firstObject];
+        DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleFixedLeftHome];
+        navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:navigation animated:YES completion:nil];
     }
 
 }

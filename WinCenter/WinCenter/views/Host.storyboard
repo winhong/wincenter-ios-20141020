@@ -197,17 +197,18 @@
         <!--物理机详情-->
         <scene sceneID="lUo-he-c0a">
             <objects>
-                <viewController storyboardIdentifier="HostContainerVC_iPad" title="物理机详情" id="SdQ-oO-Giu" customClass="HostContainerVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HostContainerVC_iPad" title="物理机详情" automaticallyAdjustsScrollViewInsets="NO" id="SdQ-oO-Giu" customClass="HostContainerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bR5-ZV-a7K"/>
                         <viewControllerLayoutGuide type="bottom" id="C5K-M6-ms8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NwC-t7-hvp">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="t9h-b7-AXP"/>
                                     <barButtonItem title="摘要" id="EzE-R1-Fhc">
@@ -326,6 +327,7 @@
                             <constraint firstItem="fyA-AG-8EO" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leadingMargin" constant="-16" id="tu3-QD-Suq"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="返回" id="6HX-uc-HcG">
                             <connections>
