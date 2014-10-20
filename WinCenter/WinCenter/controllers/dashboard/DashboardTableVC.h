@@ -10,8 +10,9 @@
 #import "DatacenterTableVC.h"
 #import "DatacenterDetailInfoVC.h"
 #import <REFrostedViewController/REFrostedViewController.h>
+#import "EScrollerView.h"
 
-@interface DashboardTableVC : UITableViewController<DatacenterTableVCDelegate>
+@interface DashboardTableVC : UITableViewController<DatacenterTableVCDelegate, UIScrollViewDelegate, EScrollerViewDelegate>
 @property DatacenterDetailInfoVC *infoVC;
 - (void)gotoPage:(NSNumber*)index;
 @end

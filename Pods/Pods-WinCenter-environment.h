@@ -162,6 +162,12 @@
 #define COCOAPODS_VERSION_MINOR_PNChart 5
 #define COCOAPODS_VERSION_PATCH_PNChart 0
 
+// RATreeView
+#define COCOAPODS_POD_AVAILABLE_RATreeView
+#define COCOAPODS_VERSION_MAJOR_RATreeView 0
+#define COCOAPODS_VERSION_MINOR_RATreeView 9
+#define COCOAPODS_VERSION_PATCH_RATreeView 1
+
 // REFrostedViewController
 #define COCOAPODS_POD_AVAILABLE_REFrostedViewController
 #define COCOAPODS_VERSION_MAJOR_REFrostedViewController 2
