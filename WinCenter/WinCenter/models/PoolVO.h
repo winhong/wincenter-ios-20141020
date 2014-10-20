@@ -12,6 +12,7 @@
 
 @property int resourcePoolId;
 @property NSString *resourcePoolName;
+@property int resPoolNumber;
 @property int hostNumber;
 @property int vmNumber;
 @property int activeVmNumber;
@@ -24,6 +25,8 @@
 @property float availMemory;
 @property float availStorage;
 @property NSString *haEnabled;
+
+@property NSObject *poolSubVO;
 
 -(float)cpuRatio;
 

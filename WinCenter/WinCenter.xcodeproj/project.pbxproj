@@ -282,6 +282,7 @@
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -766,6 +767,8 @@
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
+		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
+		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1290,6 +1293,8 @@
 				181DEC7419F17CB100998835 /* PoolListResult.m */,
 				181DEC7519F17CB100998835 /* PoolVO.h */,
 				181DEC7619F17CB100998835 /* PoolVO.m */,
+				845B045B19F4DF00006969CD /* PoolSubVO.h */,
+				845B045C19F4DF00006969CD /* PoolSubVO.m */,
 				181DEC7719F17CB100998835 /* RemoteObject.h */,
 				181DEC7819F17CB100998835 /* RemoteObject.m */,
 				181DEC7919F17CB100998835 /* StorageListResult.h */,
@@ -1869,6 +1874,7 @@
 				181DED8319F17CB100998835 /* PoolListResult.m in Sources */,
 				18C2131F19F27C2000FCBD23 /* HostContainerVC.m in Sources */,
 				18C2135719F27C2000FCBD23 /* VmNewVC.m in Sources */,
+				845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */,
 				18C2130D19F27C2000FCBD23 /* MSCurrentTimeIndicator.m in Sources */,
 				181DECD319F17CB100998835 /* JBLineChartFooterView.m in Sources */,
 				181DECD619F17CB100998835 /* Example1Controller.m in Sources */,
