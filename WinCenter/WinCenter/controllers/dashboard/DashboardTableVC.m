@@ -15,29 +15,9 @@
 
 @implementation DashboardTableVC
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self showNavBarAnimated:NO];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    [self showNavBarAnimated:NO];
-}
-
-- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
-{
-    // This enables the user to scroll down the navbar by tapping the status bar.
-    [self showNavbar];
-    
-    return YES;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self followScrollView:self.tableView];
     
     [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
         if(allRemote.count>0){
@@ -66,48 +46,51 @@
     self.title = [RemoteObject getCurrentDatacenterVO].name;
 }
 
+- (void)gotoPage:(NSNumber*)index{
+    switch (index.intValue) {
+        case 0:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 1:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 2:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 3:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 4:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 5:{
+
+            break;
+        }
+        default:
+            break;
+    }
+
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section==1){
-        switch (indexPath.row) {
-            case 0:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 1:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 2:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 3:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 4:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 5:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            default:
-                break;
-        }
+    
     }
     else if(indexPath.section==2){
         [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Charts" bundle:nil] instantiateViewController:@"ChartTableVC"] animated:YES];
