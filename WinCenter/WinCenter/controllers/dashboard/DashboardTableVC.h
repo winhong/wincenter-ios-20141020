@@ -12,4 +12,5 @@
 
 @interface DashboardTableVC : UITableViewController<DatacenterTableVCDelegate>
 @property DatacenterDetailInfoVC *infoVC;
+- (void)gotoPage:(NSNumber*)index;
 @end

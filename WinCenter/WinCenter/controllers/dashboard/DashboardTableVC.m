@@ -66,48 +66,51 @@
     self.title = [RemoteObject getCurrentDatacenterVO].name;
 }
 
+- (void)gotoPage:(NSNumber*)index{
+    switch (index.intValue) {
+        case 0:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 1:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 2:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 3:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 4:{
+            UIViewController *vc = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
+            vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:vc animated:YES completion:nil];
+            break;
+        }
+        case 5:{
+
+            break;
+        }
+        default:
+            break;
+    }
+
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section==1){
-        switch (indexPath.row) {
-            case 0:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 1:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"HostDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 2:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"VmDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 3:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"StorageDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 4:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"BusinessDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            case 5:{
-                UIViewController *vc = [self.storyboard instantiateViewController:@"PoolDashboardVCNav"];
-                vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                [self presentViewController:vc animated:YES completion:nil];
-                break;
-            }
-            default:
-                break;
-        }
+    
     }
     else if(indexPath.section==2){
         [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Charts" bundle:nil] instantiateViewController:@"ChartTableVC"] animated:YES];
