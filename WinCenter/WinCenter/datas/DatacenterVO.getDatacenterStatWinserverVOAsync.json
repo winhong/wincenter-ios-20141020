@@ -10,7 +10,7 @@
     "hostNubmer": 4,
     "memorySize": 81366,
     "vmNumber": 25,
-    "dissociateHostNumber": 2,
+    "dissociateHostNumber": 4,
     "winserver": {
         "activeVms": 14,
         "activeHosts": 2,
@@ -26,7 +26,7 @@
         "hostNubmer": 2,
         "memorySize": 32214,
         "vmNumber": 19,
-        "dissociateHostNumber": 0
+        "dissociateHostNumber": 2
     },
     "Vmware": {
         "activeVms": 0,
@@ -43,7 +43,7 @@
         "hostNubmer": 0,
         "memorySize": 0,
         "vmNumber": 0,
-        "dissociateHostNumber": 0
+        "dissociateHostNumber": 1
     },
     "PowerVm": {
         "activeVms": 2,
@@ -60,6 +60,6 @@
         "hostNubmer": 2,
         "memorySize": 49152,
         "vmNumber": 6,
-        "dissociateHostNumber": 2
+        "dissociateHostNumber": 1
     }
 }

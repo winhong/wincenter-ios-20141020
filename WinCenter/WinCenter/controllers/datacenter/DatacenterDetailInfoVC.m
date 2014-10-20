@@ -81,6 +81,7 @@
     self.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     self.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
     self.vmCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
+    self.dissociateHostNumber.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
 }
 
 - (void)refreshMainInfo3{
