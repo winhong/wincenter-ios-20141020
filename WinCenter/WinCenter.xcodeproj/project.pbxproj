@@ -225,6 +225,10 @@
 		1824365419F544C6007E4D6C /* FolderItemBgImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364719F544C6007E4D6C /* FolderItemBgImage@2x.png */; };
 		1824365519F544C6007E4D6C /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364819F544C6007E4D6C /* Home.png */; };
 		1824365619F544C6007E4D6C /* Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824364919F544C6007E4D6C /* Home@2x.png */; };
+		1824365D19F56A38007E4D6C /* SUNButtonBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824365919F56A38007E4D6C /* SUNButtonBoard.m */; };
+		1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365A19F56A38007E4D6C /* SUNButtonBoard_button1.png */; };
+		1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365B19F56A38007E4D6C /* SUNButtonBoard_button2.png */; };
+		1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365C19F56A38007E4D6C /* SUNButtonBoard_button3.png */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -703,6 +707,11 @@
 		1824364719F544C6007E4D6C /* FolderItemBgImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FolderItemBgImage@2x.png"; sourceTree = "<group>"; };
 		1824364819F544C6007E4D6C /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		1824364919F544C6007E4D6C /* Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home@2x.png"; sourceTree = "<group>"; };
+		1824365819F56A38007E4D6C /* SUNButtonBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUNButtonBoard.h; sourceTree = "<group>"; };
+		1824365919F56A38007E4D6C /* SUNButtonBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUNButtonBoard.m; sourceTree = "<group>"; };
+		1824365A19F56A38007E4D6C /* SUNButtonBoard_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button1.png; sourceTree = "<group>"; };
+		1824365B19F56A38007E4D6C /* SUNButtonBoard_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button2.png; sourceTree = "<group>"; };
+		1824365C19F56A38007E4D6C /* SUNButtonBoard_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button3.png; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -1580,6 +1589,18 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		1824365719F56A38007E4D6C /* SunButtonBoard */ = {
+			isa = PBXGroup;
+			children = (
+				1824365819F56A38007E4D6C /* SUNButtonBoard.h */,
+				1824365919F56A38007E4D6C /* SUNButtonBoard.m */,
+				1824365A19F56A38007E4D6C /* SUNButtonBoard_button1.png */,
+				1824365B19F56A38007E4D6C /* SUNButtonBoard_button2.png */,
+				1824365C19F56A38007E4D6C /* SUNButtonBoard_button3.png */,
+			);
+			path = SunButtonBoard;
+			sourceTree = "<group>";
+		};
 		18763BAD19F4B82300669CC3 /* dialScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -1723,6 +1744,7 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				1824365719F56A38007E4D6C /* SunButtonBoard */,
 				1824363419F544C6007E4D6C /* DTNavigationController */,
 				18763C1819F4EE0200669CC3 /* EScrollerView */,
 				18763BED19F4E4E400669CC3 /* EAIntro */,
@@ -2026,6 +2048,7 @@
 				181DED6C19F17CB100998835 /* Images.xcassets in Resources */,
 				181DED6319F17CB100998835 /* PoolVO.getVmListWithlimit.json in Resources */,
 				1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */,
+				1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */,
 				181DECC919F17CB100998835 /* heartLiveData.txt in Resources */,
 				181DED5A19F17CB100998835 /* HostVO.getVmListAsync.json in Resources */,
 				181DECEE19F17CB100998835 /* RealtimeCurve.bundle in Resources */,
@@ -2035,6 +2058,7 @@
 				181DECE319F17CB100998835 /* piechart_shadow.png in Resources */,
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
 				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
+				1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
@@ -2062,6 +2086,7 @@
 				18763C1019F4E4E400669CC3 /* title1@2x.png in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
+				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
 				1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
 				181DED9B19F17CB100998835 /* Storage.storyboard in Resources */,
@@ -2353,6 +2378,7 @@
 				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,
 				18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */,
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
+				1824365D19F56A38007E4D6C /* SUNButtonBoard.m in Sources */,
 				1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */,
 				181DED6E19F17CB100998835 /* BusinessVmVO.m in Sources */,
 				18C2133219F27C2000FCBD23 /* PoolDashboardHeader.m in Sources */,
