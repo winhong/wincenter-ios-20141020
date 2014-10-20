@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIView *formView;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *ip;
+@property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
 - (IBAction)backToLogin:(UIStoryboardSegue*)segue;
 
 @end

@@ -17,6 +17,10 @@
 
 @implementation LoginVC
 
+- (void)viewDidLayoutSubviews{
+    self.formScrollView.contentSize = CGSizeMake(687, 768);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -63,12 +67,13 @@
     waterView.speed = -0.04;
     [self.view addSubview:waterView];
     
-    [self.view bringSubviewToFront: self.formView];
+    [self.view bringSubviewToFront: self.formScrollView];
     
 }
 - (IBAction)exitInput:(id)sender {
     [self.userName resignFirstResponder];
     [self.password resignFirstResponder];
+    [self.ip resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
