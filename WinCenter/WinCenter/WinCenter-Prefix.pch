@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "DatacenterStatVO.h"
 #import "PoolListResult.h"
 #import "PoolVO.h"
+#import "PoolSubVO.h"
 #import "PoolElasticInfo.h"
 #import "HostListResult.h"
 #import "HostVO.h"

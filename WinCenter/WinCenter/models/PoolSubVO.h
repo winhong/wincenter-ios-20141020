@@ -13,5 +13,4 @@
 @property int ha_num;
 @property int plan_num;
 
-
 @end

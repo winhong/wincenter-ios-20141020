@@ -310,6 +310,7 @@
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
+		847D91AE19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -828,6 +829,7 @@
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
+		847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getPoolStatWinserverAsync.json; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1272,6 +1274,7 @@
 				181DEC2919F17CB100998835 /* DatacenterVO.getStorageListAsync.limit.json */,
 				181DEC2A19F17CB100998835 /* DatacenterVO.getVmListAsync.json */,
 				181DEC2B19F17CB100998835 /* DatacenterVO.getVmListAsync.limit.json */,
+				847D91AD19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json */,
 				181DEC2C19F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json */,
 				181DEC2D19F17CB100998835 /* HostVO.getHostNetworkInternalListAsync.json */,
 				181DEC2E19F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json */,
@@ -1897,6 +1900,7 @@
 				181DED4819F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json in Resources */,
 				181DED5C19F17CB100998835 /* PoolVO.getHostListAsync.json in Resources */,
 				181DED4D19F17CB100998835 /* DatacenterVO.getPoolListAsync.json in Resources */,
+				847D91AE19F4F78D00085B7B /* DatacenterVO.getPoolStatWinserverAsync.json in Resources */,
 				181DECF819F17CB100998835 /* greenRound-80-80.png in Resources */,
 				181DED5F19F17CB100998835 /* PoolVO.getPoolVOAsync.json in Resources */,
 				18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */,

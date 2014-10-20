@@ -14,7 +14,7 @@
     "winserver": {
         "activeVms": 14,
         "activeHosts": 2,
-        "resPoolNumber": 1,
+        "resPoolNumber": 3,
         "cpuCoreNumber": 8,
         "physicalCpuNumber": 2,
         "storageSize": 1456.8,

@@ -13,8 +13,7 @@
 @property NSString *name;;
 @property NSString *wceIpAddress;
 @property int wcePort;
-@property NSString *wceAccount;
-@property NSString *wcePassword;
+@property NSString *wceAccount;@property NSString *wcePassword;
 @property NSString *remark;
 @property NSString *createTime;
 @property NSString *lastUpdateTime;
@@ -35,6 +34,6 @@
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
 
-- (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;
-    
+- (void) getDatacenterPoolInfoVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
 @end
