@@ -15,6 +15,8 @@
 @property int vmNumber;
 @property int appNumber;
 
+@property int dissociateHostNumber;
+
 @property float totalCpu;
 @property float totalMemory;
 @property float totalStorage;

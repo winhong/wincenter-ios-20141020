@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount2;
 @property (weak, nonatomic) IBOutlet UILabel *memerySize2;
 @property (weak, nonatomic) IBOutlet UILabel *storageSize2;
+@property (weak, nonatomic) IBOutlet UILabel *dissociateHostNumber;
 
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
 @property (weak, nonatomic) IBOutlet UILabel *cpuUsedCount;

@@ -12,22 +12,34 @@
 	<dict>
 		<key>3411C2D104577BF0727A1033CE78E5F17890B33A</key>
 		<string>https://github.com/winhong2/winhong-ios.git</string>
+		<key>D740DD339FB24BDDE38C1D322370B828738A26FB</key>
+		<string>https://github.com/winhong/wincenter-ios-20141020.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Winhong.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3411C2D104577BF0727A1033CE78E5F17890B33A</key>
+		<string>../../winhong-ios</string>
+		<key>D740DD339FB24BDDE38C1D322370B828738A26FB</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/winhong2/winhong-ios.git</string>
+	<string>https://github.com/winhong/wincenter-ios-20141020.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3411C2D104577BF0727A1033CE78E5F17890B33A</string>
+	<string>D740DD339FB24BDDE38C1D322370B828738A26FB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D740DD339FB24BDDE38C1D322370B828738A26FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wincenter-ios-20141020</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
