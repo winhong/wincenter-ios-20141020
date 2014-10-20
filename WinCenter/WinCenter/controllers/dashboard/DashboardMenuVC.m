@@ -46,6 +46,10 @@
                        self.menuSelect,
                        self.menuSetting,
                        self.menuExpand];
+    
+    [self.menuWarning setBadgeValue:@"8"];
+    [self.menuWarning setBadgeOriginX:30];
+    [self.menuWarning setBadgeOriginY:5];
 }
 
 - (IBAction)switchTabBar:(id)sender {

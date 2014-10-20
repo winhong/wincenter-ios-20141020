@@ -66,7 +66,7 @@
     if(![viewControllerName isEqualToString:@""]){
         UINavigationController *nav = [self.storyboard instantiateViewController:viewControllerName];
         UIViewController *vc = [[nav childViewControllers] firstObject];
-        DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleFixedLeftHome];
+        DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleNormal];
         navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:navigation animated:YES completion:nil];
     }
