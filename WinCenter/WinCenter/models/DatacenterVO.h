@@ -38,8 +38,7 @@
 
 - (void) getHostSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getVmSubVOOSAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getVmSubVOStateAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getVmSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getStorageSubVOTotalAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getStorageSubVOShareAsync:(FetchObjectCompletionBlock)completionBlock;

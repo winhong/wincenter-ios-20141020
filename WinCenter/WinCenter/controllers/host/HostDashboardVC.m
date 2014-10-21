@@ -23,17 +23,15 @@
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [self.collectionView reloadData];
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
+            
+            [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+                self.hostStatWinserver = object;
+                [self.collectionView reloadData];
+            }];
+        }];
     }];
-    
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
-    }];
-    
-    [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
-        self.hostStatWinserver = object;
-    }];
-
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

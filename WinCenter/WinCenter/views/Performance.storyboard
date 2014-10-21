@@ -333,19 +333,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-O8-avz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="c4S-fA-CYB" kind="embed" id="8pD-mz-yAr"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-lS-au5">
-                                <rect key="frame" x="650" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="650" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="LN9-Ov-xVB" kind="embed" id="Qnh-5J-b7O"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-Cz-xYa">
-                                <rect key="frame" x="325" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="325" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="NYP-54-JoV" kind="embed" id="nqM-5L-X6f"/>
                                 </connections>
@@ -406,9 +406,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u1M-xu-J8c"/>
-        <segue reference="MdG-PR-dVo"/>
-        <segue reference="vCu-sf-niq"/>
+        <segue reference="Qnh-5J-b7O"/>
+        <segue reference="nqM-5L-X6f"/>
+        <segue reference="8pD-mz-yAr"/>
         <segue reference="xyc-OD-Bvx"/>
     </inferredMetricsTieBreakers>
 </document>

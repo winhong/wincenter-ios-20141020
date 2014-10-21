@@ -263,6 +263,7 @@
 		18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */; };
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
 		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
+		1886A60719F6516E0089A576 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -2284,6 +2285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1886A60719F6516E0089A576 /* VmStateVO.m in Sources */,
 				181DECC319F17CB100998835 /* Example3.m in Sources */,
 				18C2130719F27C2000FCBD23 /* BusinessDashboardVC.m in Sources */,
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
