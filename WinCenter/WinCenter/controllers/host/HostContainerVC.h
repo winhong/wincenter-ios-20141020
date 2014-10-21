@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnCreateVM;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTask;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end

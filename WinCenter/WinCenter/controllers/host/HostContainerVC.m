@@ -23,6 +23,7 @@
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
     self.statusLabel.textColor = [self.hostVO state_color];
+    self.name.text = self.hostVO.hostName;
     
     self.title = self.hostVO.hostName;
     

@@ -20,6 +20,7 @@
     self.titleLabel.text = self.poolVO.resourcePoolName;
     
     self.title = self.poolVO.resourcePoolName;
+    self.name.text = self.poolVO.resourcePoolName;
         
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:4];
     
