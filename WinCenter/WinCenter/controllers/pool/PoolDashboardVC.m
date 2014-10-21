@@ -11,6 +11,12 @@
 #import "PoolDashboardCell.h"
 #import "PoolDashboardHeader.h"
 
+@interface PoolDashboardVC ()
+
+@property DatacenterStatWinserver *datacenterStatWinserver;
+@property PoolSubVO *poolStatWinserver;
+
+@end
 
 @implementation PoolDashboardVC
 
@@ -19,6 +25,16 @@
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
         [self.collectionView reloadData];
     }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+    }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getPoolSubVOAsync:^(id object, NSError *error) {
+        self.poolStatWinserver = object;
+    }];
+    
+    
 }
 
 
@@ -77,33 +93,33 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     PoolDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"PoolDashboardHeader" forIndexPath:indexPath];
-    
-    header.poolCount.text = [NSString stringWithFormat:@"%d",0];
-    header.haPoolCount.text = [NSString stringWithFormat:@"%d",0];
-    header.elasticCalPoolCount.text = [NSString stringWithFormat:@"%d",0];
-    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",20.0];
-    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",20.0];
-    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",10.00];
-    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",10.00];
-    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",1.0];
-    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",1.0];
-    
+    PoolVO *poolVO = (PoolVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    header.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
+    header.haPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
+    header.elasticCalPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
+    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
+    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",poolVO.availCpu/1024];
+    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
+    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",poolVO.availMemory/1024];
+    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
+    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",poolVO.availStorage/1024.0];
+
     //缩起
-    header.label1.text = [NSString stringWithFormat:@"%d",0];
-    header.label2.text = [NSString stringWithFormat:@"%d",0];
-    header.label3.text = [NSString stringWithFormat:@"%d",0];
-    header.label4.text = [NSString stringWithFormat:@"%d",0];
-    header.label5.text = [NSString stringWithFormat:@"%d",0];
-    header.label6.text = [NSString stringWithFormat:@"%d",0];
-    header.label7.text = [NSString stringWithFormat:@"%.2f",20.00];
-    header.label8.text = [NSString stringWithFormat:@"%.2f",10.00];
-    header.label9.text = [NSString stringWithFormat:@"%.2f",10.00];
-    header.label10.text = [NSString stringWithFormat:@"%.2f",2.0];
-    header.label11.text = [NSString stringWithFormat:@"%.2f",1.0];
-    header.label12.text = [NSString stringWithFormat:@"%.2f",1.0];
+    header.label1.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
+    header.label2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
+    header.label3.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
+    header.label4.text = [NSString stringWithFormat:@"%.2f",poolVO.totalCpu/1024];
+    header.label5.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
+    header.label6.text = [NSString stringWithFormat:@"%.2f",poolVO.availCpu/1024];
+    header.label7.text = [NSString stringWithFormat:@"%.2f",poolVO.totalMemory/1024.0];
+    header.label8.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
+    header.label9.text = [NSString stringWithFormat:@"%.2f",poolVO.availMemory/1024.0];
+    header.label10.text = [NSString stringWithFormat:@"%.2f",poolVO.totalStorage/1024];
+    header.label11.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
+    header.label12.text = [NSString stringWithFormat:@"%.2f",poolVO.availStorage/1024.0];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalCpu - poolVO.availCpu)/poolVO.totalCpu*100] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -114,23 +130,23 @@
     [header.cpuChartGroup addSubview:circleChart];
     
     
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalMemory - poolVO.availMemory)/poolVO.totalMemory*100] andClockwise:YES andShadow:YES];
     circleChart2.backgroundColor = [UIColor clearColor];
     circleChart2.strokeColor = [UIColor clearColor];
     circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
     circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart2.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
+    [circleChart2 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
     [circleChart2 strokeChart];
     [header.memoryChartGroup addSubview:circleChart2];
     
-    PNCircleChart * circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalStorage - poolVO.availStorage)/poolVO.totalStorage*100] andClockwise:YES andShadow:YES];
     circleChart3.backgroundColor = [UIColor clearColor];
     circleChart3.strokeColor = [UIColor clearColor];
     circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
     circleChart3.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart3.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
+    [circleChart3 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
     [circleChart3 strokeChart];
     [header.storageChartGroup addSubview:circleChart3];
     

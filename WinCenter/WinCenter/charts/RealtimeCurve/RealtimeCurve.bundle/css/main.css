@@ -9,12 +9,12 @@ body{height:100%; font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Ve
 img{border:none}
 
 
-#header{width:910px; height:92px; margin:0 auto;}
+#header{width:100%; height:92px; margin:0 auto;}
 #logo{width:240px; height:90px; background:url(../images/logo_demo.gif) no-repeat}
 #logo h1{text-indent:-999em}
 #logo h1 a{display:block; width:240px; height:90px}
 
-#main{width:320px; min-height:500px;  background:#fff; -moz-border-radius:12px;-khtml-border-radius: 12px;-webkit-border-radius: 12px; border-radius:12px;}
+#main{width:100%; height:660px;  background:#fff; -moz-border-radius:12px;-khtml-border-radius: 12px;-webkit-border-radius: 12px; border-radius:12px;}
 h2.top_title{margin:4px 20px; padding-top:15px; padding-left:20px; padding-bottom:10px; border-bottom:1px solid #d3d3d3; font-size:18px; color:#a84c10; background:url(../images/arrL.gif) no-repeat 2px 14px}
 
 #footer{height:60px;}

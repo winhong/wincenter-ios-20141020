@@ -11,14 +11,30 @@
 #import "VmDashboardCell.h"
 #import "VmDashboardHeader.h"
 
+@interface VmDashboardVC ()
+
+@property DatacenterStatWinserver *datacenterStatWinserver;
+@property VmSubVO *vmSubVO;
+
+@end
 
 @implementation VmDashboardVC
 
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [self.collectionView reloadData];
+        
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
+            
+            [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+                self.vmSubVO = object;
+                [self.collectionView reloadData];
+            }];
+        }];
     }];
+    
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -66,48 +82,42 @@
 
     VmDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VmDashboardHeader" forIndexPath:indexPath];
     
-    header.vmCount.text =[NSString stringWithFormat:@"%d",0];
-    header.label1.text =[NSString stringWithFormat:@"%d",0];
-    header.label2.text =[NSString stringWithFormat:@"%d",0];
-    header.label3.text =[NSString stringWithFormat:@"%d",0];
-    header.label4.text =[NSString stringWithFormat:@"%d",0];
-    header.label5.text =[NSString stringWithFormat:@"%d",0];
-    header.label6.text =[NSString stringWithFormat:@"%d",0];
-    header.label7.text =[NSString stringWithFormat:@"%d",0];
-    header.label8.text =[NSString stringWithFormat:@"%d",0];
+    header.vmCount.text =[NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
+    header.label1.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.label3.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
+    header.label6.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.label7.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.label8.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
     
     //缩起
-    header.label10.text = [NSString stringWithFormat:@"%d",0];
-    header.label11.text =[NSString stringWithFormat:@"%d",0];
-    header.label12.text =[NSString stringWithFormat:@"%d",0];
-    header.label13.text =[NSString stringWithFormat:@"%d",0];
-    header.label14.text =[NSString stringWithFormat:@"%d",0];
-    header.label15.text =[NSString stringWithFormat:@"%d",0];
-    header.label16.text =[NSString stringWithFormat:@"%d",0];
-    header.label17.text = [NSString stringWithFormat:@"%d",0];
-    header.label18.text = [NSString stringWithFormat:@"%d",0];
+    header.label10.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
+    header.label11.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.label12.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.label13.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
+    header.label14.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.label16.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.vmOsTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
-    circleChart.backgroundColor = [UIColor clearColor];
-    circleChart.strokeColor = [UIColor clearColor];
-    circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
-    circleChart.circle.lineCap = kCALineCapSquare;//直角填充
-    circleChart.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];//已使用填充颜色
-    [circleChart strokeChart];
-    [header.vmOsTypeChart addSubview:circleChart];
+    NSArray *items2 = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Windows color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Linux color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+                       ];
+    PNPieChart *pieChart2 = [[PNPieChart alloc] initWithFrame:header.vmOsTypeChart.bounds items:items2];
+    pieChart2.descriptionTextColor = [UIColor whiteColor];
+    pieChart2.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+    [pieChart2 strokeChart];
+    [header.vmOsTypeChart addSubview:pieChart2];
     
+    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.STOPPED color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+                       ];
+    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.vmStatusChart.bounds items:items];
+    pieChart.descriptionTextColor = [UIColor whiteColor];
+    pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+    [pieChart strokeChart];
+    [header.vmStatusChart addSubview:pieChart];
+
     
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.vmStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
-    circleChart2.backgroundColor = [UIColor clearColor];
-    circleChart2.strokeColor = [UIColor clearColor];
-    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
-    circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
-    circleChart2.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
-    [circleChart2 strokeChart];
-    [header.vmStatusChart addSubview:circleChart2];
     
     return header;
 }

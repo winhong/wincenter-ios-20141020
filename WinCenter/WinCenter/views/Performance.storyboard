@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-1d-dDS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="c4S-fA-CYB" kind="embed" id="MdG-PR-dVo"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-Oj-erD">
-                                <rect key="frame" x="650" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="650" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="LN9-Ov-xVB" kind="embed" id="u1M-xu-J8c"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMt-gq-RNS">
-                                <rect key="frame" x="325" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="325" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="NYP-54-JoV" kind="embed" id="vCu-sf-niq"/>
                                 </connections>
@@ -63,6 +63,17 @@
                                     <outlet property="delegate" destination="c4S-fA-CYB" id="xFq-da-7Zk"/>
                                 </connections>
                             </view>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-Ix-Yev">
+                                <rect key="frame" x="20" y="489" width="280" height="29"/>
+                                <segments>
+                                    <segment title="青色"/>
+                                    <segment title="黄色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="refresh:" destination="c4S-fA-CYB" eventType="valueChanged" id="8eX-zP-AYP"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-HP-njO">
                                 <rect key="frame" x="20" y="424" width="280" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -94,17 +105,15 @@
                                     <segment title="今年"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-Ix-Yev">
-                                <rect key="frame" x="20" y="489" width="280" height="29"/>
-                                <segments>
-                                    <segment title="青色"/>
-                                    <segment title="黄色"/>
-                                    <segment title="蓝色"/>
-                                </segments>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXB-c2-H3r">
+                                <rect key="frame" x="20" y="489" width="280" height="59"/>
+                                <state key="normal" title="查看详情">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="refresh:" destination="c4S-fA-CYB" eventType="valueChanged" id="8eX-zP-AYP"/>
+                                    <segue destination="4vd-tP-rs9" kind="show" id="xyc-OD-Bvx"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -188,6 +197,15 @@
                                     <segment title="今年"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9g-Bo-oFg">
+                                <rect key="frame" x="20" y="489" width="280" height="59"/>
+                                <state key="normal" title="查看详情">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4vd-tP-rs9" kind="push" id="GXV-k4-sZt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -222,6 +240,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ho6-zF-Wiz" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="133" width="320" height="275"/>
+                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LN9-Ov-xVB" id="NOb-Kw-ZRi"/>
+                                </connections>
+                            </view>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="70G-Uh-7JI">
+                                <rect key="frame" x="20" y="489" width="280" height="29"/>
+                                <segments>
+                                    <segment title="青色"/>
+                                    <segment title="黄色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="refresh:" destination="LN9-Ov-xVB" eventType="valueChanged" id="Kdd-KF-0fv"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERC-fA-foE">
                                 <rect key="frame" x="20" y="424" width="280" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -243,13 +279,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ho6-zF-Wiz" customClass="BEMSimpleLineGraphView">
-                                <rect key="frame" x="0.0" y="133" width="320" height="275"/>
-                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="LN9-Ov-xVB" id="NOb-Kw-ZRi"/>
-                                </connections>
-                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-Vq-NJQ">
                                 <rect key="frame" x="20" y="453" width="280" height="29"/>
                                 <segments>
@@ -260,17 +289,15 @@
                                     <segment title="今年"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="70G-Uh-7JI">
-                                <rect key="frame" x="20" y="489" width="280" height="29"/>
-                                <segments>
-                                    <segment title="青色"/>
-                                    <segment title="黄色"/>
-                                    <segment title="蓝色"/>
-                                </segments>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-dc-X7G">
+                                <rect key="frame" x="20" y="489" width="280" height="59"/>
+                                <state key="normal" title="查看详情">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="refresh:" destination="LN9-Ov-xVB" eventType="valueChanged" id="Kdd-KF-0fv"/>
+                                    <segue destination="4vd-tP-rs9" kind="push" id="pqS-VF-kPT"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -306,19 +333,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-O8-avz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="c4S-fA-CYB" kind="embed" id="8pD-mz-yAr"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-lS-au5">
-                                <rect key="frame" x="650" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="650" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="LN9-Ov-xVB" kind="embed" id="Qnh-5J-b7O"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-Cz-xYa">
-                                <rect key="frame" x="325" y="0.0" width="320" height="500"/>
+                                <rect key="frame" x="325" y="0.0" width="320" height="550"/>
                                 <connections>
                                     <segue destination="NYP-54-JoV" kind="embed" id="nqM-5L-X6f"/>
                                 </connections>
@@ -333,10 +360,55 @@
             </objects>
             <point key="canvasLocation" x="5170.5" y="-150"/>
         </scene>
+        <!--实时曲线-->
+        <scene sceneID="qau-nQ-7Q1">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4vd-tP-rs9" customClass="RealtimeCurveVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H0N-9Z-8ZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vge-CP-iud"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hy3-7W-L1p">
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLY-Jr-8gm">
+                                <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4vd-tP-rs9" id="ByX-SA-iQ3"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem title="返回" id="lym-3h-Nxh">
+                            <connections>
+                                <action selector="backButtonAction:" destination="4vd-tP-rs9" id="Yhe-me-Rgn"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="实时曲线" id="6MH-Ab-TId"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="969" height="768"/>
+                    <connections>
+                        <outlet property="webview" destination="ZLY-Jr-8gm" id="U8F-lZ-eXq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75W-mL-ZC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6324" y="-950"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u1M-xu-J8c"/>
-        <segue reference="MdG-PR-dVo"/>
-        <segue reference="vCu-sf-niq"/>
+        <segue reference="Qnh-5J-b7O"/>
+        <segue reference="nqM-5L-X6f"/>
+        <segue reference="8pD-mz-yAr"/>
+        <segue reference="xyc-OD-Bvx"/>
     </inferredMetricsTieBreakers>
 </document>

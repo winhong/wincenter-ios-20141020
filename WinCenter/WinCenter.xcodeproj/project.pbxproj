@@ -263,6 +263,7 @@
 		18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */; };
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
 		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
+		1886A60719F6516E0089A576 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -353,6 +354,20 @@
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
+		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
+		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
+		843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0D19F5F3D30046A5A0 /* VmSubVO.m */; };
+		843E6C1119F5F3EE0046A5A0 /* VmOSVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */; };
+		843E6C1619F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */; };
+		843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1819F603000046A5A0 /* StorageSubVO.m */; };
+		843E6C1C19F603100046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1B19F603100046A5A0 /* StorageTotalVO.m */; };
+		843E6C1F19F603450046A5A0 /* StorageShareVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1E19F603450046A5A0 /* StorageShareVO.m */; };
+		843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C2119F603720046A5A0 /* StorageCapacityVO.m */; };
+		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
+		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
+		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
+		8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -932,6 +947,31 @@
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
+		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
+		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
+		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
+		843E6C0919F50E830046A5A0 /* HostSubStateVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubStateVO.h; sourceTree = "<group>"; };
+		843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubStateVO.m; sourceTree = "<group>"; };
+		843E6C0C19F5F3D30046A5A0 /* VmSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmSubVO.h; sourceTree = "<group>"; };
+		843E6C0D19F5F3D30046A5A0 /* VmSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmSubVO.m; sourceTree = "<group>"; };
+		843E6C0F19F5F3EE0046A5A0 /* VmOSVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmOSVO.h; sourceTree = "<group>"; };
+		843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmOSVO.m; sourceTree = "<group>"; };
+		843E6C1219F5F40E0046A5A0 /* VmStateVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmStateVO.h; sourceTree = "<group>"; };
+		843E6C1319F5F40E0046A5A0 /* VmStateVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmStateVO.m; sourceTree = "<group>"; };
+		843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmSubVO.getVmSubInfoAsync.json; sourceTree = "<group>"; };
+		843E6C1719F603000046A5A0 /* StorageSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageSubVO.h; sourceTree = "<group>"; };
+		843E6C1819F603000046A5A0 /* StorageSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageSubVO.m; sourceTree = "<group>"; };
+		843E6C1A19F603100046A5A0 /* StorageTotalVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTotalVO.h; sourceTree = "<group>"; };
+		843E6C1B19F603100046A5A0 /* StorageTotalVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageTotalVO.m; sourceTree = "<group>"; };
+		843E6C1D19F603450046A5A0 /* StorageShareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageShareVO.h; sourceTree = "<group>"; };
+		843E6C1E19F603450046A5A0 /* StorageShareVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageShareVO.m; sourceTree = "<group>"; };
+		843E6C2019F603720046A5A0 /* StorageCapacityVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageCapacityVO.h; sourceTree = "<group>"; };
+		843E6C2119F603720046A5A0 /* StorageCapacityVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageCapacityVO.m; sourceTree = "<group>"; };
+		843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StorageSubVO.getStorageSubInfoAsync.json; sourceTree = "<group>"; };
+		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
+		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
+		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
+		8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusinessUnalloctedListAsync.json; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1365,6 +1405,7 @@
 				181DEC1E19F17CB100998835 /* BusinessVO.getBusinessVOAsync.json */,
 				181DEC1F19F17CB100998835 /* ControlRecordVO.getControlRecordListViaObject.json */,
 				181DEC2019F17CB100998835 /* DatacenterVO.getBusinessListAsync.json */,
+				8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */,
 				181DEC2119F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json */,
 				181DEC2219F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json */,
 				181DEC2319F17CB100998835 /* DatacenterVO.getDatacenterStatWinserverVOAsync.json */,
@@ -1376,6 +1417,7 @@
 				181DEC2919F17CB100998835 /* DatacenterVO.getStorageListAsync.limit.json */,
 				181DEC2A19F17CB100998835 /* DatacenterVO.getVmListAsync.json */,
 				181DEC2B19F17CB100998835 /* DatacenterVO.getVmListAsync.limit.json */,
+				847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */,
 				181DEC2C19F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json */,
 				181DEC2D19F17CB100998835 /* HostVO.getHostNetworkInternalListAsync.json */,
 				181DEC2E19F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json */,
@@ -1401,6 +1443,9 @@
 				181DEC4219F17CB100998835 /* VmVO.getVmVOAsync.json */,
 				181DEC4319F17CB100998835 /* VmVO.getVmVolumnListAsync.json */,
 				181DEC4419F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json */,
+				843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */,
+				843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */,
+				843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1440,6 +1485,10 @@
 				181DEC6419F17CB100998835 /* HostStatVO.m */,
 				181DEC6519F17CB100998835 /* HostVO.h */,
 				181DEC6619F17CB100998835 /* HostVO.m */,
+				843E6C0419F5094F0046A5A0 /* HostSubVO.h */,
+				843E6C0519F5094F0046A5A0 /* HostSubVO.m */,
+				843E6C0919F50E830046A5A0 /* HostSubStateVO.h */,
+				843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */,
 				181DEC6719F17CB100998835 /* LicenseVO.h */,
 				181DEC6819F17CB100998835 /* LicenseVO.m */,
 				181DEC6919F17CB100998835 /* LicenseWciVO.h */,
@@ -1456,12 +1505,22 @@
 				181DEC7419F17CB100998835 /* PoolListResult.m */,
 				181DEC7519F17CB100998835 /* PoolVO.h */,
 				181DEC7619F17CB100998835 /* PoolVO.m */,
+				845B045B19F4DF00006969CD /* PoolSubVO.h */,
+				845B045C19F4DF00006969CD /* PoolSubVO.m */,
 				181DEC7719F17CB100998835 /* RemoteObject.h */,
 				181DEC7819F17CB100998835 /* RemoteObject.m */,
 				181DEC7919F17CB100998835 /* StorageListResult.h */,
 				181DEC7A19F17CB100998835 /* StorageListResult.m */,
 				181DEC7B19F17CB100998835 /* StorageVO.h */,
 				181DEC7C19F17CB100998835 /* StorageVO.m */,
+				843E6C1719F603000046A5A0 /* StorageSubVO.h */,
+				843E6C1819F603000046A5A0 /* StorageSubVO.m */,
+				843E6C1A19F603100046A5A0 /* StorageTotalVO.h */,
+				843E6C1B19F603100046A5A0 /* StorageTotalVO.m */,
+				843E6C1D19F603450046A5A0 /* StorageShareVO.h */,
+				843E6C1E19F603450046A5A0 /* StorageShareVO.m */,
+				843E6C2019F603720046A5A0 /* StorageCapacityVO.h */,
+				843E6C2119F603720046A5A0 /* StorageCapacityVO.m */,
 				181DEC7D19F17CB100998835 /* StorageVolumnListResult.h */,
 				181DEC7E19F17CB100998835 /* StorageVolumnListResult.m */,
 				181DEC7F19F17CB100998835 /* StorageVolumnVO.h */,
@@ -1482,6 +1541,12 @@
 				181DEC8E19F17CB100998835 /* VmNetworkVO.m */,
 				181DEC8F19F17CB100998835 /* VmVO.h */,
 				181DEC9019F17CB100998835 /* VmVO.m */,
+				843E6C0C19F5F3D30046A5A0 /* VmSubVO.h */,
+				843E6C0D19F5F3D30046A5A0 /* VmSubVO.m */,
+				843E6C0F19F5F3EE0046A5A0 /* VmOSVO.h */,
+				843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */,
+				843E6C1219F5F40E0046A5A0 /* VmStateVO.h */,
+				843E6C1319F5F40E0046A5A0 /* VmStateVO.m */,
 				181DEC9119F17CB100998835 /* WarningInfoListResult.h */,
 				181DEC9219F17CB100998835 /* WarningInfoListResult.m */,
 				181DEC9319F17CB100998835 /* WarningInfoVO.h */,
@@ -2101,11 +2166,13 @@
 				181DECB319F17CB100998835 /* up_white@2x.png in Resources */,
 				18C2131219F27C2000FCBD23 /* MSEventData.json in Resources */,
 				18763C1019F4E4E400669CC3 /* title1@2x.png in Resources */,
+				843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
 				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
 				1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
+				843E6C1619F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json in Resources */,
 				181DED9B19F17CB100998835 /* Storage.storyboard in Resources */,
 				181DED4619F17CB100998835 /* ControlRecordVO.getControlRecordListViaObject.json in Resources */,
 				181DEAA819F17C4E00998835 /* LaunchScreen.xib in Resources */,
@@ -2114,6 +2181,7 @@
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
+				8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */,
 				1824365419F544C6007E4D6C /* FolderItemBgImage@2x.png in Resources */,
 				1824362C19F4FE05007E4D6C /* route@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
@@ -2126,6 +2194,7 @@
 				1824365619F544C6007E4D6C /* Home@2x.png in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
+				843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */,
 				181DED6B19F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json in Resources */,
 				181DED9619F17CB100998835 /* Host.storyboard in Resources */,
 				18763C0519F4E4E400669CC3 /* bg1@2x.png in Resources */,
@@ -2152,6 +2221,7 @@
 				181DED4819F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json in Resources */,
 				181DED5C19F17CB100998835 /* PoolVO.getHostListAsync.json in Resources */,
 				181DED4D19F17CB100998835 /* DatacenterVO.getPoolListAsync.json in Resources */,
+				847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */,
 				181DECF819F17CB100998835 /* greenRound-80-80.png in Resources */,
 				181DED5F19F17CB100998835 /* PoolVO.getPoolVOAsync.json in Resources */,
 				18763C0819F4E4E400669CC3 /* bg4@2x.png in Resources */,
@@ -2215,6 +2285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1886A60719F6516E0089A576 /* VmStateVO.m in Sources */,
 				181DECC319F17CB100998835 /* Example3.m in Sources */,
 				18C2130719F27C2000FCBD23 /* BusinessDashboardVC.m in Sources */,
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
@@ -2237,6 +2308,7 @@
 				181DED8F19F17CB100998835 /* VmNetworkListResult.m in Sources */,
 				181DED7E19F17CB100998835 /* LicenseWciVO.m in Sources */,
 				18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */,
+				843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */,
 				181DECBB19F17CB100998835 /* ELineChartViewController.m in Sources */,
 				181DECCC19F17CB100998835 /* JBBarChartFooterView.m in Sources */,
 				18C2135819F27C2000FCBD23 /* PopWarningInfoCell.m in Sources */,
@@ -2273,6 +2345,7 @@
 				181DED8319F17CB100998835 /* PoolListResult.m in Sources */,
 				18C2131F19F27C2000FCBD23 /* HostContainerVC.m in Sources */,
 				18C2135719F27C2000FCBD23 /* VmNewVC.m in Sources */,
+				845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */,
 				18C2130D19F27C2000FCBD23 /* MSCurrentTimeIndicator.m in Sources */,
 				18763BBE19F4B82300669CC3 /* DialScrollImage.m in Sources */,
 				181DECD319F17CB100998835 /* JBLineChartFooterView.m in Sources */,
@@ -2291,6 +2364,7 @@
 				181DECDB19F17CB100998835 /* MPPlotVC.m in Sources */,
 				18C2132819F27C2000FCBD23 /* HostNicCollectionVC.m in Sources */,
 				181DECE119F17CB100998835 /* PercentageChartVC.m in Sources */,
+				843E6C1F19F603450046A5A0 /* StorageShareVO.m in Sources */,
 				18C2134619F27C2000FCBD23 /* VmCollectionCell.m in Sources */,
 				181DED8C19F17CB100998835 /* VmDiskListResult.m in Sources */,
 				18C2134419F27C2000FCBD23 /* UIBarButtonItem+Badge.m in Sources */,
@@ -2305,6 +2379,7 @@
 				181DED9219F17CB100998835 /* WarningInfoListResult.m in Sources */,
 				181DECE619F17CB100998835 /* RenderView.m in Sources */,
 				18C2133619F27C2000FCBD23 /* PopOptionsUserInfoVC.m in Sources */,
+				843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */,
 				181DECA119F17CB100998835 /* ARLineChartCommon.m in Sources */,
 				18C2130619F27C2000FCBD23 /* BusinessDashboardHeader.m in Sources */,
 				1824362419F4FE05007E4D6C /* RRCircularMenu.m in Sources */,
@@ -2343,6 +2418,7 @@
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,
 				18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */,
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
+				843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */,
 				18C2131C19F27C2000FCBD23 /* DatacenterTableVC.m in Sources */,
 				18C2130919F27C2000FCBD23 /* BusinessVmCollectionCell.m in Sources */,
 				181DECB019F17CB100998835 /* PoolDatagridSegement.m in Sources */,
@@ -2353,6 +2429,7 @@
 				18C2135519F27C2000FCBD23 /* VmNetworkCollectionCell.m in Sources */,
 				181DED7F19F17CB100998835 /* LoginVO.m in Sources */,
 				181DECEA19F17CB100998835 /* PCChartViewController.m in Sources */,
+				843E6C1C19F603100046A5A0 /* StorageTotalVO.m in Sources */,
 				181DECCB19F17CB100998835 /* JBAreaChartViewController.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
@@ -2379,13 +2456,16 @@
 				18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */,
 				18C2131819F27C2000FCBD23 /* DashboardVC.m in Sources */,
 				18763C1619F4E4E400669CC3 /* RootVC.m in Sources */,
+				843E6C1119F5F3EE0046A5A0 /* VmOSVO.m in Sources */,
 				18C2133F19F27C2000FCBD23 /* StorageDiskCollectionCell.m in Sources */,
 				181DED8119F17CB100998835 /* NetworkVO.m in Sources */,
 				181DEA9A19F17C4E00998835 /* main.m in Sources */,
+				843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */,
 				181DED8919F17CB100998835 /* StorageVolumnVO.m in Sources */,
 				18C2132719F27C2000FCBD23 /* HostNicCollectionCell.m in Sources */,
 				18C2132D19F27C2000FCBD23 /* NetworkCollectionCell.m in Sources */,
 				181DECD419F17CB100998835 /* JBLineChartViewController.m in Sources */,
+				843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */,
 				18C2133419F27C2000FCBD23 /* PoolDetailInfoVC.m in Sources */,
 				18C2130C19F27C2000FCBD23 /* MSCurrentTimeGridline.m in Sources */,
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,

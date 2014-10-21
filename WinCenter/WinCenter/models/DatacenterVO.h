@@ -13,8 +13,7 @@
 @property NSString *name;;
 @property NSString *wceIpAddress;
 @property int wcePort;
-@property NSString *wceAccount;
-@property NSString *wcePassword;
+@property NSString *wceAccount;@property NSString *wcePassword;
 @property NSString *remark;
 @property NSString *createTime;
 @property NSString *lastUpdateTime;
@@ -34,5 +33,18 @@
 - (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
-    
+
+- (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
+- (void) getHostSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
+- (void) getVmSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
+- (void) getStorageSubVOTotalAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getStorageSubVOShareAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getStorageSubVOCapacityAsync:(FetchObjectCompletionBlock)completionBlock;
+
+- (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
+
 @end
