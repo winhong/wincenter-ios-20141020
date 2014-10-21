@@ -11,6 +11,13 @@
 #import "HostDashboardCell.h"
 #import "HostDashboardHeader.h"
 
+@interface HostDashboardVC ()
+
+@property DatacenterStatWinserver *datacenterStatWinserver;
+@property HostSubStateVO *hostStatWinserver;
+
+@end
+
 @implementation HostDashboardVC
 
 -(void)reloadData{
@@ -18,6 +25,15 @@
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
         [self.collectionView reloadData];
     }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+    }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+        self.hostStatWinserver = object;
+    }];
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -74,24 +90,23 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     HostDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HostDashboardHeader" forIndexPath:indexPath];
-    
-    header.hostCount.text = [NSString stringWithFormat:@"%d",0];
-    header.label1.text = [NSString stringWithFormat:@"%d",0];
-    header.label2.text = [NSString stringWithFormat:@"%d",0];
-    header.label3.text = [NSString stringWithFormat:@"%d",0];
-    header.label4.text = [NSString stringWithFormat:@"%d",0];
-    header.label5.text = [NSString stringWithFormat:@"%d",0];
+    header.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
+    header.label1.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.label2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
+    header.label3.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
+    header.label4.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
+    header.label5.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //缩起
-    header.label6.text = [NSString stringWithFormat:@"%d",0];
-    header.label7.text = [NSString stringWithFormat:@"%d",0];
-    header.label8.text = [NSString stringWithFormat:@"%d",0];
-    header.label9.text = [NSString stringWithFormat:@"%d",0];
-    header.label10.text = [NSString stringWithFormat:@"%d",0];
-    header.label11.text = [NSString stringWithFormat:@"%d",0];
+    header.label6.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
+    header.label7.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.label8.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
+    header.label9.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
+    header.label10.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
+    header.label11.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -101,16 +116,29 @@
     [circleChart strokeChart];
     [header.hostTypeChart addSubview:circleChart];
     
+    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.DISCONNECT color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+                       ];
     
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.hostStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
-    circleChart2.backgroundColor = [UIColor clearColor];
-    circleChart2.strokeColor = [UIColor clearColor];
-    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
-    circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
-    circleChart2.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
-    [circleChart2 strokeChart];
-    [header.hostStatusChart addSubview:circleChart2];
+    
+    
+    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
+    pieChart.descriptionTextColor = [UIColor whiteColor];
+    pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+    [pieChart strokeChart];
+    [header.hostStatusChart addSubview:pieChart];
+    
+    
+//    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.hostStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+//    circleChart2.backgroundColor = [UIColor clearColor];
+//    circleChart2.strokeColor = [UIColor clearColor];
+//    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+//    circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
+//    circleChart2.lineWidth = @11.0f;//线宽度
+//    [circleChart2 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
+//    [circleChart2 strokeChart];
+//    [header.hostStatusChart addSubview:circleChart2];
     
     return header;
 }
