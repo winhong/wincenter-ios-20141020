@@ -91,6 +91,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasVmPage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="name" destination="vfD-k3-zvx" id="z94-fQ-grE"/>
                         <outlet property="pageVCContainer" destination="LBv-hy-79D" id="eXx-Tk-3xF"/>
                         <outlet property="topToolBar" destination="T1J-dA-lcT" id="DEp-2q-8ao"/>
                     </connections>

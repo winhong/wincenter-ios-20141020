@@ -341,8 +341,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
-                        <outlet property="name" destination="tXf-tb-30S" id="AnI-n7-MEd"/>
+                        <outlet property="ipLabel" destination="pYF-1q-aYo" id="VBh-1h-8n1"/>
                         <outlet property="pageVCContainer" destination="CEO-rG-YsG" id="pPI-hm-TUi"/>
+                        <outlet property="runningTime" destination="Oti-bd-LUJ" id="2FW-Tz-mVa"/>
+                        <outlet property="statusLabel" destination="OSP-Zb-kI2" id="X0t-2R-brL"/>
+                        <outlet property="titleLabel" destination="tXf-tb-30S" id="0eI-8X-dXT"/>
                         <outlet property="topToolBar" destination="fyA-AG-8EO" id="DKv-yf-nDm"/>
                     </connections>
                 </viewController>

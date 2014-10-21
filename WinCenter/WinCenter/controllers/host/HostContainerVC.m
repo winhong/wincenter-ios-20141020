@@ -23,7 +23,14 @@
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
     self.statusLabel.textColor = [self.hostVO state_color];
-    self.name.text = self.hostVO.hostName;
+
+    NSDate *Runtime = [[NSDate alloc]initWithTimeIntervalSince1970:self.hostVO.startRunTime];
+    NSDate *Now = [NSDate new];
+    NSTimeInterval time=[Now timeIntervalSinceDate:Runtime];
+    int Day = (int)time/(3600*24.0);
+    int Hour = (int)(time - 3600*24.0*Day)/3600.0;
+    int Minute = (int)(time - 3600*24.0*Day - 3600.0*Hour)/60.0;
+    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
     
     self.title = self.hostVO.hostName;
     

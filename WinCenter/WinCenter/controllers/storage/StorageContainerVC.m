@@ -21,6 +21,7 @@
     self.titleLabel.text = self.storageVO.storagePoolName;
     self.statusLabel.text = [self.storageVO state_text];
     self.statusLabel.textColor = [self.storageVO state_color];
+    self.name.text = self.storageVO.storagePoolName;
     
     self.title = self.storageVO.storagePoolName;
     

@@ -13,5 +13,6 @@
 @property BusinessVO *businessVO;
 
 @property BOOL hasVmPage;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end
