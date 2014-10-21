@@ -35,12 +35,17 @@
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
 
 - (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
 - (void) getHostSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
+
 - (void) getVmSubVOOSAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getVmSubVOStateAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getStorageSubVOTotalAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getStorageSubVOShareAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getStorageSubVOCapacityAsync:(FetchObjectCompletionBlock)completionBlock;
+
+- (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
 
 @end

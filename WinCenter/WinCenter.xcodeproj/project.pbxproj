@@ -358,7 +358,6 @@
 		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
 		843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0D19F5F3D30046A5A0 /* VmSubVO.m */; };
 		843E6C1119F5F3EE0046A5A0 /* VmOSVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */; };
-		843E6C1419F5F40E0046A5A0 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
 		843E6C1619F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */; };
 		843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1819F603000046A5A0 /* StorageSubVO.m */; };
 		843E6C1C19F603100046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1B19F603100046A5A0 /* StorageTotalVO.m */; };
@@ -367,6 +366,7 @@
 		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
 		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
+		8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -970,6 +970,7 @@
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
 		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
+		8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusinessUnalloctedListAsync.json; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1403,6 +1404,7 @@
 				181DEC1E19F17CB100998835 /* BusinessVO.getBusinessVOAsync.json */,
 				181DEC1F19F17CB100998835 /* ControlRecordVO.getControlRecordListViaObject.json */,
 				181DEC2019F17CB100998835 /* DatacenterVO.getBusinessListAsync.json */,
+				8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */,
 				181DEC2119F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json */,
 				181DEC2219F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json */,
 				181DEC2319F17CB100998835 /* DatacenterVO.getDatacenterStatWinserverVOAsync.json */,
@@ -2178,6 +2180,7 @@
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
+				8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */,
 				1824365419F544C6007E4D6C /* FolderItemBgImage@2x.png in Resources */,
 				1824362C19F4FE05007E4D6C /* route@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
