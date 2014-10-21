@@ -36,11 +36,16 @@ target 'WinCenter' do
     pod 'RNFrostedSidebar', '~> 0.2.0'
     pod 'REFrostedViewController', '~> 2.4.6'
     pod 'RATreeView', '~> 0.9.1'
+    pod 'ObjQREncoder', '~> 0.0.1'
+    pod 'DAKeyboardControl', '~> 2.4.0'
     
     pod 'CupertinoYankee', '~> 0.1.0'
     pod 'Masonry', '~> 0.5.3'
     pod 'UIColor-HexString', '~> 1.1.0'
     pod 'MSCollectionViewCalendarLayout', '~> 0.1.3'
+    
+    pod 'SMVerticalSegmentedControl', '~> 0.1.2'
+    pod 'HMSegmentedControl', '~> 1.4.0'
     
     pod 'TOWebViewController', '~> 2.0.14'
     pod 'AFViewShaker', '~> 0.0.2'

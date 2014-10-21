@@ -1,0 +1,1 @@
+../../ObjQREncoder/src/Classes/QRPolynomial.h

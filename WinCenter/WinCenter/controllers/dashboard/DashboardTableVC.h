@@ -11,6 +11,7 @@
 #import "DatacenterDetailInfoVC.h"
 #import <REFrostedViewController/REFrostedViewController.h>
 #import "EScrollerView.h"
+#import "DTNavigationController.h"
 
 @interface DashboardTableVC : UITableViewController<DatacenterTableVCDelegate, UIScrollViewDelegate, EScrollerViewDelegate>
 @property DatacenterDetailInfoVC *infoVC;

@@ -4,6 +4,7 @@ PODS:
   - BEMSimpleLineGraph (2.3)
   - BMFloatingHeaderCollectionViewLayout (1.0.0)
   - CupertinoYankee (0.1.1)
+  - DAKeyboardControl (2.4.0)
   - EAIntroView (2.6.3)
   - EChart (0.1.1)
   - FastAnimationWithPOP (0.0.2):
@@ -13,6 +14,7 @@ PODS:
   - GraphKit (1.1.1):
     - FrameAccessor (~> 1.3.2)
     - MKFoundationKit/NSArray (~> 1.2.2)
+  - HMSegmentedControl (1.4.0)
   - JBChartView (2.6.3)
   - JGProgressHUD (1.2.1)
   - JYRadarChart (0.3.1)
@@ -30,6 +32,7 @@ PODS:
   - MZFormSheetController/Core (2.3.6):
     - MZAppearance (~> 1.1.3)
   - NSObject-ObjectMap (2.3.1)
+  - ObjQREncoder (0.0.1)
   - PDKTStickySectionHeadersCollectionViewLayout (0.1)
   - PNChart (0.5):
     - UICountingLabel (~> 1.0.0)
@@ -40,6 +43,7 @@ PODS:
   - SFGaugeView (0.0.7)
   - SHLineGraphView (1.0.6)
   - SMPageControl (1.2)
+  - SMVerticalSegmentedControl (0.1.2)
   - SVProgressHUD (1.0)
   - TOWebViewController (2.0.14)
   - TWRCharts (0.1)
@@ -53,11 +57,13 @@ DEPENDENCIES:
   - BEMSimpleLineGraph (~> 2.3)
   - BMFloatingHeaderCollectionViewLayout (~> 1.0.0)
   - CupertinoYankee (~> 0.1.0)
+  - DAKeyboardControl (~> 2.4.0)
   - EAIntroView (~> 2.6.3)
   - EChart (~> 0.1.1)
   - FastAnimationWithPOP (~> 0.0.2)
   - FRD3DBarChart (~> 1.1.1)
   - GraphKit (~> 1.1.0)
+  - HMSegmentedControl (~> 1.4.0)
   - JBChartView (~> 2.6.2)
   - JGProgressHUD (~> 1.2.1)
   - JYRadarChart (~> 0.3.1)
@@ -68,6 +74,7 @@ DEPENDENCIES:
   - MSCollectionViewCalendarLayout (~> 0.1.3)
   - MZFormSheetController (~> 2.3.6)
   - NSObject-ObjectMap (~> 2.3.1)
+  - ObjQREncoder (~> 0.0.1)
   - PDKTStickySectionHeadersCollectionViewLayout (~> 0.1)
   - PNChart (~> 0.5)
   - RATreeView (~> 0.9.1)
@@ -76,6 +83,7 @@ DEPENDENCIES:
   - SFGaugeView (~> 0.0.7)
   - SHLineGraphView (~> 1.0.6)
   - SMPageControl (~> 1.2)
+  - SMVerticalSegmentedControl (~> 0.1.2)
   - SVProgressHUD (~> 1.0)
   - TOWebViewController (~> 2.0.14)
   - TWRCharts (~> 0.1)
@@ -88,12 +96,14 @@ SPEC CHECKSUMS:
   BEMSimpleLineGraph: 5fb192c00c48f8123654e2b943b9227061f0dfd2
   BMFloatingHeaderCollectionViewLayout: d12e9c4e34454d4bace0752b006fff361a555b8d
   CupertinoYankee: b07873e724c2c5c1a249c555a5bd3d508c04e0de
+  DAKeyboardControl: 45a363c85c48a7df76f21f236d9f85800e001775
   EAIntroView: 45924b81c153d1206ee24f4fa654e9d9dae79e93
   EChart: fd95a66d60043387c440a56acd703bbde35a145d
   FastAnimationWithPOP: 453cac7e3671d27c57db04abec4f6c08a930f413
   FrameAccessor: 5eec95b29b5e9a3afe72a7a2e9ed25b000d3bcc3
   FRD3DBarChart: 831be1ade45d172055812caf5113776f6c84d693
   GraphKit: 951cdad6f6fad9f77e06185af3e1c20be349061b
+  HMSegmentedControl: c0517a8d4b80c978b8386f863f1c44729cfd7d6f
   JBChartView: 0a14c441cd4de963379e0f417b1f6cc685119637
   JGProgressHUD: f3c0258684f318bc0009e893fdac0701de5cb75b
   JYRadarChart: d9a90d435b427d928d576169e8df51fd285fe46a
@@ -106,6 +116,7 @@ SPEC CHECKSUMS:
   MZAppearance: c88502c0c2345120630c34e09d5ff09e2969ba30
   MZFormSheetController: a7dce224ce8bd9015abeabca8cb6cde0d49d3fe3
   NSObject-ObjectMap: b25adb10d18c60930db2c441c2fb7ae6c3d80282
+  ObjQREncoder: 9f4ab78eb0b2b1a6e5743a5591d8a14f69c67256
   PDKTStickySectionHeadersCollectionViewLayout: 96edf4348a7698f1c38e1ad4366847fcebf3868f
   PNChart: 0d0cf4531de3aa7f2b12434a54845d70d9c9cfe3
   pop: e518794da38942c05255eb64b36d894e70cb4f00
@@ -115,6 +126,7 @@ SPEC CHECKSUMS:
   SFGaugeView: d2d25bc2a47829e9ebac4bae55276f33b42e7fb5
   SHLineGraphView: ea496febee7a19bef01d5d1c832cf83a5e6a443e
   SMPageControl: 506b0c561d3ddbe2d5df28cb33acc8e4b1f93f19
+  SMVerticalSegmentedControl: e94119fea7810898fc74ad895336f514e57969d7
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
   TOWebViewController: d3eee5342e5f8508cc87107c96544f5dff01b802
   TWRCharts: 4da6c4c92df46328e184549176a9bb6bd1f0f511

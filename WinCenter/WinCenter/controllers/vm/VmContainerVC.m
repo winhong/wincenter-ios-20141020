@@ -16,6 +16,12 @@
 
 @implementation VmContainerVC
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openMenu:)];
+}
+
 
 -(void)refresh{
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.vmVO.poolName, self.vmVO.ownerHostName];
@@ -36,7 +42,7 @@
     [pages addObject:detailVC];
     
     if(self.hasPerformancePage){
-        [pages addObject:[self.storyboard instantiateViewController:@"VmPerformanceVC"]];
+        [pages addObject:[[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"VmDetailPerformanceVC"]];
     }
         
     VmNetworkCollectionVC *vmNetworkCollectionVC = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];
@@ -168,4 +174,89 @@
     UIBarButtonItem *button = (UIBarButtonItem*)sender;
     [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
+
+
+#pragma mark - circular menu
+
+- (IBAction)openMenu:(id)sender{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return;
+    }
+    
+    if (menu) {
+        [menu hideWithAnimationBlock:^{
+            self.view.backgroundColor = [UIColor whiteColor];
+        }];
+        menu = nil;
+        
+        [self.view removeGestureRecognizer:tap];
+    } else {
+        menu = [[RRCircularMenu alloc] initWithFrame:CGRectMake((self.view.frame.size.width-320)/2, self.view.frame.size.height - 180, 320, 180)];
+        menu.delegate = self;
+        
+        [self.view addSubview:menu];
+        [menu showWithAnimationBlock:^{
+            self.view.backgroundColor = [UIColor darkGrayColor];
+        } settingSliderTo:3];
+        
+        [self.view addGestureRecognizer:tap];
+    }
+}
+
+# pragma mark - Menu Delegate methods
+
+- (void) menuItem:(RRCircularItem *)item didChangeActive:(BOOL)active {
+    NSLog(@"Item %@ did change state to %d", item.text, active);
+    if (active && ![menu isLabelActive]) {
+        [menu setLabelActive:YES];
+        [menu setSliderValue:1];
+    } else if (!active && [menu isLabelActive]) {
+        BOOL hasActive = NO;
+        for (int i = 0; i < 6; i++) hasActive |= [menu isItemActive:i];
+        if (!hasActive) {
+            [menu setLabelActive:NO];
+            [menu setSliderValue:0 animated:NO];
+        }
+    }
+}
+- (void) menuLabel:(RRCircularMenuLabel *)label didChangeActive:(BOOL)active {
+    NSLog(@"Label did change state to %d (%@)", active, label.text);
+    if (active && [menu sliderValue] == 0) {
+        [menu setSliderValue:1];
+        [menu setItem:0 active:YES];
+    } else if (!active && [menu sliderValue] != 0) {
+        [menu setSliderValue:0 animated:NO];
+        for (int i = 0; i < 6; i++) [menu setItem:i active:NO];
+    }
+}
+
+- (BOOL) ignoreClickFor:(RRCircularItem *)item {
+    NSLog(@"Checking whether to ignore click for item %@", item.text);
+    return NO;
+}
+
+- (void) sliderValueChanged:(RRCircularSlider *)slider {
+    NSLog(@"Slider value changed to %d", slider.value);
+    if (slider.value == 0) {
+        [menu setLabelActive:NO];
+        [menu setLabelText:@"CUES\nOFF"];
+        for (int i = 0; i < 6; i++) [menu setItem:i active:NO];
+    } else {
+        [menu setLabelActive:YES];
+        
+        if (slider.value == 1) {
+            [menu setLabelText:@"AUTO-\nMAGICAL"];
+        } else if (slider.value == 2) {
+            [menu setLabelText:@"EVERY\n5 min"];
+        } else if (slider.value == 3) {
+            [menu setLabelText:@"EVERY\n10 min"];
+        } else if (slider.value == 4) {
+            [menu setLabelText:@"EVERY\n1 km"];
+        } else if (slider.value == 5) {
+            [menu setLabelText:@"EVERY\n3 km"];
+        }
+    }
+}
+
+
 @end

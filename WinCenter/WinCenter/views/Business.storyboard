@@ -5,16 +5,16 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Business ContainerVC-->
+        <!--业务系统详情-->
         <scene sceneID="A2y-iO-8yv">
             <objects>
-                <viewController storyboardIdentifier="BusinessContainerVC_iPad" id="5Kv-z6-o09" customClass="BusinessContainerVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessContainerVC_iPad" title="业务系统详情" automaticallyAdjustsScrollViewInsets="NO" id="5Kv-z6-o09" customClass="BusinessContainerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYR-1u-en6"/>
                         <viewControllerLayoutGuide type="bottom" id="5Kf-ER-oi0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t1V-7H-79c">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBv-hy-79D">
@@ -66,14 +66,15 @@
                         <constraints>
                             <constraint firstItem="T1J-dA-lcT" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" constant="-16" id="5cj-94-dfD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T1J-dA-lcT" secondAttribute="trailing" constant="-16" id="5wL-GW-wRp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LBv-hy-79D" secondAttribute="trailing" constant="-16" id="CWe-HZ-gDc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LBv-hy-79D" secondAttribute="trailing" id="CWe-HZ-gDc"/>
                             <constraint firstItem="w1S-5N-Cwr" firstAttribute="top" secondItem="T1J-dA-lcT" secondAttribute="bottom" constant="1" id="RkI-im-Zgr"/>
                             <constraint firstItem="T1J-dA-lcT" firstAttribute="top" secondItem="t1V-7H-79c" secondAttribute="topMargin" id="S3i-jd-jbZ"/>
                             <constraint firstItem="5Kf-ER-oi0" firstAttribute="top" secondItem="LBv-hy-79D" secondAttribute="bottom" id="cCp-Y4-57i"/>
-                            <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" constant="-16" id="e6Z-j2-DhF"/>
+                            <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" id="e6Z-j2-DhF"/>
                             <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="w1S-5N-Cwr" secondAttribute="bottom" constant="1" id="p0j-3C-yU3"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem title="返回" id="HvO-3S-2gZ">
                             <connections>
@@ -91,6 +92,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="pageVCContainer" destination="LBv-hy-79D" id="eXx-Tk-3xF"/>
+                        <outlet property="topToolBar" destination="T1J-dA-lcT" id="DEp-2q-8ao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyq-Ts-4PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -517,6 +519,9 @@
                     </collectionView>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbR-E8-RXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

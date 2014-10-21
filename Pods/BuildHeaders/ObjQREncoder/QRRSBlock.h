@@ -1,0 +1,1 @@
+../../ObjQREncoder/src/Classes/QRRSBlock.h

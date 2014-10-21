@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_CupertinoYankee 1
 #define COCOAPODS_VERSION_PATCH_CupertinoYankee 1
 
+// DAKeyboardControl
+#define COCOAPODS_POD_AVAILABLE_DAKeyboardControl
+#define COCOAPODS_VERSION_MAJOR_DAKeyboardControl 2
+#define COCOAPODS_VERSION_MINOR_DAKeyboardControl 4
+#define COCOAPODS_VERSION_PATCH_DAKeyboardControl 0
+
 // EAIntroView
 #define COCOAPODS_POD_AVAILABLE_EAIntroView
 #define COCOAPODS_VERSION_MAJOR_EAIntroView 2
@@ -71,6 +77,12 @@
 #define COCOAPODS_VERSION_MAJOR_GraphKit 1
 #define COCOAPODS_VERSION_MINOR_GraphKit 1
 #define COCOAPODS_VERSION_PATCH_GraphKit 1
+
+// HMSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_HMSegmentedControl 4
+#define COCOAPODS_VERSION_PATCH_HMSegmentedControl 0
 
 // JBChartView
 #define COCOAPODS_POD_AVAILABLE_JBChartView
@@ -150,6 +162,12 @@
 #define COCOAPODS_VERSION_MINOR_NSObject_ObjectMap 3
 #define COCOAPODS_VERSION_PATCH_NSObject_ObjectMap 1
 
+// ObjQREncoder
+#define COCOAPODS_POD_AVAILABLE_ObjQREncoder
+#define COCOAPODS_VERSION_MAJOR_ObjQREncoder 0
+#define COCOAPODS_VERSION_MINOR_ObjQREncoder 0
+#define COCOAPODS_VERSION_PATCH_ObjQREncoder 1
+
 // PDKTStickySectionHeadersCollectionViewLayout
 #define COCOAPODS_POD_AVAILABLE_PDKTStickySectionHeadersCollectionViewLayout
 #define COCOAPODS_VERSION_MAJOR_PDKTStickySectionHeadersCollectionViewLayout 0
@@ -197,6 +215,12 @@
 #define COCOAPODS_VERSION_MAJOR_SMPageControl 1
 #define COCOAPODS_VERSION_MINOR_SMPageControl 2
 #define COCOAPODS_VERSION_PATCH_SMPageControl 0
+
+// SMVerticalSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_SMVerticalSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_SMVerticalSegmentedControl 0
+#define COCOAPODS_VERSION_MINOR_SMVerticalSegmentedControl 1
+#define COCOAPODS_VERSION_PATCH_SMVerticalSegmentedControl 2
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD

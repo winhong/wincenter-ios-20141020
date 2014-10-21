@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Host Detail PerformanceVC-->
+        <scene sceneID="5Zv-uh-NbU">
+            <objects>
+                <viewController storyboardIdentifier="HostDetailPerformanceVC" id="FMO-oH-gLO" customClass="HostDetailPerformanceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5xn-36-PiL"/>
+                        <viewControllerLayoutGuide type="bottom" id="NA0-Oh-mD3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B3f-PS-PnB">
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-1d-dDS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="c4S-fA-CYB" kind="embed" id="MdG-PR-dVo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-Oj-erD">
+                                <rect key="frame" x="650" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="LN9-Ov-xVB" kind="embed" id="u1M-xu-J8c"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMt-gq-RNS">
+                                <rect key="frame" x="325" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="NYP-54-JoV" kind="embed" id="vCu-sf-niq"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="969" height="556"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1h-R9-paQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5143.5" y="-1542"/>
+        </scene>
+        <!--资源池利用率-->
+        <scene sceneID="hSQ-e9-vGU">
+            <objects>
+                <viewController id="c4S-fA-CYB" customClass="SimpleLineChartVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6yH-U8-8ia"/>
+                        <viewControllerLayoutGuide type="bottom" id="FUf-9c-N2N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j14-jw-bmz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-iq-F1D" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="133" width="320" height="275"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.73333333329999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c4S-fA-CYB" id="xFq-da-7Zk"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-HP-njO">
+                                <rect key="frame" x="20" y="424" width="280" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grn-QK-fVW">
+                                <rect key="frame" x="0.0" y="406" width="320" height="2"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBK-79-EDF">
+                                <rect key="frame" x="20" y="20" width="280" height="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.1215686275" green="0.73333333329999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="between 2000 and 2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMQ-Q8-L56">
+                                <rect key="frame" x="20" y="79" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DjA-4a-ArK">
+                                <rect key="frame" x="20" y="453" width="280" height="29"/>
+                                <segments>
+                                    <segment title="24小时"/>
+                                    <segment title="今天"/>
+                                    <segment title="昨天"/>
+                                    <segment title="本月"/>
+                                    <segment title="今年"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-Ix-Yev">
+                                <rect key="frame" x="20" y="489" width="280" height="29"/>
+                                <segments>
+                                    <segment title="青色"/>
+                                    <segment title="黄色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="refresh:" destination="c4S-fA-CYB" eventType="valueChanged" id="8eX-zP-AYP"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="资源池利用率" id="UXI-RV-ypd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="pxf-vi-m2h">
+                            <connections>
+                                <action selector="refresh:" destination="c4S-fA-CYB" id="BXt-MK-2qj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="graphColorChoice" destination="ql0-Ix-Yev" id="Iaf-U1-1LZ"/>
+                        <outlet property="labelDates" destination="tMQ-Q8-L56" id="bR2-G3-h7X"/>
+                        <outlet property="labelValues" destination="TBK-79-EDF" id="UIj-eB-61z"/>
+                        <outlet property="myGraph" destination="jSy-iq-F1D" id="Ccs-IE-IAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lij-Tc-I8Y" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4812" y="-820"/>
+        </scene>
+        <!--资源池利用率-->
+        <scene sceneID="JYV-oa-Hbo">
+            <objects>
+                <viewController id="NYP-54-JoV" customClass="SimpleLineChartVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZu-V0-cMX"/>
+                        <viewControllerLayoutGuide type="bottom" id="dEe-SE-q8A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g9f-lG-fpi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUD-cs-CHu" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="133" width="320" height="275"/>
+                                <color key="backgroundColor" red="1" green="0.73333333329999995" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NYP-54-JoV" id="qmL-Y1-A2V"/>
+                                </connections>
+                            </view>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="eOT-cL-3UU">
+                                <rect key="frame" x="20" y="489" width="280" height="29"/>
+                                <segments>
+                                    <segment title="青色"/>
+                                    <segment title="黄色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="refresh:" destination="NYP-54-JoV" eventType="valueChanged" id="efi-l7-VRh"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icK-1v-Ywg">
+                                <rect key="frame" x="20" y="424" width="280" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nc-Dn-tvd">
+                                <rect key="frame" x="0.0" y="406" width="320" height="2"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzX-j5-j0U">
+                                <rect key="frame" x="20" y="20" width="280" height="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.1215686275" green="0.73333333329999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="between 2000 and 2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-Wl-Rto">
+                                <rect key="frame" x="20" y="79" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-l2-RvH">
+                                <rect key="frame" x="20" y="453" width="280" height="29"/>
+                                <segments>
+                                    <segment title="24小时"/>
+                                    <segment title="今天"/>
+                                    <segment title="昨天"/>
+                                    <segment title="本月"/>
+                                    <segment title="今年"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="资源池利用率" id="RH1-V8-If5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="EpI-7x-TUg">
+                            <connections>
+                                <action selector="refresh:" destination="NYP-54-JoV" id="Zuk-yV-lZU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="graphColorChoice" destination="eOT-cL-3UU" id="Hcb-Yj-qvW"/>
+                        <outlet property="labelDates" destination="ZI6-Wl-Rto" id="I94-No-3Cj"/>
+                        <outlet property="labelValues" destination="RzX-j5-j0U" id="PEf-UP-Wq3"/>
+                        <outlet property="myGraph" destination="UUD-cs-CHu" id="Vws-hg-Jry"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hs-4K-0OT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5170" y="-820"/>
+        </scene>
+        <!--资源池利用率-->
+        <scene sceneID="Gev-EW-0rZ">
+            <objects>
+                <viewController id="LN9-Ov-xVB" customClass="SimpleLineChartVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFG-RN-Rwh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ShG-Id-KSQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Dh-8t-djb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周期设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERC-fA-foE">
+                                <rect key="frame" x="20" y="424" width="280" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-Sd-Xxk">
+                                <rect key="frame" x="0.0" y="406" width="320" height="2"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azY-HK-CNM">
+                                <rect key="frame" x="20" y="20" width="280" height="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.1215686275" green="0.73333333329999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="between 2000 and 2010" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeF-R9-2zf">
+                                <rect key="frame" x="20" y="79" width="280" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ho6-zF-Wiz" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="133" width="320" height="275"/>
+                                <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LN9-Ov-xVB" id="NOb-Kw-ZRi"/>
+                                </connections>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-Vq-NJQ">
+                                <rect key="frame" x="20" y="453" width="280" height="29"/>
+                                <segments>
+                                    <segment title="24小时"/>
+                                    <segment title="今天"/>
+                                    <segment title="昨天"/>
+                                    <segment title="本月"/>
+                                    <segment title="今年"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="70G-Uh-7JI">
+                                <rect key="frame" x="20" y="489" width="280" height="29"/>
+                                <segments>
+                                    <segment title="青色"/>
+                                    <segment title="黄色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="refresh:" destination="LN9-Ov-xVB" eventType="valueChanged" id="Kdd-KF-0fv"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="资源池利用率" id="mjA-dv-uMk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Gfk-Mq-WII">
+                            <connections>
+                                <action selector="refresh:" destination="LN9-Ov-xVB" id="SA8-dj-6g6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="graphColorChoice" destination="70G-Uh-7JI" id="RWM-pb-1hQ"/>
+                        <outlet property="labelDates" destination="JeF-R9-2zf" id="sTz-JO-fkq"/>
+                        <outlet property="labelValues" destination="azY-HK-CNM" id="9Ta-oY-Rjs"/>
+                        <outlet property="myGraph" destination="Ho6-zF-Wiz" id="DeN-R8-3Ij"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nps-Re-izp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5516" y="-820"/>
+        </scene>
+        <!--Vm Detail PerformanceVC-->
+        <scene sceneID="eId-2P-o2Y">
+            <objects>
+                <viewController storyboardIdentifier="VmDetailPerformanceVC" id="UBG-bK-Bw1" customClass="VmDetailPerformanceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Dp-dC-Jsm"/>
+                        <viewControllerLayoutGuide type="bottom" id="auQ-JB-egV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hZk-zT-6oz">
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-O8-avz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="c4S-fA-CYB" kind="embed" id="8pD-mz-yAr"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-lS-au5">
+                                <rect key="frame" x="650" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="LN9-Ov-xVB" kind="embed" id="Qnh-5J-b7O"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-Cz-xYa">
+                                <rect key="frame" x="325" y="0.0" width="320" height="500"/>
+                                <connections>
+                                    <segue destination="NYP-54-JoV" kind="embed" id="nqM-5L-X6f"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="969" height="556"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ow8-YP-fd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5170.5" y="-150"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u1M-xu-J8c"/>
+        <segue reference="MdG-PR-dVo"/>
+        <segue reference="vCu-sf-niq"/>
+    </inferredMetricsTieBreakers>
+</document>

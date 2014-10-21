@@ -1094,10 +1094,10 @@
             </objects>
             <point key="canvasLocation" x="-2313.5" y="1237.5"/>
         </scene>
-        <!--Datacenter Detail InfoVC-->
+        <!--数据中心详情-->
         <scene sceneID="WUQ-Ay-gt5">
             <objects>
-                <viewController storyboardIdentifier="DatacenterDetailInfoVC_iPad" id="cSx-41-28X" customClass="DatacenterDetailInfoVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DatacenterDetailInfoVC_iPad" title="数据中心详情" automaticallyAdjustsScrollViewInsets="NO" id="cSx-41-28X" customClass="DatacenterDetailInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iJK-5X-hjp"/>
                         <viewControllerLayoutGuide type="bottom" id="YH5-RI-w4u"/>
@@ -1491,6 +1491,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEz-Pk-JS8"/>
                         <barButtonItem title="分类选项" id="OCH-9W-dls"/>

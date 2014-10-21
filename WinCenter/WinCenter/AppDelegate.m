@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SUNButtonBoard.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +16,40 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (void)boardButtonClick:(NSNotification *)nofi{
+    NSNumber *num = [nofi object];
+    switch ([num intValue]) {
+        case 0:{
+
+            break;
+        }case 1:{
+
+            break;
+        }case 2:{
+
+            break;
+        }default:{
+            break;
+        }
+    }
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        SUNButtonBoard *board = [SUNButtonBoard defaultButtonBoard];
+        board.boardImage = [UIImage imageNamed:@"SUNButtonBoard_button3.png"];
+        board.buttonNumber = 3;
+        NSArray *imgArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"SUNButtonBoard_button1.png"],
+                             [UIImage imageNamed:@"SUNButtonBoard_button2.png"],
+                             [UIImage imageNamed:@"SUNButtonBoard_button3.png"],nil];
+        board.buttonImageArray = imgArray;
+        if (!board.running) {
+            [board startRunning];
+        }
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(boardButtonClick:) name:SUNButtonBoarButtonClickNotification object:nil];
+    }
     // Override point for customization after application launch.
     return YES;
 }
