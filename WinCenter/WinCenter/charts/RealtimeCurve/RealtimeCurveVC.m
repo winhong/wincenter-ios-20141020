@@ -14,6 +14,9 @@
 @end
 
 @implementation RealtimeCurveVC
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad
 {
