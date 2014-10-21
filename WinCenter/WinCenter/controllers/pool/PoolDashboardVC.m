@@ -105,18 +105,18 @@
     header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",poolVO.availStorage/1024.0];
 
     //缩起
-    header.label1.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
-    header.label2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
-    header.label3.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
-    header.label4.text = [NSString stringWithFormat:@"%.2f",poolVO.totalCpu/1024];
-    header.label5.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
-    header.label6.text = [NSString stringWithFormat:@"%.2f",poolVO.availCpu/1024];
-    header.label7.text = [NSString stringWithFormat:@"%.2f",poolVO.totalMemory/1024.0];
-    header.label8.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
-    header.label9.text = [NSString stringWithFormat:@"%.2f",poolVO.availMemory/1024.0];
-    header.label10.text = [NSString stringWithFormat:@"%.2f",poolVO.totalStorage/1024];
-    header.label11.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
-    header.label12.text = [NSString stringWithFormat:@"%.2f",poolVO.availStorage/1024.0];
+    header.poolCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
+    header.haPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
+    header.elasticCalPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
+    header.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalCpu/1024];
+    header.cpuUsedCount2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
+    header.cpuUnitUnusedCount2.text = [NSString stringWithFormat:@"%.2f",poolVO.availCpu/1024];
+    header.memerySize2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalMemory/1024.0];
+    header.memeryUsedSize2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
+    header.memoryUnusedSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.availMemory/1024.0];
+    header.storageSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalStorage/1024];
+    header.storageUsedSize2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
+    header.storageUnusedSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.availStorage/1024.0];
     
     //圈图
     PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalCpu - poolVO.availCpu)/poolVO.totalCpu*100] andClockwise:YES andShadow:YES];

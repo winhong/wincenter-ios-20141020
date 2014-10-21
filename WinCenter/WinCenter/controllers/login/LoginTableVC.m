@@ -29,6 +29,8 @@
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.cell1.backgroundColor = [UIColor clearColor];
+        self.cell2.backgroundColor = [UIColor clearColor];
+        self.cell3.backgroundColor = [UIColor clearColor];
         UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
         
         [backView addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginbg2"]]];

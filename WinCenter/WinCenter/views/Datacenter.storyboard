@@ -185,10 +185,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                    <state key="normal" title="切换" image="navIcon-warning">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <state key="selected" image="navIcon-warning-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="ecl-2N-0v5"/>
                                                         <outletCollection property="gestureRecognizers" destination="MSm-kz-9gS" appends="YES" id="CZg-Oe-GYr"/>
@@ -207,10 +207,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                    <state key="normal" title="切换" image="navIcon-search">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <state key="selected" image="navIcon-search-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="lgZ-Hm-F9f"/>
                                                         <outletCollection property="gestureRecognizers" destination="umT-ea-aZV" appends="YES" id="RXk-vY-AqW"/>
@@ -427,7 +427,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="280"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRk-ZP-ZoH">
-                                            <rect key="frame" x="66" y="38" width="249" height="56"/>
+                                            <rect key="frame" x="16" y="28" width="249" height="56"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -502,7 +502,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-1a-JWy" customClass="F3BarGauge">
-                                            <rect key="frame" x="120" y="102" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.2784313725" green="0.56862745100000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <userDefinedRuntimeAttributes>
@@ -518,7 +517,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eid-fM-zJJ" customClass="F3BarGauge">
-                                            <rect key="frame" x="120" y="127" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -533,7 +531,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-Fb-kEa" customClass="F3BarGauge">
-                                            <rect key="frame" x="120" y="153" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -548,7 +545,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-fr-YW4" customClass="F3BarGauge">
-                                            <rect key="frame" x="120" y="181" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -563,7 +559,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEs-ES-19X" customClass="F3BarGauge">
-                                            <rect key="frame" x="120" y="208" width="68" height="14"/>
                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -609,48 +604,44 @@
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池色块" translatesAutoresizingMaskIntoConstraints="NO" id="ox6-6Q-GX9">
                                                     <rect key="frame" x="40" y="20" width="198" height="274"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="112" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-2g-JJe">
-                                                    <rect key="frame" x="301" y="29" width="86" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="112" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-2g-JJe">
+                                                    <rect key="frame" x="282" y="29" width="86" height="58"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="50"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="资源池总数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIf-zj-RLE">
-                                                    <rect key="frame" x="298" y="80" width="97" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="资源池总数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIf-zj-RLE">
+                                                    <rect key="frame" x="280" y="80" width="97" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWF-4f-3Br">
-                                                    <rect key="frame" x="547" y="30" width="86" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWF-4f-3Br">
+                                                    <rect key="frame" x="519" y="30" width="86" height="58"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="50"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="启用高可用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-lT-JxC">
-                                                    <rect key="frame" x="547" y="81" width="114" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="启用高可用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-lT-JxC">
+                                                    <rect key="frame" x="505" y="81" width="114" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="33" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-xn-rvW">
-                                                    <rect key="frame" x="803" y="31" width="101" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-xn-rvW">
+                                                    <rect key="frame" x="772" y="31" width="101" height="58"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="50"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="启用弹性计算" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1R-Cf-12T">
-                                                    <rect key="frame" x="801" y="82" width="114" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="启用弹性计算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1R-Cf-12T">
+                                                    <rect key="frame" x="765" y="82" width="114" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-fF-Phl">
-                                                    <rect key="frame" x="298" y="114" width="656" height="1"/>
-                                                    <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-CT-isK">
-                                                    <rect key="frame" x="279" y="114" width="218" height="180"/>
+                                                    <rect key="frame" x="234" y="114" width="218" height="180"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSQ-q8-E1g">
                                                             <rect key="frame" x="52" y="132" width="45" height="21"/>
@@ -682,7 +673,7 @@
                                                             <rect key="frame" x="26" y="158" width="12" height="12"/>
                                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-Zs-DCg">
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJX-yc-BKg">
                                                             <rect key="frame" x="60" y="40" width="80" height="80"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
@@ -696,7 +687,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fO7-DZ-0rU">
-                                                    <rect key="frame" x="778" y="114" width="218" height="180"/>
+                                                    <rect key="frame" x="733" y="114" width="218" height="180"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beg-BQ-UEQ">
                                                             <rect key="frame" x="52" y="132" width="45" height="21"/>
@@ -742,7 +733,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-ql-n6a">
-                                                    <rect key="frame" x="521" y="114" width="218" height="180"/>
+                                                    <rect key="frame" x="476" y="114" width="218" height="180"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woz-Nd-iL5">
                                                             <rect key="frame" x="52" y="132" width="45" height="21"/>
@@ -796,8 +787,8 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CPU逻辑单元数：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-1F-KIj">
-                                                            <rect key="frame" x="236" y="28" width="98" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CPU(GHz)：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-1F-KIj">
+                                                            <rect key="frame" x="236" y="28" width="69" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -808,7 +799,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-jv-1D4">
-                                                            <rect key="frame" x="331" y="28" width="31" height="21"/>
+                                                            <rect key="frame" x="302" y="28" width="56" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -829,11 +820,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDY-h3-afh">
-                                                            <rect key="frame" x="353" y="33" width="12" height="12"/>
                                                             <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-vx-oCl">
-                                                            <rect key="frame" x="398" y="28" width="31" height="21"/>
+                                                            <rect key="frame" x="398" y="28" width="49" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -844,16 +834,15 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzl-l1-xAA">
-                                                            <rect key="frame" x="418" y="33" width="12" height="12"/>
                                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7X-ym-Aok">
-                                                            <rect key="frame" x="464" y="28" width="27" height="21"/>
+                                                            <rect key="frame" x="479" y="28" width="47" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="未用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smc-DA-d8g">
-                                                            <rect key="frame" x="432" y="28" width="38" height="22"/>
+                                                            <rect key="frame" x="447" y="28" width="38" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -865,7 +854,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K49-90-TmU">
-                                                            <rect key="frame" x="509" y="28" width="5" height="21"/>
+                                                            <rect key="frame" x="534" y="28" width="5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -876,7 +865,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-Rk-JUU">
-                                                            <rect key="frame" x="658" y="33" width="12" height="12"/>
                                                             <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tI-nQ-oj0">
@@ -891,7 +879,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0p-Mu-Avg">
-                                                            <rect key="frame" x="763" y="33" width="12" height="12"/>
                                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aiw-zc-b5s">
@@ -923,7 +910,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaJ-9x-Sgd">
-                                                            <rect key="frame" x="753" y="13" width="12" height="12"/>
                                                             <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-6U-4eq">
@@ -938,7 +924,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6LU-W8-dYp">
-                                                            <rect key="frame" x="858" y="13" width="12" height="12"/>
                                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-v8-7xx">
@@ -962,11 +947,9 @@
                                                             <rect key="frame" x="20" y="7" width="193" height="40"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-jt-JWC" userLabel="line1">
-                                                            <rect key="frame" x="0.0" y="55" width="969" height="1"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-dV-HXj" userLabel="line2">
-                                                            <rect key="frame" x="0.0" y="56" width="969" height="1"/>
                                                             <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                     </subviews>
@@ -991,31 +974,31 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <outlet property="cpuChartGroup" destination="1sH-Zs-DCg" id="enF-kO-5aa"/>
+                                <outlet property="cpuChartGroup" destination="CJX-yc-BKg" id="kz8-ON-GfL"/>
+                                <outlet property="cpuUnitCount2" destination="cpu-jv-1D4" id="H0W-q7-gq4"/>
                                 <outlet property="cpuUnitUnusedCount" destination="cNx-e8-Mm0" id="ebh-cg-a8g"/>
+                                <outlet property="cpuUnitUnusedCount2" destination="s7X-ym-Aok" id="O06-a1-iHs"/>
                                 <outlet property="cpuUsedCount" destination="0Nw-Cx-5bj" id="AES-EP-I7a"/>
+                                <outlet property="cpuUsedCount2" destination="ag5-vx-oCl" id="R1X-s9-nXB"/>
                                 <outlet property="elasticCalPoolCount" destination="wBL-xn-rvW" id="1aZ-2a-zCe"/>
+                                <outlet property="elasticCalPoolCount2" destination="e3C-P8-93Q" id="PXO-db-Fni"/>
                                 <outlet property="haPoolCount" destination="OWF-4f-3Br" id="chf-c4-6NG"/>
-                                <outlet property="label1" destination="bau-9y-gTh" id="gGo-f4-Exx"/>
-                                <outlet property="label10" destination="4B9-hb-WuO" id="1gq-O8-avw"/>
-                                <outlet property="label11" destination="NKi-6U-4eq" id="Qpr-N4-hh7"/>
-                                <outlet property="label12" destination="nU0-v8-7xx" id="f1r-Ap-ccw"/>
-                                <outlet property="label2" destination="PcJ-IT-d1m" id="TNB-SA-Sr1"/>
-                                <outlet property="label3" destination="e3C-P8-93Q" id="Dyn-ws-RGK"/>
-                                <outlet property="label4" destination="cpu-jv-1D4" id="KWo-YF-8ld"/>
-                                <outlet property="label5" destination="ag5-vx-oCl" id="hap-C0-LzS"/>
-                                <outlet property="label6" destination="s7X-ym-Aok" id="bZR-2j-jQx"/>
-                                <outlet property="label7" destination="S1G-iP-VSt" id="Nj0-GK-chQ"/>
-                                <outlet property="label8" destination="0tI-nQ-oj0" id="cew-Mw-Pvx"/>
-                                <outlet property="label9" destination="Aiw-zc-b5s" id="1Pi-vD-D8n"/>
+                                <outlet property="haPoolCount2" destination="PcJ-IT-d1m" id="Oqw-LC-weF"/>
+                                <outlet property="memerySize2" destination="S1G-iP-VSt" id="DDM-lV-y3G"/>
                                 <outlet property="memeryUsedSize" destination="rgF-fT-IF4" id="eLM-4f-TZQ"/>
+                                <outlet property="memeryUsedSize2" destination="0tI-nQ-oj0" id="Fwk-DH-nTq"/>
                                 <outlet property="memoryChartGroup" destination="9z4-0f-zgI" id="wgy-c2-Zsb"/>
                                 <outlet property="memoryUnusedSize" destination="Grd-Y4-xUp" id="0Jp-s4-GJV"/>
+                                <outlet property="memoryUnusedSize2" destination="Aiw-zc-b5s" id="BMf-5q-9rk"/>
                                 <outlet property="poolCount" destination="9pc-2g-JJe" id="2sB-7K-NOM"/>
+                                <outlet property="poolCount2" destination="bau-9y-gTh" id="dcI-ws-S4v"/>
                                 <outlet property="scrollView" destination="pDq-LF-1yB" id="5tQ-uc-NyR"/>
                                 <outlet property="storageChartGroup" destination="2ch-yH-0rD" id="6pR-vZ-y9I"/>
+                                <outlet property="storageSize2" destination="4B9-hb-WuO" id="LlE-eR-99x"/>
                                 <outlet property="storageUnusedSize" destination="ivi-k8-isn" id="iLM-2z-eXI"/>
+                                <outlet property="storageUnusedSize2" destination="nU0-v8-7xx" id="4uS-L4-GJE"/>
                                 <outlet property="storageUsedSize" destination="1kh-jq-etA" id="qYr-jp-U0L"/>
+                                <outlet property="storageUsedSize2" destination="NKi-6U-4eq" id="bx9-VK-Ugv"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -1112,7 +1095,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq1-ei-cxf">
                                         <rect key="frame" x="20" y="65" width="1024" height="680"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="自源池－首页" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-gh-dTj">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="datacenterimg" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-gh-dTj">
                                                 <rect key="frame" x="0.0" y="0.0" width="969" height="405"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="资源池" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-R9-a5o">
@@ -4282,6 +4265,7 @@ AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
         <image name="CPU线程-black" width="15" height="15"/>
         <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
+        <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
@@ -4300,12 +4284,16 @@ AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
         <image name="navIcon-pool-white" width="55" height="58"/>
         <image name="navIcon-refresh" width="55" height="58"/>
         <image name="navIcon-refresh-white" width="55" height="58"/>
+        <image name="navIcon-search" width="55" height="58"/>
+        <image name="navIcon-search-white" width="55" height="58"/>
         <image name="navIcon-settings" width="55" height="58"/>
         <image name="navIcon-settings-white" width="55" height="58"/>
         <image name="navIcon-storage" width="55" height="58"/>
         <image name="navIcon-storage-white" width="55" height="58"/>
         <image name="navIcon-vm" width="55" height="58"/>
         <image name="navIcon-vm-white" width="55" height="58"/>
+        <image name="navIcon-warning" width="55" height="58"/>
+        <image name="navIcon-warning-white" width="55" height="58"/>
         <image name="os-others" width="55" height="55"/>
         <image name="share" width="29" height="13"/>
         <image name="业务系统-收起" width="193" height="40"/>
@@ -4320,7 +4308,6 @@ AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
         <image name="物理机－收起" width="192" height="40"/>
         <image name="物理机－色块" width="198" height="125"/>
         <image name="管理员" width="12" height="12"/>
-        <image name="自源池－首页" width="969" height="405"/>
         <image name="虚拟机-收起" width="193" height="40"/>
         <image name="虚拟机-色块" width="198" height="125"/>
         <image name="虚拟机2" width="11" height="12"/>
