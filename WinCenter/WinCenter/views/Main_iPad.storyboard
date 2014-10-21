@@ -15,22 +15,16 @@
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="vpt-kY-Ghn">
-                            <rect key="frame" x="0.0" y="0.0" width="1024" height="209"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="306"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZC1-sx-G2w">
-                                    <rect key="frame" x="280" y="0.0" width="464" height="209"/>
-                                    <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </imageView>
-                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="qrW-Db-d8S">
-                            <rect key="frame" x="0.0" y="607" width="1024" height="131"/>
+                            <rect key="frame" x="0.0" y="456" width="1024" height="294"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7id-g4-kvV">
-                                    <rect key="frame" x="0.0" y="30" width="1024" height="43"/>
+                                    <rect key="frame" x="0.0" y="45" width="1024" height="43"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <state key="normal" image="loginbtn">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,9 +33,12 @@
                                         <action selector="loginAction:" destination="1ER-O6-l64" eventType="touchUpInside" id="QaR-3H-YMc"/>
                                     </connections>
                                 </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="圆点" translatesAutoresizingMaskIntoConstraints="NO" id="qjU-t4-wQX">
+                                    <rect key="frame" x="505" y="147" width="15" height="72"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7G-zj-uwC">
-                                    <rect key="frame" x="415" y="81" width="127" height="23"/>
-                                    <state key="normal" title="Button" image="experiential">
+                                    <rect key="frame" x="449" y="239" width="127" height="23"/>
+                                    <state key="normal" image="experiential">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -71,15 +68,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="193" id="T0e-VA-N7l">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="47" id="T0e-VA-N7l">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T0e-VA-N7l" id="SiF-m2-rSR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" placeholder="用户名" textAlignment="center" minimumFontSize="17" background="input-user" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="26z-qs-KcS">
-                                                    <rect key="frame" x="359" y="142" width="306" height="38"/>
+                                                    <rect key="frame" x="359" y="7" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
@@ -90,15 +87,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="OOe-r7-JPO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="OOe-r7-JPO">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OOe-r7-JPO" id="OOk-B2-YRa">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="passw0rd" placeholder="密码" textAlignment="center" minimumFontSize="17" background="input-psd" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-Dq-EQv">
-                                                    <rect key="frame" x="353" y="97" width="306" height="38"/>
+                                                    <rect key="frame" x="359" y="8" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
@@ -141,5 +138,6 @@
         <image name="input-psd" width="306" height="38"/>
         <image name="input-user" width="306" height="38"/>
         <image name="loginbtn" width="313" height="43"/>
+        <image name="圆点" width="15" height="72"/>
     </resources>
 </document>
