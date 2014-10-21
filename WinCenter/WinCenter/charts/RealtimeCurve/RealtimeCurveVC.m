@@ -7,8 +7,10 @@
 //
 
 #import "RealtimeCurveVC.h"
+#import <MZDayPicker/MZDayPicker.h>
 
 @interface RealtimeCurveVC ()
+@property (weak, nonatomic) IBOutlet MZDayPicker *dayPicker;
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property(retain,nonatomic)NSTimer* timer;
 @end
@@ -29,6 +31,26 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.dayPicker.month = 9;
+    self.dayPicker.year = 2013;
+    self.dayPicker.delegate = self;
+    self.dayPicker.dayNameLabelFontSize = 14.0f;
+    self.dayPicker.dayLabelFontSize = 17.0f;
+    [self.dayPicker setActiveDaysFrom:1 toDay:30];
+    [self.dayPicker setCurrentDay:15 animated:NO];
+    //[self.dayPicker setStartDate:[NSDate dateFromDay:28 month:9 year:2013] endDate:[NSDate dateFromDay:5 month:10 year:2013]];
+    [self.dayPicker setCurrentDate:[NSDate dateFromDay:21 month:10 year:2014] animated:NO];
+}
+
+- (void)dayPicker:(MZDayPicker *)dayPicker willSelectDay:(MZDay *)day
+{
+    NSLog(@"Will select day %@",day.day);
+}
+
+- (void)dayPicker:(MZDayPicker *)dayPicker didSelectDay:(MZDay *)day
+{
+    NSLog(@"Did select day %@",day.day);
 }
 
 -(void)updateData

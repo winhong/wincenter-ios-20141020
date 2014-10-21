@@ -138,6 +138,12 @@
 #define COCOAPODS_VERSION_MINOR_MZAppearance 1
 #define COCOAPODS_VERSION_PATCH_MZAppearance 3
 
+// MZDayPicker
+#define COCOAPODS_POD_AVAILABLE_MZDayPicker
+#define COCOAPODS_VERSION_MAJOR_MZDayPicker 0
+#define COCOAPODS_VERSION_MINOR_MZDayPicker 0
+#define COCOAPODS_VERSION_PATCH_MZDayPicker 5
+
 // MZFormSheetController
 #define COCOAPODS_POD_AVAILABLE_MZFormSheetController
 #define COCOAPODS_VERSION_MAJOR_MZFormSheetController 2
