@@ -1,0 +1,17 @@
+{
+    "total": {
+        "lvm": "9661.50",
+        "udev": "22.55",
+        "nfs": "4928.00",
+        "lvmoiscsi": "924.52",
+        "lvmohba": "116.00"
+    },
+    "share": {
+        "true": 5652.50,
+        "false": 10000.07
+    },
+    "capacity": {
+        "usedStorage": "10771.03",
+        "availStorage": "4881.54"
+    }
+}

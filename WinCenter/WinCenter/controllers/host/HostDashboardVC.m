@@ -116,17 +116,29 @@
     [circleChart strokeChart];
     [header.hostTypeChart addSubview:circleChart];
     
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNRed],
-                       [PNPieChartDataItem dataItemWithValue:20 color:PNBlue description:@"WWDC"],
-                       [PNPieChartDataItem dataItemWithValue:40 color:PNGreen description:@"GOOL I/O"],
+    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.DISCONNECT color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
                        ];
-
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(40.0, 155.0, 240.0, 240.0) items:items];
+    
+    
+    
+    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
     pieChart.descriptionTextColor = [UIColor whiteColor];
-    pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:14.0];
+    pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
     [pieChart strokeChart];
     [header.hostStatusChart addSubview:pieChart];
-
+    
+    
+//    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.hostStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
+//    circleChart2.backgroundColor = [UIColor clearColor];
+//    circleChart2.strokeColor = [UIColor clearColor];
+//    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+//    circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
+//    circleChart2.lineWidth = @11.0f;//线宽度
+//    [circleChart2 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
+//    [circleChart2 strokeChart];
+//    [header.hostStatusChart addSubview:circleChart2];
     
     return header;
 }

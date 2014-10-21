@@ -237,5 +237,70 @@
     }];
 }
 
+- (void) getVmSubVOOSAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmSubVO.getVmSubInfoAsync" ofType:@"json"]]].os, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.vmParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmSubVO alloc] initWithJSONData:jsonResponse.rawBody].os, error);
+    }];
+}
+
+- (void) getVmSubVOStateAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmSubVO.getVmSubInfoAsync" ofType:@"json"]]].state, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storageParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmSubVO alloc] initWithJSONData:jsonResponse.rawBody].state, error);
+    }];
+}
+
+- (void) getStorageSubVOTotalAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[StorageSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageSubVO.getStorageSubInfoAsync" ofType:@"json"]]].total, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storageParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[StorageSubVO alloc] initWithJSONData:jsonResponse.rawBody].total, error);
+    }];
+}
+
+- (void) getStorageSubVOShareAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[StorageSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageSubVO.getStorageSubInfoAsync" ofType:@"json"]]].share, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storageParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[StorageSubVO alloc] initWithJSONData:jsonResponse.rawBody].share, error);
+    }];
+}
+
+- (void) getStorageSubVOCapacityAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[StorageSubVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageSubVO.getStorageSubInfoAsync" ofType:@"json"]]].capacity, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.vmParams", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[StorageSubVO alloc] initWithJSONData:jsonResponse.rawBody].capacity, error);
+    }];
+}
+
 
 @end

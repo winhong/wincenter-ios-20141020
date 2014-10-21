@@ -1,7 +1,7 @@
 {
     "state":{
         "OK":1,
-        "other":0,
+        "other":2,
         "DISCONNECT":1
     }
 }

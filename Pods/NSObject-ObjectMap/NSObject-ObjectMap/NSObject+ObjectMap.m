@@ -315,6 +315,20 @@ static const char _base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh
         if([key isEqualToString:@"version"]){
             continue;
         }
+        if([key isEqualToString:@"true"]){
+            objc_property_t property = class_getProperty([newObject class], [@"true_field" UTF8String]);
+            if(property){
+                [newObject setValue:[dict objectForKey:key] forKey:@"true_field"];
+            }
+            continue;
+        }
+        if([key isEqualToString:@"false"]){
+            objc_property_t property = class_getProperty([newObject class], [@"false_field" UTF8String]);
+            if(property){
+                [newObject setValue:[dict objectForKey:key] forKey:@"false_field"];
+            }
+            continue;
+        }
         if([key isEqualToString:@"description"]){
             objc_property_t property = class_getProperty([newObject class], [@"desc" UTF8String]);
             if(property){
@@ -431,6 +445,20 @@ static const char _base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh
             for (NSString *newKey in [nestedArray[xx] allKeys]) {
                 // If it's null, move on
                 if([newKey isEqualToString:@"version"]){
+                    continue;
+                }
+                if([newKey isEqualToString:@"true"]){
+                    objc_property_t property = class_getProperty([NSClassFromString(propertyName) class], [@"true" UTF8String]);
+                    if(property){
+                        [nestedObj setValue:[nestedArray[xx] objectForKey:newKey] forKey:@"true_field"];
+                    }
+                    continue;
+                }
+                if([newKey isEqualToString:@"false"]){
+                    objc_property_t property = class_getProperty([NSClassFromString(propertyName) class], [@"false" UTF8String]);
+                    if(property){
+                        [nestedObj setValue:[nestedArray[xx] objectForKey:newKey] forKey:@"false_field"];
+                    }
                     continue;
                 }
                 if([newKey isEqualToString:@"description"]){

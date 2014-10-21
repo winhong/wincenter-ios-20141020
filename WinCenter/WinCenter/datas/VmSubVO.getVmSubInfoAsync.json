@@ -1,0 +1,11 @@
+{
+    "os": {
+        "Linux": 7,
+        "Windows": 12
+    },
+    "state": {
+        "OK": 9,
+        "other": 3,
+        "STOPPED": 7
+    }
+}
