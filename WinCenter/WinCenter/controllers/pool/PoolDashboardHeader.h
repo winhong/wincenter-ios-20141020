@@ -18,30 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *haPoolCount;
 @property (weak, nonatomic) IBOutlet UILabel *elasticCalPoolCount;
 
-@property (weak, nonatomic) IBOutlet UILabel *label1;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UILabel *label3;
-@property (weak, nonatomic) IBOutlet UILabel *label4;
-@property (weak, nonatomic) IBOutlet UILabel *label5;
-@property (weak, nonatomic) IBOutlet UILabel *label6;
-@property (weak, nonatomic) IBOutlet UILabel *label7;
-@property (weak, nonatomic) IBOutlet UILabel *label8;
-@property (weak, nonatomic) IBOutlet UILabel *label9;
-@property (weak, nonatomic) IBOutlet UILabel *label10;
-@property (weak, nonatomic) IBOutlet UILabel *label11;
-@property (weak, nonatomic) IBOutlet UILabel *label12;
-@property (weak, nonatomic) IBOutlet UILabel *label13;
-@property (weak, nonatomic) IBOutlet UILabel *label14;
-@property (weak, nonatomic) IBOutlet UILabel *label15;
-@property (weak, nonatomic) IBOutlet UILabel *label16;
-@property (weak, nonatomic) IBOutlet UILabel *label17;
-@property (weak, nonatomic) IBOutlet UILabel *label18;
-@property (weak, nonatomic) IBOutlet UILabel *label19;
-@property (weak, nonatomic) IBOutlet UILabel *label20;
-@property (weak, nonatomic) IBOutlet UILabel *label21;
-@property (weak, nonatomic) IBOutlet UILabel *label22;
-@property (weak, nonatomic) IBOutlet UILabel *label23;
-@property (weak, nonatomic) IBOutlet UILabel *label24;
+@property (weak, nonatomic) IBOutlet UILabel *poolCount2;
+@property (weak, nonatomic) IBOutlet UILabel *haPoolCount2;
+@property (weak, nonatomic) IBOutlet UILabel *elasticCalPoolCount2;
+
+@property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount2;
+@property (weak, nonatomic) IBOutlet UILabel *cpuUsedCount2;
+@property (weak, nonatomic) IBOutlet UILabel *cpuUnitUnusedCount2;
+@property (weak, nonatomic) IBOutlet UILabel *memerySize2;
+@property (weak, nonatomic) IBOutlet UILabel *memeryUsedSize2;
+@property (weak, nonatomic) IBOutlet UILabel *memoryUnusedSize2;
+@property (weak, nonatomic) IBOutlet UILabel *storageSize2;
+@property (weak, nonatomic) IBOutlet UILabel *storageUsedSize2;
+@property (weak, nonatomic) IBOutlet UILabel *storageUnusedSize2;
 
 @property (weak, nonatomic) IBOutlet UIView *cpuChartGroup;
 @property (weak, nonatomic) IBOutlet UIView *memoryChartGroup;
