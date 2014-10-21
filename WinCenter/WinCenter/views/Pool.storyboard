@@ -75,9 +75,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="t7w-LR-ffe" secondAttribute="trailing" constant="-16" id="OOU-rV-GwL"/>
                             <constraint firstItem="osf-2s-RRl" firstAttribute="top" secondItem="zbR-Ib-os0" secondAttribute="bottom" id="Q0d-NS-6tI"/>
                             <constraint firstItem="4sc-x1-bfu" firstAttribute="top" secondItem="t7w-LR-ffe" secondAttribute="bottom" constant="1" id="UlJ-42-caH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zbR-Ib-os0" secondAttribute="trailing" constant="-16" id="YlQ-nY-NKM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zbR-Ib-os0" secondAttribute="trailing" id="YlQ-nY-NKM"/>
                             <constraint firstItem="zbR-Ib-os0" firstAttribute="top" secondItem="4sc-x1-bfu" secondAttribute="bottom" constant="1" id="gmj-Mz-lfx"/>
-                            <constraint firstItem="zbR-Ib-os0" firstAttribute="leading" secondItem="0pn-UC-Aas" secondAttribute="leadingMargin" constant="-16" id="tL8-Rn-TNG"/>
+                            <constraint firstItem="zbR-Ib-os0" firstAttribute="leading" secondItem="0pn-UC-Aas" secondAttribute="leadingMargin" id="tL8-Rn-TNG"/>
                             <constraint firstItem="t7w-LR-ffe" firstAttribute="top" secondItem="0pn-UC-Aas" secondAttribute="topMargin" id="wtJ-ws-L12"/>
                         </constraints>
                     </view>

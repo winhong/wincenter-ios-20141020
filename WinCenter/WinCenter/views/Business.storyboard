@@ -66,11 +66,11 @@
                         <constraints>
                             <constraint firstItem="T1J-dA-lcT" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" constant="-16" id="5cj-94-dfD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T1J-dA-lcT" secondAttribute="trailing" constant="-16" id="5wL-GW-wRp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LBv-hy-79D" secondAttribute="trailing" constant="-16" id="CWe-HZ-gDc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LBv-hy-79D" secondAttribute="trailing" id="CWe-HZ-gDc"/>
                             <constraint firstItem="w1S-5N-Cwr" firstAttribute="top" secondItem="T1J-dA-lcT" secondAttribute="bottom" constant="1" id="RkI-im-Zgr"/>
                             <constraint firstItem="T1J-dA-lcT" firstAttribute="top" secondItem="t1V-7H-79c" secondAttribute="topMargin" id="S3i-jd-jbZ"/>
                             <constraint firstItem="5Kf-ER-oi0" firstAttribute="top" secondItem="LBv-hy-79D" secondAttribute="bottom" id="cCp-Y4-57i"/>
-                            <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" constant="-16" id="e6Z-j2-DhF"/>
+                            <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" id="e6Z-j2-DhF"/>
                             <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="w1S-5N-Cwr" secondAttribute="bottom" constant="1" id="p0j-3C-yU3"/>
                         </constraints>
                     </view>

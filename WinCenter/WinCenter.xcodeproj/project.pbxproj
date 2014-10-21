@@ -229,6 +229,8 @@
 		1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365A19F56A38007E4D6C /* SUNButtonBoard_button1.png */; };
 		1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365B19F56A38007E4D6C /* SUNButtonBoard_button2.png */; };
 		1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824365C19F56A38007E4D6C /* SUNButtonBoard_button3.png */; };
+		186E68AE19F5F8E000717BCE /* VmDetailPerformanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E68AD19F5F8E000717BCE /* VmDetailPerformanceVC.m */; };
+		186E68B119F5F8F800717BCE /* HostDetailPerformanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E68B019F5F8F800717BCE /* HostDetailPerformanceVC.m */; };
 		18763BB919F4B82300669CC3 /* dial-icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BAF19F4B82300669CC3 /* dial-icon0.png */; };
 		18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB019F4B82300669CC3 /* dial-icon1.png */; };
 		18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18763BB119F4B82300669CC3 /* dial-icon2.png */; };
@@ -260,6 +262,7 @@
 		18763C1F19F4EE0200669CC3 /* EScrollerView_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1B19F4EE0200669CC3 /* EScrollerView_1.jpg */; };
 		18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */; };
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
+		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -294,7 +297,6 @@
 		18C2132119F27C2000FCBD23 /* HostDashboardHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2128919F27C2000FCBD23 /* HostDashboardHeader.m */; };
 		18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2128B19F27C2000FCBD23 /* HostDashboardVC.m */; };
 		18C2132319F27C2000FCBD23 /* HostDetailInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2128D19F27C2000FCBD23 /* HostDetailInfoVC.m */; };
-		18C2132419F27C2000FCBD23 /* HostDetailPerformanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2128F19F27C2000FCBD23 /* HostDetailPerformanceVC.m */; };
 		18C2132519F27C2000FCBD23 /* HostNetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129119F27C2000FCBD23 /* HostNetworkCollectionCell.m */; };
 		18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129319F27C2000FCBD23 /* HostNetworkCollectionVC.m */; };
 		18C2132719F27C2000FCBD23 /* HostNicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129519F27C2000FCBD23 /* HostNicCollectionCell.m */; };
@@ -712,6 +714,10 @@
 		1824365A19F56A38007E4D6C /* SUNButtonBoard_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button1.png; sourceTree = "<group>"; };
 		1824365B19F56A38007E4D6C /* SUNButtonBoard_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button2.png; sourceTree = "<group>"; };
 		1824365C19F56A38007E4D6C /* SUNButtonBoard_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SUNButtonBoard_button3.png; sourceTree = "<group>"; };
+		186E68AC19F5F8E000717BCE /* VmDetailPerformanceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDetailPerformanceVC.h; sourceTree = "<group>"; };
+		186E68AD19F5F8E000717BCE /* VmDetailPerformanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailPerformanceVC.m; sourceTree = "<group>"; };
+		186E68AF19F5F8F800717BCE /* HostDetailPerformanceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostDetailPerformanceVC.h; sourceTree = "<group>"; };
+		186E68B019F5F8F800717BCE /* HostDetailPerformanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostDetailPerformanceVC.m; sourceTree = "<group>"; };
 		18763BAF19F4B82300669CC3 /* dial-icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon0.png"; sourceTree = "<group>"; };
 		18763BB019F4B82300669CC3 /* dial-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon1.png"; sourceTree = "<group>"; };
 		18763BB119F4B82300669CC3 /* dial-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial-icon2.png"; sourceTree = "<group>"; };
@@ -749,6 +755,7 @@
 		18763C1B19F4EE0200669CC3 /* EScrollerView_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_1.jpg; sourceTree = "<group>"; };
 		18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_2.jpg; sourceTree = "<group>"; };
 		18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_3.jpg; sourceTree = "<group>"; };
+		1886A60519F6204D0089A576 /* Performance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Performance.storyboard; sourceTree = "<group>"; };
 		1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		18C2124919F27C2000FCBD23 /* BusinessContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContainerVC.h; sourceTree = "<group>"; };
@@ -814,8 +821,6 @@
 		18C2128B19F27C2000FCBD23 /* HostDashboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostDashboardVC.m; sourceTree = "<group>"; };
 		18C2128C19F27C2000FCBD23 /* HostDetailInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostDetailInfoVC.h; sourceTree = "<group>"; };
 		18C2128D19F27C2000FCBD23 /* HostDetailInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostDetailInfoVC.m; sourceTree = "<group>"; };
-		18C2128E19F27C2000FCBD23 /* HostDetailPerformanceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostDetailPerformanceVC.h; sourceTree = "<group>"; };
-		18C2128F19F27C2000FCBD23 /* HostDetailPerformanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostDetailPerformanceVC.m; sourceTree = "<group>"; };
 		18C2129019F27C2000FCBD23 /* HostNetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostNetworkCollectionCell.h; sourceTree = "<group>"; };
 		18C2129119F27C2000FCBD23 /* HostNetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostNetworkCollectionCell.m; sourceTree = "<group>"; };
 		18C2129219F27C2000FCBD23 /* HostNetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostNetworkCollectionVC.h; sourceTree = "<group>"; };
@@ -1500,6 +1505,7 @@
 				181DEC9E19F17CB100998835 /* Task.storyboard */,
 				181DEC9F19F17CB100998835 /* VM.storyboard */,
 				181DECA019F17CB100998835 /* Warning.storyboard */,
+				1886A60519F6204D0089A576 /* Performance.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1601,6 +1607,17 @@
 			path = SunButtonBoard;
 			sourceTree = "<group>";
 		};
+		186E689919F5EF8100717BCE /* performance */ = {
+			isa = PBXGroup;
+			children = (
+				186E68AC19F5F8E000717BCE /* VmDetailPerformanceVC.h */,
+				186E68AD19F5F8E000717BCE /* VmDetailPerformanceVC.m */,
+				186E68AF19F5F8F800717BCE /* HostDetailPerformanceVC.h */,
+				186E68B019F5F8F800717BCE /* HostDetailPerformanceVC.m */,
+			);
+			path = performance;
+			sourceTree = "<group>";
+		};
 		18763BAD19F4B82300669CC3 /* dialScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -1682,6 +1699,7 @@
 				18C2127F19F27C2000FCBD23 /* host */,
 				18C2129819F27C2000FCBD23 /* login */,
 				18C212A119F27C2000FCBD23 /* network */,
+				186E689919F5EF8100717BCE /* performance */,
 				18C212A819F27C2000FCBD23 /* pool */,
 				18C212B319F27C2000FCBD23 /* setting */,
 				18C212BA19F27C2000FCBD23 /* storage */,
@@ -1793,8 +1811,6 @@
 				18C2128B19F27C2000FCBD23 /* HostDashboardVC.m */,
 				18C2128C19F27C2000FCBD23 /* HostDetailInfoVC.h */,
 				18C2128D19F27C2000FCBD23 /* HostDetailInfoVC.m */,
-				18C2128E19F27C2000FCBD23 /* HostDetailPerformanceVC.h */,
-				18C2128F19F27C2000FCBD23 /* HostDetailPerformanceVC.m */,
 				18C2129019F27C2000FCBD23 /* HostNetworkCollectionCell.h */,
 				18C2129119F27C2000FCBD23 /* HostNetworkCollectionCell.m */,
 				18C2129219F27C2000FCBD23 /* HostNetworkCollectionVC.h */,
@@ -2065,6 +2081,7 @@
 				1824362219F4FE05007E4D6C /* calories@2x.png in Resources */,
 				1824365219F544C6007E4D6C /* FolderBar@2x.png in Resources */,
 				181DED6619F17CB100998835 /* TemplateIcon2x.png in Resources */,
+				1886A60619F6204D0089A576 /* Performance.storyboard in Resources */,
 				1824364F19F544C6007E4D6C /* ActionBtnPress.png in Resources */,
 				181DED5319F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json in Resources */,
 				181DECE819F17CB100998835 /* select.png in Resources */,
@@ -2287,7 +2304,6 @@
 				18C2131919F27C2000FCBD23 /* MasterCollectionVC.m in Sources */,
 				181DED9219F17CB100998835 /* WarningInfoListResult.m in Sources */,
 				181DECE619F17CB100998835 /* RenderView.m in Sources */,
-				18C2132419F27C2000FCBD23 /* HostDetailPerformanceVC.m in Sources */,
 				18C2133619F27C2000FCBD23 /* PopOptionsUserInfoVC.m in Sources */,
 				181DECA119F17CB100998835 /* ARLineChartCommon.m in Sources */,
 				18C2130619F27C2000FCBD23 /* BusinessDashboardHeader.m in Sources */,
@@ -2317,9 +2333,11 @@
 				181DED7519F17CB100998835 /* DatacenterVO.m in Sources */,
 				18C2130F19F27C2000FCBD23 /* MSDayColumnHeaderBackground.m in Sources */,
 				181DECBC19F17CB100998835 /* EPieChartViewController.m in Sources */,
+				186E68AE19F5F8E000717BCE /* VmDetailPerformanceVC.m in Sources */,
 				181DECFC19F17CB100998835 /* WeekStatVC.m in Sources */,
 				181DED9019F17CB100998835 /* VmNetworkVO.m in Sources */,
 				1824364A19F544C6007E4D6C /* DTFolderBar.m in Sources */,
+				186E68B119F5F8F800717BCE /* HostDetailPerformanceVC.m in Sources */,
 				18C2132519F27C2000FCBD23 /* HostNetworkCollectionCell.m in Sources */,
 				18C2135619F27C2000FCBD23 /* VmNetworkCollectionVC.m in Sources */,
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,

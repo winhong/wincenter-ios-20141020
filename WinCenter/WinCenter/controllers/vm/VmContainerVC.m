@@ -42,7 +42,7 @@
     [pages addObject:detailVC];
     
     if(self.hasPerformancePage){
-        [pages addObject:[self.storyboard instantiateViewController:@"VmPerformanceVC"]];
+        [pages addObject:[[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"VmDetailPerformanceVC"]];
     }
         
     VmNetworkCollectionVC *vmNetworkCollectionVC = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];

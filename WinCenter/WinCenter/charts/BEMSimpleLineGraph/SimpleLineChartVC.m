@@ -41,16 +41,15 @@ int totalNumber;
     
     // Customization of the graph
     self.myGraph.enableTouchReport = YES;
-    self.myGraph.colorTop = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0];
-    self.myGraph.colorBottom = [UIColor colorWithRed:31.0/255.0 green:187.0/255.0 blue:166.0/255.0 alpha:1.0]; // Leaving this not-set on iOS 7 will default to your window's tintColor
     self.myGraph.colorLine = [UIColor whiteColor];
     self.myGraph.colorXaxisLabel = [UIColor whiteColor];
     self.myGraph.widthLine = 3.0;
-    self.myGraph.enableTouchReport = YES;
     
     // The labels to report the values of the graph when the user touches it
     self.labelValues.text = [NSString stringWithFormat:@"%i", totalNumber];
     self.labelDates.text = @"between 2000 and 2010";
+    
+    [self showGraph];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +63,10 @@ int totalNumber;
     [self.ArrayOfValues removeAllObjects];
     [self.ArrayOfDates removeAllObjects];
     
+    [self showGraph];
+}
+
+- (void)showGraph{
     for (int i = 0; i < self.graphObjectIncrement.value; i++) {
         [self.ArrayOfValues addObject:[NSNumber numberWithInteger:(arc4random() % 70000)]]; // Random values for the graph
         [self.ArrayOfDates addObject:[NSString stringWithFormat:@"%@",[NSNumber numberWithInt:2000 + i]]]; // Dates for the X-Axis of the graph

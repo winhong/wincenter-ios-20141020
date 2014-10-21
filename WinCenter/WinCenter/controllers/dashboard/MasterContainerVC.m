@@ -169,12 +169,14 @@
     }
     
 }
+/*
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController{
     return self.pages.count;
 }
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     return self.showIndex;
 }
+ */
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers{
     self._selectedIndex = [self.pages indexOfObject:pendingViewControllers[0]];

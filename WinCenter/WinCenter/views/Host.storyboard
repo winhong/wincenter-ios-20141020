@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="SdQ-oO-Giu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SdQ-oO-Giu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -10,7 +10,7 @@
             <objects>
                 <tableViewController id="mwh-cb-uuG" customClass="VmNewVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AEl-Dg-C6s">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -192,7 +192,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2c-XC-8es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5394" y="-1533"/>
+            <point key="canvasLocation" x="3390" y="-603"/>
         </scene>
         <!--物理机详情-->
         <scene sceneID="lUo-he-c0a">
@@ -206,7 +206,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -318,12 +318,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fyA-AG-8EO" firstAttribute="top" secondItem="NwC-t7-hvp" secondAttribute="topMargin" id="Chc-qP-1MO"/>
-                            <constraint firstItem="CEO-rG-YsG" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leadingMargin" constant="-16" id="KbS-jZ-H7U"/>
+                            <constraint firstItem="CEO-rG-YsG" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leadingMargin" id="KbS-jZ-H7U"/>
                             <constraint firstItem="h29-UX-gHE" firstAttribute="top" secondItem="fyA-AG-8EO" secondAttribute="bottom" constant="1" id="MJY-nB-8ff"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fyA-AG-8EO" secondAttribute="trailing" constant="-16" id="XrH-gI-c74"/>
                             <constraint firstItem="CEO-rG-YsG" firstAttribute="top" secondItem="h29-UX-gHE" secondAttribute="bottom" constant="1" id="j05-0y-wsF"/>
                             <constraint firstItem="C5K-M6-ms8" firstAttribute="top" secondItem="CEO-rG-YsG" secondAttribute="bottom" id="rmt-k7-fn5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CEO-rG-YsG" secondAttribute="trailing" constant="-16" id="rsd-wO-qa8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CEO-rG-YsG" secondAttribute="trailing" id="rsd-wO-qa8"/>
                             <constraint firstItem="fyA-AG-8EO" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leadingMargin" constant="-16" id="tu3-QD-Suq"/>
                         </constraints>
                     </view>
@@ -347,14 +347,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfj-nX-Bm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3839.5" y="-2486"/>
+            <point key="canvasLocation" x="2999.609375" y="-1456.640625"/>
         </scene>
         <!--物理机列表-->
         <scene sceneID="8Ul-7l-mmQ">
             <objects>
                 <collectionViewController storyboardIdentifier="HostCollectionVC" autoresizesArchivedViewToFullSize="NO" title="物理机列表" clearsSelectionOnViewWillAppear="NO" id="3I2-h9-1Wt" customClass="HostCollectionVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="8NZ-kj-xsa">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="L0x-Fm-npQ">
@@ -600,15 +600,14 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="zTZ-OS-5Cn"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="969" height="768"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAN-o7-pFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692.5" y="-2486"/>
+            <point key="canvasLocation" x="1875" y="-1457"/>
         </scene>
         <!--物理机摘要-->
         <scene sceneID="TyW-aH-qTQ">
@@ -1183,37 +1182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3df-aJ-Gas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4952.5" y="-2501"/>
-        </scene>
-        <!--性能监控-->
-        <scene sceneID="ya3-dz-ofd">
-            <objects>
-                <viewController storyboardIdentifier="HostDetailPerformanceVC_iPad" title="性能监控" id="CT2-88-bn1" customClass="HostDetailPerformanceVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RZr-ck-IMm"/>
-                        <viewControllerLayoutGuide type="bottom" id="7nw-wP-t68"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4AV-rq-rI9">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性能监控" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xk-g5-sVj">
-                                <rect key="frame" x="478" y="283" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="qRd-Yn-0wZ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="969" height="768"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zp4-ox-yT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6153.5" y="-2486"/>
+            <point key="canvasLocation" x="4040.5" y="-1457"/>
         </scene>
         <!--物理机适配器列表-->
         <scene sceneID="MB4-U4-7yZ">
@@ -1334,7 +1303,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5T-ac-d8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8610" y="-2501"/>
+            <point key="canvasLocation" x="7462.5" y="-1466"/>
         </scene>
         <!--物理机网络列表-->
         <scene sceneID="GYe-2B-06l">
@@ -1419,7 +1388,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9n-o9-7Cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7394" y="-2501"/>
+            <point key="canvasLocation" x="6244.5" y="-1436"/>
         </scene>
         <!--Host Detail InfoVC-->
         <scene sceneID="tFA-8i-X9a">
@@ -1433,7 +1402,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lka-is-TR2">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lka-is-TR2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aY5-zY-qpC">
@@ -1894,35 +1863,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvT-3H-3Dp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5264" y="-661"/>
-        </scene>
-        <!--Host Detail PerformanceVC-->
-        <scene sceneID="ZIL-0q-BVa">
-            <objects>
-                <viewController storyboardIdentifier="HostDetailPerformanceVC_iPhone" id="ADz-dR-XPW" customClass="HostDetailPerformanceVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EOi-JB-mOW"/>
-                        <viewControllerLayoutGuide type="bottom" id="qNb-AQ-uGc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="F15-GV-FYH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性能监控" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEn-9d-bKs">
-                                <rect key="frame" x="126" y="204" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NAa-05-wJT"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ8-ey-2R2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5839" y="-661"/>
+            <point key="canvasLocation" x="4128" y="-100"/>
         </scene>
         <!--Host Nic CollectionVC-->
         <scene sceneID="7FE-Tl-r3P">
@@ -2045,7 +1986,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnK-0q-a5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6373" y="-661"/>
+            <point key="canvasLocation" x="5010" y="-92"/>
         </scene>
         <!--Host Network CollectionVC-->
         <scene sceneID="rOU-1J-GQp">
@@ -2133,7 +2074,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ake-3o-0kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6861" y="-661"/>
+            <point key="canvasLocation" x="5528" y="-100"/>
         </scene>
     </scenes>
     <resources>
@@ -2166,9 +2107,4 @@
         <image name="进度条－湖蓝色" width="59" height="10"/>
         <image name="进度条－绿色" width="59" height="10"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>

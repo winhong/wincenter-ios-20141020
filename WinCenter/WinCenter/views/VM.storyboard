@@ -123,9 +123,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9R9-1v-QAk" firstAttribute="top" secondItem="g3f-ko-NVO" secondAttribute="bottom" constant="1" id="Alw-hj-49q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9R9-1v-QAk" secondAttribute="trailing" constant="-16" id="Cr3-fc-X6m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9R9-1v-QAk" secondAttribute="trailing" id="Cr3-fc-X6m"/>
                             <constraint firstItem="9Ur-d1-Age" firstAttribute="leading" secondItem="8d5-Yz-syf" secondAttribute="leadingMargin" constant="-16" id="EBS-wy-JwS"/>
-                            <constraint firstItem="9R9-1v-QAk" firstAttribute="leading" secondItem="8d5-Yz-syf" secondAttribute="leadingMargin" constant="-16" id="G2A-uY-AVM"/>
+                            <constraint firstItem="9R9-1v-QAk" firstAttribute="leading" secondItem="8d5-Yz-syf" secondAttribute="leadingMargin" id="G2A-uY-AVM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Ur-d1-Age" secondAttribute="trailing" constant="-16" id="L6e-Kf-IZk"/>
                             <constraint firstItem="9Ur-d1-Age" firstAttribute="top" secondItem="8d5-Yz-syf" secondAttribute="topMargin" id="Ndd-v4-U0H"/>
                             <constraint firstItem="g3f-ko-NVO" firstAttribute="top" secondItem="9Ur-d1-Age" secondAttribute="bottom" constant="1" id="hou-zU-fEm"/>
@@ -745,35 +745,6 @@
             </objects>
             <point key="canvasLocation" x="4513.5" y="99"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fRr-Hs-XVe">
-            <objects>
-                <viewController storyboardIdentifier="VmPerformanceVC_iPad" id="5gC-57-Qaa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="p0u-lF-y7O"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gr7-Hn-cHr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Ky-6N-mbB">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性能监控" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jn-0V-twF">
-                                <rect key="frame" x="495" y="373" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </view>
-                    <navigationItem key="navigationItem" id="Z7Y-s1-15h"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="969" height="768"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eOl-Ab-QX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5674" y="109"/>
-        </scene>
         <!--迁移虚拟机-->
         <scene sceneID="ROg-gT-K5D">
             <objects>
@@ -1258,33 +1229,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="se1-N7-Cw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3828" y="1950"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="GSf-Y0-PvS">
-            <objects>
-                <viewController storyboardIdentifier="VmPerformanceVC_iPhone" id="ywP-Ik-R1m" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WOQ-8k-T1B"/>
-                        <viewControllerLayoutGuide type="bottom" id="RZB-MZ-Yk5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C02-Tk-RJu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性能监控" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-tK-E6G">
-                                <rect key="frame" x="143" y="205" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RE4-Es-gsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4201" y="1950"/>
         </scene>
         <!--Vm Detail SnapshootVC-->
         <scene sceneID="Jca-dT-MbK">

@@ -33,7 +33,7 @@
     [pages addObject:detailVC];
     
     
-    UIViewController *performVC = [self.storyboard instantiateViewController:@"HostDetailPerformanceVC"];
+    UIViewController *performVC = [[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"HostDetailPerformanceVC"];
     [pages addObject:performVC];
     
     VmCollectionVC *hostVmCollectionVC = [[UIStoryboard storyboardWithName:@"VM" bundle:nil] instantiateViewController:@"VmCollectionVC"];

@@ -66,13 +66,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G2l-L4-v89" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leadingMargin" constant="-16" id="DYE-gJ-D39"/>
-                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leadingMargin" constant="-16" id="EfW-Wr-s9I"/>
+                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leadingMargin" id="EfW-Wr-s9I"/>
                             <constraint firstItem="G2l-L4-v89" firstAttribute="top" secondItem="Ntn-C8-gGe" secondAttribute="topMargin" id="EoB-Sb-Rb1"/>
                             <constraint firstItem="1ce-fL-p9d" firstAttribute="top" secondItem="8Xh-kD-J3a" secondAttribute="bottom" id="YwL-Na-JlR"/>
                             <constraint firstItem="8Xh-kD-J3a" firstAttribute="top" secondItem="DNF-po-bTV" secondAttribute="bottom" constant="1" id="ai1-jH-VJS"/>
                             <constraint firstItem="DNF-po-bTV" firstAttribute="top" secondItem="G2l-L4-v89" secondAttribute="bottom" constant="1" id="mIQ-Ox-cTr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G2l-L4-v89" secondAttribute="trailing" constant="-16" id="sJl-NW-bUO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Xh-kD-J3a" secondAttribute="trailing" constant="-16" id="wMa-vh-WR4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Xh-kD-J3a" secondAttribute="trailing" id="wMa-vh-WR4"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
