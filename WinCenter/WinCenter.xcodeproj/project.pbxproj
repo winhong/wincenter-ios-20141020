@@ -2497,7 +2497,7 @@
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
 				181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */,
 				181DECCF19F17CB100998835 /* JBChartHeaderView.m in Sources */,
-				843E6C1419F5F40E0046A5A0 /* VmStateVO.m in Sources */,
+				1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */,
 				181DED8A19F17CB100998835 /* UserListResult.m in Sources */,
 				18C2132919F27C2000FCBD23 /* LoginSettingVC.m in Sources */,
 				181DED8519F17CB100998835 /* RemoteObject.m in Sources */,
