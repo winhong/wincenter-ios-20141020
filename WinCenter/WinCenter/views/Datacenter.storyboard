@@ -2124,7 +2124,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="B19956C2-1389-4D52-8AED-C9D58A0CBE92" id="b8q-IF-5E0">
+                        <barButtonItem image="66557C24-3FB9-4ECC-B911-28CABE113DB7" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="Y7p-c2-ewK"/>
                             </connections>
@@ -2830,11 +2830,8 @@
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEy-YV-IuF">
                                     <rect key="frame" x="-40" y="-40" width="969" height="346"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-kg-F2t">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-kg-F2t">
                                             <rect key="frame" x="20" y="20" width="1100" height="306"/>
-                                            <userGuides>
-                                                <userLayoutGuide location="154" affinity="minY"/>
-                                            </userGuides>
                                             <subviews>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机-色块" translatesAutoresizingMaskIntoConstraints="NO" id="JkT-ef-jJP">
                                                     <rect key="frame" x="40" y="84" width="198" height="125"/>
@@ -2845,13 +2842,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机总数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-38-fGY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="虚拟机总数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-38-fGY">
                                                     <rect key="frame" x="280" y="169" width="117" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-UG-odh">
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-UG-odh">
                                                     <rect key="frame" x="406" y="84" width="349" height="138"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-i8-mJ0" userLabel="环图">
@@ -2890,7 +2887,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ja5-2d-j48">
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ja5-2d-j48">
                                                     <rect key="frame" x="731" y="84" width="349" height="138"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-B9-H7N" userLabel="环图">
@@ -2948,7 +2945,7 @@
                                                     <rect key="frame" x="395" y="89" width="1" height="120"/>
                                                     <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pmG-GG-fn1" userLabel="缩起">
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pmG-GG-fn1" userLabel="缩起">
                                                     <rect key="frame" x="20" y="229" width="969" height="57"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机总数：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-ZY-Wu6">
@@ -3059,6 +3056,16 @@
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ja5-2d-j48" firstAttribute="leading" secondItem="Ger-38-fGY" secondAttribute="trailing" constant="334" id="66x-a4-4KY"/>
+                                                <constraint firstAttribute="trailing" secondItem="bDd-UG-odh" secondAttribute="trailing" constant="345" id="Mvm-pk-zk4"/>
+                                                <constraint firstAttribute="trailing" secondItem="ja5-2d-j48" secondAttribute="trailing" constant="20" id="N2b-7c-3fR"/>
+                                                <constraint firstItem="pmG-GG-fn1" firstAttribute="top" secondItem="ja5-2d-j48" secondAttribute="bottom" constant="7" id="PWn-jd-N4y"/>
+                                                <constraint firstItem="bDd-UG-odh" firstAttribute="top" secondItem="ATo-kg-F2t" secondAttribute="top" constant="84" id="e2J-mI-fG2"/>
+                                                <constraint firstItem="pmG-GG-fn1" firstAttribute="top" secondItem="bDd-UG-odh" secondAttribute="bottom" constant="7" id="e9f-j6-7EB"/>
+                                                <constraint firstItem="bDd-UG-odh" firstAttribute="leading" secondItem="Ger-38-fGY" secondAttribute="trailing" constant="9" id="iZR-hP-yF5"/>
+                                                <constraint firstItem="ja5-2d-j48" firstAttribute="top" secondItem="ATo-kg-F2t" secondAttribute="top" constant="84" id="uAE-di-N4W"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -4153,7 +4160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="B19956C2-1389-4D52-8AED-C9D58A0CBE92" width="32" height="32">
+        <image name="66557C24-3FB9-4ECC-B911-28CABE113DB7" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

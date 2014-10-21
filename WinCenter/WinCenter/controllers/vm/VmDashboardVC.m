@@ -14,8 +14,7 @@
 @interface VmDashboardVC ()
 
 @property DatacenterStatWinserver *datacenterStatWinserver;
-@property VmStateVO *VmStateWinserver;
-@property VmOSVO *VmOSWinserver;
+@property VmSubVO *vmSubVO;
 
 @end
 
@@ -24,20 +23,18 @@
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [self.collectionView reloadData];
+        
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
+            
+            [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+                self.vmSubVO = object;
+                [self.collectionView reloadData];
+            }];
+        }];
     }];
     
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
-    }];
-    
-    [[RemoteObject getCurrentDatacenterVO] getVmSubVOOSAsync:^(id object, NSError *error) {
-        self.VmOSWinserver = object;
-    }];
-    
-    [[RemoteObject getCurrentDatacenterVO] getVmSubVOStateAsync:^(id object, NSError *error) {
-        self.VmStateWinserver = object;
-    }];
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -86,23 +83,23 @@
     VmDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VmDashboardHeader" forIndexPath:indexPath];
     
     header.vmCount.text =[NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
-    header.label1.text =[NSString stringWithFormat:@"%d",self.VmOSWinserver.Windows];
-    header.label3.text =[NSString stringWithFormat:@"%d",self.VmOSWinserver.Linux];
-    header.label6.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.other];
-    header.label7.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.OK];
-    header.label8.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.STOPPED];
+    header.label1.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.label3.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
+    header.label6.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.label7.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.label8.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
     
     //缩起
     header.label10.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
-    header.label11.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.other];
-    header.label12.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.OK];
-    header.label13.text =[NSString stringWithFormat:@"%d",self.VmStateWinserver.STOPPED];
-    header.label14.text =[NSString stringWithFormat:@"%d",self.VmOSWinserver.Windows];
-    header.label16.text =[NSString stringWithFormat:@"%d",self.VmOSWinserver.Linux];
+    header.label11.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.label12.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.label13.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
+    header.label14.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.label16.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
     
     //圈图
-    NSArray *items2 = @[[PNPieChartDataItem dataItemWithValue:self.VmOSWinserver.Windows color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
-                       [PNPieChartDataItem dataItemWithValue:self.VmOSWinserver.Linux color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+    NSArray *items2 = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Windows color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Linux color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
                        ];
     PNPieChart *pieChart2 = [[PNPieChart alloc] initWithFrame:header.vmOsTypeChart.bounds items:items2];
     pieChart2.descriptionTextColor = [UIColor whiteColor];
@@ -110,9 +107,9 @@
     [pieChart2 strokeChart];
     [header.vmOsTypeChart addSubview:pieChart2];
     
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.VmStateWinserver.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
-                       [PNPieChartDataItem dataItemWithValue:self.VmStateWinserver.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
-                       [PNPieChartDataItem dataItemWithValue:self.VmStateWinserver.STOPPED color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
+                       [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.STOPPED color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
                        ];
     PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.vmStatusChart.bounds items:items];
     pieChart.descriptionTextColor = [UIColor whiteColor];
