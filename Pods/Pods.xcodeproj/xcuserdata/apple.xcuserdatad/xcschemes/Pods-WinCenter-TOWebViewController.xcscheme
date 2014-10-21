@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04542C9AD92943498BFCF833"
+               BlueprintIdentifier = "408DF4B2DA3B4F989C368080"
                BuildableName = "libPods-WinCenter-TOWebViewController.a"
                BlueprintName = "Pods-WinCenter-TOWebViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

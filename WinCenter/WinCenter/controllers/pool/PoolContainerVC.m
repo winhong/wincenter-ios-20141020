@@ -12,6 +12,7 @@
 #import "VmCollectionVC.h"
 #import "StorageCollectionVC.h"
 #import "PopControlRecordVC.h"
+#import "DLGraphDemoViewController.h"
 
 @implementation PoolContainerVC
 

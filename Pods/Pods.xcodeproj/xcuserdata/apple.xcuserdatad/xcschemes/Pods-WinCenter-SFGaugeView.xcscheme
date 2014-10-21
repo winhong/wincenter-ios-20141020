@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F45028289F74360B0CABC40"
+               BlueprintIdentifier = "E008041AFD3D433389C4587F"
                BuildableName = "libPods-WinCenter-SFGaugeView.a"
                BlueprintName = "Pods-WinCenter-SFGaugeView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -5,6 +5,7 @@ PODS:
   - BMFloatingHeaderCollectionViewLayout (1.0.0)
   - CupertinoYankee (0.1.1)
   - DAKeyboardControl (2.4.0)
+  - DLForcedGraphView (0.1.1)
   - EAIntroView (2.6.3)
   - EChart (0.1.1)
   - FastAnimationWithPOP (0.0.2):
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - BMFloatingHeaderCollectionViewLayout (~> 1.0.0)
   - CupertinoYankee (~> 0.1.0)
   - DAKeyboardControl (~> 2.4.0)
+  - DLForcedGraphView (~> 0.1.1)
   - EAIntroView (~> 2.6.3)
   - EChart (~> 0.1.1)
   - FastAnimationWithPOP (~> 0.0.2)
@@ -101,6 +103,7 @@ SPEC CHECKSUMS:
   BMFloatingHeaderCollectionViewLayout: d12e9c4e34454d4bace0752b006fff361a555b8d
   CupertinoYankee: b07873e724c2c5c1a249c555a5bd3d508c04e0de
   DAKeyboardControl: 45a363c85c48a7df76f21f236d9f85800e001775
+  DLForcedGraphView: 4c3f41659d5f98c409bf3083f697873c5541c680
   EAIntroView: 45924b81c153d1206ee24f4fa654e9d9dae79e93
   EChart: fd95a66d60043387c440a56acd703bbde35a145d
   FastAnimationWithPOP: 453cac7e3671d27c57db04abec4f6c08a930f413

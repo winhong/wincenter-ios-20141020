@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF268DD2B1834C559AF83EF2"
+               BlueprintIdentifier = "A4551C734512479188799D69"
                BuildableName = "libPods-WinCenter-NZAlertView.a"
                BlueprintName = "Pods-WinCenter-NZAlertView"
                ReferencedContainer = "container:Pods.xcodeproj">

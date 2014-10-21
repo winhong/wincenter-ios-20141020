@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4DAE9277B85B4932BFAA276A"
+               BlueprintIdentifier = "3F86D09430CD4DA982D84686"
                BuildableName = "libPods-WinCenter-NSObject-ObjectMap.a"
                BlueprintName = "Pods-WinCenter-NSObject-ObjectMap"
                ReferencedContainer = "container:Pods.xcodeproj">

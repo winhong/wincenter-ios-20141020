@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_DAKeyboardControl 4
 #define COCOAPODS_VERSION_PATCH_DAKeyboardControl 0
 
+// DLForcedGraphView
+#define COCOAPODS_POD_AVAILABLE_DLForcedGraphView
+#define COCOAPODS_VERSION_MAJOR_DLForcedGraphView 0
+#define COCOAPODS_VERSION_MINOR_DLForcedGraphView 1
+#define COCOAPODS_VERSION_PATCH_DLForcedGraphView 1
+
 // EAIntroView
 #define COCOAPODS_POD_AVAILABLE_EAIntroView
 #define COCOAPODS_VERSION_MAJOR_EAIntroView 2
