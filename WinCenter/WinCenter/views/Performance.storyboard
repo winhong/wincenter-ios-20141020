@@ -373,7 +373,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLY-Jr-8gm">
-                                <rect key="frame" x="0.0" y="64" width="969" height="660"/>
+                                <rect key="frame" x="0.0" y="65" width="869" height="659"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="4vd-tP-rs9" id="ByX-SA-iQ3"/>
@@ -381,6 +381,10 @@
                             </webView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-lS-TKt" customClass="MZDayPicker">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-Hc-1mm">
+                                <rect key="frame" x="870" y="65" width="100" height="659"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -402,6 +406,7 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
                         <outlet property="dayPicker" destination="gyN-lS-TKt" id="o5z-IR-c23"/>
+                        <outlet property="segmentControlContainer" destination="4A9-Hc-1mm" id="KkW-Gt-Fyp"/>
                         <outlet property="webview" destination="ZLY-Jr-8gm" id="U8F-lZ-eXq"/>
                     </connections>
                 </viewController>
