@@ -185,10 +185,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                    <state key="normal" title="切换" image="navIcon-warning">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <state key="selected" image="navIcon-warning-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="ecl-2N-0v5"/>
                                                         <outletCollection property="gestureRecognizers" destination="MSm-kz-9gS" appends="YES" id="CZg-Oe-GYr"/>
@@ -207,10 +207,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-refresh">
+                                                    <state key="normal" title="切换" image="navIcon-search">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" image="navIcon-refresh-white"/>
+                                                    <state key="selected" image="navIcon-search-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="lgZ-Hm-F9f"/>
                                                         <outletCollection property="gestureRecognizers" destination="umT-ea-aZV" appends="YES" id="RXk-vY-AqW"/>
@@ -1112,7 +1112,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq1-ei-cxf">
                                         <rect key="frame" x="20" y="65" width="1024" height="680"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="自源池－首页" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-gh-dTj">
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="datacenterimg" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-gh-dTj">
                                                 <rect key="frame" x="0.0" y="0.0" width="969" height="405"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="资源池" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-R9-a5o">
@@ -2124,7 +2124,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="66557C24-3FB9-4ECC-B911-28CABE113DB7" id="b8q-IF-5E0">
+                        <barButtonItem image="E515D200-7B73-42C2-8EBA-6DA656F5B7E0" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="Y7p-c2-ewK"/>
                             </connections>
@@ -4160,7 +4160,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="66557C24-3FB9-4ECC-B911-28CABE113DB7" width="32" height="32">
+        <image name="CPU线程-black" width="15" height="15"/>
+        <image name="CPU颗数-black" width="15" height="15"/>
+        <image name="E515D200-7B73-42C2-8EBA-6DA656F5B7E0" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4279,9 +4281,8 @@ XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
 AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
 </mutableData>
         </image>
-        <image name="CPU线程-black" width="15" height="15"/>
-        <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
+        <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
@@ -4300,12 +4301,16 @@ AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
         <image name="navIcon-pool-white" width="55" height="58"/>
         <image name="navIcon-refresh" width="55" height="58"/>
         <image name="navIcon-refresh-white" width="55" height="58"/>
+        <image name="navIcon-search" width="55" height="58"/>
+        <image name="navIcon-search-white" width="55" height="58"/>
         <image name="navIcon-settings" width="55" height="58"/>
         <image name="navIcon-settings-white" width="55" height="58"/>
         <image name="navIcon-storage" width="55" height="58"/>
         <image name="navIcon-storage-white" width="55" height="58"/>
         <image name="navIcon-vm" width="55" height="58"/>
         <image name="navIcon-vm-white" width="55" height="58"/>
+        <image name="navIcon-warning" width="55" height="58"/>
+        <image name="navIcon-warning-white" width="55" height="58"/>
         <image name="os-others" width="55" height="55"/>
         <image name="share" width="29" height="13"/>
         <image name="业务系统-收起" width="193" height="40"/>
@@ -4320,7 +4325,6 @@ AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
         <image name="物理机－收起" width="192" height="40"/>
         <image name="物理机－色块" width="198" height="125"/>
         <image name="管理员" width="12" height="12"/>
-        <image name="自源池－首页" width="969" height="405"/>
         <image name="虚拟机-收起" width="193" height="40"/>
         <image name="虚拟机-色块" width="198" height="125"/>
         <image name="虚拟机2" width="11" height="12"/>
