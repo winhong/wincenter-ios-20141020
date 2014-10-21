@@ -11,6 +11,9 @@
 #import <AFViewShaker/AFViewShaker.h>
 
 @interface LoginTableVC ()
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell1;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell2;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell3;
 @property NSArray *datacenters;
 @property AFViewShaker *viewShaker;
 @end
@@ -23,34 +26,78 @@
     // Do any additional setup after loading the view.
     
     //[self.userName becomeFirstResponder];
-    CGRect rect = [[UIScreen mainScreen] bounds];
-    self.tableView.backgroundView = [[UIView alloc] initWithFrame:rect];
-    self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
     
-    //波纹
-    VWWWaterView *waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
-    waterView.currentWaterColor = [UIColor colorWithHexString:@"#48a8d0"];
-    waterView.currentLinePointY = 250;
-    waterView.waterWidth = 1024;
-    waterView.waterHeight = 5;
-    waterView.speed = 0.03;
-    [self.tableView.backgroundView addSubview:waterView];
-    
-    waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
-    waterView.currentWaterColor = [UIColor colorWithHexString:@"#6ebedf"];
-    waterView.currentLinePointY = 280;
-    waterView.waterWidth = 1024;
-    waterView.waterHeight = 7;
-    waterView.speed = -0.045;
-    [self.tableView.backgroundView addSubview:waterView];
-    
-    waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
-    waterView.currentWaterColor = [UIColor colorWithHexString:@"#b4e8fe"];
-    waterView.currentLinePointY = 310;
-    waterView.waterWidth = 1024;
-    waterView.waterHeight = 9;
-    waterView.speed = 0.0375;
-    [self.tableView.backgroundView addSubview:waterView];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.cell1.backgroundColor = [UIColor clearColor];
+        UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
+        
+        [backView addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginbg2"]]];
+        
+        //波纹
+        CGRect rect = [[UIScreen mainScreen] bounds];
+        VWWWaterView *waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 280, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#48a8d0"];
+        waterView.currentLinePointY = 250;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 5;
+        waterView.speed = 0.03;
+        [backView addSubview:waterView];
+        
+        waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 280, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#6ebedf"];
+        waterView.currentLinePointY = 280;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 7;
+        waterView.speed = -0.045;
+        [backView addSubview:waterView];
+        
+        waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 280, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#b4e8fe"];
+        waterView.currentLinePointY = 310;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 9;
+        waterView.speed = 0.0375;
+        [backView addSubview:waterView];
+        
+        waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 280, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#ffffff"];
+        waterView.currentLinePointY = 350;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 11;
+        waterView.speed = -0.04;
+        [backView addSubview:waterView];
+        
+        self.tableView.backgroundView = backView;
+        
+    }else{
+        CGRect rect = [[UIScreen mainScreen] bounds];
+        self.tableView.backgroundView = [[UIView alloc] initWithFrame:rect];
+        self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
+        //波纹
+        VWWWaterView *waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#48a8d0"];
+        waterView.currentLinePointY = 250;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 5;
+        waterView.speed = 0.03;
+        [self.tableView.backgroundView addSubview:waterView];
+        
+        waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#6ebedf"];
+        waterView.currentLinePointY = 280;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 7;
+        waterView.speed = -0.045;
+        [self.tableView.backgroundView addSubview:waterView];
+        
+        waterView = [[VWWWaterView alloc] initWithFrame:CGRectMake(0, 200, rect.size.width, rect.size.height)];
+        waterView.currentWaterColor = [UIColor colorWithHexString:@"#b4e8fe"];
+        waterView.currentLinePointY = 310;
+        waterView.waterWidth = 1024;
+        waterView.waterHeight = 9;
+        waterView.speed = 0.0375;
+        [self.tableView.backgroundView addSubview:waterView];
+    }
     
     self.viewShaker = [[AFViewShaker alloc] initWithViewsArray:@[self.userName, self.password]];
     
@@ -101,9 +148,16 @@
 }
 
 - (void) toLogin{
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateViewController:@"DashboardTableVCNav"];
-    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:vc animated:YES completion:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:vc animated:YES completion:nil];
+
+    }else{
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateViewController:@"DashboardTableVCNav"];
+        vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (IBAction)backToLogin:(UIStoryboardSegue*)segue{
