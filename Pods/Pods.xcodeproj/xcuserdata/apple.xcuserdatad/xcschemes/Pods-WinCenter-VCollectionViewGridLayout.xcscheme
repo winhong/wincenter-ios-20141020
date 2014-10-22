@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68EE0873E4C047F28B031C37"
+               BlueprintIdentifier = "791D49E533AF4C3E9D67F331"
                BuildableName = "libPods-WinCenter-VCollectionViewGridLayout.a"
                BlueprintName = "Pods-WinCenter-VCollectionViewGridLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

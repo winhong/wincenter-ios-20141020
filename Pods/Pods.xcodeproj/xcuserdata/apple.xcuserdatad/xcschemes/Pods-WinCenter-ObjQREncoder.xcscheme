@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78E57DCB9C87488E837F725B"
+               BlueprintIdentifier = "BD7A8ECA5680432C92C657B1"
                BuildableName = "libPods-WinCenter-ObjQREncoder.a"
                BlueprintName = "Pods-WinCenter-ObjQREncoder"
                ReferencedContainer = "container:Pods.xcodeproj">

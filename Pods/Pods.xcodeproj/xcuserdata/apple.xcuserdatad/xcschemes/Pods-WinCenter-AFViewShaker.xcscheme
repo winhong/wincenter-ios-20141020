@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9CFCCC840A814D348E359D22"
+               BlueprintIdentifier = "9A6F9221E1DD4C468E4E02FF"
                BuildableName = "libPods-WinCenter-AFViewShaker.a"
                BlueprintName = "Pods-WinCenter-AFViewShaker"
                ReferencedContainer = "container:Pods.xcodeproj">

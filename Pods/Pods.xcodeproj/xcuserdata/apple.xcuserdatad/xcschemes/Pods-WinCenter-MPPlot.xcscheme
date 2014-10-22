@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "325A5FAD68BC4A50B904D4E7"
+               BlueprintIdentifier = "CF3B9636BF884D9D9AF5E7B6"
                BuildableName = "libPods-WinCenter-MPPlot.a"
                BlueprintName = "Pods-WinCenter-MPPlot"
                ReferencedContainer = "container:Pods.xcodeproj">

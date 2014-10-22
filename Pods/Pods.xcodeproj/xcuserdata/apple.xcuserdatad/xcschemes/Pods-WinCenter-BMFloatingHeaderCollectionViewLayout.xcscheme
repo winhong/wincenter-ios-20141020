@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6939B7E2411A49DF89137621"
+               BlueprintIdentifier = "64BD34AB523F4CFA810623A5"
                BuildableName = "libPods-WinCenter-BMFloatingHeaderCollectionViewLayout.a"
                BlueprintName = "Pods-WinCenter-BMFloatingHeaderCollectionViewLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

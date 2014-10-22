@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C49534A181584AACB3753C10"
+               BlueprintIdentifier = "8A8EE07B99E84CF98B06273F"
                BuildableName = "libPods-WinCenter-PNChart.a"
                BlueprintName = "Pods-WinCenter-PNChart"
                ReferencedContainer = "container:Pods.xcodeproj">

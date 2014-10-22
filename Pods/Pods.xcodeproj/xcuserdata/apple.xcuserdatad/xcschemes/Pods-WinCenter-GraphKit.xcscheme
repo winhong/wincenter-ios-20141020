@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F426BD9F80844D19E260DAB"
+               BlueprintIdentifier = "3AD9E2ABA3E84B6AA32FCAF2"
                BuildableName = "libPods-WinCenter-GraphKit.a"
                BlueprintName = "Pods-WinCenter-GraphKit"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92A55F7534B14DDDA83C6C9F"
+               BlueprintIdentifier = "CCA03F7117214BCD9E64C23D"
                BuildableName = "libPods-WinCenter-DAKeyboardControl.a"
                BlueprintName = "Pods-WinCenter-DAKeyboardControl"
                ReferencedContainer = "container:Pods.xcodeproj">
