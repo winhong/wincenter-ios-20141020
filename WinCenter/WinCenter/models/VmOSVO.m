@@ -10,4 +10,8 @@
 
 @implementation VmOSVO
 
+-(int)total{
+    return self.Windows+self.Linux;
+}
+
 @end

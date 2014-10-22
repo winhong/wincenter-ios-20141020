@@ -10,4 +10,7 @@
 
 @implementation VmStateVO
 
+-(int)total{
+    return self.OK+self.other+self.STOPPED;
+}
 @end

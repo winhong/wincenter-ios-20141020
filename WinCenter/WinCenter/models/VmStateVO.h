@@ -13,5 +13,5 @@
 @property int OK;
 @property int other;
 @property int STOPPED;
-
+-(int)total;
 @end
