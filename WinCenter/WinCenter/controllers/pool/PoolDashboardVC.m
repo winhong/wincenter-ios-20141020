@@ -45,11 +45,11 @@
     
     PoolVO *poolVO = (PoolVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     cell.title.text = poolVO.resourcePoolName;
-    cell.label1.text = [NSString stringWithFormat:@"%d台", poolVO.hostNumber];
-    cell.label2.text = [NSString stringWithFormat:@"%d台", poolVO.activeVmNumber];
-    cell.label3.text = [NSString stringWithFormat:@"%.2fGHz", poolVO.totalCpu/1000.0];
-    cell.label4.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalMemory/1024.0];
-    cell.label5.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalStorage];
+    cell.hostCount.text = [NSString stringWithFormat:@"%d台", poolVO.hostNumber];
+    cell.activeVmCount.text = [NSString stringWithFormat:@"%d台", poolVO.activeVmNumber];
+    cell.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", poolVO.totalCpu/1000.0];
+    cell.memerySize.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalMemory/1024.0];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalStorage];
     
     cell.progress_1.litEffect = NO;
     cell.progress_1.numBars = 10;
