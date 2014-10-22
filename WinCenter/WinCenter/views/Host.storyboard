@@ -1144,6 +1144,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
+                        <outlet property="activeMachineNum" destination="EXZ-oN-w0p" id="Nja-ce-mSt"/>
                         <outlet property="cpu" destination="F2H-wY-Fv3" id="FEk-Qz-SqE"/>
                         <outlet property="cpuChartGroup" destination="6pc-dC-LZB" id="CV3-u6-wac"/>
                         <outlet property="cpuRatio" destination="ztL-Ob-gKq" id="2Jd-lz-Gbn"/>

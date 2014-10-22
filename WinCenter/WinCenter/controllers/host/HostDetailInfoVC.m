@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *vendor;
 @property (weak, nonatomic) IBOutlet UILabel *cpuSlots;
 @property (weak, nonatomic) IBOutlet UILabel *cpu;
+@property (weak, nonatomic) IBOutlet UILabel *activeMachineNum;
 
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitUsedCount;
@@ -80,12 +81,17 @@
         self.statVO = object;
         [self refreshStatInfo];
     }];
+    
+    [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
+        self.activityVm = object;
+        [self refreshMainInfo];
+    }];
 }
 
 - (void)refreshMainInfo{
     self.name.text = [NSString stringWithFormat:@"%@", self.hostVO.hostName];
     self.virtualMachineNum.text = [NSString stringWithFormat:@"%d", self.hostVO.virtualMachineNum];
-    //self.activeMachineNum.text = [NSString stringWithFormat:@"%d", 0];
+    self.activeMachineNum.text = [NSString stringWithFormat:@"%d", self.activityVm.OK];
     self.networkNum.text = [NSString stringWithFormat:@"%d", self.hostVO.networkNum];
     self.startRunTime.text = [NSString stringWithFormat:@"%d", self.hostVO.startRunTime];
     self.virtualInfo.text = [NSString stringWithFormat:@"%@ %@", self.hostVO.virtualSoftware, self.hostVO.virtualVersion];

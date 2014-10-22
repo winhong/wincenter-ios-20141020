@@ -13,6 +13,7 @@
 @property HostVO *hostVO;
 @property HostStatVO *statVO;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
+@property HostActivityVmVO *activityVm;
 
 @property PNCircleChart *circleChart;
 @property PNCircleChart *circleChart2;
