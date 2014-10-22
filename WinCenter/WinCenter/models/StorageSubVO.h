@@ -10,8 +10,8 @@
 
 @interface StorageSubVO : NSObject
 
+@property StorageTypeVO *type;
 @property StorageTotalVO *total;
-@property StorageShareVO *share;
 @property StorageCapacityVO *capacity;
 
 @end

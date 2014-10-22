@@ -74,7 +74,10 @@
     
     [self.hostVO getHostVOAsync:^(id object, NSError *error) {
         self.hostVO = object;
-        [self refreshMainInfo];
+        [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
+            self.activityVm = object;
+            [self refreshMainInfo];
+        }];
     }];
     
     [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
@@ -82,10 +85,7 @@
         [self refreshStatInfo];
     }];
     
-    [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
-        self.activityVm = object;
-        [self refreshMainInfo];
-    }];
+    
 }
 
 - (void)refreshMainInfo{

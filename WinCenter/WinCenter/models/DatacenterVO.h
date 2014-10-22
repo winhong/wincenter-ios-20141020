@@ -40,9 +40,7 @@
 
 - (void) getVmSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getStorageSubVOTotalAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getStorageSubVOShareAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getStorageSubVOCapacityAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getStorageSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
