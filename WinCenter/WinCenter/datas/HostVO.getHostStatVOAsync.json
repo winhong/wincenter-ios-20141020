@@ -48,6 +48,42 @@
                "name": "wyy-vm-勿删勿动-1",
                "actualUsedMem": 3072,
                "originalId": "a5ba1ee6-6892-37c1-f0dc-8694b98d952e"
+               },
+               {
+               "percent": 6.4,
+               "name": "wyy-vm-勿删勿动-2",
+               "actualUsedMem": 1024,
+               "originalId": "409f69f0-a45a-c7e0-160a-6f47fb70d7a6"
+               },
+               {
+               "percent": 3.2,
+               "name": "新建虚拟机-2   dssfsd",
+               "actualUsedMem": 512,
+               "originalId": "0a6be85e-b9eb-630f-377f-fe42bb93c3df"
+               },
+               {
+               "percent": 3.2,
+               "name": "lc_vm   dfgdfg_克隆",
+               "actualUsedMem": 512,
+               "originalId": "faf0680b-3757-0c34-1598-50c91480e521"
+               },
+               {
+               "percent": 38.1,
+               "name": "公测环境勿删勿动",
+               "actualUsedMem": 6144,
+               "originalId": "30e1a40a-fee7-7d8a-c02d-33a285f96508"
+               },
+               {
+               "percent": 6.4,
+               "name": "zhuzm01",
+               "actualUsedMem": 1024,
+               "originalId": "bea36588-e46f-8a3a-9339-1d3846437de6"
+               },
+               {
+               "percent": 19.1,
+               "name": "wyy-vm-勿删勿动-1",
+               "actualUsedMem": 3072,
+               "originalId": "a5ba1ee6-6892-37c1-f0dc-8694b98d952e"
                }
                ],
     "cpuTotal": 3093,
