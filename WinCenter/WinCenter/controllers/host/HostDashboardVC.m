@@ -39,12 +39,12 @@
     
     HostVO *hostVO = (HostVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     cell.title.text = hostVO.hostName;
-    cell.label1.text = hostVO.ip;
-    cell.label2.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
-    cell.label3.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
-    cell.label4.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
-    cell.label5.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
-    cell.label6.text = [NSString stringWithFormat:@"%.2fGB",hostVO.memory/1024.0];
+    cell.ip.text = hostVO.ip;
+    cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
+    cell.cpuSlots.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
+    cell.cpu.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
+    cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.memory/1024.0];
     cell.status.text = [hostVO state_text];
     cell.status.textColor = [hostVO state_color];
     
@@ -89,19 +89,19 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     HostDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HostDashboardHeader" forIndexPath:indexPath];
     header.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
-    header.label1.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
-    header.label2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
-    header.label3.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
-    header.label4.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
-    header.label5.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
+    header.inPoolHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.dissociateHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
+    header.statusOthers.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
+    header.statusOk.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
+    header.statusDis.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //缩起
-    header.label6.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
-    header.label7.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
-    header.label8.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
-    header.label9.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
-    header.label10.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
-    header.label11.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
+    header.hostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
+    header.inPoolHostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.dissociateHostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
+    header.statusOthers2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
+    header.statusOk2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
+    header.statusDis2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //圈图
     PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
