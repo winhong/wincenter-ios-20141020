@@ -42,6 +42,8 @@ install_resource()
   esac
 }
 install_resource "JGProgressHUD/JGProgressHUD/JGProgressHUD/JGProgressHUD Resources.bundle"
+install_resource "NZAlertView/NZAlertView/NZAlertView-Icons.bundle"
+install_resource "NZAlertView/NZAlertView/Views/NZAlertView.xib"
 install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 install_resource "TOWebViewController/TOWebViewController/de.lproj"
 install_resource "TOWebViewController/TOWebViewController/en.lproj"

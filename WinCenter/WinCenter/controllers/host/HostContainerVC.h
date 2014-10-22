@@ -14,5 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnCreateVM;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTask;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *runningTime;
 
 @end

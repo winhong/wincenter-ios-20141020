@@ -14,4 +14,5 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonTask;
 @property BOOL hasDiskPage;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 @end

@@ -712,7 +712,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dym-cp-y6Z">
-                                                            <rect key="frame" x="26" y="137" width="12" height="12"/>
+                                                            <rect key="frame" x="26" y="137" width="12" height="13"/>
                                                             <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-2l-J2q">
@@ -1013,8 +1013,6 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4aa-aH-K4Q"/>
-                        <barButtonItem title="分类选项" id="h2X-wO-pdD"/>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="tor-TK-1iw"/>
                         <barButtonItem image="icon-operationLog" id="Y0L-od-91a">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="buB-ce-6JP" id="xO8-QM-MND"/>
@@ -1477,8 +1475,6 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEz-Pk-JS8"/>
-                        <barButtonItem title="分类选项" id="OCH-9W-dls"/>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="N2K-rJ-5Rt"/>
                         <barButtonItem image="icon-operationLog" id="F3i-M5-2mW">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="buB-ce-6JP" id="OBb-Gu-6xk"/>
@@ -2099,17 +2095,15 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Lm-PH-T2V"/>
-                        <barButtonItem title="分类选项" id="4Zr-if-iJO"/>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="k9B-Mc-aNn"/>
-                        <barButtonItem image="icon-operationLog" id="N1h-zB-NDr">
+                        <barButtonItem title="分类选项" id="4Zr-if-iJO">
                             <connections>
-                                <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
+                                <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
                         <barButtonItem image="1776EF75-CC03-4D63-BE01-23673ABE7FE9" id="b8q-IF-5E0">
                             <connections>
-                                <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="Y7p-c2-ewK"/>
+                                <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -2602,7 +2596,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
-                        <barButtonItem title="分类选项" id="NHe-7y-NkJ"/>
+                        <barButtonItem title="分类选项" id="NHe-7y-NkJ">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="vkj-mS-kr9"/>
                         <barButtonItem image="icon-operationLog" id="dRJ-54-CHn">
                             <connections>
@@ -3095,7 +3093,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="waZ-PP-DQJ"/>
-                        <barButtonItem title="分类选项" id="Dhp-OO-KwD"/>
+                        <barButtonItem title="分类选项" id="Dhp-OO-KwD">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="8QM-yF-skn" id="F9X-Un-Fsu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="KWr-MG-u6g"/>
                         <barButtonItem image="icon-operationLog" id="sVu-61-G0q">
                             <connections>
@@ -3424,8 +3426,6 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CJI-ZF-w2K"/>
-                        <barButtonItem title="分类选项" id="TxE-hW-U5u"/>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="mql-PK-Agx"/>
                         <barButtonItem image="icon-operationLog" id="FFh-sP-a3b">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="rJv-N2-owX" id="Bvt-T6-9WD"/>

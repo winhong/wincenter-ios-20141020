@@ -264,6 +264,7 @@
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
 		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
 		1886A60719F6516E0089A576 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
+		1886A60B19F698310089A576 /* DLGraphDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886A60A19F698310089A576 /* DLGraphDemoViewController.m */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -771,6 +772,8 @@
 		18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_2.jpg; sourceTree = "<group>"; };
 		18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_3.jpg; sourceTree = "<group>"; };
 		1886A60519F6204D0089A576 /* Performance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Performance.storyboard; sourceTree = "<group>"; };
+		1886A60919F698310089A576 /* DLGraphDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGraphDemoViewController.h; sourceTree = "<group>"; };
+		1886A60A19F698310089A576 /* DLGraphDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGraphDemoViewController.m; sourceTree = "<group>"; };
 		1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		18C2124919F27C2000FCBD23 /* BusinessContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContainerVC.h; sourceTree = "<group>"; };
@@ -1040,6 +1043,7 @@
 				181DEACB19F17CB000998835 /* BTSpiderPlotterView */,
 				181DEAD019F17CB000998835 /* Charts.storyboard */,
 				181DEAD119F17CB000998835 /* Datagrid */,
+				1886A60819F698310089A576 /* DLForcedGraphView */,
 				181DEAE219F17CB000998835 /* DoubleLineChart */,
 				181DEAED19F17CB000998835 /* EChart */,
 				181DEAF419F17CB000998835 /* F3BarGauge */,
@@ -1746,6 +1750,15 @@
 				18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */,
 			);
 			path = EScrollerView;
+			sourceTree = "<group>";
+		};
+		1886A60819F698310089A576 /* DLForcedGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				1886A60919F698310089A576 /* DLGraphDemoViewController.h */,
+				1886A60A19F698310089A576 /* DLGraphDemoViewController.m */,
+			);
+			path = DLForcedGraphView;
 			sourceTree = "<group>";
 		};
 		18C2124719F27C2000FCBD23 /* controllers */ = {
@@ -2471,6 +2484,7 @@
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,
 				18C2134319F27C2000FCBD23 /* PopControlRecordVC.m in Sources */,
 				181DED7419F17CB100998835 /* DatacenterStatWinserver.m in Sources */,
+				1886A60B19F698310089A576 /* DLGraphDemoViewController.m in Sources */,
 				181DECC019F17CB100998835 /* ClickThroughRatesViewController.m in Sources */,
 				181DECE919F17CB100998835 /* PCChartsTableViewController.m in Sources */,
 				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,

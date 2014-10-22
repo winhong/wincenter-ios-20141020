@@ -25,5 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonTask;
 
 @property BOOL hasPerformancePage;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
 
 @end

@@ -15,7 +15,7 @@
 -(void)refresh{
     self.pathLabel.text = [RemoteObject getCurrentDatacenterVO].name;
     self.titleLabel.text = self.businessVO.name;
-    
+    self.name.text = self.businessVO.name;
     self.title = self.businessVO.name;
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:1];

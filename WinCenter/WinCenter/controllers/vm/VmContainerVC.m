@@ -32,7 +32,7 @@
     }
     self.statusLabel.text = [self.vmVO state_text];
     self.statusLabel.textColor = [self.vmVO state_color];
-    
+    self.name.text = self.vmVO.name;
     self.title = self.vmVO.name;
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:4];

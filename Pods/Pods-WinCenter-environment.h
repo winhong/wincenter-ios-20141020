@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_DAKeyboardControl 4
 #define COCOAPODS_VERSION_PATCH_DAKeyboardControl 0
 
+// DLForcedGraphView
+#define COCOAPODS_POD_AVAILABLE_DLForcedGraphView
+#define COCOAPODS_VERSION_MAJOR_DLForcedGraphView 0
+#define COCOAPODS_VERSION_MINOR_DLForcedGraphView 1
+#define COCOAPODS_VERSION_PATCH_DLForcedGraphView 1
+
 // EAIntroView
 #define COCOAPODS_POD_AVAILABLE_EAIntroView
 #define COCOAPODS_VERSION_MAJOR_EAIntroView 2
@@ -132,6 +138,12 @@
 #define COCOAPODS_VERSION_MINOR_MZAppearance 1
 #define COCOAPODS_VERSION_PATCH_MZAppearance 3
 
+// MZDayPicker
+#define COCOAPODS_POD_AVAILABLE_MZDayPicker
+#define COCOAPODS_VERSION_MAJOR_MZDayPicker 0
+#define COCOAPODS_VERSION_MINOR_MZDayPicker 0
+#define COCOAPODS_VERSION_PATCH_MZDayPicker 5
+
 // MZFormSheetController
 #define COCOAPODS_POD_AVAILABLE_MZFormSheetController
 #define COCOAPODS_VERSION_MAJOR_MZFormSheetController 2
@@ -161,6 +173,12 @@
 #define COCOAPODS_VERSION_MAJOR_NSObject_ObjectMap 2
 #define COCOAPODS_VERSION_MINOR_NSObject_ObjectMap 3
 #define COCOAPODS_VERSION_PATCH_NSObject_ObjectMap 1
+
+// NZAlertView
+#define COCOAPODS_POD_AVAILABLE_NZAlertView
+#define COCOAPODS_VERSION_MAJOR_NZAlertView 0
+#define COCOAPODS_VERSION_MINOR_NZAlertView 0
+#define COCOAPODS_VERSION_PATCH_NZAlertView 11
 
 // ObjQREncoder
 #define COCOAPODS_POD_AVAILABLE_ObjQREncoder
@@ -251,6 +269,12 @@
 #define COCOAPODS_VERSION_MAJOR_UICountingLabel 1
 #define COCOAPODS_VERSION_MINOR_UICountingLabel 0
 #define COCOAPODS_VERSION_PATCH_UICountingLabel 0
+
+// UIImage-Helpers
+#define COCOAPODS_POD_AVAILABLE_UIImage_Helpers
+#define COCOAPODS_VERSION_MAJOR_UIImage_Helpers 0
+#define COCOAPODS_VERSION_MINOR_UIImage_Helpers 0
+#define COCOAPODS_VERSION_PATCH_UIImage_Helpers 2
 
 // Unirest
 #define COCOAPODS_POD_AVAILABLE_Unirest

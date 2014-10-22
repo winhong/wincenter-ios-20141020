@@ -7,6 +7,7 @@
 //
 
 #import "VmDetailInfoVC.h"
+#import <NZAlertView/NZAlertView.h>
 
 @interface VmDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -37,6 +38,23 @@
     if(self.scrollView){
         self.scrollView.contentSize = CGSizeMake(320, 700);
     }
+}
+- (IBAction)testAction:(id)sender {
+    // There are several ways to init, just look at the class header
+    NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleSuccess
+                                                      title:@"Alert View"
+                                                    message:@"This is an alert example."
+                                                   delegate:nil];
+    
+    [alert setTextAlignment:NSTextAlignmentCenter];
+    
+    [alert show];
+    
+    // or
+    
+    [alert showWithCompletion:^{
+        NSLog(@"Alert with completion handler");
+    }];
 }
 
 - (void)viewDidLoad
