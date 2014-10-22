@@ -100,6 +100,13 @@
         completeBlock([[StorageVolumnListResult alloc] initWithJSONData:jsonResponse.rawBody].resultList, error);
     }];
 }
+-(BOOL)shared_img{
+    if ([self.shared isEqualToString:@"true"]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
 
 
 @end

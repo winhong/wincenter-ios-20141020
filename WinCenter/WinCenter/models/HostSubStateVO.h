@@ -13,5 +13,5 @@
 @property int OK;
 @property int DISCONNECT;
 @property int other;
-
+-(int)total;
 @end

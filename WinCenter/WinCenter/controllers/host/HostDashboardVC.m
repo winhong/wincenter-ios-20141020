@@ -120,13 +120,13 @@
                        ];
     
     
-    
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
-    pieChart.descriptionTextColor = [UIColor whiteColor];
-    pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
-    [pieChart strokeChart];
-    [header.hostStatusChart addSubview:pieChart];
-    
+    if (self.hostStatWinserver.total > 0) {
+        PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
+        pieChart.descriptionTextColor = [UIColor whiteColor];
+        pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+        [pieChart strokeChart];
+        [header.hostStatusChart addSubview:pieChart];
+    }
     
 //    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.hostStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
 //    circleChart2.backgroundColor = [UIColor clearColor];

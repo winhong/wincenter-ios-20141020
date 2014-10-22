@@ -155,5 +155,20 @@
     }];
 }
 
+- (BOOL) isDynamicCpu_img{
+    if ([self.isDynamicCpu isEqualToString:@"true"]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+- (BOOL) isDynamicMemWce_img{
+    if ([self.isDynamicMem isEqualToString:@"true"]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
 
 @end

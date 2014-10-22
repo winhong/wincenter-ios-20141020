@@ -15,7 +15,7 @@
 @property NSString *createDate;
 
 @property NSString *isDynamicCpu;
-@property NSString *isDynamicMemWce;
+@property NSString *isDynamicMem;
 @property NSString *memoryType;
 
 @property int vmId;
@@ -37,6 +37,8 @@
 - (NSString*)state_text;
 - (UIColor *)state_color;
 - (NSString *)memoryType_text;
+- (BOOL) isDynamicCpu_img;
+- (BOOL) isDynamicMemWce_img;
 
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getVmVolumnListAsync:(FetchAllCompletionBlock)completionBlock;
