@@ -1717,7 +1717,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMW-CD-gHs">
-                                            <rect key="frame" x="192" y="194" width="32" height="21"/>
+                                            <rect key="frame" x="192" y="194" width="80" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1806,19 +1806,20 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="oHh-oa-SOs" id="5vT-Qq-AxN"/>
-                                    <outlet property="label2" destination="9U1-QH-Khe" id="gYD-Tw-ZXZ"/>
-                                    <outlet property="label3" destination="qOQ-Rc-KhT" id="dV2-eN-H9n"/>
-                                    <outlet property="label4" destination="pg1-nK-LWU" id="Rfn-kS-M4g"/>
+                                    <outlet property="cpu" destination="nMW-CD-gHs" id="rrE-hy-64d"/>
+                                    <outlet property="cpuSlots" destination="pg1-nK-LWU" id="yoH-Yw-uGb"/>
+                                    <outlet property="ip" destination="oHh-oa-SOs" id="Q3r-12-gKZ"/>
                                     <outlet property="label5" destination="nMW-CD-gHs" id="fYX-tL-awP"/>
-                                    <outlet property="label6" destination="Wja-QX-Jke" id="Bcf-He-Dap"/>
+                                    <outlet property="memorySize" destination="Wja-QX-Jke" id="ioY-BP-EDf"/>
                                     <outlet property="progress_1" destination="7xv-9u-Sak" id="Pm7-qP-SjJ"/>
                                     <outlet property="progress_2" destination="Jy1-lw-xZG" id="KAa-Xs-ciJ"/>
                                     <outlet property="progress_3" destination="zKq-w1-Huc" id="eVa-ZD-71D"/>
                                     <outlet property="progress_4" destination="AOr-WR-gqc" id="k0h-s3-PCr"/>
                                     <outlet property="progress_5" destination="EGc-WI-nE8" id="4BZ-Vj-bJR"/>
                                     <outlet property="status" destination="3na-K2-fyR" id="ACf-d8-loh"/>
+                                    <outlet property="storageSize" destination="qOQ-Rc-KhT" id="Ezc-HY-1pN"/>
                                     <outlet property="title" destination="GOP-oW-4Rt" id="zJo-qQ-Qc2"/>
+                                    <outlet property="vmCount" destination="9U1-QH-Khe" id="gBQ-xa-bdv"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -2071,21 +2072,21 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
+                                <outlet property="dissociateHostCount" destination="72I-q1-uvO" id="rfz-PC-huz"/>
+                                <outlet property="dissociateHostCount2" destination="3jW-gw-sfI" id="bk6-FM-Jxf"/>
                                 <outlet property="hostCount" destination="Oa5-5x-HLm" id="LVs-Gm-WB2"/>
+                                <outlet property="hostCount2" destination="2s0-Ql-dB5" id="ZuP-8Q-Lp5"/>
                                 <outlet property="hostStatusChart" destination="WhR-OB-cxG" id="m91-dv-UQM"/>
                                 <outlet property="hostTypeChart" destination="mfa-DS-bzF" id="Fzc-ma-bDq"/>
-                                <outlet property="label1" destination="jWp-FV-fuv" id="wQp-af-f0p"/>
-                                <outlet property="label10" destination="cUW-6S-oCE" id="T3e-je-CS2"/>
-                                <outlet property="label11" destination="WAb-3W-sQO" id="0Ey-uJ-IqO"/>
-                                <outlet property="label2" destination="72I-q1-uvO" id="jet-ch-Efe"/>
-                                <outlet property="label3" destination="YtS-bQ-8YU" id="FUy-2K-Onm"/>
-                                <outlet property="label4" destination="mk7-SZ-7y8" id="ee8-pr-WBk"/>
-                                <outlet property="label5" destination="het-0D-r1R" id="ubr-mR-0sp"/>
-                                <outlet property="label6" destination="2s0-Ql-dB5" id="8NM-Nb-e4H"/>
-                                <outlet property="label7" destination="kCa-Fu-ydr" id="pat-tC-Ci2"/>
-                                <outlet property="label8" destination="3jW-gw-sfI" id="hHC-rp-1cp"/>
-                                <outlet property="label9" destination="f6B-1X-Oex" id="3bd-am-ADu"/>
+                                <outlet property="inPoolHostCount" destination="jWp-FV-fuv" id="D0O-aH-Fv4"/>
+                                <outlet property="inPoolHostCount2" destination="kCa-Fu-ydr" id="coj-rJ-mMK"/>
                                 <outlet property="scrollView" destination="amu-QY-Ia4" id="IOY-tT-gEW"/>
+                                <outlet property="statusDis" destination="het-0D-r1R" id="iwt-x5-JJs"/>
+                                <outlet property="statusDis2" destination="WAb-3W-sQO" id="uSX-R9-pta"/>
+                                <outlet property="statusOk" destination="mk7-SZ-7y8" id="rQw-2q-y5G"/>
+                                <outlet property="statusOk2" destination="cUW-6S-oCE" id="4HQ-41-i48"/>
+                                <outlet property="statusOthers" destination="YtS-bQ-8YU" id="LX6-dq-hEg"/>
+                                <outlet property="statusOthers2" destination="f6B-1X-Oex" id="dBp-ef-jKo"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -2106,7 +2107,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" id="b8q-IF-5E0">
+                        <barButtonItem image="58A25B85-D45B-41CC-9BE9-B79EBA29D96C" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -4148,7 +4149,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" width="32" height="32">
+        <image name="58A25B85-D45B-41CC-9BE9-B79EBA29D96C" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
