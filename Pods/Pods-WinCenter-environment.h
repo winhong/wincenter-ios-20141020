@@ -246,6 +246,12 @@
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 0
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
 
+// TLIndexPathTools
+#define COCOAPODS_POD_AVAILABLE_TLIndexPathTools
+#define COCOAPODS_VERSION_MAJOR_TLIndexPathTools 0
+#define COCOAPODS_VERSION_MINOR_TLIndexPathTools 3
+#define COCOAPODS_VERSION_PATCH_TLIndexPathTools 7
+
 // TOWebViewController
 #define COCOAPODS_POD_AVAILABLE_TOWebViewController
 #define COCOAPODS_VERSION_MAJOR_TOWebViewController 2
@@ -281,6 +287,12 @@
 #define COCOAPODS_VERSION_MAJOR_Unirest 1
 #define COCOAPODS_VERSION_MINOR_Unirest 1
 #define COCOAPODS_VERSION_PATCH_Unirest 3
+
+// VCollectionViewGridLayout
+#define COCOAPODS_POD_AVAILABLE_VCollectionViewGridLayout
+#define COCOAPODS_VERSION_MAJOR_VCollectionViewGridLayout 0
+#define COCOAPODS_VERSION_MINOR_VCollectionViewGridLayout 0
+#define COCOAPODS_VERSION_PATCH_VCollectionViewGridLayout 2
 
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop

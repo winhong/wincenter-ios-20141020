@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F023516D442446A8640AAD0"
+               BlueprintIdentifier = "7AD2FE470E1647F8B82EAF41"
                BuildableName = "libPods-WinCenter-EAIntroView.a"
                BlueprintName = "Pods-WinCenter-EAIntroView"
                ReferencedContainer = "container:Pods.xcodeproj">

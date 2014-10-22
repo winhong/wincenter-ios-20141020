@@ -49,12 +49,15 @@ PODS:
   - SMPageControl (1.2)
   - SMVerticalSegmentedControl (0.1.2)
   - SVProgressHUD (1.0)
+  - TLIndexPathTools (0.3.7)
   - TOWebViewController (2.0.14)
   - TWRCharts (0.1)
   - UIColor-HexString (1.1.0)
   - UICountingLabel (1.0.0)
   - UIImage-Helpers (0.0.2)
   - Unirest (1.1.3)
+  - VCollectionViewGridLayout (0.0.2):
+    - TLIndexPathTools
 
 DEPENDENCIES:
   - AFViewShaker (~> 0.0.2)
@@ -97,6 +100,7 @@ DEPENDENCIES:
   - TWRCharts (~> 0.1)
   - UIColor-HexString (~> 1.1.0)
   - Unirest (~> 1.1.3)
+  - VCollectionViewGridLayout (~> 0.0.2)
 
 SPEC CHECKSUMS:
   AFViewShaker: 40bd7a2725ea81a9472134f27f0086d398d1bf91
@@ -139,11 +143,13 @@ SPEC CHECKSUMS:
   SMPageControl: 506b0c561d3ddbe2d5df28cb33acc8e4b1f93f19
   SMVerticalSegmentedControl: e94119fea7810898fc74ad895336f514e57969d7
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
+  TLIndexPathTools: 366d360e2032e5cf0494586143803611e2fcb053
   TOWebViewController: d3eee5342e5f8508cc87107c96544f5dff01b802
   TWRCharts: 4da6c4c92df46328e184549176a9bb6bd1f0f511
   UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
   UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
   UIImage-Helpers: f42c86ad5ed925f22b56a81c89f2f15ebeadfd3d
   Unirest: 318cb0193686af2b2a453fa20df5637606033be9
+  VCollectionViewGridLayout: da04998997f10274ca7cd9cb5202f4f5077bb4cb
 
 COCOAPODS: 0.33.1
