@@ -1,5 +1,5 @@
 //
-//  StorageTotalVO.h
+//  StorageShareVO.h
 //  WinCenter
 //
 //  Created by huadi on 14/10/21.
@@ -10,11 +10,7 @@
 
 @interface StorageTotalVO : NSObject
 
-@property float lvm;
-@property float udv;
-@property float nfs;
-@property float lvmoiscsi;
-@property float lvmohba;
-
+@property float true_field;
+@property float false_field;
 
 @end

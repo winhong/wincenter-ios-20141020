@@ -14,9 +14,7 @@
 @interface StorageDashboardVC ()
 
 @property DatacenterStatWinserver *datacenterStatWinserver;
-@property StorageTotalVO *StorageTotalWinserver;
-@property StorageShareVO *StorageShareWinserver;
-@property StorageCapacityVO *StorageCapacityWincerver;
+@property StorageSubVO *StorageSubVOWinserver;
 
 @end
 
@@ -25,25 +23,21 @@
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [self.collectionView reloadData];
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
+            [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
+                self.StorageSubVOWinserver = object;
+                [self.collectionView reloadData];
+            }];
+        }];
+        
     }];
     
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
-    }];
     
     
-    [[RemoteObject getCurrentDatacenterVO] getStorageSubVOTotalAsync:^(id object, NSError *error) {
-        self.StorageTotalWinserver = object;
-    }];
     
-    [[RemoteObject getCurrentDatacenterVO] getStorageSubVOShareAsync:^(id object, NSError *error) {
-        self.StorageShareWinserver = object;
-    }];
     
-    [[RemoteObject getCurrentDatacenterVO] getStorageSubVOCapacityAsync:^(id object, NSError *error) {
-        self.StorageCapacityWincerver = object;
-    }];
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -72,49 +66,50 @@
 
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
-    header.label1.text = [NSString stringWithFormat:@"%.2fG",(self.StorageShareWinserver.true_field + self.StorageShareWinserver.false_field)];
-    header.label2.text = [NSString stringWithFormat:@"%.2fG",self.StorageShareWinserver.true_field];
-    header.label3.text = [NSString stringWithFormat:@"%.2fG",self.StorageShareWinserver.false_field];
-    header.label4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageShareWinserver.true_field + self.StorageShareWinserver.false_field)];
-    header.label5.text = [NSString stringWithFormat:@"%.2fG",self.StorageCapacityWincerver.availStorage];
-    header.label6.text = [NSString stringWithFormat:@"%.2fG",self.StorageCapacityWincerver.usedStorage];
-    header.label7.text = [NSString stringWithFormat:@"%.2f",self.StorageTotalWinserver.lvmohba];
-    header.label8.text = [NSString stringWithFormat:@"%.2f",self.StorageTotalWinserver.lvmoiscsi];
-    header.label9.text = [NSString stringWithFormat:@"%.2f",self.StorageTotalWinserver.nfs];
-    header.label10.text = [NSString stringWithFormat:@"%.2f",self.StorageTotalWinserver.lvm];
+    header.label1.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.label2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
+    header.label3.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
+    header.label4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.label5.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
+    header.label6.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    header.label7.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmohba];
+    header.label8.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.label9.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.nfs];
+    header.label10.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvm];
     
     //缩起
-    header.label13.text = [NSString stringWithFormat:@"%.2fG",self.StorageTotalWinserver.lvmohba];
-    header.label14.text = [NSString stringWithFormat:@"%.2fG",self.StorageTotalWinserver.lvmoiscsi];
-    header.label15.text = [NSString stringWithFormat:@"%.2fG",self.StorageTotalWinserver.nfs];
-    header.label16.text = [NSString stringWithFormat:@"%.2fG",self.StorageTotalWinserver.lvm];
-    header.label20.text = [NSString stringWithFormat:@"%.2fG",(self.StorageShareWinserver.true_field + self.StorageShareWinserver.false_field)];
-    header.label21.text = [NSString stringWithFormat:@"%.2fG",self.StorageShareWinserver.true_field];
-    header.label22.text = [NSString stringWithFormat:@"%.2fG",self.StorageShareWinserver.false_field];
-    header.label23.text = [NSString stringWithFormat:@"%.2fG",self.StorageCapacityWincerver.availStorage];
-    header.label24.text = [NSString stringWithFormat:@"%.2fG",self.StorageCapacityWincerver.usedStorage];
+    header.label13.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmohba];
+    header.label14.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.label15.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.nfs];
+    header.label16.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvm];
+    header.label20.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.label21.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
+    header.label22.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
+    header.label23.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
+    header.label24.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageShareWinserver.false_field*100/(self.StorageShareWinserver.true_field + self.StorageShareWinserver.false_field)] andClockwise:YES andShadow:YES];
-    circleChart.backgroundColor = [UIColor clearColor];
-    circleChart.strokeColor = [UIColor clearColor];
-    circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
-    circleChart.circle.lineCap = kCALineCapSquare;//直角填充
-    circleChart.lineWidth = @11.0f;//线宽度
-    [circleChart setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
-    [circleChart strokeChart];
-    [header.storageShareChart addSubview:circleChart];
+        PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+        circleChart.backgroundColor = [UIColor clearColor];
+        circleChart.strokeColor = [UIColor clearColor];
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+        circleChart.circle.lineCap = kCALineCapSquare;//直角填充
+        circleChart.lineWidth = @11.0f;//线宽度
+        [circleChart setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
+        [circleChart strokeChart];
+        [header.storageShareChart addSubview:circleChart];
+        
+        PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.capacity.usedStorage*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+        circleChart2.backgroundColor = [UIColor clearColor];
+        circleChart2.strokeColor = [UIColor clearColor];
+        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+        circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
+        circleChart2.lineWidth = @11.0f;//线宽度
+        [circleChart2 setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
+        [circleChart2 strokeChart];
+        [header.storageUseChart addSubview:circleChart2];
     
     
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageCapacityWincerver.usedStorage*100/(self.StorageShareWinserver.true_field + self.StorageShareWinserver.false_field)] andClockwise:YES andShadow:YES];
-    circleChart2.backgroundColor = [UIColor clearColor];
-    circleChart2.strokeColor = [UIColor clearColor];
-    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
-    circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
-    circleChart2.lineWidth = @11.0f;//线宽度
-    [circleChart2 setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
-    [circleChart2 strokeChart];
-    [header.storageUseChart addSubview:circleChart2];
     
     return header;
 }

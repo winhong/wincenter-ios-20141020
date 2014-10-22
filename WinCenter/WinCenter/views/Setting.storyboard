@@ -1495,12 +1495,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fUs-FY-UtL"/>
-        <segue reference="DXs-kF-nOV"/>
-        <segue reference="xiw-9q-3p9"/>
-        <segue reference="sfL-QP-Kfv"/>
         <segue reference="h9v-mu-EsN"/>
         <segue reference="FDj-F1-Eac"/>
         <segue reference="gQ8-rg-qih"/>
+        <segue reference="xiw-9q-3p9"/>
+        <segue reference="DXs-kF-nOV"/>
+        <segue reference="fUs-FY-UtL"/>
+        <segue reference="CP9-yb-f80"/>
     </inferredMetricsTieBreakers>
 </document>

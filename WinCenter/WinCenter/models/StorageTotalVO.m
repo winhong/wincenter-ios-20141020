@@ -1,5 +1,5 @@
 //
-//  StorageTotalVO.m
+//  StorageShareVO.m
 //  WinCenter
 //
 //  Created by huadi on 14/10/21.
