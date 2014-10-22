@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.h>
 @protocol PDKTStickySectionHeadersCollectionViewLayoutDelegate<UICollectionViewDelegateFlowLayout>
 @optional
 - (BOOL)shouldStickHeaderToTopInSection:(NSUInteger)section;
 @end
-@interface PDKTStickySectionHeadersCollectionViewLayout : UICollectionViewFlowLayout
+@interface PDKTStickySectionHeadersCollectionViewLayout : LXReorderableCollectionViewFlowLayout
 
 @end
