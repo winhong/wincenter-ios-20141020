@@ -582,16 +582,16 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="QoU-FF-s3Z" id="hLZ-Uf-zYO"/>
-                                    <outlet property="label2" destination="Qkz-F1-mPK" id="GWV-wt-04h"/>
-                                    <outlet property="label3" destination="Bug-sH-o5D" id="hSo-mE-H5g"/>
-                                    <outlet property="label4" destination="YjR-IG-ScA" id="XXD-RB-U5c"/>
-                                    <outlet property="label5" destination="L6b-Pv-3lb" id="ELK-zp-AGo"/>
+                                    <outlet property="activeVmCount" destination="Qkz-F1-mPK" id="Pap-ju-QfL"/>
+                                    <outlet property="cpuUnitCount" destination="Bug-sH-o5D" id="YAr-sO-hiU"/>
+                                    <outlet property="hostCount" destination="QoU-FF-s3Z" id="ucN-DS-2JR"/>
+                                    <outlet property="memerySize" destination="YjR-IG-ScA" id="fQm-TQ-UY3"/>
                                     <outlet property="progress_1" destination="LAD-1a-JWy" id="Pne-Fd-9XL"/>
                                     <outlet property="progress_2" destination="eid-fM-zJJ" id="SNS-cZ-aRD"/>
                                     <outlet property="progress_3" destination="ay0-Fb-kEa" id="ONu-z1-Pwy"/>
                                     <outlet property="progress_4" destination="vN6-fr-YW4" id="QW3-2j-Je9"/>
                                     <outlet property="progress_5" destination="aEs-ES-19X" id="udK-zU-ZzI"/>
+                                    <outlet property="storageSize" destination="L6b-Pv-3lb" id="X8s-Xc-Erl"/>
                                     <outlet property="title" destination="FRk-ZP-ZoH" id="ijG-cU-LkA"/>
                                 </connections>
                             </collectionViewCell>
@@ -2106,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="8631A9BE-5369-4754-9AD9-60E3E4999F94" id="b8q-IF-5E0">
+                        <barButtonItem image="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -4148,7 +4148,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8631A9BE-5369-4754-9AD9-60E3E4999F94" width="32" height="32">
+        <image name="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

@@ -16,12 +16,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UILabel *share;
 @property (weak, nonatomic) IBOutlet UIImageView *share_image;
-@property (weak, nonatomic) IBOutlet UILabel *label1;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UILabel *label3;
-@property (weak, nonatomic) IBOutlet UILabel *label4;
-@property (weak, nonatomic) IBOutlet UILabel *label5;
-@property (weak, nonatomic) IBOutlet UILabel *label6;
+@property (weak, nonatomic) IBOutlet UILabel *hostCount;
+@property (weak, nonatomic) IBOutlet UILabel *activeVmCount;
+@property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
+@property (weak, nonatomic) IBOutlet UILabel *memerySize;
+@property (weak, nonatomic) IBOutlet UILabel *storageSize;
+
 @property (weak, nonatomic) IBOutlet UILabel *osType;
 @property (weak, nonatomic) IBOutlet UIImageView *osType_image;
 @property (weak, nonatomic) IBOutlet UIImageView *linkState;
