@@ -1809,7 +1809,6 @@
                                     <outlet property="cpu" destination="nMW-CD-gHs" id="rrE-hy-64d"/>
                                     <outlet property="cpuSlots" destination="pg1-nK-LWU" id="yoH-Yw-uGb"/>
                                     <outlet property="ip" destination="oHh-oa-SOs" id="Q3r-12-gKZ"/>
-                                    <outlet property="label5" destination="nMW-CD-gHs" id="fYX-tL-awP"/>
                                     <outlet property="memorySize" destination="Wja-QX-Jke" id="ioY-BP-EDf"/>
                                     <outlet property="progress_1" destination="7xv-9u-Sak" id="Pm7-qP-SjJ"/>
                                     <outlet property="progress_2" destination="Jy1-lw-xZG" id="KAa-Xs-ciJ"/>
@@ -2107,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="798D938C-912C-4F89-97E2-BC5C890B78D3" id="b8q-IF-5E0">
+                        <barButtonItem image="054F1DE0-02F1-4251-807F-BFD4C436078E" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -4149,7 +4148,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="798D938C-912C-4F89-97E2-BC5C890B78D3" width="32" height="32">
+        <image name="054F1DE0-02F1-4251-807F-BFD4C436078E" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
