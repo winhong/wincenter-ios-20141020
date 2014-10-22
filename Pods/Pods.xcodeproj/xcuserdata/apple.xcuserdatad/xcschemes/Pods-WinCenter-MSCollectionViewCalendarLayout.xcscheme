@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48592B30431B4CCD9B230E50"
+               BlueprintIdentifier = "BB9608BB429140A5845BDAFA"
                BuildableName = "libPods-WinCenter-MSCollectionViewCalendarLayout.a"
                BlueprintName = "Pods-WinCenter-MSCollectionViewCalendarLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

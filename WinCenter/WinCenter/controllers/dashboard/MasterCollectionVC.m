@@ -95,4 +95,8 @@
     [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
+- (IBAction)showPoolListSelect:(id)sender {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部资源池" otherButtonTitles:@"资源池A",@"资源池B", nil];
+    [sheet showFromBarButtonItem:sender animated:YES];
+}
 @end

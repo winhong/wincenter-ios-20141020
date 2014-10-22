@@ -38,6 +38,9 @@ target 'WinCenter' do
     pod 'RATreeView', '~> 0.9.1'
     pod 'ObjQREncoder', '~> 0.0.1'
     pod 'DAKeyboardControl', '~> 2.4.0'
+    pod 'NZAlertView', '~> 0.0.11'
+    pod 'DLForcedGraphView', '~> 0.1.1'
+    pod 'MZDayPicker', '~> 0.0.5'
     
     pod 'CupertinoYankee', '~> 0.1.0'
     pod 'Masonry', '~> 0.5.3'

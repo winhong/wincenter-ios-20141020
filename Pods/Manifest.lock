@@ -5,6 +5,7 @@ PODS:
   - BMFloatingHeaderCollectionViewLayout (1.0.0)
   - CupertinoYankee (0.1.1)
   - DAKeyboardControl (2.4.0)
+  - DLForcedGraphView (0.1.1)
   - EAIntroView (2.6.3)
   - EChart (0.1.1)
   - FastAnimationWithPOP (0.0.2):
@@ -26,12 +27,15 @@ PODS:
   - MSCollectionViewCalendarLayout (0.1.3):
     - CupertinoYankee (~> 0.1)
   - MZAppearance (1.1.3)
+  - MZDayPicker (0.0.5)
   - MZFormSheetController (2.3.6):
     - MZAppearance (~> 1.1.3)
     - MZFormSheetController/Core
   - MZFormSheetController/Core (2.3.6):
     - MZAppearance (~> 1.1.3)
   - NSObject-ObjectMap (2.3.1)
+  - NZAlertView (0.0.11):
+    - UIImage-Helpers
   - ObjQREncoder (0.0.1)
   - PDKTStickySectionHeadersCollectionViewLayout (0.1)
   - PNChart (0.5):
@@ -49,6 +53,7 @@ PODS:
   - TWRCharts (0.1)
   - UIColor-HexString (1.1.0)
   - UICountingLabel (1.0.0)
+  - UIImage-Helpers (0.0.2)
   - Unirest (1.1.3)
 
 DEPENDENCIES:
@@ -58,6 +63,7 @@ DEPENDENCIES:
   - BMFloatingHeaderCollectionViewLayout (~> 1.0.0)
   - CupertinoYankee (~> 0.1.0)
   - DAKeyboardControl (~> 2.4.0)
+  - DLForcedGraphView (~> 0.1.1)
   - EAIntroView (~> 2.6.3)
   - EChart (~> 0.1.1)
   - FastAnimationWithPOP (~> 0.0.2)
@@ -72,8 +78,10 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9)
   - MPPlot (~> 0.1.0)
   - MSCollectionViewCalendarLayout (~> 0.1.3)
+  - MZDayPicker (~> 0.0.5)
   - MZFormSheetController (~> 2.3.6)
   - NSObject-ObjectMap (~> 2.3.1)
+  - NZAlertView (~> 0.0.11)
   - ObjQREncoder (~> 0.0.1)
   - PDKTStickySectionHeadersCollectionViewLayout (~> 0.1)
   - PNChart (~> 0.5)
@@ -97,6 +105,7 @@ SPEC CHECKSUMS:
   BMFloatingHeaderCollectionViewLayout: d12e9c4e34454d4bace0752b006fff361a555b8d
   CupertinoYankee: b07873e724c2c5c1a249c555a5bd3d508c04e0de
   DAKeyboardControl: 45a363c85c48a7df76f21f236d9f85800e001775
+  DLForcedGraphView: 4c3f41659d5f98c409bf3083f697873c5541c680
   EAIntroView: 45924b81c153d1206ee24f4fa654e9d9dae79e93
   EChart: fd95a66d60043387c440a56acd703bbde35a145d
   FastAnimationWithPOP: 453cac7e3671d27c57db04abec4f6c08a930f413
@@ -114,8 +123,10 @@ SPEC CHECKSUMS:
   MPPlot: 4f2493c106b1b7c7377d8d25b830f819c1625cca
   MSCollectionViewCalendarLayout: 10ca29578b0dd9b8586b1beed3ab479a3788b4b5
   MZAppearance: c88502c0c2345120630c34e09d5ff09e2969ba30
+  MZDayPicker: 764a603e74918cca830323ebb4e016aab1f40085
   MZFormSheetController: a7dce224ce8bd9015abeabca8cb6cde0d49d3fe3
   NSObject-ObjectMap: b25adb10d18c60930db2c441c2fb7ae6c3d80282
+  NZAlertView: d1d2c51cd5dbfaa663f26b7c12a9195a8be7b100
   ObjQREncoder: 9f4ab78eb0b2b1a6e5743a5591d8a14f69c67256
   PDKTStickySectionHeadersCollectionViewLayout: 96edf4348a7698f1c38e1ad4366847fcebf3868f
   PNChart: 0d0cf4531de3aa7f2b12434a54845d70d9c9cfe3
@@ -132,6 +143,7 @@ SPEC CHECKSUMS:
   TWRCharts: 4da6c4c92df46328e184549176a9bb6bd1f0f511
   UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
   UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
+  UIImage-Helpers: f42c86ad5ed925f22b56a81c89f2f15ebeadfd3d
   Unirest: 318cb0193686af2b2a453fa20df5637606033be9
 
 COCOAPODS: 0.33.1
