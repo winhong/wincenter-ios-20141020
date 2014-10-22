@@ -38,6 +38,7 @@ PODS:
   - libextobjc/EXTScope (0.4):
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
+  - LXReorderableCollectionViewFlowLayout (0.1.1)
   - MagicPie (1.0.1)
   - Masonry (0.5.3)
   - MBProgressHUD (0.9)
@@ -101,6 +102,7 @@ DEPENDENCIES:
   - JBChartView (~> 2.6.2)
   - JGProgressHUD (~> 1.2.1)
   - JYRadarChart (~> 0.3.1)
+  - LXReorderableCollectionViewFlowLayout (~> 0.1.1)
   - MagicPie (~> 1.0.1)
   - Masonry (~> 0.5.3)
   - MBProgressHUD (~> 0.9)
@@ -149,6 +151,7 @@ SPEC CHECKSUMS:
   JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
   JYRadarChart: d9a90d435b427d928d576169e8df51fd285fe46a
   libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+  LXReorderableCollectionViewFlowLayout: b4e25543263e27d4c147109ae5ead01cc9119f23
   MagicPie: 221e8a2c292a60680be523b26b051cb150327619
   Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
