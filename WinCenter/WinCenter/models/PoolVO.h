@@ -16,6 +16,9 @@
 @property int vmNumber;
 @property int activeVmNumber;
 @property float totalLogicalCpu;
+@property NSString *hypervisor;
+@property NSString *version;
+@property int versionDate;
 
 @property float totalCpu;
 @property float totalMemory;
