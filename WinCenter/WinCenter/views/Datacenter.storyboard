@@ -406,7 +406,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="280"/>
                             <size key="headerReferenceSize" width="50" height="415"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1608,7 +1608,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8SV-wH-gFy">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8SV-wH-gFy" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="280"/>
                             <size key="headerReferenceSize" width="50" height="270"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -2106,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="054F1DE0-02F1-4251-807F-BFD4C436078E" id="b8q-IF-5E0">
+                        <barButtonItem image="D4505303-3232-469B-AA87-85B70639EE6A" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -2159,7 +2159,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="253"/>
                             <size key="headerReferenceSize" width="50" height="361"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -2660,7 +2660,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="9G2-XK-4zp">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="9G2-XK-4zp" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="253"/>
                             <size key="headerReferenceSize" width="50" height="266"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -3157,7 +3157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="182"/>
                             <size key="headerReferenceSize" width="50" height="266"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -4148,7 +4148,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="054F1DE0-02F1-4251-807F-BFD4C436078E" width="32" height="32">
+        <image name="CPU线程-black" width="15" height="15"/>
+        <image name="CPU颗数-black" width="15" height="15"/>
+        <image name="D4505303-3232-469B-AA87-85B70639EE6A" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4267,8 +4269,6 @@ XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
 AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
 </mutableData>
         </image>
-        <image name="CPU线程-black" width="15" height="15"/>
-        <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
         <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>
