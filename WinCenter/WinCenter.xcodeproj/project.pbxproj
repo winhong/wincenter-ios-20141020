@@ -362,8 +362,8 @@
 		843E6C1119F5F3EE0046A5A0 /* VmOSVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */; };
 		843E6C1619F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */; };
 		843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1819F603000046A5A0 /* StorageSubVO.m */; };
-		843E6C1C19F603100046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1B19F603100046A5A0 /* StorageTotalVO.m */; };
-		843E6C1F19F603450046A5A0 /* StorageShareVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1E19F603450046A5A0 /* StorageShareVO.m */; };
+		843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1B19F603100046A5A0 /* StorageTypeVO.m */; };
+		843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1E19F603450046A5A0 /* StorageTotalVO.m */; };
 		843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C2119F603720046A5A0 /* StorageCapacityVO.m */; };
 		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
@@ -967,10 +967,10 @@
 		843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmSubVO.getVmSubInfoAsync.json; sourceTree = "<group>"; };
 		843E6C1719F603000046A5A0 /* StorageSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageSubVO.h; sourceTree = "<group>"; };
 		843E6C1819F603000046A5A0 /* StorageSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageSubVO.m; sourceTree = "<group>"; };
-		843E6C1A19F603100046A5A0 /* StorageTotalVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTotalVO.h; sourceTree = "<group>"; };
-		843E6C1B19F603100046A5A0 /* StorageTotalVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageTotalVO.m; sourceTree = "<group>"; };
-		843E6C1D19F603450046A5A0 /* StorageShareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageShareVO.h; sourceTree = "<group>"; };
-		843E6C1E19F603450046A5A0 /* StorageShareVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageShareVO.m; sourceTree = "<group>"; };
+		843E6C1A19F603100046A5A0 /* StorageTypeVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTypeVO.h; sourceTree = "<group>"; };
+		843E6C1B19F603100046A5A0 /* StorageTypeVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageTypeVO.m; sourceTree = "<group>"; };
+		843E6C1D19F603450046A5A0 /* StorageTotalVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTotalVO.h; sourceTree = "<group>"; };
+		843E6C1E19F603450046A5A0 /* StorageTotalVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageTotalVO.m; sourceTree = "<group>"; };
 		843E6C2019F603720046A5A0 /* StorageCapacityVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageCapacityVO.h; sourceTree = "<group>"; };
 		843E6C2119F603720046A5A0 /* StorageCapacityVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageCapacityVO.m; sourceTree = "<group>"; };
 		843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StorageSubVO.getStorageSubInfoAsync.json; sourceTree = "<group>"; };
@@ -1532,10 +1532,10 @@
 				181DEC7C19F17CB100998835 /* StorageVO.m */,
 				843E6C1719F603000046A5A0 /* StorageSubVO.h */,
 				843E6C1819F603000046A5A0 /* StorageSubVO.m */,
-				843E6C1A19F603100046A5A0 /* StorageTotalVO.h */,
-				843E6C1B19F603100046A5A0 /* StorageTotalVO.m */,
-				843E6C1D19F603450046A5A0 /* StorageShareVO.h */,
-				843E6C1E19F603450046A5A0 /* StorageShareVO.m */,
+				843E6C1A19F603100046A5A0 /* StorageTypeVO.h */,
+				843E6C1B19F603100046A5A0 /* StorageTypeVO.m */,
+				843E6C1D19F603450046A5A0 /* StorageTotalVO.h */,
+				843E6C1E19F603450046A5A0 /* StorageTotalVO.m */,
 				843E6C2019F603720046A5A0 /* StorageCapacityVO.h */,
 				843E6C2119F603720046A5A0 /* StorageCapacityVO.m */,
 				181DEC7D19F17CB100998835 /* StorageVolumnListResult.h */,
@@ -2392,7 +2392,7 @@
 				181DECDB19F17CB100998835 /* MPPlotVC.m in Sources */,
 				18C2132819F27C2000FCBD23 /* HostNicCollectionVC.m in Sources */,
 				181DECE119F17CB100998835 /* PercentageChartVC.m in Sources */,
-				843E6C1F19F603450046A5A0 /* StorageShareVO.m in Sources */,
+				843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */,
 				18C2134619F27C2000FCBD23 /* VmCollectionCell.m in Sources */,
 				181DED8C19F17CB100998835 /* VmDiskListResult.m in Sources */,
 				18C2134419F27C2000FCBD23 /* UIBarButtonItem+Badge.m in Sources */,
@@ -2457,7 +2457,7 @@
 				18C2135519F27C2000FCBD23 /* VmNetworkCollectionCell.m in Sources */,
 				181DED7F19F17CB100998835 /* LoginVO.m in Sources */,
 				181DECEA19F17CB100998835 /* PCChartViewController.m in Sources */,
-				843E6C1C19F603100046A5A0 /* StorageTotalVO.m in Sources */,
+				843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */,
 				181DECCB19F17CB100998835 /* JBAreaChartViewController.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,

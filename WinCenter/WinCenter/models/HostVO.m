@@ -146,7 +146,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.staticVmState&params=ownerHostId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.staticVmState&params=ownerHostId%%3D%d&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.hostId,self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[HostActivityVmStateVO alloc] initWithJSONData:jsonResponse.rawBody].state, error);
     }];

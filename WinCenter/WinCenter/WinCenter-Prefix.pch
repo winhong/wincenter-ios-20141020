@@ -27,6 +27,7 @@
 #import <UIColor-HexString/UIColor+HexString.h>
 #import <MSCollectionViewCalendarLayout/MSCollectionViewCalendarLayout.h>
 #import <AMScrollingNavbar/UIViewController+ScrollingNavbar.h>
+#import <UICollectionViewEmptyState/UICollectionView+EmptyState.h>
 #import "UIButton+Badge.h"
 #import "UIBarButtonItem+Badge.h"
 #import "UIStoryboard+Universal.h"
@@ -65,8 +66,8 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "StorageVO.h"
 #import "StorageVolumnListResult.h"
 #import "StorageVolumnVO.h"
+#import "StorageTypeVO.h"
 #import "StorageTotalVO.h"
-#import "StorageShareVO.h"
 #import "StorageCapacityVO.h"
 #import "StorageSubVO.h"
 #import "VmListResult.h"

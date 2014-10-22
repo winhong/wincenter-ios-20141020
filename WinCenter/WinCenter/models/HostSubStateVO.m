@@ -9,5 +9,7 @@
 #import "HostSubStateVO.h"
 
 @implementation HostSubStateVO
-
+-(int)total{
+    return self.OK+self.other+self.DISCONNECT;
+}
 @end

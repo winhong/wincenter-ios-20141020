@@ -98,6 +98,8 @@
     header.label16.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
     
     //圈图
+    
+    if([self.vmSubVO.os total]>0){
     NSArray *items2 = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Windows color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Linux color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
                        ];
@@ -106,7 +108,9 @@
     pieChart2.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
     [pieChart2 strokeChart];
     [header.vmOsTypeChart addSubview:pieChart2];
+    }
     
+    if([self.vmSubVO.state total]>0){
     NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.STOPPED color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
@@ -116,7 +120,7 @@
     pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
     [pieChart strokeChart];
     [header.vmStatusChart addSubview:pieChart];
-
+    }
     
     
     return header;

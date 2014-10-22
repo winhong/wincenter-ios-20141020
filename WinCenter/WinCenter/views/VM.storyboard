@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -161,8 +161,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasPerformancePage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="ipLabel" destination="r9C-Wd-Fse" id="gcS-ui-Zed"/>
                         <outlet property="name" destination="dQP-Cr-MQi" id="Krg-Rn-9co"/>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
+                        <outlet property="runningTime" destination="znD-Wi-Pmd" id="NTw-rZ-uyQ"/>
+                        <outlet property="statusLabel" destination="LQQ-O8-49t" id="F5r-ms-ZSA"/>
                         <outlet property="topToolBar" destination="9Ur-d1-Age" id="kVm-ub-TEl"/>
                     </connections>
                 </viewController>
@@ -721,6 +724,12 @@
                                         <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="P8o-dl-TKt">
+                                        <rect key="frame" x="880" y="300" width="17" height="17"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-Tv-0iP">
+                                        <rect key="frame" x="882" y="356" width="17" height="17"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -731,11 +740,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
-                        <outlet property="isDynamicCPU" destination="Aze-AD-5qN" id="iM5-Tz-sX8"/>
-                        <outlet property="isDynamicMemWce" destination="jzE-C0-aWZ" id="qRy-NM-SNX"/>
+                        <outlet property="isDynamicCpu_img" destination="Aze-AD-5qN" id="GO9-0Z-p9F"/>
+                        <outlet property="isDynamicMemWce_img" destination="jzE-C0-aWZ" id="660-92-yer"/>
                         <outlet property="isInstalledTool" destination="gBz-Z2-Qht" id="hPe-Dx-qEY"/>
                         <outlet property="memory" destination="9aX-3m-jaB" id="67x-XW-2Tk"/>
                         <outlet property="memoryType" destination="HNt-XV-nTc" id="8yj-kS-YAd"/>
+                        <outlet property="noDynamicCpu_img" destination="P8o-dl-TKt" id="6hV-FS-BRR"/>
+                        <outlet property="noDynamicMemWce_img" destination="ZA9-Tv-0iP" id="pdV-OX-JHG"/>
                         <outlet property="osType" destination="OUi-lo-yL1" id="xej-E7-I2U"/>
                         <outlet property="osType_image" destination="Z4A-C3-IAJ" id="zc9-5b-dUA"/>
                         <outlet property="scrollView" destination="ozM-bn-Z9B" id="erC-fP-J27"/>
@@ -1433,6 +1444,7 @@
         <image name="允许开机调整打勾-black" width="54" height="41"/>
         <image name="内存-black" width="15" height="15"/>
         <image name="勾" width="17" height="12"/>
+        <image name="叉－蓝色" width="17" height="17"/>
         <image name="工具图标-black" width="19" height="20"/>
         <image name="时间" width="11" height="11"/>
         <image name="状态" width="11" height="11"/>

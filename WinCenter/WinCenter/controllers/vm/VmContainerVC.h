@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnOperation;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTask;
 
+@property (weak, nonatomic) IBOutlet UILabel *ipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *runningTime;
+
 @property BOOL hasPerformancePage;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 

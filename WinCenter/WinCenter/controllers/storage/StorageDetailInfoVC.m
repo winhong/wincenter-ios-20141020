@@ -25,8 +25,12 @@
 @property (weak, nonatomic) IBOutlet UIView *allocatedStorageGroup;
 @property (weak, nonatomic) IBOutlet UILabel *usedRatio;
 @property (weak, nonatomic) IBOutlet UILabel *allocatedRatio;
+@property (weak, nonatomic) IBOutlet UILabel *type;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *isShared_img;
+@property (weak, nonatomic) IBOutlet UIImageView *noShared_img;
+@property (weak, nonatomic) IBOutlet UILabel *isshared;
 
 @end
 
@@ -75,11 +79,14 @@
     self.shared.hidden = [self.storageVO.shared isEqualToString:@"false"];
     self.defaulted.hidden = [self.storageVO.defaulted isEqualToString:@"false"];
     self.defaulted_label.hidden = [self.storageVO.defaulted isEqualToString:@"false"];
+    self.isShared_img.hidden = ![self.storageVO shared_img];
+    self.noShared_img.hidden = [self.storageVO shared_img];
     
     self.totalStorageLabel1.text = [NSString stringWithFormat:@"%.2fGB", self.storageVO.totalStorage];
     self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2fGB", self.storageVO.totalStorage];
     self.usedStorageLabel.text = [NSString stringWithFormat:@"%.2fGB", (self.storageVO.totalStorage-self.storageVO.availStorage)];
     self.allocatedStorageLabel.text = [NSString stringWithFormat:@"%.2fGB", self.storageVO.allocatedStorage];
+    self.type.text = self.storageVO.type;
     
     self.usedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO usedRatio]];
     self.allocatedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO allocatedRatio]];
