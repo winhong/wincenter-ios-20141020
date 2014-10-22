@@ -12,5 +12,5 @@
 
 @property int Linux;
 @property int Windows;
-
+-(int)total;
 @end

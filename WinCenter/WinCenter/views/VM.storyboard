@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -161,8 +161,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasPerformancePage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="ipLabel" destination="r9C-Wd-Fse" id="gcS-ui-Zed"/>
                         <outlet property="name" destination="dQP-Cr-MQi" id="Krg-Rn-9co"/>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
+                        <outlet property="runningTime" destination="znD-Wi-Pmd" id="NTw-rZ-uyQ"/>
+                        <outlet property="statusLabel" destination="LQQ-O8-49t" id="F5r-ms-ZSA"/>
                         <outlet property="topToolBar" destination="9Ur-d1-Age" id="kVm-ub-TEl"/>
                     </connections>
                 </viewController>

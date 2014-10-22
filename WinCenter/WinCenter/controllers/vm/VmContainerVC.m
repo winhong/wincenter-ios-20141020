@@ -17,9 +17,11 @@
 @implementation VmContainerVC
 
 -(void)viewDidLoad{
+    
     [super viewDidLoad];
     
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openMenu:)];
+
 }
 
 
@@ -33,6 +35,14 @@
     self.statusLabel.text = [self.vmVO state_text];
     self.statusLabel.textColor = [self.vmVO state_color];
     self.name.text = self.vmVO.name;
+    
+    int time = self.vmVO.runTime/1000;
+    int Day = time/(3600*24.0);
+    int Hour = (time - 3600*24.0*Day)/3600.0;
+    int Minute = (time - 3600*24.0*Day - 3600.0*Hour)/60.0;
+    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
+    
+    
     self.title = self.vmVO.name;
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:4];
