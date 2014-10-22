@@ -17,9 +17,11 @@
 @implementation VmContainerVC
 
 -(void)viewDidLoad{
+    
     [super viewDidLoad];
     
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openMenu:)];
+
 }
 
 
