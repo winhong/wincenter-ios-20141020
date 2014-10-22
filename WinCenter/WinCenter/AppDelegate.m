@@ -36,6 +36,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"SERVER_ROOT"] == nil){
+        [[NSUserDefaults standardUserDefaults] setValue:@"https://192.168.213.147:8090" forKey:@"SERVER_ROOT"];
+    }
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         SUNButtonBoard *board = [SUNButtonBoard defaultButtonBoard];
         board.boardImage = [UIImage imageNamed:@"SUNButtonBoard_button3.png"];
