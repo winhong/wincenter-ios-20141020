@@ -161,8 +161,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasPerformancePage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="ipLabel" destination="r9C-Wd-Fse" id="gcS-ui-Zed"/>
                         <outlet property="name" destination="dQP-Cr-MQi" id="Krg-Rn-9co"/>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
+                        <outlet property="runningTime" destination="znD-Wi-Pmd" id="NTw-rZ-uyQ"/>
+                        <outlet property="statusLabel" destination="LQQ-O8-49t" id="F5r-ms-ZSA"/>
                         <outlet property="topToolBar" destination="9Ur-d1-Age" id="kVm-ub-TEl"/>
                     </connections>
                 </viewController>
