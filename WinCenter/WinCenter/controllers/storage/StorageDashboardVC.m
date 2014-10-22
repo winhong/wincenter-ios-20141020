@@ -66,27 +66,27 @@
 
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
-    header.label1.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.label2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
-    header.label3.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
-    header.label4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.label5.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
-    header.label6.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
-    header.label7.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmohba];
-    header.label8.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmoiscsi];
-    header.label9.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.nfs];
-    header.label10.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvm];
+    header.storageSize.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.shareStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
+    header.localStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
+    header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
+    header.usedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    header.fcSanStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmohba];
+    header.iscsiStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.nfsStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.nfs];
+    header.localStorageSize2.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvm];
     
     //缩起
-    header.label13.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmohba];
-    header.label14.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmoiscsi];
-    header.label15.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.nfs];
-    header.label16.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvm];
-    header.label20.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.label21.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
-    header.label22.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
-    header.label23.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
-    header.label24.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    header.fcSanStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmohba];
+    header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.nfsStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.nfs];
+    header.localStorageSize3.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvm];
+    header.storageSize3.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
+    header.localStorageSize4.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
+    header.unUsedStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
+    header.usedStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
     
     //圈图
         PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
