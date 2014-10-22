@@ -56,7 +56,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DM0-wK-b1a" id="mZx-0F-2pl">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.100.147:8090" textAlignment="center" minimumFontSize="17" background="input-ip" translatesAutoresizingMaskIntoConstraints="NO" id="cjX-Xa-Kwf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.213.147:8090" textAlignment="center" minimumFontSize="17" background="input-ip" translatesAutoresizingMaskIntoConstraints="NO" id="cjX-Xa-Kwf">
                                                     <rect key="frame" x="359" y="10" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
