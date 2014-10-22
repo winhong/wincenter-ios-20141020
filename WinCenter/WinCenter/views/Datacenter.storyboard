@@ -502,6 +502,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-1a-JWy" customClass="F3BarGauge">
+                                            <rect key="frame" x="120" y="102" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.2784313725" green="0.56862745100000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <userDefinedRuntimeAttributes>
@@ -517,6 +518,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eid-fM-zJJ" customClass="F3BarGauge">
+                                            <rect key="frame" x="120" y="127" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -531,6 +533,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-Fb-kEa" customClass="F3BarGauge">
+                                            <rect key="frame" x="120" y="154" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -545,6 +548,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-fr-YW4" customClass="F3BarGauge">
+                                            <rect key="frame" x="120" y="181" width="68" height="14"/>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -559,6 +563,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEs-ES-19X" customClass="F3BarGauge">
+                                            <rect key="frame" x="120" y="208" width="68" height="14"/>
                                             <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="normalBarColor">
@@ -577,16 +582,16 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="QoU-FF-s3Z" id="hLZ-Uf-zYO"/>
-                                    <outlet property="label2" destination="Qkz-F1-mPK" id="GWV-wt-04h"/>
-                                    <outlet property="label3" destination="Bug-sH-o5D" id="hSo-mE-H5g"/>
-                                    <outlet property="label4" destination="YjR-IG-ScA" id="XXD-RB-U5c"/>
-                                    <outlet property="label5" destination="L6b-Pv-3lb" id="ELK-zp-AGo"/>
+                                    <outlet property="activeVmCount" destination="Qkz-F1-mPK" id="Pap-ju-QfL"/>
+                                    <outlet property="cpuUnitCount" destination="Bug-sH-o5D" id="YAr-sO-hiU"/>
+                                    <outlet property="hostCount" destination="QoU-FF-s3Z" id="ucN-DS-2JR"/>
+                                    <outlet property="memerySize" destination="YjR-IG-ScA" id="fQm-TQ-UY3"/>
                                     <outlet property="progress_1" destination="LAD-1a-JWy" id="Pne-Fd-9XL"/>
                                     <outlet property="progress_2" destination="eid-fM-zJJ" id="SNS-cZ-aRD"/>
                                     <outlet property="progress_3" destination="ay0-Fb-kEa" id="ONu-z1-Pwy"/>
                                     <outlet property="progress_4" destination="vN6-fr-YW4" id="QW3-2j-Je9"/>
                                     <outlet property="progress_5" destination="aEs-ES-19X" id="udK-zU-ZzI"/>
+                                    <outlet property="storageSize" destination="L6b-Pv-3lb" id="X8s-Xc-Erl"/>
                                     <outlet property="title" destination="FRk-ZP-ZoH" id="ijG-cU-LkA"/>
                                 </connections>
                             </collectionViewCell>
@@ -1614,7 +1619,7 @@
                                 <rect key="frame" x="265" y="55" width="243" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <userGuides>
-                                    <userLayoutGuide location="134" affinity="minY"/>
+                                    <userLayoutGuide location="135" affinity="minY"/>
                                     <userLayoutGuide location="129" affinity="minX"/>
                                 </userGuides>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -2100,8 +2105,8 @@
                                 <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="k9B-Mc-aNn"/>
-                        <barButtonItem image="icon-operationLog" id="N1h-zB-NDr">
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
+                        <barButtonItem image="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -4143,6 +4148,125 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5195AE85-0F29-4F39-8A6E-2B091CD8FD89" width="32" height="32">
+            <mutableData key="keyedArchiveRepresentation">
+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
+IABSAEcAQgAgAEcAZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQEMAQ5BDsA
+IABSAEcAQgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAUgBWAEKQGnUoACAAUgBHAEIA
+IIJyX2ljz4/wAFAAcgBvAGYAaQBsAG8AIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMAbwBHAGUAbgBlAHIA
+aQBzAGsAIABSAEcAQgAtAHAAcgBvAGYAaQBsx3y8GAAgAFIARwBCACDVBLhc0wzHfABPAGIAZQBjAG4A
+/QAgAFIARwBCACAAcAByAG8AZgBpAGwF5AXoBdUF5AXZBdwAIABSAEcAQgAgBdsF3AXcBdkAQQBsAGwA
+ZwBlAG0AZQBpAG4AZQBzACAAUgBHAEIALQBQAHIAbwBmAGkAbADBAGwAdABhAGwA4QBuAG8AcwAgAFIA
+RwBCACAAcAByAG8AZgBpAGxmbpAaACAAUgBHAEIAIGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUw
+oTCkMOsAUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMDkwO1A70DuQO6A8wAIAPAA8ED
+vwPGA68DuwAgAFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUAbgDpAHIAaQBjAG8AQQBsAGcA
+ZQBtAGUAZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwAIABSAEcAQgAgDhcO
+MQ5IDicORA4bAEcAZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4AZQBuACAA
+UgBHAEIALQBwAHIAbwBmAGkAaQBsAGkAVQBuAGkAdwBlAHIAcwBhAGwAbgB5ACAAcAByAG8AZgBpAGwA
+IABSAEcAQgQeBDEESQQ4BDkAIAQ/BEAEPgREBDgEOwRMACAAUgBHAEIGRQZEBkEAIAYqBjkGMQZKBkEA
+IABSAEcAQgAgBicGRAY5BicGRQBHAGUAbgBlAHIAaQBjACAAUgBHAEIAIABQAHIAbwBmAGkAbABlAEcA
+ZQBuAGUAcgBlAGwAIABSAEcAQgAtAGIAZQBzAGsAcgBpAHYAZQBsAHMAZXRleHQAAAAAQ29weXJpZ2h0
+IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNSAAEAAAABFs9Y
+WVogAAAAAAAAdE0AAD3uAAAD0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAAuDZj
+dXJ2AAAAAAAAAAEBzQAAc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGzS
+JSYnKFokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMpKitfEBBOU0JpdG1hcElt
+YWdlUmVwWk5TSW1hZ2VSZXBYTlNPYmplY3TSJSYtLldOU0FycmF5oi0r0iUmMDFeTlNNdXRhYmxlQXJy
+YXmjMC0r0zM0CjU2N1dOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADNIlJjk6V05TQ29sb3KiOSvS
+JSY8PVdOU0ltYWdlojwrXxAPTlNLZXllZEFyY2hpdmVy0UBBVHJvb3SAAQAIABEAGgAjAC0AMgA3AEYA
+TABXAF4AZQByAHkAgQCDAIUAigCMAI4AlwCcAKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZANsA3RlPGVQZ
+XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
+AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
+</mutableData>
+        </image>
         <image name="CPU线程-black" width="15" height="15"/>
         <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
