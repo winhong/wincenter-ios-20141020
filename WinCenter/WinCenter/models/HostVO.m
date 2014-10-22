@@ -139,4 +139,17 @@
     }];
 }
 
+- (void) getActivityVmAsync:(FetchAllCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[HostActivityVmStateVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getActivityVmAsync" ofType:@"json"]]].state, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.staticVmState&params=ownerHostId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[HostActivityVmStateVO alloc] initWithJSONData:jsonResponse.rawBody].state, error);
+    }];
+}
+
 @end
