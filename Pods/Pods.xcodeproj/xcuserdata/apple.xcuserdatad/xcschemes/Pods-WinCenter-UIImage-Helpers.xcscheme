@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "786D3A1473DB4F97B85FAFB9"
+               BlueprintIdentifier = "432491F2623A4D3798C46C82"
                BuildableName = "libPods-WinCenter-UIImage-Helpers.a"
                BlueprintName = "Pods-WinCenter-UIImage-Helpers"
                ReferencedContainer = "container:Pods.xcodeproj">

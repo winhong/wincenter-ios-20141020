@@ -51,6 +51,8 @@ target 'WinCenter' do
     pod 'HMSegmentedControl', '~> 1.4.0'
     
     pod 'THPinViewController', '~> 1.2.2'
+    pod 'iOSSharedViewTransition', '~> 1.0.2'
+    pod 'RMStepsController', '~> 1.0.1'
     
     pod 'TOWebViewController', '~> 2.0.14'
     pod 'AFViewShaker', '~> 0.0.2'

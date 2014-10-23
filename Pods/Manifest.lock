@@ -31,6 +31,7 @@ PODS:
     - FrameAccessor (~> 1.3.2)
     - MKFoundationKit/NSArray (~> 1.2.2)
   - HMSegmentedControl (1.4.0)
+  - iOSSharedViewTransition (1.0.2)
   - JBChartView (2.6.3)
   - JGProgressHUD (1.2.1)
   - JRSwizzle (1.0)
@@ -64,6 +65,7 @@ PODS:
   - pop (1.0.6)
   - RATreeView (0.9.1)
   - REFrostedViewController (2.4.6)
+  - RMStepsController (1.0.1)
   - RNFrostedSidebar (0.2.0)
   - SFGaugeView (0.0.7)
   - SHLineGraphView (1.0.6)
@@ -100,6 +102,7 @@ DEPENDENCIES:
   - FRD3DBarChart (~> 1.1.1)
   - GraphKit (~> 1.1.0)
   - HMSegmentedControl (~> 1.4.0)
+  - iOSSharedViewTransition (~> 1.0.2)
   - JBChartView (~> 2.6.2)
   - JGProgressHUD (~> 1.2.1)
   - JYRadarChart (~> 0.3.1)
@@ -118,6 +121,7 @@ DEPENDENCIES:
   - PNChart (~> 0.5)
   - RATreeView (~> 0.9.1)
   - REFrostedViewController (~> 2.4.6)
+  - RMStepsController (~> 1.0.1)
   - RNFrostedSidebar (~> 0.2.0)
   - SFGaugeView (~> 0.0.7)
   - SHLineGraphView (~> 1.0.6)
@@ -148,6 +152,7 @@ SPEC CHECKSUMS:
   FRD3DBarChart: 831be1ade45d172055812caf5113776f6c84d693
   GraphKit: 951cdad6f6fad9f77e06185af3e1c20be349061b
   HMSegmentedControl: c0517a8d4b80c978b8386f863f1c44729cfd7d6f
+  iOSSharedViewTransition: b5d2f9d19754a73a9cd489bd87dbc17c987bba39
   JBChartView: 0a14c441cd4de963379e0f417b1f6cc685119637
   JGProgressHUD: f3c0258684f318bc0009e893fdac0701de5cb75b
   JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
@@ -172,6 +177,7 @@ SPEC CHECKSUMS:
   pop: e518794da38942c05255eb64b36d894e70cb4f00
   RATreeView: 4b917cf4a6ebad07bc268b7aae882692b342610d
   REFrostedViewController: 0f6bb16aeb4b384da25cc3c97bc1a16926583c62
+  RMStepsController: 8ff91f169d884fdd834ad37007f553c7bed333eb
   RNFrostedSidebar: f1d95d9b2627f13cc10e75d36e751a623eec079c
   SFGaugeView: d2d25bc2a47829e9ebac4bae55276f33b42e7fb5
   SHLineGraphView: ea496febee7a19bef01d5d1c832cf83a5e6a443e

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1E4EBCDBB5C4F43BFBB66E9"
+               BlueprintIdentifier = "F167864C10CE4B559E9BD9C4"
                BuildableName = "libPods-WinCenter-UIColor-HexString.a"
                BlueprintName = "Pods-WinCenter-UIColor-HexString"
                ReferencedContainer = "container:Pods.xcodeproj">

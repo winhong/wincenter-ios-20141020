@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C26281B88AEE4FE0A917BECE"
+               BlueprintIdentifier = "DC6922A3150D48708332AF28"
                BuildableName = "libPods-WinCenter-LXReorderableCollectionViewFlowLayout.a"
                BlueprintName = "Pods-WinCenter-LXReorderableCollectionViewFlowLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

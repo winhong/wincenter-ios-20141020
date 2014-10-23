@@ -83,19 +83,19 @@
     VmDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VmDashboardHeader" forIndexPath:indexPath];
     
     header.vmCount.text =[NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
-    header.label1.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
-    header.label3.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
-    header.label6.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
-    header.label7.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
-    header.label8.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
+    header.osTypeWin.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.osTypeLinux.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
+    header.statusOthers.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.statusOk.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.statusDis.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
     
     //缩起
-    header.label10.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
-    header.label11.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
-    header.label12.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
-    header.label13.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
-    header.label14.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
-    header.label16.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
+    header.vmCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
+    header.statusOthers2.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.other];
+    header.statusOk2.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.OK];
+    header.statusDis2.text =[NSString stringWithFormat:@"%d",self.vmSubVO.state.STOPPED];
+    header.osTypeWin2.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
+    header.osTypeLinux2.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];
     
     //圈图
     
