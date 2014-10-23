@@ -70,6 +70,7 @@ PODS:
   - SMPageControl (1.2)
   - SMVerticalSegmentedControl (0.1.2)
   - SVProgressHUD (1.0)
+  - THPinViewController (1.2.2)
   - TLIndexPathTools (0.3.7)
   - TOWebViewController (2.0.14)
   - TWRCharts (0.1)
@@ -123,6 +124,7 @@ DEPENDENCIES:
   - SMPageControl (~> 1.2)
   - SMVerticalSegmentedControl (~> 0.1.2)
   - SVProgressHUD (~> 1.0)
+  - THPinViewController (~> 1.2.2)
   - TOWebViewController (~> 2.0.14)
   - TWRCharts (~> 0.1)
   - UICollectionViewEmptyState (~> 1.1.0)
@@ -176,6 +178,7 @@ SPEC CHECKSUMS:
   SMPageControl: 506b0c561d3ddbe2d5df28cb33acc8e4b1f93f19
   SMVerticalSegmentedControl: e94119fea7810898fc74ad895336f514e57969d7
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
+  THPinViewController: a03909be2ae42e613a68bf96330f693f3d608759
   TLIndexPathTools: 366d360e2032e5cf0494586143803611e2fcb053
   TOWebViewController: d3eee5342e5f8508cc87107c96544f5dff01b802
   TWRCharts: 4da6c4c92df46328e184549176a9bb6bd1f0f511
