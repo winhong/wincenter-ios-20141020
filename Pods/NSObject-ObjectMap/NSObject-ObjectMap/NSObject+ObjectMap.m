@@ -313,6 +313,10 @@ static const char _base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh
     
     for (NSString *key in [dict allKeys]) {
         if([key isEqualToString:@"version"]){
+            objc_property_t property = class_getProperty([newObject class], [@"version_field" UTF8String]);
+            if(property){
+                [newObject setValue:[dict objectForKey:key] forKey:@"version_field"];
+            }
             continue;
         }
         if([key isEqualToString:@"true"]){
@@ -445,6 +449,10 @@ static const char _base64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh
             for (NSString *newKey in [nestedArray[xx] allKeys]) {
                 // If it's null, move on
                 if([newKey isEqualToString:@"version"]){
+                    objc_property_t property = class_getProperty([NSClassFromString(propertyName) class], [@"version" UTF8String]);
+                    if(property){
+                        [nestedObj setValue:[nestedArray[xx] objectForKey:newKey] forKey:@"version_field"];
+                    }
                     continue;
                 }
                 if([newKey isEqualToString:@"true"]){

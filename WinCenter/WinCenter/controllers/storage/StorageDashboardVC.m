@@ -71,16 +71,16 @@
     header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
     header.usedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
-    header.fcSanStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmohba];
-    header.iscsiStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvmoiscsi];
-    header.nfsStorageSize.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.nfs];
-    header.localStorageSize2.text = [NSString stringWithFormat:@"%.2f",self.StorageSubVOWinserver.type.lvm];
+    header.fcSanStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
+    header.iscsiStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.nfsStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.nfs];
+    header.localStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvm];
     
     //缩起
-    header.fcSanStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmohba];
-    header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvmoiscsi];
-    header.nfsStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.nfs];
-    header.localStorageSize3.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.type.lvm];
+    header.fcSanStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
+    header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.nfsStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.nfs];
+    header.localStorageSize3.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvm];
     header.storageSize3.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize4.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];

@@ -45,9 +45,9 @@
     
     BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     cell.title.text = businessVO.name;
-    cell.label1.text = businessVO.managerId;
-    cell.label2.text = [businessVO.createTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
-    cell.label3.text = [NSString stringWithFormat:@"%d", businessVO.vmNum];
+    cell.manager.text = businessVO.managerId;
+    cell.createTime.text = [businessVO.createTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
+    cell.vmNum.text = [NSString stringWithFormat:@"%d", businessVO.vmNum];
     return cell;
 }
 
@@ -58,14 +58,14 @@
     
     header.businessCount.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
     header.businessVmCount.text = [NSString stringWithFormat:@"%d",businessVO.vmNum];
-    header.label1.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
-    header.label2.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
+    header.alloctedBus.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
+    header.unalloctedBus.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
     
     //缩起
-    header.label3.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
-    header.label4.text =[NSString stringWithFormat:@"%d",businessVO.vmNum];
-    header.label5.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
-    header.label6.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
+    header.businessCount2.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
+    header.businessVmCount2.text =[NSString stringWithFormat:@"%d",businessVO.vmNum];
+    header.alloctedBus2.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
+    header.unalloctedBus2.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
     
     //圈图
     PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.businessAllocateChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.unalloctedBusList.recordTotal*100/self.allBusList.recordTotal] andClockwise:YES andShadow:YES];

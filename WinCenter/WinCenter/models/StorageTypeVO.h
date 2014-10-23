@@ -10,11 +10,11 @@
 
 @interface StorageTypeVO : NSObject
 
-@property float lvm;
-@property float udv;
-@property float nfs;
-@property float lvmoiscsi;
-@property float lvmohba;
+@property int lvm;
+@property int udv;
+@property int nfs;
+@property int lvmoiscsi;
+@property int lvmohba;
 
 
 @end

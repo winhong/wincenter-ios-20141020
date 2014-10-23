@@ -99,8 +99,8 @@
     self.hostCount.text = [NSString stringWithFormat:@"%d", self.poolVO.hostNumber];
     self.vmCount.text = [NSString stringWithFormat:@"%d", self.poolVO.vmNumber];
     self.vType.text = self.poolVO.hypervisor;
-    self.vVersion.text = self.poolVO.version;
-    self.vDate.text = self.poolVO.versionDate_text;
+    self.vVersion.text = self.poolVO.productVersion;
+    self.vDate.text = [self.poolVO versionDate_text];
     
 
     self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.poolVO.totalCpu/1000.0];

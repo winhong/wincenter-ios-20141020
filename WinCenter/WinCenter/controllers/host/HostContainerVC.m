@@ -22,7 +22,7 @@
     self.titleLabel.text = self.hostVO.hostName;
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
-    self.statusLabel.textColor = [self.hostVO state_color];
+    //self.statusLabel.textColor = [self.hostVO state_color];
 
     NSDate *Runtime = [[NSDate alloc]initWithTimeIntervalSince1970:self.hostVO.startRunTime];
     NSDate *Now = [NSDate new];

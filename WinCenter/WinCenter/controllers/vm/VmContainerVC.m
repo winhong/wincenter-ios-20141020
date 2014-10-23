@@ -33,7 +33,7 @@
         self.ipLabel.text = @"(尚未配置ip)";
     }
     self.statusLabel.text = [self.vmVO state_text];
-    self.statusLabel.textColor = [self.vmVO state_color];
+    //self.statusLabel.textColor = [self.vmVO state_color];
     self.name.text = self.vmVO.name;
     
     int time = self.vmVO.runTime/1000;
