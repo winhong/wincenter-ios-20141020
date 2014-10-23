@@ -80,14 +80,16 @@
     
     // Do any additional setup after loading the view.
     
-    [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
-        self.poolVO = object;
-        [self refreshMainInfo];
-    }];
+    
     
     [self.poolVO getPoolElasticAsync:^(id object, NSError *error) {
         self.elasticInfo = object;
-        [self refreshElasticInfo];
+        [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
+            self.poolVO = object;
+            [self refreshMainInfo];
+            [self refreshElasticInfo];
+        }];
+        
     }];
     
 }
