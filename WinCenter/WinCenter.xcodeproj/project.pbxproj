@@ -14,7 +14,6 @@
 		181DECA219F17CB100998835 /* ARLineChartContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAC319F17CB000998835 /* ARLineChartContentView.m */; };
 		181DECA319F17CB100998835 /* ARLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAC519F17CB000998835 /* ARLineChartView.m */; };
 		181DECA419F17CB100998835 /* DoubleYSeriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAC719F17CB000998835 /* DoubleYSeriesVC.m */; };
-		181DECA519F17CB100998835 /* SimpleLineChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEACA19F17CB000998835 /* SimpleLineChartVC.m */; };
 		181DECA619F17CB100998835 /* BTSpiderPlotterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEACD19F17CB000998835 /* BTSpiderPlotterVC.m */; };
 		181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEACF19F17CB000998835 /* BTSpiderPlotterView.m */; };
 		181DECA819F17CB100998835 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181DEAD019F17CB000998835 /* Charts.storyboard */; };
@@ -38,30 +37,10 @@
 		181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAEF19F17CB000998835 /* EColumnChartViewController.m */; };
 		181DECBB19F17CB100998835 /* ELineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAF119F17CB000998835 /* ELineChartViewController.m */; };
 		181DECBC19F17CB100998835 /* EPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAF319F17CB000998835 /* EPieChartViewController.m */; };
-		181DECBD19F17CB100998835 /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAF619F17CB000998835 /* F3BarGauge.m */; };
-		181DECBE19F17CB100998835 /* F3BarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAF819F17CB000998835 /* F3BarViewController.m */; };
-		181DECBF19F17CB100998835 /* Big3RevenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAFB19F17CB000998835 /* Big3RevenueViewController.m */; };
-		181DECC019F17CB100998835 /* ClickThroughRatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAFD19F17CB000998835 /* ClickThroughRatesViewController.m */; };
-		181DECC119F17CB100998835 /* Example1.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEAFF19F17CB000998835 /* Example1.m */; };
-		181DECC219F17CB100998835 /* Example2.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0119F17CB000998835 /* Example2.m */; };
-		181DECC319F17CB100998835 /* Example3.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0319F17CB000998835 /* Example3.m */; };
-		181DECC419F17CB100998835 /* Example4.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0519F17CB000998835 /* Example4.m */; };
-		181DECC519F17CB100998835 /* GraphCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0719F17CB000998835 /* GraphCalcViewController.m */; };
-		181DECC619F17CB100998835 /* SimpleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0919F17CB000998835 /* SimpleChartViewController.m */; };
 		181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0C19F17CB000998835 /* ExampleBarVC.m */; };
 		181DECC819F17CB100998835 /* HeartLive.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB0F19F17CB000998835 /* HeartLive.m */; };
 		181DECC919F17CB100998835 /* heartLiveData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 181DEB1019F17CB000998835 /* heartLiveData.txt */; };
 		181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1219F17CB000998835 /* HeartLiveVC.m */; };
-		181DECCB19F17CB100998835 /* JBAreaChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1519F17CB000998835 /* JBAreaChartViewController.m */; };
-		181DECCC19F17CB100998835 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1719F17CB000998835 /* JBBarChartFooterView.m */; };
-		181DECCD19F17CB100998835 /* JBBarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1919F17CB000998835 /* JBBarChartViewController.m */; };
-		181DECCE19F17CB100998835 /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1B19F17CB000998835 /* JBBaseChartViewController.m */; };
-		181DECCF19F17CB100998835 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1D19F17CB000998835 /* JBChartHeaderView.m */; };
-		181DECD019F17CB100998835 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB1F19F17CB000998835 /* JBChartInformationView.m */; };
-		181DECD119F17CB100998835 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB2119F17CB000998835 /* JBChartTooltipTipView.m */; };
-		181DECD219F17CB100998835 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB2319F17CB000998835 /* JBChartTooltipView.m */; };
-		181DECD319F17CB100998835 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB2819F17CB000998835 /* JBLineChartFooterView.m */; };
-		181DECD419F17CB100998835 /* JBLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB2A19F17CB000998835 /* JBLineChartViewController.m */; };
 		181DECD519F17CB100998835 /* JYRadarChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB2F19F17CB000998835 /* JYRadarChartVC.m */; };
 		181DECD619F17CB100998835 /* Example1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB3219F17CB000998835 /* Example1Controller.m */; };
 		181DECD719F17CB100998835 /* Example1PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB3419F17CB000998835 /* Example1PieView.m */; };
@@ -82,13 +61,9 @@
 		181DECE619F17CB100998835 /* RenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB5419F17CB100998835 /* RenderView.m */; };
 		181DECE719F17CB100998835 /* RotatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB5619F17CB100998835 /* RotatedView.m */; };
 		181DECE819F17CB100998835 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DEB5719F17CB100998835 /* select.png */; };
-		181DECE919F17CB100998835 /* PCChartsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB5A19F17CB100998835 /* PCChartsTableViewController.m */; };
-		181DECEA19F17CB100998835 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB5C19F17CB100998835 /* PCChartViewController.m */; };
 		181DECEB19F17CB100998835 /* PNLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB5F19F17CB100998835 /* PNLineChartView.m */; };
 		181DECEC19F17CB100998835 /* PNPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB6119F17CB100998835 /* PNPlot.m */; };
 		181DECED19F17CB100998835 /* PNTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB6319F17CB100998835 /* PNTestViewController.m */; };
-		181DECEE19F17CB100998835 /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 181DEB6519F17CB100998835 /* RealtimeCurve.bundle */; };
-		181DECEF19F17CB100998835 /* RealtimeCurveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB6719F17CB100998835 /* RealtimeCurveVC.m */; };
 		181DECF019F17CB100998835 /* GaugeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB6A19F17CB100998835 /* GaugeVC.m */; };
 		181DECF119F17CB100998835 /* SHRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB6D19F17CB100998835 /* SHRootController.m */; };
 		181DECF219F17CB100998835 /* TWRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DEB7019F17CB100998835 /* TWRViewController.m */; };
@@ -264,7 +239,6 @@
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
 		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
 		1886A60719F6516E0089A576 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
-		1886A60B19F698310089A576 /* DLGraphDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886A60A19F698310089A576 /* DLGraphDemoViewController.m */; };
 		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
 		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
@@ -354,6 +328,57 @@
 		18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130119F27C2000FCBD23 /* PopWarningInfoCellForTime.m */; };
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
+		18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C5214119F89DF300C033C6 /* MJRefresh.bundle */; };
+		18C5215219F89DF300C033C6 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */; };
+		18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214619F89DF300C033C6 /* MJRefreshConst.m */; };
+		18C5215419F89DF300C033C6 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */; };
+		18C5215519F89DF300C033C6 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */; };
+		18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */; };
+		18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */; };
+		18C5215819F89DF300C033C6 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215019F89DF300C033C6 /* UIView+MJExtension.m */; };
+		18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */; };
+		18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215D19F89E4500C033C6 /* DXSemiViewController.m */; };
+		18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */; };
+		18C5216619F8A43A00C033C6 /* bamboo.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216419F8A43A00C033C6 /* bamboo.m4r */; };
+		18C5216719F8A43A00C033C6 /* complete.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216519F8A43A00C033C6 /* complete.m4r */; };
+		18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */; };
+		18C5216E19F8A4C900C033C6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */; };
+		18C5217019F8AE4600C033C6 /* sms-received6.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216F19F8AADC00C033C6 /* sms-received6.m4r */; };
+		18C521B619F8CA2000C033C6 /* SimpleLineChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5217619F8CA2000C033C6 /* SimpleLineChartVC.m */; };
+		18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5217919F8CA2000C033C6 /* DLGraphDemoViewController.m */; };
+		18C521B819F8CA2000C033C6 /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5217C19F8CA2000C033C6 /* F3BarGauge.m */; };
+		18C521B919F8CA2000C033C6 /* F3BarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5217E19F8CA2000C033C6 /* F3BarViewController.m */; };
+		18C521BA19F8CA2000C033C6 /* Big3RevenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218119F8CA2000C033C6 /* Big3RevenueViewController.m */; };
+		18C521BB19F8CA2000C033C6 /* ClickThroughRatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218319F8CA2000C033C6 /* ClickThroughRatesViewController.m */; };
+		18C521BC19F8CA2000C033C6 /* Example1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218519F8CA2000C033C6 /* Example1.m */; };
+		18C521BD19F8CA2000C033C6 /* Example2.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218719F8CA2000C033C6 /* Example2.m */; };
+		18C521BE19F8CA2000C033C6 /* Example3.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218919F8CA2000C033C6 /* Example3.m */; };
+		18C521BF19F8CA2000C033C6 /* Example4.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218B19F8CA2000C033C6 /* Example4.m */; };
+		18C521C019F8CA2000C033C6 /* GraphCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218D19F8CA2000C033C6 /* GraphCalcViewController.m */; };
+		18C521C119F8CA2000C033C6 /* SimpleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5218F19F8CA2000C033C6 /* SimpleChartViewController.m */; };
+		18C521C219F8CA2000C033C6 /* JBAreaChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219219F8CA2000C033C6 /* JBAreaChartViewController.m */; };
+		18C521C319F8CA2000C033C6 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219419F8CA2000C033C6 /* JBBarChartFooterView.m */; };
+		18C521C419F8CA2000C033C6 /* JBBarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219619F8CA2000C033C6 /* JBBarChartViewController.m */; };
+		18C521C519F8CA2000C033C6 /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219819F8CA2000C033C6 /* JBBaseChartViewController.m */; };
+		18C521C619F8CA2000C033C6 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219A19F8CA2000C033C6 /* JBChartHeaderView.m */; };
+		18C521C719F8CA2000C033C6 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219C19F8CA2000C033C6 /* JBChartInformationView.m */; };
+		18C521C819F8CA2000C033C6 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5219E19F8CA2000C033C6 /* JBChartTooltipTipView.m */; };
+		18C521C919F8CA2000C033C6 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521A019F8CA2000C033C6 /* JBChartTooltipView.m */; };
+		18C521CA19F8CA2000C033C6 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521A519F8CA2000C033C6 /* JBLineChartFooterView.m */; };
+		18C521CB19F8CA2000C033C6 /* JBLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521A719F8CA2000C033C6 /* JBLineChartViewController.m */; };
+		18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521AC19F8CA2000C033C6 /* PCChartsTableViewController.m */; };
+		18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521AE19F8CA2000C033C6 /* PCChartViewController.m */; };
+		18C521CE19F8CA2000C033C6 /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */; };
+		18C521CF19F8CA2000C033C6 /* RealtimeCurveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */; };
+		18C521D019F8CA2000C033C6 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B519F8CA2000C033C6 /* WMGaugeView.m */; };
+		18C521E119F8CDF500C033C6 /* MBPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */; };
+		18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D719F8CDF500C033C6 /* MBMapNode.m */; };
+		18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */; };
+		18C521E419F8CDF500C033C6 /* MBSpacialMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */; };
+		18C521E519F8CDF500C033C6 /* MBSpacialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */; };
+		18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */; };
+		18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E919F8DA6700C033C6 /* DAPIPView.m */; };
+		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
 		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
@@ -392,8 +417,6 @@
 		181DEAC519F17CB000998835 /* ARLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLineChartView.m; sourceTree = "<group>"; };
 		181DEAC619F17CB000998835 /* DoubleYSeriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleYSeriesVC.h; sourceTree = "<group>"; };
 		181DEAC719F17CB000998835 /* DoubleYSeriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleYSeriesVC.m; sourceTree = "<group>"; };
-		181DEAC919F17CB000998835 /* SimpleLineChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleLineChartVC.h; sourceTree = "<group>"; };
-		181DEACA19F17CB000998835 /* SimpleLineChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleLineChartVC.m; sourceTree = "<group>"; };
 		181DEACC19F17CB000998835 /* BTSpiderPlotterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSpiderPlotterVC.h; sourceTree = "<group>"; };
 		181DEACD19F17CB000998835 /* BTSpiderPlotterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSpiderPlotterVC.m; sourceTree = "<group>"; };
 		181DEACE19F17CB000998835 /* BTSpiderPlotterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSpiderPlotterView.h; sourceTree = "<group>"; };
@@ -431,26 +454,6 @@
 		181DEAF119F17CB000998835 /* ELineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELineChartViewController.m; sourceTree = "<group>"; };
 		181DEAF219F17CB000998835 /* EPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPieChartViewController.h; sourceTree = "<group>"; };
 		181DEAF319F17CB000998835 /* EPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPieChartViewController.m; sourceTree = "<group>"; };
-		181DEAF519F17CB000998835 /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
-		181DEAF619F17CB000998835 /* F3BarGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarGauge.m; sourceTree = "<group>"; };
-		181DEAF719F17CB000998835 /* F3BarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarViewController.h; sourceTree = "<group>"; };
-		181DEAF819F17CB000998835 /* F3BarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarViewController.m; sourceTree = "<group>"; };
-		181DEAFA19F17CB000998835 /* Big3RevenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Big3RevenueViewController.h; sourceTree = "<group>"; };
-		181DEAFB19F17CB000998835 /* Big3RevenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Big3RevenueViewController.m; sourceTree = "<group>"; };
-		181DEAFC19F17CB000998835 /* ClickThroughRatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickThroughRatesViewController.h; sourceTree = "<group>"; };
-		181DEAFD19F17CB000998835 /* ClickThroughRatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickThroughRatesViewController.m; sourceTree = "<group>"; };
-		181DEAFE19F17CB000998835 /* Example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1.h; sourceTree = "<group>"; };
-		181DEAFF19F17CB000998835 /* Example1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1.m; sourceTree = "<group>"; };
-		181DEB0019F17CB000998835 /* Example2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2.h; sourceTree = "<group>"; };
-		181DEB0119F17CB000998835 /* Example2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2.m; sourceTree = "<group>"; };
-		181DEB0219F17CB000998835 /* Example3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3.h; sourceTree = "<group>"; };
-		181DEB0319F17CB000998835 /* Example3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3.m; sourceTree = "<group>"; };
-		181DEB0419F17CB000998835 /* Example4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example4.h; sourceTree = "<group>"; };
-		181DEB0519F17CB000998835 /* Example4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example4.m; sourceTree = "<group>"; };
-		181DEB0619F17CB000998835 /* GraphCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphCalcViewController.h; sourceTree = "<group>"; };
-		181DEB0719F17CB000998835 /* GraphCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphCalcViewController.m; sourceTree = "<group>"; };
-		181DEB0819F17CB000998835 /* SimpleChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleChartViewController.h; sourceTree = "<group>"; };
-		181DEB0919F17CB000998835 /* SimpleChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleChartViewController.m; sourceTree = "<group>"; };
 		181DEB0B19F17CB000998835 /* ExampleBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleBarVC.h; sourceTree = "<group>"; };
 		181DEB0C19F17CB000998835 /* ExampleBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleBarVC.m; sourceTree = "<group>"; };
 		181DEB0E19F17CB000998835 /* HeartLive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartLive.h; sourceTree = "<group>"; };
@@ -458,31 +461,6 @@
 		181DEB1019F17CB000998835 /* heartLiveData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heartLiveData.txt; sourceTree = "<group>"; };
 		181DEB1119F17CB000998835 /* HeartLiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartLiveVC.h; sourceTree = "<group>"; };
 		181DEB1219F17CB000998835 /* HeartLiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartLiveVC.m; sourceTree = "<group>"; };
-		181DEB1419F17CB000998835 /* JBAreaChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBAreaChartViewController.h; sourceTree = "<group>"; };
-		181DEB1519F17CB000998835 /* JBAreaChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBAreaChartViewController.m; sourceTree = "<group>"; };
-		181DEB1619F17CB000998835 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
-		181DEB1719F17CB000998835 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
-		181DEB1819F17CB000998835 /* JBBarChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartViewController.h; sourceTree = "<group>"; };
-		181DEB1919F17CB000998835 /* JBBarChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartViewController.m; sourceTree = "<group>"; };
-		181DEB1A19F17CB000998835 /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseChartViewController.h; sourceTree = "<group>"; };
-		181DEB1B19F17CB000998835 /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseChartViewController.m; sourceTree = "<group>"; };
-		181DEB1C19F17CB000998835 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartHeaderView.h; sourceTree = "<group>"; };
-		181DEB1D19F17CB000998835 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartHeaderView.m; sourceTree = "<group>"; };
-		181DEB1E19F17CB000998835 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartInformationView.h; sourceTree = "<group>"; };
-		181DEB1F19F17CB000998835 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartInformationView.m; sourceTree = "<group>"; };
-		181DEB2019F17CB000998835 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipTipView.h; sourceTree = "<group>"; };
-		181DEB2119F17CB000998835 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
-		181DEB2219F17CB000998835 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
-		181DEB2319F17CB000998835 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
-		181DEB2419F17CB000998835 /* JBColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
-		181DEB2519F17CB000998835 /* JBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
-		181DEB2619F17CB000998835 /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
-		181DEB2719F17CB000998835 /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
-		181DEB2819F17CB000998835 /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
-		181DEB2919F17CB000998835 /* JBLineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewController.h; sourceTree = "<group>"; };
-		181DEB2A19F17CB000998835 /* JBLineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewController.m; sourceTree = "<group>"; };
-		181DEB2B19F17CB000998835 /* JBStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
-		181DEB2C19F17CB000998835 /* JBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		181DEB2E19F17CB000998835 /* JYRadarChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYRadarChartVC.h; sourceTree = "<group>"; };
 		181DEB2F19F17CB000998835 /* JYRadarChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYRadarChartVC.m; sourceTree = "<group>"; };
 		181DEB3119F17CB000998835 /* Example1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1Controller.h; sourceTree = "<group>"; };
@@ -520,19 +498,12 @@
 		181DEB5519F17CB100998835 /* RotatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatedView.h; sourceTree = "<group>"; };
 		181DEB5619F17CB100998835 /* RotatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatedView.m; sourceTree = "<group>"; };
 		181DEB5719F17CB100998835 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
-		181DEB5919F17CB100998835 /* PCChartsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartsTableViewController.h; sourceTree = "<group>"; };
-		181DEB5A19F17CB100998835 /* PCChartsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartsTableViewController.m; sourceTree = "<group>"; };
-		181DEB5B19F17CB100998835 /* PCChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartViewController.h; sourceTree = "<group>"; };
-		181DEB5C19F17CB100998835 /* PCChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartViewController.m; sourceTree = "<group>"; };
 		181DEB5E19F17CB100998835 /* PNLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChartView.h; sourceTree = "<group>"; };
 		181DEB5F19F17CB100998835 /* PNLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChartView.m; sourceTree = "<group>"; };
 		181DEB6019F17CB100998835 /* PNPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNPlot.h; sourceTree = "<group>"; };
 		181DEB6119F17CB100998835 /* PNPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNPlot.m; sourceTree = "<group>"; };
 		181DEB6219F17CB100998835 /* PNTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNTestViewController.h; sourceTree = "<group>"; };
 		181DEB6319F17CB100998835 /* PNTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNTestViewController.m; sourceTree = "<group>"; };
-		181DEB6519F17CB100998835 /* RealtimeCurve.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve.bundle; sourceTree = "<group>"; };
-		181DEB6619F17CB100998835 /* RealtimeCurveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeCurveVC.h; sourceTree = "<group>"; };
-		181DEB6719F17CB100998835 /* RealtimeCurveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeCurveVC.m; sourceTree = "<group>"; };
 		181DEB6919F17CB100998835 /* GaugeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeVC.h; sourceTree = "<group>"; };
 		181DEB6A19F17CB100998835 /* GaugeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeVC.m; sourceTree = "<group>"; };
 		181DEB6C19F17CB100998835 /* SHRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRootController.h; sourceTree = "<group>"; };
@@ -777,8 +748,6 @@
 		18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_2.jpg; sourceTree = "<group>"; };
 		18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_3.jpg; sourceTree = "<group>"; };
 		1886A60519F6204D0089A576 /* Performance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Performance.storyboard; sourceTree = "<group>"; };
-		1886A60919F698310089A576 /* DLGraphDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGraphDemoViewController.h; sourceTree = "<group>"; };
-		1886A60A19F698310089A576 /* DLGraphDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGraphDemoViewController.m; sourceTree = "<group>"; };
 		1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		18C2124919F27C2000FCBD23 /* BusinessContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContainerVC.h; sourceTree = "<group>"; };
@@ -954,6 +923,111 @@
 		18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopWarningInfoVC.m; sourceTree = "<group>"; };
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
+		18C5214119F89DF300C033C6 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		18C5214219F89DF300C033C6 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		18C5214319F89DF300C033C6 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		18C5214519F89DF300C033C6 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		18C5214619F89DF300C033C6 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		18C5214719F89DF300C033C6 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		18C5214919F89DF300C033C6 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		18C5214B19F89DF300C033C6 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		18C5214D19F89DF300C033C6 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		18C5214F19F89DF300C033C6 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		18C5215019F89DF300C033C6 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiTableViewController.h; sourceTree = "<group>"; };
+		18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiTableViewController.m; sourceTree = "<group>"; };
+		18C5215C19F89E4500C033C6 /* DXSemiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewController.h; sourceTree = "<group>"; };
+		18C5215D19F89E4500C033C6 /* DXSemiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewController.m; sourceTree = "<group>"; };
+		18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewControllerCategory.h; sourceTree = "<group>"; };
+		18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewControllerCategory.m; sourceTree = "<group>"; };
+		18C5216419F8A43A00C033C6 /* bamboo.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = bamboo.m4r; sourceTree = "<group>"; };
+		18C5216519F8A43A00C033C6 /* complete.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = complete.m4r; sourceTree = "<group>"; };
+		18C5216919F8A4C900C033C6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
+		18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
+		18C5216B19F8A4C900C033C6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		18C5216F19F8AADC00C033C6 /* sms-received6.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sms-received6.m4r"; sourceTree = "<group>"; };
+		18C5217519F8CA2000C033C6 /* SimpleLineChartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleLineChartVC.h; sourceTree = "<group>"; };
+		18C5217619F8CA2000C033C6 /* SimpleLineChartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleLineChartVC.m; sourceTree = "<group>"; };
+		18C5217819F8CA2000C033C6 /* DLGraphDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGraphDemoViewController.h; sourceTree = "<group>"; };
+		18C5217919F8CA2000C033C6 /* DLGraphDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGraphDemoViewController.m; sourceTree = "<group>"; };
+		18C5217B19F8CA2000C033C6 /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
+		18C5217C19F8CA2000C033C6 /* F3BarGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarGauge.m; sourceTree = "<group>"; };
+		18C5217D19F8CA2000C033C6 /* F3BarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarViewController.h; sourceTree = "<group>"; };
+		18C5217E19F8CA2000C033C6 /* F3BarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarViewController.m; sourceTree = "<group>"; };
+		18C5218019F8CA2000C033C6 /* Big3RevenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Big3RevenueViewController.h; sourceTree = "<group>"; };
+		18C5218119F8CA2000C033C6 /* Big3RevenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Big3RevenueViewController.m; sourceTree = "<group>"; };
+		18C5218219F8CA2000C033C6 /* ClickThroughRatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickThroughRatesViewController.h; sourceTree = "<group>"; };
+		18C5218319F8CA2000C033C6 /* ClickThroughRatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickThroughRatesViewController.m; sourceTree = "<group>"; };
+		18C5218419F8CA2000C033C6 /* Example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1.h; sourceTree = "<group>"; };
+		18C5218519F8CA2000C033C6 /* Example1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1.m; sourceTree = "<group>"; };
+		18C5218619F8CA2000C033C6 /* Example2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2.h; sourceTree = "<group>"; };
+		18C5218719F8CA2000C033C6 /* Example2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2.m; sourceTree = "<group>"; };
+		18C5218819F8CA2000C033C6 /* Example3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3.h; sourceTree = "<group>"; };
+		18C5218919F8CA2000C033C6 /* Example3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3.m; sourceTree = "<group>"; };
+		18C5218A19F8CA2000C033C6 /* Example4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example4.h; sourceTree = "<group>"; };
+		18C5218B19F8CA2000C033C6 /* Example4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example4.m; sourceTree = "<group>"; };
+		18C5218C19F8CA2000C033C6 /* GraphCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphCalcViewController.h; sourceTree = "<group>"; };
+		18C5218D19F8CA2000C033C6 /* GraphCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphCalcViewController.m; sourceTree = "<group>"; };
+		18C5218E19F8CA2000C033C6 /* SimpleChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleChartViewController.h; sourceTree = "<group>"; };
+		18C5218F19F8CA2000C033C6 /* SimpleChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleChartViewController.m; sourceTree = "<group>"; };
+		18C5219119F8CA2000C033C6 /* JBAreaChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBAreaChartViewController.h; sourceTree = "<group>"; };
+		18C5219219F8CA2000C033C6 /* JBAreaChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBAreaChartViewController.m; sourceTree = "<group>"; };
+		18C5219319F8CA2000C033C6 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
+		18C5219419F8CA2000C033C6 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
+		18C5219519F8CA2000C033C6 /* JBBarChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartViewController.h; sourceTree = "<group>"; };
+		18C5219619F8CA2000C033C6 /* JBBarChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartViewController.m; sourceTree = "<group>"; };
+		18C5219719F8CA2000C033C6 /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseChartViewController.h; sourceTree = "<group>"; };
+		18C5219819F8CA2000C033C6 /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseChartViewController.m; sourceTree = "<group>"; };
+		18C5219919F8CA2000C033C6 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartHeaderView.h; sourceTree = "<group>"; };
+		18C5219A19F8CA2000C033C6 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartHeaderView.m; sourceTree = "<group>"; };
+		18C5219B19F8CA2000C033C6 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartInformationView.h; sourceTree = "<group>"; };
+		18C5219C19F8CA2000C033C6 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartInformationView.m; sourceTree = "<group>"; };
+		18C5219D19F8CA2000C033C6 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipTipView.h; sourceTree = "<group>"; };
+		18C5219E19F8CA2000C033C6 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
+		18C5219F19F8CA2000C033C6 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
+		18C521A019F8CA2000C033C6 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
+		18C521A119F8CA2000C033C6 /* JBColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
+		18C521A219F8CA2000C033C6 /* JBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
+		18C521A319F8CA2000C033C6 /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
+		18C521A419F8CA2000C033C6 /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
+		18C521A519F8CA2000C033C6 /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
+		18C521A619F8CA2000C033C6 /* JBLineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartViewController.h; sourceTree = "<group>"; };
+		18C521A719F8CA2000C033C6 /* JBLineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartViewController.m; sourceTree = "<group>"; };
+		18C521A819F8CA2000C033C6 /* JBStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
+		18C521A919F8CA2000C033C6 /* JBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
+		18C521AB19F8CA2000C033C6 /* PCChartsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartsTableViewController.h; sourceTree = "<group>"; };
+		18C521AC19F8CA2000C033C6 /* PCChartsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartsTableViewController.m; sourceTree = "<group>"; };
+		18C521AD19F8CA2000C033C6 /* PCChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartViewController.h; sourceTree = "<group>"; };
+		18C521AE19F8CA2000C033C6 /* PCChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartViewController.m; sourceTree = "<group>"; };
+		18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve.bundle; sourceTree = "<group>"; };
+		18C521B119F8CA2000C033C6 /* RealtimeCurveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeCurveVC.h; sourceTree = "<group>"; };
+		18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeCurveVC.m; sourceTree = "<group>"; };
+		18C521B419F8CA2000C033C6 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
+		18C521B519F8CA2000C033C6 /* WMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeView.m; sourceTree = "<group>"; };
+		18C521D319F8CDF500C033C6 /* MBPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPanGestureRecognizer.h; sourceTree = "<group>"; };
+		18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPanGestureRecognizer.m; sourceTree = "<group>"; };
+		18C521D619F8CDF500C033C6 /* MBMapNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapNode.h; sourceTree = "<group>"; };
+		18C521D719F8CDF500C033C6 /* MBMapNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapNode.m; sourceTree = "<group>"; };
+		18C521D819F8CDF500C033C6 /* MBMapNodeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapNodeLine.h; sourceTree = "<group>"; };
+		18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapNodeLine.m; sourceTree = "<group>"; };
+		18C521DA19F8CDF500C033C6 /* MBMapUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapUI.h; sourceTree = "<group>"; };
+		18C521DB19F8CDF500C033C6 /* MBSpacialMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialMap.h; sourceTree = "<group>"; };
+		18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialMap.m; sourceTree = "<group>"; };
+		18C521DD19F8CDF500C033C6 /* MBSpacialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialChildViewController.h; sourceTree = "<group>"; };
+		18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialChildViewController.m; sourceTree = "<group>"; };
+		18C521DF19F8CDF500C033C6 /* MBSpacialMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialMasterViewController.h; sourceTree = "<group>"; };
+		18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialMasterViewController.m; sourceTree = "<group>"; };
+		18C521E819F8DA6700C033C6 /* DAPIPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPIPView.h; sourceTree = "<group>"; };
+		18C521E919F8DA6700C033C6 /* DAPIPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPIPView.m; sourceTree = "<group>"; };
+		18C521EA19F8DA6700C033C6 /* SquareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDelegate.h; sourceTree = "<group>"; };
+		18C521EB19F8DA6700C033C6 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
+		18C521EC19F8DA6700C033C6 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionCell.h; sourceTree = "<group>"; };
 		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
@@ -1053,27 +1127,20 @@
 			isa = PBXGroup;
 			children = (
 				181DEABF19F17CB000998835 /* ARLineChart */,
-				181DEAC819F17CB000998835 /* BEMSimpleLineGraph */,
 				181DEACB19F17CB000998835 /* BTSpiderPlotterView */,
 				181DEAD019F17CB000998835 /* Charts.storyboard */,
 				181DEAD119F17CB000998835 /* Datagrid */,
-				1886A60819F698310089A576 /* DLForcedGraphView */,
 				181DEAE219F17CB000998835 /* DoubleLineChart */,
 				181DEAED19F17CB000998835 /* EChart */,
-				181DEAF419F17CB000998835 /* F3BarGauge */,
-				181DEAF919F17CB000998835 /* FRD3DBarChart */,
 				181DEB0A19F17CB000998835 /* GraphKit */,
 				181DEB0D19F17CB000998835 /* HeartRateCurve */,
-				181DEB1319F17CB000998835 /* JBChartView */,
 				181DEB2D19F17CB000998835 /* JYRadarChart */,
 				181DEB3019F17CB000998835 /* MagicPie */,
 				181DEB3B19F17CB000998835 /* MPPlot */,
 				181DEB3E19F17CB000998835 /* MZGraph */,
 				181DEB4519F17CB000998835 /* PercentageChart */,
 				181DEB4C19F17CB000998835 /* PieChart */,
-				181DEB5819F17CB100998835 /* PNChart */,
 				181DEB5D19F17CB100998835 /* PNLineChart */,
-				181DEB6419F17CB100998835 /* RealtimeCurve */,
 				181DEB6819F17CB100998835 /* SFGaugeView */,
 				181DEB6B19F17CB100998835 /* SHLineGraphView */,
 				181DEB6E19F17CB100998835 /* TWRCharts */,
@@ -1095,15 +1162,6 @@
 				181DEAC719F17CB000998835 /* DoubleYSeriesVC.m */,
 			);
 			path = ARLineChart;
-			sourceTree = "<group>";
-		};
-		181DEAC819F17CB000998835 /* BEMSimpleLineGraph */ = {
-			isa = PBXGroup;
-			children = (
-				181DEAC919F17CB000998835 /* SimpleLineChartVC.h */,
-				181DEACA19F17CB000998835 /* SimpleLineChartVC.m */,
-			);
-			path = BEMSimpleLineGraph;
 			sourceTree = "<group>";
 		};
 		181DEACB19F17CB000998835 /* BTSpiderPlotterView */ = {
@@ -1170,40 +1228,6 @@
 			path = EChart;
 			sourceTree = "<group>";
 		};
-		181DEAF419F17CB000998835 /* F3BarGauge */ = {
-			isa = PBXGroup;
-			children = (
-				181DEAF519F17CB000998835 /* F3BarGauge.h */,
-				181DEAF619F17CB000998835 /* F3BarGauge.m */,
-				181DEAF719F17CB000998835 /* F3BarViewController.h */,
-				181DEAF819F17CB000998835 /* F3BarViewController.m */,
-			);
-			path = F3BarGauge;
-			sourceTree = "<group>";
-		};
-		181DEAF919F17CB000998835 /* FRD3DBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				181DEAFA19F17CB000998835 /* Big3RevenueViewController.h */,
-				181DEAFB19F17CB000998835 /* Big3RevenueViewController.m */,
-				181DEAFC19F17CB000998835 /* ClickThroughRatesViewController.h */,
-				181DEAFD19F17CB000998835 /* ClickThroughRatesViewController.m */,
-				181DEAFE19F17CB000998835 /* Example1.h */,
-				181DEAFF19F17CB000998835 /* Example1.m */,
-				181DEB0019F17CB000998835 /* Example2.h */,
-				181DEB0119F17CB000998835 /* Example2.m */,
-				181DEB0219F17CB000998835 /* Example3.h */,
-				181DEB0319F17CB000998835 /* Example3.m */,
-				181DEB0419F17CB000998835 /* Example4.h */,
-				181DEB0519F17CB000998835 /* Example4.m */,
-				181DEB0619F17CB000998835 /* GraphCalcViewController.h */,
-				181DEB0719F17CB000998835 /* GraphCalcViewController.m */,
-				181DEB0819F17CB000998835 /* SimpleChartViewController.h */,
-				181DEB0919F17CB000998835 /* SimpleChartViewController.m */,
-			);
-			path = FRD3DBarChart;
-			sourceTree = "<group>";
-		};
 		181DEB0A19F17CB000998835 /* GraphKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,38 +1247,6 @@
 				181DEB1219F17CB000998835 /* HeartLiveVC.m */,
 			);
 			path = HeartRateCurve;
-			sourceTree = "<group>";
-		};
-		181DEB1319F17CB000998835 /* JBChartView */ = {
-			isa = PBXGroup;
-			children = (
-				181DEB1419F17CB000998835 /* JBAreaChartViewController.h */,
-				181DEB1519F17CB000998835 /* JBAreaChartViewController.m */,
-				181DEB1619F17CB000998835 /* JBBarChartFooterView.h */,
-				181DEB1719F17CB000998835 /* JBBarChartFooterView.m */,
-				181DEB1819F17CB000998835 /* JBBarChartViewController.h */,
-				181DEB1919F17CB000998835 /* JBBarChartViewController.m */,
-				181DEB1A19F17CB000998835 /* JBBaseChartViewController.h */,
-				181DEB1B19F17CB000998835 /* JBBaseChartViewController.m */,
-				181DEB1C19F17CB000998835 /* JBChartHeaderView.h */,
-				181DEB1D19F17CB000998835 /* JBChartHeaderView.m */,
-				181DEB1E19F17CB000998835 /* JBChartInformationView.h */,
-				181DEB1F19F17CB000998835 /* JBChartInformationView.m */,
-				181DEB2019F17CB000998835 /* JBChartTooltipTipView.h */,
-				181DEB2119F17CB000998835 /* JBChartTooltipTipView.m */,
-				181DEB2219F17CB000998835 /* JBChartTooltipView.h */,
-				181DEB2319F17CB000998835 /* JBChartTooltipView.m */,
-				181DEB2419F17CB000998835 /* JBColorConstants.h */,
-				181DEB2519F17CB000998835 /* JBConstants.h */,
-				181DEB2619F17CB000998835 /* JBFontConstants.h */,
-				181DEB2719F17CB000998835 /* JBLineChartFooterView.h */,
-				181DEB2819F17CB000998835 /* JBLineChartFooterView.m */,
-				181DEB2919F17CB000998835 /* JBLineChartViewController.h */,
-				181DEB2A19F17CB000998835 /* JBLineChartViewController.m */,
-				181DEB2B19F17CB000998835 /* JBStringConstants.h */,
-				181DEB2C19F17CB000998835 /* JBUIConstants.h */,
-			);
-			path = JBChartView;
 			sourceTree = "<group>";
 		};
 		181DEB2D19F17CB000998835 /* JYRadarChart */ = {
@@ -1336,17 +1328,6 @@
 			path = PieChart;
 			sourceTree = "<group>";
 		};
-		181DEB5819F17CB100998835 /* PNChart */ = {
-			isa = PBXGroup;
-			children = (
-				181DEB5919F17CB100998835 /* PCChartsTableViewController.h */,
-				181DEB5A19F17CB100998835 /* PCChartsTableViewController.m */,
-				181DEB5B19F17CB100998835 /* PCChartViewController.h */,
-				181DEB5C19F17CB100998835 /* PCChartViewController.m */,
-			);
-			path = PNChart;
-			sourceTree = "<group>";
-		};
 		181DEB5D19F17CB100998835 /* PNLineChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -1358,16 +1339,6 @@
 				181DEB6319F17CB100998835 /* PNTestViewController.m */,
 			);
 			path = PNLineChart;
-			sourceTree = "<group>";
-		};
-		181DEB6419F17CB100998835 /* RealtimeCurve */ = {
-			isa = PBXGroup;
-			children = (
-				181DEB6519F17CB100998835 /* RealtimeCurve.bundle */,
-				181DEB6619F17CB100998835 /* RealtimeCurveVC.h */,
-				181DEB6719F17CB100998835 /* RealtimeCurveVC.m */,
-			);
-			path = RealtimeCurve;
 			sourceTree = "<group>";
 		};
 		181DEB6819F17CB100998835 /* SFGaugeView */ = {
@@ -1698,6 +1669,15 @@
 		186E689919F5EF8100717BCE /* performance */ = {
 			isa = PBXGroup;
 			children = (
+				18C521E719F8DA6700C033C6 /* SquareView */,
+				18C5217419F8CA2000C033C6 /* BEMSimpleLineGraph */,
+				18C5217719F8CA2000C033C6 /* DLForcedGraphView */,
+				18C5217A19F8CA2000C033C6 /* F3BarGauge */,
+				18C5217F19F8CA2000C033C6 /* FRD3DBarChart */,
+				18C5219019F8CA2000C033C6 /* JBChartView */,
+				18C521AA19F8CA2000C033C6 /* PNChart */,
+				18C521AF19F8CA2000C033C6 /* RealtimeCurve */,
+				18C521B319F8CA2000C033C6 /* WMGaugeView */,
 				186E68AC19F5F8E000717BCE /* VmDetailPerformanceVC.h */,
 				186E68AD19F5F8E000717BCE /* VmDetailPerformanceVC.m */,
 				186E68AF19F5F8F800717BCE /* HostDetailPerformanceVC.h */,
@@ -1769,15 +1749,6 @@
 				18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */,
 			);
 			path = EScrollerView;
-			sourceTree = "<group>";
-		};
-		1886A60819F698310089A576 /* DLForcedGraphView */ = {
-			isa = PBXGroup;
-			children = (
-				1886A60919F698310089A576 /* DLGraphDemoViewController.h */,
-				1886A60A19F698310089A576 /* DLGraphDemoViewController.m */,
-			);
-			path = DLForcedGraphView;
 			sourceTree = "<group>";
 		};
 		18C2124719F27C2000FCBD23 /* controllers */ = {
@@ -1859,6 +1830,11 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				18C521D119F8CDF500C033C6 /* MBSpacialViewController */,
+				18C5216819F8A4C900C033C6 /* BTGlassScrollView */,
+				18C5216319F8A43A00C033C6 /* sounds */,
+				18C5215919F89E4500C033C6 /* DXSemiSide */,
+				18C5214019F89DF300C033C6 /* MJRefresh */,
 				1824365719F56A38007E4D6C /* SunButtonBoard */,
 				1824363419F544C6007E4D6C /* DTNavigationController */,
 				18763C1819F4EE0200669CC3 /* EScrollerView */,
@@ -2079,6 +2055,225 @@
 			path = warning;
 			sourceTree = "<group>";
 		};
+		18C5214019F89DF300C033C6 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				18C5214119F89DF300C033C6 /* MJRefresh.bundle */,
+				18C5214219F89DF300C033C6 /* MJRefresh.h */,
+				18C5214319F89DF300C033C6 /* MJRefreshBaseView.h */,
+				18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */,
+				18C5214519F89DF300C033C6 /* MJRefreshConst.h */,
+				18C5214619F89DF300C033C6 /* MJRefreshConst.m */,
+				18C5214719F89DF300C033C6 /* MJRefreshFooterView.h */,
+				18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */,
+				18C5214919F89DF300C033C6 /* MJRefreshHeaderView.h */,
+				18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */,
+				18C5214B19F89DF300C033C6 /* UIScrollView+MJExtension.h */,
+				18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */,
+				18C5214D19F89DF300C033C6 /* UIScrollView+MJRefresh.h */,
+				18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */,
+				18C5214F19F89DF300C033C6 /* UIView+MJExtension.h */,
+				18C5215019F89DF300C033C6 /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		18C5215919F89E4500C033C6 /* DXSemiSide */ = {
+			isa = PBXGroup;
+			children = (
+				18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */,
+				18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */,
+				18C5215C19F89E4500C033C6 /* DXSemiViewController.h */,
+				18C5215D19F89E4500C033C6 /* DXSemiViewController.m */,
+				18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */,
+				18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */,
+			);
+			path = DXSemiSide;
+			sourceTree = "<group>";
+		};
+		18C5216319F8A43A00C033C6 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18C5216F19F8AADC00C033C6 /* sms-received6.m4r */,
+				18C5216419F8A43A00C033C6 /* bamboo.m4r */,
+				18C5216519F8A43A00C033C6 /* complete.m4r */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		18C5216819F8A4C900C033C6 /* BTGlassScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				18C5216919F8A4C900C033C6 /* BTGlassScrollView.h */,
+				18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */,
+				18C5216B19F8A4C900C033C6 /* UIImage+ImageEffects.h */,
+				18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */,
+			);
+			path = BTGlassScrollView;
+			sourceTree = "<group>";
+		};
+		18C5217419F8CA2000C033C6 /* BEMSimpleLineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				18C5217519F8CA2000C033C6 /* SimpleLineChartVC.h */,
+				18C5217619F8CA2000C033C6 /* SimpleLineChartVC.m */,
+			);
+			path = BEMSimpleLineGraph;
+			sourceTree = "<group>";
+		};
+		18C5217719F8CA2000C033C6 /* DLForcedGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				18C5217819F8CA2000C033C6 /* DLGraphDemoViewController.h */,
+				18C5217919F8CA2000C033C6 /* DLGraphDemoViewController.m */,
+			);
+			path = DLForcedGraphView;
+			sourceTree = "<group>";
+		};
+		18C5217A19F8CA2000C033C6 /* F3BarGauge */ = {
+			isa = PBXGroup;
+			children = (
+				18C5217B19F8CA2000C033C6 /* F3BarGauge.h */,
+				18C5217C19F8CA2000C033C6 /* F3BarGauge.m */,
+				18C5217D19F8CA2000C033C6 /* F3BarViewController.h */,
+				18C5217E19F8CA2000C033C6 /* F3BarViewController.m */,
+			);
+			path = F3BarGauge;
+			sourceTree = "<group>";
+		};
+		18C5217F19F8CA2000C033C6 /* FRD3DBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				18C5218019F8CA2000C033C6 /* Big3RevenueViewController.h */,
+				18C5218119F8CA2000C033C6 /* Big3RevenueViewController.m */,
+				18C5218219F8CA2000C033C6 /* ClickThroughRatesViewController.h */,
+				18C5218319F8CA2000C033C6 /* ClickThroughRatesViewController.m */,
+				18C5218419F8CA2000C033C6 /* Example1.h */,
+				18C5218519F8CA2000C033C6 /* Example1.m */,
+				18C5218619F8CA2000C033C6 /* Example2.h */,
+				18C5218719F8CA2000C033C6 /* Example2.m */,
+				18C5218819F8CA2000C033C6 /* Example3.h */,
+				18C5218919F8CA2000C033C6 /* Example3.m */,
+				18C5218A19F8CA2000C033C6 /* Example4.h */,
+				18C5218B19F8CA2000C033C6 /* Example4.m */,
+				18C5218C19F8CA2000C033C6 /* GraphCalcViewController.h */,
+				18C5218D19F8CA2000C033C6 /* GraphCalcViewController.m */,
+				18C5218E19F8CA2000C033C6 /* SimpleChartViewController.h */,
+				18C5218F19F8CA2000C033C6 /* SimpleChartViewController.m */,
+			);
+			path = FRD3DBarChart;
+			sourceTree = "<group>";
+		};
+		18C5219019F8CA2000C033C6 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				18C5219119F8CA2000C033C6 /* JBAreaChartViewController.h */,
+				18C5219219F8CA2000C033C6 /* JBAreaChartViewController.m */,
+				18C5219319F8CA2000C033C6 /* JBBarChartFooterView.h */,
+				18C5219419F8CA2000C033C6 /* JBBarChartFooterView.m */,
+				18C5219519F8CA2000C033C6 /* JBBarChartViewController.h */,
+				18C5219619F8CA2000C033C6 /* JBBarChartViewController.m */,
+				18C5219719F8CA2000C033C6 /* JBBaseChartViewController.h */,
+				18C5219819F8CA2000C033C6 /* JBBaseChartViewController.m */,
+				18C5219919F8CA2000C033C6 /* JBChartHeaderView.h */,
+				18C5219A19F8CA2000C033C6 /* JBChartHeaderView.m */,
+				18C5219B19F8CA2000C033C6 /* JBChartInformationView.h */,
+				18C5219C19F8CA2000C033C6 /* JBChartInformationView.m */,
+				18C5219D19F8CA2000C033C6 /* JBChartTooltipTipView.h */,
+				18C5219E19F8CA2000C033C6 /* JBChartTooltipTipView.m */,
+				18C5219F19F8CA2000C033C6 /* JBChartTooltipView.h */,
+				18C521A019F8CA2000C033C6 /* JBChartTooltipView.m */,
+				18C521A119F8CA2000C033C6 /* JBColorConstants.h */,
+				18C521A219F8CA2000C033C6 /* JBConstants.h */,
+				18C521A319F8CA2000C033C6 /* JBFontConstants.h */,
+				18C521A419F8CA2000C033C6 /* JBLineChartFooterView.h */,
+				18C521A519F8CA2000C033C6 /* JBLineChartFooterView.m */,
+				18C521A619F8CA2000C033C6 /* JBLineChartViewController.h */,
+				18C521A719F8CA2000C033C6 /* JBLineChartViewController.m */,
+				18C521A819F8CA2000C033C6 /* JBStringConstants.h */,
+				18C521A919F8CA2000C033C6 /* JBUIConstants.h */,
+			);
+			path = JBChartView;
+			sourceTree = "<group>";
+		};
+		18C521AA19F8CA2000C033C6 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				18C521AB19F8CA2000C033C6 /* PCChartsTableViewController.h */,
+				18C521AC19F8CA2000C033C6 /* PCChartsTableViewController.m */,
+				18C521AD19F8CA2000C033C6 /* PCChartViewController.h */,
+				18C521AE19F8CA2000C033C6 /* PCChartViewController.m */,
+			);
+			path = PNChart;
+			sourceTree = "<group>";
+		};
+		18C521AF19F8CA2000C033C6 /* RealtimeCurve */ = {
+			isa = PBXGroup;
+			children = (
+				18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */,
+				18C521B119F8CA2000C033C6 /* RealtimeCurveVC.h */,
+				18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */,
+			);
+			path = RealtimeCurve;
+			sourceTree = "<group>";
+		};
+		18C521B319F8CA2000C033C6 /* WMGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				18C521B419F8CA2000C033C6 /* WMGaugeView.h */,
+				18C521B519F8CA2000C033C6 /* WMGaugeView.m */,
+			);
+			path = WMGaugeView;
+			sourceTree = "<group>";
+		};
+		18C521D119F8CDF500C033C6 /* MBSpacialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D219F8CDF500C033C6 /* Gestures */,
+				18C521D519F8CDF500C033C6 /* Map */,
+				18C521DD19F8CDF500C033C6 /* MBSpacialChildViewController.h */,
+				18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */,
+				18C521DF19F8CDF500C033C6 /* MBSpacialMasterViewController.h */,
+				18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */,
+			);
+			path = MBSpacialViewController;
+			sourceTree = "<group>";
+		};
+		18C521D219F8CDF500C033C6 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D319F8CDF500C033C6 /* MBPanGestureRecognizer.h */,
+				18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		18C521D519F8CDF500C033C6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D619F8CDF500C033C6 /* MBMapNode.h */,
+				18C521D719F8CDF500C033C6 /* MBMapNode.m */,
+				18C521D819F8CDF500C033C6 /* MBMapNodeLine.h */,
+				18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */,
+				18C521DA19F8CDF500C033C6 /* MBMapUI.h */,
+				18C521DB19F8CDF500C033C6 /* MBSpacialMap.h */,
+				18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		18C521E719F8DA6700C033C6 /* SquareView */ = {
+			isa = PBXGroup;
+			children = (
+				18C521E819F8DA6700C033C6 /* DAPIPView.h */,
+				18C521E919F8DA6700C033C6 /* DAPIPView.m */,
+				18C521EA19F8DA6700C033C6 /* SquareDelegate.h */,
+				18C521EB19F8DA6700C033C6 /* SquareViewController.h */,
+				18C521EC19F8DA6700C033C6 /* SquareViewController.m */,
+			);
+			path = SquareView;
+			sourceTree = "<group>";
+		};
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2146,6 +2341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C5217019F8AE4600C033C6 /* sms-received6.m4r in Resources */,
 				1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */,
 				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
 				181DED4E19F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json in Resources */,
@@ -2168,7 +2364,6 @@
 				1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */,
 				181DECC919F17CB100998835 /* heartLiveData.txt in Resources */,
 				181DED5A19F17CB100998835 /* HostVO.getVmListAsync.json in Resources */,
-				181DECEE19F17CB100998835 /* RealtimeCurve.bundle in Resources */,
 				181DED4C19F17CB100998835 /* DatacenterVO.getHostListAsync.limit.json in Resources */,
 				181DED9D19F17CB100998835 /* VM.storyboard in Resources */,
 				181DED5E19F17CB100998835 /* PoolVO.getPoolElasticAsync.json in Resources */,
@@ -2176,6 +2371,7 @@
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
 				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
 				1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */,
+				18C5216719F8A43A00C033C6 /* complete.m4r in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
@@ -2214,6 +2410,7 @@
 				181DEAA819F17C4E00998835 /* LaunchScreen.xib in Resources */,
 				181DED6419F17CB100998835 /* StorageVO.getStorageVOAsync.json in Resources */,
 				18763C1F19F4EE0200669CC3 /* EScrollerView_1.jpg in Resources */,
+				18C521CE19F8CA2000C033C6 /* RealtimeCurve.bundle in Resources */,
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,
@@ -2228,6 +2425,7 @@
 				18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */,
 				181DECAA19F17CB100998835 /* down_white@2x.png in Resources */,
 				1824365619F544C6007E4D6C /* Home@2x.png in Resources */,
+				18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */,
@@ -2269,6 +2467,7 @@
 				181DED6119F17CB100998835 /* PoolVO.getStorageListAsync.json in Resources */,
 				18763C1419F4E4E400669CC3 /* avatar@2x.jpg in Resources */,
 				1824365019F544C6007E4D6C /* ActionBtnPress@2x.png in Resources */,
+				18C5216619F8A43A00C033C6 /* bamboo.m4r in Resources */,
 				181DED6919F17CB100998835 /* VmVO.getVmVOAsync.json in Resources */,
 				18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */,
 				181DED5719F17CB100998835 /* HostVO.getHostStatVOAsync.json in Resources */,
@@ -2323,36 +2522,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				1886A60719F6516E0089A576 /* VmStateVO.m in Sources */,
-				181DECC319F17CB100998835 /* Example3.m in Sources */,
+				18C5215519F89DF300C033C6 /* MJRefreshHeaderView.m in Sources */,
 				18C2130719F27C2000FCBD23 /* BusinessDashboardVC.m in Sources */,
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
-				181DECD219F17CB100998835 /* JBChartTooltipView.m in Sources */,
 				181DECB419F17CB100998835 /* chatView.m in Sources */,
-				181DECD119F17CB100998835 /* JBChartTooltipTipView.m in Sources */,
 				18C2134D19F27C2000FCBD23 /* VmDetailInfoVC.m in Sources */,
+				18C521C819F8CA2000C033C6 /* JBChartTooltipTipView.m in Sources */,
 				18C2130819F27C2000FCBD23 /* BusinessDetailInfoVC.m in Sources */,
 				18C2134A19F27C2000FCBD23 /* VmDashboardHeader.m in Sources */,
-				181DECCD19F17CB100998835 /* JBBarChartViewController.m in Sources */,
+				18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
+				18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */,
+				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
 				181DECA419F17CB100998835 /* DoubleYSeriesVC.m in Sources */,
-				181DECCE19F17CB100998835 /* JBBaseChartViewController.m in Sources */,
 				181DECF719F17CB100998835 /* CalendarDateUtil.m in Sources */,
 				18C2132F19F27C2000FCBD23 /* NetworkContainerVC.m in Sources */,
 				181DED8F19F17CB100998835 /* VmNetworkListResult.m in Sources */,
+				18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */,
 				181DED7E19F17CB100998835 /* LicenseWciVO.m in Sources */,
 				18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */,
 				843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */,
 				181DECBB19F17CB100998835 /* ELineChartViewController.m in Sources */,
-				181DECCC19F17CB100998835 /* JBBarChartFooterView.m in Sources */,
 				18C2135819F27C2000FCBD23 /* PopWarningInfoCell.m in Sources */,
 				18C2134E19F27C2000FCBD23 /* VmDetailMemryConfigVC.m in Sources */,
 				181DED7119F17CB100998835 /* ControlRecordVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
+				18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */,
+				18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */,
 				181DECDA19F17CB100998835 /* MyPieElement.m in Sources */,
 				18C2133A19F27C2000FCBD23 /* StorageContainerVC.m in Sources */,
 				1824364C19F544C6007E4D6C /* DTNavigationController.m in Sources */,
@@ -2366,56 +2567,63 @@
 				181DECD519F17CB100998835 /* JYRadarChartVC.m in Sources */,
 				18C2132019F27C2000FCBD23 /* HostDashboardCell.m in Sources */,
 				847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */,
-				181DECEF19F17CB100998835 /* RealtimeCurveVC.m in Sources */,
+				18C521CF19F8CA2000C033C6 /* RealtimeCurveVC.m in Sources */,
 				18C2131719F27C2000FCBD23 /* DashboardTableVC.m in Sources */,
 				18C2131019F27C2000FCBD23 /* MSEvent.m in Sources */,
+				18C521CA19F8CA2000C033C6 /* JBLineChartFooterView.m in Sources */,
 				18C2132119F27C2000FCBD23 /* HostDashboardHeader.m in Sources */,
+				18C521C319F8CA2000C033C6 /* JBBarChartFooterView.m in Sources */,
 				181DEA9D19F17C4E00998835 /* AppDelegate.m in Sources */,
 				1824364B19F544C6007E4D6C /* DTFolderItem.m in Sources */,
 				181DECEC19F17CB100998835 /* PNPlot.m in Sources */,
-				181DECD019F17CB100998835 /* JBChartInformationView.m in Sources */,
 				18C2134519F27C2000FCBD23 /* UIButton+Badge.m in Sources */,
 				18C2133019F27C2000FCBD23 /* PoolContainerVC.m in Sources */,
 				1824360619F4F774007E4D6C /* RADataObject.m in Sources */,
 				18C2131319F27C2000FCBD23 /* MSGridline.m in Sources */,
 				181DED7819F17CB100998835 /* HostNetworkVO.m in Sources */,
-				181DECBE19F17CB100998835 /* F3BarViewController.m in Sources */,
 				181DED8319F17CB100998835 /* PoolListResult.m in Sources */,
 				18C2131F19F27C2000FCBD23 /* HostContainerVC.m in Sources */,
 				18C2135719F27C2000FCBD23 /* VmNewVC.m in Sources */,
 				845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */,
 				18C2130D19F27C2000FCBD23 /* MSCurrentTimeIndicator.m in Sources */,
 				18763BBE19F4B82300669CC3 /* DialScrollImage.m in Sources */,
-				181DECD319F17CB100998835 /* JBLineChartFooterView.m in Sources */,
 				181DECD619F17CB100998835 /* Example1Controller.m in Sources */,
+				18C521E419F8CDF500C033C6 /* MBSpacialMap.m in Sources */,
 				181DECED19F17CB100998835 /* PNTestViewController.m in Sources */,
 				181DECE419F17CB100998835 /* PieChartVC.m in Sources */,
 				18C2133919F27C2000FCBD23 /* StorageCollectionVC.m in Sources */,
+				18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */,
 				181DED7A19F17CB100998835 /* HostNicVO.m in Sources */,
 				181DECE719F17CB100998835 /* RotatedView.m in Sources */,
+				18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */,
 				181DECDF19F17CB100998835 /* PercentageChart.m in Sources */,
+				18C521BB19F8CA2000C033C6 /* ClickThroughRatesViewController.m in Sources */,
 				181DECD819F17CB100998835 /* Example2Controller.m in Sources */,
+				18C521BE19F8CA2000C033C6 /* Example3.m in Sources */,
 				18C2133519F27C2000FCBD23 /* PopOptionLicenseVC.m in Sources */,
 				18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */,
 				18763C1719F4E4E400669CC3 /* VPImageCropperViewController.m in Sources */,
-				181DECC419F17CB100998835 /* Example4.m in Sources */,
 				181DECDB19F17CB100998835 /* MPPlotVC.m in Sources */,
 				18C2132819F27C2000FCBD23 /* HostNicCollectionVC.m in Sources */,
 				181DECE119F17CB100998835 /* PercentageChartVC.m in Sources */,
 				843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */,
+				18C521BC19F8CA2000C033C6 /* Example1.m in Sources */,
 				18C2134619F27C2000FCBD23 /* VmCollectionCell.m in Sources */,
 				181DED8C19F17CB100998835 /* VmDiskListResult.m in Sources */,
 				18C2134419F27C2000FCBD23 /* UIBarButtonItem+Badge.m in Sources */,
 				181DECC819F17CB100998835 /* HeartLive.m in Sources */,
 				181DED8E19F17CB100998835 /* VmListResult.m in Sources */,
+				18C521C519F8CA2000C033C6 /* JBBaseChartViewController.m in Sources */,
 				181DED7719F17CB100998835 /* HostNetworkListResult.m in Sources */,
 				18C2134C19F27C2000FCBD23 /* VmDetailCPUConfigVC.m in Sources */,
 				181DED7319F17CB100998835 /* DatacenterStatVO.m in Sources */,
 				181DED8819F17CB100998835 /* StorageVolumnListResult.m in Sources */,
 				181DECF019F17CB100998835 /* GaugeVC.m in Sources */,
 				18C2131919F27C2000FCBD23 /* MasterCollectionVC.m in Sources */,
+				18C521E519F8CDF500C033C6 /* MBSpacialChildViewController.m in Sources */,
 				181DED9219F17CB100998835 /* WarningInfoListResult.m in Sources */,
 				181DECE619F17CB100998835 /* RenderView.m in Sources */,
+				18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */,
 				18C2133619F27C2000FCBD23 /* PopOptionsUserInfoVC.m in Sources */,
 				843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */,
 				181DECA119F17CB100998835 /* ARLineChartCommon.m in Sources */,
@@ -2424,9 +2632,9 @@
 				181DECAE19F17CB100998835 /* PoolDatagridCell.m in Sources */,
 				18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				181DECD719F17CB100998835 /* Example1PieView.m in Sources */,
+				18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */,
 				181DECEB19F17CB100998835 /* PNLineChartView.m in Sources */,
 				1824360919F4F774007E4D6C /* RAViewController.m in Sources */,
-				181DECA519F17CB100998835 /* SimpleLineChartVC.m in Sources */,
 				18C2133D19F27C2000FCBD23 /* StorageDashboardVC.m in Sources */,
 				181DECA219F17CB100998835 /* ARLineChartContentView.m in Sources */,
 				181DECF219F17CB100998835 /* TWRViewController.m in Sources */,
@@ -2434,15 +2642,18 @@
 				18C2131519F27C2000FCBD23 /* MSTimeRowHeaderBackground.m in Sources */,
 				181DECB819F17CB100998835 /* InfoView.m in Sources */,
 				18C2133819F27C2000FCBD23 /* StorageCollectionCell.m in Sources */,
+				18C521B619F8CA2000C033C6 /* SimpleLineChartVC.m in Sources */,
+				18C521C919F8CA2000C033C6 /* JBChartTooltipView.m in Sources */,
 				18C2133B19F27C2000FCBD23 /* StorageDashboardCell.m in Sources */,
+				18C5215819F89DF300C033C6 /* UIView+MJExtension.m in Sources */,
 				18C2132319F27C2000FCBD23 /* HostDetailInfoVC.m in Sources */,
 				18C2134B19F27C2000FCBD23 /* VmDashboardVC.m in Sources */,
 				18C2134019F27C2000FCBD23 /* StorageDiskCollectionVC.m in Sources */,
-				181DECC619F17CB100998835 /* SimpleChartViewController.m in Sources */,
 				181DECE019F17CB100998835 /* PercentageChartLayer.m in Sources */,
 				181DECA319F17CB100998835 /* ARLineChartView.m in Sources */,
+				18C5215419F89DF300C033C6 /* MJRefreshFooterView.m in Sources */,
+				18C521CB19F8CA2000C033C6 /* JBLineChartViewController.m in Sources */,
 				18C2131119F27C2000FCBD23 /* MSEventCell.m in Sources */,
-				181DECC119F17CB100998835 /* Example1.m in Sources */,
 				181DED7519F17CB100998835 /* DatacenterVO.m in Sources */,
 				18C2130F19F27C2000FCBD23 /* MSDayColumnHeaderBackground.m in Sources */,
 				181DECBC19F17CB100998835 /* EPieChartViewController.m in Sources */,
@@ -2452,24 +2663,28 @@
 				1824364A19F544C6007E4D6C /* DTFolderBar.m in Sources */,
 				186E68B119F5F8F800717BCE /* HostDetailPerformanceVC.m in Sources */,
 				18C2132519F27C2000FCBD23 /* HostNetworkCollectionCell.m in Sources */,
+				18C521D019F8CA2000C033C6 /* WMGaugeView.m in Sources */,
 				18C2135619F27C2000FCBD23 /* VmNetworkCollectionVC.m in Sources */,
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,
 				18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */,
+				18C5216E19F8A4C900C033C6 /* UIImage+ImageEffects.m in Sources */,
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
 				843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */,
 				18C2131C19F27C2000FCBD23 /* DatacenterTableVC.m in Sources */,
 				18C2130919F27C2000FCBD23 /* BusinessVmCollectionCell.m in Sources */,
+				18C521C719F8CA2000C033C6 /* JBChartInformationView.m in Sources */,
 				181DECB019F17CB100998835 /* PoolDatagridSegement.m in Sources */,
+				18C5215219F89DF300C033C6 /* MJRefreshBaseView.m in Sources */,
 				181DECDE19F17CB100998835 /* MZViewController.m in Sources */,
 				18C2135319F27C2000FCBD23 /* VmMigrateSelectHostListVC.m in Sources */,
 				18C2134719F27C2000FCBD23 /* VmCollectionVC.m in Sources */,
 				181DECA619F17CB100998835 /* BTSpiderPlotterVC.m in Sources */,
 				18C2135519F27C2000FCBD23 /* VmNetworkCollectionCell.m in Sources */,
 				181DED7F19F17CB100998835 /* LoginVO.m in Sources */,
-				181DECEA19F17CB100998835 /* PCChartViewController.m in Sources */,
 				843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */,
-				181DECCB19F17CB100998835 /* JBAreaChartViewController.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
+				18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */,
+				18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
 				18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */,
 				18C2131B19F27C2000FCBD23 /* DatacenterDetailInfoVC.m in Sources */,
@@ -2483,14 +2698,16 @@
 				181DED7019F17CB100998835 /* ControlRecordListResult.m in Sources */,
 				181DED9119F17CB100998835 /* VmVO.m in Sources */,
 				181DECB919F17CB100998835 /* UIKit+DrawingHelpers.m in Sources */,
+				18C521E119F8CDF500C033C6 /* MBPanGestureRecognizer.m in Sources */,
 				181DECD919F17CB100998835 /* Example2PieView.m in Sources */,
 				18C2131419F27C2000FCBD23 /* MSTimeRowHeader.m in Sources */,
 				181DED8219F17CB100998835 /* PoolElasticInfo.m in Sources */,
-				181DECC519F17CB100998835 /* GraphCalcViewController.m in Sources */,
+				18C521BD19F8CA2000C033C6 /* Example2.m in Sources */,
 				18C2135419F27C2000FCBD23 /* VmMigrateVC.m in Sources */,
 				18C2135119F27C2000FCBD23 /* VmDiskCollectionVC.m in Sources */,
 				181DED7B19F17CB100998835 /* HostStatVO.m in Sources */,
 				181DECDC19F17CB100998835 /* iPadGraphView.m in Sources */,
+				18C521BF19F8CA2000C033C6 /* Example4.m in Sources */,
 				18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */,
 				18C2131819F27C2000FCBD23 /* DashboardVC.m in Sources */,
 				18763C1619F4E4E400669CC3 /* RootVC.m in Sources */,
@@ -2502,19 +2719,19 @@
 				181DED8919F17CB100998835 /* StorageVolumnVO.m in Sources */,
 				18C2132719F27C2000FCBD23 /* HostNicCollectionCell.m in Sources */,
 				18C2132D19F27C2000FCBD23 /* NetworkCollectionCell.m in Sources */,
-				181DECD419F17CB100998835 /* JBLineChartViewController.m in Sources */,
 				843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */,
+				18C521C019F8CA2000C033C6 /* GraphCalcViewController.m in Sources */,
 				18C2133419F27C2000FCBD23 /* PoolDetailInfoVC.m in Sources */,
 				18C2130C19F27C2000FCBD23 /* MSCurrentTimeGridline.m in Sources */,
+				18C521C119F8CA2000C033C6 /* SimpleChartViewController.m in Sources */,
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,
 				18C2134319F27C2000FCBD23 /* PopControlRecordVC.m in Sources */,
 				181DED7419F17CB100998835 /* DatacenterStatWinserver.m in Sources */,
-				1886A60B19F698310089A576 /* DLGraphDemoViewController.m in Sources */,
-				181DECC019F17CB100998835 /* ClickThroughRatesViewController.m in Sources */,
-				181DECE919F17CB100998835 /* PCChartsTableViewController.m in Sources */,
 				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,
 				18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */,
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
+				18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */,
+				18C521B919F8CA2000C033C6 /* F3BarViewController.m in Sources */,
 				1824365D19F56A38007E4D6C /* SUNButtonBoard.m in Sources */,
 				1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */,
 				181DED6E19F17CB100998835 /* BusinessVmVO.m in Sources */,
@@ -2530,6 +2747,7 @@
 				18C2133E19F27C2000FCBD23 /* StorageDetailInfoVC.m in Sources */,
 				18763C1519F4E4E400669CC3 /* RootMenuVC.m in Sources */,
 				18C2134919F27C2000FCBD23 /* VmDashboardCell.m in Sources */,
+				18C521C419F8CA2000C033C6 /* JBBarChartViewController.m in Sources */,
 				18C2131E19F27C2000FCBD23 /* HostCollectionVC.m in Sources */,
 				181DED7D19F17CB100998835 /* LicenseVO.m in Sources */,
 				181DED8619F17CB100998835 /* StorageListResult.m in Sources */,
@@ -2539,18 +2757,20 @@
 				181DED8019F17CB100998835 /* NetworkListResult.m in Sources */,
 				847CA88B19F7503B004C292A /* HostActivityVmStateVO.m in Sources */,
 				18C2131D19F27C2000FCBD23 /* HostCollectionCell.m in Sources */,
-				181DECC219F17CB100998835 /* Example2.m in Sources */,
+				18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */,
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
+				18C521B819F8CA2000C033C6 /* F3BarGauge.m in Sources */,
 				181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */,
-				181DECCF19F17CB100998835 /* JBChartHeaderView.m in Sources */,
 				1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */,
+				18C521BA19F8CA2000C033C6 /* Big3RevenueViewController.m in Sources */,
 				181DED8A19F17CB100998835 /* UserListResult.m in Sources */,
 				18C2132919F27C2000FCBD23 /* LoginSettingVC.m in Sources */,
 				181DED8519F17CB100998835 /* RemoteObject.m in Sources */,
-				181DECBD19F17CB100998835 /* F3BarGauge.m in Sources */,
+				18C521C219F8CA2000C033C6 /* JBAreaChartViewController.m in Sources */,
 				18C2130A19F27C2000FCBD23 /* BusinessVmCollectionVC.m in Sources */,
 				1824362319F4FE05007E4D6C /* RRCircularItem.m in Sources */,
 				18C2134819F27C2000FCBD23 /* VmContainerVC.m in Sources */,
+				18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */,
 				18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */,
 				181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */,
 				8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */,
@@ -2659,7 +2879,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2675,7 +2895,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -42,13 +42,13 @@
     
     VmVO *vmVO = (VmVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     cell.title.text = vmVO.name;
-    cell.label1.text = vmVO.ip;
+    cell.ip.text = vmVO.ip;
     if(vmVO.ip == nil){
-        cell.label1.text = @"(尚未配置ip)";
+        cell.ip.text = @"(尚未配置ip)";
     }
-    cell.label2.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
-    cell.label3.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
-    cell.label4.text = [NSString stringWithFormat:@"%dGB", vmVO.storage];
+    cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
+    cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
+    cell.storageSize.text = [NSString stringWithFormat:@"%dGB", vmVO.storage];
     cell.status.text = [vmVO state_text];
     cell.status.textColor = [vmVO state_color];
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
