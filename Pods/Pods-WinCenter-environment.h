@@ -300,6 +300,12 @@
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 0
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
 
+// THPinViewController
+#define COCOAPODS_POD_AVAILABLE_THPinViewController
+#define COCOAPODS_VERSION_MAJOR_THPinViewController 1
+#define COCOAPODS_VERSION_MINOR_THPinViewController 2
+#define COCOAPODS_VERSION_PATCH_THPinViewController 2
+
 // TLIndexPathTools
 #define COCOAPODS_POD_AVAILABLE_TLIndexPathTools
 #define COCOAPODS_VERSION_MAJOR_TLIndexPathTools 0
