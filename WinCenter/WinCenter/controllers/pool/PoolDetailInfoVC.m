@@ -56,8 +56,11 @@
 @implementation PoolDetailInfoVC
 
 - (void)viewDidLayoutSubviews{
-    if(self.scrollView){
-        self.scrollView.contentSize = CGSizeMake(320, 1500);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if(self.scrollView){
+            self.scrollView.frame = [[UIScreen mainScreen] bounds];
+            self.scrollView.contentSize = CGSizeMake(320, 1500);
+        }
     }
 }
 
