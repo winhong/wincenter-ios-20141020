@@ -2742,6 +2742,7 @@
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
 				181DECBF19F17CB100998835 /* Big3RevenueViewController.m in Sources */,
 				8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */,
+				18C521C619F8CA2000C033C6 /* JBChartHeaderView.m in Sources */,
 				1824362519F4FE05007E4D6C /* RRCircularMenuLabel.m in Sources */,
 				18763C1E19F4EE0200669CC3 /* EScrollerView.m in Sources */,
 				18C2133E19F27C2000FCBD23 /* StorageDetailInfoVC.m in Sources */,
