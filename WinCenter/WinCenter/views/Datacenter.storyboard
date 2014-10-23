@@ -2106,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="1CF07B2A-4D7B-4130-8B72-874A325FC0CD" id="b8q-IF-5E0">
+                        <barButtonItem image="E8C89BCD-53B5-4345-A468-F0D2CD415609" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -2707,7 +2707,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-7p-oSl">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-7p-oSl">
                                             <rect key="frame" x="103" y="90" width="127" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -2727,20 +2727,23 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-存储-black" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-yV-Hb0">
                                             <rect key="frame" x="28" y="178" width="12" height="12"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYQ-0J-sUk">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYQ-0J-sUk">
                                             <rect key="frame" x="176" y="122" width="57" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="71" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-h1-0c0">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="71" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-h1-0c0">
                                             <rect key="frame" x="176" y="150" width="71" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvK-d7-GUZ">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvK-d7-GUZ">
                                             <rect key="frame" x="176" y="179" width="74" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="176" y="179" width="74" height="17"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mO-CE-kcs">
                                             <rect key="frame" x="48" y="209" width="81" height="21"/>
@@ -2802,16 +2805,16 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="y9b-7p-oSl" id="0rG-cl-Ndu"/>
-                                    <outlet property="label2" destination="hYQ-0J-sUk" id="iuB-pQ-rR7"/>
-                                    <outlet property="label3" destination="VgK-h1-0c0" id="VrO-az-Sqo"/>
-                                    <outlet property="label4" destination="YvK-d7-GUZ" id="Kgb-ws-EFG"/>
+                                    <outlet property="ip" destination="y9b-7p-oSl" id="zqL-6E-4SA"/>
+                                    <outlet property="memorySize" destination="VgK-h1-0c0" id="qsV-tf-C53"/>
                                     <outlet property="osType_image" destination="Qql-rm-dPh" id="O6R-EQ-SBt"/>
                                     <outlet property="progress_1" destination="dND-TT-nH5" id="Hx4-iq-sv9"/>
                                     <outlet property="progress_2" destination="3ln-Je-QNN" id="0ny-1Y-U9c"/>
                                     <outlet property="progress_3" destination="b42-Pv-f5h" id="t00-yr-WlE"/>
                                     <outlet property="status" destination="0mO-CE-kcs" id="NhI-5Z-VDQ"/>
+                                    <outlet property="storageSize" destination="YvK-d7-GUZ" id="aE9-8k-pmh"/>
                                     <outlet property="title" destination="EUQ-1V-ozH" id="isV-G1-7Ro"/>
+                                    <outlet property="vCpu" destination="hYQ-0J-sUk" id="GTv-LM-PsQ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -3232,10 +3235,10 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="JyQ-VH-54M" id="GQ9-1U-izv"/>
-                                    <outlet property="label2" destination="dFN-6m-I9A" id="nbZ-Lx-27U"/>
-                                    <outlet property="label3" destination="Stl-ti-XJf" id="9xd-sg-crV"/>
+                                    <outlet property="createTime" destination="dFN-6m-I9A" id="2ep-AK-RMq"/>
+                                    <outlet property="manager" destination="JyQ-VH-54M" id="kdi-ZT-9uh"/>
                                     <outlet property="title" destination="7rw-AN-IDZ" id="zNj-wh-q3B"/>
+                                    <outlet property="vmNum" destination="Stl-ti-XJf" id="xh7-Md-ugh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -3413,16 +3416,16 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
+                                <outlet property="alloctedBus" destination="0Dd-8l-VPP" id="OpA-2j-4az"/>
+                                <outlet property="alloctedBus2" destination="jta-K9-0Hj" id="xil-Va-2HA"/>
                                 <outlet property="businessAllocateChart" destination="1YG-OF-qEx" id="6gi-md-0aA"/>
                                 <outlet property="businessCount" destination="K5Q-sf-N7A" id="g1d-bz-dJB"/>
+                                <outlet property="businessCount2" destination="ESA-nk-A9s" id="qUE-Dk-GAe"/>
                                 <outlet property="businessVmCount" destination="eQR-VD-pPB" id="Qwh-48-xKc"/>
-                                <outlet property="label1" destination="0Dd-8l-VPP" id="oXZ-0x-RxF"/>
-                                <outlet property="label2" destination="Z40-aj-XHx" id="oiL-Ez-auh"/>
-                                <outlet property="label3" destination="ESA-nk-A9s" id="tkZ-sU-Hk0"/>
-                                <outlet property="label4" destination="K9i-gH-6pf" id="ihv-Ph-kUa"/>
-                                <outlet property="label5" destination="jta-K9-0Hj" id="JdP-Wx-jCf"/>
-                                <outlet property="label6" destination="FJk-Ol-hra" id="Ap0-Uj-gEv"/>
+                                <outlet property="businessVmCount2" destination="K9i-gH-6pf" id="Ly2-2A-H91"/>
                                 <outlet property="scrollView" destination="JNo-bR-YYI" id="gfZ-5b-oP7"/>
+                                <outlet property="unalloctedBus" destination="Z40-aj-XHx" id="wm2-Rr-ly6"/>
+                                <outlet property="unalloctedBus2" destination="FJk-Ol-hra" id="OjN-UM-Cj6"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -4154,7 +4157,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1CF07B2A-4D7B-4130-8B72-874A325FC0CD" width="32" height="32">
+        <image name="CPU线程-black" width="15" height="15"/>
+        <image name="CPU颗数-black" width="15" height="15"/>
+        <image name="E8C89BCD-53B5-4345-A468-F0D2CD415609" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -4273,8 +4278,6 @@ XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
 AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
 </mutableData>
         </image>
-        <image name="CPU线程-black" width="15" height="15"/>
-        <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
         <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>
