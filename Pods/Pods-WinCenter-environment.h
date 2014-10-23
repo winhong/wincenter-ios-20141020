@@ -264,6 +264,12 @@
 #define COCOAPODS_VERSION_MINOR_REFrostedViewController 4
 #define COCOAPODS_VERSION_PATCH_REFrostedViewController 6
 
+// RMStepsController
+#define COCOAPODS_POD_AVAILABLE_RMStepsController
+#define COCOAPODS_VERSION_MAJOR_RMStepsController 1
+#define COCOAPODS_VERSION_MINOR_RMStepsController 0
+#define COCOAPODS_VERSION_PATCH_RMStepsController 1
+
 // RNFrostedSidebar
 #define COCOAPODS_POD_AVAILABLE_RNFrostedSidebar
 #define COCOAPODS_VERSION_MAJOR_RNFrostedSidebar 0
@@ -359,6 +365,12 @@
 #define COCOAPODS_VERSION_MAJOR_VCollectionViewGridLayout 0
 #define COCOAPODS_VERSION_MINOR_VCollectionViewGridLayout 0
 #define COCOAPODS_VERSION_PATCH_VCollectionViewGridLayout 2
+
+// iOSSharedViewTransition
+#define COCOAPODS_POD_AVAILABLE_iOSSharedViewTransition
+#define COCOAPODS_VERSION_MAJOR_iOSSharedViewTransition 1
+#define COCOAPODS_VERSION_MINOR_iOSSharedViewTransition 0
+#define COCOAPODS_VERSION_PATCH_iOSSharedViewTransition 2
 
 // libextobjc/EXTScope
 #define COCOAPODS_POD_AVAILABLE_libextobjc_EXTScope
