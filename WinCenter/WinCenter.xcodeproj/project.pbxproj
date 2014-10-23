@@ -355,6 +355,8 @@
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
+		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
 		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
@@ -953,6 +955,10 @@
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
+		8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionCell.h; sourceTree = "<group>"; };
+		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
+		8405AA5319F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionVC.h; sourceTree = "<group>"; };
+		8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionVC.m; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
 		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
@@ -1910,6 +1916,10 @@
 				18C2129519F27C2000FCBD23 /* HostNicCollectionCell.m */,
 				18C2129619F27C2000FCBD23 /* HostNicCollectionVC.h */,
 				18C2129719F27C2000FCBD23 /* HostNicCollectionVC.m */,
+				8405AA5319F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.h */,
+				8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */,
+				8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */,
+				8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */,
 			);
 			path = host;
 			sourceTree = "<group>";
@@ -2514,6 +2524,7 @@
 				18763BBF19F4B82300669CC3 /* DialScrollVC.m in Sources */,
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
 				181DECBF19F17CB100998835 /* Big3RevenueViewController.m in Sources */,
+				8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */,
 				1824362519F4FE05007E4D6C /* RRCircularMenuLabel.m in Sources */,
 				18763C1E19F4EE0200669CC3 /* EScrollerView.m in Sources */,
 				18C2133E19F27C2000FCBD23 /* StorageDetailInfoVC.m in Sources */,
@@ -2542,6 +2553,7 @@
 				18C2134819F27C2000FCBD23 /* VmContainerVC.m in Sources */,
 				18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */,
 				181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */,
+				8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */,
 				18C2134119F27C2000FCBD23 /* PopControlRecordCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

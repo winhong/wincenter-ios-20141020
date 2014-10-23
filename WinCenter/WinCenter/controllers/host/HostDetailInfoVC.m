@@ -7,6 +7,7 @@
 //
 
 #import "HostDetailInfoVC.h"
+#import "HostVmMemoryTop5CollectionVC.h"
 
 @interface HostDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UILabel *virtualMachineNum;
@@ -45,6 +46,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *osType;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property HostVmMemoryTop5CollectionVC *top5VC;
 @end
 
 @implementation HostDetailInfoVC
@@ -63,6 +66,13 @@
     [self.circleChart3 strokeChart];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"toTop5CollectionView"]){
+        self.top5VC = segue.destinationViewController;
+        self.top5VC.hostVO = self.hostVO;
+    }
+}
+
 - (void)viewDidLoad
 {
     self.view.backgroundColor = [UIColor clearColor];
@@ -79,13 +89,6 @@
             [self refreshMainInfo];
         }];
     }];
-    
-    [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
-        self.statVO = object;
-        [self refreshStatInfo];
-    }];
-    
-    
 }
 
 - (void)refreshMainInfo{
