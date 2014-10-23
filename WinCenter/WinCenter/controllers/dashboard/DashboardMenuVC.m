@@ -8,6 +8,7 @@
 
 #import "DashboardMenuVC.h"
 #import "MasterContainerVC.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface DashboardMenuVC ()
 @property (weak, nonatomic) IBOutlet UIButton *menuHome;
@@ -53,6 +54,7 @@
 }
 
 - (IBAction)switchTabBar:(id)sender {
+    [self playSoundEffect];
     NSInteger currentIndex =  ((UIButton*)sender).tag;
     [self setSelectedItemIndex:currentIndex];
     [self.tabBarVC setSelectedIndex:currentIndex];
@@ -76,6 +78,16 @@
         [((UINavigationController*)nav) popToRootViewControllerAnimated:YES];
     }
 }
+
+- (void) playSoundEffect
+{
+    NSString *path  = [[NSBundle mainBundle] pathForResource:@"bamboo" ofType:@"m4r"];
+    NSURL *pathURL = [NSURL fileURLWithPath : path];
+    SystemSoundID audioEffect;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+    AudioServicesPlaySystemSound(audioEffect);
+}
+
 
 
 @end
