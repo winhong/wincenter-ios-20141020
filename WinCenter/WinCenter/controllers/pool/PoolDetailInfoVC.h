@@ -12,6 +12,8 @@
 
 @property PoolVO *poolVO;
 @property PoolElasticInfo *elasticInfo;
+@property PoolMaxHostFailuresVO *maxHostFailures;
+@property PoolHaInfoVO *haInfoVO;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 @property PNCircleChart *circleChart;

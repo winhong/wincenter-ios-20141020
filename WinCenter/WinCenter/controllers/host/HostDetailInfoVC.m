@@ -7,6 +7,7 @@
 //
 
 #import "HostDetailInfoVC.h"
+#import "HostVmMemoryTop5CollectionVC.h"
 
 @interface HostDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UILabel *virtualMachineNum;
@@ -20,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cpuSlots;
 @property (weak, nonatomic) IBOutlet UILabel *cpu;
 @property (weak, nonatomic) IBOutlet UILabel *activeMachineNum;
+@property (weak, nonatomic) IBOutlet UILabel *top5MemorySize;
+@property (weak, nonatomic) IBOutlet UILabel *top5UnUsedMemory;
 
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitUsedCount;
@@ -45,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *osType;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property HostVmMemoryTop5CollectionVC *top5VC;
 @end
 
 @implementation HostDetailInfoVC
@@ -61,6 +66,13 @@
     [self.circleChart strokeChart];
     [self.circleChart2 strokeChart];
     [self.circleChart3 strokeChart];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"toTop5CollectionView"]){
+        self.top5VC = segue.destinationViewController;
+        self.top5VC.hostVO = self.hostVO;
+    }
 }
 
 - (void)viewDidLoad
@@ -84,8 +96,6 @@
         self.statVO = object;
         [self refreshStatInfo];
     }];
-    
-    
 }
 
 - (void)refreshMainInfo{
@@ -113,6 +123,8 @@
     self.memoryUsedSize.text = [NSString stringWithFormat:@"%.2fGB", (self.statVO.totalMem-self.statVO.freeMem)/1024.0];
     self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
     self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.statVO.totalMem-self.statVO.freeMem)/self.statVO.totalMem*100];
+    self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
+    self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
     
     self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.totalStorage/1024.0];
     self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.usedStorage/1024.0];

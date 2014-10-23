@@ -161,5 +161,30 @@
     }];
 }
 
+- (void) getHaMaxHostFailuresAsync:(FetchAllCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[PoolMaxHostFailuresVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getMaxHostFailuresAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.ha.getResPoolUsability&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[PoolMaxHostFailuresVO alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
+
+- (void) getHaInfoAsync:(FetchAllCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[PoolHaInfoVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHaInfoAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.ha.getResPoolUsability&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[PoolHaInfoVO alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
 
 @end

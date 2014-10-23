@@ -51,4 +51,6 @@
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (NSArray *) getVmListWithlimit:(int)count error:(NSError **)error;
 - (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getHaMaxHostFailuresAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getHaInfoAsync:(FetchAllCompletionBlock)completionBlock;
 @end
