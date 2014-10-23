@@ -335,19 +335,19 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-O8-avz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="c4S-fA-CYB" kind="embed" id="8pD-mz-yAr"/>
+                                    <segue destination="JYC-Cf-UkB" kind="embed" id="CgZ-fa-dJ8"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-lS-au5">
                                 <rect key="frame" x="650" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="LN9-Ov-xVB" kind="embed" id="Qnh-5J-b7O"/>
+                                    <segue destination="UTw-S6-5Pr" kind="embed" id="kwZ-Ei-coA"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-Cz-xYa">
                                 <rect key="frame" x="325" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="NYP-54-JoV" kind="embed" id="nqM-5L-X6f"/>
+                                    <segue destination="btV-fB-A9e" kind="embed" id="LBc-kY-IIP"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -414,11 +414,328 @@
             </objects>
             <point key="canvasLocation" x="6323.5" y="-950"/>
         </scene>
+        <!--F3BarGauge-->
+        <scene sceneID="Rd7-d9-Ii1">
+            <objects>
+                <viewController id="2ba-M7-Iep" customClass="F3BarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9wd-y7-hjX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kq8-1T-s3L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aP0-uB-v42">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Flight III Systems Bar Gauge" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="B21-ZM-fZt">
+                                <rect key="frame" x="20" y="72" width="280" height="33"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-S3-1EF" customClass="F3BarGauge">
+                                <rect key="frame" x="20" y="107" width="40" height="351"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1g2-HT-eVx" customClass="F3BarGauge">
+                                <rect key="frame" x="77" y="130" width="220" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-y2-7hr">
+                                <rect key="frame" x="75" y="478" width="170" height="29"/>
+                                <connections>
+                                    <action selector="didChangeValue:" destination="2ba-M7-Iep" eventType="valueChanged" id="heQ-tK-EeD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Value" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDG-rN-J7y">
+                                <rect key="frame" x="20" y="477" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Default Horizontal" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Cp-gJ-Wsk">
+                                <rect key="frame" x="77" y="107" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nn-pI-Vks" customClass="F3BarGauge">
+                                <rect key="frame" x="77" y="242" width="220" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Custom Thresholds &amp; Colors" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zSo-aG-EAd">
+                                <rect key="frame" x="77" y="219" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHJ-Vh-Ak1" customClass="F3BarGauge">
+                                <rect key="frame" x="77" y="186" width="220" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Reversed (right-to-left)" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="T9s-cO-qOw">
+                                <rect key="frame" x="77" y="163" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fq9-ED-OnL" customClass="F3BarGauge">
+                                <rect key="frame" x="77" y="298" width="220" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Custom Range (.4 - .6)" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-e8-Smx">
+                                <rect key="frame" x="77" y="275" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Dz-UB-7Pf" customClass="F3BarGauge">
+                                <rect key="frame" x="77" y="354" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Peak Hold" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TbS-Mm-bu6">
+                                <rect key="frame" x="77" y="331" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="LCD-ish Look" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITQ-ha-aBS">
+                                <rect key="frame" x="77" y="395" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etm-K8-Qn9">
+                                <rect key="frame" x="231" y="354" width="66" height="25"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didReset:" destination="2ba-M7-Iep" eventType="touchUpInside" id="HNj-26-MQ1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yOV-YF-MNY">
+                                <rect key="frame" x="252" y="475" width="45" height="30"/>
+                                <fontDescription key="fontDescription" name="DBLCDTempBlack" family="DB LCD Temp" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knc-CR-I2V">
+                                <rect key="frame" x="77" y="418" width="220" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IN2-3k-b1O" customClass="F3BarGauge">
+                                        <rect key="frame" x="10" y="5" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50163379779999995" green="0.73209770770000004" blue="0.85550860969999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="F3BarGauge" id="NO4-Dp-bBd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="customRangeBar" destination="Fq9-ED-OnL" id="szo-Ef-xVI"/>
+                        <outlet property="customThresholdBar" destination="8nn-pI-Vks" id="PpV-PF-zWf"/>
+                        <outlet property="horizontalBar" destination="1g2-HT-eVx" id="cPt-2i-zAy"/>
+                        <outlet property="lcdBar" destination="IN2-3k-b1O" id="jfH-SF-MNh"/>
+                        <outlet property="peakHoldBar" destination="6Dz-UB-7Pf" id="lC1-Yk-ba6"/>
+                        <outlet property="reversedBar" destination="sHJ-Vh-Ak1" id="h7m-4s-Vay"/>
+                        <outlet property="valueLabel" destination="yOV-YF-MNY" id="kQs-Pl-E59"/>
+                        <outlet property="valueSlider" destination="TM5-y2-7hr" id="2Np-TW-ECL"/>
+                        <outlet property="verticalBar" destination="lKh-S3-1EF" id="bbg-TR-xNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Od-7m-rxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3981" y="-820"/>
+        </scene>
+        <!--JBAreaChart-->
+        <scene sceneID="gB0-ys-j71">
+            <objects>
+                <viewController id="UTw-S6-5Pr" customClass="JBAreaChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ued-ii-qbC"/>
+                        <viewControllerLayoutGuide type="bottom" id="EY7-Mi-fRm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cMY-NA-qri">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDK-Cv-CYu">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JBAreaChart" id="v4q-YR-CyC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="hUg-n5-tNP">
+                            <connections>
+                                <action selector="chartToggleButtonPressed:" destination="UTw-S6-5Pr" id="nIB-c8-Avy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="container" destination="jDK-Cv-CYu" id="J0X-ZC-GmZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9z-GO-2HW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5504" y="512"/>
+        </scene>
+        <!--JBBarChart-->
+        <scene sceneID="Uk8-gI-Ujv">
+            <objects>
+                <viewController id="btV-fB-A9e" customClass="JBBarChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dB7-1G-dE6"/>
+                        <viewControllerLayoutGuide type="bottom" id="vWB-Am-aCe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xuf-YQ-lVS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mE4-eu-tpJ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JBBarChart" id="G9u-0d-baN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="rTF-HT-OLi">
+                            <connections>
+                                <action selector="chartToggleButtonPressed:" destination="btV-fB-A9e" id="3Qn-vA-qS5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="container" destination="mE4-eu-tpJ" id="vry-1a-aX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAv-mG-ith" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5170" y="512"/>
+        </scene>
+        <!--JBLineChart-->
+        <scene sceneID="9Uu-pq-8ao">
+            <objects>
+                <viewController id="JYC-Cf-UkB" customClass="JBLineChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eeP-3m-sBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="QeI-RO-tlD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Br-G3-9Ts">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyC-Wu-e9Q">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JBLineChart" id="xd9-gl-qAv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="3Aa-Pf-hJj">
+                            <connections>
+                                <action selector="chartToggleButtonPressed:" destination="JYC-Cf-UkB" id="GJG-jd-sft"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="container" destination="dyC-Wu-e9Q" id="pZR-Mq-cVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZr-ZE-0CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4846" y="512"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="dP2-91-sk5">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="wi1-S1-cYI" customClass="ClickThroughRatesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rF5-Sp-gnI"/>
+                        <viewControllerLayoutGuide type="bottom" id="w9w-Nn-cFv"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="uf4-7D-7F6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="wi1-S1-cYI" id="NqY-n3-9dW"/>
+                        </connections>
+                    </glkView>
+                    <navigationItem key="navigationItem" id="b6a-D9-kt1">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="D0x-HO-sqG">
+                            <rect key="frame" x="86" y="7" width="149" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Facebook"/>
+                                <segment title="Twitter"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentAction:" destination="wi1-S1-cYI" eventType="valueChanged" id="Bt7-a4-Lx5"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59Q-cz-SCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6319" y="-154"/>
+        </scene>
+        <!--3-row chart with cylinders-->
+        <scene sceneID="0ep-o4-UDc">
+            <objects>
+                <glkViewController storyboardIdentifier="Big3RevenueViewController" preferredFramesPerSecond="30" id="nHY-2V-de0" customClass="Big3RevenueViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BcC-6n-Mc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="jYm-SH-dZn"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="lMv-YC-19f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="nHY-2V-de0" id="RpH-dp-R7g"/>
+                        </connections>
+                    </glkView>
+                    <navigationItem key="navigationItem" title="3-row chart with cylinders" id="fdp-Lu-eKk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dh5-8A-MXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6210" y="-235"/>
+        </scene>
+        <!--Simple Boring bar Chart-->
+        <scene sceneID="o1N-OJ-Q8A">
+            <objects>
+                <glkViewController storyboardIdentifier="SimpleChartViewController" preferredFramesPerSecond="30" id="SkI-e7-8N7" customClass="SimpleChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yg9-AH-OY1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bxl-jj-MGS"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="M88-tY-qm2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="SkI-e7-8N7" id="csm-FA-R2b"/>
+                        </connections>
+                    </glkView>
+                    <navigationItem key="navigationItem" title="Simple Boring bar Chart" id="HGs-p3-Hg1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wR-v7-sGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6436" y="-91"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qnh-5J-b7O"/>
-        <segue reference="nqM-5L-X6f"/>
-        <segue reference="8pD-mz-yAr"/>
         <segue reference="xyc-OD-Bvx"/>
     </inferredMetricsTieBreakers>
 </document>

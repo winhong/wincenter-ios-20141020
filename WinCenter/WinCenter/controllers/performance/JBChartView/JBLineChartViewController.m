@@ -123,15 +123,22 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     [super loadView];
     
     self.view.backgroundColor = kJBColorLineChartControllerBackground;
-        
+    
+    CGFloat width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        width = 320;
+        height = 550;
+    }
+    
     self.lineChartView = [[JBLineChartView alloc] init];
-    self.lineChartView.frame = CGRectMake(kJBLineChartViewControllerChartPadding, kJBLineChartViewControllerChartPadding, self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeight);
+    self.lineChartView.frame = CGRectMake(kJBLineChartViewControllerChartPadding, kJBLineChartViewControllerChartPadding, width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeight);
     self.lineChartView.delegate = self;
     self.lineChartView.dataSource = self;
     self.lineChartView.headerPadding = kJBLineChartViewControllerChartHeaderPadding;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
-    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
+    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
@@ -143,7 +150,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
     self.lineChartView.headerView = headerView;
     
-    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartFooterHeight)];
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBLineChartViewControllerChartFooterHeight * 0.5), width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartFooterHeight)];
     footerView.backgroundColor = [UIColor clearColor];
     footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
     footerView.leftLabel.textColor = [UIColor whiteColor];
@@ -154,7 +161,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     
     [self.container addSubview:self.lineChartView];
     
-    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), width, height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
     [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
     [self.informationView setTitleTextColor:kJBColorLineChartHeader];
     [self.informationView setTextShadowColor:nil];
