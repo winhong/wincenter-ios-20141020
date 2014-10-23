@@ -2106,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="1C41B787-D1DA-4543-BC89-C74116803CEE" id="b8q-IF-5E0">
+                        <barButtonItem image="1CF07B2A-4D7B-4130-8B72-874A325FC0CD" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -2189,15 +2189,18 @@
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="Blq-56-0h6">
                                             <rect key="frame" x="26" y="63" width="29" height="13"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zal-jO-ZGM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zal-jO-ZGM">
                                             <rect key="frame" x="26" y="89" width="239" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN2-ca-Mhu">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="availStorage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN2-ca-Mhu">
                                             <rect key="frame" x="29" y="114" width="145" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="29" y="114" width="236" height="21"/>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟磁盘：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtR-A4-Hdc">
                                             <rect key="frame" x="49" y="158" width="78" height="21"/>
@@ -2208,10 +2211,13 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-存储-black" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-9U-AYz">
                                             <rect key="frame" x="31" y="163" width="12" height="10"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeI-iO-51C">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="volumeNum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeI-iO-51C">
                                             <rect key="frame" x="140" y="158" width="54" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="120" y="158" width="96" height="21"/>
+                                            </variation>
                                         </label>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="av2-1e-iZ4">
                                             <rect key="frame" x="29" y="147" width="150" height="2"/>
@@ -2221,13 +2227,13 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="label1" destination="iN2-ca-Mhu" id="grS-CD-hUb"/>
-                                    <outlet property="label2" destination="NeI-iO-51C" id="Mfo-Xi-YSM"/>
-                                    <outlet property="label3" destination="zal-jO-ZGM" id="0Gm-1r-1RF"/>
+                                    <outlet property="availStorage" destination="iN2-ca-Mhu" id="hFe-g2-L8K"/>
+                                    <outlet property="location" destination="zal-jO-ZGM" id="VYW-0i-jYJ"/>
                                     <outlet property="progress" destination="av2-1e-iZ4" id="yxm-6N-LLC"/>
                                     <outlet property="share_image" destination="Blq-56-0h6" id="rv1-3r-H1H"/>
                                     <outlet property="status" destination="98m-tO-Dmv" id="ly9-Yi-knk"/>
                                     <outlet property="title" destination="uVk-P2-jhP" id="GdR-wp-cG1"/>
+                                    <outlet property="volumeNum" destination="NeI-iO-51C" id="Qmb-FR-1KE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -2625,7 +2631,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-IU-nqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem id="EBe-Z8-Jgh"/>
             </objects>
-            <point key="canvasLocation" x="769.5" y="1551"/>
+            <point key="canvasLocation" x="768.75" y="1551"/>
         </scene>
         <!--Item-->
         <scene sceneID="onT-cs-gYy">
@@ -3069,19 +3075,19 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <outlet property="label1" destination="X8V-oV-Q1T" id="4Df-jp-3Xz"/>
-                                <outlet property="label10" destination="RlP-Oo-g98" id="bia-hL-1q5"/>
-                                <outlet property="label11" destination="0Si-k7-75b" id="DaZ-sR-qfK"/>
-                                <outlet property="label12" destination="tfy-9i-SU4" id="Vfr-HS-0Tb"/>
-                                <outlet property="label13" destination="1Lp-VT-LPO" id="8Aw-08-5Nw"/>
-                                <outlet property="label14" destination="w7y-pO-Xlg" id="Kxg-vb-HuQ"/>
-                                <outlet property="label16" destination="T3Y-Ar-tG4" id="VQJ-H0-7yA"/>
-                                <outlet property="label3" destination="QJB-Hi-C7r" id="dto-dX-Rrl"/>
-                                <outlet property="label6" destination="1jm-VL-ugu" id="M9D-f6-bv6"/>
-                                <outlet property="label7" destination="iWa-cJ-2xP" id="bCc-J8-z9U"/>
-                                <outlet property="label8" destination="PMl-Lz-MT5" id="L8X-hQ-NdV"/>
+                                <outlet property="osTypeLinux" destination="QJB-Hi-C7r" id="rfE-0W-E6w"/>
+                                <outlet property="osTypeLinux2" destination="T3Y-Ar-tG4" id="NdD-FE-1P0"/>
+                                <outlet property="osTypeWin" destination="X8V-oV-Q1T" id="dYF-ai-4y9"/>
+                                <outlet property="osTypeWin2" destination="w7y-pO-Xlg" id="2CR-wP-eW0"/>
                                 <outlet property="scrollView" destination="JEy-YV-IuF" id="Nx4-bz-BcG"/>
+                                <outlet property="statusDis" destination="PMl-Lz-MT5" id="Gwy-5Y-Xha"/>
+                                <outlet property="statusDis2" destination="1Lp-VT-LPO" id="UJ2-dF-BHT"/>
+                                <outlet property="statusOk" destination="iWa-cJ-2xP" id="Uei-Dw-xUz"/>
+                                <outlet property="statusOk2" destination="tfy-9i-SU4" id="N8H-HW-oJY"/>
+                                <outlet property="statusOthers" destination="1jm-VL-ugu" id="BVN-1B-PZR"/>
+                                <outlet property="statusOthers2" destination="0Si-k7-75b" id="bbw-8n-Fbe"/>
                                 <outlet property="vmCount" destination="tNf-1o-NAo" id="OrQ-vh-Ink"/>
+                                <outlet property="vmCount2" destination="RlP-Oo-g98" id="W56-KN-U6d"/>
                                 <outlet property="vmOsTypeChart" destination="iEV-i8-mJ0" id="C3U-el-SvI"/>
                                 <outlet property="vmStatusChart" destination="ogf-B9-H7N" id="uxK-6P-T2H"/>
                             </connections>
@@ -4148,7 +4154,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1C41B787-D1DA-4543-BC89-C74116803CEE" width="32" height="32">
+        <image name="1CF07B2A-4D7B-4130-8B72-874A325FC0CD" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
