@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CEAA485CB8B14B20AB589580"
+               BlueprintIdentifier = "DCA7FA5508F24431A59C2ED4"
                BuildableName = "libPods-WinCenter-DLForcedGraphView.a"
                BlueprintName = "Pods-WinCenter-DLForcedGraphView"
                ReferencedContainer = "container:Pods.xcodeproj">
