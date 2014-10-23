@@ -116,6 +116,8 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
 }
 
 #pragma mark - View Lifecycle
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+}
 
 - (void)loadView
 {
@@ -136,6 +138,10 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
     self.lineChartView.dataSource = self;
     self.lineChartView.headerPadding =kJBAreaChartViewControllerChartHeaderPadding;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    panGesture.cancelsTouchesInView = FALSE;
+    [self.view addGestureRecognizer:panGesture];
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBAreaChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBAreaChartViewControllerChartHeaderHeight * 0.5), width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageShineHoursOfSunMoon uppercaseString];

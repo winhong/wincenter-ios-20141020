@@ -117,6 +117,8 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 }
 
 #pragma mark - View Lifecycle
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+}
 
 - (void)loadView
 {
@@ -137,6 +139,10 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     self.lineChartView.dataSource = self;
     self.lineChartView.headerPadding = kJBLineChartViewControllerChartHeaderPadding;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    panGesture.cancelsTouchesInView = FALSE;
+    [self.view addGestureRecognizer:panGesture];
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];

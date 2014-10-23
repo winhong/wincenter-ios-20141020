@@ -94,6 +94,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 }
 
 #pragma mark - View Lifecycle
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+}
 
 - (void)loadView
 {
@@ -115,6 +117,10 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     self.barChartView.headerPadding = kJBBarChartViewControllerChartHeaderPadding;
     self.barChartView.minimumValue = 0.0f;
     self.barChartView.backgroundColor = kJBColorBarChartBackground;
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    panGesture.cancelsTouchesInView = FALSE;
+    [self.view addGestureRecognizer:panGesture];
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageMonthlyTemperature uppercaseString];
