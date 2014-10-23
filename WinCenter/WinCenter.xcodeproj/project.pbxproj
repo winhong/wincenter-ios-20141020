@@ -354,6 +354,22 @@
 		18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130119F27C2000FCBD23 /* PopWarningInfoCellForTime.m */; };
 		18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */; };
 		18C2135D19F2A87D00FCBD23 /* UIStoryboard+Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */; };
+		18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C5214119F89DF300C033C6 /* MJRefresh.bundle */; };
+		18C5215219F89DF300C033C6 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */; };
+		18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214619F89DF300C033C6 /* MJRefreshConst.m */; };
+		18C5215419F89DF300C033C6 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */; };
+		18C5215519F89DF300C033C6 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */; };
+		18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */; };
+		18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */; };
+		18C5215819F89DF300C033C6 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215019F89DF300C033C6 /* UIView+MJExtension.m */; };
+		18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */; };
+		18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215D19F89E4500C033C6 /* DXSemiViewController.m */; };
+		18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */; };
+		18C5216619F8A43A00C033C6 /* bamboo.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216419F8A43A00C033C6 /* bamboo.m4r */; };
+		18C5216719F8A43A00C033C6 /* complete.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216519F8A43A00C033C6 /* complete.m4r */; };
+		18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */; };
+		18C5216E19F8A4C900C033C6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */; };
+		18C5217019F8AE4600C033C6 /* sms-received6.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216F19F8AADC00C033C6 /* sms-received6.m4r */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
@@ -952,6 +968,35 @@
 		18C2130319F27C2000FCBD23 /* PopWarningInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopWarningInfoVC.m; sourceTree = "<group>"; };
 		18C2135B19F2A87D00FCBD23 /* UIStoryboard+Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Universal.h"; sourceTree = "<group>"; };
 		18C2135C19F2A87D00FCBD23 /* UIStoryboard+Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Universal.m"; sourceTree = "<group>"; };
+		18C5214119F89DF300C033C6 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		18C5214219F89DF300C033C6 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		18C5214319F89DF300C033C6 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		18C5214519F89DF300C033C6 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		18C5214619F89DF300C033C6 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		18C5214719F89DF300C033C6 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		18C5214919F89DF300C033C6 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		18C5214B19F89DF300C033C6 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		18C5214D19F89DF300C033C6 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		18C5214F19F89DF300C033C6 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		18C5215019F89DF300C033C6 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiTableViewController.h; sourceTree = "<group>"; };
+		18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiTableViewController.m; sourceTree = "<group>"; };
+		18C5215C19F89E4500C033C6 /* DXSemiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewController.h; sourceTree = "<group>"; };
+		18C5215D19F89E4500C033C6 /* DXSemiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewController.m; sourceTree = "<group>"; };
+		18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewControllerCategory.h; sourceTree = "<group>"; };
+		18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewControllerCategory.m; sourceTree = "<group>"; };
+		18C5216419F8A43A00C033C6 /* bamboo.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = bamboo.m4r; sourceTree = "<group>"; };
+		18C5216519F8A43A00C033C6 /* complete.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = complete.m4r; sourceTree = "<group>"; };
+		18C5216919F8A4C900C033C6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
+		18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
+		18C5216B19F8A4C900C033C6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		18C5216F19F8AADC00C033C6 /* sms-received6.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sms-received6.m4r"; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
@@ -1853,6 +1898,10 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				18C5216819F8A4C900C033C6 /* BTGlassScrollView */,
+				18C5216319F8A43A00C033C6 /* sounds */,
+				18C5215919F89E4500C033C6 /* DXSemiSide */,
+				18C5214019F89DF300C033C6 /* MJRefresh */,
 				1824365719F56A38007E4D6C /* SunButtonBoard */,
 				1824363419F544C6007E4D6C /* DTNavigationController */,
 				18763C1819F4EE0200669CC3 /* EScrollerView */,
@@ -2069,6 +2118,63 @@
 			path = warning;
 			sourceTree = "<group>";
 		};
+		18C5214019F89DF300C033C6 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				18C5214119F89DF300C033C6 /* MJRefresh.bundle */,
+				18C5214219F89DF300C033C6 /* MJRefresh.h */,
+				18C5214319F89DF300C033C6 /* MJRefreshBaseView.h */,
+				18C5214419F89DF300C033C6 /* MJRefreshBaseView.m */,
+				18C5214519F89DF300C033C6 /* MJRefreshConst.h */,
+				18C5214619F89DF300C033C6 /* MJRefreshConst.m */,
+				18C5214719F89DF300C033C6 /* MJRefreshFooterView.h */,
+				18C5214819F89DF300C033C6 /* MJRefreshFooterView.m */,
+				18C5214919F89DF300C033C6 /* MJRefreshHeaderView.h */,
+				18C5214A19F89DF300C033C6 /* MJRefreshHeaderView.m */,
+				18C5214B19F89DF300C033C6 /* UIScrollView+MJExtension.h */,
+				18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */,
+				18C5214D19F89DF300C033C6 /* UIScrollView+MJRefresh.h */,
+				18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */,
+				18C5214F19F89DF300C033C6 /* UIView+MJExtension.h */,
+				18C5215019F89DF300C033C6 /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		18C5215919F89E4500C033C6 /* DXSemiSide */ = {
+			isa = PBXGroup;
+			children = (
+				18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */,
+				18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */,
+				18C5215C19F89E4500C033C6 /* DXSemiViewController.h */,
+				18C5215D19F89E4500C033C6 /* DXSemiViewController.m */,
+				18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */,
+				18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */,
+			);
+			path = DXSemiSide;
+			sourceTree = "<group>";
+		};
+		18C5216319F8A43A00C033C6 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18C5216F19F8AADC00C033C6 /* sms-received6.m4r */,
+				18C5216419F8A43A00C033C6 /* bamboo.m4r */,
+				18C5216519F8A43A00C033C6 /* complete.m4r */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		18C5216819F8A4C900C033C6 /* BTGlassScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				18C5216919F8A4C900C033C6 /* BTGlassScrollView.h */,
+				18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */,
+				18C5216B19F8A4C900C033C6 /* UIImage+ImageEffects.h */,
+				18C5216C19F8A4C900C033C6 /* UIImage+ImageEffects.m */,
+			);
+			path = BTGlassScrollView;
+			sourceTree = "<group>";
+		};
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2136,6 +2242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C5217019F8AE4600C033C6 /* sms-received6.m4r in Resources */,
 				1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */,
 				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
 				181DED4E19F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json in Resources */,
@@ -2166,6 +2273,7 @@
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
 				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
 				1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */,
+				18C5216719F8A43A00C033C6 /* complete.m4r in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
@@ -2218,6 +2326,7 @@
 				18763C1219F4E4E400669CC3 /* title3@2x.png in Resources */,
 				181DECAA19F17CB100998835 /* down_white@2x.png in Resources */,
 				1824365619F544C6007E4D6C /* Home@2x.png in Resources */,
+				18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */,
@@ -2259,6 +2368,7 @@
 				181DED6119F17CB100998835 /* PoolVO.getStorageListAsync.json in Resources */,
 				18763C1419F4E4E400669CC3 /* avatar@2x.jpg in Resources */,
 				1824365019F544C6007E4D6C /* ActionBtnPress@2x.png in Resources */,
+				18C5216619F8A43A00C033C6 /* bamboo.m4r in Resources */,
 				181DED6919F17CB100998835 /* VmVO.getVmVOAsync.json in Resources */,
 				18763C2019F4EE0200669CC3 /* EScrollerView_2.jpg in Resources */,
 				181DED5719F17CB100998835 /* HostVO.getHostStatVOAsync.json in Resources */,
@@ -2313,6 +2423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1886A60719F6516E0089A576 /* VmStateVO.m in Sources */,
+				18C5215519F89DF300C033C6 /* MJRefreshHeaderView.m in Sources */,
 				181DECC319F17CB100998835 /* Example3.m in Sources */,
 				18C2130719F27C2000FCBD23 /* BusinessDashboardVC.m in Sources */,
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
@@ -2325,6 +2436,7 @@
 				181DECCD19F17CB100998835 /* JBBarChartViewController.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
+				18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
@@ -2333,6 +2445,7 @@
 				181DECF719F17CB100998835 /* CalendarDateUtil.m in Sources */,
 				18C2132F19F27C2000FCBD23 /* NetworkContainerVC.m in Sources */,
 				181DED8F19F17CB100998835 /* VmNetworkListResult.m in Sources */,
+				18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */,
 				181DED7E19F17CB100998835 /* LicenseWciVO.m in Sources */,
 				18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */,
 				843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */,
@@ -2343,6 +2456,7 @@
 				181DED7119F17CB100998835 /* ControlRecordVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
+				18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */,
 				181DECDA19F17CB100998835 /* MyPieElement.m in Sources */,
 				18C2133A19F27C2000FCBD23 /* StorageContainerVC.m in Sources */,
 				1824364C19F544C6007E4D6C /* DTNavigationController.m in Sources */,
@@ -2414,6 +2528,7 @@
 				181DECAE19F17CB100998835 /* PoolDatagridCell.m in Sources */,
 				18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				181DECD719F17CB100998835 /* Example1PieView.m in Sources */,
+				18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */,
 				181DECEB19F17CB100998835 /* PNLineChartView.m in Sources */,
 				1824360919F4F774007E4D6C /* RAViewController.m in Sources */,
 				181DECA519F17CB100998835 /* SimpleLineChartVC.m in Sources */,
@@ -2425,12 +2540,14 @@
 				181DECB819F17CB100998835 /* InfoView.m in Sources */,
 				18C2133819F27C2000FCBD23 /* StorageCollectionCell.m in Sources */,
 				18C2133B19F27C2000FCBD23 /* StorageDashboardCell.m in Sources */,
+				18C5215819F89DF300C033C6 /* UIView+MJExtension.m in Sources */,
 				18C2132319F27C2000FCBD23 /* HostDetailInfoVC.m in Sources */,
 				18C2134B19F27C2000FCBD23 /* VmDashboardVC.m in Sources */,
 				18C2134019F27C2000FCBD23 /* StorageDiskCollectionVC.m in Sources */,
 				181DECC619F17CB100998835 /* SimpleChartViewController.m in Sources */,
 				181DECE019F17CB100998835 /* PercentageChartLayer.m in Sources */,
 				181DECA319F17CB100998835 /* ARLineChartView.m in Sources */,
+				18C5215419F89DF300C033C6 /* MJRefreshFooterView.m in Sources */,
 				18C2131119F27C2000FCBD23 /* MSEventCell.m in Sources */,
 				181DECC119F17CB100998835 /* Example1.m in Sources */,
 				181DED7519F17CB100998835 /* DatacenterVO.m in Sources */,
@@ -2445,11 +2562,13 @@
 				18C2135619F27C2000FCBD23 /* VmNetworkCollectionVC.m in Sources */,
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,
 				18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */,
+				18C5216E19F8A4C900C033C6 /* UIImage+ImageEffects.m in Sources */,
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
 				843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */,
 				18C2131C19F27C2000FCBD23 /* DatacenterTableVC.m in Sources */,
 				18C2130919F27C2000FCBD23 /* BusinessVmCollectionCell.m in Sources */,
 				181DECB019F17CB100998835 /* PoolDatagridSegement.m in Sources */,
+				18C5215219F89DF300C033C6 /* MJRefreshBaseView.m in Sources */,
 				181DECDE19F17CB100998835 /* MZViewController.m in Sources */,
 				18C2135319F27C2000FCBD23 /* VmMigrateSelectHostListVC.m in Sources */,
 				18C2134719F27C2000FCBD23 /* VmCollectionVC.m in Sources */,
@@ -2460,6 +2579,8 @@
 				843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */,
 				181DECCB19F17CB100998835 /* JBAreaChartViewController.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
+				18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */,
+				18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
 				18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */,
 				18C2131B19F27C2000FCBD23 /* DatacenterDetailInfoVC.m in Sources */,
@@ -2528,6 +2649,7 @@
 				181DED8019F17CB100998835 /* NetworkListResult.m in Sources */,
 				847CA88B19F7503B004C292A /* HostActivityVmStateVO.m in Sources */,
 				18C2131D19F27C2000FCBD23 /* HostCollectionCell.m in Sources */,
+				18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */,
 				181DECC219F17CB100998835 /* Example2.m in Sources */,
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
 				181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */,

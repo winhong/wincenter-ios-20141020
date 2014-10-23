@@ -18,6 +18,7 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - BMFloatingHeaderCollectionViewLayout (1.0.0)
+  - COSTouchVisualizer (1.0.2)
   - CupertinoYankee (0.1.1)
   - DAKeyboardControl (2.4.0)
   - DLForcedGraphView (0.1.1)
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - AMScrollingNavbar (~> 1.0.3)
   - BEMSimpleLineGraph (~> 2.3)
   - BMFloatingHeaderCollectionViewLayout (~> 1.0.0)
+  - COSTouchVisualizer (~> 1.0.2)
   - CupertinoYankee (~> 0.1.0)
   - DAKeyboardControl (~> 2.4.0)
   - DLForcedGraphView (~> 0.1.1)
@@ -142,6 +144,7 @@ SPEC CHECKSUMS:
   BEMSimpleLineGraph: 5fb192c00c48f8123654e2b943b9227061f0dfd2
   BlocksKit: 49fda17cbd628f3d6683f62de57edeaa315b386c
   BMFloatingHeaderCollectionViewLayout: d12e9c4e34454d4bace0752b006fff361a555b8d
+  COSTouchVisualizer: d49c18c76475fb517dc87e93a471f23a9206b956
   CupertinoYankee: b07873e724c2c5c1a249c555a5bd3d508c04e0de
   DAKeyboardControl: 45a363c85c48a7df76f21f236d9f85800e001775
   DLForcedGraphView: 4c3f41659d5f98c409bf3083f697873c5541c680

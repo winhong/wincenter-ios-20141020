@@ -53,6 +53,7 @@ target 'WinCenter' do
     pod 'THPinViewController', '~> 1.2.2'
     pod 'iOSSharedViewTransition', '~> 1.0.2'
     pod 'RMStepsController', '~> 1.0.1'
+    pod 'COSTouchVisualizer', '~> 1.0.2'
     
     pod 'TOWebViewController', '~> 2.0.14'
     pod 'AFViewShaker', '~> 0.0.2'

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60FCEA4137034AAFA346E304"
+               BlueprintIdentifier = "9A65EECA876C4571823ACE04"
                BuildableName = "libPods-WinCenter-THPinViewController.a"
                BlueprintName = "Pods-WinCenter-THPinViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

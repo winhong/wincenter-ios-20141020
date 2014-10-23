@@ -66,6 +66,12 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 2
 
+// COSTouchVisualizer
+#define COCOAPODS_POD_AVAILABLE_COSTouchVisualizer
+#define COCOAPODS_VERSION_MAJOR_COSTouchVisualizer 1
+#define COCOAPODS_VERSION_MINOR_COSTouchVisualizer 0
+#define COCOAPODS_VERSION_PATCH_COSTouchVisualizer 2
+
 // CupertinoYankee
 #define COCOAPODS_POD_AVAILABLE_CupertinoYankee
 #define COCOAPODS_VERSION_MAJOR_CupertinoYankee 0
