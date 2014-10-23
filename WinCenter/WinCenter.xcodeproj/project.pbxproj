@@ -371,6 +371,12 @@
 		18C521CE19F8CA2000C033C6 /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */; };
 		18C521CF19F8CA2000C033C6 /* RealtimeCurveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */; };
 		18C521D019F8CA2000C033C6 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B519F8CA2000C033C6 /* WMGaugeView.m */; };
+		18C521E119F8CDF500C033C6 /* MBPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */; };
+		18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D719F8CDF500C033C6 /* MBMapNode.m */; };
+		18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */; };
+		18C521E419F8CDF500C033C6 /* MBSpacialMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */; };
+		18C521E519F8CDF500C033C6 /* MBSpacialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */; };
+		18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
@@ -1000,6 +1006,19 @@
 		18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeCurveVC.m; sourceTree = "<group>"; };
 		18C521B419F8CA2000C033C6 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
 		18C521B519F8CA2000C033C6 /* WMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeView.m; sourceTree = "<group>"; };
+		18C521D319F8CDF500C033C6 /* MBPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPanGestureRecognizer.h; sourceTree = "<group>"; };
+		18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPanGestureRecognizer.m; sourceTree = "<group>"; };
+		18C521D619F8CDF500C033C6 /* MBMapNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapNode.h; sourceTree = "<group>"; };
+		18C521D719F8CDF500C033C6 /* MBMapNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapNode.m; sourceTree = "<group>"; };
+		18C521D819F8CDF500C033C6 /* MBMapNodeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapNodeLine.h; sourceTree = "<group>"; };
+		18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapNodeLine.m; sourceTree = "<group>"; };
+		18C521DA19F8CDF500C033C6 /* MBMapUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapUI.h; sourceTree = "<group>"; };
+		18C521DB19F8CDF500C033C6 /* MBSpacialMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialMap.h; sourceTree = "<group>"; };
+		18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialMap.m; sourceTree = "<group>"; };
+		18C521DD19F8CDF500C033C6 /* MBSpacialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialChildViewController.h; sourceTree = "<group>"; };
+		18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialChildViewController.m; sourceTree = "<group>"; };
+		18C521DF19F8CDF500C033C6 /* MBSpacialMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialMasterViewController.h; sourceTree = "<group>"; };
+		18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialMasterViewController.m; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
@@ -1797,6 +1816,7 @@
 		18C2126F19F27C2000FCBD23 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				18C521D119F8CDF500C033C6 /* MBSpacialViewController */,
 				18C5216819F8A4C900C033C6 /* BTGlassScrollView */,
 				18C5216319F8A43A00C033C6 /* sounds */,
 				18C5215919F89E4500C033C6 /* DXSemiSide */,
@@ -2188,6 +2208,42 @@
 			path = WMGaugeView;
 			sourceTree = "<group>";
 		};
+		18C521D119F8CDF500C033C6 /* MBSpacialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D219F8CDF500C033C6 /* Gestures */,
+				18C521D519F8CDF500C033C6 /* Map */,
+				18C521DD19F8CDF500C033C6 /* MBSpacialChildViewController.h */,
+				18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */,
+				18C521DF19F8CDF500C033C6 /* MBSpacialMasterViewController.h */,
+				18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */,
+			);
+			path = MBSpacialViewController;
+			sourceTree = "<group>";
+		};
+		18C521D219F8CDF500C033C6 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D319F8CDF500C033C6 /* MBPanGestureRecognizer.h */,
+				18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		18C521D519F8CDF500C033C6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				18C521D619F8CDF500C033C6 /* MBMapNode.h */,
+				18C521D719F8CDF500C033C6 /* MBMapNode.m */,
+				18C521D819F8CDF500C033C6 /* MBMapNodeLine.h */,
+				18C521D919F8CDF500C033C6 /* MBMapNodeLine.m */,
+				18C521DA19F8CDF500C033C6 /* MBMapUI.h */,
+				18C521DB19F8CDF500C033C6 /* MBSpacialMap.h */,
+				18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2448,6 +2504,7 @@
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */,
+				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
@@ -2501,9 +2558,11 @@
 				18C2130D19F27C2000FCBD23 /* MSCurrentTimeIndicator.m in Sources */,
 				18763BBE19F4B82300669CC3 /* DialScrollImage.m in Sources */,
 				181DECD619F17CB100998835 /* Example1Controller.m in Sources */,
+				18C521E419F8CDF500C033C6 /* MBSpacialMap.m in Sources */,
 				181DECED19F17CB100998835 /* PNTestViewController.m in Sources */,
 				181DECE419F17CB100998835 /* PieChartVC.m in Sources */,
 				18C2133919F27C2000FCBD23 /* StorageCollectionVC.m in Sources */,
+				18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */,
 				181DED7A19F17CB100998835 /* HostNicVO.m in Sources */,
 				181DECE719F17CB100998835 /* RotatedView.m in Sources */,
 				181DECDF19F17CB100998835 /* PercentageChart.m in Sources */,
@@ -2530,8 +2589,10 @@
 				181DED8819F17CB100998835 /* StorageVolumnListResult.m in Sources */,
 				181DECF019F17CB100998835 /* GaugeVC.m in Sources */,
 				18C2131919F27C2000FCBD23 /* MasterCollectionVC.m in Sources */,
+				18C521E519F8CDF500C033C6 /* MBSpacialChildViewController.m in Sources */,
 				181DED9219F17CB100998835 /* WarningInfoListResult.m in Sources */,
 				181DECE619F17CB100998835 /* RenderView.m in Sources */,
+				18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */,
 				18C2133619F27C2000FCBD23 /* PopOptionsUserInfoVC.m in Sources */,
 				843E6C1919F603000046A5A0 /* StorageSubVO.m in Sources */,
 				181DECA119F17CB100998835 /* ARLineChartCommon.m in Sources */,
@@ -2606,6 +2667,7 @@
 				181DED7019F17CB100998835 /* ControlRecordListResult.m in Sources */,
 				181DED9119F17CB100998835 /* VmVO.m in Sources */,
 				181DECB919F17CB100998835 /* UIKit+DrawingHelpers.m in Sources */,
+				18C521E119F8CDF500C033C6 /* MBPanGestureRecognizer.m in Sources */,
 				181DECD919F17CB100998835 /* Example2PieView.m in Sources */,
 				18C2131419F27C2000FCBD23 /* MSTimeRowHeader.m in Sources */,
 				181DED8219F17CB100998835 /* PoolElasticInfo.m in Sources */,
