@@ -45,9 +45,9 @@
     
     StorageVO *storageVO = (StorageVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     cell.title.text = storageVO.storagePoolName;
-    cell.label1.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
-    cell.label2.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
-    cell.label3.text = [NSString stringWithFormat:@"%@", storageVO.location];
+    cell.availStorage.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
+    cell.volumeNum.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
+    cell.location.text = [NSString stringWithFormat:@"%@", storageVO.location];
     cell.status.text = [storageVO state_text];
     cell.status.textColor = [storageVO state_color];
     cell.share_image.hidden = [storageVO.shared isEqualToString:@"false"];
@@ -66,7 +66,6 @@
 
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
-    header.storageSize.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.shareStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
     header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
