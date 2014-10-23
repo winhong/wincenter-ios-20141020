@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Dashboard MenuVC-->
@@ -2106,7 +2106,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="B435ABCF-F88E-4198-BE07-C4F3374A43BD" id="b8q-IF-5E0">
+                        <barButtonItem image="32DF1596-660D-4E27-A9A7-5A6D6FF68ED6" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
@@ -2444,7 +2444,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟容量：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y13-O7-G4B">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本地存储：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y13-O7-G4B">
                                                             <rect key="frame" x="568" y="8" width="60" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2565,28 +2565,28 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <outlet property="label1" destination="niD-db-kyK" id="B9Q-jr-O8P"/>
-                                <outlet property="label10" destination="5DE-uP-BHM" id="1c6-Db-I28"/>
-                                <outlet property="label13" destination="8EN-Nc-Far" id="IFU-hX-vVP"/>
-                                <outlet property="label14" destination="sKD-kA-K8w" id="hFa-aI-WNz"/>
-                                <outlet property="label15" destination="zAG-at-7zG" id="dJV-i1-2VZ"/>
-                                <outlet property="label16" destination="r5C-2h-JCq" id="y9J-rD-Gsw"/>
-                                <outlet property="label2" destination="ChX-CH-aPh" id="1h4-4C-gc5"/>
-                                <outlet property="label20" destination="9kP-tU-bmp" id="gLz-cC-FTZ"/>
-                                <outlet property="label21" destination="ITG-OC-24O" id="eJJ-xF-XDN"/>
-                                <outlet property="label22" destination="Gic-6F-xAg" id="JJt-5D-DeX"/>
-                                <outlet property="label23" destination="vIj-uh-eQv" id="Ai0-DL-MSL"/>
-                                <outlet property="label24" destination="KTp-Gz-FOS" id="DUw-Js-fPF"/>
-                                <outlet property="label3" destination="Ts3-Dl-pbp" id="RKX-ws-c8S"/>
-                                <outlet property="label4" destination="WMD-v2-QDf" id="Ahy-0r-Htf"/>
-                                <outlet property="label5" destination="EWg-bC-OI1" id="HWN-xY-Xdf"/>
-                                <outlet property="label6" destination="PqY-mM-rxQ" id="gml-0R-zwN"/>
-                                <outlet property="label7" destination="jT6-b9-lTa" id="E1c-l9-qVf"/>
-                                <outlet property="label8" destination="Q5P-Bn-QeJ" id="Qla-CR-ntV"/>
-                                <outlet property="label9" destination="DpZ-NF-atm" id="XA4-AT-4B6"/>
+                                <outlet property="fcSanStorageSize" destination="jT6-b9-lTa" id="4VK-aC-hQ4"/>
+                                <outlet property="fcSanStorageSize2" destination="8EN-Nc-Far" id="BZs-kr-LN0"/>
+                                <outlet property="iscsiStorageSize" destination="Q5P-Bn-QeJ" id="ltF-x3-C4q"/>
+                                <outlet property="iscsiStorageSize2" destination="sKD-kA-K8w" id="ULL-Ag-nl2"/>
+                                <outlet property="localStorageSize" destination="Ts3-Dl-pbp" id="zLT-8Z-mJt"/>
+                                <outlet property="localStorageSize2" destination="5DE-uP-BHM" id="R6h-GT-8QK"/>
+                                <outlet property="localStorageSize3" destination="r5C-2h-JCq" id="2Mz-Iw-lee"/>
+                                <outlet property="localStorageSize4" destination="Gic-6F-xAg" id="Fu1-ZL-yy3"/>
+                                <outlet property="nfsStorageSize" destination="DpZ-NF-atm" id="1Ig-Bw-WBq"/>
+                                <outlet property="nfsStorageSize2" destination="zAG-at-7zG" id="NJk-pe-3gq"/>
                                 <outlet property="scrollView" destination="eiX-5V-2Tl" id="Sve-6p-qwG"/>
+                                <outlet property="shareStorageSize" destination="ChX-CH-aPh" id="21u-hu-vwh"/>
+                                <outlet property="shareStorageSize2" destination="ITG-OC-24O" id="CB9-XF-7Sy"/>
                                 <outlet property="storageShareChart" destination="p3Y-0r-k7Z" id="EGe-vK-8j7"/>
+                                <outlet property="storageSize2" destination="WMD-v2-QDf" id="UNn-Tb-eoU"/>
+                                <outlet property="storageSize3" destination="9kP-tU-bmp" id="Amq-sN-vVd"/>
+                                <outlet property="storageSize4" destination="niD-db-kyK" id="iAa-Xt-fvo"/>
                                 <outlet property="storageUseChart" destination="vvs-oF-bC2" id="RTB-gD-oKc"/>
+                                <outlet property="unUsedStorageSize" destination="EWg-bC-OI1" id="xf4-hn-XSn"/>
+                                <outlet property="unUsedStorageSize2" destination="vIj-uh-eQv" id="Tzy-q9-2hw"/>
+                                <outlet property="usedStorageSize" destination="PqY-mM-rxQ" id="r58-Ti-iFm"/>
+                                <outlet property="usedStorageSize2" destination="KTp-Gz-FOS" id="RxI-Sb-W3a"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -4148,7 +4148,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="B435ABCF-F88E-4198-BE07-C4F3374A43BD" width="32" height="32">
+        <image name="32DF1596-660D-4E27-A9A7-5A6D6FF68ED6" width="32" height="32">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
