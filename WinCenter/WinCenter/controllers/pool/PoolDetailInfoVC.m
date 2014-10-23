@@ -46,6 +46,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *memeryChart;
 @property (weak, nonatomic) IBOutlet UIView *storageChartGroup;
 @property (weak, nonatomic) IBOutlet UIImageView *storageChart;
+@property (weak, nonatomic) IBOutlet UILabel *vType;
+@property (weak, nonatomic) IBOutlet UILabel *vVersion;
+@property (weak, nonatomic) IBOutlet UILabel *vDate;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
@@ -77,14 +80,16 @@
     
     // Do any additional setup after loading the view.
     
-    [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
-        self.poolVO = object;
-        [self refreshMainInfo];
-    }];
+    
     
     [self.poolVO getPoolElasticAsync:^(id object, NSError *error) {
         self.elasticInfo = object;
-        [self refreshElasticInfo];
+        [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
+            self.poolVO = object;
+            [self refreshMainInfo];
+            [self refreshElasticInfo];
+        }];
+        
     }];
     
 }
@@ -93,6 +98,10 @@
     self.name.text = [NSString stringWithFormat:@"%@", self.poolVO.resourcePoolName];
     self.hostCount.text = [NSString stringWithFormat:@"%d", self.poolVO.hostNumber];
     self.vmCount.text = [NSString stringWithFormat:@"%d", self.poolVO.vmNumber];
+    self.vType.text = self.poolVO.hypervisor;
+    self.vVersion.text = self.poolVO.version;
+    self.vDate.text = self.poolVO.versionDate_text;
+    
 
     self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.poolVO.totalCpu/1000.0];
     self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", (self.poolVO.totalCpu-self.poolVO.availCpu)/1000.0];

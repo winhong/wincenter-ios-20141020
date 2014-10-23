@@ -601,6 +601,9 @@
                         <outlet property="storageSize" destination="2W2-Cx-iK9" id="2oc-du-XS5"/>
                         <outlet property="storageUnusedSize" destination="frF-ay-9Cs" id="IjA-St-5Me"/>
                         <outlet property="storageUsedSize" destination="gqn-ef-odt" id="6eu-4P-VGC"/>
+                        <outlet property="vDate" destination="yTt-BA-gYN" id="MfF-x4-M4O"/>
+                        <outlet property="vType" destination="lcf-yV-BOg" id="hvJ-bH-HE9"/>
+                        <outlet property="vVersion" destination="G9Z-d4-517" id="jEN-ru-apb"/>
                         <outlet property="vmCount" destination="8RB-Nf-9Rg" id="3rm-gj-jay"/>
                         <outletCollection property="allLabels" destination="S0d-2P-tMz" id="PMk-r3-oRG"/>
                         <outletCollection property="allLabels" destination="8RB-Nf-9Rg" id="edP-Xn-WOW"/>
