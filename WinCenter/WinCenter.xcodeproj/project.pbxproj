@@ -377,6 +377,8 @@
 		18C521E419F8CDF500C033C6 /* MBSpacialMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DC19F8CDF500C033C6 /* MBSpacialMap.m */; };
 		18C521E519F8CDF500C033C6 /* MBSpacialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */; };
 		18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */; };
+		18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E919F8DA6700C033C6 /* DAPIPView.m */; };
+		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
@@ -1019,6 +1021,11 @@
 		18C521DE19F8CDF500C033C6 /* MBSpacialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialChildViewController.m; sourceTree = "<group>"; };
 		18C521DF19F8CDF500C033C6 /* MBSpacialMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpacialMasterViewController.h; sourceTree = "<group>"; };
 		18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpacialMasterViewController.m; sourceTree = "<group>"; };
+		18C521E819F8DA6700C033C6 /* DAPIPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPIPView.h; sourceTree = "<group>"; };
+		18C521E919F8DA6700C033C6 /* DAPIPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPIPView.m; sourceTree = "<group>"; };
+		18C521EA19F8DA6700C033C6 /* SquareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDelegate.h; sourceTree = "<group>"; };
+		18C521EB19F8DA6700C033C6 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
+		18C521EC19F8DA6700C033C6 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
@@ -1656,6 +1663,7 @@
 		186E689919F5EF8100717BCE /* performance */ = {
 			isa = PBXGroup;
 			children = (
+				18C521E719F8DA6700C033C6 /* SquareView */,
 				18C5217419F8CA2000C033C6 /* BEMSimpleLineGraph */,
 				18C5217719F8CA2000C033C6 /* DLForcedGraphView */,
 				18C5217A19F8CA2000C033C6 /* F3BarGauge */,
@@ -2244,6 +2252,18 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		18C521E719F8DA6700C033C6 /* SquareView */ = {
+			isa = PBXGroup;
+			children = (
+				18C521E819F8DA6700C033C6 /* DAPIPView.h */,
+				18C521E919F8DA6700C033C6 /* DAPIPView.m */,
+				18C521EA19F8DA6700C033C6 /* SquareDelegate.h */,
+				18C521EB19F8DA6700C033C6 /* SquareViewController.h */,
+				18C521EC19F8DA6700C033C6 /* SquareViewController.m */,
+			);
+			path = SquareView;
+			sourceTree = "<group>";
+		};
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2565,6 +2585,7 @@
 				18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */,
 				181DED7A19F17CB100998835 /* HostNicVO.m in Sources */,
 				181DECE719F17CB100998835 /* RotatedView.m in Sources */,
+				18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */,
 				181DECDF19F17CB100998835 /* PercentageChart.m in Sources */,
 				18C521BB19F8CA2000C033C6 /* ClickThroughRatesViewController.m in Sources */,
 				181DECD819F17CB100998835 /* Example2Controller.m in Sources */,
@@ -2699,6 +2720,7 @@
 				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,
 				18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */,
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
+				18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */,
 				18C521B919F8CA2000C033C6 /* F3BarViewController.m in Sources */,
 				1824365D19F56A38007E4D6C /* SUNButtonBoard.m in Sources */,
 				1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */,
