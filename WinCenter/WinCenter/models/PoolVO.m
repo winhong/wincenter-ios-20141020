@@ -10,11 +10,11 @@
 
 @implementation PoolVO
 
--(void)dateFormat{
+-(NSString*)versionDate_text{
     NSDate *Runtime = [[NSDate alloc]initWithTimeIntervalSince1970:self.versionDate];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    self.versionDate_text = [dateFormatter stringFromDate:Runtime];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    return [dateFormatter stringFromDate:Runtime];
 }
 
 -(float)cpuRatio{
