@@ -28,45 +28,14 @@ static NSString * const reuseIdentifier = @"Cell";
         self.hostVO = object;
         [self.hostVO getVmListAsync:^(id object, NSError *error) {
             self.vmList = object;
-            
-            self.vmList_sorted = [self.vmList sortedArrayUsingComparator:
-            ^NSComparisonResult(VmVO *vm1, VmVO *vm2){
-                NSComparisonResult result = vm1.memory > vm2.memory;
-                
-                return result == NSOrderedDescending; // 升序
-            }];
-            //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"_memory" ascending:NO];
+            self.vmList_sorted = [[NSMutableArray alloc] initWithArray:self.vmList];
+            [self.vmList_sorted sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
             [self.collectionView reloadData];
             
         }];
     }];
-//    NSMutableArray *array = [NSMutableArray arrayWithObjects:
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj0", [NSNumber numberWithInt:0], nil],
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj5", [NSNumber numberWithInt:5], nil],
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj2", [NSNumber numberWithInt:2], nil],
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj3", [NSNumber numberWithInt:3], nil],
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj1", [NSNumber numberWithInt:1], nil],
-//                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj4", [NSNumber numberWithInt:4], nil], nil];
-//    
-//    NSArray *resultArray = [array sortedArrayUsingSelector:@selector(compare:)];
-//    
-//    NSArray *resultArray2 = [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-//        
-//        NSNumber *number1 = [[obj1 allKeys] objectAtIndex:0];
-//        NSNumber *number2 = [[obj2 allKeys] objectAtIndex:0];
-//        
-//        NSComparisonResult result = [number1 compare:number2];
-//        
-//        return result == NSOrderedDescending; // 升序
-//        return result == NSOrderedAscending;  // 降序
-//    }];
-    
 }
-
-//-(NSComparisonResult)compareMemory:(VmVO*)vm {
-    //NSComparisonResult result = (VmVO*)self.memory > vm.memory;
-    //return result == NSOrderedAscending;;
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -91,7 +60,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    NSUInteger MaxCount = self.vmList_sorted.count >=5 ? 5 : self.vmList_sorted.count;
+    return MaxCount;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,8 +70,28 @@ static NSString * const reuseIdentifier = @"Cell";
     //NSArray *array2 = [(VmVO*)self.vmList[indexPath.row] sortedArrayUsingSelector:@selector(compare:)];
     VmVO *vm = [VmVO new];
     vm = self.vmList_sorted[indexPath.row];
-    cell.name.text = [NSString stringWithFormat:@"%@",vm.name ];
-    cell.memory.text = [NSString stringWithFormat:@"%d",vm.memory ];
+    switch (indexPath.row) {
+        case 1:
+            cell.blockColor.backgroundColor = [UIColor colorWithRed:68.0/255 green:149.0/255 blue:214/255 alpha:1];
+            break;
+        case 2:
+            cell.blockColor.backgroundColor = [UIColor colorWithRed:107.0/255 green:181.0/255 blue:245/255 alpha:1];
+            break;
+        case 3:
+            cell.blockColor.backgroundColor = [UIColor colorWithRed:154.0/255 green:196.0/255 blue:84/255 alpha:1];
+            break;
+        case 4:
+            cell.blockColor.backgroundColor = [UIColor colorWithRed:250.0/255 green:133.0/255 blue:100/255 alpha:1];
+            break;
+        case 5:
+            cell.blockColor.backgroundColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1];
+            break;
+        default:
+            break;
+    }
+    cell.name.text = [NSString stringWithFormat:@"%@",vm.name == nil ? @"" :  vm.name];
+    cell.percent.text = [NSString stringWithFormat:@"%.1f%%",self.hostVO.memory == 0 ? 0 : vm.memory*100/self.hostVO.memory ];
+    cell.size.text = [NSString stringWithFormat:@"%.2fG",vm.memory/1024.0 ];
     
     return cell;
 }

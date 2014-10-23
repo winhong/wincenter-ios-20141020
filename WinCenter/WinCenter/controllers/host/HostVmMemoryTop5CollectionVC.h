@@ -12,7 +12,6 @@
 
 @property HostVO *hostVO;
 @property NSArray *vmList;
-@property NSArray *vmList_sorted;
--(NSComparisonResult)compareMemory:(VmVO*)vm1 compare:(VmVO*)vm2;
+@property NSMutableArray *vmList_sorted;
 
 @end

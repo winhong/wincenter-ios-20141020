@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cpuSlots;
 @property (weak, nonatomic) IBOutlet UILabel *cpu;
 @property (weak, nonatomic) IBOutlet UILabel *activeMachineNum;
+@property (weak, nonatomic) IBOutlet UILabel *top5MemorySize;
+@property (weak, nonatomic) IBOutlet UILabel *top5UnUsedMemory;
 
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitUsedCount;
@@ -89,6 +91,11 @@
             [self refreshMainInfo];
         }];
     }];
+    
+    [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
+        self.statVO = object;
+        [self refreshStatInfo];
+    }];
 }
 
 - (void)refreshMainInfo{
@@ -116,6 +123,8 @@
     self.memoryUsedSize.text = [NSString stringWithFormat:@"%.2fGB", (self.statVO.totalMem-self.statVO.freeMem)/1024.0];
     self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
     self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.statVO.totalMem-self.statVO.freeMem)/self.statVO.totalMem*100];
+    self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
+    self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
     
     self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.totalStorage/1024.0];
     self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.usedStorage/1024.0];

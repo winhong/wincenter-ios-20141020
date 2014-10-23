@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HostVmMemoryTop5CollectionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIView *blockColor;
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *memory;
+@property (weak, nonatomic) IBOutlet UILabel *percent;
+@property (weak, nonatomic) IBOutlet UILabel *size;
 
 @end
