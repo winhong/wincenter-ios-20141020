@@ -22,8 +22,27 @@
     
     [super viewDidLoad];
     
+    __unsafe_unretained typeof(self) week_self = self;
+    
+    [self.collectionView addHeaderWithCallback:^{
+        [week_self reloadData];
+    } dateKey:@"collection"];
+    
+    [self.collectionView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+    
+    [self.collectionView headerBeginRefreshing];
+    
+    //[self.collectionView headerEndRefreshing];
+    //[self.collectionView footerEndRefreshing];
+}
+
+- (void) reloadData{
     [self.storageVO getStorageVolumnListAsync:^(NSArray *allRemote, NSError *error) {
         self.dataList = allRemote;
+        [self.collectionView headerEndRefreshing];
+        [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];
     }];
 }

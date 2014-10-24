@@ -45,7 +45,20 @@
     
     [super viewDidLoad];
     
-    [self reloadData];
+    __unsafe_unretained typeof(self) week_self = self;
+    
+    [self.collectionView addHeaderWithCallback:^{
+        [week_self reloadData];
+    } dateKey:@"collection"];
+    
+    [self.collectionView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+    
+    [self.collectionView headerBeginRefreshing];
+    
+    //[self.collectionView headerEndRefreshing];
+    //[self.collectionView footerEndRefreshing];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

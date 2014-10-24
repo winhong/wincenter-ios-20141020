@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SUNButtonBoard.h"
+#import <COSTouchVisualizer/COSTouchVisualizerWindow.h>
+
 
 @interface AppDelegate ()
 
@@ -32,6 +34,22 @@
             break;
         }
     }
+}
+
+- (COSTouchVisualizerWindow *)window
+{
+    static COSTouchVisualizerWindow *customWindow = nil;
+    if (!customWindow) {
+        customWindow = [[COSTouchVisualizerWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        [customWindow setFillColor:[UIColor yellowColor]];
+        [customWindow setStrokeColor:[UIColor purpleColor]];
+        [customWindow setTouchAlpha:0.4];
+        
+        [customWindow setRippleFillColor:[UIColor yellowColor]];
+        [customWindow setRippleStrokeColor:[UIColor purpleColor]];
+        [customWindow setRippleAlpha:0.1];
+    }
+    return customWindow;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

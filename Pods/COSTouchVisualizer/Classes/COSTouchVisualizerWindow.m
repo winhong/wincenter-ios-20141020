@@ -10,7 +10,7 @@
 // Turn this on to debug touches during development.
 
 #ifdef TARGET_IPHONE_SIMULATOR
-#define DEBUG_FINGERTIP_WINDOW 0
+#define DEBUG_FINGERTIP_WINDOW 1
 #else
 #define DEBUG_FINGERTIP_WINDOW 0
 #endif

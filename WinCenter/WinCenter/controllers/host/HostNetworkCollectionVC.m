@@ -16,6 +16,8 @@
         [self.dataList setValue:allRemote forKey:@"外部网络"];
         [self.hostVO getHostNetworkInternalListAsync:^(NSArray *allRemote, NSError *error) {
             [self.dataList setValue:allRemote forKey:@"内部网络"];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }];

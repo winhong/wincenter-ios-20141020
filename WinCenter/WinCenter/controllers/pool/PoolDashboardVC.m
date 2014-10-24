@@ -27,6 +27,8 @@
             self.datacenterStatWinserver = object;
             [[RemoteObject getCurrentDatacenterVO] getPoolSubVOAsync:^(id object, NSError *error) {
                 self.poolStatWinserver = object;
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
             }];
         }];

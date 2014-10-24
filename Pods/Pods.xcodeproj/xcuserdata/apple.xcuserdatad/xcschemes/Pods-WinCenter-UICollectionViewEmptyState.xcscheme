@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "065CFC5AB1644BF0B03D7696"
+               BlueprintIdentifier = "C6D944D29F6D4004A55E4695"
                BuildableName = "libPods-WinCenter-UICollectionViewEmptyState.a"
                BlueprintName = "Pods-WinCenter-UICollectionViewEmptyState"
                ReferencedContainer = "container:Pods.xcodeproj">

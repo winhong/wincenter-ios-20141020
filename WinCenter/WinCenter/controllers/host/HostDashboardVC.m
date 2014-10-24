@@ -28,6 +28,8 @@
             
             [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
                 self.hostStatWinserver = object;
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
             }];
         }];
