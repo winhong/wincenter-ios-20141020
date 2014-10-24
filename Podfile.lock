@@ -85,6 +85,7 @@ PODS:
   - UIColor-HexString (1.1.0)
   - UICountingLabel (1.0.0)
   - UIImage-Helpers (0.0.2)
+  - UIViewController-Modal (0.0.2)
   - Unirest (1.1.3)
   - VCollectionViewGridLayout (0.0.2):
     - TLIndexPathTools
@@ -135,6 +136,7 @@ DEPENDENCIES:
   - TWRCharts (~> 0.1)
   - UICollectionViewEmptyState (~> 1.1.0)
   - UIColor-HexString (~> 1.1.0)
+  - UIViewController-Modal (~> 0.0.2)
   - Unirest (~> 1.1.3)
   - VCollectionViewGridLayout (~> 0.0.2)
 
@@ -195,6 +197,7 @@ SPEC CHECKSUMS:
   UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
   UICountingLabel: 0a0e9e34bf4690dbd127aaec552d19ed938087a9
   UIImage-Helpers: f42c86ad5ed925f22b56a81c89f2f15ebeadfd3d
+  UIViewController-Modal: 22020cf027627b7bc4ddb59e3a7e165d709112dc
   Unirest: 318cb0193686af2b2a453fa20df5637606033be9
   VCollectionViewGridLayout: da04998997f10274ca7cd9cb5202f4f5077bb4cb
 

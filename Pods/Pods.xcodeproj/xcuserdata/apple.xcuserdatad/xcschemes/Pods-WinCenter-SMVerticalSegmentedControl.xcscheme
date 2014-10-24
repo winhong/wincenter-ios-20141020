@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C071762AD0E74D7B824032B7"
+               BlueprintIdentifier = "23804A1FAE004BEA9F481431"
                BuildableName = "libPods-WinCenter-SMVerticalSegmentedControl.a"
                BlueprintName = "Pods-WinCenter-SMVerticalSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">

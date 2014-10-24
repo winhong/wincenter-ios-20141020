@@ -31,6 +31,8 @@ target 'WinCenter' do
     #HeartRateCurve
     pod 'MagicPie', '~> 1.0.1'
     
+    pod 'UIViewController-Modal', '~> 0.0.2'
+    
     pod 'EAIntroView', '~> 2.6.3'
     pod 'SMPageControl', '~> 1.2'
     pod 'RNFrostedSidebar', '~> 0.2.0'

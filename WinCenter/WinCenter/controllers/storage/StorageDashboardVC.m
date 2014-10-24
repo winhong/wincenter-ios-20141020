@@ -27,6 +27,8 @@
             self.datacenterStatWinserver = object;
             [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
                 self.StorageSubVOWinserver = object;
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
             }];
         }];

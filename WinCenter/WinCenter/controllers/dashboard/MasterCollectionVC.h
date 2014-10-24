@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "F3BarGauge.h"
-#import "MJRefresh.h"
 
 @interface MasterCollectionVC : UICollectionViewController
 

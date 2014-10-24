@@ -31,7 +31,8 @@
             
             [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
                 self.unalloctedBusList = object;
-                
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
             }];
         }];

@@ -16,11 +16,15 @@
     if(self.poolVO){
         [self.poolVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
             [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }else{
         [self.hostVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
             [self.dataList setValue:allRemote forKey:self.hostVO.hostName];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }

@@ -16,6 +16,8 @@
         [self.dataList setValue:allRemote forKey:@"非聚合网卡"];
         [self.hostVO getHostNicGroupedListAsync:^(NSArray *allRemote, NSError *error) {
             [self.dataList setValue:allRemote forKey:@"聚合网卡"];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }];

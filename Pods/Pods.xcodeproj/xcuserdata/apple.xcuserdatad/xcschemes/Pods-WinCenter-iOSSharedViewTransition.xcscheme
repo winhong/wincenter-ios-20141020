@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "796CEDFC8D2544AEAA16ABBE"
+               BlueprintIdentifier = "79B361356F3E4EEDBDFCFDA3"
                BuildableName = "libPods-WinCenter-iOSSharedViewTransition.a"
                BlueprintName = "Pods-WinCenter-iOSSharedViewTransition"
                ReferencedContainer = "container:Pods.xcodeproj">
