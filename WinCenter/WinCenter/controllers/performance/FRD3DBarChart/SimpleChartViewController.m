@@ -14,7 +14,9 @@
 @end
 
 @implementation SimpleChartViewController
-
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad {
     Example3 *example3 = [[Example3 alloc] init];
     [example3 regenerateValues];

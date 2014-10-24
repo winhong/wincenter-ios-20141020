@@ -14,7 +14,9 @@
 @end
 
 @implementation Big3RevenueViewController
-
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad {
     Example4 *example = [[Example4 alloc] init];
     [self setFrd3dBarChartDelegate:example];
