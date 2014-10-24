@@ -360,6 +360,12 @@
 #define COCOAPODS_VERSION_MINOR_UIImage_Helpers 0
 #define COCOAPODS_VERSION_PATCH_UIImage_Helpers 2
 
+// UIViewController-Modal
+#define COCOAPODS_POD_AVAILABLE_UIViewController_Modal
+#define COCOAPODS_VERSION_MAJOR_UIViewController_Modal 0
+#define COCOAPODS_VERSION_MINOR_UIViewController_Modal 0
+#define COCOAPODS_VERSION_PATCH_UIViewController_Modal 2
+
 // Unirest
 #define COCOAPODS_POD_AVAILABLE_Unirest
 #define COCOAPODS_VERSION_MAJOR_Unirest 1

@@ -25,6 +25,7 @@
 #import <Masonry/Masonry.h>
 #import <CupertinoYankee/NSDate+CupertinoYankee.h>
 #import <UIColor-HexString/UIColor+HexString.h>
+#import <UIViewController-Modal/UIViewController+Modal.h>
 #import <MSCollectionViewCalendarLayout/MSCollectionViewCalendarLayout.h>
 #import <AMScrollingNavbar/UIViewController+ScrollingNavbar.h>
 #import <UICollectionViewEmptyState/UICollectionView+EmptyState.h>
