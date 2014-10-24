@@ -130,11 +130,18 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     CGFloat height = self.view.bounds.size.height;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         width = 320;
-        height = 550;
+        height = 400;
     }
     
+    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, 0, width, height - kJBLineChartViewControllerChartHeight - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+    [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
+    [self.informationView setTitleTextColor:kJBColorLineChartHeader];
+    [self.informationView setTextShadowColor:nil];
+    [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
+    [self.container addSubview:self.informationView];
+    
     self.lineChartView = [[JBLineChartView alloc] init];
-    self.lineChartView.frame = CGRectMake(kJBLineChartViewControllerChartPadding, kJBLineChartViewControllerChartPadding, width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeight);
+    self.lineChartView.frame = CGRectMake(kJBLineChartViewControllerChartPadding, CGRectGetMaxY(self.informationView.frame)+kJBLineChartViewControllerChartPadding, width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeight);
     self.lineChartView.delegate = self;
     self.lineChartView.dataSource = self;
     self.lineChartView.headerPadding = kJBLineChartViewControllerChartHeaderPadding;
@@ -142,7 +149,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     panGesture.cancelsTouchesInView = FALSE;
-    [self.view addGestureRecognizer:panGesture];
+    [self.lineChartView addGestureRecognizer:panGesture];
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];
@@ -166,13 +173,6 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
     self.lineChartView.footerView = footerView;
     
     [self.container addSubview:self.lineChartView];
-    
-    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), width, height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
-    [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
-    [self.informationView setTitleTextColor:kJBColorLineChartHeader];
-    [self.informationView setTextShadowColor:nil];
-    [self.informationView setSeparatorColor:kJBColorLineChartHeaderSeparatorColor];
-    [self.container addSubview:self.informationView];
     
     [self.lineChartView reloadData];
 }
@@ -202,8 +202,8 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 - (void)didUnselectLineInLineChartView:(JBLineChartView *)lineChartView
 {
-    [self.informationView setHidden:YES animated:YES];
-    [self setTooltipVisible:NO animated:YES];
+    //[self.informationView setHidden:YES animated:YES];
+    //[self setTooltipVisible:NO animated:YES];
 }
 
 #pragma mark - JBLineChartViewDataSource
