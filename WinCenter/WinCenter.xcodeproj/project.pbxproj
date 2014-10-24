@@ -336,9 +336,6 @@
 		18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214C19F89DF300C033C6 /* UIScrollView+MJExtension.m */; };
 		18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */; };
 		18C5215819F89DF300C033C6 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215019F89DF300C033C6 /* UIView+MJExtension.m */; };
-		18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */; };
-		18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215D19F89E4500C033C6 /* DXSemiViewController.m */; };
-		18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */; };
 		18C5216619F8A43A00C033C6 /* bamboo.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216419F8A43A00C033C6 /* bamboo.m4r */; };
 		18C5216719F8A43A00C033C6 /* complete.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 18C5216519F8A43A00C033C6 /* complete.m4r */; };
 		18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5216A19F8A4C900C033C6 /* BTGlassScrollView.m */; };
@@ -943,12 +940,6 @@
 		18C5214E19F89DF300C033C6 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		18C5214F19F89DF300C033C6 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		18C5215019F89DF300C033C6 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiTableViewController.h; sourceTree = "<group>"; };
-		18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiTableViewController.m; sourceTree = "<group>"; };
-		18C5215C19F89E4500C033C6 /* DXSemiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewController.h; sourceTree = "<group>"; };
-		18C5215D19F89E4500C033C6 /* DXSemiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewController.m; sourceTree = "<group>"; };
-		18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSemiViewControllerCategory.h; sourceTree = "<group>"; };
-		18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSemiViewControllerCategory.m; sourceTree = "<group>"; };
 		18C5216419F8A43A00C033C6 /* bamboo.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = bamboo.m4r; sourceTree = "<group>"; };
 		18C5216519F8A43A00C033C6 /* complete.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = complete.m4r; sourceTree = "<group>"; };
 		18C5216919F8A4C900C033C6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
@@ -1849,7 +1840,6 @@
 				18C521D119F8CDF500C033C6 /* MBSpacialViewController */,
 				18C5216819F8A4C900C033C6 /* BTGlassScrollView */,
 				18C5216319F8A43A00C033C6 /* sounds */,
-				18C5215919F89E4500C033C6 /* DXSemiSide */,
 				18C5214019F89DF300C033C6 /* MJRefresh */,
 				1824365719F56A38007E4D6C /* SunButtonBoard */,
 				1824363419F544C6007E4D6C /* DTNavigationController */,
@@ -2092,19 +2082,6 @@
 				18C5215019F89DF300C033C6 /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
-			sourceTree = "<group>";
-		};
-		18C5215919F89E4500C033C6 /* DXSemiSide */ = {
-			isa = PBXGroup;
-			children = (
-				18C5215A19F89E4500C033C6 /* DXSemiTableViewController.h */,
-				18C5215B19F89E4500C033C6 /* DXSemiTableViewController.m */,
-				18C5215C19F89E4500C033C6 /* DXSemiViewController.h */,
-				18C5215D19F89E4500C033C6 /* DXSemiViewController.m */,
-				18C5215E19F89E4500C033C6 /* DXSemiViewControllerCategory.h */,
-				18C5215F19F89E4500C033C6 /* DXSemiViewControllerCategory.m */,
-			);
-			path = DXSemiSide;
 			sourceTree = "<group>";
 		};
 		18C5216319F8A43A00C033C6 /* sounds */ = {
@@ -2551,7 +2528,6 @@
 				18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
-				18C5216219F89E4500C033C6 /* DXSemiViewControllerCategory.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
@@ -2560,7 +2536,6 @@
 				181DECF719F17CB100998835 /* CalendarDateUtil.m in Sources */,
 				18C2132F19F27C2000FCBD23 /* NetworkContainerVC.m in Sources */,
 				181DED8F19F17CB100998835 /* VmNetworkListResult.m in Sources */,
-				18C5216019F89E4500C033C6 /* DXSemiTableViewController.m in Sources */,
 				181DED7E19F17CB100998835 /* LicenseWciVO.m in Sources */,
 				18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */,
 				843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */,
@@ -2703,7 +2678,6 @@
 				181DED7F19F17CB100998835 /* LoginVO.m in Sources */,
 				843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
-				18C5216119F89E4500C033C6 /* DXSemiViewController.m in Sources */,
 				18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
 				18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */,
