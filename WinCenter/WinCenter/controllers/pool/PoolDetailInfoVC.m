@@ -49,6 +49,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *vType;
 @property (weak, nonatomic) IBOutlet UILabel *vVersion;
 @property (weak, nonatomic) IBOutlet UILabel *vDate;
+@property (weak, nonatomic) IBOutlet UIView *haInfo;
+@property (weak, nonatomic) IBOutlet UIImageView *haDisable;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
@@ -89,12 +91,17 @@
         self.elasticInfo = object;
         [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
             self.poolVO = object;
-            [self refreshMainInfo];
-            [self refreshElasticInfo];
+            [self.poolVO getHaMaxHostFailuresAsync:^(id object, NSError *error) {
+                self.maxHostFailures = object;
+                [self.poolVO getHaInfoAsync:^(id object, NSError *error) {
+                    self.haInfoVO = object;
+                    [self refreshMainInfo];
+                    [self refreshElasticInfo];
+                }];
+            }];
         }];
         
     }];
-    
 }
 
 - (void)refreshMainInfo{
@@ -121,9 +128,16 @@
     self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.poolVO.availStorage/1024.0];
     self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.poolVO.totalStorage-self.poolVO.availStorage)/self.poolVO.totalStorage*100];
     
-    //self.haErrorHostCount.text = self.poolVO.haErrorHostCount;
-    //self.haSignalNetwork.text = self.poolVO.haSignalNetwork;
-    //self.haSignalPool.text = self.poolVO.haSignalPool;
+    if ([self.haInfoVO.haEnabled isEqualToString:@"true"]) {
+        self.haInfo.hidden = NO;
+        self.haErrorHostCount.text = [NSString stringWithFormat:@"%d",self.maxHostFailures.maxHostFailures];
+        //self.haSignalNetwork.text = self.poolVO.haSignalNetwork;
+        //self.haSignalPool.text = self.poolVO.haSignalPool;
+    }else{
+        self.haDisable.hidden = NO;
+    }
+    
+    
     //圈图
     self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.poolVO cpuRatio]] andClockwise:YES andShadow:YES];
     self.circleChart.backgroundColor = [UIColor clearColor];
@@ -163,6 +177,8 @@
     self.memeryLoadBalancing.text = [NSString stringWithFormat:@"%.0f%%", self.elasticInfo.memThreshold*100];
     self.intervalTime.text = [self.elasticInfo intervalTime_text];
     self.nextCheckTime.text = [self.elasticInfo.nextStartTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
+    
+    
 }
 
 @end

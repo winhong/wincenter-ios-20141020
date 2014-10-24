@@ -116,6 +116,8 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
 }
 
 #pragma mark - View Lifecycle
+- (void)handlePan:(UIPanGestureRecognizer *)recognizer {
+}
 
 - (void)loadView
 {
@@ -123,14 +125,25 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
     
     self.view.backgroundColor = kJBColorLineChartControllerBackground;
     
+    CGFloat width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        width = 320;
+        height = 550;
+    }
+    
     self.lineChartView = [[JBLineChartView alloc] init];
-    self.lineChartView.frame = CGRectMake(kJBAreaChartViewControllerChartPadding, kJBAreaChartViewControllerChartPadding, self.view.bounds.size.width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartHeight);
+    self.lineChartView.frame = CGRectMake(kJBAreaChartViewControllerChartPadding, kJBAreaChartViewControllerChartPadding, width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartHeight);
     self.lineChartView.delegate = self;
     self.lineChartView.dataSource = self;
     self.lineChartView.headerPadding =kJBAreaChartViewControllerChartHeaderPadding;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
-    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBAreaChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBAreaChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartHeaderHeight)];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    panGesture.cancelsTouchesInView = FALSE;
+    [self.view addGestureRecognizer:panGesture];
+    
+    JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBAreaChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBAreaChartViewControllerChartHeaderHeight * 0.5), width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageShineHoursOfSunMoon uppercaseString];
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
@@ -142,7 +155,7 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
     headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
     self.lineChartView.headerView = headerView;
     
-    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBAreaChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBAreaChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartFooterHeight)];
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBAreaChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBAreaChartViewControllerChartFooterHeight * 0.5), width - (kJBAreaChartViewControllerChartPadding * 2), kJBAreaChartViewControllerChartFooterHeight)];
     footerView.backgroundColor = [UIColor clearColor];
     footerView.leftLabel.text = [[self.monthlySymbols firstObject] uppercaseString];
     footerView.leftLabel.textColor = [UIColor whiteColor];
@@ -153,7 +166,7 @@ NSString * const kJBAreaChartViewControllerNavButtonViewKey = @"view";
     
     [self.container addSubview:self.lineChartView];
     
-    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.lineChartView.frame), width, height - CGRectGetMaxY(self.lineChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
     [self.informationView setValueAndUnitTextColor:[UIColor colorWithWhite:1.0 alpha:0.75]];
     [self.informationView setTitleTextColor:kJBColorLineChartHeader];
     [self.informationView setTextShadowColor:nil];

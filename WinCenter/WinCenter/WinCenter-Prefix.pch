@@ -51,6 +51,8 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "PoolVO.h"
 #import "PoolSubVO.h"
 #import "PoolElasticInfo.h"
+#import "PoolMaxHostFailuresVO.h"
+#import "PoolHaInfoVO.h"
 #import "HostListResult.h"
 #import "HostVO.h"
 #import "HostStatVO.h"

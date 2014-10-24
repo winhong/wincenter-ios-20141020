@@ -380,6 +380,8 @@
 		18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E919F8DA6700C033C6 /* DAPIPView.m */; };
 		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
+		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
 		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
@@ -397,6 +399,10 @@
 		847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88D19F752B6004C292A /* HostActivityVmVO.m */; };
 		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
 		8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */; };
+		84D8336919F91702001C747A /* PoolMaxHostFailuresVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */; };
+		84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336B19F9174A001C747A /* PoolHaInfoVO.m */; };
+		84D8336E19F91CA6001C747A /* PoolVO.getHaInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D8336D19F91CA6001C747A /* PoolVO.getHaInfoAsync.json */; };
+		84D8337019F91D35001C747A /* PoolVO.getMaxHostFailuresAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D8336F19F91D35001C747A /* PoolVO.getMaxHostFailuresAsync.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1027,6 +1033,10 @@
 		18C521EB19F8DA6700C033C6 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		18C521EC19F8DA6700C033C6 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
+		8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionCell.h; sourceTree = "<group>"; };
+		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
+		8405AA5319F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionVC.h; sourceTree = "<group>"; };
+		8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionVC.m; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
 		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
@@ -1057,6 +1067,12 @@
 		847CA88D19F752B6004C292A /* HostActivityVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostActivityVmVO.m; sourceTree = "<group>"; };
 		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
 		8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusinessUnalloctedListAsync.json; sourceTree = "<group>"; };
+		84D8336719F91702001C747A /* PoolMaxHostFailuresVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolMaxHostFailuresVO.h; sourceTree = "<group>"; };
+		84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolMaxHostFailuresVO.m; sourceTree = "<group>"; };
+		84D8336A19F9174A001C747A /* PoolHaInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolHaInfoVO.h; sourceTree = "<group>"; };
+		84D8336B19F9174A001C747A /* PoolHaInfoVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolHaInfoVO.m; sourceTree = "<group>"; };
+		84D8336D19F91CA6001C747A /* PoolVO.getHaInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolVO.getHaInfoAsync.json; sourceTree = "<group>"; };
+		84D8336F19F91D35001C747A /* PoolVO.getMaxHostFailuresAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolVO.getMaxHostFailuresAsync.json; sourceTree = "<group>"; };
 		AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1419,6 +1435,8 @@
 				181DEC3A19F17CB100998835 /* PoolVO.getStorageListAsync.json */,
 				181DEC3B19F17CB100998835 /* PoolVO.getVmListAsync.json */,
 				181DEC3C19F17CB100998835 /* PoolVO.getVmListWithlimit.json */,
+				84D8336D19F91CA6001C747A /* PoolVO.getHaInfoAsync.json */,
+				84D8336F19F91D35001C747A /* PoolVO.getMaxHostFailuresAsync.json */,
 				181DEC3D19F17CB100998835 /* StorageVO.getStorageVOAsync.json */,
 				181DEC3E19F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json */,
 				181DEC3F19F17CB100998835 /* TemplateIcon2x.png */,
@@ -1495,6 +1513,10 @@
 				181DEC7619F17CB100998835 /* PoolVO.m */,
 				845B045B19F4DF00006969CD /* PoolSubVO.h */,
 				845B045C19F4DF00006969CD /* PoolSubVO.m */,
+				84D8336A19F9174A001C747A /* PoolHaInfoVO.h */,
+				84D8336B19F9174A001C747A /* PoolHaInfoVO.m */,
+				84D8336719F91702001C747A /* PoolMaxHostFailuresVO.h */,
+				84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */,
 				181DEC7719F17CB100998835 /* RemoteObject.h */,
 				181DEC7819F17CB100998835 /* RemoteObject.m */,
 				181DEC7919F17CB100998835 /* StorageListResult.h */,
@@ -1886,6 +1908,10 @@
 				18C2129519F27C2000FCBD23 /* HostNicCollectionCell.m */,
 				18C2129619F27C2000FCBD23 /* HostNicCollectionVC.h */,
 				18C2129719F27C2000FCBD23 /* HostNicCollectionVC.m */,
+				8405AA5319F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.h */,
+				8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */,
+				8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */,
+				8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */,
 			);
 			path = host;
 			sourceTree = "<group>";
@@ -2343,6 +2369,7 @@
 				181DED5B19F17CB100998835 /* LicenseVO.getLicenseVOAsync.json in Resources */,
 				181DECAB19F17CB100998835 /* index@2x.png in Resources */,
 				181DECF919F17CB100998835 /* health-80-80.png in Resources */,
+				84D8337019F91D35001C747A /* PoolVO.getMaxHostFailuresAsync.json in Resources */,
 				1824362D19F4FE05007E4D6C /* speed.off@2x.png in Resources */,
 				181DECFA19F17CB100998835 /* infoLine-200-1.png in Resources */,
 				18763BBD19F4B82300669CC3 /* dial-icon4.png in Resources */,
@@ -2417,6 +2444,7 @@
 				1824365619F544C6007E4D6C /* Home@2x.png in Resources */,
 				18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
+				84D8336E19F91CA6001C747A /* PoolVO.getHaInfoAsync.json in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */,
 				181DED6B19F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json in Resources */,
@@ -2540,6 +2568,7 @@
 				18C2135819F27C2000FCBD23 /* PopWarningInfoCell.m in Sources */,
 				18C2134E19F27C2000FCBD23 /* VmDetailMemryConfigVC.m in Sources */,
 				181DED7119F17CB100998835 /* ControlRecordVO.m in Sources */,
+				84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
 				18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */,
@@ -2550,6 +2579,7 @@
 				181DED7919F17CB100998835 /* HostNicListResult.m in Sources */,
 				181DED7619F17CB100998835 /* HostListResult.m in Sources */,
 				18C2130B19F27C2000FCBD23 /* MSCalendarViewController.m in Sources */,
+				84D8336919F91702001C747A /* PoolMaxHostFailuresVO.m in Sources */,
 				18C2131619F27C2000FCBD23 /* DashboardMenuVC.m in Sources */,
 				181DECE519F17CB100998835 /* PieChartView.m in Sources */,
 				18C2133319F27C2000FCBD23 /* PoolDashboardVC.m in Sources */,
@@ -2730,6 +2760,7 @@
 				181DED6F19F17CB100998835 /* BusinessVO.m in Sources */,
 				18763BBF19F4B82300669CC3 /* DialScrollVC.m in Sources */,
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
+				8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */,
 				18C521C619F8CA2000C033C6 /* JBChartHeaderView.m in Sources */,
 				1824362519F4FE05007E4D6C /* RRCircularMenuLabel.m in Sources */,
 				18763C1E19F4EE0200669CC3 /* EScrollerView.m in Sources */,
@@ -2762,6 +2793,7 @@
 				18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */,
 				18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */,
 				181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */,
+				8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */,
 				18C2134119F27C2000FCBD23 /* PopControlRecordCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
