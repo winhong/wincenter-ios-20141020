@@ -31,6 +31,7 @@
 #import "UIButton+Badge.h"
 #import "UIBarButtonItem+Badge.h"
 #import "UIStoryboard+Universal.h"
+#define TARGET_IPHONE_SIMULATOR 0
 
 typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
     Page_Pool,
