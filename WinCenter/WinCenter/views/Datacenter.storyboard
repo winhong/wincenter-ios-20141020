@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0KV-WP-OPB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="iga-KU-AJC">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Q9h-px-2Hj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="J7O-Nw-2OE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mHn-Kq-1NQ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mHn-Kq-1NQ" id="Mbc-0g-yLq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q9h-px-2Hj" id="AYS-yj-SFO"/>
+                            <outlet property="delegate" destination="Q9h-px-2Hj" id="sVu-zd-c2h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Kc5-9b-Jdc"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb1-fh-umJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5418" y="1213"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bfn-90-BiG">
+            <objects>
+                <navigationController id="Ygx-yN-av8" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w3J-Ty-Usi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q9h-px-2Hj" kind="relationship" relationship="rootViewController" id="vtA-yJ-dpc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cl8-23-aWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5762" y="1213"/>
+        </scene>
+        <!--Dashboard SplitVC-->
+        <scene sceneID="Qhy-8q-JzP">
+            <objects>
+                <splitViewController storyboardIdentifier="DashboardSplitVC" id="0KV-WP-OPB" customClass="DashboardSplitVC" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <segue destination="Ygx-yN-av8" kind="relationship" relationship="masterViewController" id="ydV-7v-ryX"/>
+                        <segue destination="EdM-4a-ek9" kind="relationship" relationship="detailViewController" id="ZGi-Bu-Vp1"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ks-SC-4hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4664" y="1213"/>
+        </scene>
         <!--Dashboard MenuVC-->
         <scene sceneID="lA6-gL-mFX">
             <objects>
@@ -4259,6 +4320,8 @@ XxloGXsZfxmSGZ0ZphmrGbMZthm7GcoZzhnVGd0Z6hnvGfEZ8xn4GgAaAxoIGhAaExolGigaLQAAAAAA
 AAIBAAAAAAAAAEIAAAAAAAAAAAAAAAAAABovA
 </mutableData>
         </image>
+        <image name="CPU线程-black" width="15" height="15"/>
+        <image name="CPU颗数-black" width="15" height="15"/>
         <image name="avatar.jpg" width="210" height="210"/>
         <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>

@@ -9,6 +9,7 @@
 #import "RealtimeCurveVC.h"
 #import <MZDayPicker/MZDayPicker.h>
 #import <SMVerticalSegmentedControl/SMVerticalSegmentedControl.h>
+#import "WebViewJavascriptBridge.h"
 
 #define UI_COLOR_FROM_RGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
@@ -19,6 +20,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property (weak, nonatomic) IBOutlet UIView *segmentControlContainer;
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property(retain,nonatomic)NSTimer* timer;
+@property NSObject *performanceData;
+@property WebViewJavascriptBridge* bridge;
 @end
 
 @implementation RealtimeCurveVC
@@ -28,6 +31,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
+    [WebViewJavascriptBridge enableLogging];
+    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webview webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"ObjC received message from JS: %@", data);
+        responseCallback(@"Response for message from ObjC");
+    }];
+
     //所有的资源都在source.bundle这个文件夹里
     NSString* htmlPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"RealtimeCurve.bundle/index.html"];
     
@@ -35,8 +46,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [self.webview loadRequest:request];
     
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+       
+       // Do any additional setup after loading the view from its nib.
     
     self.dayPicker.month = 9;
     self.dayPicker.year = 2013;
@@ -67,7 +78,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     };
     [self.segmentControlContainer addSubview:segmentedControl];
     
-    
 }
 
 - (void)dayPicker:(MZDayPicker *)dayPicker willSelectDay:(MZDay *)day
@@ -90,9 +100,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     int temperature = [self getRandomNumber:20 to:50];
     
     NSMutableString* jsStr = [[NSMutableString alloc] initWithCapacity:0];
-    [jsStr appendFormat:@"updateData(%f,%d)",nowTimeInterval,temperature];
+    //[jsStr appendFormat:@"updateData(%f,%d,%@)",nowTimeInterval,temperature, self.performanceData];
+    //if (self.performanceData) {
+        [jsStr appendFormat:@"updateData('%@')", self.performanceData];
+        [self.webview stringByEvaluatingJavaScriptFromString:jsStr];
+    //}
     
-    [self.webview stringByEvaluatingJavaScriptFromString:jsStr];
+    
 }
 //获取一个随机整数，范围在[from,to），包括from，不包括to
 -(int)getRandomNumber:(int)from to:(int)to
@@ -107,13 +121,24 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    //等webview加载完毕再更新数据
-    self.timer = [NSTimer scheduledTimerWithTimeInterval: 1
-                                             target: self
-                                           selector: @selector(updateData)
-                                           userInfo: nil
-                                            repeats: YES];
-}
+    HostVO *host = [HostVO new];
+    host.hostId = 1;
+    [host getPerformanceAsync:^(id object, NSError *error) {
+        self.performanceData = object;
+        //[self.bridge send:self.performanceData];
+        [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+    }];
+    
 
+   
+
+
+    //等webview加载完毕再更新数据
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval: 1
+//                                             target: self
+//                                           selector: @selector(updateData)
+//                                           userInfo: nil
+//                                            repeats: YES];
+}
 
 @end
