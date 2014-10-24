@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RealtimeCurveVC : UIViewController
+@interface RealtimeCurveVC : UIViewController<UIWebViewDelegate>
 
 @end

@@ -12,37 +12,15 @@
 	<script type="text/javascript" src="js/network.js"></script>
 </head>
 <body>
-<div id="cpuChart" style="width:500px;height:200px"></div>
-<div id="memChart" style="width:500px;height:200px"></div>
-<div id="networkChart" style="width:500px;height:200px"></div>
+<p>物理机统计图表</p>
+<div id="cpuChart" style="width:100%;height:200px"></div>
+<div id="memChart" style="width:100%;height:200px"></div>
+<div id="networkChart" style="width:100%;height:200px"></div>
+<div id="json"></div>
 </body>
 </html>
 <script type="text/javascript">
- var chartMap = new Map();
-	// function drawLine(params){
-	// 	if(updatePerformanceTimeout != undefined && updatePerformanceTimeout > 0){
-	// 		clearTimeout(updatePerformanceTimeout);
-	// 	}
-	// 	if(params==undefined){
-	// 		params = "intervalStr=480000&cf=AVERAGE"; 
-	// 	} 
-	// 	showLoading();
-	// 	$.PERFORMANCE.getPerformanceByHostId("<%=dcId%>","<%=hostId%>",params,true,
-	// 		function(data){
-	// 			hideLoading();
-	// 			$("#performance_host_data_select").attr("disabled",false);
-	// 			$("#host_cpu_btn").show();
-	// 			try{
-	// 				drawLineCpu(data, cpuPerformanceType);
-	// 				drawLineMemory(data);
-	// 				drawLineNetWork(data,"host");
-	// 			}catch(err){}
-	// 			_hosttimer = "loadPerformanceData("+ data.end+", "+data.step+")";
-
-	// 			updatePerformanceTimeout = setTimeout(_hosttimer, 20000);
-	// 	});
-		
-	// }
+    var chartMap = new Map();
 	function counXInterval(lineNum,xInterval){
 		xInterval = xInterval * 2;
 		lineNum = lineNum/2;
@@ -52,14 +30,49 @@
 			return lineNum+","+xInterval;
 		}
 	}
+
+	function updateData(Data){
+		 drawLineCpu($.PERFORMANCE.formHostJson(Data), "all");
+		 drawLineMemory($.PERFORMANCE.formHostJson(Data));
+		 drawLineNetWork($.PERFORMANCE.formHostJson(Data),"host");
+	}
 	$.ajax({
 		url:"js/data.json",
-		//url:"https://192.168.213.147:8090/restServlet?connectorId=1&apiKey=pc.winserver.resourcePool.getCapacity&placeholder=7",
 		success:function(data){
+			updateData(data)
+			}
+		})
 
-			drawLineCpu($.PERFORMANCE.formHostJson(data), "all");
-			drawLineMemory($.PERFORMANCE.formHostJson(data));
-			drawLineNetWork($.PERFORMANCE.formHostJson(data),"host");
-		}
+	function connectWebViewJavascriptBridge(callback) {
+	    if (window.WebViewJavascriptBridge) {
+	        callback(WebViewJavascriptBridge)
+	    } else {
+	        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+	            callback(WebViewJavascriptBridge)
+	        }, false)
+	    }
+	}
+
+	connectWebViewJavascriptBridge(function(bridge) {
+
+	    /* Init your app here */
+	    bridge.init(function(message, responseCallback) {
+	        //alert('Received message: ' + message)
+
+       	        if (responseCallback) {
+	            responseCallback("Right back atcha")
+	        }
+	    })
+
+	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+	    	、、updateData(data);
+			var responseData = { 'Javascript Says':'Right back atcha!' }
+			responseCallback(responseData)
+		})
+	    bridge.send('Hello from the javascript')
+	    bridge.send('Please respond to this', function responseCallback(responseData) {
+	        console.log("Javascript got its response", responseData)
+	    })
 	})
+
 </script>
