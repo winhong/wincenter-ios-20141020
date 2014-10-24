@@ -126,6 +126,21 @@
                                             <segue destination="aya-nF-tQR" kind="replace" splitViewControllerTargetIndex="1" id="lMM-aN-4Bt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RCb-Rs-5Hb" style="IBUITableViewCellStyleDefault" id="FzZ-Ya-ygc">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FzZ-Ya-ygc" id="hQh-af-ASz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="锁定屏幕" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RCb-Rs-5Hb">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="wuv-CF-A3A">
@@ -1350,6 +1365,21 @@
                                             <segue destination="Yvr-L9-kvC" kind="show" id="gQ8-rg-qih"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MjH-At-Lud" style="IBUITableViewCellStyleDefault" id="txb-8B-cNJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="txb-8B-cNJ" id="ccd-vX-D7s">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="锁定屏幕" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MjH-At-Lud">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="GCg-Yk-Gyv">
@@ -1495,12 +1525,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h9v-mu-EsN"/>
-        <segue reference="FDj-F1-Eac"/>
-        <segue reference="gQ8-rg-qih"/>
-        <segue reference="xiw-9q-3p9"/>
         <segue reference="DXs-kF-nOV"/>
-        <segue reference="fUs-FY-UtL"/>
-        <segue reference="CP9-yb-f80"/>
+        <segue reference="sfL-QP-Kfv"/>
+        <segue reference="eem-JX-f0g"/>
+        <segue reference="FDj-F1-Eac"/>
+        <segue reference="xiw-9q-3p9"/>
+        <segue reference="gQ8-rg-qih"/>
+        <segue reference="h9v-mu-EsN"/>
     </inferredMetricsTieBreakers>
 </document>
