@@ -107,11 +107,14 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     CGFloat height = self.view.bounds.size.height;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         width = 320;
-        height = 550;
+        height = 400;
     }
     
+    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, 0, width, height - kJBBarChartViewControllerChartHeight - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
+    [self.container addSubview:self.informationView];
+    
     self.barChartView = [[JBBarChartView alloc] init];
-    self.barChartView.frame = CGRectMake(kJBBarChartViewControllerChartPadding, kJBBarChartViewControllerChartPadding, width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeight);
+    self.barChartView.frame = CGRectMake(kJBBarChartViewControllerChartPadding, CGRectGetMaxY(self.informationView.frame)+kJBBarChartViewControllerChartPadding, width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeight);
     self.barChartView.delegate = self;
     self.barChartView.dataSource = self;
     self.barChartView.headerPadding = kJBBarChartViewControllerChartHeaderPadding;
@@ -120,7 +123,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     panGesture.cancelsTouchesInView = FALSE;
-    [self.view addGestureRecognizer:panGesture];
+    [self.barChartView addGestureRecognizer:panGesture];
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBBarChartViewControllerChartPadding, ceil(height * 0.5) - ceil(kJBBarChartViewControllerChartHeaderHeight * 0.5), width - (kJBBarChartViewControllerChartPadding * 2), kJBBarChartViewControllerChartHeaderHeight)];
     headerView.titleLabel.text = [kJBStringLabelAverageMonthlyTemperature uppercaseString];
@@ -135,9 +138,7 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
     footerView.rightLabel.text = [[self.monthlySymbols lastObject] uppercaseString];
     footerView.rightLabel.textColor = [UIColor whiteColor];
     self.barChartView.footerView = footerView;
-    
-    self.informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, CGRectGetMaxY(self.barChartView.frame), width, height - CGRectGetMaxY(self.barChartView.frame) - CGRectGetMaxY(self.navigationController.navigationBar.frame))];
-    [self.container addSubview:self.informationView];
+
 
     [self.container addSubview:self.barChartView];
     [self.barChartView reloadData];
@@ -190,8 +191,8 @@ NSString * const kJBBarChartViewControllerNavButtonViewKey = @"view";
 
 - (void)didUnselectBarChartView:(JBBarChartView *)barChartView
 {
-    [self.informationView setHidden:YES animated:YES];
-    [self setTooltipVisible:NO animated:YES];
+    //[self.informationView setHidden:YES animated:YES];
+    //[self setTooltipVisible:NO animated:YES];
 }
 
 #pragma mark - Buttons

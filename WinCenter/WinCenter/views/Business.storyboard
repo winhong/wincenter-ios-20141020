@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Kv-z6-o09">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Kv-z6-o09">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,20 +49,15 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1S-5N-Cwr">
                                 <rect key="frame" x="0.0" y="45" width="969" height="122"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zD-aA-oUs">
-                                        <rect key="frame" x="13" y="-10" width="934" height="135"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfD-k3-zvx">
-                                                <rect key="frame" x="135" y="49" width="779" height="32"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="业务系统－摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-RU-Oq4">
-                                                <rect key="frame" x="20" y="20" width="95" height="95"/>
-                                            </imageView>
-                                        </subviews>
-                                    </scrollView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfD-k3-zvx">
+                                        <rect key="frame" x="148" y="39" width="779" height="32"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="业务系统－摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="7Cl-RU-Oq4">
+                                        <rect key="frame" x="33" y="10" width="95" height="95"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -74,8 +69,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="LBv-hy-79D" secondAttribute="trailing" id="CWe-HZ-gDc"/>
                             <constraint firstItem="w1S-5N-Cwr" firstAttribute="top" secondItem="T1J-dA-lcT" secondAttribute="bottom" constant="1" id="RkI-im-Zgr"/>
                             <constraint firstItem="T1J-dA-lcT" firstAttribute="top" secondItem="t1V-7H-79c" secondAttribute="topMargin" id="S3i-jd-jbZ"/>
+                            <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="w1S-5N-Cwr" secondAttribute="bottom" constant="1" id="WH6-mH-9Il"/>
+                            <constraint firstItem="w1S-5N-Cwr" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leading" id="ami-vP-ik5"/>
                             <constraint firstItem="5Kf-ER-oi0" firstAttribute="top" secondItem="LBv-hy-79D" secondAttribute="bottom" id="cCp-Y4-57i"/>
+                            <constraint firstAttribute="trailing" secondItem="w1S-5N-Cwr" secondAttribute="trailing" id="czr-ZF-kFt"/>
                             <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leadingMargin" id="e6Z-j2-DhF"/>
+                            <constraint firstItem="w1S-5N-Cwr" firstAttribute="top" secondItem="T1J-dA-lcT" secondAttribute="bottom" constant="1" id="nFa-mC-jkg"/>
                             <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="w1S-5N-Cwr" secondAttribute="bottom" constant="1" id="p0j-3C-yU3"/>
                         </constraints>
                     </view>

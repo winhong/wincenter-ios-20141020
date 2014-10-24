@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <THPinViewController/THPinViewController.h>
 
-@interface PopOptionsVC : UITableViewController
+@interface PopOptionsVC : UITableViewController<THPinViewControllerDelegate>
 
 @end
