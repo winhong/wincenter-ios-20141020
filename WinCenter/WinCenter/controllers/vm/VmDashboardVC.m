@@ -29,6 +29,8 @@
             
             [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
                 self.vmSubVO = object;
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
             }];
         }];

@@ -22,6 +22,8 @@
                 }
             }
             [self.dataList setValue:shareList forKey:self.poolVO.resourcePoolName];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }else{
@@ -33,6 +35,8 @@
                 }
             }
             [self.dataList setValue:shareList forKey:self.hostVO.hostName];
+            [self.collectionView headerEndRefreshing];
+            [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
         }];
     }

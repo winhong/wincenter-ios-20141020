@@ -14,6 +14,8 @@
 -(void)reloadData{
     [self.vmVO getVmNicListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:self.vmVO.name];
+        [self.collectionView headerEndRefreshing];
+        [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];
     }];
 }
