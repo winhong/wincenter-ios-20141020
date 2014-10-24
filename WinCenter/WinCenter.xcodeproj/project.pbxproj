@@ -379,6 +379,7 @@
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
 		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
+		843806EB19FA227C00DE3217 /* RealtimeCurve2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
 		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
@@ -1028,6 +1029,7 @@
 		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
 		8405AA5319F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionVC.h; sourceTree = "<group>"; };
 		8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionVC.m; sourceTree = "<group>"; };
+		843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve2.bundle; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
 		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
@@ -2203,6 +2205,7 @@
 		18C521AF19F8CA2000C033C6 /* RealtimeCurve */ = {
 			isa = PBXGroup;
 			children = (
+				843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */,
 				18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */,
 				18C521B119F8CA2000C033C6 /* RealtimeCurveVC.h */,
 				18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */,
@@ -2413,6 +2416,7 @@
 				1824362C19F4FE05007E4D6C /* route@2x.png in Resources */,
 				18763BBB19F4B82300669CC3 /* dial-icon2.png in Resources */,
 				181DECF319F17CB100998835 /* appoint-80-80.png in Resources */,
+				843806EB19FA227C00DE3217 /* RealtimeCurve2.bundle in Resources */,
 				1824363019F4FE05007E4D6C /* time@2x.png in Resources */,
 				181DED9A19F17CB100998835 /* Setting.storyboard in Resources */,
 				181DED6019F17CB100998835 /* PoolVO.getStorageList.json in Resources */,
