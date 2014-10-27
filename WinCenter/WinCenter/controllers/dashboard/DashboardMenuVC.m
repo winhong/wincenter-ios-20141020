@@ -54,7 +54,7 @@
 }
 
 - (IBAction)switchTabBar:(id)sender {
-    [self playSoundEffect];
+    //[self playSoundEffect];
     NSInteger currentIndex =  ((UIButton*)sender).tag;
     [self setSelectedItemIndex:currentIndex];
     [self.tabBarVC setSelectedIndex:currentIndex];
