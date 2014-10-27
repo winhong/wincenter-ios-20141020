@@ -32,8 +32,8 @@
         [week_self reloadData];
     }];
     
-    [self.collectionView headerBeginRefreshing];
-    
+    //[self.collectionView headerBeginRefreshing];
+    [week_self reloadData];
     //[self.collectionView headerEndRefreshing];
     //[self.collectionView footerEndRefreshing];
 }

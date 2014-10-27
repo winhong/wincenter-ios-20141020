@@ -56,18 +56,23 @@
         [self.tabBarVC addChildViewController:nav];
     }
 
-    //网络
-    [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
+    UINavigationController *nav;
     
+    //网络
+    nav = [[UIStoryboard storyboardWithName:@"Network" bundle:nil] instantiateViewController:@"NetworkDashboardVCNav"];
+    [self.tabBarVC addChildViewController:nav];
+    
+    //告警
     [self.tabBarVC addChildViewController:[MSCalendarViewController new]];
     
     //搜索
     [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
     
-    UINavigationController *nav;
+    //刷新
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
     [self.tabBarVC addChildViewController:nav];
     
+    //设置
     nav = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
     [self.tabBarVC addChildViewController:nav];
     

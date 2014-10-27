@@ -225,6 +225,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WXd-XZ-Xat" kind="showDetail" id="5mV-Fn-EAp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ypi-Wi-ufU" style="IBUITableViewCellStyleDefault" id="j3J-4b-Wxd">
                                         <rect key="frame" x="0.0" y="419" width="540" height="44"/>
@@ -242,6 +245,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="43b-CK-mNG" kind="showDetail" id="Jv0-oc-eC1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -251,13 +257,7 @@
                             <outlet property="delegate" destination="Xot-9F-dYc" id="HP2-Qc-Flc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="系统设置" id="FZA-IA-yJj">
-                        <barButtonItem key="rightBarButtonItem" title="关闭" id="VaD-RI-ihL">
-                            <connections>
-                                <action selector="close:" destination="Xot-9F-dYc" id="Rzt-HU-HrO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="系统设置" id="FZA-IA-yJj"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
@@ -301,8 +301,12 @@
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="L05-fO-Wc8" secondAttribute="bottom" id="0uZ-KU-mGT"/>
                                 <constraint firstItem="L05-fO-Wc8" firstAttribute="leading" secondItem="bBc-c4-GGs" secondAttribute="leading" id="43c-kj-ZND"/>
+                                <constraint firstItem="L05-fO-Wc8" firstAttribute="top" secondItem="bBc-c4-GGs" secondAttribute="top" id="7Wh-T6-cxH"/>
+                                <constraint firstAttribute="bottom" secondItem="L05-fO-Wc8" secondAttribute="bottom" id="Xbh-CO-9xU"/>
                                 <constraint firstAttribute="trailing" secondItem="L05-fO-Wc8" secondAttribute="trailing" id="eL6-u8-ola"/>
+                                <constraint firstAttribute="trailing" secondItem="L05-fO-Wc8" secondAttribute="trailing" id="fVW-kx-P5Y"/>
                                 <constraint firstItem="L05-fO-Wc8" firstAttribute="top" secondItem="bBc-c4-GGs" secondAttribute="top" id="gGC-2z-8rT"/>
+                                <constraint firstItem="L05-fO-Wc8" firstAttribute="leading" secondItem="bBc-c4-GGs" secondAttribute="leading" id="l1A-cU-rnV"/>
                             </constraints>
                         </view>
                         <sections>
@@ -397,7 +401,7 @@
         <scene sceneID="51M-Xn-ZeC">
             <objects>
                 <tableViewController id="0HX-wV-lqa" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="m3V-QI-cS9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="m3V-QI-cS9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -560,7 +564,7 @@
         <scene sceneID="0jp-Yz-1tt">
             <objects>
                 <tableViewController id="UAK-wx-xrw" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2bI-Hd-J82">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2bI-Hd-J82">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -657,7 +661,7 @@
         <scene sceneID="hOd-7v-Raq">
             <objects>
                 <tableViewController id="Yvr-L9-kvC" customClass="PopOptionLicenseVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="XiX-pe-aGy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="XiX-pe-aGy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -859,7 +863,7 @@
         <scene sceneID="5Tt-Sm-6IE">
             <objects>
                 <tableViewController id="rxn-hY-iat" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="oMa-Mn-iIa">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="oMa-Mn-iIa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -980,7 +984,7 @@
         <scene sceneID="oNY-Z5-506">
             <objects>
                 <tableViewController id="Rmg-sq-peh" customClass="PopOptionsUserInfoVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Sic-oU-83h">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Sic-oU-83h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1183,6 +1187,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2c-F3-gS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4566" y="-4446"/>
+        </scene>
+        <!--Pop Option HelpVC-->
+        <scene sceneID="T3x-wi-7hc">
+            <objects>
+                <viewController storyboardIdentifier="PopOptionHelpVC" id="43b-CK-mNG" customClass="PopOptionHelpVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yhf-xE-mtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpJ-oy-3vS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZN-ud-x0F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJ3-pt-gHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5675" y="-3362"/>
+        </scene>
+        <!--Pop Option FeedbackVC-->
+        <scene sceneID="AWv-u3-Noj">
+            <objects>
+                <viewController storyboardIdentifier="PopOptionFeedbackVC" id="WXd-XZ-Xat" customClass="PopOptionFeedbackVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2g9-8P-5zb"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0V-ll-N7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RG8-63-ty3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtR-bw-syu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5587" y="-3371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cvu-9v-AhZ">
@@ -1464,6 +1504,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WXd-XZ-Xat" kind="show" id="9nw-dL-43m"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f3V-5W-glt" style="IBUITableViewCellStyleDefault" id="Ow5-QN-z2Y">
                                         <rect key="frame" x="0.0" y="419" width="540" height="44"/>
@@ -1481,6 +1524,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="43b-CK-mNG" kind="show" id="l5z-NH-yea"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1525,12 +1571,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Mw-IM-jBC"/>
-        <segue reference="gQ8-rg-qih"/>
-        <segue reference="eem-JX-f0g"/>
-        <segue reference="FDj-F1-Eac"/>
+        <segue reference="DXs-kF-nOV"/>
         <segue reference="sfL-QP-Kfv"/>
+        <segue reference="gQ8-rg-qih"/>
+        <segue reference="l5z-NH-yea"/>
         <segue reference="h9v-mu-EsN"/>
         <segue reference="xiw-9q-3p9"/>
+        <segue reference="FDj-F1-Eac"/>
+        <segue reference="9nw-dL-43m"/>
+        <segue reference="eem-JX-f0g"/>
     </inferredMetricsTieBreakers>
 </document>
