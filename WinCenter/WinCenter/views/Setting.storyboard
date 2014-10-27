@@ -225,6 +225,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WXd-XZ-Xat" kind="showDetail" id="5mV-Fn-EAp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ypi-Wi-ufU" style="IBUITableViewCellStyleDefault" id="j3J-4b-Wxd">
                                         <rect key="frame" x="0.0" y="419" width="540" height="44"/>
@@ -242,6 +245,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="43b-CK-mNG" kind="showDetail" id="Jv0-oc-eC1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1182,6 +1188,42 @@
             </objects>
             <point key="canvasLocation" x="-4566" y="-4446"/>
         </scene>
+        <!--Pop Option HelpVC-->
+        <scene sceneID="T3x-wi-7hc">
+            <objects>
+                <viewController storyboardIdentifier="PopOptionHelpVC" id="43b-CK-mNG" customClass="PopOptionHelpVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yhf-xE-mtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpJ-oy-3vS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZN-ud-x0F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJ3-pt-gHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5675" y="-3362"/>
+        </scene>
+        <!--Pop Option FeedbackVC-->
+        <scene sceneID="AWv-u3-Noj">
+            <objects>
+                <viewController storyboardIdentifier="PopOptionFeedbackVC" id="WXd-XZ-Xat" customClass="PopOptionFeedbackVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2g9-8P-5zb"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0V-ll-N7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RG8-63-ty3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtR-bw-syu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5587" y="-3371"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cvu-9v-AhZ">
             <objects>
@@ -1462,6 +1504,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WXd-XZ-Xat" kind="show" id="9nw-dL-43m"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f3V-5W-glt" style="IBUITableViewCellStyleDefault" id="Ow5-QN-z2Y">
                                         <rect key="frame" x="0.0" y="419" width="540" height="44"/>
@@ -1479,6 +1524,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="43b-CK-mNG" kind="show" id="l5z-NH-yea"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1526,9 +1574,11 @@
         <segue reference="DXs-kF-nOV"/>
         <segue reference="sfL-QP-Kfv"/>
         <segue reference="gQ8-rg-qih"/>
+        <segue reference="l5z-NH-yea"/>
         <segue reference="h9v-mu-EsN"/>
         <segue reference="xiw-9q-3p9"/>
         <segue reference="FDj-F1-Eac"/>
+        <segue reference="9nw-dL-43m"/>
         <segue reference="eem-JX-f0g"/>
     </inferredMetricsTieBreakers>
 </document>
