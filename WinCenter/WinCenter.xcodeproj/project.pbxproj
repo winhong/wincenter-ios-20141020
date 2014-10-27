@@ -375,6 +375,11 @@
 		18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E919F8DA6700C033C6 /* DAPIPView.m */; };
 		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
+		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
+		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
+		68F39D7B19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */; };
+		68F39D7E19FDF01800F5BACF /* NetworkTotalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
 		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
 		840DA54619FA3D6B00664F2B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DA54519FA3D6B00664F2B /* WebViewJavascriptBridge.m */; };
@@ -1021,6 +1026,16 @@
 		18C521EA19F8DA6700C033C6 /* SquareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDelegate.h; sourceTree = "<group>"; };
 		18C521EB19F8DA6700C033C6 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		18C521EC19F8DA6700C033C6 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
+		686B32B919FDDD7200742984 /* NetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionCell.h; sourceTree = "<group>"; };
+		686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionCell.m; sourceTree = "<group>"; };
+		686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionVC.h; sourceTree = "<group>"; };
+		686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionVC.m; sourceTree = "<group>"; };
+		686B32BD19FDDD7200742984 /* NetworkContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkContainerVC.h; sourceTree = "<group>"; };
+		686B32BE19FDDD7200742984 /* NetworkContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkContainerVC.m; sourceTree = "<group>"; };
+		68F39D7919FDEFDF00F5BACF /* NetworkTotalCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalCollectionVC.h; sourceTree = "<group>"; };
+		68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionVC.m; sourceTree = "<group>"; };
+		68F39D7C19FDF01800F5BACF /* NetworkTotalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalCollectionCell.h; sourceTree = "<group>"; };
+		68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionCell.m; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionCell.h; sourceTree = "<group>"; };
 		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
@@ -1777,13 +1792,13 @@
 				18C2127A19F27C2000FCBD23 /* datacenter */,
 				18C2127F19F27C2000FCBD23 /* host */,
 				18C2129819F27C2000FCBD23 /* login */,
-				18C212A119F27C2000FCBD23 /* network */,
 				186E689919F5EF8100717BCE /* performance */,
 				18C212A819F27C2000FCBD23 /* pool */,
 				18C212B319F27C2000FCBD23 /* setting */,
 				18C212BA19F27C2000FCBD23 /* storage */,
 				18C212CD19F27C2000FCBD23 /* task */,
 				18C212D819F27C2000FCBD23 /* vm */,
+				686B32B819FDDD7200742984 /* network */,
 				18C212FD19F27C2000FCBD23 /* warning */,
 			);
 			path = controllers;
@@ -1925,13 +1940,6 @@
 				18C212A019F27C2000FCBD23 /* VWWWaterView.m */,
 			);
 			path = login;
-			sourceTree = "<group>";
-		};
-		18C212A119F27C2000FCBD23 /* network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 		18C212A819F27C2000FCBD23 /* pool */ = {
@@ -2271,6 +2279,23 @@
 			path = SquareView;
 			sourceTree = "<group>";
 		};
+		686B32B819FDDD7200742984 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				686B32B919FDDD7200742984 /* NetworkCollectionCell.h */,
+				686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */,
+				686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */,
+				686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */,
+				686B32BD19FDDD7200742984 /* NetworkContainerVC.h */,
+				686B32BE19FDDD7200742984 /* NetworkContainerVC.m */,
+				68F39D7919FDEFDF00F5BACF /* NetworkTotalCollectionVC.h */,
+				68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */,
+				68F39D7C19FDF01800F5BACF /* NetworkTotalCollectionCell.h */,
+				68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2526,6 +2551,7 @@
 				1886A60719F6516E0089A576 /* VmStateVO.m in Sources */,
 				18C5215519F89DF300C033C6 /* MJRefreshHeaderView.m in Sources */,
 				18C2130719F27C2000FCBD23 /* BusinessDashboardVC.m in Sources */,
+				686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */,
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
 				181DECB419F17CB100998835 /* chatView.m in Sources */,
 				18C2134D19F27C2000FCBD23 /* VmDetailInfoVC.m in Sources */,
@@ -2549,6 +2575,7 @@
 				18C2135819F27C2000FCBD23 /* PopWarningInfoCell.m in Sources */,
 				18C2134E19F27C2000FCBD23 /* VmDetailMemryConfigVC.m in Sources */,
 				181DED7119F17CB100998835 /* ControlRecordVO.m in Sources */,
+				686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */,
 				84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
@@ -2593,6 +2620,7 @@
 				181DECED19F17CB100998835 /* PNTestViewController.m in Sources */,
 				181DECE419F17CB100998835 /* PieChartVC.m in Sources */,
 				18C2133919F27C2000FCBD23 /* StorageCollectionVC.m in Sources */,
+				68F39D7B19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m in Sources */,
 				18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */,
 				181DED7A19F17CB100998835 /* HostNicVO.m in Sources */,
 				181DECE719F17CB100998835 /* RotatedView.m in Sources */,
@@ -2616,6 +2644,7 @@
 				181DED8E19F17CB100998835 /* VmListResult.m in Sources */,
 				18C521C519F8CA2000C033C6 /* JBBaseChartViewController.m in Sources */,
 				181DED7719F17CB100998835 /* HostNetworkListResult.m in Sources */,
+				686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */,
 				18C2134C19F27C2000FCBD23 /* VmDetailCPUConfigVC.m in Sources */,
 				181DED7319F17CB100998835 /* DatacenterStatVO.m in Sources */,
 				181DED8819F17CB100998835 /* StorageVolumnListResult.m in Sources */,
@@ -2695,6 +2724,7 @@
 				18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */,
 				18C2134219F27C2000FCBD23 /* PopControlRecordCellForTime.m in Sources */,
 				1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */,
+				68F39D7E19FDF01800F5BACF /* NetworkTotalCollectionCell.m in Sources */,
 				181DECAF19F17CB100998835 /* PoolDatagridModel.m in Sources */,
 				181DED7019F17CB100998835 /* ControlRecordListResult.m in Sources */,
 				181DED9119F17CB100998835 /* VmVO.m in Sources */,
