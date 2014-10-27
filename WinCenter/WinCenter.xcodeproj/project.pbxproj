@@ -240,8 +240,7 @@
 		18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */; };
 		1886A60619F6204D0089A576 /* Performance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886A60519F6204D0089A576 /* Performance.storyboard */; };
 		1886A60719F6516E0089A576 /* VmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1319F5F40E0046A5A0 /* VmStateVO.m */; };
-		1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */; };
-		1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */; };
+		1891808119F3980C00B1ECA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1891807F19F3980C00B1ECA4 /* Main.storyboard */; };
 		18C2130419F27C2000FCBD23 /* BusinessContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */; };
 		18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124C19F27C2000FCBD23 /* BusinessDashboardCell.m */; };
 		18C2130619F27C2000FCBD23 /* BusinessDashboardHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2124E19F27C2000FCBD23 /* BusinessDashboardHeader.m */; };
@@ -758,8 +757,7 @@
 		18763C1C19F4EE0200669CC3 /* EScrollerView_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_2.jpg; sourceTree = "<group>"; };
 		18763C1D19F4EE0200669CC3 /* EScrollerView_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EScrollerView_3.jpg; sourceTree = "<group>"; };
 		1886A60519F6204D0089A576 /* Performance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Performance.storyboard; sourceTree = "<group>"; };
-		1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1891807F19F3980C00B1ECA4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		18C2124919F27C2000FCBD23 /* BusinessContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessContainerVC.h; sourceTree = "<group>"; };
 		18C2124A19F27C2000FCBD23 /* BusinessContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessContainerVC.m; sourceTree = "<group>"; };
 		18C2124B19F27C2000FCBD23 /* BusinessDashboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDashboardCell.h; sourceTree = "<group>"; };
@@ -1578,8 +1576,7 @@
 		181DEC9519F17CB100998835 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				1891807E19F3980C00B1ECA4 /* Main_iPad.storyboard */,
-				1891807F19F3980C00B1ECA4 /* Main_iPhone.storyboard */,
+				1891807F19F3980C00B1ECA4 /* Main.storyboard */,
 				181DEC9619F17CB100998835 /* Business.storyboard */,
 				181DEC9719F17CB100998835 /* Datacenter.storyboard */,
 				181DEC9819F17CB100998835 /* Host.storyboard */,
@@ -2426,7 +2423,7 @@
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
 				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
-				1891808119F3980C00B1ECA4 /* Main_iPhone.storyboard in Resources */,
+				1891808119F3980C00B1ECA4 /* Main.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
 				843E6C1619F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json in Resources */,
 				181DED9B19F17CB100998835 /* Storage.storyboard in Resources */,
@@ -2471,7 +2468,6 @@
 				181DED9519F17CB100998835 /* Datacenter.storyboard in Resources */,
 				181DED9C19F17CB100998835 /* Task.storyboard in Resources */,
 				181DED5619F17CB100998835 /* HostVO.getHostNicUngroupedListAsync.json in Resources */,
-				1891808019F3980C00B1ECA4 /* Main_iPad.storyboard in Resources */,
 				181DED4A19F17CB100998835 /* DatacenterVO.getDatacenterStatWinserverVOAsync.json in Resources */,
 				181DED5119F17CB100998835 /* DatacenterVO.getVmListAsync.json in Resources */,
 				181DED4719F17CB100998835 /* DatacenterVO.getBusinessListAsync.json in Resources */,
