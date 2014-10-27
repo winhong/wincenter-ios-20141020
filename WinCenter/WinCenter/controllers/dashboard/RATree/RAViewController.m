@@ -56,7 +56,6 @@
   [self.view insertSubview:treeView atIndex:0];
   
   [self.navigationController setNavigationBarHidden:NO];
-  self.navigationItem.title = NSLocalizedString(@"Things", nil);
   [self updateNavigationItemButton];
   
   [self.treeView registerNib:[UINib nibWithNibName:NSStringFromClass([RATableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([RATableViewCell class])];

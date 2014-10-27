@@ -277,9 +277,7 @@
 		18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129319F27C2000FCBD23 /* HostNetworkCollectionVC.m */; };
 		18C2132719F27C2000FCBD23 /* HostNicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129519F27C2000FCBD23 /* HostNicCollectionCell.m */; };
 		18C2132819F27C2000FCBD23 /* HostNicCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129719F27C2000FCBD23 /* HostNicCollectionVC.m */; };
-		18C2132919F27C2000FCBD23 /* LoginSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129A19F27C2000FCBD23 /* LoginSettingVC.m */; };
-		18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129C19F27C2000FCBD23 /* LoginTableVC.m */; };
-		18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129E19F27C2000FCBD23 /* LoginVC.m */; };
+		18C2132A19F27C2000FCBD23 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2129C19F27C2000FCBD23 /* LoginVC.m */; };
 		18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212A019F27C2000FCBD23 /* VWWWaterView.m */; };
 		18C2133019F27C2000FCBD23 /* PoolContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212AA19F27C2000FCBD23 /* PoolContainerVC.m */; };
 		18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212AC19F27C2000FCBD23 /* PoolDashboardCell.m */; };
@@ -831,12 +829,8 @@
 		18C2129519F27C2000FCBD23 /* HostNicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostNicCollectionCell.m; sourceTree = "<group>"; };
 		18C2129619F27C2000FCBD23 /* HostNicCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostNicCollectionVC.h; sourceTree = "<group>"; };
 		18C2129719F27C2000FCBD23 /* HostNicCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostNicCollectionVC.m; sourceTree = "<group>"; };
-		18C2129919F27C2000FCBD23 /* LoginSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSettingVC.h; sourceTree = "<group>"; };
-		18C2129A19F27C2000FCBD23 /* LoginSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSettingVC.m; sourceTree = "<group>"; };
-		18C2129B19F27C2000FCBD23 /* LoginTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableVC.h; sourceTree = "<group>"; };
-		18C2129C19F27C2000FCBD23 /* LoginTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableVC.m; sourceTree = "<group>"; };
-		18C2129D19F27C2000FCBD23 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		18C2129E19F27C2000FCBD23 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		18C2129B19F27C2000FCBD23 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		18C2129C19F27C2000FCBD23 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		18C2129F19F27C2000FCBD23 /* VWWWaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWWaterView.h; sourceTree = "<group>"; };
 		18C212A019F27C2000FCBD23 /* VWWWaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWWaterView.m; sourceTree = "<group>"; };
 		18C212A919F27C2000FCBD23 /* PoolContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolContainerVC.h; sourceTree = "<group>"; };
@@ -1933,12 +1927,8 @@
 		18C2129819F27C2000FCBD23 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				18C2129919F27C2000FCBD23 /* LoginSettingVC.h */,
-				18C2129A19F27C2000FCBD23 /* LoginSettingVC.m */,
-				18C2129B19F27C2000FCBD23 /* LoginTableVC.h */,
-				18C2129C19F27C2000FCBD23 /* LoginTableVC.m */,
-				18C2129D19F27C2000FCBD23 /* LoginVC.h */,
-				18C2129E19F27C2000FCBD23 /* LoginVC.m */,
+				18C2129B19F27C2000FCBD23 /* LoginVC.h */,
+				18C2129C19F27C2000FCBD23 /* LoginVC.m */,
 				18C2129F19F27C2000FCBD23 /* VWWWaterView.h */,
 				18C212A019F27C2000FCBD23 /* VWWWaterView.m */,
 			);
@@ -2668,7 +2658,6 @@
 				18C2130619F27C2000FCBD23 /* BusinessDashboardHeader.m in Sources */,
 				1824362419F4FE05007E4D6C /* RRCircularMenu.m in Sources */,
 				181DECAE19F17CB100998835 /* PoolDatagridCell.m in Sources */,
-				18C2132B19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				181DECD719F17CB100998835 /* Example1PieView.m in Sources */,
 				18C5216D19F8A4C900C033C6 /* BTGlassScrollView.m in Sources */,
 				181DECEB19F17CB100998835 /* PNLineChartView.m in Sources */,
@@ -2765,7 +2754,7 @@
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,
 				18C2134319F27C2000FCBD23 /* PopControlRecordVC.m in Sources */,
 				181DED7419F17CB100998835 /* DatacenterStatWinserver.m in Sources */,
-				18C2132A19F27C2000FCBD23 /* LoginTableVC.m in Sources */,
+				18C2132A19F27C2000FCBD23 /* LoginVC.m in Sources */,
 				18C2130519F27C2000FCBD23 /* BusinessDashboardCell.m in Sources */,
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
 				18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */,
@@ -2802,7 +2791,6 @@
 				1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */,
 				18C521BA19F8CA2000C033C6 /* Big3RevenueViewController.m in Sources */,
 				181DED8A19F17CB100998835 /* UserListResult.m in Sources */,
-				18C2132919F27C2000FCBD23 /* LoginSettingVC.m in Sources */,
 				181DED8519F17CB100998835 /* RemoteObject.m in Sources */,
 				18C521C219F8CA2000C033C6 /* JBAreaChartViewController.m in Sources */,
 				18C2130A19F27C2000FCBD23 /* BusinessVmCollectionVC.m in Sources */,
@@ -2914,6 +2902,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;
@@ -2930,6 +2919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;

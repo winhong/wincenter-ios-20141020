@@ -1,20 +1,16 @@
 //
-//  LoginVC.h
-//  wincenterDemo01
+//  LoginTableVC.h
+//  WinCenter-iPhone
 //
-//  Created by huadi on 14-8-20.
+//  Created by apple on 14-10-9.
 //  Copyright (c) 2014年 huadi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UIViewController<UITextFieldDelegate, NSURLSessionDelegate>
-@property NSString *themeName;
-@property (weak, nonatomic) IBOutlet UIView *formView;
+@interface LoginVC : UITableViewController<UITextFieldDelegate, NSURLSessionDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *ipAddress;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
-@property (weak, nonatomic) IBOutlet UITextField *ip;
-@property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
 - (IBAction)backToLogin:(UIStoryboardSegue*)segue;
-
 @end
