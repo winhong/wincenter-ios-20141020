@@ -22,6 +22,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(retain,nonatomic)NSTimer* timer;
 @property NSObject *performanceData;
 @property WebViewJavascriptBridge* bridge;
+@property int startTime;
 @end
 
 @implementation RealtimeCurveVC
@@ -37,6 +38,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webview webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"ObjC received message from JS: %@", data);
         responseCallback(@"Response for message from ObjC");
+        [self setChartStartTime:data];
     }];
 
     //所有的资源都在source.bundle这个文件夹里
@@ -118,17 +120,23 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 {
     return YES;
 }
+-(void)reloadData{
+    if (!self.startTime) {
+        self.startTime = (long long int)[NSDate new];
+    }
+    HostVO *host = [HostVO new];
+    host.hostId = 1;
+
+    [host getPerformanceAsync:^(id object, NSError *error) {
+        self.performanceData = object;
+        [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+    } withStartTime:self.startTime];
+}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    HostVO *host = [HostVO new];
-    host.hostId = 1;
-    [host getPerformanceAsync:^(id object, NSError *error) {
-        self.performanceData = object;
-        //[self.bridge send:self.performanceData];
-        [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
-    }];
     
+    [self reloadData];
 
    
 
@@ -139,6 +147,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 //                                           selector: @selector(updateData)
 //                                           userInfo: nil
 //                                            repeats: YES];
+}
+
+-(void)setChartStartTime:(NSString*)startTime{
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date=[dateFormatter dateFromString:startTime];
+    self.startTime = (long long int)date*1000;
+    //NSLog([NSString stringWithFormat:@"%d",self.startTime ]);
+    [self reloadData];
 }
 
 @end
