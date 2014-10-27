@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EG6-mW-MKn">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -237,16 +236,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hix-A6-GSG">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <userGuides>
-                                    <userLayoutGuide location="163" affinity="minY"/>
-                                    <userLayoutGuide location="282" affinity="minY"/>
-                                    <userLayoutGuide location="538" affinity="minY"/>
-                                    <userLayoutGuide location="567" affinity="minY"/>
-                                    <userLayoutGuide location="32" affinity="minX"/>
-                                    <userLayoutGuide location="323" affinity="minX"/>
-                                    <userLayoutGuide location="337" affinity="minY"/>
-                                    <userLayoutGuide location="453" affinity="minY"/>
-                                </userGuides>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNv-ob-VJo">
                                         <rect key="frame" x="403" y="35" width="285" height="168"/>
@@ -437,9 +426,6 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-1C-0yN">
-                                                <rect key="frame" x="43" y="78" width="29" height="13"/>
-                                            </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="56" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-Wx-7LO">
                                                 <rect key="frame" x="71" y="396" width="235" height="84"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
@@ -507,7 +493,6 @@
                         <outlet property="hostNum" destination="74s-rR-8Ol" id="VlJ-g8-yaW"/>
                         <outlet property="isShared_img" destination="l93-zD-Bn7" id="0df-oe-HtQ"/>
                         <outlet property="noShared_img" destination="EK8-uA-ZYi" id="pbc-Q6-12v"/>
-                        <outlet property="shared" destination="ScQ-1C-0yN" id="VkK-63-nZW"/>
                         <outlet property="totalStorage" destination="Koe-4U-Pch" id="dL9-N6-LQp"/>
                         <outlet property="totalStorageLabel1" destination="bvT-gq-hCN" id="nJ6-20-6va"/>
                         <outlet property="totalStorageLabel2" destination="tg3-C6-089" id="ePH-vk-CfD"/>
@@ -874,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wb-MM-Np2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3272" y="63"/>
+            <point key="canvasLocation" x="2621" y="74"/>
         </scene>
         <!--Storage Disk CollectionVC-->
         <scene sceneID="aVN-QX-fDp">
@@ -978,7 +963,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SA7-Sx-5g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3688" y="63"/>
+            <point key="canvasLocation" x="3037" y="74"/>
         </scene>
     </scenes>
     <resources>
