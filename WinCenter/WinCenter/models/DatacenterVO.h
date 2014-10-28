@@ -49,5 +49,6 @@
 - (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
 @end
