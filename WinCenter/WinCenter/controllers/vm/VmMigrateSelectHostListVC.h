@@ -10,4 +10,7 @@
 
 @interface VmMigrateSelectHostListVC : UITableViewController
 
+@property VmVO *vmVO;
+@property VmMigrateTargetsVO *vmMigrateTargets;
+
 @end

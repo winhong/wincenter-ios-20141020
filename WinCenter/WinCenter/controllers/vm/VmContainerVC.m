@@ -13,7 +13,9 @@
 #import "VmNetworkCollectionVC.h"
 #import "VmDiskCollectionVC.h"
 #import "PopControlRecordVC.h"
+#import "VmMigrateVC.h"
 #import "VmDetailCPUConfigVC.h"
+#import "VmDetailMemoryConfigVC.h"
 
 @implementation VmContainerVC
 
@@ -179,12 +181,19 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqual:@"toConfigCPU"]){
+    if([segue.identifier isEqual:@"toMigrateVm"]){
+        UINavigationController *nav = segue.destinationViewController;
+        VmMigrateVC *vc = [[nav childViewControllers] firstObject];
+        vc.vmVO = self.vmVO;
+    }else if([segue.identifier isEqual:@"toConfigCPU"]){
         UINavigationController *nav = segue.destinationViewController;
         VmDetailCPUConfigVC *vc = [[nav childViewControllers] firstObject];
-        //vc.xxvo = self.vo;
-    }else{
+        vc.vmVO = self.vmVO;
         
+    }else if([segue.identifier isEqual:@"toConfigMemory"]){
+        UINavigationController *nav = segue.destinationViewController;
+        VmDetailMemoryConfigVC *vc = [[nav childViewControllers] firstObject];
+        vc.vmVO = self.vmVO;
     }
 }
 

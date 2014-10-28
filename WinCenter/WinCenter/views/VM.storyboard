@@ -778,11 +778,12 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="虚拟机名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFT-ra-TUd">
-                                                    <rect key="frame" x="130" y="8" width="182" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq1-bO-Wf1">
+                                                    <rect key="frame" x="124" y="12" width="460" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -803,10 +804,16 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择一个目标主机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3se-70-y4E">
+                                                    <rect key="frame" x="104" y="11" width="281" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="LWN-te-8Oe" kind="push" id="Abb-2o-6Yz"/>
+                                            <segue destination="LWN-te-8Oe" kind="push" identifier="toMigrateTargetHosts" id="Abb-2o-6Yz"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -829,10 +836,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="name" destination="qq1-bO-Wf1" id="fNl-WR-uvu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxC-5G-cCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600" y="1805"/>
+            <point key="canvasLocation" x="4600" y="1803"/>
         </scene>
         <!--目标主机-->
         <scene sceneID="ifY-QD-unH">
@@ -867,7 +877,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="目标主机" id="Nha-2k-miu">
-                        <barButtonItem key="rightBarButtonItem" title="确定" id="An7-7R-hFq"/>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="An7-7R-hFq">
+                            <connections>
+                                <action selector="done:" destination="LWN-te-8Oe" id="PeH-mX-w2O"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU4-QQ-nrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -892,17 +906,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cnm-9Q-uOi">
-                                                    <rect key="frame" x="15" y="7" width="291" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzT-ug-H8u">
+                                                    <rect key="frame" x="17" y="12" width="318" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                </textField>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="VCPU数" id="ETp-wA-huN">
+                            <tableViewSection headerTitle="VCPU数(不能大于物理主机线程数)" id="ETp-wA-huN">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Dl9-x8-O8z">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
@@ -958,15 +973,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cpuCap" destination="xzT-ug-H8u" id="daS-Pk-IvI"/>
+                        <outlet property="vcpu" destination="MTF-Ys-7GY" id="z7R-J2-VeZ"/>
+                        <outlet property="vcpuWeight" destination="WEf-lx-n1g" id="eNC-GH-WaR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVc-3T-9uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3489" y="1795"/>
+            <point key="canvasLocation" x="3489" y="1794"/>
         </scene>
         <!--内存配置-->
         <scene sceneID="ysz-bE-O6i">
             <objects>
-                <tableViewController id="0mu-bS-CyJ" customClass="VmDetailMemryConfigVC" sceneMemberID="viewController">
+                <tableViewController id="0mu-bS-CyJ" customClass="VmDetailMemoryConfigVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2jT-Cn-XiZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1047,6 +1067,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoryModal" destination="Pqt-kX-Zhm" id="u3C-Uh-LPK"/>
+                        <outlet property="memoryObligate" destination="qtY-rU-etN" id="jYx-CR-AC5"/>
+                        <outlet property="memorySize" destination="nYu-7i-1UN" id="QPH-yF-r6P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6j0-DN-qHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

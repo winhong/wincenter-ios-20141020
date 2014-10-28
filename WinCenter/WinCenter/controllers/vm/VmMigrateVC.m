@@ -7,8 +7,15 @@
 //
 
 #import "VmMigrateVC.h"
+#import "VmMigrateTargetsVO.h"
+#import "VmMigrateSelectHostListVC.h"
 
 @interface VmMigrateVC ()
+
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
+
+
 
 @end
 
@@ -32,7 +39,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.name.text = self.vmVO.name;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,11 +61,25 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)done:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在迁移..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    [alert show];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self submitMigrate];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqual:@"toMigrateTargetHosts"]){
+        VmMigrateSelectHostListVC *vc = segue.destinationViewController;
+        vc.vmVO = self.vmVO;
+    }else{
+        
+    }
+}
+
+-(void)submitMigrate{
+    [self.vmVO vmMigrate:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在迁移..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } widthTargetHostId:self.selectedHostId];
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
