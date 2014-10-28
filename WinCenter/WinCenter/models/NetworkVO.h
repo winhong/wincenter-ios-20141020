@@ -12,6 +12,10 @@
 
 @property NSString *name;
 @property NSString *vlanId;
+@property NSString *state;
+@property NSString *linkState;
 
+-(NSString*) state_text;
+-(NSString*) linkState_image;
 
 @end

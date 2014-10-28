@@ -111,7 +111,7 @@ NS_INLINE MPGraphValuesRange MPGetBiggestRange(MPGraphValuesRange r1,MPGraphValu
 
 
 
-@interface MPButton : UIButton
+@interface MPPlotButton : UIButton
 
 + (id)buttonWithType:(UIButtonType)buttonType tappableAreaOffset:(UIOffset)tappableAreaOffset;
 

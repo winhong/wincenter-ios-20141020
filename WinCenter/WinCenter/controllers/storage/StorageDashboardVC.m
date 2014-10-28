@@ -21,25 +21,38 @@
 @implementation StorageDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-            self.datacenterStatWinserver = object;
-            [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
-                self.StorageSubVOWinserver = object;
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
+    if(self.poolVO){
+        [self.dataList removeAllObjects];
+        [self.poolVO getStorageListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
+                    self.StorageSubVOWinserver = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
             }];
+            
         }];
-        
-    }];
-    
-    
-    
-    
-    
-    
+    }
+    else{
+        [self.dataList removeAllObjects];
+        [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
+                    self.StorageSubVOWinserver = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
+            }];
+            
+        }];
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -1556,14 +1556,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sfL-QP-Kfv"/>
+        <segue reference="7Mw-IM-jBC"/>
+        <segue reference="9nw-dL-43m"/>
         <segue reference="xiw-9q-3p9"/>
-        <segue reference="gQ8-rg-qih"/>
+        <segue reference="eem-JX-f0g"/>
+        <segue reference="sfL-QP-Kfv"/>
         <segue reference="l5z-NH-yea"/>
         <segue reference="FDj-F1-Eac"/>
         <segue reference="h9v-mu-EsN"/>
-        <segue reference="9nw-dL-43m"/>
-        <segue reference="eem-JX-f0g"/>
-        <segue reference="DXs-kF-nOV"/>
+        <segue reference="gQ8-rg-qih"/>
     </inferredMetricsTieBreakers>
 </document>

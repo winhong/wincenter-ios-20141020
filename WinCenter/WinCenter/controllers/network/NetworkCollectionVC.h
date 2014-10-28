@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NetworkCollectionVC : UITableViewController
-
+-(void)reloadData;
 @end

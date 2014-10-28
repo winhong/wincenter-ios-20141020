@@ -8,8 +8,10 @@
 
 #import "NetworkTotalCollectionVC.h"
 #import "NetworkTotalCollectionCell.h"
+#import "NetworkCollectionVC.h"
 
 @interface NetworkTotalCollectionVC ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property NSArray *networkList;
 @end
 
@@ -59,17 +61,44 @@ static NSString * const reuseIdentifier = @"Cell";
 
     return self.networkList.count;
 }
+- (IBAction)segmentChange:(id)sender {
+    if(self.segment.selectedSegmentIndex==0){
+        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+            self.networkList = object;
+            [self.collectionView reloadData];
+        }];
+    }else{
+        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
+            self.networkList = object;
+            [self.collectionView reloadData];
+        }];
+    }
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell" forIndexPath:indexPath];
-    NetworkVO *network = [NetworkVO new];
-    network = self.networkList[indexPath.row];
-    cell.name.text = network.name;
-    cell.vlan.text = network.vlanId;
     
-    
-    return cell;
+    if(self.segment.selectedSegmentIndex==0){
+        NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Outside" forIndexPath:indexPath];
+        NetworkVO *network = [NetworkVO new];
+        network = self.networkList[indexPath.row];
+        cell.name.text = network.name;
+        cell.vlan.text = network.vlanId;
+        cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
+        cell.state.text = [network state_text];
+        
+        return cell;
+    }else{
+        NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Inside" forIndexPath:indexPath];
+        NetworkVO *network = [NetworkVO new];
+        network = self.networkList[indexPath.row];
+        cell.name.text = network.name;
+        cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
+        cell.state.text = [network state_text];
+
+        return cell;
+    }
 }
+
 
 #pragma mark <UICollectionViewDelegate>
 
@@ -101,5 +130,12 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
+    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
+    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+    [detailVC reloadData];
+}
 
 @end

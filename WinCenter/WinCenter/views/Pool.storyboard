@@ -126,7 +126,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-3H-u0N">
-                                        <rect key="frame" x="400" y="20" width="200" height="250"/>
+                                        <rect key="frame" x="400" y="30" width="200" height="250"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已用：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP2-wJ-lzK">
                                                 <rect key="frame" x="34" y="187" width="43" height="21"/>
@@ -220,7 +220,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KmH-sl-rZT">
-                                        <rect key="frame" x="388" y="269" width="320" height="250"/>
+                                        <rect key="frame" x="388" y="279" width="320" height="250"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下次检测时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-9D-kdK">
                                                 <rect key="frame" x="20" y="205" width="99" height="21"/>
@@ -321,7 +321,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-DV-LBg">
-                                        <rect key="frame" x="580" y="18" width="200" height="250"/>
+                                        <rect key="frame" x="580" y="28" width="200" height="250"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryk-Vn-k79">
                                                 <rect key="frame" x="89" y="164" width="100" height="21"/>
@@ -415,7 +415,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiZ-vE-wVi">
-                                        <rect key="frame" x="681" y="269" width="320" height="181"/>
+                                        <rect key="frame" x="681" y="279" width="320" height="181"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="高可用信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-a3-VkU">
                                                 <rect key="frame" x="19" y="18" width="133" height="21"/>
@@ -462,7 +462,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFD-4O-yFG">
-                                        <rect key="frame" x="17" y="8" width="362" height="518"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="518"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要黄色框1" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-qC-BxH">
                                                 <rect key="frame" x="10" y="4" width="301" height="54"/>
@@ -477,16 +477,16 @@
                                                 </variation>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池-摘要-物理机总数" translatesAutoresizingMaskIntoConstraints="NO" id="JFg-g5-byY">
-                                                <rect key="frame" x="11" y="10" width="334" height="89"/>
+                                                <rect key="frame" x="25" y="40" width="334" height="89"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池-摘要-虚拟机总数" translatesAutoresizingMaskIntoConstraints="NO" id="51M-4I-H5a">
-                                                <rect key="frame" x="11" y="129" width="334" height="89"/>
+                                                <rect key="frame" x="25" y="159" width="334" height="89"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池-摘要-虚拟化信息" translatesAutoresizingMaskIntoConstraints="NO" id="krp-Uq-qiy">
-                                                <rect key="frame" x="11" y="247" width="334" height="89"/>
+                                                <rect key="frame" x="25" y="277" width="334" height="89"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-2P-tMz">
-                                                <rect key="frame" x="158" y="10" width="147" height="92"/>
+                                                <rect key="frame" x="172" y="40" width="147" height="92"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
                                                 <color key="textColor" red="1" green="0.84705882352941175" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -496,7 +496,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="物理机总数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhg-P4-NJI">
-                                                <rect key="frame" x="79" y="34" width="117" height="27"/>
+                                                <rect key="frame" x="93" y="64" width="117" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -505,7 +505,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="台" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXA-VD-NPL">
-                                                <rect key="frame" x="309" y="59" width="17" height="21"/>
+                                                <rect key="frame" x="323" y="89" width="17" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -526,7 +526,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-Nf-9Rg">
-                                                <rect key="frame" x="158" y="131" width="147" height="92"/>
+                                                <rect key="frame" x="172" y="161" width="147" height="92"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
                                                 <color key="textColor" red="0.27843137254901962" green="0.56862745098039214" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -536,7 +536,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="台" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oT-ZX-wcE">
-                                                <rect key="frame" x="309" y="179" width="17" height="21"/>
+                                                <rect key="frame" x="323" y="209" width="17" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -545,7 +545,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机总数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rct-ZR-Juo">
-                                                <rect key="frame" x="79" y="156" width="103" height="21"/>
+                                                <rect key="frame" x="93" y="186" width="103" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -566,7 +566,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟化信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Ff-xdI">
-                                                <rect key="frame" x="79" y="281" width="85" height="21"/>
+                                                <rect key="frame" x="93" y="311" width="85" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -575,7 +575,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vVersion" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-d4-517">
-                                                <rect key="frame" x="209" y="287" width="111" height="21"/>
+                                                <rect key="frame" x="223" y="317" width="111" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -585,7 +585,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vType" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-yV-BOg">
-                                                <rect key="frame" x="209" y="256" width="111" height="21"/>
+                                                <rect key="frame" x="223" y="286" width="111" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                 <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -595,7 +595,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTt-BA-gYN">
-                                                <rect key="frame" x="209" y="304" width="111" height="21"/>
+                                                <rect key="frame" x="223" y="334" width="111" height="21"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -642,7 +642,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-CG-f06">
-                                        <rect key="frame" x="750" y="10" width="200" height="250"/>
+                                        <rect key="frame" x="750" y="20" width="200" height="250"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-Cx-iK9">
                                                 <rect key="frame" x="96" y="172" width="87" height="21"/>

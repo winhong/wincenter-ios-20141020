@@ -20,10 +20,14 @@
 #import "NetworkVO.h"
 #import "NetworkListResult.h"
 #import "MasterContainerVC.h"
+#import "HostDashboardVC.h"
 
 @implementation MasterCollectionVC
 
 -(void)reloadData{
+    
+}
+-(void)reloadOtherHosts{
     
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -39,8 +43,6 @@
         self.backActionButton.title = @"";
     }
     
-    self.pools = [[NSMutableDictionary alloc] initWithDictionary:@{}];
-    self.pools_needMoreButton = [[NSMutableDictionary alloc] initWithDictionary:@{}];
     self.dataList = [[NSMutableDictionary alloc] initWithDictionary:@{}];
     
     [super viewDidLoad];
@@ -108,8 +110,34 @@
     [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
-- (IBAction)showPoolListSelect:(id)sender {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部资源池" otherButtonTitles:@"资源池A",@"资源池B", nil];
-    [sheet showFromBarButtonItem:sender animated:YES];
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if(buttonIndex==0){
+        self.poolVO = nil;
+        self.allPoolOptionBarButton.title = @"全部资源池";
+        [self reloadData];
+    }else if([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"游离物理主机"]){
+        [self reloadOtherHosts];
+        self.allPoolOptionBarButton.title = @"游离物理主机";
+        [self reloadOtherHosts];
+    }else{
+        self.poolVO = self.poolList[(buttonIndex-2)];
+        self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
+        [self reloadData];
+    }
 }
+- (IBAction)showPoolListSelect:(id)sender {
+    [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(NSArray *allRemote, NSError *error) {
+        self.poolList = allRemote;
+        
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部资源池" otherButtonTitles: nil];
+        for(PoolVO *pool in allRemote){
+            [sheet addButtonWithTitle:pool.resourcePoolName];
+        }
+        if([self isKindOfClass:HostDashboardVC.class]){
+            [sheet addButtonWithTitle:@"游离物理主机"];
+        }
+        [sheet showFromBarButtonItem:sender animated:YES];
+
+    }];
+    }
 @end
