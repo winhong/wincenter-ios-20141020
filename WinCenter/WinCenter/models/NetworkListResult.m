@@ -9,11 +9,10 @@
 #import "NetworkListResult.h"
 
 @implementation NetworkListResult
-
 -(id)init {
     self = [super init];
     if (self) {
-        [self setValue:@"networkVO" forKeyPath:@"propertyArrayMap.networks"];
+        [self setValue:@"NetworkVO" forKeyPath:@"propertyArrayMap.networks"];
     }
     return self;
 }

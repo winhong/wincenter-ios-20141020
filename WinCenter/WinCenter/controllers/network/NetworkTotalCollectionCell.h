@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NetworkTotalCollectionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *vlan;
 
 @end

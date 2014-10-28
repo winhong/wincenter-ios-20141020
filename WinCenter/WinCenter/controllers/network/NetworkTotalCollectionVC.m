@@ -7,9 +7,10 @@
 //
 
 #import "NetworkTotalCollectionVC.h"
+#import "NetworkTotalCollectionCell.h"
 
 @interface NetworkTotalCollectionVC ()
-
+@property NSArray *networkList;
 @end
 
 @implementation NetworkTotalCollectionVC
@@ -23,9 +24,12 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
+    [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+        self.networkList = object;
+        [self.collectionView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,13 +57,16 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 5;
+    return self.networkList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell" forIndexPath:indexPath];
+    NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell" forIndexPath:indexPath];
+    NetworkVO *network = [NetworkVO new];
+    network = self.networkList[indexPath.row];
+    cell.name.text = network.name;
+    cell.vlan.text = network.vlanId;
     
-    // Configure the cell
     
     return cell;
 }
