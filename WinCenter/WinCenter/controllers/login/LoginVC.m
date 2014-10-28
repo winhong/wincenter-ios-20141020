@@ -140,6 +140,7 @@
     }
     
     if ([msg isEqualToString:@""]) {
+        [[NSUserDefaults standardUserDefaults] setValue:self.ipAddress.text forKey:@"SERVER_ROOT"];        
         [[NSUserDefaults standardUserDefaults] setValue:@"false" forKey:@"isDemo"];
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
@@ -156,7 +157,6 @@
 }
 
 - (void) toLogin{
-    [[NSUserDefaults standardUserDefaults] setValue:self.ipAddress.text forKey:@"SERVER_ROOT"];
 
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
