@@ -50,7 +50,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate didFinished:self];
+    [self.delegate didFinished:self.datacenters[indexPath.row]];
 }
 
 @end
