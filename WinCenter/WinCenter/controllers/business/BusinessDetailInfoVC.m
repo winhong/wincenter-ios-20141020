@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *platform;
 @property (weak, nonatomic) IBOutlet UILabel *createTime;
 @property (weak, nonatomic) IBOutlet UILabel *createUser;
-@property (weak, nonatomic) IBOutlet UILabel *desc;
+@property (weak, nonatomic) IBOutlet UITextView *desc;
 @property (weak, nonatomic) IBOutlet UILabel *vmCount;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
