@@ -11,9 +11,7 @@
 @interface NetworkVO : NSObject
 
 @property NSString *name;
-@property int vlanCount;
-@property NSString *ipRange;
-@property int ipCount;
-@property int ipUnusedCount;
+@property NSString *vlanId;
+
 
 @end

@@ -339,6 +339,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="name" destination="9EN-66-72D" id="PjL-Xn-MG4"/>
+                                    <outlet property="vlan" destination="i9D-xq-bjR" id="vTP-Ln-CzC"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -352,8 +356,8 @@
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="内部网络"/>
                                 <segment title="外部网络"/>
+                                <segment title="内部网络"/>
                             </segments>
                         </segmentedControl>
                     </navigationItem>
