@@ -295,7 +295,7 @@
 
 
 
-@implementation MPButton
+@implementation MPPlotButton
 
 UIOffset tappableAreaOffset;
 

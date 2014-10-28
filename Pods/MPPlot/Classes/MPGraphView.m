@@ -73,7 +73,7 @@
             [path moveToPoint:point];
         
         
-        MPButton *button=[MPButton buttonWithType:UIButtonTypeCustom tappableAreaOffset:UIOffsetMake(25, 25)];
+        MPPlotButton *button=[MPPlotButton buttonWithType:UIButtonTypeCustom tappableAreaOffset:UIOffsetMake(25, 25)];
         [button setBackgroundColor:self.graphColor];
         button.layer.cornerRadius=3;
         button.frame=CGRectMake(0, 0, 6, 6);
@@ -177,7 +177,7 @@
         CGPoint point=[self pointAtIndex:i];
         
         
-        MPButton *button=[MPButton buttonWithType:UIButtonTypeCustom];
+        MPPlotButton *button=[MPPlotButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundColor:self.graphColor];
         button.layer.cornerRadius=3;
         button.frame=CGRectMake(0, 0, 6, 6);

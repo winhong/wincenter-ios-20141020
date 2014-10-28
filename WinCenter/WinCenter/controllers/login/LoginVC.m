@@ -11,9 +11,11 @@
 #import <AFViewShaker/AFViewShaker.h>
 
 @interface LoginVC ()
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell0;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cell1;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cell2;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cell3;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cell4;
 @property NSArray *datacenters;
 @property AFViewShaker *viewShaker;
 @end
@@ -29,9 +31,11 @@
     //[self.userName becomeFirstResponder];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.cell0.backgroundColor = [UIColor clearColor];
         self.cell1.backgroundColor = [UIColor clearColor];
         self.cell2.backgroundColor = [UIColor clearColor];
         self.cell3.backgroundColor = [UIColor clearColor];
+        self.cell4.backgroundColor = [UIColor clearColor];
         UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
         
         [backView addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginbg2"]]];
