@@ -21,19 +21,44 @@
 @implementation HostDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-            self.datacenterStatWinserver = object;
-            
-            [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
-                self.hostStatWinserver = object;
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
+    if(self.poolVO){
+        [self.dataList removeAllObjects];
+        [self.poolVO getHostListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                
+                [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+                    self.hostStatWinserver = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
             }];
         }];
-    }];
+    }else{
+        [self.dataList removeAllObjects];
+        [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                
+                [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+                    self.hostStatWinserver = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
+            }];
+        }];
+    }
+}
+
+- (void)reloadOtherHosts{
+    [self.dataList removeAllObjects];
+    
+    //查询游离物理主机
+    [self.collectionView reloadData];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

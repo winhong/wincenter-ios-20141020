@@ -9,18 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "F3BarGauge.h"
 
-@interface MasterCollectionVC : UICollectionViewController
+@interface MasterCollectionVC : UICollectionViewController<UIActionSheetDelegate>
 
-@property NSMutableDictionary *pools;
-@property NSMutableDictionary *pools_needMoreButton;
+@property NSArray *poolList;
+@property PoolVO *poolVO;
 @property NSMutableDictionary *dataList;
 
 @property BOOL isDetailPagePushed;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backActionButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *allPoolOptionBarButton;
 
 @property UIPopoverController *popover;
 
 -(void)reloadData;
+-(void)reloadOtherHosts;
 
 -(IBAction)backToCollectionVC:(UIStoryboardSegue*)segue;
 -(IBAction)dismissModal:(id)sender;

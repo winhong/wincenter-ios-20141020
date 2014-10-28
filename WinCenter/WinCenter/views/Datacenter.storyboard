@@ -2138,12 +2138,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Lm-PH-T2V"/>
-                        <barButtonItem title="分类选项" id="4Zr-if-iJO">
+                        <barButtonItem title="全部资源池" id="4Zr-if-iJO">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yAy-Oo-Tir"/>
                         <barButtonItem image="icon-operationLog" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
@@ -2156,6 +2156,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="allPoolOptionBarButton" destination="4Zr-if-iJO" id="tQy-aK-ex3"/>
                         <outlet property="backActionButton" destination="ndD-Q6-cb8" id="NdE-ZD-Ch5"/>
                     </connections>
                 </collectionViewController>
@@ -2638,12 +2639,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
-                        <barButtonItem title="分类选项" id="NHe-7y-NkJ">
+                        <barButtonItem title="全部资源池" id="NHe-7y-NkJ">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="vkj-mS-kr9"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cQJ-x8-JS6"/>
                         <barButtonItem image="icon-operationLog" id="dRJ-54-CHn">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="Vdc-u6-N4C" id="0uK-jN-i4F"/>
@@ -2656,6 +2657,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="allPoolOptionBarButton" destination="NHe-7y-NkJ" id="q7n-cB-e4C"/>
                         <outlet property="backActionButton" destination="P9E-XQ-ZWa" id="4vv-hV-Zeu"/>
                     </connections>
                 </collectionViewController>
@@ -3121,12 +3123,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="waZ-PP-DQJ"/>
-                        <barButtonItem title="分类选项" id="Dhp-OO-KwD">
+                        <barButtonItem title="全部资源池" id="Dhp-OO-KwD">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="8QM-yF-skn" id="F9X-Un-Fsu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="KWr-MG-u6g"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4EF-jv-Ilu"/>
                         <barButtonItem image="icon-operationLog" id="sVu-61-G0q">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="8QM-yF-skn" id="7hs-bG-EgF"/>
@@ -3139,6 +3141,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="allPoolOptionBarButton" destination="Dhp-OO-KwD" id="nud-3H-EVy"/>
                         <outlet property="backActionButton" destination="LBu-DC-Jfa" id="bXr-md-4is"/>
                     </connections>
                 </collectionViewController>

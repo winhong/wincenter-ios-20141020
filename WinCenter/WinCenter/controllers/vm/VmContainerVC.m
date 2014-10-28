@@ -13,6 +13,7 @@
 #import "VmNetworkCollectionVC.h"
 #import "VmDiskCollectionVC.h"
 #import "PopControlRecordVC.h"
+#import "VmDetailCPUConfigVC.h"
 
 @implementation VmContainerVC
 
@@ -87,7 +88,7 @@
     [sheet showInView:self.view];
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
             [self openVm:nil];
@@ -175,6 +176,16 @@
 }
 - (IBAction)configMemory:(id)sender {
     [self performSegueWithIdentifier:@"toConfigMemory" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqual:@"toConfigCPU"]){
+        UINavigationController *nav = segue.destinationViewController;
+        VmDetailCPUConfigVC *vc = [[nav childViewControllers] firstObject];
+        //vc.xxvo = self.vo;
+    }else{
+        
+    }
 }
 
 -(IBAction)showControlRecordVC:(id)sender{
