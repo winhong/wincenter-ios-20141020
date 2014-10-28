@@ -379,6 +379,8 @@
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
 		68F39D7B19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */; };
 		68F39D7E19FDF01800F5BACF /* NetworkTotalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */; };
+		68F39D8019FE530900F5BACF /* Network.getOutsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */; };
+		68F39D8219FE533300F5BACF /* Network.getInsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
 		8405AA5519F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5419F8D5A3003DBBFA /* HostVmMemoryTop5CollectionVC.m */; };
 		840DA54619FA3D6B00664F2B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DA54519FA3D6B00664F2B /* WebViewJavascriptBridge.m */; };
@@ -1034,6 +1036,8 @@
 		68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionVC.m; sourceTree = "<group>"; };
 		68F39D7C19FDF01800F5BACF /* NetworkTotalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalCollectionCell.h; sourceTree = "<group>"; };
 		68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionCell.m; sourceTree = "<group>"; };
+		68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getOutsideAsync.json; sourceTree = "<group>"; };
+		68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getInsideAsync.json; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
 		8405AA5019F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostVmMemoryTop5CollectionCell.h; sourceTree = "<group>"; };
 		8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostVmMemoryTop5CollectionCell.m; sourceTree = "<group>"; };
@@ -1456,6 +1460,8 @@
 				843E6C1519F5F5EE0046A5A0 /* VmSubVO.getVmSubInfoAsync.json */,
 				843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */,
 				843806EC19FA2DF400DE3217 /* Host.getPerformanceAsync.json */,
+				68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */,
+				68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -2389,9 +2395,11 @@
 				181DED5E19F17CB100998835 /* PoolVO.getPoolElasticAsync.json in Resources */,
 				181DECE319F17CB100998835 /* piechart_shadow.png in Resources */,
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
+				68F39D8019FE530900F5BACF /* Network.getOutsideAsync.json in Resources */,
 				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
 				1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */,
 				18C5216719F8A43A00C033C6 /* complete.m4r in Resources */,
+				68F39D8219FE533300F5BACF /* Network.getInsideAsync.json in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,

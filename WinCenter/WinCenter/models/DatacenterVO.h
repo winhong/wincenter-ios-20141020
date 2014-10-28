@@ -45,4 +45,7 @@
 - (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
 
+- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
+
 @end
