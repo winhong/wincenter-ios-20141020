@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0KV-WP-OPB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0KV-WP-OPB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -2168,15 +2168,15 @@
         <!--Item-->
         <scene sceneID="acc-Ha-Ku5">
             <objects>
-                <navigationController storyboardIdentifier="StorageDashboardVCNav" definesPresentationContext="YES" navigationBarHidden="YES" toolbarHidden="NO" id="fFZ-Zv-ssG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StorageDashboardVCNav" definesPresentationContext="YES" id="fFZ-Zv-ssG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="OrZ-vc-b7z"/>
                     <navigationItem key="navigationItem" id="4jR-ZD-GtA"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="39N-iw-bCg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="39N-iw-bCg">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="nRs-WB-u2s">
@@ -2190,17 +2190,17 @@
             </objects>
             <point key="canvasLocation" x="-559.5" y="1551"/>
         </scene>
-        <!--Storage DashboardVC-->
+        <!--存储池总览-->
         <scene sceneID="2Hd-bx-Tpl">
             <objects>
                 <collectionViewController storyboardIdentifier="StorageDashboardVC" autoresizesArchivedViewToFullSize="NO" id="Vdc-u6-N4C" customClass="StorageDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="vkU-oj-s3c">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
+                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry" customClass="PDKTStickySectionHeadersCollectionViewLayout">
                             <size key="itemSize" width="288" height="253"/>
-                            <size key="headerReferenceSize" width="50" height="361"/>
+                            <size key="headerReferenceSize" width="50" height="317"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="15" maxX="20" maxY="15"/>
                         </collectionViewFlowLayout>
@@ -2281,7 +2281,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-yr-uyu">
-                                    <rect key="frame" x="0.0" y="0.0" width="969" height="357"/>
+                                    <rect key="frame" x="0.0" y="-44" width="969" height="357"/>
                                     <subviews>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g8-N3-uac">
                                             <rect key="frame" x="-20" y="24" width="1022" height="357"/>
@@ -2590,13 +2590,12 @@
                                     </subviews>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </view>
-                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ly-Bj-HpU">
+                                <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ly-Bj-HpU">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <items>
                                         <barButtonItem style="plain" systemItem="fixedSpace" id="SR0-Pe-Dee"/>
                                         <barButtonItem image="数据中心图标" id="mz6-Yk-e12"/>
-                                        <barButtonItem id="KpP-j0-2Yt"/>
                                     </items>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </toolbar>
@@ -2639,11 +2638,6 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
-                        <barButtonItem title="全部资源池" id="NHe-7y-NkJ">
-                            <connections>
-                                <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="cQJ-x8-JS6"/>
                         <barButtonItem image="icon-operationLog" id="dRJ-54-CHn">
                             <connections>
@@ -2651,7 +2645,14 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="NVZ-Rm-y5V"/>
+                    <navigationItem key="navigationItem" title="存储池总览" id="NVZ-Rm-y5V">
+                        <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="KpP-j0-2Yt"/>
+                        <barButtonItem key="rightBarButtonItem" title="全部资源池" id="NHe-7y-NkJ">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
