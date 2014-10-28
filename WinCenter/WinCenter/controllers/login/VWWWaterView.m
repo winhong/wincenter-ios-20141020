@@ -10,7 +10,6 @@
 
 @interface VWWWaterView ()
 {    
-
     
     float a;
     float b;

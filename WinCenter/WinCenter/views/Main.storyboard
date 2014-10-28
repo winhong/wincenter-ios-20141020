@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQb-5d-hfB">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--WinCenter-->
         <scene sceneID="7Wr-ol-qTc">
             <objects>
-                <tableViewController id="4L9-cv-sgF" customClass="LoginTableVC" sceneMemberID="viewController">
+                <tableViewController id="4L9-cv-sgF" customClass="LoginVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="1" id="8m2-xd-JIR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +103,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Qkc-jh-F1n">
             <objects>
-                <navigationController storyboardIdentifier="LoginTableVC_iPhone" automaticallyAdjustsScrollViewInsets="NO" id="rRq-wP-wiS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginVC_iPhone" automaticallyAdjustsScrollViewInsets="NO" id="rRq-wP-wiS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ofn-f2-vpC">
@@ -118,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="-2265" y="-20"/>
         </scene>
-        <!--Login TableVC-->
+        <!--LoginVC-->
         <scene sceneID="JzS-D7-NTK">
             <objects>
-                <tableViewController storyboardIdentifier="LoginTableVC_iPad" id="qQb-5d-hfB" customClass="LoginTableVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LoginVC_iPad" id="qQb-5d-hfB" customClass="LoginVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Llh-Lk-e3S">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +171,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="76l-q3-fo9" id="QCq-zF-bJE">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.213.147:8090" textAlignment="center" minimumFontSize="17" background="input-ip" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-iI-HM7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="input-ip" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-iI-HM7">
                                                     <rect key="frame" x="359" y="10" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -237,6 +238,7 @@
                         <outlet property="cell1" destination="76l-q3-fo9" id="15E-jj-epv"/>
                         <outlet property="cell2" destination="72l-3S-uWi" id="dac-7j-SIp"/>
                         <outlet property="cell3" destination="l04-zH-r7b" id="q9c-7K-ADB"/>
+                        <outlet property="ipAddress" destination="TCm-iI-HM7" id="hY0-f7-S1U"/>
                         <outlet property="password" destination="ndZ-as-2id" id="EHb-4k-z2m"/>
                         <outlet property="userName" destination="G8n-dO-zMR" id="OwV-Ax-Cb5"/>
                     </connections>
