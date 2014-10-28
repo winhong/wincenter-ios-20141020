@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -146,6 +146,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="a1J-Dg-zyV"/>
+                        <barButtonItem image="icon-operationLog" id="vxG-CF-bxn">
+                            <connections>
+                                <action selector="showControlRecordVCWithBarItem:" destination="rda-j3-bYj" id="NsU-HH-duq"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="9MO-uX-sLc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -1431,6 +1436,7 @@
     <resources>
         <image name="Network_virtual" width="36" height="36"/>
         <image name="disk_card" width="36" height="36"/>
+        <image name="icon-operationLog" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="ip" width="10" height="11"/>
         <image name="ip-蓝色背景" width="10" height="11"/>

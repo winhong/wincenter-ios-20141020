@@ -126,7 +126,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
         if(([[alertView textFieldAtIndex:0].text isEqualToString:@"admin"]) && ([[alertView textFieldAtIndex:1].text isEqualToString:@"passw0rd"])){
-            [self.vmVO VmOperation:@"OK" async:^(NSError *error) {
+            [self.vmVO vmStop:^(NSError *error) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在开机..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 [self hideControlBtn];
@@ -140,14 +140,14 @@
 
 
 - (IBAction)shutdownVm:(id)sender {
-    [self.vmVO VmOperation:@"STOPPED" async:^(NSError *error) {
+    [self.vmVO vmStop:^(NSError *error) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在关机..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         [self hideControlBtn];
     }];
 }
 - (IBAction)restartVm:(id)sender {
-    [self.vmVO VmOperation:@"RESTART" async:^(NSError *error) {
+    [self.vmVO vmStop:^(NSError *error) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在重启..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         [self hideControlBtn];

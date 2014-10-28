@@ -1537,7 +1537,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEz-Pk-JS8"/>
                         <barButtonItem image="icon-operationLog" id="F3i-M5-2mW">
                             <connections>
-                                <action selector="showControlRecordVC:" destination="buB-ce-6JP" id="OBb-Gu-6xk"/>
+                                <action selector="showControlRecordVC:" destination="cSx-41-28X" id="r5h-6Y-NVe"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>

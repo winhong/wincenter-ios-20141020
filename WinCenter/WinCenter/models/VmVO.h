@@ -43,7 +43,7 @@
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getVmVolumnListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getVmNicListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) VmOperation:(NSString*)state async:(BasicCompletionBlock)completeBlock;
+- (void) vmStop:(BasicCompletionBlock)completeBlock;
 
     
 @end
