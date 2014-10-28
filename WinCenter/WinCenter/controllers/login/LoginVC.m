@@ -38,7 +38,7 @@
         self.cell4.backgroundColor = [UIColor clearColor];
         UIView *backView = [[UIView alloc] initWithFrame:self.view.bounds];
         
-        [backView addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginbg2"]]];
+        [backView addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginbg"]]];
         
         //波纹
         CGRect rect = [[UIScreen mainScreen] bounds];
