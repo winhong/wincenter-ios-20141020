@@ -21,21 +21,39 @@
 @implementation VmDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        
-        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-            self.datacenterStatWinserver = object;
+    if(self.poolVO){
+        [self.dataList removeAllObjects];
+        [self.poolVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
             
-            [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
-                self.vmSubVO = object;
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                
+                [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+                    self.vmSubVO = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
             }];
         }];
-    }];
-    
+    }else{
+        [self.dataList removeAllObjects];
+        [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(NSArray *allRemote, NSError *error) {
+            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
+            
+            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver = object;
+                
+                [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+                    self.vmSubVO = object;
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }];
+            }];
+        }];
+    }
 
 }
 
