@@ -68,7 +68,7 @@ static NSString * const reuseIdentifier = @"Cell";
             [self.collectionView reloadData];
         }];
     }else{
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
             self.networkList = object;
             [self.collectionView reloadData];
         }];
@@ -78,19 +78,27 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if(self.segment.selectedSegmentIndex==0){
-        NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell" forIndexPath:indexPath];
+        NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Outside" forIndexPath:indexPath];
         NetworkVO *network = [NetworkVO new];
         network = self.networkList[indexPath.row];
         cell.name.text = network.name;
         cell.vlan.text = network.vlanId;
-        
+        cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
+        cell.state.text = [network state_text];
         
         return cell;
     }else{
-        
-        return nil;
+        NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Inside" forIndexPath:indexPath];
+        NetworkVO *network = [NetworkVO new];
+        network = self.networkList[indexPath.row];
+        cell.name.text = network.name;
+        cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
+        cell.state.text = [network state_text];
+
+        return cell;
     }
 }
+
 
 #pragma mark <UICollectionViewDelegate>
 

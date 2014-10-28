@@ -294,14 +294,14 @@
 
 - (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getInsideAsync" ofType:@"json"]]], nil);
+        completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getInsideAsync" ofType:@"json"]]].networks, nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=apiKey=pc.winserver.network.getNetWorksList&params=type=INTERNAL", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=type=INTERNAL", self.id]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
+        completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody].networks, error);
     }];
 }
 
