@@ -10,4 +10,6 @@
 
 @interface NetworkTotalCollectionVC : UICollectionViewController
 
+@property IpPoolsVO *ipPoolsInfo;
+
 @end

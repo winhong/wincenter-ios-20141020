@@ -73,6 +73,9 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 35;
 }
+-(void)reloadData{
+    NSLog(@"fdsafdsa");
+}
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //    UIView *header = [UIView new];
 //    header.backgroundColor = [UIColor clearColor];
@@ -131,7 +134,5 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void)reloadData{
-    NSLog(@"fdsafdsa");
-}
+
 @end

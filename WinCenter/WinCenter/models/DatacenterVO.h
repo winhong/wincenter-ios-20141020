@@ -48,4 +48,6 @@
 - (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
 
+- (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
+
 @end

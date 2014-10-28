@@ -13,6 +13,7 @@
 @interface NetworkTotalCollectionVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property NSArray *networkList;
+@property NSArray *ipPoolsList;
 @end
 
 @implementation NetworkTotalCollectionVC
@@ -28,10 +29,21 @@ static NSString * const reuseIdentifier = @"Cell";
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
+//    加ip池信息
     [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
         self.networkList = object;
-        [self.collectionView reloadData];
+        [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(id object, NSError *error) {
+            self.ipPoolsInfo = object;
+            [self.collectionView reloadData];
+        }];
+        
     }];
+    
+//    [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+//        self.networkList = object;
+//        [self.collectionView reloadData];
+//    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,10 +93,16 @@ static NSString * const reuseIdentifier = @"Cell";
         NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Outside" forIndexPath:indexPath];
         NetworkVO *network = [NetworkVO new];
         network = self.networkList[indexPath.row];
+        IpPoolsVO *ipPools = [IpPoolsVO new];
+        ipPools = self.ipPoolsList[indexPath.row];
         cell.name.text = network.name;
         cell.vlan.text = network.vlanId;
         cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
         cell.state.text = [network state_text];
+        cell.ipSegment.text = ipPools.segment;
+        cell.ipTotal.text = [NSString stringWithFormat:@"%d",ipPools.total];
+        cell.ipUsable.text = [NSString stringWithFormat:@"%d",ipPools.usable];
+        cell.ipUsed.text = [NSString stringWithFormat:@"%d",ipPools.used];
         
         return cell;
     }else{

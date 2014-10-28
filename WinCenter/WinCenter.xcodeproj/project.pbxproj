@@ -374,6 +374,12 @@
 		5058666B19FE3A45000C813D /* PopOptionFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */; };
 		5058666E19FE3A6F000C813D /* PopOptionHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */; };
+		684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */; };
+		684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F019FFC587009C4B09 /* IpPoolsVO.m */; };
+		684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */; };
+		684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */; };
+		684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */; };
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
@@ -1026,6 +1032,16 @@
 		5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionFeedbackVC.m; sourceTree = "<group>"; };
 		5058666C19FE3A6F000C813D /* PopOptionHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionHelpVC.h; sourceTree = "<group>"; };
 		5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionHelpVC.m; sourceTree = "<group>"; };
+		684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpPoolsAsync.json; sourceTree = "<group>"; };
+		684D90EC19FFC562009C4B09 /* IpPoolsListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListResult.h; sourceTree = "<group>"; };
+		684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListResult.m; sourceTree = "<group>"; };
+		684D90EF19FFC587009C4B09 /* IpPoolsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsVO.h; sourceTree = "<group>"; };
+		684D90F019FFC587009C4B09 /* IpPoolsVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsVO.m; sourceTree = "<group>"; };
+		684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpVmAsync.json; sourceTree = "<group>"; };
+		684D90F419FFD8AA009C4B09 /* NetworkIpVmListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmListResult.h; sourceTree = "<group>"; };
+		684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmListResult.m; sourceTree = "<group>"; };
+		684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmVO.h; sourceTree = "<group>"; };
+		684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmVO.m; sourceTree = "<group>"; };
 		686B32B919FDDD7200742984 /* NetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionCell.h; sourceTree = "<group>"; };
 		686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionCell.m; sourceTree = "<group>"; };
 		686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionVC.h; sourceTree = "<group>"; };
@@ -1462,6 +1478,8 @@
 				843806EC19FA2DF400DE3217 /* Host.getPerformanceAsync.json */,
 				68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */,
 				68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */,
+				684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */,
+				684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1575,6 +1593,14 @@
 				181DEC9219F17CB100998835 /* WarningInfoListResult.m */,
 				181DEC9319F17CB100998835 /* WarningInfoVO.h */,
 				181DEC9419F17CB100998835 /* WarningInfoVO.m */,
+				684D90EC19FFC562009C4B09 /* IpPoolsListResult.h */,
+				684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */,
+				684D90EF19FFC587009C4B09 /* IpPoolsVO.h */,
+				684D90F019FFC587009C4B09 /* IpPoolsVO.m */,
+				684D90F419FFD8AA009C4B09 /* NetworkIpVmListResult.h */,
+				684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */,
+				684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */,
+				684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -2373,6 +2399,7 @@
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
 				181DECF419F17CB100998835 /* bmi-80-80.png in Resources */,
+				684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */,
 				1824362119F4FE05007E4D6C /* calories.off@2x.png in Resources */,
 				18763BBC19F4B82300669CC3 /* dial-icon3.png in Resources */,
 				181DED5B19F17CB100998835 /* LicenseVO.getLicenseVOAsync.json in Resources */,
@@ -2430,6 +2457,7 @@
 				843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
+				684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */,
 				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
 				1891808119F3980C00B1ECA4 /* Main.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
@@ -2563,6 +2591,8 @@
 				18C2130819F27C2000FCBD23 /* BusinessDetailInfoVC.m in Sources */,
 				18C2134A19F27C2000FCBD23 /* VmDashboardHeader.m in Sources */,
 				18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */,
+				684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */,
+				684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
@@ -2583,6 +2613,7 @@
 				84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
+				684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */,
 				18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */,
 				18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */,
 				181DECDA19F17CB100998835 /* MyPieElement.m in Sources */,
@@ -2725,6 +2756,7 @@
 				18C2133C19F27C2000FCBD23 /* StorageDashboardHeader.m in Sources */,
 				18C2133719F27C2000FCBD23 /* PopOptionsVC.m in Sources */,
 				181DED8B19F17CB100998835 /* UserVO.m in Sources */,
+				684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */,
 				18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */,
 				18C2134219F27C2000FCBD23 /* PopControlRecordCellForTime.m in Sources */,
 				1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */,
