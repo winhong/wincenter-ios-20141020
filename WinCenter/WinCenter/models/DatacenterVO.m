@@ -333,14 +333,14 @@
 
 - (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpVmAsync" ofType:@"json"]]].vms, nil);
+        completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getIpPoolsAsync" ofType:@"json"]]].ipPools, nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.api.ipPool.getIpPools", self.id]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:jsonResponse.rawBody].vms, error);
+        completionBlock([[IpPoolsListResult alloc] initWithJSONData:jsonResponse.rawBody].ipPools, error);
     }];
 }
 
