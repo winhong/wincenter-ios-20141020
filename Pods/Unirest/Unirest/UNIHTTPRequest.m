@@ -119,7 +119,20 @@
             [SVProgressHUD dismiss];
             
             if (error != nil) {
-                response(nil, error);
+                if([error.domain isEqualToString:@"NSURLErrorDomain"]){
+                    // There are several ways to init, just look at the class header
+                    NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
+                                                                      title:@"请求超时"
+                                                                    message:@"网络连接失败，请检查网络状态或服务器地址是否正确！"
+                                                                   delegate:nil];
+                    //[alert setTextAlignment:NSTextAlignmentCenter];
+                    [alert show];
+                    [alert showWithCompletion:^{
+                        NSLog(@"Alert with completion handler");
+                    }];
+                }
+                //response(nil, error);
+                return;
             } else {
                 if(res==nil){
                     response(nil, error);
