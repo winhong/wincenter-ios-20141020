@@ -2156,7 +2156,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Vbj-rO-Gph"/>
-                        <barButtonItem image="9CE001E2-769C-413E-AD42-3CBD90DC75E3" id="b8q-IF-5E0">
+                        <barButtonItem image="icon-operationLog" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
                             </connections>
