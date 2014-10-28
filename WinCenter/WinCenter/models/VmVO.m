@@ -145,11 +145,40 @@
     }];
 }
 
-- (void) VmOperation:(NSString*)state async:(BasicCompletionBlock)completionBlock{
-    [[UNIRest postEntity:^(UNIBodyRequest *unibodyRequest) {
-        [unibodyRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.vminfo&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.vmId]];
-        [unibodyRequest setHeaders:@{@"accept": @"application/json"}];
-        [unibodyRequest setBody:[NSJSONSerialization dataWithJSONObject:@{@"state": state} options:0 error:nil]];
+- (void) vmRestart:(BasicCompletionBlock)completionBlock{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.vminfoReStart",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": @"{\"state\":\"RESTART\"}",
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+}
+
+- (void) vmStart:(BasicCompletionBlock)completionBlock{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.vminfoPowerOn",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": @"{\"state\":\"OK\"}",
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+}
+
+- (void) vmStop:(BasicCompletionBlock)completionBlock{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.vminfoPowerOff",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": @"{\"state\":\"STOPPED\"}",
+                                       @"apiType": @"PUT"}];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
             completionBlock(error);
     }];

@@ -192,7 +192,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2c-XC-8es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="-671"/>
+            <point key="canvasLocation" x="3806" y="-671"/>
         </scene>
         <!--物理机详情-->
         <scene sceneID="lUo-he-c0a">
@@ -332,6 +332,18 @@
                         <barButtonItem title="返回" id="6HX-uc-HcG">
                             <connections>
                                 <action selector="backAction:" destination="SdQ-oO-Giu" id="vrE-y0-VyO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4yb-zh-MX9"/>
+                        <barButtonItem title="Item" systemItem="add" id="P5J-an-rv5">
+                            <connections>
+                                <segue destination="npp-Vg-qr6" kind="modal" modalPresentationStyle="formSheet" id="b3V-Q7-EQD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fNg-Wf-QuI"/>
+                        <barButtonItem image="icon-operationLog" id="ezU-Di-dHa">
+                            <connections>
+                                <action selector="showControlRecordVCWithBarItem:" destination="SdQ-oO-Giu" id="qTs-2l-LfR"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -1376,7 +1388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3df-aJ-Gas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4040.25" y="-1457.25"/>
+            <point key="canvasLocation" x="4851.5" y="-1458"/>
         </scene>
         <!--Host Vm Memory Top5 CollectionVC-->
         <scene sceneID="Vsm-am-qnW">
@@ -2433,11 +2445,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoU-CL-3jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jPD-4s-Ukz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="npp-Vg-qr6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aqZ-ZV-iCe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mwh-cb-uuG" kind="relationship" relationship="rootViewController" id="mN3-1j-eKZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tg9-QX-xJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2994" y="-671"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CPU线程-black" width="15" height="15"/>
         <image name="CPU颗数-black" width="15" height="15"/>
         <image name="Network_internal" width="36" height="36"/>
+        <image name="icon-operationLog" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
         <image name="ip" width="10" height="11"/>

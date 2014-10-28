@@ -43,9 +43,9 @@
         self.segmentedControl.frame = rect;
         self.segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
 //        self.segmentedControl.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
-//        segmentedControl3.selectionIndicatorHeight = 4.0f;
+        self.segmentedControl.selectionIndicatorHeight = 2.0f;
 //        segmentedControl3.backgroundColor = [UIColor colorWithRed:0.1 green:0.4 blue:0.8 alpha:1];
-//        segmentedControl3.textColor = [UIColor whiteColor];
+        self.segmentedControl.textColor = self.navigationController.navigationBar.tintColor;
 //        segmentedControl3.selectedTextColor = [UIColor whiteColor];
 //        segmentedControl3.selectionIndicatorColor = [UIColor colorWithRed:0.5 green:0.8 blue:1 alpha:1];
 //        segmentedControl3.selectionStyle = HMSegmentedControlSelectionStyleBox;

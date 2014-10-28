@@ -88,6 +88,12 @@
                                 <action selector="backAction:" destination="4Ve-tC-ML6" id="iZr-ea-8DR"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="uKV-EW-KZa"/>
+                        <barButtonItem image="icon-operationLog" id="2Dc-yu-Wb0">
+                            <connections>
+                                <action selector="showControlRecordVCWithBarItem:" destination="4Ve-tC-ML6" id="Orm-cX-GOo"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="rPP-h3-GZN"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -1327,6 +1333,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-operationLog" width="32" height="32"/>
         <image name="不允许-black" width="32" height="26"/>
         <image name="摘要图标-host" width="37" height="37"/>
         <image name="摘要图标-vm" width="37" height="37"/>
