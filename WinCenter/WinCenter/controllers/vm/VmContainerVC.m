@@ -101,6 +101,12 @@
         case 3:
             [self migrateVm:nil];
             break;
+        case 4:
+            [self configCPU:nil];
+            break;
+        case 5:
+            [self configMemory:nil];
+            break;
         default:
             break;
     }
@@ -118,15 +124,22 @@
     }
 }
 - (IBAction)openVm:(id)sender {
-    UIAlertView *confirm = [[UIAlertView alloc] initWithTitle:@"安全操作" message:@"再次确认操作" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    confirm.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
-    [confirm show];
+    [self.vmVO vmStart:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在开机..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        [self hideControlBtn];
+    }];
+    return;
+    
+//    UIAlertView *confirm = [[UIAlertView alloc] initWithTitle:@"安全操作" message:@"再次确认操作" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//    confirm.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+//    [confirm show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
         if(([[alertView textFieldAtIndex:0].text isEqualToString:@"admin"]) && ([[alertView textFieldAtIndex:1].text isEqualToString:@"passw0rd"])){
-            [self.vmVO vmStop:^(NSError *error) {
+            [self.vmVO vmStart:^(NSError *error) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在开机..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 [self hideControlBtn];
@@ -147,17 +160,21 @@
     }];
 }
 - (IBAction)restartVm:(id)sender {
-    [self.vmVO vmStop:^(NSError *error) {
+    [self.vmVO vmRestart:^(NSError *error) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在重启..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         [self hideControlBtn];
     }];
 }
 - (IBAction)migrateVm:(id)sender {
-    [self hideControlBtn];
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
-        [self performSegueWithIdentifier:@"toMigrate" sender:self];
-    }
+    [self performSegueWithIdentifier:@"toMigrateVm" sender:self];
+}
+
+- (IBAction)configCPU:(id)sender {
+    [self performSegueWithIdentifier:@"toConfigCPU" sender:self];
+}
+- (IBAction)configMemory:(id)sender {
+    [self performSegueWithIdentifier:@"toConfigMemory" sender:self];
 }
 
 -(IBAction)showControlRecordVC:(id)sender{
@@ -190,6 +207,9 @@
 
 - (IBAction)openMenu:(id)sender{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"虚拟机操作" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"开机",@"关机",@"重启",@"迁移",@"调整CPU",@"调整内存", nil];
+        
+        [sheet showFromBarButtonItem:((UIBarButtonItem*)sender) animated:YES];
         return;
     }
     

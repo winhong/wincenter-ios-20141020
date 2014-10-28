@@ -43,6 +43,8 @@
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getVmVolumnListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getVmNicListAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) vmRestart:(BasicCompletionBlock)completionBlock;
+- (void) vmStart:(BasicCompletionBlock)completionBlock;
 - (void) vmStop:(BasicCompletionBlock)completeBlock;
 
     
