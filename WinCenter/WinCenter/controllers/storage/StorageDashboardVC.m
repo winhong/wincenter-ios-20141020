@@ -80,10 +80,10 @@
     header.localStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvm];
     
     //缩起
-    header.fcSanStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
-    header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmoiscsi];
-    header.nfsStorageSize2.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.nfs];
-    header.localStorageSize3.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvm];
+    header.fcSanStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvmohba];
+    header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvmoiscsi];
+    header.nfsStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.nfs];
+    header.localStorageSize3.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvm];
     header.storageSize3.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize4.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
