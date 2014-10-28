@@ -57,6 +57,7 @@
     BusinessDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"BusinessDashboardHeader" forIndexPath:indexPath];
     BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     
+    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
     header.businessVmCount.text = [NSString stringWithFormat:@"%d",businessVO.vmNum];
     header.alloctedBus.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];

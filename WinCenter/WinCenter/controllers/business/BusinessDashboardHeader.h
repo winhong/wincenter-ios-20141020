@@ -10,6 +10,7 @@
 
 @interface BusinessDashboardHeader : UICollectionReusableView
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *businessCount;
 @property (weak, nonatomic) IBOutlet UILabel *businessVmCount;
 

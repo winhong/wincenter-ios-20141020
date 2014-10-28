@@ -10,6 +10,7 @@
 
 @interface StorageDashboardHeader : UICollectionReusableView
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *storageSize4;
 @property (weak, nonatomic) IBOutlet UILabel *shareStorageSize;
 @property (weak, nonatomic) IBOutlet UILabel *localStorageSize;

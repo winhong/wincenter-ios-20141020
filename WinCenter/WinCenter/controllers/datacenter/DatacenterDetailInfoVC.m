@@ -29,13 +29,13 @@
     }
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+//-(void)viewDidAppear:(BOOL)animated{
+    //[super viewDidAppear:animated];
     
-    [self.circleChart strokeChart];
-    [self.circleChart2 strokeChart];
-    [self.circleChart3 strokeChart];
-}
+    //[self.circleChart strokeChart];
+    //[self.circleChart2 strokeChart];
+    //[self.circleChart3 strokeChart];
+//}
 
 - (void)viewDidLoad{
     for(UILabel *label in self.allLabels){
@@ -59,7 +59,7 @@
         
         [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(NSArray *allRemote, NSError *error) {
             for(PoolVO *poolVO in allRemote){
-                [poolVO getPoolVOAsync:^(id object, NSError *error) {
+                [poolVO getPoolVOSync:^(id object, NSError *error) {
                     self.datacenterStatWinserver.totalCpu += ((PoolVO *)object).totalCpu;
                     self.datacenterStatWinserver.totalMemory += ((PoolVO *)object).totalMemory;
                     self.datacenterStatWinserver.totalStorage += ((PoolVO *)object).totalStorage;
@@ -67,9 +67,10 @@
                     self.datacenterStatWinserver.availMemory += ((PoolVO *)object).availMemory;
                     self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
                     
-                    [self refreshMainInfo3];
+                   
                 }];
             }
+            [self refreshMainInfo3];
         }];
     }];
 }
@@ -85,6 +86,7 @@
 }
 
 - (void)refreshMainInfo3{
+    self.name.title = [RemoteObject getCurrentDatacenterVO].name;
     self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
     self.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
     self.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1000.0];

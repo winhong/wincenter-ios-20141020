@@ -11,6 +11,7 @@
 @interface VmDashboardHeader : UICollectionReusableView
 
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *vmCount;
 
 @property (weak, nonatomic) IBOutlet UILabel *osTypeWin;

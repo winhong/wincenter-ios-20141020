@@ -68,6 +68,7 @@
 
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
+    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.shareStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
     header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];

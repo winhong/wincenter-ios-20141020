@@ -62,7 +62,18 @@
         return PNGreen;
     }
 }
-
+- (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completeBlock([[PoolVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getPoolVOAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    UNIHTTPJsonResponse *jsonResponse = [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.resourcePool.getResourcePool&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+    }] asJson:nil];
+    
+    completeBlock([[PoolVO alloc] initWithJSONData:jsonResponse.rawBody], nil);
+}
 - (void) getPoolVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[PoolVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getPoolVOAsync" ofType:@"json"]]], nil);
