@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *allLabels;
 
 @property DatacenterStatWinserver *datacenterStatWinserver;
-
+@property UIPopoverController *popover;
 @end
 
 @implementation DatacenterDetailInfoVC
@@ -171,6 +171,16 @@
         case 4: self.button5.selected = YES; break;
         case 5: self.button6.selected = YES; break;
     }
+}
+
+-(IBAction)showControlRecordVC:(id)sender{
+    if(self.popover!=nil){
+        [self.popover dismissPopoverAnimated:NO];
+    }
+    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+    UIBarButtonItem *button = (UIBarButtonItem*)sender;
+    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 @end
