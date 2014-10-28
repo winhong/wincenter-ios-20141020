@@ -454,6 +454,9 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bmP-0R-WiT">
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="VcU-H9-Rb2">
                         <autoresizingMask key="autoresizingMask"/>
@@ -665,7 +668,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoolDashboardHeader" id="Z7B-fH-gJJ" customClass="PoolDashboardHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="969" height="415"/>
+                            <rect key="frame" x="0.0" y="0.0" width="969" height="314"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnV-5d-cXR">
@@ -1108,6 +1111,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IcM-UV-j0j">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="Aa2-Sv-dXD">
@@ -1634,6 +1640,9 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Cak-qg-Hac">
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="waA-3C-k9E">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1869,7 +1878,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HostDashboardHeader" id="DFn-Lm-RXe" customClass="HostDashboardHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="969" height="270"/>
+                            <rect key="frame" x="0.0" y="0.0" width="969" height="169"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2AV-91-ncQ">
@@ -2181,6 +2190,9 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="39N-iw-bCg">
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="nRs-WB-u2s">
                         <autoresizingMask key="autoresizingMask"/>
@@ -2280,7 +2292,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StorageDashboardHeader" id="q5I-nu-Sla" customClass="StorageDashboardHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="969" height="361"/>
+                            <rect key="frame" x="0.0" y="0.0" width="969" height="260"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-yr-uyu">
@@ -2683,6 +2695,9 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2L2-7f-TrS">
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="6wE-PH-k2b">
                         <autoresizingMask key="autoresizingMask"/>
@@ -2856,7 +2871,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VmDashboardHeader" id="WuI-Kl-R28" customClass="VmDashboardHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="969" height="266"/>
+                            <rect key="frame" x="0.0" y="0.0" width="969" height="165"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-kg-F2t">
@@ -3168,6 +3183,9 @@
                     <size key="freeformSize" width="969" height="768"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="z0N-WE-qBr">
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="dqK-Sx-PjQ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -3265,7 +3283,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BusinessDashboardHeader" id="XqT-2E-Wk7" customClass="BusinessDashboardHeader">
-                            <rect key="frame" x="0.0" y="0.0" width="969" height="266"/>
+                            <rect key="frame" x="0.0" y="0.0" width="969" height="165"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09S-Lr-XSp">
