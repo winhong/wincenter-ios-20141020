@@ -10,6 +10,7 @@
 
 @interface HostDashboardHeader : UICollectionReusableView
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *poolCount;
 @property (weak, nonatomic) IBOutlet UILabel *hostCount;
 @property (weak, nonatomic) IBOutlet UILabel *vmCount;

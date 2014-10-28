@@ -85,6 +85,7 @@
 }
 
 - (void)refreshMainInfo3{
+    self.name.title = [RemoteObject getCurrentDatacenterVO].name;
     self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
     self.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
     self.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1000.0];
