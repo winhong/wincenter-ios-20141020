@@ -356,8 +356,8 @@
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="内部网络"/>
                                 <segment title="外部网络"/>
+                                <segment title="内部网络"/>
                             </segments>
                         </segmentedControl>
                     </navigationItem>

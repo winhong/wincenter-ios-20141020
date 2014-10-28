@@ -299,7 +299,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=apiKey=pc.winserver.network.getNetWorksList&type=INTERNAL", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=apiKey=pc.winserver.network.getNetWorksList&params=type=INTERNAL", self.id]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
@@ -312,7 +312,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&type=EXTERNAL", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=type=EXTERNAL", self.id]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody].networks, error);
     }];
