@@ -15,7 +15,7 @@
 @implementation PopOptionHelpVC
 
 - (void)viewDidLoad {
-    self.url = [NSURL URLWithString:@"https://192.168.213.147:8090/pages/help/helpWord.htm"];
+    self.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/pages/help/helpWord.htm", [[NSUserDefaults standardUserDefaults] stringForKey:@"SERVER_ROOT"]]];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
