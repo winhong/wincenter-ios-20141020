@@ -11,6 +11,7 @@
 @interface PoolHaInfoVO : NSObject
 
 @property NSString *haEnabled;
+@property NSString *haStorageOriginalId;
 @end
 
 //{

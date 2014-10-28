@@ -49,6 +49,6 @@
 - (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getActivityVmAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(int)startTime;
 
 @end

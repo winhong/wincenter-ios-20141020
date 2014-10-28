@@ -10,6 +10,7 @@
 
 @interface PoolDashboardHeader : UICollectionReusableView
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *poolCount;
 @property (weak, nonatomic) IBOutlet UILabel *haPoolCount;
 @property (weak, nonatomic) IBOutlet UILabel *elasticCalPoolCount;

@@ -10,6 +10,7 @@
 
 @interface DatacenterStatWinserver : NSObject
 
+@property NSString *name;
 @property int resPoolNumber;
 @property int hostNubmer;
 @property int vmNumber;

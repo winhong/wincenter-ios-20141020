@@ -32,7 +32,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *storageRatio;
 
 @property (weak, nonatomic) IBOutlet UILabel *haErrorHostCount;
-@property (weak, nonatomic) IBOutlet UILabel *haSignalNetwork;
 @property (weak, nonatomic) IBOutlet UILabel *haSignalPool;
 
 @property (weak, nonatomic) IBOutlet UILabel *elasticModel;
@@ -131,8 +130,7 @@
     if ([self.haInfoVO.haEnabled isEqualToString:@"true"]) {
         self.haInfo.hidden = NO;
         self.haErrorHostCount.text = [NSString stringWithFormat:@"%d",self.maxHostFailures.maxHostFailures];
-        //self.haSignalNetwork.text = self.poolVO.haSignalNetwork;
-        //self.haSignalPool.text = self.poolVO.haSignalPool;
+        self.haSignalPool.text = self.haInfoVO.haStorageOriginalId == nil ? @"无" :self.haInfoVO.haStorageOriginalId;
     }else{
         self.haDisable.hidden = NO;
     }

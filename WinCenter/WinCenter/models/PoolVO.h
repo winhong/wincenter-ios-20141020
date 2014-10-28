@@ -42,6 +42,7 @@
 
 -(UIColor *)storageRatioColor;
 
+- (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolElasticAsync:(FetchObjectCompletionBlock)completeBlock;
     

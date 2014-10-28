@@ -84,6 +84,7 @@
 
     VmDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VmDashboardHeader" forIndexPath:indexPath];
     
+    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.vmCount.text =[NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
     header.osTypeWin.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
     header.osTypeLinux.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];

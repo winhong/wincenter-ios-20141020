@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ve-tC-ML6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ve-tC-ML6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -426,30 +426,21 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7p-Bm-6Vp">
-                                                        <rect key="frame" x="160" y="20" width="78" height="21"/>
+                                                        <rect key="frame" x="137" y="20" width="78" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="检测信号网络：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-qR-4BI">
-                                                        <rect key="frame" x="20" y="56" width="119" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R8-ZD-iad">
-                                                        <rect key="frame" x="145" y="56" width="109" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="检测信号存储池：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-v2-iPJ">
-                                                        <rect key="frame" x="20" y="92" width="136" height="21"/>
+                                                        <rect key="frame" x="20" y="56" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-9q-Qa3">
-                                                        <rect key="frame" x="153" y="92" width="101" height="21"/>
+                                                        <rect key="frame" x="137" y="56" width="117" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -761,7 +752,6 @@
                         <outlet property="haDisable" destination="GOr-rG-FX0" id="z1f-7i-olx"/>
                         <outlet property="haErrorHostCount" destination="w7p-Bm-6Vp" id="0QA-1F-NQG"/>
                         <outlet property="haInfo" destination="wzE-bE-FYe" id="1Ye-cY-fKv"/>
-                        <outlet property="haSignalNetwork" destination="1R8-ZD-iad" id="9DR-Qo-ICw"/>
                         <outlet property="haSignalPool" destination="6rg-9q-Qa3" id="sSJ-E8-LJZ"/>
                         <outlet property="hostCount" destination="S0d-2P-tMz" id="ysc-Sg-jBx"/>
                         <outlet property="intervalTime" destination="3qH-Tp-Gpa" id="GRg-0f-VKf"/>
@@ -800,13 +790,12 @@
                         <outletCollection property="allLabels" destination="yTt-BA-gYN" id="IJb-aM-Gpv"/>
                         <outletCollection property="allLabels" destination="G9Z-d4-517" id="GtV-IG-xnQ"/>
                         <outletCollection property="allLabels" destination="w7p-Bm-6Vp" id="rl2-RO-XaU"/>
-                        <outletCollection property="allLabels" destination="1R8-ZD-iad" id="aCL-Yw-zus"/>
                         <outletCollection property="allLabels" destination="6rg-9q-Qa3" id="lGm-Te-vwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4j7-q3-yDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4517.25" y="-2496"/>
+            <point key="canvasLocation" x="4516.5" y="-2496"/>
         </scene>
         <!--Graph Demo View Controller-->
         <scene sceneID="9wZ-xe-aZH">
