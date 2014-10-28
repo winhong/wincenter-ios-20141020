@@ -24,7 +24,9 @@
     [super viewDidLoad];
     
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openMenu:)];
-
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(openMenu:)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 
@@ -229,7 +231,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"虚拟机操作" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"开机",@"关机",@"重启",@"迁移",@"调整CPU",@"调整内存", nil];
         
-        [sheet showFromBarButtonItem:((UIBarButtonItem*)sender) animated:YES];
+        [sheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
         return;
     }
     
