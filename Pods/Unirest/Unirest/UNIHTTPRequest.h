@@ -30,6 +30,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <JGProgressHUD/JGProgressHUD.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <NZAlertView/NZAlertView.h>
 
 typedef NS_ENUM(NSInteger, UNIHTTPMethod) {
 	GET,
