@@ -9,7 +9,11 @@
 #import "VmDetailCPUConfigVC.h"
 
 @interface VmDetailCPUConfigVC ()
+@property (weak, nonatomic) IBOutlet UILabel *cpuCap;
+@property (weak, nonatomic) IBOutlet UITextField *vcpu;
+@property (weak, nonatomic) IBOutlet UITextField *vcpuWeight;
 
+@property HostVO *OwnerHostVO;
 @end
 
 @implementation VmDetailCPUConfigVC
@@ -26,12 +30,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[DatacenterVO new] getHostByIdAsync:^(id object, NSError *error) {
+        self.OwnerHostVO = object;
+        self.cpuCap.text = [NSString stringWithFormat:@"%d",self.OwnerHostVO.cpu];
+        self.vcpu.text = [NSString stringWithFormat:@"%d",self.vmVO.vcpu];
+        //self.vcpuWeight.text = [NSString stringWithFormat:@"%d",self.vmVO. vcpuWeight];
+    } widthHostId:self.vmVO.ownerHostId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +50,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)done:(id)sender {
-     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.vmVO vmConfigCPU:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改CPU配置成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } withVCPU:(int)self.vcpu.text withCPUCap:(int)self.cpuCap.text withCPUWeight:384];
+    
 }
 
 /*

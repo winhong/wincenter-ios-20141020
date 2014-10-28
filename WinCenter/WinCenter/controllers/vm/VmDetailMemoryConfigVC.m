@@ -6,13 +6,18 @@
 //  Copyright (c) 2014年 黄茂坚. All rights reserved.
 //
 
-#import "VmDetailMemryConfigVC.h"
+#import "VmDetailMemoryConfigVC.h"
 
-@interface VmDetailMemryConfigVC ()
+@interface VmDetailMemoryConfigVC ()
+
+@property (weak, nonatomic) IBOutlet UITextField *memoryModal;
+@property (weak, nonatomic) IBOutlet UITextField *memorySize;
+@property (weak, nonatomic) IBOutlet UITextField *memoryObligate;
+
 
 @end
 
-@implementation VmDetailMemryConfigVC
+@implementation VmDetailMemoryConfigVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +32,9 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.memoryModal.text = self.vmVO.memoryType_text;
+    self.memorySize.text = [NSString stringWithFormat:@"%.2f",self.vmVO.memory/1024.0];
+    self.memoryObligate.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minMem/1024.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +48,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)done:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.vmVO vmConfigMemory:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改内存配置成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } withReservation:(int)self.memorySize.text withMinMem:(int)self.memoryObligate.text];
+    
 }
 
 /*

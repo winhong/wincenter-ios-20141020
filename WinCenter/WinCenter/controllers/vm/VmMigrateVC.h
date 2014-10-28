@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface VmMigrateVC : UITableViewController
+@property VmVO *vmVO;
+
+@property int selectedHostId;
+@property NSString *selectedHostName;
 
 @end

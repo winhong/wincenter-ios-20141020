@@ -309,7 +309,7 @@
 		18C2134B19F27C2000FCBD23 /* VmDashboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212E419F27C2000FCBD23 /* VmDashboardVC.m */; };
 		18C2134C19F27C2000FCBD23 /* VmDetailCPUConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212E619F27C2000FCBD23 /* VmDetailCPUConfigVC.m */; };
 		18C2134D19F27C2000FCBD23 /* VmDetailInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212E819F27C2000FCBD23 /* VmDetailInfoVC.m */; };
-		18C2134E19F27C2000FCBD23 /* VmDetailMemryConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212EA19F27C2000FCBD23 /* VmDetailMemryConfigVC.m */; };
+		18C2134E19F27C2000FCBD23 /* VmDetailMemoryConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212EA19F27C2000FCBD23 /* VmDetailMemoryConfigVC.m */; };
 		18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212EC19F27C2000FCBD23 /* VmDetailSnapshootVC.m */; };
 		18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212EE19F27C2000FCBD23 /* VmDiskCollectionCell.m */; };
 		18C2135119F27C2000FCBD23 /* VmDiskCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C212F019F27C2000FCBD23 /* VmDiskCollectionVC.m */; };
@@ -399,6 +399,9 @@
 		843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C2119F603720046A5A0 /* StorageCapacityVO.m */; };
 		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
+		847A60B119FF82E90090305C /* VmMigrateTargetsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */; };
+		847A60B419FF83110090305C /* VmMigrateTargetVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B319FF83110090305C /* VmMigrateTargetVO.m */; };
+		847A60B719FF832E0090305C /* VmMigrateTargetHostVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B619FF832E0090305C /* VmMigrateTargetHostVO.m */; };
 		847CA88819F74F55004C292A /* HostVO.getActivityVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847CA88719F74F55004C292A /* HostVO.getActivityVmAsync.json */; };
 		847CA88B19F7503B004C292A /* HostActivityVmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88A19F7503B004C292A /* HostActivityVmStateVO.m */; };
 		847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88D19F752B6004C292A /* HostActivityVmVO.m */; };
@@ -895,8 +898,8 @@
 		18C212E619F27C2000FCBD23 /* VmDetailCPUConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailCPUConfigVC.m; sourceTree = "<group>"; };
 		18C212E719F27C2000FCBD23 /* VmDetailInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDetailInfoVC.h; sourceTree = "<group>"; };
 		18C212E819F27C2000FCBD23 /* VmDetailInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailInfoVC.m; sourceTree = "<group>"; };
-		18C212E919F27C2000FCBD23 /* VmDetailMemryConfigVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDetailMemryConfigVC.h; sourceTree = "<group>"; };
-		18C212EA19F27C2000FCBD23 /* VmDetailMemryConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailMemryConfigVC.m; sourceTree = "<group>"; };
+		18C212E919F27C2000FCBD23 /* VmDetailMemoryConfigVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDetailMemoryConfigVC.h; sourceTree = "<group>"; };
+		18C212EA19F27C2000FCBD23 /* VmDetailMemoryConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailMemoryConfigVC.m; sourceTree = "<group>"; };
 		18C212EB19F27C2000FCBD23 /* VmDetailSnapshootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDetailSnapshootVC.h; sourceTree = "<group>"; };
 		18C212EC19F27C2000FCBD23 /* VmDetailSnapshootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmDetailSnapshootVC.m; sourceTree = "<group>"; };
 		18C212ED19F27C2000FCBD23 /* VmDiskCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmDiskCollectionCell.h; sourceTree = "<group>"; };
@@ -1071,6 +1074,12 @@
 		843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StorageSubVO.getStorageSubInfoAsync.json; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
+		847A60AF19FF82E90090305C /* VmMigrateTargetsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetsVO.h; path = ../controllers/vm/VmMigrateTargetsVO.h; sourceTree = "<group>"; };
+		847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VmMigrateTargetsVO.m; path = ../controllers/vm/VmMigrateTargetsVO.m; sourceTree = "<group>"; };
+		847A60B219FF83110090305C /* VmMigrateTargetVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetVO.h; path = ../controllers/vm/VmMigrateTargetVO.h; sourceTree = "<group>"; };
+		847A60B319FF83110090305C /* VmMigrateTargetVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VmMigrateTargetVO.m; path = ../controllers/vm/VmMigrateTargetVO.m; sourceTree = "<group>"; };
+		847A60B519FF832E0090305C /* VmMigrateTargetHostVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetHostVO.h; path = ../controllers/vm/VmMigrateTargetHostVO.h; sourceTree = "<group>"; };
+		847A60B619FF832E0090305C /* VmMigrateTargetHostVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VmMigrateTargetHostVO.m; path = ../controllers/vm/VmMigrateTargetHostVO.m; sourceTree = "<group>"; };
 		847CA88719F74F55004C292A /* HostVO.getActivityVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostVO.getActivityVmAsync.json; sourceTree = "<group>"; };
 		847CA88919F7503B004C292A /* HostActivityVmStateVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostActivityVmStateVO.h; sourceTree = "<group>"; };
 		847CA88A19F7503B004C292A /* HostActivityVmStateVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostActivityVmStateVO.m; sourceTree = "<group>"; };
@@ -1571,6 +1580,12 @@
 				843E6C1019F5F3EE0046A5A0 /* VmOSVO.m */,
 				843E6C1219F5F40E0046A5A0 /* VmStateVO.h */,
 				843E6C1319F5F40E0046A5A0 /* VmStateVO.m */,
+				847A60AF19FF82E90090305C /* VmMigrateTargetsVO.h */,
+				847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */,
+				847A60B219FF83110090305C /* VmMigrateTargetVO.h */,
+				847A60B319FF83110090305C /* VmMigrateTargetVO.m */,
+				847A60B519FF832E0090305C /* VmMigrateTargetHostVO.h */,
+				847A60B619FF832E0090305C /* VmMigrateTargetHostVO.m */,
 				181DEC9119F17CB100998835 /* WarningInfoListResult.h */,
 				181DEC9219F17CB100998835 /* WarningInfoListResult.m */,
 				181DEC9319F17CB100998835 /* WarningInfoVO.h */,
@@ -2035,8 +2050,8 @@
 				18C212E619F27C2000FCBD23 /* VmDetailCPUConfigVC.m */,
 				18C212E719F27C2000FCBD23 /* VmDetailInfoVC.h */,
 				18C212E819F27C2000FCBD23 /* VmDetailInfoVC.m */,
-				18C212E919F27C2000FCBD23 /* VmDetailMemryConfigVC.h */,
-				18C212EA19F27C2000FCBD23 /* VmDetailMemryConfigVC.m */,
+				18C212E919F27C2000FCBD23 /* VmDetailMemoryConfigVC.h */,
+				18C212EA19F27C2000FCBD23 /* VmDetailMemoryConfigVC.m */,
 				18C212EB19F27C2000FCBD23 /* VmDetailSnapshootVC.h */,
 				18C212EC19F27C2000FCBD23 /* VmDetailSnapshootVC.m */,
 				18C212ED19F27C2000FCBD23 /* VmDiskCollectionCell.h */,
@@ -2567,6 +2582,7 @@
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
+				847A60B719FF832E0090305C /* VmMigrateTargetHostVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
 				181DECA419F17CB100998835 /* DoubleYSeriesVC.m in Sources */,
@@ -2577,7 +2593,7 @@
 				843E6C0E19F5F3D30046A5A0 /* VmSubVO.m in Sources */,
 				181DECBB19F17CB100998835 /* ELineChartViewController.m in Sources */,
 				18C2135819F27C2000FCBD23 /* PopWarningInfoCell.m in Sources */,
-				18C2134E19F27C2000FCBD23 /* VmDetailMemryConfigVC.m in Sources */,
+				18C2134E19F27C2000FCBD23 /* VmDetailMemoryConfigVC.m in Sources */,
 				181DED7119F17CB100998835 /* ControlRecordVO.m in Sources */,
 				686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */,
 				84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */,
@@ -2684,6 +2700,7 @@
 				18C2132319F27C2000FCBD23 /* HostDetailInfoVC.m in Sources */,
 				18C2134B19F27C2000FCBD23 /* VmDashboardVC.m in Sources */,
 				18C2134019F27C2000FCBD23 /* StorageDiskCollectionVC.m in Sources */,
+				847A60B119FF82E90090305C /* VmMigrateTargetsVO.m in Sources */,
 				181DECE019F17CB100998835 /* PercentageChartLayer.m in Sources */,
 				181DECA319F17CB100998835 /* ARLineChartView.m in Sources */,
 				18C5215419F89DF300C033C6 /* MJRefreshFooterView.m in Sources */,
@@ -2805,6 +2822,7 @@
 				1824362319F4FE05007E4D6C /* RRCircularItem.m in Sources */,
 				18C2134819F27C2000FCBD23 /* VmContainerVC.m in Sources */,
 				18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */,
+				847A60B419FF83110090305C /* VmMigrateTargetVO.m in Sources */,
 				18C2135A19F27C2000FCBD23 /* PopWarningInfoVC.m in Sources */,
 				181DECBA19F17CB100998835 /* EColumnChartViewController.m in Sources */,
 				8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */,

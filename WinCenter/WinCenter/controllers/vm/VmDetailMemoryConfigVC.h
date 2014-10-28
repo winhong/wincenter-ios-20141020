@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VmDetailMemryConfigVC : UITableViewController
+@interface VmDetailMemoryConfigVC : UITableViewController
 
+@property VmVO *vmVO;
 @end

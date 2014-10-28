@@ -8,10 +8,13 @@
 
 #import "VmMigrateSelectHostListVC.h"
 #import "VmMigrateSelectHostListCell.h"
+#import "VmMigrateVC.h"
 
 @interface VmMigrateSelectHostListVC ()
 @property VmMigrateSelectHostListCell *prevCell;
 @property NSMutableArray *hosts;
+@property int selectedHostId;
+@property NSString *selectedHostName;
 @end
 
 @implementation VmMigrateSelectHostListVC
@@ -35,9 +38,17 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.hosts = [NSMutableArray new];
-    for (int i = 0; i<30; i++) {
-        [self.hosts addObject:[NSString stringWithFormat:@"物理机－%d",i]];
-    }
+    [self.vmVO vmGetMigrateTargets:^(id object, NSError *error) {
+        self.vmMigrateTargets = object;
+        for(VmMigrateTargetVO *targetVO in self.vmMigrateTargets.targets){
+            for(VmMigrateTargetHostVO *hostVO in targetVO.hosts){
+                [self.hosts addObject:hostVO.targetName];
+            }
+        }
+        [self.tableView reloadData];
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +74,10 @@
     selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     self.prevCell = selectedCell;
+    VmMigrateTargetVO *targets = self.vmMigrateTargets.targets[0];
+    VmMigrateTargetHostVO *host= targets.hosts[indexPath.row];
+    self.selectedHostId = host.targetId;
+    self.selectedHostName = host.targetName;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,6 +89,20 @@
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqual:@"toMigrateTargetHosts"]){
+        VmMigrateVC *vc = segue.destinationViewController;
+        vc.selectedHostId = self.selectedHostId;
+        vc.selectedHostName = self.selectedHostName;
+    }else{
+        
+    }
+}
+
+
+- (IBAction)done:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

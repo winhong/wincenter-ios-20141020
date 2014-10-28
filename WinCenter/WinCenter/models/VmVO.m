@@ -184,6 +184,62 @@
     }];
 }
 
+- (void) vmGetMigrateTargets:(FetchAllCompletionBlock)completionBlock{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.migrateTargets",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"params": @"migrateType=vm",
+                                       @"apiType": @"GET"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmMigrateTargetsVO alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+
+}
+
+- (void) vmMigrate:(BasicCompletionBlock)completionBlock widthTargetHostId:(int)hostId{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.migrate",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": [NSString stringWithFormat:@"{\"hostId\":\"%d\",\"migrateType\":\"vm\"}",hostId],
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+    
+}
+
+- (void) vmConfigCPU:(BasicCompletionBlock)completionBlock withVCPU:(int)vcpu withCPUCap:(int)cpuCap withCPUWeight:(int)cpuWeight{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.vminfoResizeCpu",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": [NSString stringWithFormat:@"{\"state\":\"RESIZE\",\"vcpu\":\"%d\",\"cpuCap\":\"%d\",\"cpuWeight\":%d}",vcpu,cpuCap,cpuWeight],
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+    
+}
+
+- (void) vmConfigMemory:(BasicCompletionBlock)completionBlock withReservation:(int)reservation withMinMem:(int)minMem{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.vm.vminfoResizeMem",
+                                       @"placeholder": [NSString stringWithFormat:@"%d", self.vmId],
+                                       @"content": [NSString stringWithFormat:@"{\"state\":\"RESIZE\",\"reservation\":\"%d\",\"minMem\":\"%d\"}",reservation,minMem],
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+    
+}
+
 - (BOOL) isDynamicCpu_img{
     if ([self.isDynamicCpu isEqualToString:@"true"]) {
         return YES;

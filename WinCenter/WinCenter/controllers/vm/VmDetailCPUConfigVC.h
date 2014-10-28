@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface VmDetailCPUConfigVC : UITableViewController
-
+@property VmVO *vmVO;
 @end

@@ -30,6 +30,8 @@
 @property NSString *poolName;
 @property int ownerHostId;
 @property NSString *ownerHostName;
+@property int maxMem;
+@property int minMem;
 
 - (NSString *) isInstallTools_text;
 - (NSString*)osType_imageName;
@@ -46,6 +48,10 @@
 - (void) vmRestart:(BasicCompletionBlock)completionBlock;
 - (void) vmStart:(BasicCompletionBlock)completionBlock;
 - (void) vmStop:(BasicCompletionBlock)completeBlock;
+- (void) vmGetMigrateTargets:(FetchAllCompletionBlock)completionBlock;
+- (void) vmMigrate:(BasicCompletionBlock)completionBlock widthTargetHostId:(int)hostId;
+- (void) vmConfigCPU:(BasicCompletionBlock)completionBlock withVCPU:(int)vcpu withCPUCap:(int)cpuCap withCPUWeight:(int)cpuWeight;
+- (void) vmConfigMemory:(BasicCompletionBlock)completionBlock withReservation:(int)reservation withMinMem:(int)minMem;
 
     
 @end
