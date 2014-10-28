@@ -11,12 +11,14 @@
 @implementation HostNetworkVO
 
 -(NSString*) state_text{
-    if([self.linkState isEqualToString:@"CONNECTED"]){
+    if([self.state isEqualToString:@"CONNECTED"]){
         return @"已连接";
-    }else if([self.linkState isEqualToString:@"FREE"]){
+    }else if([self.state isEqualToString:@"FREE"]){
         return @"可用";
-    }else{
+    }else if([self.state isEqualToString:@"IN_USED"]){
         return @"在用";
+    }else{
+        return @"其他";
     }
 }
 

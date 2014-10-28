@@ -15,12 +15,12 @@
 }
 
 -(NSString*) linkState_image{
-    if([self.linkState isEqualToString:@"CONNECTED"]){
-        return @"网络连接-链接";
-    }else if([self.linkState isEqualToString:@"DISCONNECTED"]){
-        return @"网络连接-断开链接";
+    if([self.linkeState isEqualToString:@"Up"]){
+        return @"链接";
+    }else if([self.linkeState isEqualToString:@"Detach"]){
+        return @"断开链接";
     }else{
-        return @"网络连接-部分链接";
+        return @"部分链接";
     }
 }
 
