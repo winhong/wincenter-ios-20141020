@@ -25,6 +25,13 @@
         if(allRemote.count>0){
             [RemoteObject setCurrentDatacenterVO:[allRemote firstObject]];
             [self refresh];
+            if(allRemote.count>1){
+                [self.tabBarVC setSelectedIndex:9];
+                [self.menuVC setSelectedItemIndex:9];
+            }else{
+                [self.tabBarVC setSelectedIndex:0];
+                [self.menuVC setSelectedItemIndex:0];
+            }
         }else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"友情提示" message:@"尚没有配置任何数据中心，请联系虚拟化平台管理员！" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles: nil];
             [alert show];
@@ -42,8 +49,19 @@
     
 }
 
+- (void)didFinished:(DatacenterVO *)vo{
+    [RemoteObject setCurrentDatacenterVO:vo];
+    [self refresh];
+    [self.tabBarVC setSelectedIndex:0];
+    [self.menuVC setSelectedItemIndex:0];
+}
+
 - (void)refresh{
     self.title = [RemoteObject getCurrentDatacenterVO].name;
+    
+    for(UIViewController *subVC in self.tabBarVC.childViewControllers){
+        [subVC removeFromParentViewController];
+    }
     
     NSArray *viewControllers = @[@"DatacenterDetailInfoVCNav",
                                  @"PoolDashboardVCNav",@"HostDashboardVCNav",@"VmDashboardVCNav",
@@ -70,15 +88,13 @@
     
     //刷新
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
+    DatacenterTableVC *tableVC = [[nav childViewControllers] firstObject];
+    tableVC.delegate = self;
     [self.tabBarVC addChildViewController:nav];
     
     //设置
     nav = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
     [self.tabBarVC addChildViewController:nav];
-    
-    [self.tabBarVC setSelectedIndex:0];
-    
-    [self.menuVC setSelectedItemIndex:0];
 }
 
 @end

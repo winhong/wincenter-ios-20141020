@@ -126,21 +126,6 @@
                                             <segue destination="aya-nF-tQR" kind="replace" splitViewControllerTargetIndex="1" id="lMM-aN-4Bt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RCb-Rs-5Hb" style="IBUITableViewCellStyleDefault" id="FzZ-Ya-ygc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FzZ-Ya-ygc" id="hQh-af-ASz">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="锁定屏幕" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RCb-Rs-5Hb">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="wuv-CF-A3A">
@@ -1571,14 +1556,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DXs-kF-nOV"/>
         <segue reference="sfL-QP-Kfv"/>
+        <segue reference="xiw-9q-3p9"/>
         <segue reference="gQ8-rg-qih"/>
         <segue reference="l5z-NH-yea"/>
-        <segue reference="h9v-mu-EsN"/>
-        <segue reference="xiw-9q-3p9"/>
         <segue reference="FDj-F1-Eac"/>
+        <segue reference="h9v-mu-EsN"/>
         <segue reference="9nw-dL-43m"/>
         <segue reference="eem-JX-f0g"/>
+        <segue reference="DXs-kF-nOV"/>
     </inferredMetricsTieBreakers>
 </document>

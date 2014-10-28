@@ -11,11 +11,12 @@
 @class DashboardTableVC;
 
 @protocol DatacenterTableVCDelegate
-- (void)didFinished:(DashboardTableVC *)controller;
+- (void)didFinished:(DatacenterVO *)vo;
 @end
 
 @interface DatacenterTableVC : UITableViewController
 
+@property DatacenterVO *selectedDatacenterVO;
 @property (weak, nonatomic) id <DatacenterTableVCDelegate> delegate;
 
 @end

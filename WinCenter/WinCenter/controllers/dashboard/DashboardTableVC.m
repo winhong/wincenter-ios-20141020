@@ -91,7 +91,7 @@
     }
 }
 
-- (void)didFinished:(DatacenterTableVC *)controller{
+- (void)didFinished:(DatacenterVO *)vo{
     [self mz_dismissFormSheetControllerAnimated:YES completionHandler:nil];
     if(self.infoVC){
         [self.infoVC refresh];
