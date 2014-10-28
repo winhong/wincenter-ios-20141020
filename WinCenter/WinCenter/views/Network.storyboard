@@ -344,6 +344,28 @@
                                     <outlet property="vlan" destination="i9D-xq-bjR" id="vTP-Ln-CzC"/>
                                 </connections>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NetworkTotalCollectionCell_Internal" id="U4A-Xt-aaQ" customClass="NetworkTotalCollectionCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxxx网络" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pt-S2-Cra">
+                                            <rect key="frame" x="21" y="13" width="259" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="290" height="54"/>
+                                <connections>
+                                    <outlet property="name" destination="5pt-S2-Cra" id="yaB-qY-Ssv"/>
+                                </connections>
+                            </collectionViewCell>
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="S2E-G5-efG" id="c4f-Ny-Ccl"/>
@@ -359,12 +381,18 @@
                                 <segment title="外部网络"/>
                                 <segment title="内部网络"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentChange:" destination="S2E-G5-efG" eventType="valueChanged" id="MTX-3y-yM4"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="5wr-Lu-EuF" id="A0J-1a-I73"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EG2-qW-HEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1774" y="1787"/>
+            <point key="canvasLocation" x="-1754" y="1739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZ8-Tp-cyP">
