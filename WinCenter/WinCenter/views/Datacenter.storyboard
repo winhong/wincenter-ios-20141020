@@ -71,7 +71,7 @@
         <scene sceneID="lA6-gL-mFX">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardMenuVC_iPad" id="teZ-Tc-JZU" customClass="DashboardMenuVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="10" id="S2a-cH-2QV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="150" sectionFooterHeight="10" id="S2a-cH-2QV">
                         <rect key="frame" x="0.0" y="0.0" width="55" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -288,28 +288,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="VON-A0-0nC">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VON-A0-0nC" id="aKR-eD-Tvk">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRV-yn-KP3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <gestureRecognizers/>
-                                                    <state key="normal" title="展开" image="navIcon-arrRight">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="navIcon-arrRight-white"/>
-                                                    <connections>
-                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="TZ9-KA-dFw"/>
-                                                        <outletCollection property="gestureRecognizers" destination="3YI-fP-b0w" appends="YES" id="gRP-1Q-WeL"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -320,7 +298,6 @@
                     </tableView>
                     <connections>
                         <outlet property="menuBusiness" destination="teG-WG-WvM" id="Rrd-5g-edZ"/>
-                        <outlet property="menuExpand" destination="VRV-yn-KP3" id="tea-Xm-zXa"/>
                         <outlet property="menuHome" destination="iyb-aS-OTb" id="zMQ-ol-X7L"/>
                         <outlet property="menuHost" destination="S1a-xW-YPY" id="F5g-dA-Tfx"/>
                         <outlet property="menuNetwork" destination="pR6-yL-Iuk" id="I9s-h1-RBL"/>
@@ -4183,8 +4160,6 @@
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
         <image name="ip" width="10" height="11"/>
-        <image name="navIcon-arrRight" width="55" height="58"/>
-        <image name="navIcon-arrRight-white" width="55" height="58"/>
         <image name="navIcon-business" width="55" height="58"/>
         <image name="navIcon-business-white" width="55" height="58"/>
         <image name="navIcon-home" width="55" height="58"/>
