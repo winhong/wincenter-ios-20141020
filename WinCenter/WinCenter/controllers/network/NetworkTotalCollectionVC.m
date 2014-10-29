@@ -77,13 +77,29 @@ static NSString * const reuseIdentifier = @"Cell";
     if(self.segment.selectedSegmentIndex==0){
         [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
             self.networkList = object;
-            [self.collectionView reloadData];
+            [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(id object, NSError *error) {
+                self.ipPoolsInfo = object;
+                [self.collectionView reloadData];
+            }];
+            
         }];
+//        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+//            self.networkList = object;
+//            [self.collectionView reloadData];
+//        }];
     }else{
         [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
             self.networkList = object;
-            [self.collectionView reloadData];
+            [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(id object, NSError *error) {
+                self.ipPoolsInfo = object;
+                [self.collectionView reloadData];
+            }];
+            
         }];
+//        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
+//            self.networkList = object;
+//            [self.collectionView reloadData];
+//        }];
     }
 }
 

@@ -51,4 +51,6 @@
 - (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
+- (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock;
+
 @end

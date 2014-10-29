@@ -11,6 +11,8 @@
 
 @interface NetworkCollectionVC ()
 
+@property NSArray *vmList;
+
 @end
 
 @implementation NetworkCollectionVC
@@ -34,6 +36,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+        [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(id object, NSError *error) {
+            self.vmList = object;
+            [self.tableView reloadData];
+        }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 5;
+    return self.vmList.count;
 }
 
 
@@ -62,6 +69,12 @@
     
     // Configure the cell...
     cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
+    NetworkIpVmVO *vm = [NetworkIpVmVO new];
+    vm = self.vmList[indexPath.row];
+    cell.vmName.text = vm.name;
+    cell.vmIp.text = vm.ip;
+    cell.vmState.text = [vm state_text];
+    
     return cell;
 }
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{

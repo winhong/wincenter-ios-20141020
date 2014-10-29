@@ -325,7 +325,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.api.ipPool.getIpPools", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=0&apiKey=pc.api.ipPool.getIpPools"]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[IpPoolsListResult alloc] initWithJSONData:jsonResponse.rawBody].ipPools, error);
     }];
@@ -333,7 +333,7 @@
 
 - (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpPoolsAsync" ofType:@"json"]]].vms, nil);
+        completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpVmAsync" ofType:@"json"]]].vms, nil);
         return;
     }
     
