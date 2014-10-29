@@ -3508,12 +3508,16 @@
         <!--Navigation Controller-->
         <scene sceneID="Owm-Hp-hqL">
             <objects>
-                <navigationController storyboardIdentifier="contentController" definesPresentationContext="YES" id="0jU-FP-fjj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="contentController" definesPresentationContext="YES" toolbarHidden="NO" id="0jU-FP-fjj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9Og-sQ-Yyo"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Qy-rJ-14K">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8CN-HX-8j1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="4cy-sK-k0J" kind="relationship" relationship="rootViewController" id="j9B-kO-5O3"/>
                     </connections>
@@ -3526,7 +3530,7 @@
         <scene sceneID="0f6-5s-NFH">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardTableVC" id="4cy-sK-k0J" customClass="DashboardTableVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Bm3-N7-LGA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Bm3-N7-LGA">
                         <rect key="frame" x="0.0" y="64" width="320" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

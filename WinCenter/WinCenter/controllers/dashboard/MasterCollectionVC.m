@@ -70,11 +70,7 @@
     return ((NSArray*)[self.dataList valueForKey:self.dataList.allKeys[section]]).count;
 }
 -(IBAction)dismissModal:(id)sender{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }else{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 -(IBAction)backToCollectionVC:(UIStoryboardSegue*)segue{
     
