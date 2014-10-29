@@ -20,8 +20,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createVm)];
-    self.navigationItem.rightBarButtonItem = item;
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createVm)];
+//    self.navigationItem.rightBarButtonItem = item;
 }
 
 -(void)createVm{

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SdQ-oO-Giu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--创建虚拟机-->
@@ -206,7 +205,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-AG-8EO">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -250,7 +249,7 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h29-UX-gHE">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h29-UX-gHE">
                                 <rect key="frame" x="0.0" y="45" width="969" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="物理机名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXf-tb-30S">
@@ -310,24 +309,17 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.70196078429999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-rG-YsG">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-rG-YsG">
                                 <rect key="frame" x="0.0" y="168" width="969" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="h29-UX-gHE" secondAttribute="bottom" constant="557" id="3ya-zF-yTW"/>
-                            <constraint firstItem="C5K-M6-ms8" firstAttribute="top" secondItem="CEO-rG-YsG" secondAttribute="bottom" id="65Z-vg-xNd"/>
-                            <constraint firstItem="fyA-AG-8EO" firstAttribute="top" secondItem="NwC-t7-hvp" secondAttribute="topMargin" id="Chc-qP-1MO"/>
-                            <constraint firstItem="h29-UX-gHE" firstAttribute="top" secondItem="fyA-AG-8EO" secondAttribute="bottom" constant="1" id="MJY-nB-8ff"/>
-                            <constraint firstItem="h29-UX-gHE" firstAttribute="trailing" secondItem="fyA-AG-8EO" secondAttribute="trailing" id="MnO-5d-on5"/>
-                            <constraint firstItem="CEO-rG-YsG" firstAttribute="top" secondItem="h29-UX-gHE" secondAttribute="bottom" constant="1" id="N6l-8N-lz1"/>
-                            <constraint firstItem="CEO-rG-YsG" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leading" id="OCZ-Jx-POH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fyA-AG-8EO" secondAttribute="trailing" constant="-16" id="XrH-gI-c74"/>
-                            <constraint firstItem="h29-UX-gHE" firstAttribute="leading" secondItem="fyA-AG-8EO" secondAttribute="leading" id="osS-xl-Rbs"/>
-                            <constraint firstAttribute="trailing" secondItem="CEO-rG-YsG" secondAttribute="trailing" id="tTj-5J-XK4"/>
-                            <constraint firstItem="fyA-AG-8EO" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leadingMargin" constant="-16" id="tu3-QD-Suq"/>
+                            <constraint firstItem="C5K-M6-ms8" firstAttribute="top" secondItem="CEO-rG-YsG" secondAttribute="bottom" id="LEq-mr-TEh"/>
+                            <constraint firstItem="CEO-rG-YsG" firstAttribute="top" secondItem="h29-UX-gHE" secondAttribute="bottom" constant="1" id="Ok6-Li-gOH"/>
+                            <constraint firstItem="CEO-rG-YsG" firstAttribute="leading" secondItem="NwC-t7-hvp" secondAttribute="leading" id="ev4-Jv-fmN"/>
+                            <constraint firstAttribute="trailing" secondItem="CEO-rG-YsG" secondAttribute="trailing" id="gcG-dK-2dm"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -644,7 +636,7 @@
                         </userGuides>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxs-dy-ZZO">
-                                <rect key="frame" x="0.0" y="0.0" width="969" height="543"/>
+                                <rect key="frame" x="0.0" y="-20" width="969" height="543"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-QP-8Fc">
                                         <rect key="frame" x="0.0" y="20" width="380" height="503"/>

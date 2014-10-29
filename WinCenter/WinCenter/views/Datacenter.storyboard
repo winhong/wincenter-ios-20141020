@@ -444,11 +444,11 @@
         <!--Item-->
         <scene sceneID="w3r-Zm-SN4">
             <objects>
-                <navigationController storyboardIdentifier="PoolDashboardVCNav" definesPresentationContext="YES" id="9q8-WG-oWI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PoolDashboardVCNav" definesPresentationContext="YES" toolbarHidden="NO" id="9q8-WG-oWI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gTk-N7-KcM"/>
                     <navigationItem key="navigationItem" id="Yy5-la-PdK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -474,7 +474,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="PoolDashboardVC" autoresizesArchivedViewToFullSize="NO" id="buB-ce-6JP" customClass="PoolDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zke-mx-fcf">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn">
@@ -1100,11 +1100,11 @@
         <!--Item-->
         <scene sceneID="TtQ-8a-X7K">
             <objects>
-                <navigationController storyboardIdentifier="DatacenterDetailInfoVCNav" automaticallyAdjustsScrollViewInsets="NO" id="a7h-f0-64y" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DatacenterDetailInfoVCNav" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="a7h-f0-64y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="x6t-qP-Sgb"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -1151,7 +1151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YH5-RI-w4u"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mv1-Wo-8q3">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-mN-loo">
@@ -1529,14 +1529,14 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEz-Pk-JS8"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="数据中心总览" id="fha-aA-CHi">
-                        <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="TuY-wu-MG6"/>
-                        <barButtonItem key="rightBarButtonItem" image="icon-operationLog" id="F3i-M5-2mW">
+                        <barButtonItem image="icon-operationLog" id="F3i-M5-2mW">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="cSx-41-28X" id="r5h-6Y-NVe"/>
                             </connections>
                         </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="数据中心总览" id="fha-aA-CHi">
+                        <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="TuY-wu-MG6"/>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -1630,11 +1630,11 @@
         <!--Item-->
         <scene sceneID="Hsl-iR-p5F">
             <objects>
-                <navigationController storyboardIdentifier="HostDashboardVCNav" definesPresentationContext="YES" id="0ws-wE-xs8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HostDashboardVCNav" definesPresentationContext="YES" toolbarHidden="NO" id="0ws-wE-xs8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="hFC-3J-NOg"/>
                     <navigationItem key="navigationItem" id="Pgl-hM-sKS"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -1660,7 +1660,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="HostDashboardVC" autoresizesArchivedViewToFullSize="NO" id="tNF-5l-310" customClass="HostDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="UsB-JZ-Nq2">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8SV-wH-gFy">
@@ -2148,6 +2148,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Lm-PH-T2V"/>
+                        <barButtonItem title="全部资源池" id="4Zr-if-iJO">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="yAy-Oo-Tir"/>
                         <barButtonItem image="icon-operationLog" id="b8q-IF-5E0">
                             <connections>
@@ -2157,11 +2162,6 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="物理机总览" id="UHz-Uf-ULe">
                         <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="OL7-NI-Ma3"/>
-                        <barButtonItem key="rightBarButtonItem" title="全部资源池" id="4Zr-if-iJO">
-                            <connections>
-                                <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -2180,11 +2180,11 @@
         <!--Item-->
         <scene sceneID="acc-Ha-Ku5">
             <objects>
-                <navigationController storyboardIdentifier="StorageDashboardVCNav" definesPresentationContext="YES" id="fFZ-Zv-ssG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StorageDashboardVCNav" definesPresentationContext="YES" toolbarHidden="NO" id="fFZ-Zv-ssG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="OrZ-vc-b7z"/>
                     <navigationItem key="navigationItem" id="4jR-ZD-GtA"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -2210,7 +2210,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="StorageDashboardVC" autoresizesArchivedViewToFullSize="NO" id="Vdc-u6-N4C" customClass="StorageDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="vkU-oj-s3c">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry">
@@ -2653,6 +2653,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
+                        <barButtonItem title="全部资源池" id="NHe-7y-NkJ">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="cQJ-x8-JS6"/>
                         <barButtonItem image="icon-operationLog" id="dRJ-54-CHn">
                             <connections>
@@ -2662,11 +2667,6 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="存储池总览" id="NVZ-Rm-y5V">
                         <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="KpP-j0-2Yt"/>
-                        <barButtonItem key="rightBarButtonItem" title="全部资源池" id="NHe-7y-NkJ">
-                            <connections>
-                                <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -2685,11 +2685,11 @@
         <!--Item-->
         <scene sceneID="onT-cs-gYy">
             <objects>
-                <navigationController storyboardIdentifier="VmDashboardVCNav" definesPresentationContext="YES" id="2VJ-hH-WcN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="VmDashboardVCNav" definesPresentationContext="YES" toolbarHidden="NO" id="2VJ-hH-WcN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="to5-08-y2H"/>
                     <navigationItem key="navigationItem" id="V8h-Yh-1L4"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -2715,7 +2715,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="VmDashboardVC" autoresizesArchivedViewToFullSize="NO" id="8QM-yF-skn" customClass="VmDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zRc-4n-f37">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="9G2-XK-4zp">
@@ -3141,6 +3141,11 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="waZ-PP-DQJ"/>
+                        <barButtonItem title="全部资源池" id="Dhp-OO-KwD">
+                            <connections>
+                                <action selector="showPoolListSelect:" destination="8QM-yF-skn" id="F9X-Un-Fsu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4EF-jv-Ilu"/>
                         <barButtonItem image="icon-operationLog" id="sVu-61-G0q">
                             <connections>
@@ -3150,11 +3155,6 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="虚拟机总览" id="mID-sn-LYh">
                         <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="HOR-tp-gmx"/>
-                        <barButtonItem key="rightBarButtonItem" title="全部资源池" id="Dhp-OO-KwD">
-                            <connections>
-                                <action selector="showPoolListSelect:" destination="8QM-yF-skn" id="F9X-Un-Fsu"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -3173,11 +3173,11 @@
         <!--Item-->
         <scene sceneID="mB9-74-LFx">
             <objects>
-                <navigationController storyboardIdentifier="BusinessDashboardVCNav" definesPresentationContext="YES" id="B0E-z7-oVX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BusinessDashboardVCNav" definesPresentationContext="YES" toolbarHidden="NO" id="B0E-z7-oVX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rei-dS-mFY"/>
                     <navigationItem key="navigationItem" id="D3s-FX-M32"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
@@ -3203,7 +3203,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="BusinessDashboardVC" autoresizesArchivedViewToFullSize="NO" id="rJv-N2-owX" customClass="BusinessDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="w1V-61-3Lg">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57">
