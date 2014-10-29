@@ -73,8 +73,8 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(boardButtonClick:) name:SUNButtonBoarButtonClickNotification object:nil];
     }
     
-//    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewController:@"LoginVC"];
-    // Override point for customization after application launch.
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewController:@"LoginVC"];
+    
     return YES;
 }
 
