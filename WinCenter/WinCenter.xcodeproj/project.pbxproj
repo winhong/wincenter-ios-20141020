@@ -387,6 +387,7 @@
 		6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */; };
 		6857913F1A00940F00B78539 /* IpPoolsListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857913E1A00940F00B78539 /* IpPoolsListDetail.m */; };
 		685791421A00948300B78539 /* IpPoolsListDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 685791411A00948300B78539 /* IpPoolsListDetailResult.m */; };
+		6857914B1A00BB5200B78539 /* DatacenterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857914A1A00BB5200B78539 /* DatacenterTableCell.m */; };
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
@@ -1064,6 +1065,8 @@
 		6857913E1A00940F00B78539 /* IpPoolsListDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetail.m; sourceTree = "<group>"; };
 		685791401A00948300B78539 /* IpPoolsListDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListDetailResult.h; sourceTree = "<group>"; };
 		685791411A00948300B78539 /* IpPoolsListDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetailResult.m; sourceTree = "<group>"; };
+		685791491A00BB5200B78539 /* DatacenterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatacenterTableCell.h; sourceTree = "<group>"; };
+		6857914A1A00BB5200B78539 /* DatacenterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatacenterTableCell.m; sourceTree = "<group>"; };
 		686B32B919FDDD7200742984 /* NetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionCell.h; sourceTree = "<group>"; };
 		686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionCell.m; sourceTree = "<group>"; };
 		686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionVC.h; sourceTree = "<group>"; };
@@ -1959,6 +1962,8 @@
 				18C2127C19F27C2000FCBD23 /* DatacenterDetailInfoVC.m */,
 				18C2127D19F27C2000FCBD23 /* DatacenterTableVC.h */,
 				18C2127E19F27C2000FCBD23 /* DatacenterTableVC.m */,
+				685791491A00BB5200B78539 /* DatacenterTableCell.h */,
+				6857914A1A00BB5200B78539 /* DatacenterTableCell.m */,
 			);
 			path = datacenter;
 			sourceTree = "<group>";
@@ -2645,6 +2650,7 @@
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
+				6857914B1A00BB5200B78539 /* DatacenterTableCell.m in Sources */,
 				181DED9319F17CB100998835 /* WarningInfoVO.m in Sources */,
 				847A60B719FF832E0090305C /* VmMigrateTargetHostVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,

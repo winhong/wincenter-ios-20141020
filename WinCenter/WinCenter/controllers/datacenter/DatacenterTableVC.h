@@ -19,4 +19,5 @@
 @property DatacenterVO *selectedDatacenterVO;
 @property (weak, nonatomic) id <DatacenterTableVCDelegate> delegate;
 
+
 @end

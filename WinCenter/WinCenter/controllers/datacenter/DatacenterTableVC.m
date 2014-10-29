@@ -7,6 +7,7 @@
 //
 
 #import "DatacenterTableVC.h"
+#import "DatacenterTableCell.h"
 
 @interface DatacenterTableVC ()
 @property NSArray *datacenters;
@@ -37,12 +38,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DatacenterCell" forIndexPath:indexPath];
+    DatacenterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DatacenterCell" forIndexPath:indexPath];
     
     DatacenterVO *vo = self.datacenters[indexPath.row];
     
-    cell.textLabel.text = vo.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%d", vo.wceIpAddress, vo.wcePort];
+    cell.name.text = vo.name;
+    cell.ip.text = [NSString stringWithFormat:@"%@:%d", vo.wceIpAddress, vo.wcePort];
     if([[RemoteObject getCurrentDatacenterVO].name isEqualToString:vo.name]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
