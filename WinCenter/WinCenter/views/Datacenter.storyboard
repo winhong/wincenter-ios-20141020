@@ -455,7 +455,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bmP-0R-WiT">
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="VcU-H9-Rb2">
@@ -474,10 +474,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="PoolDashboardVC" autoresizesArchivedViewToFullSize="NO" id="buB-ce-6JP" customClass="PoolDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zke-mx-fcf">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn" customClass="PDKTStickySectionHeadersCollectionViewLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn">
                             <size key="itemSize" width="288" height="280"/>
                             <size key="headerReferenceSize" width="50" height="314"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1112,7 +1112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1641,7 +1641,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Cak-qg-Hac">
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="waA-3C-k9E">
@@ -1660,10 +1660,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="HostDashboardVC" autoresizesArchivedViewToFullSize="NO" id="tNF-5l-310" customClass="HostDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="UsB-JZ-Nq2">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8SV-wH-gFy" customClass="PDKTStickySectionHeadersCollectionViewLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8SV-wH-gFy">
                             <size key="itemSize" width="288" height="280"/>
                             <size key="headerReferenceSize" width="50" height="169"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -2191,7 +2191,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="39N-iw-bCg">
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="nRs-WB-u2s">
@@ -2210,10 +2210,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="StorageDashboardVC" autoresizesArchivedViewToFullSize="NO" id="Vdc-u6-N4C" customClass="StorageDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="vkU-oj-s3c">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry" customClass="PDKTStickySectionHeadersCollectionViewLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="isC-wb-2ry">
                             <size key="itemSize" width="288" height="253"/>
                             <size key="headerReferenceSize" width="50" height="260"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -2696,7 +2696,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2L2-7f-TrS">
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="6wE-PH-k2b">
@@ -2715,10 +2715,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="VmDashboardVC" autoresizesArchivedViewToFullSize="NO" id="8QM-yF-skn" customClass="VmDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zRc-4n-f37">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="9G2-XK-4zp" customClass="PDKTStickySectionHeadersCollectionViewLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="9G2-XK-4zp">
                             <size key="itemSize" width="288" height="253"/>
                             <size key="headerReferenceSize" width="50" height="165"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -3184,7 +3184,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="z0N-WE-qBr">
                         <autoresizingMask key="autoresizingMask"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="dqK-Sx-PjQ">
@@ -3203,10 +3203,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="BusinessDashboardVC" autoresizesArchivedViewToFullSize="NO" id="rJv-N2-owX" customClass="BusinessDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="w1V-61-3Lg">
-                        <rect key="frame" x="0.0" y="64" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57" customClass="PDKTStickySectionHeadersCollectionViewLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57">
                             <size key="itemSize" width="288" height="182"/>
                             <size key="headerReferenceSize" width="50" height="165"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
