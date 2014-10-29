@@ -388,11 +388,11 @@
 		6857913F1A00940F00B78539 /* IpPoolsListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857913E1A00940F00B78539 /* IpPoolsListDetail.m */; };
 		685791421A00948300B78539 /* IpPoolsListDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 685791411A00948300B78539 /* IpPoolsListDetailResult.m */; };
 		6857914B1A00BB5200B78539 /* DatacenterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857914A1A00BB5200B78539 /* DatacenterTableCell.m */; };
+		6857914E1A00C34800B78539 /* NetworkTotalTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857914D1A00C34800B78539 /* NetworkTotalTableCell.m */; };
+		685791511A00C64100B78539 /* NetworkTotalTabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 685791501A00C64100B78539 /* NetworkTotalTabelVC.m */; };
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
-		68F39D7B19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */; };
-		68F39D7E19FDF01800F5BACF /* NetworkTotalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */; };
 		68F39D8019FE530900F5BACF /* Network.getOutsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */; };
 		68F39D8219FE533300F5BACF /* Network.getInsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
@@ -1068,16 +1068,16 @@
 		685791411A00948300B78539 /* IpPoolsListDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetailResult.m; sourceTree = "<group>"; };
 		685791491A00BB5200B78539 /* DatacenterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatacenterTableCell.h; sourceTree = "<group>"; };
 		6857914A1A00BB5200B78539 /* DatacenterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatacenterTableCell.m; sourceTree = "<group>"; };
+		6857914C1A00C34800B78539 /* NetworkTotalTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalTableCell.h; sourceTree = "<group>"; };
+		6857914D1A00C34800B78539 /* NetworkTotalTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalTableCell.m; sourceTree = "<group>"; };
+		6857914F1A00C64100B78539 /* NetworkTotalTabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalTabelVC.h; sourceTree = "<group>"; };
+		685791501A00C64100B78539 /* NetworkTotalTabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalTabelVC.m; sourceTree = "<group>"; };
 		686B32B919FDDD7200742984 /* NetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionCell.h; sourceTree = "<group>"; };
 		686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionCell.m; sourceTree = "<group>"; };
 		686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionVC.h; sourceTree = "<group>"; };
 		686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionVC.m; sourceTree = "<group>"; };
 		686B32BD19FDDD7200742984 /* NetworkContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkContainerVC.h; sourceTree = "<group>"; };
 		686B32BE19FDDD7200742984 /* NetworkContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkContainerVC.m; sourceTree = "<group>"; };
-		68F39D7919FDEFDF00F5BACF /* NetworkTotalCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalCollectionVC.h; sourceTree = "<group>"; };
-		68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionVC.m; sourceTree = "<group>"; };
-		68F39D7C19FDF01800F5BACF /* NetworkTotalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTotalCollectionCell.h; sourceTree = "<group>"; };
-		68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTotalCollectionCell.m; sourceTree = "<group>"; };
 		68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getOutsideAsync.json; sourceTree = "<group>"; };
 		68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getInsideAsync.json; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
@@ -2373,10 +2373,10 @@
 				686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */,
 				686B32BD19FDDD7200742984 /* NetworkContainerVC.h */,
 				686B32BE19FDDD7200742984 /* NetworkContainerVC.m */,
-				68F39D7919FDEFDF00F5BACF /* NetworkTotalCollectionVC.h */,
-				68F39D7A19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m */,
-				68F39D7C19FDF01800F5BACF /* NetworkTotalCollectionCell.h */,
-				68F39D7D19FDF01800F5BACF /* NetworkTotalCollectionCell.m */,
+				6857914C1A00C34800B78539 /* NetworkTotalTableCell.h */,
+				6857914D1A00C34800B78539 /* NetworkTotalTableCell.m */,
+				6857914F1A00C64100B78539 /* NetworkTotalTabelVC.h */,
+				685791501A00C64100B78539 /* NetworkTotalTabelVC.m */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -2662,6 +2662,7 @@
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
 				181DECA419F17CB100998835 /* DoubleYSeriesVC.m in Sources */,
 				181DECF719F17CB100998835 /* CalendarDateUtil.m in Sources */,
+				6857914E1A00C34800B78539 /* NetworkTotalTableCell.m in Sources */,
 				181DED8F19F17CB100998835 /* VmNetworkListResult.m in Sources */,
 				181DED7E19F17CB100998835 /* LicenseWciVO.m in Sources */,
 				18C2132219F27C2000FCBD23 /* HostDashboardVC.m in Sources */,
@@ -2717,7 +2718,6 @@
 				181DECED19F17CB100998835 /* PNTestViewController.m in Sources */,
 				181DECE419F17CB100998835 /* PieChartVC.m in Sources */,
 				18C2133919F27C2000FCBD23 /* StorageCollectionVC.m in Sources */,
-				68F39D7B19FDEFDF00F5BACF /* NetworkTotalCollectionVC.m in Sources */,
 				18C521E319F8CDF500C033C6 /* MBMapNodeLine.m in Sources */,
 				181DED7A19F17CB100998835 /* HostNicVO.m in Sources */,
 				181DECE719F17CB100998835 /* RotatedView.m in Sources */,
@@ -2824,7 +2824,6 @@
 				18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */,
 				18C2134219F27C2000FCBD23 /* PopControlRecordCellForTime.m in Sources */,
 				1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */,
-				68F39D7E19FDF01800F5BACF /* NetworkTotalCollectionCell.m in Sources */,
 				181DECAF19F17CB100998835 /* PoolDatagridModel.m in Sources */,
 				181DED7019F17CB100998835 /* ControlRecordListResult.m in Sources */,
 				181DED9119F17CB100998835 /* VmVO.m in Sources */,
@@ -2893,6 +2892,7 @@
 				18C2131D19F27C2000FCBD23 /* HostCollectionCell.m in Sources */,
 				18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */,
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
+				685791511A00C64100B78539 /* NetworkTotalTabelVC.m in Sources */,
 				18C521B819F8CA2000C033C6 /* F3BarGauge.m in Sources */,
 				181DECCA19F17CB100998835 /* HeartLiveVC.m in Sources */,
 				1824362619F4FE05007E4D6C /* RRCircularSlider.m in Sources */,
