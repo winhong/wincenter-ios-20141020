@@ -3931,8 +3931,9 @@
             <objects>
                 <navigationController storyboardIdentifier="DatacenterTableVCNav" automaticallyAdjustsScrollViewInsets="NO" id="k98-6j-xY3" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NaB-0f-O2F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NaB-0f-O2F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
