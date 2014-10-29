@@ -95,21 +95,12 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
-            [self openVm:nil];
-            break;
-        case 1:
-            [self shutdownVm:nil];
-            break;
-        case 2:
-            [self restartVm:nil];
-            break;
-        case 3:
             [self migrateVm:nil];
             break;
-        case 4:
+        case 1:
             [self configCPU:nil];
             break;
-        case 5:
+        case 2:
             [self configMemory:nil];
             break;
         default:
@@ -229,7 +220,7 @@
 
 - (IBAction)openMenu:(id)sender{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"虚拟机操作" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"开机",@"关机",@"重启",@"迁移",@"调整CPU",@"调整内存", nil];
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"虚拟机操作" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"迁移",@"调整CPU",@"调整内存", nil];
         
         //[sheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
         [sheet showFromBarButtonItem:((UIBarButtonItem*)sender) animated:YES];

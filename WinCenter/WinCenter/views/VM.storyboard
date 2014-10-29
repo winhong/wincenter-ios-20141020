@@ -140,7 +140,25 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Euw-q8-z8w"/>
-                        <barButtonItem systemItem="action" id="66V-Yn-8RN">
+                        <barButtonItem title="开机" id="BgJ-I5-oJJ">
+                            <connections>
+                                <action selector="openVm:" destination="rda-j3-bYj" id="ice-3O-40G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="m1r-Qv-F0G"/>
+                        <barButtonItem title="关机" id="oEd-NI-jSb">
+                            <connections>
+                                <action selector="shutdownVm:" destination="rda-j3-bYj" id="q8d-UQ-ALg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="teN-AF-HoU"/>
+                        <barButtonItem title="重启" id="qMp-lJ-Q5s">
+                            <connections>
+                                <action selector="restartVm:" destination="rda-j3-bYj" id="Phn-6V-A6i"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="auK-Df-008"/>
+                        <barButtonItem title="更多操作" id="66V-Yn-8RN">
                             <connections>
                                 <action selector="openMenu:" destination="rda-j3-bYj" id="8JF-gf-ygK"/>
                             </connections>
@@ -161,6 +179,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasPerformancePage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="btnRestart" destination="qMp-lJ-Q5s" id="oEe-V7-LbE"/>
+                        <outlet property="btnStart" destination="BgJ-I5-oJJ" id="51A-PC-vKE"/>
+                        <outlet property="btnStop" destination="oEd-NI-jSb" id="vvg-YE-Q8A"/>
                         <outlet property="ipLabel" destination="r9C-Wd-Fse" id="gcS-ui-Zed"/>
                         <outlet property="name" destination="dQP-Cr-MQi" id="Krg-Rn-9co"/>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
