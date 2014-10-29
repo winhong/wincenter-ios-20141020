@@ -3530,14 +3530,14 @@
         <scene sceneID="0f6-5s-NFH">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardTableVC" id="4cy-sK-k0J" customClass="DashboardTableVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Bm3-N7-LGA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Bm3-N7-LGA">
                         <rect key="frame" x="0.0" y="64" width="320" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="摘要信息" id="L7D-lh-4Uf">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="361" id="nKS-21-frr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="361" id="nKS-21-frr">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKS-21-frr" id="dVd-f6-gJ8">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -3597,7 +3597,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="通知信息" id="vfL-v0-03J">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="6xP-yL-wne" detailTextLabel="IUc-98-ZOt" style="IBUITableViewCellStyleSubtitle" id="xe4-Sp-Fk4">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6xP-yL-wne" detailTextLabel="IUc-98-ZOt" style="IBUITableViewCellStyleSubtitle" id="xe4-Sp-Fk4">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xe4-Sp-Fk4" id="Ijh-KD-99W">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -3617,7 +3617,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" textLabel="xTG-I0-avb" detailTextLabel="0Iw-Pl-ilM" style="IBUITableViewCellStyleSubtitle" id="t8q-Qk-NEE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="xTG-I0-avb" detailTextLabel="0Iw-Pl-ilM" style="IBUITableViewCellStyleSubtitle" id="t8q-Qk-NEE">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t8q-Qk-NEE" id="o2i-No-gk0">
                                             <autoresizingMask key="autoresizingMask"/>
