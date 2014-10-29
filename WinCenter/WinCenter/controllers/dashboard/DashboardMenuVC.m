@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *menuStorage;
 @property (weak, nonatomic) IBOutlet UIButton *menuBusiness;
 @property (weak, nonatomic) IBOutlet UIButton *menuNetwork;
-@property (weak, nonatomic) IBOutlet UIButton *menuWarning;
-@property (weak, nonatomic) IBOutlet UIButton *menuSearch;
+//@property (weak, nonatomic) IBOutlet UIButton *menuWarning;
+//@property (weak, nonatomic) IBOutlet UIButton *menuSearch;
 @property (weak, nonatomic) IBOutlet UIButton *menuSelect;
 @property (weak, nonatomic) IBOutlet UIButton *menuSetting;
 @property (weak, nonatomic) IBOutlet UIButton *menuExpand;
@@ -42,29 +42,29 @@
                        self.menuStorage,
                        self.menuBusiness,
                        self.menuNetwork,
-                       self.menuWarning,
-                       self.menuSearch,
+//                       self.menuWarning,
+//                       self.menuSearch,
                        self.menuSelect,
                        self.menuSetting,
                        self.menuExpand];
     
-    [self.menuWarning setBadgeValue:@"8"];
-    [self.menuWarning setBadgeOriginX:30];
-    [self.menuWarning setBadgeOriginY:5];
+//    [self.menuWarning setBadgeValue:@"8"];
+//    [self.menuWarning setBadgeOriginX:30];
+//    [self.menuWarning setBadgeOriginY:5];
 }
 
 - (IBAction)switchTabBar:(id)sender {
     //[self playSoundEffect];
     NSInteger currentIndex =  ((UIButton*)sender).tag;
     
-    if(currentIndex==8){
-        UISplitViewController *splitViewController = (UISplitViewController*)self.parentViewController.parentViewController;
-        if(splitViewController!=nil){
-            splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryOverlay;
-        }
-        return;
-    }
-    
+//    if(currentIndex==8){
+//        UISplitViewController *splitViewController = (UISplitViewController*)self.parentViewController.parentViewController;
+//        if(splitViewController!=nil){
+//            splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryOverlay;
+//        }
+//        return;
+//    }
+//    
     [self setSelectedItemIndex:currentIndex];
     [self.tabBarVC setSelectedIndex:currentIndex];
 }

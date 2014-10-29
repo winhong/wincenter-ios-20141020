@@ -90,6 +90,12 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="joG-qW-0Th"/>
+                        <barButtonItem image="icon-warning" id="Aoh-tp-74h">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="V6a-52-56S" id="lXU-RM-wLF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="IrT-hG-Klo"/>
                         <barButtonItem image="icon-operationLog" id="obf-fN-LhO">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="V6a-52-56S" id="lga-6d-qxu"/>
@@ -549,6 +555,7 @@
     </scenes>
     <resources>
         <image name="icon-operationLog" width="32" height="32"/>
+        <image name="icon-warning" width="32" height="32"/>
         <image name="网络-面板" width="290" height="150"/>
         <image name="网络-面板2" width="290" height="80"/>
         <image name="链接" width="44" height="9"/>
