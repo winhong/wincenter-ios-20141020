@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordRepeat;
 
 @property UserVO *user;
+@property ModifyPasswordResultVO *modifyPasswordResultVO;
 
 @end

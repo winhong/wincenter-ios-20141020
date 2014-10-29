@@ -41,11 +41,16 @@
     
     if([msg isEqualToString:@""])
     {
-        [[UserVO new] modifyPassword:^(NSError *error) {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            [alert show];
-
-        } withOldPassword:self.passwordOld.text withPassword:self.passwordNew.text];
+           [[UserVO new] modifyPassword:^(id object, NSError *error) {
+               self.modifyPasswordResultVO = object;
+               if ([self.modifyPasswordResultVO.exceptionCode isEqualToString:@"POCS008"]) {
+                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"旧密码输入错误！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                   [alert show];
+               }else{
+                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                   [alert show];
+               }
+           } withOldPassword:self.passwordOld.text withPassword:self.passwordNew.text];
     }else{
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];

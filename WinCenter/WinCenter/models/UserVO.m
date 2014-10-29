@@ -9,6 +9,7 @@
 #import "UserVO.h"
 
 
+
 @implementation UserVO
 
 + (void) getUserVOAsync:(FetchObjectCompletionBlock)completeBlock{
@@ -24,7 +25,7 @@
     }];
 }
 
-- (void) modifyPassword:(BasicCompletionBlock)completionBlock withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword{
+- (void) modifyPassword:(FetchObjectCompletionBlock)completeBlock withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword{
     
     [UserVO getUserVOAsync:^(id object, NSError *error) {
         UserVO *userVO = object;
@@ -36,12 +37,11 @@
                                            @"content": [NSString stringWithFormat:@"{\"oldPassword\":\"%@\",\"password\":\"%@\"}",OldPassword,NewPassword],
                                            @"apiType": @"PUT"}];
         }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-            completionBlock(error);
+            completeBlock([[ModifyPasswordResultVO alloc] initWithJSONData:jsonResponse.rawBody], error);
         }];
 
     }];
-    
-    
+
 }
 
 @end

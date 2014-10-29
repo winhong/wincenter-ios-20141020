@@ -422,6 +422,7 @@
 		847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88D19F752B6004C292A /* HostActivityVmVO.m */; };
 		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
 		8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */; };
+		8499F3581A00E5E100236B38 /* ModifyPasswordResultVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499F3571A00E5E100236B38 /* ModifyPasswordResultVO.m */; };
 		84D8336919F91702001C747A /* PoolMaxHostFailuresVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */; };
 		84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336B19F9174A001C747A /* PoolHaInfoVO.m */; };
 		84D8336E19F91CA6001C747A /* PoolVO.getHaInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 84D8336D19F91CA6001C747A /* PoolVO.getHaInfoAsync.json */; };
@@ -1128,6 +1129,8 @@
 		847CA88D19F752B6004C292A /* HostActivityVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostActivityVmVO.m; sourceTree = "<group>"; };
 		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
 		8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusinessUnalloctedListAsync.json; sourceTree = "<group>"; };
+		8499F3561A00E5E100236B38 /* ModifyPasswordResultVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordResultVO.h; sourceTree = "<group>"; };
+		8499F3571A00E5E100236B38 /* ModifyPasswordResultVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordResultVO.m; sourceTree = "<group>"; };
 		84D8336719F91702001C747A /* PoolMaxHostFailuresVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolMaxHostFailuresVO.h; sourceTree = "<group>"; };
 		84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolMaxHostFailuresVO.m; sourceTree = "<group>"; };
 		84D8336A19F9174A001C747A /* PoolHaInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolHaInfoVO.h; sourceTree = "<group>"; };
@@ -1569,6 +1572,8 @@
 				181DEC6A19F17CB100998835 /* LicenseWciVO.m */,
 				181DEC6B19F17CB100998835 /* LoginVO.h */,
 				181DEC6C19F17CB100998835 /* LoginVO.m */,
+				8499F3561A00E5E100236B38 /* ModifyPasswordResultVO.h */,
+				8499F3571A00E5E100236B38 /* ModifyPasswordResultVO.m */,
 				181DEC6D19F17CB100998835 /* NetworkListResult.h */,
 				181DEC6E19F17CB100998835 /* NetworkListResult.m */,
 				181DEC6F19F17CB100998835 /* NetworkVO.h */,
@@ -2800,6 +2805,7 @@
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
 				843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */,
 				18C2131C19F27C2000FCBD23 /* DatacenterTableVC.m in Sources */,
+				8499F3581A00E5E100236B38 /* ModifyPasswordResultVO.m in Sources */,
 				18C2130919F27C2000FCBD23 /* BusinessVmCollectionCell.m in Sources */,
 				18C521C719F8CA2000C033C6 /* JBChartInformationView.m in Sources */,
 				181DECB019F17CB100998835 /* PoolDatagridSegement.m in Sources */,
