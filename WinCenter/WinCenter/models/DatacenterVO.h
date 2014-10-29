@@ -45,12 +45,13 @@
 - (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
 - (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
 
-- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkInsideAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getNetworkOutsideAsync:(FetchAllCompletionBlock)completionBlock;
 
-- (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getIpPoolsAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getIpPoolsDetailAsync:(FetchAllCompletionBlock)completionBlock withPoolId:(int)poolId;
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
-- (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkIpVmAsync:(FetchAllCompletionBlock)completionBlock;
 
 @end

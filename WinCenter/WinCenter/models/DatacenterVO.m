@@ -292,7 +292,7 @@
 
 }
 
-- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getNetworkInsideAsync:(FetchAllCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getInsideAsync" ofType:@"json"]]].networks, nil);
         return;
@@ -305,7 +305,7 @@
     }];
 }
 
-- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getNetworkOutsideAsync:(FetchAllCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getOutsideAsync" ofType:@"json"]]].networks, nil);
         return;
@@ -318,7 +318,7 @@
     }];
 }
 
-- (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getIpPoolsAsync:(FetchAllCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[IpPoolsListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpPoolsAsync" ofType:@"json"]]].ipPools, nil);
         return;
@@ -331,7 +331,20 @@
     }];
 }
 
-- (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getIpPoolsDetailAsync:(FetchAllCompletionBlock)completionBlock withPoolId:(int)poolId{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[IpPoolsListDetailResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpPoolsDetailAsync" ofType:@"json"]]].ipList, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=0&apiKey=pc.api.ipPool.getIpByPool&placeholder=%d", poolId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[IpPoolsListDetailResult alloc] initWithJSONData:jsonResponse.rawBody].ipList, error);
+    }];
+}
+
+- (void) getNetworkIpVmAsync:(FetchAllCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[NetworkIpVmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getIpVmAsync" ofType:@"json"]]].vms, nil);
         return;

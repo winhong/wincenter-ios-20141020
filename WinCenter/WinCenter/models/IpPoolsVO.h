@@ -14,5 +14,6 @@
 @property int total;
 @property int usable;
 @property int used;
-
+@property int ipPoolId;
+@property NSString *vlanIdList;
 @end

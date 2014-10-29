@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NetworkCollectionVC : UITableViewController
+@property IpPoolsVO *ipPoolVO;
 -(void)reloadData;
+@property BOOL isDetailPagePushed;
 @end

@@ -13,6 +13,7 @@
 @property NSString *name;
 @property NSString *ip;
 @property NSString *state;
+@property int vmId;
 
 -(NSString*) state_text;
 

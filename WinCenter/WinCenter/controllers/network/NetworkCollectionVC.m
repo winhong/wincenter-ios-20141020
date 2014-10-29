@@ -8,10 +8,11 @@
 
 #import "NetworkCollectionVC.h"
 #import "NetworkCollectionCell.h"
-
+#import "VmContainerVC.h"
 @interface NetworkCollectionVC ()
 
-@property NSArray *vmList;
+@property NSMutableDictionary *vmDict;
+@property NSMutableArray *ipList;
 
 @end
 
@@ -37,10 +38,26 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-        [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(id object, NSError *error) {
-            self.vmList = object;
-            [self.tableView reloadData];
-        }];
+    [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(NSArray *allRemote, NSError *error) {
+        self.vmDict = [NSMutableDictionary new];
+        for (NetworkIpVmVO *vmvo in allRemote){
+            if (vmvo.ip) {
+                [self.vmDict setObject:vmvo forKey:vmvo.ip];
+            }
+        }
+    }];
+}
+
+-(void)reloadData{
+    [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(NSArray *allRemote, NSError *error) {
+        self.ipList = [NSMutableArray new];
+        for(IpPoolsListDetail *detailVO in allRemote){
+            if(detailVO.state == 2){
+                [self.ipList addObject:detailVO];
+            }
+        }
+        [self.tableView reloadData];
+    } withPoolId:self.ipPoolVO.ipPoolId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +76,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return self.vmList.count;
+    return self.ipList.count;
 }
 
 
@@ -69,11 +86,20 @@
     
     // Configure the cell...
     cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
-    NetworkIpVmVO *vm = [NetworkIpVmVO new];
-    vm = self.vmList[indexPath.row];
-    cell.vmName.text = vm.name;
-    cell.vmIp.text = vm.ip;
-    cell.vmState.text = [vm state_text];
+    
+    IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+    
+    NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+    if(vm){
+        cell.vmName.text = vm.name;
+        cell.vmState.text = [vm state_text];
+    }else{
+        cell.vmName.text = @"";
+        cell.vmState.text = @"";
+    }
+    
+    cell.vmIp.text = detailVO.ip;
+    
     
     return cell;
 }
@@ -86,9 +112,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
 }
--(void)reloadData{
-    NSLog(@"fdsafdsa");
-}
+
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 //    UIView *header = [UIView new];
 //    header.backgroundColor = [UIColor clearColor];
@@ -147,5 +171,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *root = [[UIStoryboard storyboardWithName:@"VM" bundle:nil] instantiateInitialViewController];
+    VmContainerVC *vc;
+    if([root isKindOfClass:[VmContainerVC class]]){
+        vc = (VmContainerVC*) root;
+    }else{
+        vc = [[root childViewControllers] firstObject];
+    }
+    
+    IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+    
+    NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+    if(vm){
+        VmVO *vmvo = [[VmVO alloc] init];
+        vmvo.vmId = vm.vmId;
+        vmvo.name = vm.name;
+        vc.vmVO = vmvo;
+        if(self.isDetailPagePushed){
+            [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
+        }else{
+            [self presentViewController:root animated:YES completion:nil];
+        }
+    }
+}
 
 @end
