@@ -84,7 +84,7 @@
 //    return 88;
 //}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 35;
+    return 40;
 }
 -(void)reloadData{
     NSLog(@"fdsafdsa");
