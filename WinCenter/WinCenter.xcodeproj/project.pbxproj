@@ -416,6 +416,7 @@
 		847A60B119FF82E90090305C /* VmMigrateTargetsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */; };
 		847A60B419FF83110090305C /* VmMigrateTargetVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B319FF83110090305C /* VmMigrateTargetVO.m */; };
 		847A60B719FF832E0090305C /* VmMigrateTargetHostVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B619FF832E0090305C /* VmMigrateTargetHostVO.m */; };
+		847A60BA19FFDC950090305C /* PopOptionsPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B919FFDC950090305C /* PopOptionsPasswordVC.m */; };
 		847CA88819F74F55004C292A /* HostVO.getActivityVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847CA88719F74F55004C292A /* HostVO.getActivityVmAsync.json */; };
 		847CA88B19F7503B004C292A /* HostActivityVmStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88A19F7503B004C292A /* HostActivityVmStateVO.m */; };
 		847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88D19F752B6004C292A /* HostActivityVmVO.m */; };
@@ -1118,6 +1119,8 @@
 		847A60B319FF83110090305C /* VmMigrateTargetVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VmMigrateTargetVO.m; path = ../controllers/vm/VmMigrateTargetVO.m; sourceTree = "<group>"; };
 		847A60B519FF832E0090305C /* VmMigrateTargetHostVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetHostVO.h; path = ../controllers/vm/VmMigrateTargetHostVO.h; sourceTree = "<group>"; };
 		847A60B619FF832E0090305C /* VmMigrateTargetHostVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VmMigrateTargetHostVO.m; path = ../controllers/vm/VmMigrateTargetHostVO.m; sourceTree = "<group>"; };
+		847A60B819FFDC950090305C /* PopOptionsPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionsPasswordVC.h; sourceTree = "<group>"; };
+		847A60B919FFDC950090305C /* PopOptionsPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionsPasswordVC.m; sourceTree = "<group>"; };
 		847CA88719F74F55004C292A /* HostVO.getActivityVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostVO.getActivityVmAsync.json; sourceTree = "<group>"; };
 		847CA88919F7503B004C292A /* HostActivityVmStateVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostActivityVmStateVO.h; sourceTree = "<group>"; };
 		847CA88A19F7503B004C292A /* HostActivityVmStateVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostActivityVmStateVO.m; sourceTree = "<group>"; };
@@ -2044,6 +2047,8 @@
 				5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */,
 				5058666C19FE3A6F000C813D /* PopOptionHelpVC.h */,
 				5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */,
+				847A60B819FFDC950090305C /* PopOptionsPasswordVC.h */,
+				847A60B919FFDC950090305C /* PopOptionsPasswordVC.m */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -2852,6 +2857,7 @@
 				18C2130C19F27C2000FCBD23 /* MSCurrentTimeGridline.m in Sources */,
 				18C521C119F8CA2000C033C6 /* SimpleChartViewController.m in Sources */,
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,
+				847A60BA19FFDC950090305C /* PopOptionsPasswordVC.m in Sources */,
 				18C2134319F27C2000FCBD23 /* PopControlRecordVC.m in Sources */,
 				181DED7419F17CB100998835 /* DatacenterStatWinserver.m in Sources */,
 				18C2132A19F27C2000FCBD23 /* LoginVC.m in Sources */,

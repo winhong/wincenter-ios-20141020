@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bp4-kY-Qp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bp4-kY-Qp4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -847,7 +847,7 @@
         <!--修改密码-->
         <scene sceneID="5Tt-Sm-6IE">
             <objects>
-                <tableViewController id="rxn-hY-iat" sceneMemberID="viewController">
+                <tableViewController id="rxn-hY-iat" customClass="PopOptionsPasswordVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="oMa-Mn-iIa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -960,6 +960,13 @@
                         <barButtonItem key="rightBarButtonItem" title="提交" id="SAx-Le-pyw"/>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="newPassword" destination="aMw-ll-HKv" id="k0y-5Z-aM4"/>
+                        <outlet property="passwordNew" destination="aMw-ll-HKv" id="d3Q-eP-VIf"/>
+                        <outlet property="passwordOld" destination="c6w-TT-0rJ" id="FTo-Xo-djb"/>
+                        <outlet property="passwordRepeat" destination="DHa-jr-5yH" id="wtH-t8-JFV"/>
+                        <outlet property="repeatPassword" destination="DHa-jr-5yH" id="v9M-PD-DrJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3U-eg-CYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

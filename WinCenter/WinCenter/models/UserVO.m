@@ -24,4 +24,18 @@
     }];
 }
 
+- (void) modifyPassword:(BasicCompletionBlock)completionBlock withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword{
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", 0],
+                                       @"apiKey":@"pc.api.user.modifyPassword",
+                                       @"placeholder": [NSString stringWithFormat:@"%d",self.id],
+                                       @"content": [NSString stringWithFormat:@"{\"oldPassword\":\"%@\",\"password\":\"%@\"}",OldPassword,NewPassword],
+                                       @"apiType": @"PUT"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock(error);
+    }];
+    
+}
+
 @end
