@@ -10,4 +10,5 @@
 
 @interface NetworkTotalCollectionVC : UICollectionViewController
 
+
 @end

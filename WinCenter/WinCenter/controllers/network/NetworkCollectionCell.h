@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NetworkCollectionCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *vmName;
+@property (weak, nonatomic) IBOutlet UILabel *vmIp;
+@property (weak, nonatomic) IBOutlet UILabel *vmState;
+
 
 @end

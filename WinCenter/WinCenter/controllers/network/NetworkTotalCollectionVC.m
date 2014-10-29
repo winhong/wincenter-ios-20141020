@@ -13,6 +13,7 @@
 @interface NetworkTotalCollectionVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property NSArray *networkList;
+@property NSMutableDictionary *ipPoolsDict;
 @end
 
 @implementation NetworkTotalCollectionVC
@@ -28,10 +29,35 @@ static NSString * const reuseIdentifier = @"Cell";
     // Register cell classes
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
-        self.networkList = object;
-        [self.collectionView reloadData];
+//    加ip池信息
+    [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(NSArray *allRemote, NSError *error) {
+        
+        self.ipPoolsDict = [NSMutableDictionary new];
+        for(IpPoolsVO *poolVO in allRemote){
+            NSString *vlanList = poolVO.vlanIdList;
+            if(vlanList){
+                NSArray *vlans = [vlanList componentsSeparatedByString:@","];
+                for(NSString *vlan in vlans){
+                    [self.ipPoolsDict setObject:poolVO forKey:vlan];
+                }
+            }
+        }
+        
+        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(NSArray *allRemote, NSError *error) {
+            self.networkList = allRemote;
+            [self.collectionView reloadData];
+        }];
+        
     }];
+    
+    
+    
+    
+//    [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+//        self.networkList = object;
+//        [self.collectionView reloadData];
+//    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,15 +89,19 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (IBAction)segmentChange:(id)sender {
     if(self.segment.selectedSegmentIndex==0){
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
-            self.networkList = object;
+        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(NSArray *allRemote, NSError *error) {
+            self.networkList = allRemote;
             [self.collectionView reloadData];
+            
         }];
+
     }else{
-        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
-            self.networkList = object;
+        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(NSArray *allRemote, NSError *error) {
+            self.networkList = allRemote;
             [self.collectionView reloadData];
+            
         }];
+
     }
 }
 
@@ -79,12 +109,16 @@ static NSString * const reuseIdentifier = @"Cell";
     
     if(self.segment.selectedSegmentIndex==0){
         NetworkTotalCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NetworkTotalCollectionCell_Outside" forIndexPath:indexPath];
-        NetworkVO *network = [NetworkVO new];
-        network = self.networkList[indexPath.row];
+        NetworkVO *network = self.networkList[indexPath.row];
+        IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
         cell.name.text = network.name;
         cell.vlan.text = network.vlanId;
         cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
         cell.state.text = [network state_text];
+        cell.ipSegment.text = ipPoolVO.segment;
+        cell.ipTotal.text = [NSString stringWithFormat:@"%d",ipPoolVO.total];
+        cell.ipUsable.text = [NSString stringWithFormat:@"%d",ipPoolVO.usable];
+        cell.ipUsed.text = [NSString stringWithFormat:@"%d",ipPoolVO.used];
         
         return cell;
     }else{
@@ -98,7 +132,6 @@ static NSString * const reuseIdentifier = @"Cell";
         return cell;
     }
 }
-
 
 #pragma mark <UICollectionViewDelegate>
 
@@ -132,9 +165,13 @@ static NSString * const reuseIdentifier = @"Cell";
 */
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NetworkVO *network = self.networkList[indexPath.row];
+    IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
+
     UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+    detailVC.ipPoolVO = ipPoolVO;
     [detailVC reloadData];
 }
 

@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="2341.5" y="109"/>
         </scene>
-        <!--Vm Detail SnapshootVC-->
+        <!--Chart Business Model Graph Interactive-->
         <scene sceneID="qZl-dL-VaU">
             <objects>
-                <viewController storyboardIdentifier="VmDetailSnapshootVC_iPad" id="TWh-CV-p1q" customClass="VmDetailSnapshootVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VmDetailSnapshootVC" id="TWh-CV-p1q" customClass="WSChartBusinessModelGraphInteractive" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Ij-Xe-IKk"/>
                         <viewControllerLayoutGuide type="bottom" id="k0h-AG-LRV"/>
@@ -597,7 +597,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-bn-Z9B">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="-20" width="1024" height="768"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－分配CPU" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-XK-V12">
                                         <rect key="frame" x="25" y="46" width="334" height="89"/>
@@ -1257,33 +1257,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="se1-N7-Cw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3308" y="2718"/>
-        </scene>
-        <!--Vm Detail SnapshootVC-->
-        <scene sceneID="Jca-dT-MbK">
-            <objects>
-                <viewController storyboardIdentifier="VmDetailSnapshootVC_iPhone" id="xfs-6H-M8P" customClass="VmDetailSnapshootVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1a6-8b-V7l"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Nt-4Z-n1d"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cWy-mP-VfJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快照" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igt-lV-I2U">
-                                <rect key="frame" x="143" y="188" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </view>
-                    <navigationItem key="navigationItem" id="kd6-28-z0s"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey4-yM-XaP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4029" y="2718"/>
         </scene>
         <!--Vm Network CollectionVC-->
         <scene sceneID="fmP-3u-nko">

@@ -17,6 +17,17 @@
 
 @implementation HostContainerVC
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createVm)];
+//    self.navigationItem.rightBarButtonItem = item;
+}
+
+-(void)createVm{
+    [self performSegueWithIdentifier:@"toCreateVm" sender:self];
+}
+
 -(void)refresh{
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.hostVO.resourcePoolName];
     self.titleLabel.text = self.hostVO.hostName;

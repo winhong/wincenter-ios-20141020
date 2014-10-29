@@ -100,4 +100,10 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "LoginVO.h"
 #import "NetworkVO.h"
 #import "NetworkListResult.h"
+#import "IpPoolsVO.h"
+#import "IpPoolsListResult.h"
+#import "NetworkIpVmVO.h"
+#import "NetworkIpVmListResult.h"
+#import "IpPoolsListDetail.h"
+#import "IpPoolsListDetailResult.h"
 

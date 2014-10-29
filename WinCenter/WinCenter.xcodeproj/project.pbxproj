@@ -373,7 +373,20 @@
 		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5058666B19FE3A45000C813D /* PopOptionFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */; };
 		5058666E19FE3A6F000C813D /* PopOptionHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */; };
+		50D22E8F19FFEF5D00167A35 /* WSChartBusinessModelGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8A19FFEF5D00167A35 /* WSChartBusinessModelGraph.m */; };
+		50D22E9019FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8C19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m */; };
+		50D22E9119FFEF5D00167A35 /* WSChartValueCreationGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */; };
+		50D22E9319FFEF9100167A35 /* PowerPlot_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D22E9219FFEF9100167A35 /* PowerPlot_lib.framework */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
+		684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */; };
+		684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */; };
+		684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F019FFC587009C4B09 /* IpPoolsVO.m */; };
+		684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */; };
+		684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */; };
+		684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */; };
+		6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */; };
+		6857913F1A00940F00B78539 /* IpPoolsListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857913E1A00940F00B78539 /* IpPoolsListDetail.m */; };
+		685791421A00948300B78539 /* IpPoolsListDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 685791411A00948300B78539 /* IpPoolsListDetailResult.m */; };
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
@@ -1030,6 +1043,28 @@
 		5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionFeedbackVC.m; sourceTree = "<group>"; };
 		5058666C19FE3A6F000C813D /* PopOptionHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionHelpVC.h; sourceTree = "<group>"; };
 		5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionHelpVC.m; sourceTree = "<group>"; };
+		50D22E8919FFEF5D00167A35 /* WSChartBusinessModelGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartBusinessModelGraph.h; sourceTree = "<group>"; };
+		50D22E8A19FFEF5D00167A35 /* WSChartBusinessModelGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChartBusinessModelGraph.m; sourceTree = "<group>"; };
+		50D22E8B19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartBusinessModelGraphInteractive.h; sourceTree = "<group>"; };
+		50D22E8C19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChartBusinessModelGraphInteractive.m; sourceTree = "<group>"; };
+		50D22E8D19FFEF5D00167A35 /* WSChartValueCreationGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartValueCreationGraph.h; sourceTree = "<group>"; };
+		50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChartValueCreationGraph.m; sourceTree = "<group>"; };
+		50D22E9219FFEF9100167A35 /* PowerPlot_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PowerPlot_lib.framework; path = WinCenter/controllers/vm/PowerPlot_lib.framework; sourceTree = "<group>"; };
+		684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpPoolsAsync.json; sourceTree = "<group>"; };
+		684D90EC19FFC562009C4B09 /* IpPoolsListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListResult.h; sourceTree = "<group>"; };
+		684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListResult.m; sourceTree = "<group>"; };
+		684D90EF19FFC587009C4B09 /* IpPoolsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsVO.h; sourceTree = "<group>"; };
+		684D90F019FFC587009C4B09 /* IpPoolsVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsVO.m; sourceTree = "<group>"; };
+		684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpVmAsync.json; sourceTree = "<group>"; };
+		684D90F419FFD8AA009C4B09 /* NetworkIpVmListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmListResult.h; sourceTree = "<group>"; };
+		684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmListResult.m; sourceTree = "<group>"; };
+		684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmVO.h; sourceTree = "<group>"; };
+		684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmVO.m; sourceTree = "<group>"; };
+		6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpPoolsDetailAsync.json; sourceTree = "<group>"; };
+		6857913D1A00940F00B78539 /* IpPoolsListDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListDetail.h; sourceTree = "<group>"; };
+		6857913E1A00940F00B78539 /* IpPoolsListDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetail.m; sourceTree = "<group>"; };
+		685791401A00948300B78539 /* IpPoolsListDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListDetailResult.h; sourceTree = "<group>"; };
+		685791411A00948300B78539 /* IpPoolsListDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetailResult.m; sourceTree = "<group>"; };
 		686B32B919FDDD7200742984 /* NetworkCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionCell.h; sourceTree = "<group>"; };
 		686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionCell.m; sourceTree = "<group>"; };
 		686B32BB19FDDD7200742984 /* NetworkCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCollectionVC.h; sourceTree = "<group>"; };
@@ -1105,6 +1140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */,
+				50D22E9319FFEF9100167A35 /* PowerPlot_lib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1474,6 +1510,9 @@
 				843806EC19FA2DF400DE3217 /* Host.getPerformanceAsync.json */,
 				68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */,
 				68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */,
+				684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */,
+				6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */,
+				684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1593,6 +1632,18 @@
 				181DEC9219F17CB100998835 /* WarningInfoListResult.m */,
 				181DEC9319F17CB100998835 /* WarningInfoVO.h */,
 				181DEC9419F17CB100998835 /* WarningInfoVO.m */,
+				684D90EC19FFC562009C4B09 /* IpPoolsListResult.h */,
+				684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */,
+				684D90EF19FFC587009C4B09 /* IpPoolsVO.h */,
+				684D90F019FFC587009C4B09 /* IpPoolsVO.m */,
+				684D90F419FFD8AA009C4B09 /* NetworkIpVmListResult.h */,
+				684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */,
+				684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */,
+				684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */,
+				6857913D1A00940F00B78539 /* IpPoolsListDetail.h */,
+				6857913E1A00940F00B78539 /* IpPoolsListDetail.m */,
+				685791401A00948300B78539 /* IpPoolsListDetailResult.h */,
+				685791411A00948300B78539 /* IpPoolsListDetailResult.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -2038,6 +2089,12 @@
 		18C212D819F27C2000FCBD23 /* vm */ = {
 			isa = PBXGroup;
 			children = (
+				50D22E8919FFEF5D00167A35 /* WSChartBusinessModelGraph.h */,
+				50D22E8A19FFEF5D00167A35 /* WSChartBusinessModelGraph.m */,
+				50D22E8B19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.h */,
+				50D22E8C19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m */,
+				50D22E8D19FFEF5D00167A35 /* WSChartValueCreationGraph.h */,
+				50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */,
 				1824360A19F4FE05007E4D6C /* circularMenu */,
 				18C212D919F27C2000FCBD23 /* VmCollectionCell.h */,
 				18C212DA19F27C2000FCBD23 /* VmCollectionCell.m */,
@@ -2322,6 +2379,7 @@
 		C2F182DD3D1546FB81B5B632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50D22E9219FFEF9100167A35 /* PowerPlot_lib.framework */,
 				AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */,
 			);
 			name = Frameworks;
@@ -2393,6 +2451,7 @@
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
 				181DECF419F17CB100998835 /* bmi-80-80.png in Resources */,
+				684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */,
 				1824362119F4FE05007E4D6C /* calories.off@2x.png in Resources */,
 				18763BBC19F4B82300669CC3 /* dial-icon3.png in Resources */,
 				181DED5B19F17CB100998835 /* LicenseVO.getLicenseVOAsync.json in Resources */,
@@ -2405,6 +2464,7 @@
 				1824365519F544C6007E4D6C /* Home.png in Resources */,
 				181DED5519F17CB100998835 /* HostVO.getHostNicGroupedListAsync.json in Resources */,
 				181DED6C19F17CB100998835 /* Images.xcassets in Resources */,
+				6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */,
 				181DED6319F17CB100998835 /* PoolVO.getVmListWithlimit.json in Resources */,
 				1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */,
 				1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */,
@@ -2450,6 +2510,7 @@
 				843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
+				684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */,
 				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
 				1891808119F3980C00B1ECA4 /* Main.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,
@@ -2579,10 +2640,13 @@
 				18C2134F19F27C2000FCBD23 /* VmDetailSnapshootVC.m in Sources */,
 				181DECB419F17CB100998835 /* chatView.m in Sources */,
 				18C2134D19F27C2000FCBD23 /* VmDetailInfoVC.m in Sources */,
+				6857913F1A00940F00B78539 /* IpPoolsListDetail.m in Sources */,
 				18C521C819F8CA2000C033C6 /* JBChartTooltipTipView.m in Sources */,
 				18C2130819F27C2000FCBD23 /* BusinessDetailInfoVC.m in Sources */,
 				18C2134A19F27C2000FCBD23 /* VmDashboardHeader.m in Sources */,
 				18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */,
+				684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */,
+				684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
@@ -2604,6 +2668,7 @@
 				84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */,
 				18C2131A19F27C2000FCBD23 /* MasterContainerVC.m in Sources */,
 				18C2135019F27C2000FCBD23 /* VmDiskCollectionCell.m in Sources */,
+				684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */,
 				18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */,
 				18C5215319F89DF300C033C6 /* MJRefreshConst.m in Sources */,
 				181DECDA19F17CB100998835 /* MyPieElement.m in Sources */,
@@ -2723,6 +2788,7 @@
 				18C521D019F8CA2000C033C6 /* WMGaugeView.m in Sources */,
 				18C2135619F27C2000FCBD23 /* VmNetworkCollectionVC.m in Sources */,
 				181DED8719F17CB100998835 /* StorageVO.m in Sources */,
+				685791421A00948300B78539 /* IpPoolsListDetailResult.m in Sources */,
 				18C2135919F27C2000FCBD23 /* PopWarningInfoCellForTime.m in Sources */,
 				18C5216E19F8A4C900C033C6 /* UIImage+ImageEffects.m in Sources */,
 				18C2132C19F27C2000FCBD23 /* VWWWaterView.m in Sources */,
@@ -2741,12 +2807,14 @@
 				843E6C1C19F603100046A5A0 /* StorageTypeVO.m in Sources */,
 				181DECA719F17CB100998835 /* BTSpiderPlotterView.m in Sources */,
 				18C5215619F89DF300C033C6 /* UIScrollView+MJExtension.m in Sources */,
+				50D22E9019FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
 				18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */,
 				18C2131B19F27C2000FCBD23 /* DatacenterDetailInfoVC.m in Sources */,
 				18C2133C19F27C2000FCBD23 /* StorageDashboardHeader.m in Sources */,
 				18C2133719F27C2000FCBD23 /* PopOptionsVC.m in Sources */,
 				181DED8B19F17CB100998835 /* UserVO.m in Sources */,
+				684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */,
 				18C2133119F27C2000FCBD23 /* PoolDashboardCell.m in Sources */,
 				18C2134219F27C2000FCBD23 /* PopControlRecordCellForTime.m in Sources */,
 				1824360719F4F774007E4D6C /* RATableViewCell.m in Sources */,
@@ -2779,6 +2847,7 @@
 				843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */,
 				18C521C019F8CA2000C033C6 /* GraphCalcViewController.m in Sources */,
 				18C2133419F27C2000FCBD23 /* PoolDetailInfoVC.m in Sources */,
+				50D22E8F19FFEF5D00167A35 /* WSChartBusinessModelGraph.m in Sources */,
 				18C2130C19F27C2000FCBD23 /* MSCurrentTimeGridline.m in Sources */,
 				18C521C119F8CA2000C033C6 /* SimpleChartViewController.m in Sources */,
 				181DED7C19F17CB100998835 /* HostVO.m in Sources */,
@@ -2790,6 +2859,7 @@
 				181DECDD19F17CB100998835 /* iPhoneGraphView.m in Sources */,
 				18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */,
 				18C521B919F8CA2000C033C6 /* F3BarViewController.m in Sources */,
+				50D22E9119FFEF5D00167A35 /* WSChartValueCreationGraph.m in Sources */,
 				1824365D19F56A38007E4D6C /* SUNButtonBoard.m in Sources */,
 				1824363319F537DF007E4D6C /* PopOptionAboutVC.m in Sources */,
 				181DED6E19F17CB100998835 /* BusinessVmVO.m in Sources */,
@@ -2935,6 +3005,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WinCenter/controllers/vm",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;
@@ -2952,6 +3026,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WinCenter/controllers/vm",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WinCenter/WinCenter-Prefix.pch";
 				INFOPLIST_FILE = WinCenter/Info.plist;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jg2-Bw-p9w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Wq-PF-ITf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Network ContainerVC-->
@@ -61,10 +61,59 @@
             </objects>
             <point key="canvasLocation" x="-2257" y="576"/>
         </scene>
+        <!--网络总览-->
+        <scene sceneID="y7o-QB-lT4">
+            <objects>
+                <viewController id="V6a-52-56S" customClass="NetworkContainerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xwn-Ka-5L8"/>
+                        <viewControllerLayoutGuide type="bottom" id="wub-Fy-mmK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nX2-bw-Sn4">
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-Ng-XFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
+                                <connections>
+                                    <segue destination="jg2-Bw-p9w" kind="embed" id="Vl7-8h-6E1"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fh0-Ng-XFQ" secondAttribute="trailing" id="1Te-Z9-VCW"/>
+                            <constraint firstItem="fh0-Ng-XFQ" firstAttribute="leading" secondItem="nX2-bw-Sn4" secondAttribute="leading" id="J6j-up-ZNg"/>
+                            <constraint firstItem="wub-Fy-mmK" firstAttribute="top" secondItem="fh0-Ng-XFQ" secondAttribute="bottom" id="a6H-n2-A7a"/>
+                            <constraint firstItem="fh0-Ng-XFQ" firstAttribute="top" secondItem="xwn-Ka-5L8" secondAttribute="bottom" id="q3o-pB-TLk"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="joG-qW-0Th"/>
+                        <barButtonItem image="icon-operationLog" id="obf-fN-LhO">
+                            <connections>
+                                <action selector="showControlRecordVC:" destination="V6a-52-56S" id="lga-6d-qxu"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="网络总览" id="hJR-wF-vuI">
+                        <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="Vem-Sr-9AQ"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="969" height="768"/>
+                    <connections>
+                        <outlet property="name" destination="Vem-Sr-9AQ" id="39t-NQ-7ev"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddg-jm-m2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4549.5" y="2004"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="Qn4-mP-u3A">
             <objects>
-                <splitViewController storyboardIdentifier="NetworkDashboardVCNav" id="jg2-Bw-p9w" sceneMemberID="viewController">
+                <splitViewController automaticallyAdjustsScrollViewInsets="NO" id="jg2-Bw-p9w" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <segue destination="r0j-ho-a1P" kind="relationship" relationship="detailViewController" id="WPL-3E-qfz"/>
                         <segue destination="slq-rd-80B" kind="relationship" relationship="masterViewController" id="HSi-p3-zIc"/>
@@ -72,7 +121,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdd-LK-GUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3446" y="2198"/>
+            <point key="canvasLocation" x="-2573.5" y="2180"/>
         </scene>
         <!--Network CollectionVC-->
         <scene sceneID="q54-Oc-8ck">
@@ -182,12 +231,12 @@
             </objects>
             <point key="canvasLocation" x="-931" y="796"/>
         </scene>
-        <!--网络列表-->
+        <!--虚拟机-->
         <scene sceneID="VtE-zR-YzD">
             <objects>
                 <tableViewController id="jqU-JS-Z5Q" customClass="NetworkCollectionVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="63" sectionHeaderHeight="22" sectionFooterHeight="22" id="gGv-Uf-gfv">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,17 +250,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJL-r7-xP3">
-                                            <rect key="frame" x="20" y="2" width="194" height="21"/>
+                                            <rect key="frame" x="20" y="2" width="360" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="关机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iR-US-c5S">
-                                            <rect key="frame" x="435" y="2" width="34" height="21"/>
+                                            <rect key="frame" x="560" y="2" width="70" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="192.168.103.122" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-EY-Wkw">
-                                            <rect key="frame" x="260" y="2" width="108" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="192.168.103.122" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-EY-Wkw">
+                                            <rect key="frame" x="404" y="2" width="109" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -219,6 +268,11 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="vmIp" destination="AnV-EY-Wkw" id="ARp-9d-BBy"/>
+                                    <outlet property="vmName" destination="eJL-r7-xP3" id="i7l-so-ocO"/>
+                                    <outlet property="vmState" destination="9iR-US-c5S" id="6eW-EE-OgU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -226,21 +280,24 @@
                             <outlet property="delegate" destination="jqU-JS-Z5Q" id="mLU-6c-ZAm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="网络列表" id="2Ns-pG-p2z"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="虚拟机" id="2Ns-pG-p2z"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Trf-pl-wMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1548" y="2816"/>
+            <point key="canvasLocation" x="-736" y="2816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hhM-az-Xvq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="slq-rd-80B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9P0-QR-EEC">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="9P0-QR-EEC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,14 +308,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ic-OI-fYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2552" y="1777"/>
+            <point key="canvasLocation" x="-1740" y="1777"/>
         </scene>
         <!--Network Total CollectionVC-->
         <scene sceneID="777-g1-Pzu">
             <objects>
                 <collectionViewController id="S2E-G5-efG" customClass="NetworkTotalCollectionVC" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="41v-a3-hSt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="0.0" id="hh7-EG-hK4">
@@ -307,7 +364,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="192.168.10.1/100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1F-Ah-KUd">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1F-Ah-KUd">
                                             <rect key="frame" x="72" y="81" width="132" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -317,7 +374,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-47-nXF">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-47-nXF">
                                             <rect key="frame" x="106" y="108" width="34" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -340,12 +397,12 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO0-y8-U7L">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO0-y8-U7L">
                                             <rect key="frame" x="251" y="108" width="30" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="80" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-F7-okN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwK-F7-okN">
                                             <rect key="frame" x="180" y="108" width="34" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
@@ -354,6 +411,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="290" height="150"/>
                                 <connections>
                                     <outlet property="ipSegment" destination="O1F-Ah-KUd" id="uXc-Uh-9NJ"/>
                                     <outlet property="ipTotal" destination="nFx-47-nXF" id="euE-Oy-J4Z"/>
@@ -426,14 +484,15 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EG2-qW-HEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1754" y="1752"/>
+            <point key="canvasLocation" x="-942" y="1752"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZ8-Tp-cyP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r0j-ho-a1P" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hbE-gq-p0l">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hbE-gq-p0l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -444,10 +503,52 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gJ-Dv-OBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2414" y="2732"/>
+            <point key="canvasLocation" x="-1602" y="2732"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fyw-JC-d09">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="d0j-NR-iDT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zgX-S3-l6z"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hce-Zz-rHK"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tzS-kc-pnY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hl-RD-dbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NZ2-qh-fEM">
+            <objects>
+                <navigationController storyboardIdentifier="NetworkDashboardVCNav" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="3Wq-PF-ITf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wPM-l5-y59">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="oeH-Sn-1IO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="V6a-52-56S" kind="relationship" relationship="rootViewController" id="pKt-qM-YwM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFA-1H-0Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5362" y="2004"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon-operationLog" width="32" height="32"/>
         <image name="网络-面板" width="290" height="150"/>
         <image name="网络-面板2" width="290" height="80"/>
         <image name="链接" width="44" height="9"/>
