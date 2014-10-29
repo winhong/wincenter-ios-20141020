@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VmMigrateSelectHostListVC.h"
 
-@interface VmMigrateVC : UITableViewController
+@interface VmMigrateVC : UITableViewController<VmMigrateSelectHostListVCDelegate>
 @property VmVO *vmVO;
-
-@property int selectedHostId;
-@property NSString *selectedHostName;
 
 @end

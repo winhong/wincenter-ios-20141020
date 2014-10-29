@@ -8,11 +8,13 @@
 
 #import "VmMigrateVC.h"
 #import "VmMigrateTargetsVO.h"
-#import "VmMigrateSelectHostListVC.h"
+
 
 @interface VmMigrateVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *targetHost;
+@property int targetHostId;
 
 
 
@@ -67,10 +69,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqual:@"toMigrateTargetHosts"]){
         VmMigrateSelectHostListVC *vc = segue.destinationViewController;
+        vc.delegate = self;
         vc.vmVO = self.vmVO;
     }else{
         
     }
+}
+
+-(void)didSelecteded:(VmMigrateTargetHostVO *)vo{
+    self.targetHost.text = vo.targetName;
+    self.targetHostId = vo.targetId;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)submitMigrate{
@@ -78,7 +87,7 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"虚拟机正在迁移..." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
         [self dismissViewControllerAnimated:YES completion:nil];
-    } widthTargetHostId:self.selectedHostId];
+    } widthTargetHostId:self.targetHostId];
 }
 
 /*

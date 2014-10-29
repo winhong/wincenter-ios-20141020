@@ -76,8 +76,8 @@
     self.prevCell = selectedCell;
     VmMigrateTargetVO *targets = self.vmMigrateTargets.targets[0];
     VmMigrateTargetHostVO *host= targets.hosts[indexPath.row];
-    self.selectedHostId = host.targetId;
-    self.selectedHostName = host.targetName;
+    
+    [self.delegate didSelecteded:host];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,15 +89,6 @@
     return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqual:@"toMigrateTargetHosts"]){
-        VmMigrateVC *vc = segue.destinationViewController;
-        vc.selectedHostId = self.selectedHostId;
-        vc.selectedHostName = self.selectedHostName;
-    }else{
-        
-    }
-}
 
 
 - (IBAction)done:(id)sender {
