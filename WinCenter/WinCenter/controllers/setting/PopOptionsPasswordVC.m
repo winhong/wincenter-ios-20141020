@@ -24,6 +24,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)done:(id)sender {
+    NSString *msg = @"";
+    if([self.passwordOld.text isEqualToString:@""])
+    {
+        msg = @"请输入旧密码！";
+    }
+    else if ([self.passwordNew.text isEqualToString:@""])
+    {
+        msg = @"请输入新密码！";
+    }
+    else if (![self.passwordNew.text isEqualToString:self.passwordRepeat.text])
+    {
+        msg = @"重复新密码与新密码不一致！";
+    }
+    
+    if([msg isEqualToString:@""])
+    {
+        [[UserVO new] modifyPassword:^(NSError *error) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alert show];
+
+        } withOldPassword:self.passwordOld.text withPassword:self.passwordNew.text];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+    }
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

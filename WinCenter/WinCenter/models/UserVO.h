@@ -30,5 +30,5 @@
 @property NSString *locked;
 
 + (void) getUserVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) modifyPassword:(BasicCompletionBlock)completionBlock withUserId:(int)placeholder withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword;
+- (void) modifyPassword:(BasicCompletionBlock)completionBlock withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword;
 @end

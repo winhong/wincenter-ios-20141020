@@ -957,15 +957,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="修改密码" id="kyG-A6-f5H">
-                        <barButtonItem key="rightBarButtonItem" title="提交" id="SAx-Le-pyw"/>
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="SAx-Le-pyw">
+                            <connections>
+                                <action selector="done:" destination="rxn-hY-iat" id="bro-p9-l1v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="newPassword" destination="aMw-ll-HKv" id="k0y-5Z-aM4"/>
                         <outlet property="passwordNew" destination="aMw-ll-HKv" id="d3Q-eP-VIf"/>
                         <outlet property="passwordOld" destination="c6w-TT-0rJ" id="FTo-Xo-djb"/>
                         <outlet property="passwordRepeat" destination="DHa-jr-5yH" id="wtH-t8-JFV"/>
-                        <outlet property="repeatPassword" destination="DHa-jr-5yH" id="v9M-PD-DrJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3U-eg-CYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
