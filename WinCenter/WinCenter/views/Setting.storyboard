@@ -1571,14 +1571,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="l5z-NH-yea"/>
-        <segue reference="h9v-mu-EsN"/>
-        <segue reference="sfL-QP-Kfv"/>
-        <segue reference="eem-JX-f0g"/>
-        <segue reference="9nw-dL-43m"/>
-        <segue reference="xiw-9q-3p9"/>
-        <segue reference="gQ8-rg-qih"/>
-        <segue reference="MlU-Wq-QH4"/>
         <segue reference="7Mw-IM-jBC"/>
+        <segue reference="CP9-yb-f80"/>
+        <segue reference="LR4-Bk-ct5"/>
+        <segue reference="u0R-uT-Op0"/>
+        <segue reference="MlU-Wq-QH4"/>
+        <segue reference="fUs-FY-UtL"/>
+        <segue reference="e38-pl-HWV"/>
+        <segue reference="9nw-dL-43m"/>
+        <segue reference="l5z-NH-yea"/>
     </inferredMetricsTieBreakers>
 </document>
