@@ -9,6 +9,8 @@
 #import "NetworkContainerVC.h"
 
 @interface NetworkContainerVC ()
+@property UIPopoverController *popover;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 
 @end
 
@@ -25,8 +27,8 @@
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
+    self.name.title = [RemoteObject getCurrentDatacenterVO].name;
     // Do any additional setup after loading the view.
 }
 
@@ -36,6 +38,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)showControlRecordVC:(id)sender{
+    if(self.popover!=nil){
+        [self.popover dismissPopoverAnimated:NO];
+    }
+    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+    UIBarButtonItem *button = (UIBarButtonItem*)sender;
+    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+}
 /*
 #pragma mark - Navigation
 

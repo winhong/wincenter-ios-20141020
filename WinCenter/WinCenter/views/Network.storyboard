@@ -64,27 +64,46 @@
         <!--网络总览-->
         <scene sceneID="y7o-QB-lT4">
             <objects>
-                <viewController id="V6a-52-56S" sceneMemberID="viewController">
+                <viewController id="V6a-52-56S" customClass="NetworkContainerVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xwn-Ka-5L8"/>
                         <viewControllerLayoutGuide type="bottom" id="wub-Fy-mmK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nX2-bw-Sn4">
-                        <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-Ng-XFQ">
-                                <rect key="frame" x="0.0" y="0.0" width="969" height="704"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-Ng-XFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                                 <connections>
                                     <segue destination="jg2-Bw-p9w" kind="embed" id="Vl7-8h-6E1"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fh0-Ng-XFQ" secondAttribute="trailing" id="1Te-Z9-VCW"/>
+                            <constraint firstItem="fh0-Ng-XFQ" firstAttribute="leading" secondItem="nX2-bw-Sn4" secondAttribute="leading" id="J6j-up-ZNg"/>
+                            <constraint firstItem="wub-Fy-mmK" firstAttribute="top" secondItem="fh0-Ng-XFQ" secondAttribute="bottom" id="a6H-n2-A7a"/>
+                            <constraint firstItem="fh0-Ng-XFQ" firstAttribute="top" secondItem="xwn-Ka-5L8" secondAttribute="bottom" id="q3o-pB-TLk"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="网络总览" id="hJR-wF-vuI"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="joG-qW-0Th"/>
+                        <barButtonItem image="icon-operationLog" id="obf-fN-LhO">
+                            <connections>
+                                <action selector="showControlRecordVC:" destination="V6a-52-56S" id="lga-6d-qxu"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="网络总览" id="hJR-wF-vuI">
+                        <barButtonItem key="leftBarButtonItem" title="广东数据中心" id="Vem-Sr-9AQ"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
+                    <connections>
+                        <outlet property="name" destination="Vem-Sr-9AQ" id="39t-NQ-7ev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddg-jm-m2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +112,8 @@
         <!--Split View Controller-->
         <scene sceneID="Qn4-mP-u3A">
             <objects>
-                <splitViewController id="jg2-Bw-p9w" sceneMemberID="viewController">
+                <splitViewController automaticallyAdjustsScrollViewInsets="NO" id="jg2-Bw-p9w" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <segue destination="r0j-ho-a1P" kind="relationship" relationship="detailViewController" id="WPL-3E-qfz"/>
                         <segue destination="slq-rd-80B" kind="relationship" relationship="masterViewController" id="HSi-p3-zIc"/>
@@ -506,14 +526,18 @@
         <!--Navigation Controller-->
         <scene sceneID="NZ2-qh-fEM">
             <objects>
-                <navigationController storyboardIdentifier="NetworkDashboardVCNav" automaticallyAdjustsScrollViewInsets="NO" id="3Wq-PF-ITf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NetworkDashboardVCNav" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="3Wq-PF-ITf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wPM-l5-y59">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="oeH-Sn-1IO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="V6a-52-56S" kind="relationship" relationship="rootViewController" id="pKt-qM-YwM"/>
                     </connections>
@@ -524,6 +548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-operationLog" width="32" height="32"/>
         <image name="网络-面板" width="290" height="150"/>
         <image name="网络-面板2" width="290" height="80"/>
         <image name="链接" width="44" height="9"/>
