@@ -335,19 +335,19 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kE-O8-avz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="JYC-Cf-UkB" kind="embed" id="CgZ-fa-dJ8"/>
+                                    <segue destination="c4S-fA-CYB" kind="embed" id="whO-l7-l93"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-lS-au5">
                                 <rect key="frame" x="650" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="UTw-S6-5Pr" kind="embed" id="kwZ-Ei-coA"/>
+                                    <segue destination="LN9-Ov-xVB" kind="embed" id="MNN-89-Tcn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-Cz-xYa">
                                 <rect key="frame" x="325" y="0.0" width="320" height="550"/>
                                 <connections>
-                                    <segue destination="btV-fB-A9e" kind="embed" id="LBc-kY-IIP"/>
+                                    <segue destination="NYP-54-JoV" kind="embed" id="o1l-7v-Y37"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -818,5 +818,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xyc-OD-Bvx"/>
+        <segue reference="whO-l7-l93"/>
+        <segue reference="MNN-89-Tcn"/>
+        <segue reference="o1l-7v-Y37"/>
     </inferredMetricsTieBreakers>
 </document>

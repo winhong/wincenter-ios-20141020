@@ -38,6 +38,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)showWarningInfoVC:(id)sender{
+    if(self.popover!=nil){
+        [self.popover dismissPopoverAnimated:NO];
+    }
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+    UIBarButtonItem *button = (UIBarButtonItem*)sender;
+    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+}
+
 -(IBAction)showControlRecordVC:(id)sender{
     if(self.popover!=nil){
         [self.popover dismissPopoverAnimated:NO];

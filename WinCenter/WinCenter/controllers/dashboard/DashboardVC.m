@@ -80,11 +80,11 @@
     nav = [[UIStoryboard storyboardWithName:@"Network" bundle:nil] instantiateViewController:@"NetworkDashboardVCNav"];
     [self.tabBarVC addChildViewController:nav];
     
-    //告警
-    [self.tabBarVC addChildViewController:[MSCalendarViewController new]];
-    
-    //搜索
-    [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
+//    //告警
+//    [self.tabBarVC addChildViewController:[MSCalendarViewController new]];
+//    
+//    //搜索
+//    [self.tabBarVC addChildViewController:[[UINavigationController alloc] initWithRootViewController:[UIViewController new]]];
     
     //刷新
     nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0KV-WP-OPB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -71,7 +71,7 @@
         <scene sceneID="lA6-gL-mFX">
             <objects>
                 <tableViewController storyboardIdentifier="DashboardMenuVC_iPad" id="teZ-Tc-JZU" customClass="DashboardMenuVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="S2a-cH-2QV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="150" sectionFooterHeight="10" id="S2a-cH-2QV">
                         <rect key="frame" x="0.0" y="0.0" width="55" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,56 +244,12 @@
                             </tableViewSection>
                             <tableViewSection id="Pfy-Sw-oDb">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="c0T-wZ-EPX">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c0T-wZ-EPX" id="4vu-hX-rdn">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut7-W3-8A8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-warning">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="navIcon-warning-white"/>
-                                                    <connections>
-                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="ecl-2N-0v5"/>
-                                                        <outletCollection property="gestureRecognizers" destination="MSm-kz-9gS" appends="YES" id="CZg-Oe-GYr"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="gJM-vt-woL">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gJM-vt-woL" id="REk-JJ-Tka">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw3-4p-lvz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <gestureRecognizers/>
-                                                    <state key="normal" title="切换" image="navIcon-search">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="navIcon-search-white"/>
-                                                    <connections>
-                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="lgZ-Hm-F9f"/>
-                                                        <outletCollection property="gestureRecognizers" destination="umT-ea-aZV" appends="YES" id="RXk-vY-AqW"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="FK7-HV-0q4">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FK7-HV-0q4" id="TBd-jQ-b1T">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-qf-XlR">
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jp5-qf-XlR">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
@@ -315,7 +271,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ims-5n-ucO" id="qQZ-OB-1on">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl2-XT-XYc">
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl2-XT-XYc">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
                                                     <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <gestureRecognizers/>
@@ -332,28 +288,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="VON-A0-0nC">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VON-A0-0nC" id="aKR-eD-Tvk">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRV-yn-KP3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="58"/>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <gestureRecognizers/>
-                                                    <state key="normal" title="展开" image="navIcon-arrRight">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="navIcon-arrRight-white"/>
-                                                    <connections>
-                                                        <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="TZ9-KA-dFw"/>
-                                                        <outletCollection property="gestureRecognizers" destination="3YI-fP-b0w" appends="YES" id="gRP-1Q-WeL"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.1137254902" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -364,17 +298,14 @@
                     </tableView>
                     <connections>
                         <outlet property="menuBusiness" destination="teG-WG-WvM" id="Rrd-5g-edZ"/>
-                        <outlet property="menuExpand" destination="VRV-yn-KP3" id="tea-Xm-zXa"/>
                         <outlet property="menuHome" destination="iyb-aS-OTb" id="zMQ-ol-X7L"/>
                         <outlet property="menuHost" destination="S1a-xW-YPY" id="F5g-dA-Tfx"/>
                         <outlet property="menuNetwork" destination="pR6-yL-Iuk" id="I9s-h1-RBL"/>
                         <outlet property="menuPool" destination="m68-3y-M3S" id="tSq-C4-ZQb"/>
-                        <outlet property="menuSearch" destination="yw3-4p-lvz" id="Qgi-yh-k5P"/>
                         <outlet property="menuSelect" destination="Jp5-qf-XlR" id="2NL-nf-bzw"/>
                         <outlet property="menuSetting" destination="Pl2-XT-XYc" id="8yK-rD-qwW"/>
                         <outlet property="menuStorage" destination="3gc-Ac-R0u" id="OJc-YB-JYY"/>
                         <outlet property="menuVm" destination="rrk-FM-kl2" id="pJ7-5M-GHt"/>
-                        <outlet property="menuWarning" destination="ut7-W3-8A8" id="c4s-hf-ufW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vA-HE-7fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,16 +342,6 @@
                 <tapGestureRecognizer numberOfTapsRequired="2" id="lhm-br-WvG">
                     <connections>
                         <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="hPp-di-Awe"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="MSm-kz-9gS">
-                    <connections>
-                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="q6l-no-gGF"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="umT-ea-aZV">
-                    <connections>
-                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="N5n-xr-faK"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="QGj-aO-NAz">
@@ -474,7 +395,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="PoolDashboardVC" autoresizesArchivedViewToFullSize="NO" id="buB-ce-6JP" customClass="PoolDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="zke-mx-fcf">
-                        <rect key="frame" x="0.0" y="64" width="969" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="aDP-R0-IEn">
@@ -1075,6 +996,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4aa-aH-K4Q"/>
+                        <barButtonItem image="icon-warning" id="fTb-eo-7Mw">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="buB-ce-6JP" id="ZjB-G6-XAn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="fDx-eE-58r"/>
                         <barButtonItem image="icon-operationLog" id="Y0L-od-91a">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="buB-ce-6JP" id="xO8-QM-MND"/>
@@ -1529,6 +1456,12 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="eEz-Pk-JS8"/>
+                        <barButtonItem image="icon-warning" id="96i-sD-uqw">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="cSx-41-28X" id="40X-rZ-UQj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="F3q-zG-ToN"/>
                         <barButtonItem image="icon-operationLog" id="F3i-M5-2mW">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="cSx-41-28X" id="r5h-6Y-NVe"/>
@@ -2154,6 +2087,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="yAy-Oo-Tir"/>
+                        <barButtonItem image="icon-warning" id="GnY-mK-18g">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="tNF-5l-310" id="w69-sw-Lov"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="JoU-b3-3d7"/>
                         <barButtonItem image="icon-operationLog" id="b8q-IF-5E0">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="tNF-5l-310" id="ZnG-EQ-BRo"/>
@@ -2659,6 +2598,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="cQJ-x8-JS6"/>
+                        <barButtonItem image="icon-warning" id="oBV-Gr-eUk">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="Vdc-u6-N4C" id="eUK-P9-cYb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="mX5-iR-Fpa"/>
                         <barButtonItem image="icon-operationLog" id="dRJ-54-CHn">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="Vdc-u6-N4C" id="0uK-jN-i4F"/>
@@ -3147,6 +3092,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4EF-jv-Ilu"/>
+                        <barButtonItem image="icon-warning" id="IUi-So-aF7">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="8QM-yF-skn" id="D3u-f7-hGU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="yL8-iY-zUD"/>
                         <barButtonItem image="icon-operationLog" id="sVu-61-G0q">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="8QM-yF-skn" id="7hs-bG-EgF"/>
@@ -3203,7 +3154,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="BusinessDashboardVC" autoresizesArchivedViewToFullSize="NO" id="rJv-N2-owX" customClass="BusinessDashboardVC" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="w1V-61-3Lg">
-                        <rect key="frame" x="0.0" y="64" width="969" height="660"/>
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="7RG-Ls-B57">
@@ -3472,6 +3423,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CJI-ZF-w2K"/>
+                        <barButtonItem image="icon-warning" id="9XT-hd-4Lb">
+                            <connections>
+                                <action selector="showWarningInfoVC:" destination="rJv-N2-owX" id="dL4-G7-o7n"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Afi-2Y-CwQ"/>
                         <barButtonItem image="icon-operationLog" id="FFh-sP-a3b">
                             <connections>
                                 <action selector="showControlRecordVC:" destination="rJv-N2-owX" id="Bvt-T6-9WD"/>
@@ -4199,11 +4156,10 @@
         <image name="avatar.jpg" width="210" height="210"/>
         <image name="datacenterimg" width="969" height="405"/>
         <image name="icon-operationLog" width="32" height="32"/>
+        <image name="icon-warning" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="icon-虚拟机数-black" width="9" height="9"/>
         <image name="ip" width="10" height="11"/>
-        <image name="navIcon-arrRight" width="55" height="58"/>
-        <image name="navIcon-arrRight-white" width="55" height="58"/>
         <image name="navIcon-business" width="55" height="58"/>
         <image name="navIcon-business-white" width="55" height="58"/>
         <image name="navIcon-home" width="55" height="58"/>
@@ -4216,16 +4172,12 @@
         <image name="navIcon-pool-white" width="55" height="58"/>
         <image name="navIcon-refresh" width="55" height="58"/>
         <image name="navIcon-refresh-white" width="55" height="58"/>
-        <image name="navIcon-search" width="55" height="58"/>
-        <image name="navIcon-search-white" width="55" height="58"/>
         <image name="navIcon-settings" width="55" height="58"/>
         <image name="navIcon-settings-white" width="55" height="58"/>
         <image name="navIcon-storage" width="55" height="58"/>
         <image name="navIcon-storage-white" width="55" height="58"/>
         <image name="navIcon-vm" width="55" height="58"/>
         <image name="navIcon-vm-white" width="55" height="58"/>
-        <image name="navIcon-warning" width="55" height="58"/>
-        <image name="navIcon-warning-white" width="55" height="58"/>
         <image name="os-others" width="55" height="55"/>
         <image name="share" width="29" height="13"/>
         <image name="业务系统-收起" width="193" height="40"/>
