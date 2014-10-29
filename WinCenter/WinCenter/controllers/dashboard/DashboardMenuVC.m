@@ -22,7 +22,7 @@
 //@property (weak, nonatomic) IBOutlet UIButton *menuSearch;
 @property (weak, nonatomic) IBOutlet UIButton *menuSelect;
 @property (weak, nonatomic) IBOutlet UIButton *menuSetting;
-@property (weak, nonatomic) IBOutlet UIButton *menuExpand;
+//@property (weak, nonatomic) IBOutlet UIButton *menuExpand;
 
 @property NSArray *menuItems;
 
@@ -45,8 +45,8 @@
 //                       self.menuWarning,
 //                       self.menuSearch,
                        self.menuSelect,
-                       self.menuSetting,
-                       self.menuExpand];
+                       self.menuSetting];
+//                       self.menuExpand];
     
 //    [self.menuWarning setBadgeValue:@"8"];
 //    [self.menuWarning setBadgeOriginX:30];
