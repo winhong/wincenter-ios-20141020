@@ -51,34 +51,34 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
        
        // Do any additional setup after loading the view from its nib.
     
-    self.dayPicker.month = 9;
-    self.dayPicker.year = 2013;
-    self.dayPicker.delegate = self;
-    self.dayPicker.dayNameLabelFontSize = 14.0f;
-    self.dayPicker.dayLabelFontSize = 17.0f;
-    [self.dayPicker setActiveDaysFrom:1 toDay:30];
-    [self.dayPicker setCurrentDay:15 animated:NO];
-    //[self.dayPicker setStartDate:[NSDate dateFromDay:28 month:9 year:2013] endDate:[NSDate dateFromDay:5 month:10 year:2013]];
-    [self.dayPicker setCurrentDate:[NSDate dateFromDay:21 month:10 year:2014] animated:NO];
+//    self.dayPicker.month = 9;
+//    self.dayPicker.year = 2013;
+//    self.dayPicker.delegate = self;
+//    self.dayPicker.dayNameLabelFontSize = 14.0f;
+//    self.dayPicker.dayLabelFontSize = 17.0f;
+//    [self.dayPicker setActiveDaysFrom:1 toDay:30];
+//    [self.dayPicker setCurrentDay:15 animated:NO];
+//    //[self.dayPicker setStartDate:[NSDate dateFromDay:28 month:9 year:2013] endDate:[NSDate dateFromDay:5 month:10 year:2013]];
+//    [self.dayPicker setCurrentDate:[NSDate dateFromDay:21 month:10 year:2014] animated:NO];
     
     //
-    NSArray *titles = @[@"CPU使用率", @"内存使用率", @"存储使用率", @"网络使用率"];
-    SMVerticalSegmentedControl *segmentedControl = [[SMVerticalSegmentedControl alloc] initWithSectionTitles:titles];
-    [segmentedControl setFrame:self.segmentControlContainer.bounds];
-    segmentedControl.selectedSegmentIndex = 0;
-    segmentedControl.textColor = [UIColor grayColor];
-    segmentedControl.selectedTextColor = [UIColor blackColor];
-    segmentedControl.backgroundColor = UI_COLOR_FROM_RGB(0xecf0f1);
-    segmentedControl.textAlignment = SMVerticalSegmentedControlTextAlignmentCenter;
-    segmentedControl.selectionStyle = SMVerticalSegmentedControlSelectionStyleBox;
-    segmentedControl.selectionIndicatorThickness = 4;
-    segmentedControl.selectionBoxBorderWidth = 1;
-    segmentedControl.selectionBoxBackgroundColorAlpha = 0.5;
-    segmentedControl.selectionBoxBorderColorAlpha = 0.7;
-    segmentedControl.indexChangeBlock = ^(NSInteger index) {
-        //TODO: add handler
-    };
-    [self.segmentControlContainer addSubview:segmentedControl];
+//    NSArray *titles = @[@"CPU使用率", @"内存使用率", @"存储使用率", @"网络使用率"];
+//    SMVerticalSegmentedControl *segmentedControl = [[SMVerticalSegmentedControl alloc] initWithSectionTitles:titles];
+//    [segmentedControl setFrame:self.segmentControlContainer.bounds];
+//    segmentedControl.selectedSegmentIndex = 0;
+//    segmentedControl.textColor = [UIColor grayColor];
+//    segmentedControl.selectedTextColor = [UIColor blackColor];
+//    segmentedControl.backgroundColor = UI_COLOR_FROM_RGB(0xecf0f1);
+//    segmentedControl.textAlignment = SMVerticalSegmentedControlTextAlignmentCenter;
+//    segmentedControl.selectionStyle = SMVerticalSegmentedControlSelectionStyleBox;
+//    segmentedControl.selectionIndicatorThickness = 4;
+//    segmentedControl.selectionBoxBorderWidth = 1;
+//    segmentedControl.selectionBoxBackgroundColorAlpha = 0.5;
+//    segmentedControl.selectionBoxBorderColorAlpha = 0.7;
+//    segmentedControl.indexChangeBlock = ^(NSInteger index) {
+//        //TODO: add handler
+//    };
+//    [self.segmentControlContainer addSubview:segmentedControl];
     
 }
 

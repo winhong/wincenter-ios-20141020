@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Host Detail PerformanceVC-->
         <scene sceneID="5Zv-uh-NbU">
             <objects>
-                <viewController storyboardIdentifier="HostDetailPerformanceVC" id="FMO-oH-gLO" customClass="HostDetailPerformanceVC" sceneMemberID="viewController">
+                <viewController id="FMO-oH-gLO" customClass="HostDetailPerformanceVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5xn-36-PiL"/>
                         <viewControllerLayoutGuide type="bottom" id="NA0-Oh-mD3"/>
@@ -323,7 +323,7 @@
         <!--Vm Detail PerformanceVC-->
         <scene sceneID="eId-2P-o2Y">
             <objects>
-                <viewController storyboardIdentifier="VmDetailPerformanceVC" id="UBG-bK-Bw1" customClass="VmDetailPerformanceVC" sceneMemberID="viewController">
+                <viewController id="UBG-bK-Bw1" customClass="VmDetailPerformanceVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Dp-dC-Jsm"/>
                         <viewControllerLayoutGuide type="bottom" id="auQ-JB-egV"/>
@@ -815,11 +815,81 @@
             </objects>
             <point key="canvasLocation" x="5534" y="1150"/>
         </scene>
+        <!--Realtime CurveVC-->
+        <scene sceneID="NGn-AD-3i2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYg-bW-4WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HostDetailPerformanceVC" id="Od8-Qj-eqe" customClass="RealtimeCurveVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hqe-Zl-LZo"/>
+                        <viewControllerLayoutGuide type="bottom" id="hce-2s-2Sh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqf-Kp-sM5">
+                        <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivX-0B-c4I">
+                                <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ivX-0B-c4I" secondAttribute="trailing" id="2sU-Ge-keC"/>
+                            <constraint firstItem="hce-2s-2Sh" firstAttribute="top" secondItem="ivX-0B-c4I" secondAttribute="bottom" id="ASz-oU-seP"/>
+                            <constraint firstItem="ivX-0B-c4I" firstAttribute="top" secondItem="gqf-Kp-sM5" secondAttribute="top" id="PeP-nr-j1e"/>
+                            <constraint firstItem="ivX-0B-c4I" firstAttribute="leading" secondItem="gqf-Kp-sM5" secondAttribute="leading" id="i6Y-fL-1Ub"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="979" height="768"/>
+                    <connections>
+                        <outlet property="webview" destination="ivX-0B-c4I" id="hRb-cS-6ss"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="7463.5" y="-1467"/>
+        </scene>
+        <!--Realtime CurveVC-->
+        <scene sceneID="nzk-6X-VXc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNa-b2-Z4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="VmDetailPerformanceVC" id="bS5-zy-Gs2" customClass="RealtimeCurveVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HxG-c7-V64"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJM-Ek-yGB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vSC-M8-XOy">
+                        <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-DL-7s5">
+                                <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hmn-DL-7s5" secondAttribute="trailing" id="4wE-pQ-OFG"/>
+                            <constraint firstItem="VJM-Ek-yGB" firstAttribute="top" secondItem="Hmn-DL-7s5" secondAttribute="bottom" id="7qA-sl-YLz"/>
+                            <constraint firstItem="Hmn-DL-7s5" firstAttribute="top" secondItem="vSC-M8-XOy" secondAttribute="top" id="BXf-hP-m8p"/>
+                            <constraint firstItem="Hmn-DL-7s5" firstAttribute="leading" secondItem="vSC-M8-XOy" secondAttribute="leading" id="XDP-Xt-0Xb"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="979" height="768"/>
+                    <connections>
+                        <outlet property="webview" destination="Hmn-DL-7s5" id="SZY-I0-T2c"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="7463.5" y="-385"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xyc-OD-Bvx"/>
-        <segue reference="whO-l7-l93"/>
         <segue reference="MNN-89-Tcn"/>
+        <segue reference="whO-l7-l93"/>
         <segue reference="o1l-7v-Y37"/>
+        <segue reference="xyc-OD-Bvx"/>
     </inferredMetricsTieBreakers>
 </document>
