@@ -158,9 +158,9 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="auK-Df-008"/>
-                        <barButtonItem title="更多操作" id="66V-Yn-8RN">
+                        <barButtonItem title="迁移" id="66V-Yn-8RN">
                             <connections>
-                                <action selector="openMenu:" destination="rda-j3-bYj" id="8JF-gf-ygK"/>
+                                <action selector="migrateVm:" destination="rda-j3-bYj" id="hCJ-kf-K0F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="a1J-Dg-zyV"/>
@@ -179,6 +179,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hasPerformancePage" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="btnMigrate" destination="66V-Yn-8RN" id="eep-TS-MzW"/>
                         <outlet property="btnRestart" destination="qMp-lJ-Q5s" id="oEe-V7-LbE"/>
                         <outlet property="btnStart" destination="BgJ-I5-oJJ" id="51A-PC-vKE"/>
                         <outlet property="btnStop" destination="oEd-NI-jSb" id="vvg-YE-Q8A"/>
