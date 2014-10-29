@@ -52,7 +52,7 @@
         @"STOPPED":@"已关机",
         @"STOPPING":@"关机中",
         @"DELETEING":@"删除中",
-        @"RESIZEING":@"调整中",
+        @"RESIZING":@"调整中",
         @"RESTARTING":@"重启中",
         @"CONVERTING":@"转换中",
         @"RESUMEING":@"恢复中",
