@@ -14,7 +14,7 @@
     "winserver": {
         "activeVms": 14,
         "activeHosts": 2,
-        "resPoolNumber": 3,
+        "resPoolNumber": 6,
         "cpuCoreNumber": 8,
         "physicalCpuNumber": 2,
         "storageSize": 1456.8,
@@ -23,10 +23,10 @@
         "storageAvailSize": 649.7,
         "sharedStorageAvailSize": 107.2,
         "localStorageAvailSize": 542.5,
-        "hostNubmer": 2,
+        "hostNubmer": 8,
         "memorySize": 32214,
-        "vmNumber": 19,
-        "dissociateHostNumber": 2
+        "vmNumber": 119,
+        "dissociateHostNumber": 3
     },
     "Vmware": {
         "activeVms": 0,

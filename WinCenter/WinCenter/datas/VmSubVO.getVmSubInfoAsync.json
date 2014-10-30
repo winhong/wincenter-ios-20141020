@@ -1,11 +1,11 @@
 {
     "os": {
-        "Linux": 7,
-        "Windows": 12
+        "Linux": 46,
+        "Windows": 56
     },
     "state": {
-        "OK": 9,
-        "other": 3,
-        "STOPPED": 7
+        "OK": 12,
+        "other": 21,
+        "STOPPED": 80
     }
 }

@@ -48,7 +48,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5vu-9q-Ti8" id="aHx-LA-Yi7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://192.168.213.147:8090" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-ub-fP3">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.213.147:8090" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-ub-fP3">
                                                     <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
