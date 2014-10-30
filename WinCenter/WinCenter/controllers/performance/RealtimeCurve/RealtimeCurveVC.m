@@ -38,12 +38,18 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webview webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"ObjC received message from JS: %@", data);
         responseCallback(@"Response for message from ObjC");
+        
         [self setChartStartTime:data];
+        
     }];
 
     //所有的资源都在source.bundle这个文件夹里
-    NSString* htmlPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"RealtimeCurve.bundle/index.html"];
-    
+    NSString *pagePath;
+    if ([self.chartType isEqualToString:@"host"]) {
+        pagePath = @"RealtimeCurve.bundle/index4host.html";
+    }else if([self.chartType isEqualToString:@"vm"])
+        pagePath = @"RealtimeCurve.bundle/index4vm.html";
+    NSString* htmlPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:pagePath];
     NSURL* url = [NSURL fileURLWithPath:htmlPath];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [self.webview loadRequest:request];
@@ -82,39 +88,39 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
 }
 
-- (void)dayPicker:(MZDayPicker *)dayPicker willSelectDay:(MZDay *)day
-{
-    NSLog(@"Will select day %@",day.day);
-}
-
-- (void)dayPicker:(MZDayPicker *)dayPicker didSelectDay:(MZDay *)day
-{
-    NSLog(@"Did select day %@",day.day);
-}
-
--(void)updateData
-{
-    //取得当前时间，x轴
-    NSDate* nowDate = [[NSDate alloc]init];
-    NSTimeInterval nowTimeInterval = [nowDate timeIntervalSince1970] * 1000;
-    
-    //随机温度，y轴
-    int temperature = [self getRandomNumber:20 to:50];
-    
-    NSMutableString* jsStr = [[NSMutableString alloc] initWithCapacity:0];
-    //[jsStr appendFormat:@"updateData(%f,%d,%@)",nowTimeInterval,temperature, self.performanceData];
-    //if (self.performanceData) {
-        [jsStr appendFormat:@"updateData('%@')", self.performanceData];
-        [self.webview stringByEvaluatingJavaScriptFromString:jsStr];
-    //}
-    
-    
-}
-//获取一个随机整数，范围在[from,to），包括from，不包括to
--(int)getRandomNumber:(int)from to:(int)to
-{
-    return (int)(from  + (arc4random() % (to - from + 1)));
-}
+//- (void)dayPicker:(MZDayPicker *)dayPicker willSelectDay:(MZDay *)day
+//{
+//    NSLog(@"Will select day %@",day.day);
+//}
+//
+//- (void)dayPicker:(MZDayPicker *)dayPicker didSelectDay:(MZDay *)day
+//{
+//    NSLog(@"Did select day %@",day.day);
+//}
+//
+//-(void)updateData
+//{
+//    //取得当前时间，x轴
+//    NSDate* nowDate = [[NSDate alloc]init];
+//    NSTimeInterval nowTimeInterval = [nowDate timeIntervalSince1970] * 1000;
+//    
+//    //随机温度，y轴
+//    int temperature = [self getRandomNumber:20 to:50];
+//    
+//    NSMutableString* jsStr = [[NSMutableString alloc] initWithCapacity:0];
+//    //[jsStr appendFormat:@"updateData(%f,%d,%@)",nowTimeInterval,temperature, self.performanceData];
+//    //if (self.performanceData) {
+//        [jsStr appendFormat:@"updateData('%@')", self.performanceData];
+//        [self.webview stringByEvaluatingJavaScriptFromString:jsStr];
+//    //}
+//    
+//    
+//}
+////获取一个随机整数，范围在[from,to），包括from，不包括to
+//-(int)getRandomNumber:(int)from to:(int)to
+//{
+//    return (int)(from  + (arc4random() % (to - from + 1)));
+//}
 #pragma mark - delegate of webview
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
@@ -124,10 +130,27 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if (!self.startTime) {
         self.startTime = (long long int)[NSDate new];
     }
-    [self.hostVO getPerformanceAsync:^(id object, NSError *error) {
-        self.performanceData = object;
-        [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
-    } withStartTime:self.startTime];
+    if ([self.chartType isEqualToString:@"host"]) {
+        if ([self.hostVO.state isEqualToString:@"OK"]) {
+            [self.hostVO getPerformanceAsync:^(id object, NSError *error) {
+                self.performanceData = object;
+                [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+            } withStartTime:self.startTime];
+        }else{
+            [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+        }
+        
+        
+     }else if([self.chartType isEqualToString:@"vm"]){
+        if ([self.vmVO.state isEqualToString:@"OK"]) {
+            [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
+                self.performanceData = object;
+                [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+            } withStartTime:self.startTime];
+        }else{
+            [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+        }
+     }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -135,15 +158,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     [self reloadData];
 
-   
-
-
-    //等webview加载完毕再更新数据
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval: 1
-//                                             target: self
-//                                           selector: @selector(updateData)
-//                                           userInfo: nil
-//                                            repeats: YES];
 }
 
 -(void)setChartStartTime:(NSString*)startTime{
@@ -152,7 +166,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     NSDate *date=[dateFormatter dateFromString:startTime];
     NSTimeInterval time=[date timeIntervalSince1970]*1000;
     self.startTime = (float)time;
-   // NSLog([NSString stringWithFormat:@"啊啊啊啊：%f",time]);
     [self reloadData];
 }
 

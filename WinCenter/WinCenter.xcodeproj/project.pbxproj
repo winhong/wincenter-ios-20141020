@@ -412,7 +412,8 @@
 		843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1E19F603450046A5A0 /* StorageTotalVO.m */; };
 		843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C2119F603720046A5A0 /* StorageCapacityVO.m */; };
 		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
-		845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.josn in Resources */ = {isa = PBXBuildFile; fileRef = 845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.josn */; };
+		845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */; };
+		845228961A02542100117BDA /* VmVO.getPerformanceAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
 		847A60B119FF82E90090305C /* VmMigrateTargetsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */; };
 		847A60B419FF83110090305C /* VmMigrateTargetVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B319FF83110090305C /* VmMigrateTargetVO.m */; };
@@ -1113,7 +1114,8 @@
 		843E6C2019F603720046A5A0 /* StorageCapacityVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageCapacityVO.h; sourceTree = "<group>"; };
 		843E6C2119F603720046A5A0 /* StorageCapacityVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageCapacityVO.m; sourceTree = "<group>"; };
 		843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StorageSubVO.getStorageSubInfoAsync.json; sourceTree = "<group>"; };
-		845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.josn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VmVO.getVmSnashotAsync.josn; sourceTree = "<group>"; };
+		845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getVmSnashotAsync.json; sourceTree = "<group>"; };
+		845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getPerformanceAsync.json; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
 		847A60AF19FF82E90090305C /* VmMigrateTargetsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetsVO.h; path = ../controllers/vm/VmMigrateTargetsVO.h; sourceTree = "<group>"; };
@@ -1521,7 +1523,8 @@
 				684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */,
 				6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */,
 				684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */,
-				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.josn */,
+				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */,
+				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -2480,7 +2483,7 @@
 				6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */,
 				181DED6319F17CB100998835 /* PoolVO.getVmListWithlimit.json in Resources */,
 				1824362E19F4FE05007E4D6C /* speed@2x.png in Resources */,
-				845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.josn in Resources */,
+				845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.json in Resources */,
 				1824366019F56A38007E4D6C /* SUNButtonBoard_button3.png in Resources */,
 				181DECC919F17CB100998835 /* heartLiveData.txt in Resources */,
 				181DED5A19F17CB100998835 /* HostVO.getVmListAsync.json in Resources */,
@@ -2501,6 +2504,7 @@
 				1824365219F544C6007E4D6C /* FolderBar@2x.png in Resources */,
 				181DED6619F17CB100998835 /* TemplateIcon2x.png in Resources */,
 				1886A60619F6204D0089A576 /* Performance.storyboard in Resources */,
+				845228961A02542100117BDA /* VmVO.getPerformanceAsync.json in Resources */,
 				1824364F19F544C6007E4D6C /* ActionBtnPress.png in Resources */,
 				181DED5319F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json in Resources */,
 				181DECE819F17CB100998835 /* select.png in Resources */,
