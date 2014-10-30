@@ -35,6 +35,8 @@
     cell.label6.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
     cell.status.text = [hostVO state_text];
     cell.status.textColor = [hostVO state_color];
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [hostVO state_color];
     
     cell.progress_1.litEffect = NO;
     cell.progress_1.numBars = 10;

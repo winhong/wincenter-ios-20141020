@@ -54,6 +54,8 @@
     cell.label4.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
     cell.status.text = [storageVO state_text];
     cell.status.textColor = [storageVO state_color];
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [storageVO state_color];
     cell.share_image.hidden = [storageVO.shared isEqualToString:@"false"];
     cell.progress.progress = (storageVO.totalStorage-storageVO.availStorage)/storageVO.totalStorage;
     if(cell.progress.progress>0.8){

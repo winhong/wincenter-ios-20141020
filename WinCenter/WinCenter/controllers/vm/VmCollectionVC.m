@@ -55,6 +55,8 @@
     cell.label4.text = [NSString stringWithFormat:@"%dGB", vmVO.storage];
     cell.status.text = [vmVO state_text];
     cell.status.textColor = [vmVO state_color];
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [vmVO state_color];
     cell.osType.text = vmVO.osType;
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
     

@@ -36,6 +36,7 @@
     cell.label5.text = hostNetworkVO.vlanId;
     cell.label6.text = hostNetworkVO.pniName;
     cell.status.text = [hostNetworkVO state_text];
+    cell.status.textColor = [hostNetworkVO state_color];
     cell.linkState.image = [UIImage imageNamed:[hostNetworkVO linkState_image]];
     if(indexPath.section==0){
         cell.type_image.image = [UIImage imageNamed:@"Network_internal"];

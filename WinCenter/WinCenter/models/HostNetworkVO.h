@@ -17,5 +17,6 @@
 @property NSString *vlanId;
 
 -(NSString*) state_text;
+- (UIColor *)state_color;
 -(NSString*) linkState_image;
 @end

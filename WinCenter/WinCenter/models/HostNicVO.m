@@ -14,6 +14,9 @@
     return [self.duplex isEqualToString:@"FULL"] ? @"全双工" : @"半双工";
 }
 
+- (UIColor *)state_color{
+    return [self.duplex isEqualToString:@"FULL"] ? PNGreen : PNBlue;
+}
 -(NSString*) linkState_image{
     if([self.linkeState isEqualToString:@"Up"]){
         return @"链接";
