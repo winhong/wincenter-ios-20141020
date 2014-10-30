@@ -148,6 +148,7 @@
         [[NSUserDefaults standardUserDefaults] setValue:@"false" forKey:@"isDemo"];
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
+            [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
             [self toLogin];
         } withFailedBlock:^(NSError *error){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:@"用户名或密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
@@ -161,7 +162,7 @@
 }
 
 - (void) toLogin{
-
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
         vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;

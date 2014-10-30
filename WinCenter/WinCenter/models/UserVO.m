@@ -18,10 +18,30 @@
         return;
     }
     
-    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:@"/pc/sys/users?account=admin&password=WTHtk1eyckFZUs3vFKsDAdiscP16uTGA"];
+//    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+//        [simpleRequest setUrl:@"/pc/sys/users?account=admin&password=WTHtk1eyckFZUs3vFKsDAdiscP16uTGA"];
+//    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+//        completeBlock([[UserListResult alloc] initWithJSONData:jsonResponse.rawBody].users[0], error);
+//    }];
+    
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", 0],
+                                       @"apiKey":@"pc.api.user.getUsers",
+                                       @"placeholder": [NSString stringWithFormat:@""],
+                                       @"params": @"firstResult=0&state=1",
+                                       @"apiType": @"GET"}];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completeBlock([[UserListResult alloc] initWithJSONData:jsonResponse.rawBody].users[0], error);
+        UserListResult *result = [[UserListResult alloc] initWithJSONData:jsonResponse.rawBody].users;
+        NSString *user = [[NSUserDefaults standardUserDefaults] stringForKey:@"USER_NAME"];
+        UserVO *curUser = [UserVO new];
+        for (UserVO *userVO in result) {
+            if ([user isEqualToString:userVO.account]) {
+                curUser = userVO;
+                break;
+            }
+        }
+        completeBlock(curUser, error);
     }];
 }
 
