@@ -12,6 +12,7 @@
 @interface VmDashboardCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UIView *status_image;
 @property (weak, nonatomic) IBOutlet UILabel *ip;
 @property (weak, nonatomic) IBOutlet UILabel *vCpu;
 @property (weak, nonatomic) IBOutlet UILabel *memorySize;

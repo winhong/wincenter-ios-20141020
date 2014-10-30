@@ -95,6 +95,9 @@
         cell.vlan.text = network.vlanId;
         cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
         cell.state.text = [network state_text];
+        cell.state.textColor = [network state_color];
+        cell.state_image.layer.cornerRadius = 6;
+        cell.state_image.backgroundColor = [network state_color];
         cell.ipSegment.text = ipPoolVO.segment;
         cell.ipTotal.text = [NSString stringWithFormat:@"%d",ipPoolVO.total];
         cell.ipUsable.text = [NSString stringWithFormat:@"%d",ipPoolVO.usable];
@@ -109,6 +112,9 @@
         cell.name.text = network.name;
         cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
         cell.state.text = [network state_text];
+        cell.state.textColor = [network state_color];
+        cell.state_image.layer.cornerRadius = 6;
+        cell.state_image.backgroundColor = [network state_color];
         
         return cell;
     }

@@ -11,6 +11,7 @@
 @interface BusinessVO : RemoteObject
 
 @property int busId;
+@property int busDomainId;
 @property NSString *name;
 @property NSString *managerId;
 @property NSString *createTime;

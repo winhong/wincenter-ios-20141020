@@ -72,6 +72,8 @@
     cell.status.text = [vmVO state_text];
     cell.status.textColor = [vmVO state_color];
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [vmVO state_color];
     
     cell.progress_1.litEffect = NO;
     cell.progress_1.numBars = 10;

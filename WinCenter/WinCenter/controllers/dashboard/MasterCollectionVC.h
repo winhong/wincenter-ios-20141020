@@ -14,10 +14,12 @@
 @property NSArray *poolList;
 @property PoolVO *poolVO;
 @property NSMutableDictionary *dataList;
+@property NSArray *businessList;
 
 @property BOOL isDetailPagePushed;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backActionButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *allPoolOptionBarButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *allBusinessOptionBarButton;
 
 @property UIPopoverController *popover;
 

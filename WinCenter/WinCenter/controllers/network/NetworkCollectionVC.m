@@ -93,6 +93,7 @@
     if(vm){
         cell.vmName.text = vm.name;
         cell.vmState.text = [vm state_text];
+        cell.vmState.textColor = [vm state_color];
     }else{
         cell.vmName.text = @"";
         cell.vmState.text = @"";

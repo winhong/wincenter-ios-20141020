@@ -86,7 +86,7 @@
     }else if([self.state isEqualToString:@"STOPPED"]){
         return [UIColor lightGrayColor];
     }else{
-        return PNYellow;
+        return PNBlue;
     }
 }
 

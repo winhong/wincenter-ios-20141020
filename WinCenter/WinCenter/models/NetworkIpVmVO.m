@@ -46,4 +46,14 @@
     return result;
 }
 
+- (UIColor *)state_color{
+    if([self.state isEqualToString:@"OK"]){
+        return PNGreen;
+    }else if([self.state isEqualToString:@"STOPPED"]){
+        return [UIColor lightGrayColor];
+    }else{
+        return PNBlue;
+    }
+}
+
 @end
