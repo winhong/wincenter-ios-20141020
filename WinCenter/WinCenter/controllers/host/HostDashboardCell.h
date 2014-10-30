@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progress;
 @property (weak, nonatomic) IBOutlet UILabel *type;
 @property (weak, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UIView *status_image;
 @property (weak, nonatomic) IBOutlet UILabel *share;
 @property (weak, nonatomic) IBOutlet UIImageView *share_image;
 @property (weak, nonatomic) IBOutlet UILabel *ip;

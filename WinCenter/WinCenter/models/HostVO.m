@@ -11,7 +11,7 @@
 @implementation HostVO
 - (NSString*)state_text{
     NSDictionary *stateDict = @{
-                                @"OK":@"开机",
+                                @"OK":@"运行中",
                                 @"DISCONNECT":@"离线",
                                 @"MAINTAIN":@"维护",
                                 @"RESTART":@"重启"
@@ -30,7 +30,7 @@
     }else if([self.state isEqualToString:@"DISCONNECT"]){
         return [UIColor lightGrayColor];
     }else{
-        return PNYellow;
+        return PNBlue;
     }
 }
 

@@ -65,6 +65,8 @@
     cell.location.text = [NSString stringWithFormat:@"%@", storageVO.location];
     cell.status.text = [storageVO state_text];
     cell.status.textColor = [storageVO state_color];
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [storageVO state_color];
     cell.share_image.hidden = [storageVO.shared isEqualToString:@"false"];
     cell.progress.progress = (storageVO.totalStorage-storageVO.availStorage)/storageVO.totalStorage;
     if(cell.progress.progress>0.8){
@@ -85,6 +87,7 @@
     header.shareStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
     header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
+    header.storageSize4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
     header.usedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
     header.fcSanStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
