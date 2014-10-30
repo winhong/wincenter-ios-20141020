@@ -53,5 +53,6 @@
 - (void) vmConfigCPU:(BasicCompletionBlock)completionBlock withVCPU:(int)vcpu withCPUCap:(int)cpuCap withCPUWeight:(int)cpuWeight;
 - (void) vmConfigMemory:(BasicCompletionBlock)completionBlock withReservation:(int)reservation withMinMem:(int)minMem;
 
-    
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock;
+
 @end

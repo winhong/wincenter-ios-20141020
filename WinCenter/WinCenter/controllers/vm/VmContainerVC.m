@@ -16,6 +16,7 @@
 #import "VmMigrateVC.h"
 #import "VmDetailCPUConfigVC.h"
 #import "VmDetailMemoryConfigVC.h"
+#import "VmDetailSnapshootVC.h"
 
 @implementation VmContainerVC
 
@@ -81,6 +82,7 @@
     [pages addObject:vmDiskCollectionVC];
     
     VmDetailSnapshootVC *snapshot = [self.storyboard instantiateViewController:@"VmDetailSnapshootVC"];
+    snapshot.vmVO = self.vmVO;
     [pages addObject:snapshot];
     
     self.pages = pages;

@@ -1,0 +1,26 @@
+{
+"recordTotal": 1,
+"snapShots": [
+{
+"vmUri": "https://192.168.213.147:8080/wce/api/vms/767",
+"resPoolUri": "https://192.168.213.147:8080/wce/api/resourcePools/767",
+"snapShotId": 448,
+"name": "sss",
+"description": "ssss",
+"memory": 0,
+"vmId": 767,
+"vmName": "XDXD-验收通过-使用模板",
+"poolId": 12,
+"poolName": "资源池(勿移出主机163和161",
+"hostId": 35,
+"hostName": "winserver-161",
+"type": "DISK",
+"currented": "true",
+"createData": 1414586425000,
+"platform": "winserver",
+"hypervisor": "winserver",
+"originalId": "a4d0ec8f-640d-e5e6-18ca-3e7239053c03",
+"uri": "https://192.168.213.147:8080/wce/api/snapShots/448"
+}
+]
+}

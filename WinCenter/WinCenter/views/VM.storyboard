@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="2341.5" y="109"/>
         </scene>
-        <!--Chart Business Model Graph Interactive-->
+        <!--Vm Detail SnapshootVC-->
         <scene sceneID="qZl-dL-VaU">
             <objects>
-                <viewController storyboardIdentifier="VmDetailSnapshootVC" id="TWh-CV-p1q" customClass="WSChartBusinessModelGraphInteractive" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VmDetailSnapshootVC" id="TWh-CV-p1q" customClass="VmDetailSnapshootVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Ij-Xe-IKk"/>
                         <viewControllerLayoutGuide type="bottom" id="k0h-AG-LRV"/>
@@ -398,22 +398,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快照" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-Up-HXx">
-                                <rect key="frame" x="495" y="373" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-y4-QjR">
+                                <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="3tD-y4-QjR" firstAttribute="leading" secondItem="FXx-Jf-eqI" secondAttribute="leading" id="QNs-Dg-Wv5"/>
+                            <constraint firstAttribute="trailing" secondItem="3tD-y4-QjR" secondAttribute="trailing" id="Tpk-Th-kEH"/>
+                            <constraint firstItem="3tD-y4-QjR" firstAttribute="top" secondItem="FXx-Jf-eqI" secondAttribute="top" id="Uuh-lU-NzH"/>
+                            <constraint firstItem="k0h-AG-LRV" firstAttribute="top" secondItem="3tD-y4-QjR" secondAttribute="bottom" id="gHi-4e-DXg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uDd-fD-MLD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
+                    <connections>
+                        <outlet property="webview" destination="3tD-y4-QjR" id="fZg-EC-0Fw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6k8-ZW-ZPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9000.5" y="109"/>
+            <point key="canvasLocation" x="8986.5" y="28"/>
         </scene>
         <!--Vm Network CollectionVC-->
         <scene sceneID="fEf-we-FcX">

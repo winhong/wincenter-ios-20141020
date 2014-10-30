@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TemplateIcon2x.png">
+   </FileRef>
+   <FileRef
       location = "group:WinCenter/WinCenter.xcodeproj">
    </FileRef>
    <FileRef

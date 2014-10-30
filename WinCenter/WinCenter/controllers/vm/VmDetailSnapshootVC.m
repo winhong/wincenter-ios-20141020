@@ -7,9 +7,12 @@
 //
 
 #import "VmDetailSnapshootVC.h"
+#import "WebViewJavascriptBridge.h"
 
 @interface VmDetailSnapshootVC ()
-
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
+@property WebViewJavascriptBridge* bridge;
+@property NSString *snashotData;
 @end
 
 @implementation VmDetailSnapshootVC
@@ -27,13 +30,50 @@
 {
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [WebViewJavascriptBridge enableLogging];
+    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webview webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"ObjC received message from JS: %@", data);
+        responseCallback(@"Response for message from ObjC");
+
+    }];
+    
+    //
+    NSString* htmlPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"RealtimeCurve.bundle/index4snashot.html"];
+    
+    NSURL* url = [NSURL fileURLWithPath:htmlPath];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    [self.webview loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)reloadData{
+
+    [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
+        self.snashotData = object;
+        [_bridge callHandler:@"testJavascriptHandler" data:self.snashotData];
+    }];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+    [self reloadData];
+    
+    
+    
+    
+    //等webview加载完毕再更新数据
+    //    self.timer = [NSTimer scheduledTimerWithTimeInterval: 1
+    //                                             target: self
+    //                                           selector: @selector(updateData)
+    //                                           userInfo: nil
+    //                                            repeats: YES];
 }
 
 /*
