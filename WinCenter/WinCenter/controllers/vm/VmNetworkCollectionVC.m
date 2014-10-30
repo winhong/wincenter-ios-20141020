@@ -29,6 +29,8 @@
     cell.label1.text = [vmNetworkVO type_text];
     cell.label2.text = vmNetworkVO.ip;
     cell.label3.text = vmNetworkVO.macAddr;
+    cell.status.text = [vmNetworkVO state_text];
+    cell.status.textColor = [vmNetworkVO state_color];
     cell.label4.text = [NSString stringWithFormat:@"%d", vmNetworkVO.vlanId];
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];

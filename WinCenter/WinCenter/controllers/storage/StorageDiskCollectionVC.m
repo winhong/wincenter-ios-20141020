@@ -58,6 +58,7 @@
     StorageVolumnVO *volumnVO = self.dataList[indexPath.row];
     cell.name.text = volumnVO.name;
     cell.state.text = [volumnVO state_text];
+    cell.state.textColor = [volumnVO state_color];
     cell.isASnapshot.text = [volumnVO isASnapshot_text];
     cell.size.text = [NSString stringWithFormat:@"%dGB", volumnVO.size];
     cell.belongsVM.text = [volumnVO vmNames_text];

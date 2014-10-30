@@ -39,6 +39,26 @@
     return result;
 }
 
+- (UIColor *)state_color{
+    NSDictionary *dict = @{
+                           @"OK":PNGreen,
+                           @"USING":PNYellow,
+                           @"MOUNT":PNBlue,
+                           @"UNMOUNT":[UIColor lightGrayColor],
+                           @"MIGRATING":PNBlue,
+                           @"DELETING":PNBlue,
+                           @"RESIZING":PNBlue,
+                           @"PLUGING":PNBlue,
+                           @"UNPLUGING":PNBlue
+                           };
+    
+    UIColor *result = [dict valueForKey:self.state];
+    if((self.state==nil) || [self.state isEqualToString:@""]){
+        result = PNBlue;
+    }
+    return result;
+}
+
 - (NSString*)type_text{
     NSDictionary *dict = @{
                            @"SYSTEM":@"系统盘",

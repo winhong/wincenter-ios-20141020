@@ -11,14 +11,15 @@
 @interface VmNetworkVO : NSObject
 @property int nicId;
 @property NSString *name;
-
+@property NSString *state;
 @property NSString *type;
 @property NSString *ip;
 @property NSString *macAddr;
 @property int vlanId;
 
-@property NSString *state;
 
 - (NSString*)type_text;
+- (NSString*)state_text;
+- (UIColor *)state_color;
 
 @end

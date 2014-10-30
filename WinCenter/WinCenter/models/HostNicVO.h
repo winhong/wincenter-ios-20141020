@@ -21,6 +21,7 @@
 @property NSString *linkeState;
 
 -(NSString*)duplex_text;
+- (UIColor *)state_color;
 -(NSString*) linkState_image;
 
 @end

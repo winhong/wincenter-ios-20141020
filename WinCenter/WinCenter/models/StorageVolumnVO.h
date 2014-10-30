@@ -21,5 +21,6 @@
 - (NSString*)vmNames_text;
 - (NSString*)isASnapshot_text;
 - (NSString*)state_text;
+- (UIColor *)state_color;
 - (NSString*)type_text;
 @end

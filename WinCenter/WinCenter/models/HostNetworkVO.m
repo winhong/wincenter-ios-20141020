@@ -22,6 +22,18 @@
     }
 }
 
+- (UIColor *)state_color{
+    if([self.state isEqualToString:@"CONNECTED"]){
+        return PNGreen;
+    }else if([self.state isEqualToString:@"FREE"]){
+        return PNBlue;
+    }else if([self.state isEqualToString:@"IN_USED"]){
+        return PNYellow;
+    }else{
+        return PNBlue;
+    }
+}
+
 -(NSString*) linkState_image{
     if([self.linkState isEqualToString:@"CONNECTED"]){
         return @"链接";

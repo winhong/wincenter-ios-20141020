@@ -16,5 +16,6 @@
 @property NSString *state;
 
 - (NSString*)state_text;
+- (UIColor *)state_color;
 
 @end
