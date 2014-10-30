@@ -66,9 +66,10 @@
     if(![viewControllerName isEqualToString:@""]){
         UINavigationController *nav = [self.storyboard instantiateViewController:viewControllerName];
         UIViewController *vc = [[nav childViewControllers] firstObject];
-        DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleNormal];
-        navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:navigation animated:YES completion:nil];
+        //DTNavigationController *navigation = [DTNavigationController navigationWithRootViewController:vc folderStyle:DTFolderBarStyleNormal];
+        //navigation.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        //[self presentViewController:navigation animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 
 }
@@ -115,13 +116,13 @@
 }
 
 -(IBAction)showWarningInfoVC:(id)sender{
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
-    [self presentViewController:vc animated:YES completion:nil];
+    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+    [self.navigationController pushViewController:[[nav childViewControllers] firstObject] animated:YES];
 }
 
 -(IBAction)showControlRecordVC:(id)sender{
     UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
-    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:[[nav childViewControllers] firstObject] animated:YES];
 }
 
 @end

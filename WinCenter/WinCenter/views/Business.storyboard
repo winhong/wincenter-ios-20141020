@@ -108,7 +108,7 @@
         <!--Business Detail InfoVC-->
         <scene sceneID="isk-bt-6pP">
             <objects>
-                <viewController storyboardIdentifier="BusinessDetailInfoVC_iPad" id="Jix-fc-wnM" customClass="BusinessDetailInfoVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessDetailInfoVC" id="Jix-fc-wnM" customClass="BusinessDetailInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y4h-U4-dIz"/>
                         <viewControllerLayoutGuide type="bottom" id="njw-fj-4OT"/>
@@ -342,113 +342,6 @@
             </objects>
             <point key="canvasLocation" x="5603.625" y="412.5"/>
         </scene>
-        <!--Business Detail InfoVC-->
-        <scene sceneID="u5T-md-BW3">
-            <objects>
-                <viewController storyboardIdentifier="BusinessDetailInfoVC_iPhone" id="i8L-Cn-lCl" customClass="BusinessDetailInfoVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GNT-Ao-64r"/>
-                        <viewControllerLayoutGuide type="bottom" id="YXE-Zi-VEf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DAA-We-9O4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-B1-ckV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvZ-TM-EbY">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="663"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="none" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="208" translatesAutoresizingMaskIntoConstraints="NO" id="Yux-HT-VsD">
-                                                <rect key="frame" x="40" y="454" width="221" height="189"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="描述" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-hU-Kuf">
-                                                <rect key="frame" x="20" y="425" width="78" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi7-Nf-dHQ">
-                                                <rect key="frame" x="40" y="375" width="181" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="创建用户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oW9-3P-7ug">
-                                                <rect key="frame" x="20" y="346" width="105" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-yg-JmL">
-                                                <rect key="frame" x="40" y="302" width="181" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="创建日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWw-WA-QRd">
-                                                <rect key="frame" x="20" y="273" width="110" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Q-UX-0SZ">
-                                                <rect key="frame" x="40" y="228" width="181" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="所属平台" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9St-WC-DzA">
-                                                <rect key="frame" x="20" y="199" width="105" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3q-gd-FNn">
-                                                <rect key="frame" x="40" y="157" width="181" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="管理员" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMP-ri-JqZ">
-                                                <rect key="frame" x="20" y="128" width="85" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="业务icon" translatesAutoresizingMaskIntoConstraints="NO" id="2pU-Wr-e3M">
-                                                <rect key="frame" x="20" y="20" width="100" height="100"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Gmy-B1-ckV" firstAttribute="top" secondItem="DAA-We-9O4" secondAttribute="topMargin" id="9Vz-Is-mvg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gmy-B1-ckV" secondAttribute="trailing" constant="-16" id="RUo-vk-fse"/>
-                            <constraint firstItem="Gmy-B1-ckV" firstAttribute="leading" secondItem="DAA-We-9O4" secondAttribute="leadingMargin" constant="-16" id="esl-Bm-gnD"/>
-                            <constraint firstItem="YXE-Zi-VEf" firstAttribute="top" secondItem="Gmy-B1-ckV" secondAttribute="bottom" id="zak-8P-Nnz"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="wcA-6F-BcC"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="createTime" destination="nKe-yg-JmL" id="cmK-lq-zMX"/>
-                        <outlet property="createUser" destination="fi7-Nf-dHQ" id="X8A-Bq-Fyn"/>
-                        <outlet property="desc" destination="Yux-HT-VsD" id="doF-Cx-6aD"/>
-                        <outlet property="managerId" destination="E3q-gd-FNn" id="ePC-IW-fap"/>
-                        <outlet property="platform" destination="Y9Q-UX-0SZ" id="tFv-07-nA4"/>
-                        <outlet property="scrollView" destination="Gmy-B1-ckV" id="THL-Gq-oH2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IYe-pp-wdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4617" y="1206"/>
-        </scene>
         <!--Business Vm CollectionVC-->
         <scene sceneID="8bc-YV-tnE">
             <objects>
@@ -532,7 +425,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="业务icon" width="138" height="137"/>
         <image name="业务域" width="14" height="20"/>
         <image name="业务系统－摘要-图标" width="95" height="95"/>
         <image name="业务系统－摘要－虚拟机总数" width="334" height="89"/>

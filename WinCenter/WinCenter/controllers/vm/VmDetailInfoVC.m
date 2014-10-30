@@ -211,10 +211,18 @@
     self.memory.text = [NSString stringWithFormat:@"%d", self.vmVO.memory];
     //self.snopshotNum.text
     self.osType_image.image = [UIImage imageNamed:[self.vmVO osType_imageName_big]];
-    self.isDynamicCpu_img.hidden = ![self.vmVO isDynamicCpu_img];
-    self.noDynamicCpu_img.hidden = [self.vmVO isDynamicCpu_img];
-    self.isDynamicMemWce_img.hidden = ![self.vmVO isDynamicMemWce_img];
-    self.noDynamicMemWce_img.hidden = [self.vmVO isDynamicMemWce_img];
+    if(self.isDynamicCpu_img){
+        self.isDynamicCpu_img.hidden = ![self.vmVO isDynamicCpu_img];
+    }
+    if(self.noDynamicCpu_img){
+        self.noDynamicCpu_img.hidden = [self.vmVO isDynamicCpu_img];
+    }
+    if(self.isDynamicMemWce_img){
+        self.isDynamicMemWce_img.hidden = ![self.vmVO isDynamicMemWce_img];
+    }
+    if(self.noDynamicMemWce_img){
+        self.noDynamicMemWce_img.hidden = [self.vmVO isDynamicMemWce_img];
+    }
 }
 
 @end

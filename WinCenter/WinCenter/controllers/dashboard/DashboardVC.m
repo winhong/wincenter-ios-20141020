@@ -26,8 +26,8 @@
             [RemoteObject setCurrentDatacenterVO:[allRemote firstObject]];
             [self refresh];
             if(allRemote.count>1){
-                [self.tabBarVC setSelectedIndex:9];
-                [self.menuVC setSelectedItemIndex:9];
+                [self.tabBarVC setSelectedIndex:7];
+                [self.menuVC setSelectedItemIndex:7];
             }else{
                 [self.tabBarVC setSelectedIndex:0];
                 [self.menuVC setSelectedItemIndex:0];
