@@ -818,7 +818,6 @@
         <!--Realtime CurveVC-->
         <scene sceneID="NGn-AD-3i2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XYg-bW-4WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HostDetailPerformanceVC" id="Od8-Qj-eqe" customClass="RealtimeCurveVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hqe-Zl-LZo"/>
@@ -847,13 +846,13 @@
                         <outlet property="webview" destination="ivX-0B-c4I" id="hRb-cS-6ss"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYg-bW-4WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7463.5" y="-1467"/>
         </scene>
         <!--Realtime CurveVC-->
         <scene sceneID="nzk-6X-VXc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LNa-b2-Z4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VmDetailPerformanceVC" id="bS5-zy-Gs2" customClass="RealtimeCurveVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HxG-c7-V64"/>
@@ -882,6 +881,7 @@
                         <outlet property="webview" destination="Hmn-DL-7s5" id="SZY-I0-T2c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNa-b2-Z4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7463.5" y="-385"/>
         </scene>
