@@ -22,7 +22,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(retain,nonatomic)NSTimer* timer;
 @property NSObject *performanceData;
 @property WebViewJavascriptBridge* bridge;
-@property int startTime;
+@property float startTime;
 @end
 
 @implementation RealtimeCurveVC
@@ -124,10 +124,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if (!self.startTime) {
         self.startTime = (long long int)[NSDate new];
     }
-    HostVO *host = [HostVO new];
-    host.hostId = 1;
-
-    [host getPerformanceAsync:^(id object, NSError *error) {
+    [self.hostVO getPerformanceAsync:^(id object, NSError *error) {
         self.performanceData = object;
         [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
     } withStartTime:self.startTime];
@@ -153,8 +150,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *date=[dateFormatter dateFromString:startTime];
-    self.startTime = (long long int)date*1000;
-    //NSLog([NSString stringWithFormat:@"%d",self.startTime ]);
+    NSTimeInterval time=[date timeIntervalSince1970]*1000;
+    self.startTime = (float)time;
+   // NSLog([NSString stringWithFormat:@"啊啊啊啊：%f",time]);
     [self reloadData];
 }
 
