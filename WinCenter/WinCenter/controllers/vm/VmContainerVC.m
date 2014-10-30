@@ -17,6 +17,7 @@
 #import "VmDetailCPUConfigVC.h"
 #import "VmDetailMemoryConfigVC.h"
 #import "VmDetailSnapshootVC.h"
+#import "RealtimeCurveVC.h"
 
 @implementation VmContainerVC
 
@@ -70,7 +71,10 @@
     [pages addObject:detailVC];
     
     if(self.hasPerformancePage){
-        [pages addObject:[[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"VmDetailPerformanceVC"]];
+        RealtimeCurveVC *performVC = [[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"VmDetailPerformanceVC"];
+        performVC.vmVO = self.vmVO;
+        performVC.chartType = @"vm";
+        [pages addObject:performVC];
     }
         
     VmNetworkCollectionVC *vmNetworkCollectionVC = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];

@@ -55,6 +55,7 @@
     
     RealtimeCurveVC *performVC = [[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"HostDetailPerformanceVC"];
     performVC.HostVO = self.hostVO;
+    performVC.chartType = @"host";
     [pages addObject:performVC];
     
     VmCollectionVC *hostVmCollectionVC = [[UIStoryboard storyboardWithName:@"VM" bundle:nil] instantiateViewController:@"VmCollectionVC"];

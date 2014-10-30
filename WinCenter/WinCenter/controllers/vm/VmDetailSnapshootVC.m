@@ -54,7 +54,7 @@
 
 -(void)reloadData{
 
-    [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
+    [self.vmVO getRaphaelAsync:^(id object, NSError *error) {
         self.snashotData = object;
         [_bridge callHandler:@"testJavascriptHandler" data:self.snashotData];
     }];

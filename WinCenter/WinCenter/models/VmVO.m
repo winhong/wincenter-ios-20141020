@@ -240,7 +240,7 @@
     
 }
 
-- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getRaphaelAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         NSData *result = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmSnashotAsync.josn" ofType:@"json"]];
         NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
@@ -260,6 +260,25 @@
         //NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
         NSString *objStr = [[NSString alloc]initWithData:result  encoding:NSUTF8StringEncoding];
         completionBlock(objStr, nil);
+    }];
+}
+
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(float)startTime{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        NSData *result = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getPerformanceAsync" ofType:@"json"]];
+        NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
+        completionBlock(obj, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getVmPerformance&startTime=%.f&cf=AVERAGE&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id,startTime, self.vmId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        NSData *result = jsonResponse.rawBody ;
+        NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
+        completionBlock(obj, nil);
+        
+        //completionBlock([[NSString alloc] initWithData:jsonResponse.rawBody encoding:NSUTF8StringEncoding], error);
     }];
 }
 

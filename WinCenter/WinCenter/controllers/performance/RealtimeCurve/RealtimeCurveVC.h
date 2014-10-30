@@ -11,4 +11,6 @@
 @interface RealtimeCurveVC : UIViewController<UIWebViewDelegate>
 
 @property HostVO *hostVO;
+@property VmVO *vmVO;
+@property NSString *chartType;
 @end
