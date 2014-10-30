@@ -2,7 +2,7 @@
     "dataCenters": [
                     {
                     "id": 1,
-                    "name": "wincenter4  ",
+                    "name": "数据中心一  ",
                     "wceIpAddress": "192.168.100.168",
                     "wcePort": 8080,
                     "wceAccount": "admin",
@@ -13,7 +13,7 @@
                     },
                     {
                     "id": 2,
-                    "name": "wincenter5  ",
+                    "name": "数据中心二  ",
                     "wceIpAddress": "192.168.100.169",
                     "wcePort": 8080,
                     "wceAccount": "admin",

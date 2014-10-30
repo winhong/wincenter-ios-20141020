@@ -1,17 +1,17 @@
 {
     "total": {
-        "lvm": "20",
-        "udev": "12",
-        "nfs": "11",
-        "lvmoiscsi": "4",
-        "lvmohba": "8"
-    },
-    "share": {
-        "true": 5652.50,
-        "false": 10000.07
+        "true": "3617.32",
+        "false": "5545.55"
     },
     "capacity": {
-        "usedStorage": "10771.03",
-        "availStorage": "4881.54"
+        "usedStorage": "5069.23",
+        "availStorage": "4093.64"
+    },
+    "type": {
+        "lvm": 7,
+        "udev": 15,
+        "nfs": 16,
+        "lvmoiscsi": 1,
+        "lvmohba": 2
     }
 }
