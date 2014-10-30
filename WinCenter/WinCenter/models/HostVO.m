@@ -152,7 +152,7 @@
     }];
 }
 
-- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(int)startTime{
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(float)startTime{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         NSData *result = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Host.getPerformanceAsync" ofType:@"json"]];
         NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
@@ -161,7 +161,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.getHostPerformance&startTime=%d&cf=AVERAGE&placeholder=35", [RemoteObject getCurrentDatacenterVO].id,startTime, self.hostId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.getHostPerformance&startTime=%.f&cf=AVERAGE&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id,startTime, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         NSData *result = jsonResponse.rawBody ;
         NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];

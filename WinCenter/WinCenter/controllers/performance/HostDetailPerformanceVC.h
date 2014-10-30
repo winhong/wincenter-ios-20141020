@@ -10,4 +10,5 @@
 
 @interface HostDetailPerformanceVC : UIViewController
 
+@property HostVO *hostVO;
 @end

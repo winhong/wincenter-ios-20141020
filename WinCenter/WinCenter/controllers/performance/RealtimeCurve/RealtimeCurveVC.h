@@ -10,4 +10,5 @@
 
 @interface RealtimeCurveVC : UIViewController<UIWebViewDelegate>
 
+@property HostVO *hostVO;
 @end

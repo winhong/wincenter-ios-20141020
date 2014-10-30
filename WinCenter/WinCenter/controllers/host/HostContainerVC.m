@@ -14,6 +14,7 @@
 #import "HostNetworkCollectionVC.h"
 #import "HostNicCollectionVC.h"
 #import "PopControlRecordVC.h"
+#import "RealtimeCurveVC.h"
 
 @implementation HostContainerVC
 
@@ -52,7 +53,8 @@
     [pages addObject:detailVC];
     
     
-    UIViewController *performVC = [[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"HostDetailPerformanceVC"];
+    RealtimeCurveVC *performVC = [[UIStoryboard storyboardWithName:@"Performance" bundle:nil] instantiateViewController:@"HostDetailPerformanceVC"];
+    performVC.HostVO = self.hostVO;
     [pages addObject:performVC];
     
     VmCollectionVC *hostVmCollectionVC = [[UIStoryboard storyboardWithName:@"VM" bundle:nil] instantiateViewController:@"VmCollectionVC"];

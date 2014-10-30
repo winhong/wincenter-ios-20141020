@@ -240,6 +240,29 @@
     
 }
 
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        NSData *result = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmSnashotAsync.josn" ofType:@"json"]];
+        NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
+        completionBlock(obj, nil);
+        return;
+    }
+    
+    [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
+        [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
+                                       @"apiKey":@"pc.winserver.snapShot.getSnapShots",
+                                       @"placeholder": @"",
+                                       @"params": [NSString stringWithFormat:@"vmId=%d",self.vmId],
+                                       @"apiType": @"GET"}];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        NSData *result = jsonResponse.rawBody ;
+        //NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
+        NSString *objStr = [[NSString alloc]initWithData:result  encoding:NSUTF8StringEncoding];
+        completionBlock(objStr, nil);
+    }];
+}
+
 - (BOOL) isDynamicCpu_img{
     if ([self.isDynamicCpu isEqualToString:@"true"]) {
         return YES;

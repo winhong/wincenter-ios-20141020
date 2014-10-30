@@ -10,4 +10,6 @@
 
 @interface VmDetailSnapshootVC : UIViewController
 
+@property VmVO *vmVO;
+
 @end
