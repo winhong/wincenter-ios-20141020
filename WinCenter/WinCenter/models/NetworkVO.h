@@ -17,5 +17,6 @@
 
 -(NSString*) state_text;
 -(NSString*) linkState_image;
+-(UIColor*) state_color;
 
 @end

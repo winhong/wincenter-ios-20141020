@@ -3443,6 +3443,12 @@
                                 <action selector="dismissModal:" destination="rJv-N2-owX" id="cDf-38-7BI"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="uVe-5k-gQ2"/>
+                        <barButtonItem title="全部业务系统" id="qXt-3j-g6W">
+                            <connections>
+                                <action selector="showBusinessListSelect:" destination="rJv-N2-owX" id="bG8-hi-3i4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="CJI-ZF-w2K"/>
                         <barButtonItem image="icon-warning" id="9XT-hd-4Lb">
                             <connections>
@@ -3464,6 +3470,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="allBusinessOptionBarButton" destination="qXt-3j-g6W" id="0DU-VS-cSt"/>
                         <outlet property="backActionButton" destination="f5i-W0-E3V" id="EKK-Pg-9D6"/>
                     </connections>
                 </collectionViewController>
