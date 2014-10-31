@@ -1,0 +1,32 @@
+{
+    "recordTotal": 3,
+    "busDomains": [
+                   {
+                   "busDomainId": 11,
+                   "busDomainName": "业务域1",
+                   "description": "",
+                   "createTime": "2014-10-24 14:35:26 000",
+                   "createUser": "admin",
+                   "principal": "admin",
+                   "dataCenterId": "1"
+                   },
+                   {
+                   "busDomainId": 10,
+                   "busDomainName": "业务域2",
+                   "description": "中间空格中间空格中间空格  中间空格中间空格中间空格    中间空格中间空格中间空格中间空格",
+                   "createTime": "2014-10-24 14:16:33 000",
+                   "createUser": "admin",
+                   "principal": "admin",
+                   "dataCenterId": "1"
+                   },
+                   {
+                   "busDomainId": 9,
+                   "busDomainName": "业务域3",
+                   "description": "名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长名称等超长",
+                   "createTime": "2014-10-24 14:07:00 000",
+                   "createUser": "admin",
+                   "principal": "admin",
+                   "dataCenterId": "1"
+                   }
+                   ]
+}

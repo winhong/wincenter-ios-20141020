@@ -214,7 +214,7 @@
                                                 <rect key="frame" x="145" y="256" width="20" height="19"/>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UmV-Ec-nhs">
-                                                <rect key="frame" x="186" y="254" width="317" height="250"/>
+                                                <rect key="frame" x="182" y="252" width="317" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

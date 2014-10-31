@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *name;
 @property (weak, nonatomic) IBOutlet UILabel *businessCount;
-@property (weak, nonatomic) IBOutlet UILabel *businessVmCount;
+@property (weak, nonatomic) IBOutlet UILabel *busDomainsCount;
 
 @property (weak, nonatomic) IBOutlet UILabel *alloctedBus;
 @property (weak, nonatomic) IBOutlet UILabel *unalloctedBus;

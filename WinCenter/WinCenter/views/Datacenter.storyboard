@@ -3289,7 +3289,7 @@
                                                     <rect key="frame" x="605" y="25" width="1" height="120"/>
                                                     <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机数" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-40-4RI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="业务域数" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-40-4RI">
                                                     <rect key="frame" x="476" y="110" width="96" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3422,10 +3422,10 @@
                             <connections>
                                 <outlet property="alloctedBus" destination="0Dd-8l-VPP" id="OpA-2j-4az"/>
                                 <outlet property="alloctedBus2" destination="jta-K9-0Hj" id="xil-Va-2HA"/>
+                                <outlet property="busDomainsCount" destination="eQR-VD-pPB" id="zWf-rK-jtb"/>
                                 <outlet property="businessAllocateChart" destination="1YG-OF-qEx" id="6gi-md-0aA"/>
                                 <outlet property="businessCount" destination="K5Q-sf-N7A" id="g1d-bz-dJB"/>
                                 <outlet property="businessCount2" destination="ESA-nk-A9s" id="qUE-Dk-GAe"/>
-                                <outlet property="businessVmCount" destination="eQR-VD-pPB" id="Qwh-48-xKc"/>
                                 <outlet property="businessVmCount2" destination="K9i-gH-6pf" id="Ly2-2A-H91"/>
                                 <outlet property="name" destination="ROt-1z-Eh0" id="DeD-Hd-J7O"/>
                                 <outlet property="unalloctedBus" destination="Z40-aj-XHx" id="wm2-Rr-ly6"/>

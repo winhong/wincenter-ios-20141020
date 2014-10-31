@@ -53,5 +53,6 @@
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
 - (void) getNetworkIpVmAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getBusDomainsListAsync:(FetchAllCompletionBlock)completionBlock;
 
 @end

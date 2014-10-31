@@ -15,6 +15,7 @@
 
 @property NSArray *allBusList;
 @property NSArray *unalloctedBusList;
+@property NSArray *allBusDomainsList;
 
 @end
 
@@ -37,6 +38,13 @@
             }];
         }];
     }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(NSArray *allRemote, NSError *error) {
+        self.allBusDomainsList = allRemote;
+        [self.collectionView headerEndRefreshing];
+        [self.collectionView footerEndRefreshing];
+        [self.collectionView reloadData];
+    }];
 
     
 }
@@ -55,17 +63,16 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     BusinessDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"BusinessDashboardHeader" forIndexPath:indexPath];
-    BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount.text = [NSString stringWithFormat:@"%d",businessVO.vmNum];
+    header.busDomainsCount.text = [NSString stringWithFormat:@"%ld",self.allBusDomainsList.count];
     header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //缩起
     header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount2.text =[NSString stringWithFormat:@"%d",businessVO.vmNum];
+//    header.busDomainsCount2.text =[NSString stringWithFormat:@"%ld",allBusDomainsList.count];
     header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
