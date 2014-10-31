@@ -17,6 +17,7 @@
 @property NSString *isASnapshot;
 @property NSString *type;
 @property NSString *vmNames;
+@property NSString *storagePoolName;
 
 - (NSString*)vmNames_text;
 - (NSString*)isASnapshot_text;

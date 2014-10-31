@@ -15,6 +15,7 @@
 
 @property NSArray *allBusList;
 @property NSArray *unalloctedBusList;
+@property NSArray *allBusDomainsList;
 
 @end
 

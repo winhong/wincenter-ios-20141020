@@ -15,6 +15,7 @@
 @property PoolVO *poolVO;
 @property NSMutableArray *dataList;
 @property NSArray *businessList;
+@property NSArray *busDomainsList;
 
 @property BOOL isDetailPagePushed;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backActionButton;

@@ -453,7 +453,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="不允许-black" translatesAutoresizingMaskIntoConstraints="NO" id="GOr-rG-FX0">
-                                                <rect key="frame" x="52" y="62" width="32" height="26"/>
+                                                <rect key="frame" x="122" y="16" width="32" height="26"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

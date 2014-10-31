@@ -38,10 +38,14 @@
 @implementation VmDetailInfoVC
 
 - (void)viewDidLayoutSubviews{
-    if(self.scrollView){
-        self.scrollView.contentSize = CGSizeMake(320, 700);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if(self.scrollView){
+            self.scrollView.frame = [[UIScreen mainScreen] bounds];
+            self.scrollView.contentSize = CGSizeMake(320, 1000);
+        }
     }
 }
+
 - (IBAction)testAction:(id)sender {
     // There are several ways to init, just look at the class header
     NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleSuccess
