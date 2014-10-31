@@ -380,7 +380,7 @@
 		684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */; };
 		684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */; };
 		684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F019FFC587009C4B09 /* IpPoolsVO.m */; };
-		684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */; };
+		684D90F319FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */; };
 		684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */; };
 		684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */; };
 		6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */; };
@@ -1058,7 +1058,7 @@
 		684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListResult.m; sourceTree = "<group>"; };
 		684D90EF19FFC587009C4B09 /* IpPoolsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsVO.h; sourceTree = "<group>"; };
 		684D90F019FFC587009C4B09 /* IpPoolsVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsVO.m; sourceTree = "<group>"; };
-		684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpVmAsync.json; sourceTree = "<group>"; };
+		684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getNetworkIpVmAsync.json; sourceTree = "<group>"; };
 		684D90F419FFD8AA009C4B09 /* NetworkIpVmListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmListResult.h; sourceTree = "<group>"; };
 		684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmListResult.m; sourceTree = "<group>"; };
 		684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmVO.h; sourceTree = "<group>"; };
@@ -1522,7 +1522,7 @@
 				68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */,
 				684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */,
 				6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */,
-				684D90F219FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json */,
+				684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */,
 				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */,
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 			);
@@ -2528,7 +2528,7 @@
 				843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */,
 				18763C0B19F4E4E400669CC3 /* icon2@2x.png in Resources */,
 				181DED5D19F17CB100998835 /* PoolVO.getHostLisWithlimit.json in Resources */,
-				684D90F319FFD74C009C4B09 /* NetworkVO.getIpVmAsync.json in Resources */,
+				684D90F319FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json in Resources */,
 				1824365E19F56A38007E4D6C /* SUNButtonBoard_button1.png in Resources */,
 				1891808119F3980C00B1ECA4 /* Main.storyboard in Resources */,
 				181DECAC19F17CB100998835 /* index_press@2x.png in Resources */,

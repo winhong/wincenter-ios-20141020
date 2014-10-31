@@ -13,8 +13,8 @@
 
 @interface BusinessDashboardVC ()
 
-@property BusinessListResult *allBusList;
-@property BusinessListResult *unalloctedBusList;
+@property NSArray *allBusList;
+@property NSArray *unalloctedBusList;
 
 @end
 
@@ -26,11 +26,11 @@
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(NSArray *allRemote, NSError *error) {
         [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(id object, NSError *error) {
-            self.allBusList = object;
+        [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(NSArray *allRemote, NSError *error) {
+            self.allBusList = allRemote;
             
-            [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
-                self.unalloctedBusList = object;
+            [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(NSArray *allRemote, NSError *error) {
+                self.unalloctedBusList = allRemote;
                 [self.collectionView headerEndRefreshing];
                 [self.collectionView footerEndRefreshing];
                 [self.collectionView reloadData];
@@ -58,19 +58,19 @@
     BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
-    header.businessCount.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
+    header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.businessVmCount.text = [NSString stringWithFormat:@"%d",businessVO.vmNum];
-    header.alloctedBus.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
-    header.unalloctedBus.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
+    header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
+    header.unalloctedBus.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //缩起
-    header.businessCount2.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal];
+    header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.businessVmCount2.text =[NSString stringWithFormat:@"%d",businessVO.vmNum];
-    header.alloctedBus2.text =[NSString stringWithFormat:@"%d",self.allBusList.recordTotal - self.unalloctedBusList.recordTotal];
-    header.unalloctedBus2.text =[NSString stringWithFormat:@"%d",self.unalloctedBusList.recordTotal];
+    header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
+    header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.businessAllocateChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.unalloctedBusList.recordTotal*100/self.allBusList.recordTotal] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.businessAllocateChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.unalloctedBusList.count*100/self.allBusList.count] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
