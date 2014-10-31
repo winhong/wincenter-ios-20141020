@@ -311,7 +311,7 @@
                 "ipPoolId": 32775,
                 "name": "vlan20",
                 "dataCenterId": 1,
-                "segment": "192.168.100.5/20",
+                "segment": "192.105.1.0/2",
                 "state": 0,
                 "vlanIdList": "20",
                 "createTime": "2014-10-22 15:05:02 000",
@@ -319,11 +319,11 @@
                 "gateway": "192.168.100.1",
                 "dns1": "",
                 "dns2": "",
-                "total": 4096,
-                "preUsed": 8,
-                "used": 26,
-                "unUsable": 3,
-                "usable": 4059
+                "total": 3,
+                "preUsed": 0,
+                "used": 2,
+                "unUsable": 0,
+                "usable": 1
                 },
                 {
                 "ipPoolId": 32772,
