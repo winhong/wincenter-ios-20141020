@@ -47,6 +47,9 @@
         }
     }];
 }
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
 
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {

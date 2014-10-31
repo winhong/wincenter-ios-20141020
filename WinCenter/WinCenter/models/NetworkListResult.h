@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NetworkListResult : NSObject
-
+@property int recordTotal;
 @property NSArray *networks;
 @end

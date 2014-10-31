@@ -45,8 +45,7 @@
 - (void) getBusinessAllAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getBusinessUnallocatedAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList;
 
 - (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getIpPoolsDetailAsync:(FetchObjectCompletionBlock)completionBlock withPoolId:(int)poolId;

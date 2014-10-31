@@ -264,27 +264,14 @@
 
 }
 
-- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock{
-    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getInsideAsync" ofType:@"json"]]], nil);
-        return;
-    }
-    
-    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=type=INTERNAL", self.id]];
-    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
-    }];
-}
-
-- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getNetworkListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[NetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Network.getOutsideAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=type=EXTERNAL", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=type%%3D%@%%26firstResult%%3D%ld%%26maxResult%%3D%ld", self.id, (isExternal ? @"EXTERNAL" : @"INTERNAL"),  referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[NetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];

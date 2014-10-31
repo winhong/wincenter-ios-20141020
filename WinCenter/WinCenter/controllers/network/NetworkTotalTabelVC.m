@@ -12,13 +12,15 @@
 
 @interface NetworkTotalTabelVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
-@property NSArray *networkList;
+@property NSMutableArray *networkList;
 @property NSMutableDictionary *ipPoolsDict;
 @end
 
 @implementation NetworkTotalTabelVC
 
 - (void)viewDidLoad {
+    self.networkList = [[NSMutableArray alloc] initWithCapacity:0];
+    
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -40,12 +42,17 @@
                 }
             }
         }
+        __unsafe_unretained typeof(self) week_self = self;
         
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
-            self.networkList = ((NetworkListResult*)object).networks;
-            [self.tableView reloadData];
+        [self.tableView addHeaderWithCallback:^{
+            [week_self.networkList removeAllObjects];
+            [week_self reloadData];
+        }];
+        [self.tableView addFooterWithCallback:^{
+            [week_self reloadData];
         }];
         
+        [self reloadData];
     }];
 }
 
@@ -66,22 +73,21 @@
     return self.networkList.count;
 }
 
-- (IBAction)segmentChange:(id)sender {
-    if(self.segment.selectedSegmentIndex==0){
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
-            self.networkList = ((NetworkListResult*)object).networks;
-            [self.tableView reloadData];
-            
-        }];
-        
-    }else{
-        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
-            self.networkList = ((NetworkListResult*)object).networks;
-            [self.tableView reloadData];
-            
-        }];
-        
-    }
+- (IBAction)refreshAction:(id)sender {
+    [self.tableView headerBeginRefreshing];
+}
+
+-(void)reloadData{
+    [[RemoteObject getCurrentDatacenterVO] getNetworkListAsync:^(id object, NSError *error) {
+        [self.networkList addObjectsFromArray:((NetworkListResult*)object).networks];
+        [self.tableView headerEndRefreshing];
+        if(self.networkList.count >= ((NetworkListResult*)object).recordTotal){
+            [self.tableView footerFinishingLoading];
+        }else{
+            [self.tableView footerEndRefreshing];
+        }
+        [self.tableView reloadData];
+    } withType:(self.segment.selectedSegmentIndex==0) referTo:self.networkList];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
