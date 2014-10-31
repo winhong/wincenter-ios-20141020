@@ -392,6 +392,9 @@
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
+		6870D4EA1A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */; };
+		6870D4ED1A032ED800E803B9 /* BusDomainsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */; };
+		6870D4F01A032EF300E803B9 /* BusDomainsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6870D4EF1A032EF300E803B9 /* BusDomainsVO.m */; };
 		68F39D8019FE530900F5BACF /* Network.getOutsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */; };
 		68F39D8219FE533300F5BACF /* Network.getInsideAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */; };
 		8405AA5219F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405AA5119F8D57A003DBBFA /* HostVmMemoryTop5CollectionCell.m */; };
@@ -1080,6 +1083,11 @@
 		686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionVC.m; sourceTree = "<group>"; };
 		686B32BD19FDDD7200742984 /* NetworkContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkContainerVC.h; sourceTree = "<group>"; };
 		686B32BE19FDDD7200742984 /* NetworkContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkContainerVC.m; sourceTree = "<group>"; };
+		6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusDomainsListAsync.json; sourceTree = "<group>"; };
+		6870D4EB1A032ED800E803B9 /* BusDomainsListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDomainsListResult.h; sourceTree = "<group>"; };
+		6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDomainsListResult.m; sourceTree = "<group>"; };
+		6870D4EE1A032EF300E803B9 /* BusDomainsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDomainsVO.h; sourceTree = "<group>"; };
+		6870D4EF1A032EF300E803B9 /* BusDomainsVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDomainsVO.m; sourceTree = "<group>"; };
 		68F39D7F19FE530900F5BACF /* Network.getOutsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getOutsideAsync.json; sourceTree = "<group>"; };
 		68F39D8119FE533300F5BACF /* Network.getInsideAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Network.getInsideAsync.json; sourceTree = "<group>"; };
 		75295C92BDCD4886A451C6E3 /* Pods-WinCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinCenter.xcconfig"; path = "../Pods/Pods-WinCenter.xcconfig"; sourceTree = "<group>"; };
@@ -1525,6 +1533,7 @@
 				684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */,
 				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */,
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
+				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1658,6 +1667,10 @@
 				6857913E1A00940F00B78539 /* IpPoolsListDetail.m */,
 				685791401A00948300B78539 /* IpPoolsListDetailResult.h */,
 				685791411A00948300B78539 /* IpPoolsListDetailResult.m */,
+				6870D4EB1A032ED800E803B9 /* BusDomainsListResult.h */,
+				6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */,
+				6870D4EE1A032EF300E803B9 /* BusDomainsVO.h */,
+				6870D4EF1A032EF300E803B9 /* BusDomainsVO.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -2558,6 +2571,7 @@
 				18C5215119F89DF300C033C6 /* MJRefresh.bundle in Resources */,
 				18763C2119F4EE0200669CC3 /* EScrollerView_3.jpg in Resources */,
 				84D8336E19F91CA6001C747A /* PoolVO.getHaInfoAsync.json in Resources */,
+				6870D4EA1A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json in Resources */,
 				18763C0D19F4E4E400669CC3 /* pageDot.png in Resources */,
 				843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */,
 				181DED6B19F17CB100998835 /* WarningInfoVO.getWarningInfoListAsync.json in Resources */,
@@ -2830,6 +2844,7 @@
 				50D22E9019FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m in Sources */,
 				181DECB519F17CB100998835 /* DoubleLineChartVC.m in Sources */,
 				18C2132619F27C2000FCBD23 /* HostNetworkCollectionVC.m in Sources */,
+				6870D4ED1A032ED800E803B9 /* BusDomainsListResult.m in Sources */,
 				18C2131B19F27C2000FCBD23 /* DatacenterDetailInfoVC.m in Sources */,
 				18C2133C19F27C2000FCBD23 /* StorageDashboardHeader.m in Sources */,
 				18C2133719F27C2000FCBD23 /* PopOptionsVC.m in Sources */,
@@ -2915,6 +2930,7 @@
 				181DED8519F17CB100998835 /* RemoteObject.m in Sources */,
 				18C521C219F8CA2000C033C6 /* JBAreaChartViewController.m in Sources */,
 				18C2130A19F27C2000FCBD23 /* BusinessVmCollectionVC.m in Sources */,
+				6870D4F01A032EF300E803B9 /* BusDomainsVO.m in Sources */,
 				1824362319F4FE05007E4D6C /* RRCircularItem.m in Sources */,
 				18C2134819F27C2000FCBD23 /* VmContainerVC.m in Sources */,
 				18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */,

@@ -31,7 +31,7 @@
                    "managerId": "刘华",
                    "vdcId": null,
                    "ipPoolId": null,
-                   "busDomainId": null,
+                   "busDomainId": 2,
                    "createUser": "liuhua",
                    "updateUser": "liuhua",
                    "createTime": "2014-09-11 11:51:22 000",
