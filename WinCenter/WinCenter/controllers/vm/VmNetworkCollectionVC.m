@@ -15,9 +15,13 @@
     [self.vmVO getVmNicListAsync:^(id object, NSError *error) {
         [self.dataList addObjectsFromArray:((VmNetworkListResult*)object).nics];
         [self.collectionView headerEndRefreshing];
-        [self.collectionView footerEndRefreshing];
+        if(self.dataList.count >= ((VmNetworkListResult*)object).recordTotal){
+            [self.collectionView footerFinishingLoading];
+        }else{
+            [self.collectionView footerEndRefreshing];
+        }
         [self.collectionView reloadData];
-    }];
+    } referTo:self.dataList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

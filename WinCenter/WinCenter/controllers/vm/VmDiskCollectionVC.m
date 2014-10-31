@@ -13,10 +13,18 @@
 
 -(void)reloadData{
     [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
-        [self.dataList addObjectsFromArray:((VmDiskListResult*)object).volumes];
-        [self.collectionView headerEndRefreshing];
-        [self.collectionView footerEndRefreshing];
-        [self.collectionView reloadData];
+        NSUInteger recordTotal = ((VmDiskListResult*)object).volumes.count;
+        
+        [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((VmDiskListResult*)object).volumes];
+            [self.collectionView headerEndRefreshing];
+            if(self.dataList.count >= recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
+            [self.collectionView reloadData];
+        } referTo:self.dataList];
     }];
 }
 
