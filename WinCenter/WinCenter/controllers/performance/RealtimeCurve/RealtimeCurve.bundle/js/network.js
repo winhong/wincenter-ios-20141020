@@ -45,7 +45,6 @@ function drawLineNetWork(data,type){
 	        plotBackgroundColor: '#FFFFFF',
 	        marginTop: 35,
 	        marginBottom: 35,
-	        zoomType: 'x,y',
 	        events:{
 	        	load:function(){
 	        		var series = this.series;

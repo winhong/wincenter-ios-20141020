@@ -37,7 +37,6 @@ function drawLineVbd(data){
 	        plotBackgroundColor: '#FFFFFF',
 	        marginTop: 5,
 	        marginBottom: 35,
-	        zoomType: 'x,y',
 	        events:{
 	        	load:function(){
 	        		var series = this.series;

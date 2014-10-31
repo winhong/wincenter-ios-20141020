@@ -67,7 +67,6 @@ function drawLineCpu(data,cpuType){
 	        plotBackgroundColor: '#FFFFFF',
 	        marginTop: 45,
 	        marginBottom: 35,
-	        zoomType: 'x,y',
 	        events:{
 	        	load:function(){
 	        		var series = this.series;
