@@ -85,8 +85,11 @@
         label.text = @"";
     }
     [super viewDidLoad];
-
     
+    [self reloadData];
+}
+
+- (void)reloadData{
     [self.hostVO getHostVOAsync:^(id object, NSError *error) {
         self.hostVO = object;
         [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
@@ -98,8 +101,6 @@
             }];
         }];
     }];
-    
-    
 }
 
 - (void)refreshMainInfo{

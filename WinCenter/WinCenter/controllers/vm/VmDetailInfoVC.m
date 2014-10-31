@@ -183,8 +183,10 @@
     [lineChart4 strokeChart];
     [self.storagePNChartArea addSubview:lineChart4];
     
-    
-    
+    [self reloadData];
+}
+
+-(void)reloadData{
     [self.vmVO getVmVOAsync:^(id object, NSError *error) {
         self.vmVO = object;
         [self refresh];

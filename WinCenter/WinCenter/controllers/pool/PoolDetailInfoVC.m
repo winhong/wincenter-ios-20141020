@@ -83,8 +83,10 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    
-    
+    [self reloadData];
+}
+
+-(void)reloadData{
     
     [self.poolVO getPoolElasticAsync:^(id object, NSError *error) {
         self.elasticInfo = object;

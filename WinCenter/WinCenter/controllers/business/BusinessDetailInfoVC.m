@@ -45,7 +45,9 @@
     }
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
-    
+    [self reloadData];
+}
+-(void) reloadData{
     [self.businessVO getBusinessVOAsync:^(id object, NSError *error) {
         self.businessVO = object;
         [self refresh];

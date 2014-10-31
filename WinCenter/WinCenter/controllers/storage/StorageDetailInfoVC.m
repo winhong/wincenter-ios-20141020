@@ -64,7 +64,10 @@
     }
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
+    [self reloadData];
+}
 
+-(void)reloadData{
     
     [self.storageVO getStorageVOAsync:^(id object, NSError *error) {
         self.storageVO = object;

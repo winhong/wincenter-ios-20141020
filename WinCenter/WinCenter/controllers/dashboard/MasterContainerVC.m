@@ -66,7 +66,16 @@
     
     [UIPageControl appearance].backgroundColor = [UIColor clearColor];
     
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshCurrentPage)];
+    self.navigationItem.rightBarButtonItem = item;
+    
     [self refresh];
+}
+
+- (void)refreshCurrentPage{
+    if([self.pages[self.showIndex] respondsToSelector:@selector(reloadData)]){
+        [self.pages[self.showIndex] performSelector:@selector(reloadData) withObject:nil];
+    }
 }
 
 - (void)refresh{
