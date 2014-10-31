@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/performance.js"></script>
+	<script src="js/raphael-min.js"></script>
+	<script src="js/dracula_graffle.js"></script>
+	<script src="js/dracula_graph.js"></script>
+    <style>
+        body{
+            font-size:14px;
+        }
+        #canvas{
+            background:#fafafa;
+        }
+        .tdvalue{
+        	color:#999;
+        }
+    </style>
+</head>
+
+<body>
+<div id="canvas" style="height:474px;width:600px;float:left;padding:10px">
+	<p style="text-align:center;padding-top:100px;color:#666">还没有创建快照！</p>
+</div>
+<div style="float:left;margin-left:15px">
+	<h3 style="margin:0 5px 8px">快照信息</h3>
+	<table>
+		<tr>
+			<td>名称：</td>
+			<td class="tdvalue" id="vm_name">请选择一个快照</td>
+		</tr>
+		<tr>
+			<td>类型：</td>
+			<td class="tdvalue" id="vm_type">请选择一个快照</td>
+		</tr>
+		<tr>
+			<td>创建日期：</td>
+			<td class="tdvalue" id="vm_time">请选择一个快照</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+var redraw, g, renderer;
+var notlockSnap = true;//防止同时画图
+
+Date.prototype.Format = function (fmt) { //author: meizz 
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+
+
+function showRaphael(data){
+	var Data = $.parseJSON(data);
+	var imgSrc;
+	if(Data.recordTotal == 0)
+		return false;
+	else{
+		getVmInfo();
+		$.each(Data.snapShots,function(n,v){
+			if(v.type == "DISK")
+				imgSrc =  "img/vm_snapshot_icon1.png";
+			else
+				imgSrc = "img/vm_snapshot_icon2.png"
+			g.addNode(v.snapShotId, {
+		        label: v.name,
+		        src: imgSrc, height:55, width:55,
+		        onclick:function(){
+		        	nodeClick(v);
+		        }
+	    	});
+		})
+		$.each(Data.snapShots,function(n,v){
+			if(((typeof v.parentId) !== undefined )&& v.parentId != null)
+			{
+				g.addEdge(v.parentId, v.snapShotId);
+			}	
+			else
+			{
+				g.addEdge("vm_begin", v.snapShotId);
+			}
+				
+		})
+		initRaphael();
+	}
+}
+function nodeClick(v){
+	var vmType;
+	switch(v.type){
+		case "DISK":
+			vmType = "磁盘快照";
+			break;
+		case "MEMORY":
+			vmType = "内存快照";
+			break;
+		default:
+			vmType = "虚拟机快照";
+	}
+	var time = new Date(v.createData).Format("yyyy-MM-dd hh:mm:ss");
+	$("#vm_name").html(v.name);
+	$("#vm_type").html(vmType);
+	$("#vm_time").html(time);
+}
+function getVmInfo(){
+		$("#canvas").html("");
+		g = new Graph();
+		g.addNode("vm_begin", {
+	        label: '基础',//基础
+	        src: "img/vm_snapshot_icon3.png", height:55, width:55
+	    });
+		// g.addNode("vm_end", {
+	 //        label:'立即',//立即
+	 //        src: "img/vm_snapshot_icon4.png", height:55, width:55
+	 //    });
+	    
+}
+
+function initRaphael(){
+	var layouter = new Graph.Layout.Tree(g);
+
+    /* draw the graph using the RaphaelJS draw implementation */
+    renderer = new Graph.Renderer.Raphael('canvas', g, "500", $("#canvas").height());
+    
+    redraw = function() {
+        layouter.layout();
+        renderer.draw();
+    };
+    hide = function(id) {
+        g.nodes[id].hide();
+    };
+    show = function(id) {
+        g.nodes[id].show();
+    };
+}
+
+//与ios通信
+var _bridge;
+function connectWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+    } else {
+        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+             callback(WebViewJavascriptBridge)
+        }, false)
+    }
+}
+
+connectWebViewJavascriptBridge(function(bridge) {         
+	bridge.init(function(message, responseCallback) {
+        if (responseCallback) {
+       	   	responseCallback("Right back atcha")
+        }
+	})
+	bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+		showRaphael(data);
+		//if(!haRaphael)
+			//$("#canvas").html('此虚拟机没有创建快照！')；
+	    var responseData = { 'Javascript Says':'Right back atcha!' }
+	    responseCallback(responseData)
+	})
+	_bridge = bridge;
+	bridge.send('Hello from the javascript')
+	bridge.send('Please respond to this', function responseCallback(responseData) {
+	    console.log("Javascript got its response", responseData)
+	})
+})
+</script>

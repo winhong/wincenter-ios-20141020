@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	
+
+	<script type="text/javascript" src="js/performance.js"></script>
+	<script type="text/javascript" src="js/cpu.js"></script>
+	<script type="text/javascript" src="js/mem.js"></script>
+	<script type="text/javascript" src="js/storage.js"></script>
+	<script type="text/javascript" src="js/network.js"></script>
+</head>
+<body>
+<div id="tips" style="display:none">
+     <p style="text-align:center;padding-top:100px;color:#666">该虚拟机不是开机状态，无法获取性能数据！</p>
+</div>
+<div id="chart">
+    开始时间：<input type="datetime-local"  id="dateTimePicker" /> <button id="submitBtn">确定</button>
+    <div id="cpuChart" style="width:100%;height:200px"></div>
+    <div id="memChart" style="width:100%;height:200px"></div>
+    <div id="storageChart" style="width:100%;height:200px"></div>
+    <div id="networkChart" style="width:100%;height:200px"></div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    var type="VM";
+    var vcpu=999;
+    function counXInterval(lineNum,xInterval){
+		xInterval = xInterval * 2;
+		lineNum = lineNum/2;
+		if(Math.ceil(lineNum)>5){
+			return counXInterval(lineNum,xInterval);
+		}else{
+			return lineNum+","+xInterval;
+		}
+	}
+    $("#submitBtn").bind("click",function(){
+                              
+        sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
+    })
+    var chartMap = new Map();
+    
+    //刷新图标
+	function updateData(Data){
+		 drawLineCpu($.PERFORMANCE.formApiVmJson(Data),vcpu);
+		 drawLineMemory($.PERFORMANCE.formApiVmJson(Data),vcpu);
+         drawLineVbd($.PERFORMANCE.formApiVmJson(Data),vcpu);
+		 drawLineNetWork($.PERFORMANCE.formApiVmJson(Data),vcpu);
+	}
+    //与ios通信
+    var _bridge;
+	function connectWebViewJavascriptBridge(callback) {
+	    if (window.WebViewJavascriptBridge) {
+	        callback(WebViewJavascriptBridge)
+	    } else {
+	        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+	            callback(WebViewJavascriptBridge)
+	        }, false)
+	    }
+	}
+
+	connectWebViewJavascriptBridge(function(bridge) {
+        
+	    bridge.init(function(message, responseCallback) {
+       	        if (responseCallback) {
+	            responseCallback("Right back atcha")
+	        }
+	    })
+
+	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+            if(typeof data != "string"){
+           		updateData(data);
+            }else{
+                $("#chart").hide();
+                $("#tips").show();
+            }
+                
+			var responseData = { 'Javascript Says':'Right back atcha!' }
+			responseCallback(responseData)
+		})
+        _bridge = bridge;
+	    bridge.send('Hello from the javascript')
+	    bridge.send('Please respond to this', function responseCallback(responseData) {
+	        console.log("Javascript got its response", responseData)
+	    })
+	})
+    
+    function sendTimeToIOS(time){
+        _bridge.send(time, function responseCallback(responseData) {
+            console.log("Javascript got its response", responseData)
+        })
+    }
+
+
+</script>

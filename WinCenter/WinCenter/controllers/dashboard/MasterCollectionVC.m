@@ -23,6 +23,9 @@
 #import "HostDashboardVC.h"
 
 @implementation MasterCollectionVC
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
 
 -(void)reloadData{
     

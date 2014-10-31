@@ -360,7 +360,6 @@
 		18C521CB19F8CA2000C033C6 /* JBLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521A719F8CA2000C033C6 /* JBLineChartViewController.m */; };
 		18C521CC19F8CA2000C033C6 /* PCChartsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521AC19F8CA2000C033C6 /* PCChartsTableViewController.m */; };
 		18C521CD19F8CA2000C033C6 /* PCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521AE19F8CA2000C033C6 /* PCChartViewController.m */; };
-		18C521CE19F8CA2000C033C6 /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */; };
 		18C521CF19F8CA2000C033C6 /* RealtimeCurveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */; };
 		18C521D019F8CA2000C033C6 /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521B519F8CA2000C033C6 /* WMGaugeView.m */; };
 		18C521E119F8CDF500C033C6 /* MBPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521D419F8CDF500C033C6 /* MBPanGestureRecognizer.m */; };
@@ -415,6 +414,7 @@
 		843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C1E19F603450046A5A0 /* StorageTotalVO.m */; };
 		843E6C2219F603720046A5A0 /* StorageCapacityVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C2119F603720046A5A0 /* StorageCapacityVO.m */; };
 		843E6C2419F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */; };
+		844546C01A032DE400FBE75A /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 844546BF1A032DE400FBE75A /* RealtimeCurve.bundle */; };
 		845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */; };
 		845228961A02542100117BDA /* VmVO.getPerformanceAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
@@ -1023,7 +1023,6 @@
 		18C521AC19F8CA2000C033C6 /* PCChartsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartsTableViewController.m; sourceTree = "<group>"; };
 		18C521AD19F8CA2000C033C6 /* PCChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCChartViewController.h; sourceTree = "<group>"; };
 		18C521AE19F8CA2000C033C6 /* PCChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCChartViewController.m; sourceTree = "<group>"; };
-		18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve.bundle; sourceTree = "<group>"; };
 		18C521B119F8CA2000C033C6 /* RealtimeCurveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeCurveVC.h; sourceTree = "<group>"; };
 		18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeCurveVC.m; sourceTree = "<group>"; };
 		18C521B419F8CA2000C033C6 /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
@@ -1122,6 +1121,7 @@
 		843E6C2019F603720046A5A0 /* StorageCapacityVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageCapacityVO.h; sourceTree = "<group>"; };
 		843E6C2119F603720046A5A0 /* StorageCapacityVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageCapacityVO.m; sourceTree = "<group>"; };
 		843E6C2319F6057B0046A5A0 /* StorageSubVO.getStorageSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StorageSubVO.getStorageSubInfoAsync.json; sourceTree = "<group>"; };
+		844546BF1A032DE400FBE75A /* RealtimeCurve.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve.bundle; sourceTree = "<group>"; };
 		845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getVmSnashotAsync.json; sourceTree = "<group>"; };
 		845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getPerformanceAsync.json; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
@@ -2323,8 +2323,8 @@
 				840DA54919FA46F300664F2B /* WebViewJavascriptBridge.js.txt */,
 				840DA54419FA3D6B00664F2B /* WebViewJavascriptBridge.h */,
 				840DA54519FA3D6B00664F2B /* WebViewJavascriptBridge.m */,
+				844546BF1A032DE400FBE75A /* RealtimeCurve.bundle */,
 				843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */,
-				18C521B019F8CA2000C033C6 /* RealtimeCurve.bundle */,
 				18C521B119F8CA2000C033C6 /* RealtimeCurveVC.h */,
 				18C521B219F8CA2000C033C6 /* RealtimeCurveVC.m */,
 			);
@@ -2473,6 +2473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844546C01A032DE400FBE75A /* RealtimeCurve.bundle in Resources */,
 				18C5217019F8AE4600C033C6 /* sms-received6.m4r in Resources */,
 				1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */,
 				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
@@ -2551,7 +2552,6 @@
 				181DEAA819F17C4E00998835 /* LaunchScreen.xib in Resources */,
 				181DED6419F17CB100998835 /* StorageVO.getStorageVOAsync.json in Resources */,
 				18763C1F19F4EE0200669CC3 /* EScrollerView_1.jpg in Resources */,
-				18C521CE19F8CA2000C033C6 /* RealtimeCurve.bundle in Resources */,
 				18763C0A19F4E4E400669CC3 /* icon1@2x.png in Resources */,
 				181DECF519F17CB100998835 /* bp-80-80.png in Resources */,
 				181DECA919F17CB100998835 /* down_red@2x.png in Resources */,

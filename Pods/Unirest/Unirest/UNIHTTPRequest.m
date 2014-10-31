@@ -26,6 +26,8 @@
 #import "UNIHTTPRequest.h"
 #import "UNIHTTPClientHelper.h"
 
+int hudCounter = 0;
+
 @implementation UNIHTTPRequest
 
 -(instancetype) initWithSimpleRequest:(UNIHTTPMethod) httpMethod url:(NSString*) url headers:(NSDictionary*) headers username:(NSString*) username password:(NSString*) password {
@@ -101,6 +103,9 @@
     return [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:response];
 }
 
+-(void)showHud{
+    [SVProgressHUD show];
+}
 -(UNIUrlConnection*) asJsonAsync:(UNIHTTPJsonResponseBlock) response {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //if(!self.jgHud){
@@ -109,21 +114,31 @@
     //}
     //[self.jgHud showInView:[UIApplication sharedApplication].keyWindow animated:NO];
     //self.mbHud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    [SVProgressHUD show];
+    hudCounter++;
+    NSTimer *timer;
+    if(hudCounter==1){
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(showHud) userInfo:nil repeats:NO];
+    }
     
     return [UNIHTTPClientHelper requestAsync:self handler:^(UNIHTTPResponse * res, NSError * error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             //[self.jgHud dismissAnimated:NO];
             //[self.mbHud hide:NO];
-            [SVProgressHUD dismiss];
+            if(hudCounter==1){
+                if(timer){
+                    [timer invalidate];
+                }
+                [SVProgressHUD dismiss];
+            }
+            hudCounter--;
             
             if (error != nil) {
                 if([error.domain isEqualToString:@"NSURLErrorDomain"]){
                     // There are several ways to init, just look at the class header
                     NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
                                                                       title:@"请求超时"
-                                                                    message:@"网络连接失败，请检查网络状态或服务器地址是否正确！"
+                                                                    message:@"网络连接失败或请求后台超时(60秒)，请检查网络状态或服务器地址是否正确！"
                                                                    delegate:nil];
                     //[alert setTextAlignment:NSTextAlignmentCenter];
                     [alert show];
