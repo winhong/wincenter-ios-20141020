@@ -57,6 +57,12 @@
             [self refreshMainInfo2];
         }];
         
+        self.datacenterStatWinserver.totalCpu = 0;
+        self.datacenterStatWinserver.totalMemory = 0;
+        self.datacenterStatWinserver.totalStorage = 0;
+        self.datacenterStatWinserver.availCpu = 0;
+        self.datacenterStatWinserver.availMemory = 0;
+        self.datacenterStatWinserver.availStorage = 0;
         [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(NSArray *allRemote, NSError *error) {
             for(PoolVO *poolVO in allRemote){
                 [poolVO getPoolVOSync:^(id object, NSError *error) {
