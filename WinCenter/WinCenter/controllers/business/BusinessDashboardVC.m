@@ -69,7 +69,7 @@
     
     //缩起
     header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    //header.businessVmCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
+//    header.busDomainsCount2.text =[NSString stringWithFormat:@"%ld",allBusDomainsList.count];
     header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
