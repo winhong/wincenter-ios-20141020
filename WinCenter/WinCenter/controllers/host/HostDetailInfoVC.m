@@ -92,10 +92,15 @@
         [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
             self.activityVm = object;
             [self refreshMainInfo];
-            [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
-                self.statVO = object;
+            if([self.hostVO.state isEqualToString:@"OK"]){
+                [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
+                    self.statVO = object;
+                    [self refreshStatInfo];
+                }];
+            }else{
                 [self refreshStatInfo];
-            }];
+            }
+            
         }];
     }];
     
@@ -118,53 +123,104 @@
     
 }
 - (void)refreshStatInfo{
-    self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuTotal/1000.0];
-    self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuUsed/1000.0];
-    self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz", (self.statVO.cpuTotal-self.statVO.cpuUsed)/1000.0];
-    self.cpuRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.cpuUsedPer*100];
-    
-    self.memorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
-    self.memoryUsedSize.text = [NSString stringWithFormat:@"%.2fGB", (self.statVO.totalMem-self.statVO.freeMem)/1024.0];
-    self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
-    self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.statVO.totalMem-self.statVO.freeMem)/self.statVO.totalMem*100];
-    self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
-    self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
-    
-    self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.totalStorage/1024.0];
-    self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.usedStorage/1024.0];
-    self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fTB", (self.statVO.totalStorage-self.statVO.usedStorage)/1024.0];
-    self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.usedStorage/self.statVO.totalStorage*100];
-    
-    //圈图
-    self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO cpuRatio]] andClockwise:YES andShadow:YES];
-    self.circleChart.backgroundColor = [UIColor clearColor];
-    self.circleChart.strokeColor = [UIColor clearColor];
-    self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
-    self.circleChart.circle.lineCap = kCALineCapSquare;
-    self.circleChart.lineWidth = @7.0f;
-    [self.circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
-    [self.circleChart strokeChart];
-    [self.cpuChartGroup addSubview:self.circleChart];
-    
-    self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO memoryRatio]] andClockwise:YES andShadow:YES];
-    self.circleChart2.backgroundColor = [UIColor clearColor];
-    self.circleChart2.strokeColor = [UIColor clearColor];
-    self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
-    self.circleChart2.circle.lineCap = kCALineCapSquare;
-    self.circleChart2.lineWidth = @7.0f;
-    [self.circleChart2 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
-    [self.circleChart2 strokeChart];
-    [self.memoryChartGroup addSubview:self.circleChart2];
-    
-    self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO storageRatio]] andClockwise:YES andShadow:YES];
-    self.circleChart3.backgroundColor = [UIColor clearColor];
-    self.circleChart3.strokeColor = [UIColor clearColor];
-    self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
-    self.circleChart3.circle.lineCap = kCALineCapSquare;
-    self.circleChart3.lineWidth = @7.0f;
-    [self.circleChart3 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
-    [self.circleChart3 strokeChart];
-    [self.storageChartGroup addSubview:self.circleChart3];
+    if([self.hostVO.state isEqualToString:@"OK"])
+    {
+        self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuTotal/1000.0];
+        self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuUsed/1000.0];
+        self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz", (self.statVO.cpuTotal-self.statVO.cpuUsed)/1000.0];
+        self.cpuRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.cpuUsedPer*100];
+        
+        self.memorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
+        self.memoryUsedSize.text = [NSString stringWithFormat:@"%.2fGB", (self.statVO.totalMem-self.statVO.freeMem)/1024.0];
+        self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
+        self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.statVO.totalMem-self.statVO.freeMem)/self.statVO.totalMem*100];
+        self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
+        self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
+        
+        self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.totalStorage/1024.0];
+        self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.usedStorage/1024.0];
+        self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fTB", (self.statVO.totalStorage-self.statVO.usedStorage)/1024.0];
+        self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.usedStorage/self.statVO.totalStorage*100];
+        
+        //圈图
+        self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO cpuRatio]] andClockwise:YES andShadow:YES];
+        self.circleChart.backgroundColor = [UIColor clearColor];
+        self.circleChart.strokeColor = [UIColor clearColor];
+        self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart.circle.lineCap = kCALineCapSquare;
+        self.circleChart.lineWidth = @7.0f;
+        [self.circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart strokeChart];
+        [self.cpuChartGroup addSubview:self.circleChart];
+        
+        self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO memoryRatio]] andClockwise:YES andShadow:YES];
+        self.circleChart2.backgroundColor = [UIColor clearColor];
+        self.circleChart2.strokeColor = [UIColor clearColor];
+        self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart2.circle.lineCap = kCALineCapSquare;
+        self.circleChart2.lineWidth = @7.0f;
+        [self.circleChart2 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart2 strokeChart];
+        [self.memoryChartGroup addSubview:self.circleChart2];
+        
+        self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO storageRatio]] andClockwise:YES andShadow:YES];
+        self.circleChart3.backgroundColor = [UIColor clearColor];
+        self.circleChart3.strokeColor = [UIColor clearColor];
+        self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart3.circle.lineCap = kCALineCapSquare;
+        self.circleChart3.lineWidth = @7.0f;
+        [self.circleChart3 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart3 strokeChart];
+        [self.storageChartGroup addSubview:self.circleChart3];
+    }else{
+        self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", 0.0];
+        self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", 0.0];
+        self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz", 0.0];
+        self.cpuRatio.text = [NSString stringWithFormat:@"%.0f%%", 0.0];
+        
+        self.memorySize.text = [NSString stringWithFormat:@"%.2fGB", 0.0];
+        self.memoryUsedSize.text = [NSString stringWithFormat:@"%.2fGB", 0.0];
+        self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", 0.0];
+        self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", 0.0];
+        self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", 0.0];
+        self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", 0.0];
+        
+        self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", 0.0];
+        self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", 0.0];
+        self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fTB", 0.0];
+        self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", 0.0];
+        
+        //圈图
+        self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+        self.circleChart.backgroundColor = [UIColor clearColor];
+        self.circleChart.strokeColor = [UIColor clearColor];
+        self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart.circle.lineCap = kCALineCapSquare;
+        self.circleChart.lineWidth = @7.0f;
+        [self.circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart strokeChart];
+        [self.cpuChartGroup addSubview:self.circleChart];
+        
+        self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+        self.circleChart2.backgroundColor = [UIColor clearColor];
+        self.circleChart2.strokeColor = [UIColor clearColor];
+        self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart2.circle.lineCap = kCALineCapSquare;
+        self.circleChart2.lineWidth = @7.0f;
+        [self.circleChart2 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart2 strokeChart];
+        [self.memoryChartGroup addSubview:self.circleChart2];
+        
+        self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+        self.circleChart3.backgroundColor = [UIColor clearColor];
+        self.circleChart3.strokeColor = [UIColor clearColor];
+        self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+        self.circleChart3.circle.lineCap = kCALineCapSquare;
+        self.circleChart3.lineWidth = @7.0f;
+        [self.circleChart3 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
+        [self.circleChart3 strokeChart];
+        [self.storageChartGroup addSubview:self.circleChart3];
+    }
 }
 
 
