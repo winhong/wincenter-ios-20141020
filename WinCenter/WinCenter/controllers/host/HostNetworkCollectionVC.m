@@ -12,10 +12,10 @@
 @implementation HostNetworkCollectionVC
 
 -(void)reloadData{
-    [self.hostVO getHostNetworkExternalListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:@"外部网络"];
-        [self.hostVO getHostNetworkInternalListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:@"内部网络"];
+    [self.hostVO getHostNetworkExternalListAsync:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((HostNetworkListResult*)object).networks];
+        [self.hostVO getHostNetworkInternalListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((HostNetworkListResult*)object).networks];
             [self.collectionView headerEndRefreshing];
             [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
@@ -27,7 +27,7 @@
     
     HostNetworkCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostNetworkCollectionCell" forIndexPath:indexPath];
     
-    HostNetworkVO *hostNetworkVO = (HostNetworkVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    HostNetworkVO *hostNetworkVO = (HostNetworkVO *) self.dataList[indexPath.row];
     cell.title.text = hostNetworkVO.name;
     
     cell.label2.text = @"";

@@ -39,8 +39,8 @@
 }
 
 - (void) reloadData{
-    [self.storageVO getStorageVolumnListAsync:^(NSArray *allRemote, NSError *error) {
-        self.dataList = allRemote;
+    [self.storageVO getStorageVolumnListAsync:^(id object, NSError *error) {
+        self.dataList = ((StorageVolumnListResult*)object).resultList;
         [self.collectionView headerEndRefreshing];
         [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];

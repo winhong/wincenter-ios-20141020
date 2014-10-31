@@ -38,9 +38,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(NSArray *allRemote, NSError *error) {
+    [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(id object, NSError *error) {
         self.vmDict = [NSMutableDictionary new];
-        for (NetworkIpVmVO *vmvo in allRemote){
+        for (NetworkIpVmVO *vmvo in ((NetworkIpVmListResult*)object).vms){
             if (vmvo.ip) {
                 [self.vmDict setObject:vmvo forKey:vmvo.ip];
             }
@@ -49,9 +49,9 @@
 }
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(NSArray *allRemote, NSError *error) {
+    [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
         self.ipList = [NSMutableArray new];
-        for(IpPoolsListDetail *detailVO in allRemote){
+        for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
             if(detailVO.state == 2){
                 [self.ipList addObject:detailVO];
             }

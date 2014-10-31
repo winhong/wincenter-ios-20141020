@@ -21,8 +21,8 @@
     
     self.datacenters = @[];
     
-    [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
-        self.datacenters = allRemote;
+    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+        self.datacenters = ((DatacenterListResult*)object).dataCenters;
         [self.tableView reloadData];
     }];
     

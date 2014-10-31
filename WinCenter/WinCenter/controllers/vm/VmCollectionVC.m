@@ -14,19 +14,29 @@
 
 -(void)reloadData{
     if(self.poolVO){
-        [self.poolVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
+        [self.poolVO getVmListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+            
             [self.collectionView headerEndRefreshing];
-            [self.collectionView footerEndRefreshing];
+            if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
             [self.collectionView reloadData];
-        }];
+        } referTo:self.dataList];
     }else{
-        [self.hostVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:self.hostVO.hostName];
+        [self.hostVO getVmListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+            
             [self.collectionView headerEndRefreshing];
-            [self.collectionView footerEndRefreshing];
+            if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
             [self.collectionView reloadData];
-        }];
+        } referTo:self.dataList];
     }
 }
 
@@ -44,7 +54,7 @@
     
     VmCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmCollectionCell" forIndexPath:indexPath];
     
-    VmVO *vmVO = (VmVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.label1.text = vmVO.ip;
     if(vmVO.ip == nil){
@@ -92,7 +102,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.vmVO = (VmVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.vmVO = (VmVO *) self.dataList[indexPath.row];
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];
     }else{

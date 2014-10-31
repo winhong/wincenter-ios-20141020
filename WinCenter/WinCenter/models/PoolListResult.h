@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PoolListResult : NSObject
-
 @property NSArray *resourcePools;
 @end

@@ -69,6 +69,9 @@
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
     
+    for(UIView *subView in self.cpuPNChartArea.subviews){
+        [subView removeFromSuperview];
+    }
     PNLineChart * lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(20, 40, 680, 110.0)];
     [lineChart setBackgroundColor:[UIColor clearColor]];
     [lineChart setXLabels:@[@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18"]];
@@ -97,6 +100,10 @@
     [lineChart strokeChart];
     [self.cpuPNChartArea addSubview:lineChart];
     
+    
+    for(UIView *subView in self.memoryPNChartArea.subviews){
+        [subView removeFromSuperview];
+    }
     PNLineChart * lineChart2 = [[PNLineChart alloc] initWithFrame:CGRectMake(20, 40, 680, 110.0)];
     [lineChart2 setBackgroundColor:[UIColor clearColor]];
     [lineChart2 setXLabels:@[@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18"]];
@@ -125,6 +132,10 @@
     [lineChart2 strokeChart];
     [self.memoryPNChartArea addSubview:lineChart2];
     
+    
+    for(UIView *subView in self.netPNChartArea.subviews){
+        [subView removeFromSuperview];
+    }
     PNLineChart * lineChart3 = [[PNLineChart alloc] initWithFrame:CGRectMake(20, 40, 680, 110.0)];
     [lineChart3 setBackgroundColor:[UIColor clearColor]];
     [lineChart3 setXLabels:@[@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18"]];
@@ -154,7 +165,9 @@
     [self.netPNChartArea addSubview:lineChart3];
     
     
-    
+    for(UIView *subView in self.storagePNChartArea.subviews){
+        [subView removeFromSuperview];
+    }
     PNLineChart * lineChart4 = [[PNLineChart alloc] initWithFrame:CGRectMake(20, 40, 680, 110.0)];
     [lineChart4 setBackgroundColor:[UIColor clearColor]];
     [lineChart4 setXLabels:@[@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18",@"07-18 16:18"]];

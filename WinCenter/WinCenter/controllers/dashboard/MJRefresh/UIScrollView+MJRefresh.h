@@ -97,6 +97,7 @@
  *  让上拉刷新尾部控件停止刷新状态
  */
 - (void)footerEndRefreshing;
+- (void)footerFinishingLoading;
 
 /**
  *  上拉刷新头部控件的可见性

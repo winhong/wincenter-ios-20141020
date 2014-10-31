@@ -21,46 +21,48 @@
 @implementation VmDashboardVC
 
 -(void)reloadData{
-    if(self.poolVO){
-        [self.dataList removeAllObjects];
-        [self.poolVO getVmListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+        
+        [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+            self.vmSubVO = object;
             
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                
-                [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
-                    self.vmSubVO = object;
+            if(self.poolVO){
+                [self.poolVO getVmListAsync:^(id object, NSError *error) {
+                    [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+                    
                     [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
+                    if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                        [self.collectionView footerFinishingLoading];
+                    }else{
+                        [self.collectionView footerEndRefreshing];
+                    }
                     [self.collectionView reloadData];
-                }];
-            }];
-        }];
-    }else{
-        [self.dataList removeAllObjects];
-        [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-            
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                
-                [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
-                    self.vmSubVO = object;
+                } referTo:self.dataList];
+            }else{
+                [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(id object, NSError *error) {
+                    [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+                    
                     [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
+                    if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                        [self.collectionView footerFinishingLoading];
+                    }else{
+                        [self.collectionView footerEndRefreshing];
+                    }
                     [self.collectionView reloadData];
-                }];
-            }];
+                    
+                } referTo:self.dataList];
+
+            }
         }];
-    }
+    }];
 
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     VmDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmDashboardCell" forIndexPath:indexPath];
     
-    VmVO *vmVO = (VmVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.ip.text = vmVO.ip;
     if(vmVO.ip == nil){
@@ -123,6 +125,9 @@
     //圈图
     
     if([self.vmSubVO.os total]>0){
+        for(UIView *subView in header.vmOsTypeChart.subviews){
+            [subView removeFromSuperview];
+        }
     NSArray *items2 = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Windows color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.os.Linux color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
                        ];
@@ -134,6 +139,9 @@
     }
     
     if([self.vmSubVO.state total]>0){
+        for(UIView *subView in header.vmStatusChart.subviews){
+            [subView removeFromSuperview];
+        }
     NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
                        [PNPieChartDataItem dataItemWithValue:self.vmSubVO.state.STOPPED color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
@@ -158,7 +166,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.vmVO = (VmVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.vmVO = (VmVO *) self.dataList[indexPath.row];
 
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];

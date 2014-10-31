@@ -88,16 +88,16 @@
     }];
 }
 
-- (void) getStorageVolumnListAsync:(FetchAllCompletionBlock)completeBlock{
+- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completeBlock([[StorageVolumnListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageVO.getStorageVolumnListAsync" ofType:@"json"]]].resultList, nil);
+        completeBlock([[StorageVolumnListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageVO.getStorageVolumnListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.volumn.getVolumns&params=storagePoolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.storagePoolId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completeBlock([[StorageVolumnListResult alloc] initWithJSONData:jsonResponse.rawBody].resultList, error);
+        completeBlock([[StorageVolumnListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 -(BOOL)shared_img{

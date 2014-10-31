@@ -21,25 +21,49 @@
 @implementation PoolDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-            self.datacenterStatWinserver = object;
-            [[RemoteObject getCurrentDatacenterVO] getPoolSubVOAsync:^(id object, NSError *error) {
-                self.poolStatWinserver = object;
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
-            }];
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+        
+        self.datacenterStatWinserver.totalCpu = 0;
+        self.datacenterStatWinserver.totalMemory = 0;
+        self.datacenterStatWinserver.totalStorage = 0;
+        self.datacenterStatWinserver.availCpu = 0;
+        self.datacenterStatWinserver.availMemory = 0;
+        self.datacenterStatWinserver.availStorage = 0;
+        [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
+            for(PoolVO *poolVO in ((PoolListResult*)object).resourcePools){
+                [poolVO getPoolVOSync:^(id object, NSError *error) {
+                    self.datacenterStatWinserver.totalCpu += ((PoolVO *)object).totalCpu;
+                    self.datacenterStatWinserver.totalMemory += ((PoolVO *)object).totalMemory;
+                    self.datacenterStatWinserver.totalStorage += ((PoolVO *)object).totalStorage;
+                    self.datacenterStatWinserver.availCpu += ((PoolVO *)object).availCpu;
+                    self.datacenterStatWinserver.availMemory += ((PoolVO *)object).availMemory;
+                    self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
+                }];
+            }
         }];
         
+        [[RemoteObject getCurrentDatacenterVO] getPoolSubVOAsync:^(id object, NSError *error) {
+            self.poolStatWinserver = object;
+            
+            [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
+                NSUInteger recordTotal = ((PoolListResult*)object).resourcePools.count;
+                
+                [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
+                    [self.dataList addObjectsFromArray:((PoolListResult*)object).resourcePools];
+                    [self.collectionView headerEndRefreshing];
+                    if(self.dataList.count >= recordTotal){
+                        [self.collectionView footerFinishingLoading];
+                    }else{
+                        [self.collectionView footerEndRefreshing];
+                    }
+                    [self.collectionView reloadData];
+                } referTo:self.dataList];
+                
+            }];
+        }];
     }];
-    
-    
-    
-    
-    
-    
 }
 
 
@@ -48,7 +72,7 @@
     PoolDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PoolDashboardCell" forIndexPath:indexPath];
     
     
-    PoolVO *poolVO = (PoolVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    PoolVO *poolVO = (PoolVO *) self.dataList[indexPath.row];
     cell.title.text = poolVO.resourcePoolName;
     cell.hostCount.text = [NSString stringWithFormat:@"%d台", poolVO.hostNumber];
     cell.activeVmCount.text = [NSString stringWithFormat:@"%d台", poolVO.activeVmNumber];
@@ -98,34 +122,36 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     PoolDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"PoolDashboardHeader" forIndexPath:indexPath];
-    PoolVO *poolVO = (PoolVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     header.name.title =  [RemoteObject getCurrentDatacenterVO].name;
     header.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     header.haPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
     header.elasticCalPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
-    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
-    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",poolVO.availCpu/1024];
-    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
-    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",poolVO.availMemory/1024];
-    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
-    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",poolVO.availStorage/1024.0];
+    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/1024.0];
+    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.availCpu/1024];
+    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
+    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",self.datacenterStatWinserver.availMemory/1024];
+    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/1024.0];
+    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",self.datacenterStatWinserver.availStorage/1024.0];
 
     //缩起
     header.poolCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     header.haPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
     header.elasticCalPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
-    header.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalCpu/1024];
-    header.cpuUsedCount2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalCpu - poolVO.availCpu)/1024.0];
-    header.cpuUnitUnusedCount2.text = [NSString stringWithFormat:@"%.2f",poolVO.availCpu/1024];
-    header.memerySize2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalMemory/1024.0];
-    header.memeryUsedSize2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalMemory - poolVO.availMemory)/1024.0];
-    header.memoryUnusedSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.availMemory/1024.0];
-    header.storageSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.totalStorage/1024];
-    header.storageUsedSize2.text = [NSString stringWithFormat:@"%.2f",(poolVO.totalStorage - poolVO.availStorage)/1024.0];
-    header.storageUnusedSize2.text = [NSString stringWithFormat:@"%.2f",poolVO.availStorage/1024.0];
+    header.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalCpu/1024];
+    header.cpuUsedCount2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/1024.0];
+    header.cpuUnitUnusedCount2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availCpu/1024];
+    header.memerySize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalMemory/1024.0];
+    header.memeryUsedSize2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
+    header.memoryUnusedSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availMemory/1024.0];
+    header.storageSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalStorage/1024];
+    header.storageUsedSize2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/1024.0];
+    header.storageUnusedSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availStorage/1024.0];
     
     //圈图
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalCpu - poolVO.availCpu)/poolVO.totalCpu*100] andClockwise:YES andShadow:YES];
+    for(UIView *subView in header.cpuChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
+    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/self.datacenterStatWinserver.totalCpu*100] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -136,7 +162,10 @@
     [header.cpuChartGroup addSubview:circleChart];
     
     
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalMemory - poolVO.availMemory)/poolVO.totalMemory*100] andClockwise:YES andShadow:YES];
+    for(UIView *subView in header.memoryChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
+    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/self.datacenterStatWinserver.totalMemory*100] andClockwise:YES andShadow:YES];
     circleChart2.backgroundColor = [UIColor clearColor];
     circleChart2.strokeColor = [UIColor clearColor];
     circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -146,7 +175,10 @@
     [circleChart2 strokeChart];
     [header.memoryChartGroup addSubview:circleChart2];
     
-    PNCircleChart * circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(poolVO.totalStorage - poolVO.availStorage)/poolVO.totalStorage*100] andClockwise:YES andShadow:YES];
+    for(UIView *subView in header.storageChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
+    PNCircleChart * circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/self.datacenterStatWinserver.totalStorage*100] andClockwise:YES andShadow:YES];
     circleChart3.backgroundColor = [UIColor clearColor];
     circleChart3.strokeColor = [UIColor clearColor];
     circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -168,7 +200,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.poolVO = (PoolVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.poolVO = (PoolVO *) self.dataList[indexPath.row];
     
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];

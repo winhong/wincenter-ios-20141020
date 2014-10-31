@@ -43,12 +43,12 @@
 - (BOOL) isDynamicMemWce_img;
 
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) getVmVolumnListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getVmNicListAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getVmVolumnListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) vmRestart:(BasicCompletionBlock)completionBlock;
 - (void) vmStart:(BasicCompletionBlock)completionBlock;
 - (void) vmStop:(BasicCompletionBlock)completeBlock;
-- (void) vmGetMigrateTargets:(FetchAllCompletionBlock)completionBlock;
+- (void) vmGetMigrateTargets:(FetchObjectCompletionBlock)completionBlock;
 - (void) vmMigrate:(BasicCompletionBlock)completionBlock widthTargetHostId:(int)hostId;
 - (void) vmConfigCPU:(BasicCompletionBlock)completionBlock withVCPU:(int)vcpu withCPUCap:(int)cpuCap withCPUWeight:(int)cpuWeight;
 - (void) vmConfigMemory:(BasicCompletionBlock)completionBlock withReservation:(int)reservation withMinMem:(int)minMem;

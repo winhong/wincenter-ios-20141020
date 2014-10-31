@@ -37,8 +37,8 @@
     }
     self.title = [NSString stringWithFormat:@"%@的操作日志", prefix];
     
-    [ControlRecordVO getControlRecordListViaObject:self.remoteObject async:^(NSArray *allRemote, NSError *error) {
-        self.dataList = allRemote;
+    [ControlRecordVO getControlRecordListViaObject:self.remoteObject async:^(id object, NSError *error) {
+        self.dataList = ((ControlRecordListResult*)object).tasks;
         [self.tableView reloadData];
     }];
 }

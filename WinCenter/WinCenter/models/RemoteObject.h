@@ -10,9 +10,9 @@
 
 typedef void(^BasicCompletionBlock)(NSError *error);
 
-typedef void(^FetchAllCompletionBlock)(NSArray *allRemote, NSError *error);
-
 typedef void(^FetchObjectCompletionBlock)(id object, NSError *error);
+
+#define per_page 2
 
 @class DatacenterVO;
 

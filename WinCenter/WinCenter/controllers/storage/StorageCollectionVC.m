@@ -14,31 +14,27 @@
 
 -(void)reloadData{
     if(self.poolVO){
-        [self.poolVO getStorageListAsync:^(NSArray *allRemote, NSError *error) {
-            NSMutableArray *shareList = [[NSMutableArray alloc] initWithCapacity:0];
-            for(StorageVO *item in allRemote){
-                if([item.shared isEqualToString:@"true"]){
-                    [shareList addObject:item];
-                }
-            }
-            [self.dataList setValue:shareList forKey:self.poolVO.resourcePoolName];
+        [self.poolVO getStorageListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
             [self.collectionView headerEndRefreshing];
-            [self.collectionView footerEndRefreshing];
+            if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
             [self.collectionView reloadData];
-        }];
+        } referTo:self.dataList];
     }else{
-        [self.hostVO getStorageListAsync:^(NSArray *allRemote, NSError *error) {
-            NSMutableArray *shareList = [[NSMutableArray alloc] initWithCapacity:0];
-            for(StorageVO *item in allRemote){
-                if([item.shared isEqualToString:@"false"]){//非共享
-                    [shareList addObject:item];
-                }
-            }
-            [self.dataList setValue:shareList forKey:self.hostVO.hostName];
+        [self.hostVO getStorageListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
             [self.collectionView headerEndRefreshing];
-            [self.collectionView footerEndRefreshing];
+            if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
             [self.collectionView reloadData];
-        }];
+        } referTo:self.dataList];
     }
 }
 
@@ -46,7 +42,7 @@
     
     StorageCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StorageCollectionCell" forIndexPath:indexPath];
     
-    StorageVO *storageVO = (StorageVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
     cell.label1.text = storageVO.type;
     cell.label2.text = storageVO.location;
@@ -76,7 +72,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.storageVO = (StorageVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.storageVO = (StorageVO *) self.dataList[indexPath.row];
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];
     }else{

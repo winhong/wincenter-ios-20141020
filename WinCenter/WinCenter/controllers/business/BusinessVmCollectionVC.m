@@ -41,8 +41,8 @@
 }
 
 - (void) reloadData{
-    [self.businessVO getBusinessVmListAsync:^(NSArray *allRemote, NSError *error) {
-        self.dataList = allRemote;
+    [self.businessVO getBusinessVmListAsync:^(id object, NSError *error) {
+        self.dataList = ((BusinessVO*)object).wceBusVms;
         [self.collectionView headerEndRefreshing];
         [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];

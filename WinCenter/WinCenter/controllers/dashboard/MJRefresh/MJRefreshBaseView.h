@@ -14,7 +14,8 @@ typedef enum {
 	MJRefreshStatePulling = 1, // 松开就可以进行刷新的状态
 	MJRefreshStateNormal = 2, // 普通状态
 	MJRefreshStateRefreshing = 3, // 正在刷新中的状态
-    MJRefreshStateWillRefreshing = 4
+    MJRefreshStateWillRefreshing = 4,
+	MJRefreshStateEnding = 5 //  结束状态
 } MJRefreshState;
 
 #pragma mark - 控件的类型
@@ -63,6 +64,7 @@ typedef enum {
  *  结束刷新
  */
 - (void)endRefreshing;
+- (void)finishingLoading;
 
 #pragma mark - 交给子类去实现 和 调用
 @property (assign, nonatomic) MJRefreshState state;

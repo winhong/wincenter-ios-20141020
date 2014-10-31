@@ -28,10 +28,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     //    加ip池信息
-    [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(NSArray *allRemote, NSError *error) {
+    [[RemoteObject getCurrentDatacenterVO] getIpPoolsAsync:^(id object, NSError *error) {
         
         self.ipPoolsDict = [NSMutableDictionary new];
-        for(IpPoolsVO *poolVO in allRemote){
+        for(IpPoolsVO *poolVO in ((IpPoolsListResult*)object).ipPools){
             NSString *vlanList = poolVO.vlanIdList;
             if(vlanList){
                 NSArray *vlans = [vlanList componentsSeparatedByString:@","];
@@ -41,8 +41,8 @@
             }
         }
         
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(NSArray *allRemote, NSError *error) {
-            self.networkList = allRemote;
+        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+            self.networkList = ((NetworkListResult*)object).networks;
             [self.tableView reloadData];
         }];
         
@@ -68,15 +68,15 @@
 
 - (IBAction)segmentChange:(id)sender {
     if(self.segment.selectedSegmentIndex==0){
-        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(NSArray *allRemote, NSError *error) {
-            self.networkList = allRemote;
+        [[RemoteObject getCurrentDatacenterVO] getNetworkOutsideAsync:^(id object, NSError *error) {
+            self.networkList = ((NetworkListResult*)object).networks;
             [self.tableView reloadData];
             
         }];
         
     }else{
-        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(NSArray *allRemote, NSError *error) {
-            self.networkList = allRemote;
+        [[RemoteObject getCurrentDatacenterVO] getNetworkInsideAsync:^(id object, NSError *error) {
+            self.networkList = ((NetworkListResult*)object).networks;
             [self.tableView reloadData];
             
         }];

@@ -42,12 +42,13 @@
 
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getHostStatVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) getHostNetworkExternalListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHostNetworkInternalListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHostNicUngroupedListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHostNicGroupedListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getHostNetworkExternalListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostNetworkInternalListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostNicUngroupedListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostNicGroupedListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getActivityVmAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(int)startTime;
 

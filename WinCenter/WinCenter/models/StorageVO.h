@@ -45,6 +45,6 @@
 -(UIColor *)allocatedRatioColor;
 
 - (void) getStorageVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) getStorageVolumnListAsync:(FetchAllCompletionBlock)completeBlock;
+- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock;
 
 @end

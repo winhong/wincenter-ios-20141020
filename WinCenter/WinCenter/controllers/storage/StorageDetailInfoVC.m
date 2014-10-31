@@ -94,6 +94,9 @@
     self.usedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO usedRatio]];
     self.allocatedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO allocatedRatio]];
     
+    for(UIView *subView in self.usedStorageGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart = [[PNCircleChart alloc] initWithFrame:self.usedStorageGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.storageVO usedRatio]] andClockwise:YES andShadow:YES];
     self.circleChart.backgroundColor = [UIColor clearColor];
     self.circleChart.strokeColor = [UIColor clearColor];
@@ -104,6 +107,9 @@
     [self.circleChart strokeChart];
     [self.usedStorageGroup addSubview:self.circleChart];
     
+    for(UIView *subView in self.allocatedStorageGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.allocatedStorageGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.storageVO allocatedRatio]] andClockwise:YES andShadow:YES];
     self.circleChart2.backgroundColor = [UIColor clearColor];
     self.circleChart2.strokeColor = [UIColor clearColor];

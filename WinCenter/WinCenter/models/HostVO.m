@@ -60,82 +60,95 @@
     }];
 }
 
-- (void) getHostNetworkExternalListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getHostNetworkExternalListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[HostNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNetworkExternalListAsync" ofType:@"json"]]].networks, nil);
+        completionBlock([[HostNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNetworkExternalListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=hostId%%3D%d%%26type%%3DEXTERNAL", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[HostNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody].networks, error);
+        completionBlock([[HostNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getHostNetworkInternalListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getHostNetworkInternalListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[HostNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNetworkInternalListAsync" ofType:@"json"]]].networks, nil);
+        completionBlock([[HostNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNetworkInternalListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getNetWorksList&params=hostId%%3D%d%%26type%%3DINTERNAL", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[HostNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody].networks, error);
+        completionBlock([[HostNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getHostNicUngroupedListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getHostNicUngroupedListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[HostNicListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNicUngroupedListAsync" ofType:@"json"]]].pnis, nil);
+        completionBlock([[HostNicListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNicUngroupedListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getnetWorkAdaptersList&params=hostId%%3D%d%%26isNotNull%%3DbondModel", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[HostNicListResult alloc] initWithJSONData:jsonResponse.rawBody].pnis, error);
+        completionBlock([[HostNicListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
     
 }
 
-- (void) getHostNicGroupedListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getHostNicGroupedListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[HostNicListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNicGroupedListAsync" ofType:@"json"]]].pnis, nil);
+        completionBlock([[HostNicListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostNicGroupedListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getnetWorkAdaptersList&params=hostId%%3D%d%%26isNull%%3DbondModel", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[HostNicListResult alloc] initWithJSONData:jsonResponse.rawBody].pnis, error);
+        completionBlock([[HostNicListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[StorageListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getStorageListAsync" ofType:@"json"]]].resultList, nil);
+        completionBlock([[StorageListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getStorageListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.storages&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.storages&placeholder=%d&params=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.hostId, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[StorageListResult alloc] initWithJSONData:jsonResponse.rawBody].resultList, error);
+        completionBlock([[StorageListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getVmListAsync" ofType:@"json"]]].vms, nil);
+        completionBlock([[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getVmListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList&params=ownerHostId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[VmListResult alloc] initWithJSONData:jsonResponse.rawBody].vms, error);
+        completionBlock([[VmListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
+
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getVmListAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList&params=ownerHostId%%3D%d%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.hostId, referList.count, referList.count+per_page]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 

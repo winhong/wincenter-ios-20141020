@@ -12,8 +12,8 @@
 @implementation VmDiskCollectionVC
 
 -(void)reloadData{
-    [self.vmVO getVmVolumnListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:self.vmVO.name];
+    [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((VmDiskListResult*)object).volumes];
         [self.collectionView headerEndRefreshing];
         [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];
@@ -24,7 +24,7 @@
     
     VmDiskCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmDiskCollectionCell" forIndexPath:indexPath];
 
-    VmDiskVO *vmDiskVO = (VmDiskVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    VmDiskVO *vmDiskVO = (VmDiskVO *) self.dataList[indexPath.row];
     cell.title.text = vmDiskVO.name;
     cell.label1.text = [vmDiskVO type_text];
     cell.label2.text = vmDiskVO.storagePoolName;

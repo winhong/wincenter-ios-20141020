@@ -21,44 +21,42 @@
 @implementation StorageDashboardVC
 
 -(void)reloadData{
-    if(self.poolVO){
-        [self.dataList removeAllObjects];
-        [self.poolVO getStorageListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
-                    self.StorageSubVOWinserver = object;
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
-                    [self.collectionView reloadData];
-                }];
-            }];
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+        [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
+            self.StorageSubVOWinserver = object;
             
-        }];
-    }
-    else{
-        [self.dataList removeAllObjects];
-        [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
-                    self.StorageSubVOWinserver = object;
+            if(self.poolVO){
+                [self.poolVO getStorageListAsync:^(id object, NSError *error) {
+                    [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
                     [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
+                    if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                        [self.collectionView footerFinishingLoading];
+                    }else{
+                        [self.collectionView footerEndRefreshing];
+                    }
                     [self.collectionView reloadData];
-                }];
-            }];
-            
+                } referTo:self.dataList];
+            }else{
+                [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
+                    [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
+                    [self.collectionView headerEndRefreshing];
+                    if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                        [self.collectionView footerFinishingLoading];
+                    }else{
+                        [self.collectionView footerEndRefreshing];
+                    }
+                    [self.collectionView reloadData];
+                } referTo:self.dataList];
+            }
         }];
-    }
+    }];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     StorageDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StorageDashboardCell" forIndexPath:indexPath];
     
-    StorageVO *storageVO = (StorageVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
     cell.availStorage.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
     cell.volumeNum.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
@@ -107,6 +105,9 @@
     header.usedStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
     
     //圈图
+    for(UIView *subView in header.storageShareChart.subviews){
+        [subView removeFromSuperview];
+    }
         PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
         circleChart.backgroundColor = [UIColor clearColor];
         circleChart.strokeColor = [UIColor clearColor];
@@ -116,7 +117,10 @@
         [circleChart setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
         [circleChart strokeChart];
         [header.storageShareChart addSubview:circleChart];
-        
+    
+    for(UIView *subView in header.storageUseChart.subviews){
+        [subView removeFromSuperview];
+    }
         PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.capacity.usedStorage*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
         circleChart2.backgroundColor = [UIColor clearColor];
         circleChart2.strokeColor = [UIColor clearColor];
@@ -140,7 +144,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.storageVO = (StorageVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.storageVO = (StorageVO *)self.dataList[indexPath.row];
 
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];

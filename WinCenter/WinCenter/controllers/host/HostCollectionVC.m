@@ -13,11 +13,20 @@
 @implementation HostCollectionVC
 
 -(void)reloadData{
-    [self.poolVO getHostListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
-        [self.collectionView headerEndRefreshing];
-        [self.collectionView footerEndRefreshing];
-        [self.collectionView reloadData];
+    [self.poolVO getHostListAsync:^(id object, NSError *error) {
+        NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
+        
+        [self.poolVO getHostListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+            [self.collectionView headerEndRefreshing];
+            if(self.dataList.count >= recordTotal){
+                [self.collectionView footerFinishingLoading];
+            }else{
+                [self.collectionView footerEndRefreshing];
+            }
+            [self.collectionView reloadData];
+        } referTo:self.dataList];
+        
     }];
 }
 
@@ -25,7 +34,7 @@
     
     HostCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostCollectionCell" forIndexPath:indexPath];
     
-    HostVO *hostVO = (HostVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
     cell.label1.text = hostVO.ip;
     cell.label2.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum];
@@ -85,7 +94,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.hostVO = (HostVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.hostVO = (HostVO *) self.dataList[indexPath.row];
     
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];

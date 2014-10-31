@@ -210,6 +210,14 @@ static char MJRefreshFooterViewKey;
 }
 
 /**
+ *  让上拉刷新尾部控件停止刷新状态
+ */
+- (void)footerFinishingLoading
+{
+    [self.footer finishingLoading];
+}
+
+/**
  *  下拉刷新头部控件的可见性
  */
 - (void)setFooterHidden:(BOOL)hidden

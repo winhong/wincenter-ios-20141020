@@ -21,18 +21,16 @@
 @property BOOL vdcCanDel;
 @property BOOL resCaseCanDel;
 
-+ (void) getDatacenterListAsync:(FetchAllCompletionBlock)completionBlock;
++ (void) getDatacenterListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getBusinessListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getBusinessListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
-- (void) getPoolListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getPoolListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
-- (void) getHostListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHostListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock limit:(int)count;
+- (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getPoolListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getPoolListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 
 - (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
@@ -42,16 +40,16 @@
 
 - (void) getStorageSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getBusinessUnallocatedAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getBusinessAllAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getBusinessUnallocatedAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getNetworkInsideAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getNetworkOutsideAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getNetworkInsideAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkOutsideAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getIpPoolsAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getIpPoolsDetailAsync:(FetchAllCompletionBlock)completionBlock withPoolId:(int)poolId;
+- (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getIpPoolsDetailAsync:(FetchObjectCompletionBlock)completionBlock withPoolId:(int)poolId;
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
-- (void) getNetworkIpVmAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock;
 
 @end

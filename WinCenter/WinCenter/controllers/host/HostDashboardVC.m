@@ -21,42 +21,52 @@
 @implementation HostDashboardVC
 
 -(void)reloadData{
-    if(self.poolVO){
-        [self.dataList removeAllObjects];
-        [self.poolVO getHostListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:self.poolVO.resourcePoolName];
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                
-                [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
-                    self.hostStatWinserver = object;
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
-                    [self.collectionView reloadData];
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        self.datacenterStatWinserver = object;
+        
+        [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+            self.hostStatWinserver = object;
+            
+            if(self.poolVO){
+                [self.poolVO getHostListAsync:^(id object, NSError *error) {
+                    NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
+                    
+                    [self.poolVO getHostListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                        
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
+                        }
+                        [self.collectionView reloadData];
+                    } referTo:self.dataList];
                 }];
-            }];
-        }];
-    }else{
-        [self.dataList removeAllObjects];
-        [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-            [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-                self.datacenterStatWinserver = object;
-                
-                [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
-                    self.hostStatWinserver = object;
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
-                    [self.collectionView reloadData];
+            }else{
+                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                    NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
+                    
+                    [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                        
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
+                        }
+                        [self.collectionView reloadData];
+                    } referTo:self.dataList];
                 }];
-            }];
+            }
         }];
-    }
+    }];
+
 }
 
 - (void)reloadOtherHosts{
-    [self.dataList removeAllObjects];
-    
     //查询游离物理主机
     [self.collectionView reloadData];
 }
@@ -64,7 +74,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HostDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostDashboardCell" forIndexPath:indexPath];
     
-    HostVO *hostVO = (HostVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
     cell.ip.text = hostVO.ip;
     cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
@@ -134,6 +144,9 @@
     header.statusDis2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //圈图
+    for(UIView *subView in header.hostTypeChart.subviews){
+        [subView removeFromSuperview];
+    }
     PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
@@ -151,6 +164,9 @@
     
     
     if (self.hostStatWinserver.total > 0) {
+        for(UIView *subView in header.hostStatusChart.subviews){
+            [subView removeFromSuperview];
+        }
         PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
         pieChart.descriptionTextColor = [UIColor whiteColor];
         pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
@@ -179,7 +195,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.hostVO = (HostVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.hostVO = (HostVO *) self.dataList[indexPath.row];
 
     
     if(self.isDetailPagePushed){

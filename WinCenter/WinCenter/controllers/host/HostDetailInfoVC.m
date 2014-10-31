@@ -137,6 +137,9 @@
     self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.usedStorage/self.statVO.totalStorage*100];
     
     //圈图
+    for(UIView *subView in self.cpuChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO cpuRatio]] andClockwise:YES andShadow:YES];
     self.circleChart.backgroundColor = [UIColor clearColor];
     self.circleChart.strokeColor = [UIColor clearColor];
@@ -147,6 +150,9 @@
     [self.circleChart strokeChart];
     [self.cpuChartGroup addSubview:self.circleChart];
     
+    for(UIView *subView in self.memoryChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO memoryRatio]] andClockwise:YES andShadow:YES];
     self.circleChart2.backgroundColor = [UIColor clearColor];
     self.circleChart2.strokeColor = [UIColor clearColor];
@@ -157,6 +163,9 @@
     [self.circleChart2 strokeChart];
     [self.memoryChartGroup addSubview:self.circleChart2];
     
+    for(UIView *subView in self.storageChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO storageRatio]] andClockwise:YES andShadow:YES];
     self.circleChart3.backgroundColor = [UIColor clearColor];
     self.circleChart3.strokeColor = [UIColor clearColor];

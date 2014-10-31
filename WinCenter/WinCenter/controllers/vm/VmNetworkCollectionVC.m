@@ -12,8 +12,8 @@
 @implementation VmNetworkCollectionVC
 
 -(void)reloadData{
-    [self.vmVO getVmNicListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:self.vmVO.name];
+    [self.vmVO getVmNicListAsync:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((VmNetworkListResult*)object).nics];
         [self.collectionView headerEndRefreshing];
         [self.collectionView footerEndRefreshing];
         [self.collectionView reloadData];
@@ -24,7 +24,7 @@
     
     VmNetworkCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmNetworkCollectionCell" forIndexPath:indexPath];
 
-    VmNetworkVO *vmNetworkVO = (VmNetworkVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    VmNetworkVO *vmNetworkVO = (VmNetworkVO *) self.dataList[indexPath.row];
     cell.title.text = vmNetworkVO.name;
     cell.label1.text = [vmNetworkVO type_text];
     cell.label2.text = vmNetworkVO.ip;

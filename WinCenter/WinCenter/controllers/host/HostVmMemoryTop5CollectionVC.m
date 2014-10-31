@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.hostVO getHostVOAsync:^(id object, NSError *error) {
         self.hostVO = object;
         [self.hostVO getVmListAsync:^(id object, NSError *error) {
-            self.vmList = object;
+            self.vmList = ((VmListResult*)object).vms;
             NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"_memory" ascending:NO];
             self.vmList_sorted = [[NSMutableArray alloc] initWithArray:self.vmList];
             [self.vmList_sorted sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];

@@ -45,13 +45,11 @@
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolElasticAsync:(FetchObjectCompletionBlock)completeBlock;
-    
-- (NSArray *) getHostLisWithlimit:(int)count error:(NSError **)error;
-- (void) getHostListAsync:(FetchAllCompletionBlock)completionBlock;
-- (NSArray *) getStorageList:(NSError **)error;
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (NSArray *) getVmListWithlimit:(int)count error:(NSError **)error;
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHaMaxHostFailuresAsync:(FetchAllCompletionBlock)completionBlock;
-- (void) getHaInfoAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getHaMaxHostFailuresAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getHaInfoAsync:(FetchObjectCompletionBlock)completionBlock;
 @end

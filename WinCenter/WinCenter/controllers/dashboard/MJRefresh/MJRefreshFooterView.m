@@ -179,6 +179,29 @@
 			break;
         }
             
+        case MJRefreshStateEnding:
+        {
+            // 刷新完毕
+            if (MJRefreshStateRefreshing == oldState) {
+                self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
+                [UIView animateWithDuration:MJRefreshSlowAnimationDuration animations:^{
+                    self.scrollView.mj_contentInsetBottom = self.scrollViewOriginalInset.bottom;
+                }];
+            } else {
+                // 执行动画
+                [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
+                    self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
+                }];
+            }
+            
+            CGFloat deltaH = [self heightForContentBreakView];
+            int currentCount = [self totalDataCountInScrollView];
+            // 刚刷新完毕
+            if (MJRefreshStateRefreshing == oldState && deltaH > 0 && currentCount != self.lastRefreshCount) {
+                self.scrollView.mj_contentOffsetY = self.scrollView.mj_contentOffsetY;
+            }
+            break;
+        }
         default:
             break;
 	}

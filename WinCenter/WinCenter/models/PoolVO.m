@@ -99,80 +99,59 @@
         completeBlock([[PoolElasticInfo alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
-
-
-- (NSArray *) getHostLisWithlimit:(int)count error:(NSError **)error{
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        return [[HostListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHostLisWithlimit" ofType:@"json"]]].hosts;
-    }
-    
-    UNIHTTPJsonResponse *jsonResponse = [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.queryHostByPool&placeholder=%d&params=resourcePoolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId, count]];
-    }] asJson:nil];
-    return [[HostListResult alloc] initWithJSONData:jsonResponse.rawBody].hosts;
-}
-- (void) getHostListAsync:(FetchAllCompletionBlock)completionBlock{
-    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[HostListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHostListAsync" ofType:@"json"]]].hosts, nil);
+        completionBlock([[HostListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHostListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.queryHostByPool&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[HostListResult alloc] initWithJSONData:jsonResponse.rawBody].hosts, error);
+        completionBlock([[HostListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (NSArray *) getStorageList:(NSError **)error{
+- (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        return [[StorageListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getStorageList" ofType:@"json"]]].resultList;
-    }
-    
-    UNIHTTPJsonResponse *jsonResponse = [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storagePools&params=resourcePoolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
-    }] asJson:nil];
-    return [[StorageListResult alloc] initWithJSONData:jsonResponse.rawBody].resultList;
-}
-
-- (void) getStorageListAsync:(FetchAllCompletionBlock)completionBlock{
-    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[StorageListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getStorageListAsync" ofType:@"json"]]].resultList, nil);
+        completionBlock([[HostListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHostListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storagePools&params=resourcePoolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.queryHostByPool&placeholder=%d&params=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[StorageListResult alloc] initWithJSONData:jsonResponse.rawBody].resultList, error);
+        completionBlock([[HostListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (NSArray *) getVmListWithlimit:(int)count error:(NSError **)error{
-    //if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        return [[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getVmListWithlimit" ofType:@"json"]]].vms;
-    //}
-    
-    UNIHTTPJsonResponse *jsonResponse = [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList&params=poolId%%3D%d%%26firstResult%%3D0%%26maxResult%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId, 7]];
-    }] asJson:nil];
-    
-    return [[VmListResult alloc] initWithJSONData:jsonResponse.rawBody].vms;
-}
-- (void) getVmListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getVmListAsync" ofType:@"json"]]].vms, nil);
+        completionBlock([[StorageListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getStorageListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList&params=poolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.storage.storagePools&params=resourcePoolId%%3D%d%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[VmListResult alloc] initWithJSONData:jsonResponse.rawBody].vms, error);
+        completionBlock([[StorageListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getHaMaxHostFailuresAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getVmListAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getList&params=poolId%%3D%d%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId, referList.count, referList.count+per_page]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
+
+- (void) getHaMaxHostFailuresAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[PoolMaxHostFailuresVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getMaxHostFailuresAsync" ofType:@"json"]]], nil);
         return;
@@ -185,7 +164,7 @@
     }];
 }
 
-- (void) getHaInfoAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getHaInfoAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[PoolHaInfoVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getHaInfoAsync" ofType:@"json"]]], nil);
         return;

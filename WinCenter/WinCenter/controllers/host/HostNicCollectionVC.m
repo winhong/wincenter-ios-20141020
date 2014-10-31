@@ -12,10 +12,10 @@
 @implementation HostNicCollectionVC
 
 -(void)reloadData{
-    [self.hostVO getHostNicUngroupedListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:@"非聚合网卡"];
-        [self.hostVO getHostNicGroupedListAsync:^(NSArray *allRemote, NSError *error) {
-            [self.dataList setValue:allRemote forKey:@"聚合网卡"];
+    [self.hostVO getHostNicUngroupedListAsync:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((HostNicListResult*)object).pnis];
+        [self.hostVO getHostNicGroupedListAsync:^(id object, NSError *error) {
+            [self.dataList addObjectsFromArray:((HostNicListResult*)object).pnis];
             [self.collectionView headerEndRefreshing];
             [self.collectionView footerEndRefreshing];
             [self.collectionView reloadData];
@@ -27,7 +27,7 @@
     
     HostNicCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostNicCollectionCell" forIndexPath:indexPath];
 
-    HostNicVO *hostNicVO = (HostNicVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    HostNicVO *hostNicVO = (HostNicVO *) self.dataList[indexPath.row];
     cell.title.text = hostNicVO.name;
     cell.label1.text = hostNicVO.macAddress;
     cell.label2.text = [NSString stringWithFormat:@"%dMbit/s", hostNicVO.speed];

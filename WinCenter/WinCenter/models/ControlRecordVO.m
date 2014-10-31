@@ -10,10 +10,10 @@
 
 @implementation ControlRecordVO
 
-+ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchAllCompletionBlock)completeBlock{
++ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchObjectCompletionBlock)completeBlock{
     
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completeBlock([[ControlRecordListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ControlRecordVO.getControlRecordListViaObject" ofType:@"json"]]].tasks, nil);
+        completeBlock([[ControlRecordListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ControlRecordVO.getControlRecordListViaObject" ofType:@"json"]]], nil);
         return;
     }
     
@@ -30,7 +30,7 @@
         else if([remoteObject isKindOfClass:[VmVO class]]){[simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.task.getList&params=firstResult%%3D0%%26maxResult%%3D12%%26vmId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, ((VmVO*)remoteObject).vmId]];
         }
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completeBlock([[ControlRecordListResult alloc] initWithJSONData:jsonResponse.rawBody].tasks, error);
+        completeBlock([[ControlRecordListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 

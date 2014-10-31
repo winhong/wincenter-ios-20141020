@@ -21,6 +21,6 @@
 @property int hostId;
 @property int vmId;
 
-+ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchAllCompletionBlock)completeBlock;
++ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchObjectCompletionBlock)completeBlock;
 
 @end

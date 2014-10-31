@@ -59,8 +59,8 @@
         self.datacenterStatWinserver = object;
         [self refreshMainInfo];
         
-        [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(NSArray *allRemote, NSError *error) {
-            self.datacenterStatWinserver.appNumber = (int) allRemote.count;
+        [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver.appNumber = (int) ((BusinessListResult*)object).resultList.count;
             [self refreshMainInfo2];
             
             self.datacenterStatWinserver.totalCpu = 0;
@@ -69,8 +69,8 @@
             self.datacenterStatWinserver.availCpu = 0;
             self.datacenterStatWinserver.availMemory = 0;
             self.datacenterStatWinserver.availStorage = 0;
-            [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(NSArray *allRemote, NSError *error) {
-                for(PoolVO *poolVO in allRemote){
+            [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
+                for(PoolVO *poolVO in ((PoolListResult*)object).resourcePools){
                     [poolVO getPoolVOSync:^(id object, NSError *error) {
                         self.datacenterStatWinserver.totalCpu += ((PoolVO *)object).totalCpu;
                         self.datacenterStatWinserver.totalMemory += ((PoolVO *)object).totalMemory;
@@ -78,8 +78,6 @@
                         self.datacenterStatWinserver.availCpu += ((PoolVO *)object).availCpu;
                         self.datacenterStatWinserver.availMemory += ((PoolVO *)object).availMemory;
                         self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
-                        
-                        
                     }];
                 }
                 [self refreshMainInfo3];
@@ -127,6 +125,9 @@
     self.storageProgress.tintColor = [self.datacenterStatWinserver storageRatioColor];
     
     //圈图
+    for(UIView *subView in self.cpuChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.datacenterStatWinserver cpuRatio]] andClockwise:YES andShadow:YES];
     self.circleChart.backgroundColor = [UIColor clearColor];
     self.circleChart.strokeColor = [UIColor clearColor];
@@ -138,7 +139,9 @@
     [self.circleChart strokeChart];
     [self.cpuChartGroup addSubview:self.circleChart];
     
-    
+    for(UIView *subView in self.memoryChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.datacenterStatWinserver memoryRatio]] andClockwise:YES andShadow:YES];
     self.circleChart2.backgroundColor = [UIColor clearColor];
     self.circleChart2.strokeColor = [UIColor clearColor];
@@ -150,6 +153,9 @@
     [self.circleChart2 strokeChart];
     [self.memoryChartGroup addSubview:self.circleChart2];
     
+    for(UIView *subView in self.storageChartGroup.subviews){
+        [subView removeFromSuperview];
+    }
     self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.datacenterStatWinserver storageRatio]] andClockwise:YES andShadow:YES];
     self.circleChart3.backgroundColor = [UIColor clearColor];
     self.circleChart3.strokeColor = [UIColor clearColor];

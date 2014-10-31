@@ -119,29 +119,29 @@
     }];
 }
 
-- (void) getVmVolumnListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getVmVolumnListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[VmDiskListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmVolumnListAsync" ofType:@"json"]]].volumes, nil);
+        completionBlock([[VmDiskListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmVolumnListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getVolumes&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.vmId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[VmDiskListResult alloc] initWithJSONData:jsonResponse.rawBody].volumes, error);
+        completionBlock([[VmDiskListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
-- (void) getVmNicListAsync:(FetchAllCompletionBlock)completionBlock{
+- (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([[VmNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmNicListAsync" ofType:@"json"]]].nics, nil);
+        completionBlock([[VmNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmNicListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getNics&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.vmId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
-        completionBlock([[VmNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody].nics, error);
+        completionBlock([[VmNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
 
@@ -184,7 +184,7 @@
     }];
 }
 
-- (void) vmGetMigrateTargets:(FetchAllCompletionBlock)completionBlock{
+- (void) vmGetMigrateTargets:(FetchObjectCompletionBlock)completionBlock{
     [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
         [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],

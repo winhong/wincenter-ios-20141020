@@ -164,6 +164,14 @@
     });
 }
 
+- (void)finishingLoading{
+    double delayInSeconds = 0.3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        self.state = MJRefreshStateEnding;
+    });
+}
+
 #pragma mark - 设置状态
 - (void)setPullToRefreshText:(NSString *)pullToRefreshText
 {
@@ -195,6 +203,10 @@
             // 设置文字
             self.statusLabel.text = self.refreshingText;
 			break;
+        case MJRefreshStateEnding:
+            // 设置文字
+            self.statusLabel.text = @"已经加载完毕！";
+            break;
         default:
             break;
 	}
@@ -274,6 +286,15 @@
                 self.beginRefreshingCallback();
             }
 			break;
+        }
+        case MJRefreshStateEnding:
+        {
+            // 开始转圈圈
+            [self.activityView stopAnimating];
+            self.activityView.hidden = YES;
+            // 隐藏箭头
+            self.arrowImage.hidden = YES;
+            break;
         }
         default:
             break;

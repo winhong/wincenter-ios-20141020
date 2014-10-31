@@ -13,7 +13,7 @@
 
 @property NSArray *poolList;
 @property PoolVO *poolVO;
-@property NSMutableDictionary *dataList;
+@property NSMutableArray *dataList;
 @property NSArray *businessList;
 
 @property BOOL isDetailPagePushed;

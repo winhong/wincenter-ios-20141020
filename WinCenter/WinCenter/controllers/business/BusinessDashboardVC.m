@@ -24,27 +24,32 @@
 
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(NSArray *allRemote, NSError *error) {
-        [self.dataList setValue:allRemote forKey:[RemoteObject getCurrentDatacenterVO].name];
-        [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(NSArray *allRemote, NSError *error) {
-            self.allBusList = allRemote;
+
+    [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(id object, NSError *error) {
+        self.allBusList = ((BusinessListResult*)object).resultList;
+        
+        [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
+            self.unalloctedBusList = ((BusinessListResult*)object).resultList;
             
-            [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(NSArray *allRemote, NSError *error) {
-                self.unalloctedBusList = allRemote;
+            [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+                [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
                 [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
+                if(self.dataList.count >= ((BusinessListResult*)object).recordTotal){
+                    [self.collectionView footerFinishingLoading];
+                }else{
+                    [self.collectionView footerEndRefreshing];
+                }
                 [self.collectionView reloadData];
-            }];
+            } referTo:self.dataList];
         }];
     }];
-
     
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BusinessDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BusinessDashboardCell" forIndexPath:indexPath];
     
-    BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    BusinessVO *businessVO = (BusinessVO *) self.dataList[indexPath.row];
     cell.title.text = businessVO.name;
     cell.manager.text = businessVO.managerId;
     cell.createTime.text = [businessVO.createTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
@@ -55,21 +60,23 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     BusinessDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"BusinessDashboardHeader" forIndexPath:indexPath];
-    BusinessVO *businessVO = (BusinessVO *) [self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount.text = [NSString stringWithFormat:@"%d",businessVO.vmNum];
+    header.businessVmCount.text = [NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //缩起
     header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount2.text =[NSString stringWithFormat:@"%d",businessVO.vmNum];
+    header.businessVmCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //圈图
+    for(UIView *subView in header.businessAllocateChart.subviews){
+        [subView removeFromSuperview];
+    }
     PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.businessAllocateChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.unalloctedBusList.count*100/self.allBusList.count] andClockwise:YES andShadow:YES];
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
@@ -91,7 +98,7 @@
     }else{
         vc = [[root childViewControllers] firstObject];
     }
-    vc.businessVO = (BusinessVO *)[self.dataList valueForKey:self.dataList.allKeys[indexPath.section]][indexPath.row];
+    vc.businessVO = (BusinessVO *)self.dataList[indexPath.row];
 
     if(self.isDetailPagePushed){
         [self.navigationController pushViewController:vc animated:YES];

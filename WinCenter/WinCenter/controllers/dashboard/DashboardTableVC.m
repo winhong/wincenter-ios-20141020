@@ -26,9 +26,9 @@
     scroller.delegate=self;
     self.tableView.tableHeaderView = scroller;
     
-    [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
-        if(allRemote.count>0){
-            [RemoteObject setCurrentDatacenterVO:[allRemote firstObject]];
+    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+        if(((DatacenterListResult*)object).dataCenters.count>0){
+            [RemoteObject setCurrentDatacenterVO:[((DatacenterListResult*)object).dataCenters firstObject]];
             [self.infoVC refresh];
             [self refresh];
         }else{

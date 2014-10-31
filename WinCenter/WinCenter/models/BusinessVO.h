@@ -22,6 +22,6 @@
 @property NSString *sysSrc;
 
 - (void) getBusinessVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) getBusinessVmListAsync:(FetchAllCompletionBlock)completeBlock;
+- (void) getBusinessVmListAsync:(FetchObjectCompletionBlock)completeBlock;
 
 @end

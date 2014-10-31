@@ -21,11 +21,11 @@
     
     self.menuVC.tabBarVC = self.tabBarVC;
     
-    [DatacenterVO getDatacenterListAsync:^(NSArray *allRemote, NSError *error) {
-        if(allRemote.count>0){
-            [RemoteObject setCurrentDatacenterVO:[allRemote firstObject]];
+    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+        if(((DatacenterListResult*)object).dataCenters.count>0){
+            [RemoteObject setCurrentDatacenterVO:[((DatacenterListResult*)object).dataCenters firstObject]];
             [self refresh];
-            if(allRemote.count>1){
+            if(((DatacenterListResult*)object).dataCenters.count>1){
                 [self.tabBarVC setSelectedIndex:7];
                 [self.menuVC setSelectedItemIndex:7];
             }else{

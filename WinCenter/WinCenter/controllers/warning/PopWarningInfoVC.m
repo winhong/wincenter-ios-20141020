@@ -21,8 +21,8 @@
 {
     [super viewDidLoad];
     
-    [WarningInfoVO getWarningInfoListAsync:^(NSArray *allRemote, NSError *error) {
-        self.dataList = allRemote;
+    [WarningInfoVO getWarningInfoListAsync:^(id object, NSError *error) {
+        self.dataList = ((WarningInfoListResult*)object).alarms;
         [self.tableView reloadData];
     }];
 }
