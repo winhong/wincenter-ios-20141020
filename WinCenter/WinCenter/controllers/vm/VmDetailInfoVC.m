@@ -200,17 +200,21 @@
     [lineChart4 strokeChart];
     [self.storagePNChartArea addSubview:lineChart4];
     
+    [self.scrollView addHeaderWithCallback:^{
+        [self reloadData];
+    }];
     [self reloadData];
 }
 
 - (IBAction)refreshAction:(id)sender {
-    [self reloadData];
+    [self.scrollView headerBeginRefreshing];
 }
 
 -(void)reloadData{
     [self.vmVO getVmVOAsync:^(id object, NSError *error) {
         self.vmVO = object;
         [self refresh];
+        [self.scrollView headerEndRefreshing];
     }];
 }
 - (void)refresh{

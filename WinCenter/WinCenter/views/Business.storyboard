@@ -117,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOX-jT-QF6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOX-jT-QF6">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <userGuides>
                                     <userLayoutGuide location="187" affinity="minY"/>
@@ -245,6 +245,7 @@
                         <outlet property="desc" destination="UmV-Ec-nhs" id="HnB-1f-mcF"/>
                         <outlet property="managerId" destination="Zh7-vU-bmz" id="1JP-E1-sw5"/>
                         <outlet property="platform" destination="k5p-vK-o81" id="bRD-L8-K6I"/>
+                        <outlet property="scrollView" destination="jOX-jT-QF6" id="pnZ-Nq-KNH"/>
                         <outlet property="vmCount" destination="4UV-Q8-D8B" id="Ovd-M2-P0b"/>
                         <outletCollection property="allLabels" destination="4UV-Q8-D8B" id="n9q-sE-BAs"/>
                         <outletCollection property="allLabels" destination="Zh7-vU-bmz" id="FQe-5W-8Cn"/>

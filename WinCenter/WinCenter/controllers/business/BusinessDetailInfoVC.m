@@ -34,7 +34,9 @@
 
 - (void)viewDidLayoutSubviews{
     if(self.scrollView){
-        self.scrollView.contentSize = CGSizeMake(320, 700);
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            self.scrollView.contentSize = CGSizeMake(320, 700);
+        }
     }
 }
 
@@ -45,18 +47,22 @@
     }
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
+    
+    [self.scrollView addHeaderWithCallback:^{
+        [self reloadData];
+    }];
     [self reloadData];
 }
 
 - (IBAction)refreshAction:(id)sender {
-    [self reloadData];
+    [self.scrollView headerBeginRefreshing];
 }
 
 -(void) reloadData{
     [self.businessVO getBusinessVOAsync:^(id object, NSError *error) {
         self.businessVO = object;
         [self refresh];
-        
+        [self.scrollView headerEndRefreshing];
     }];
 }
 

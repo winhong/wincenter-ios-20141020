@@ -627,7 +627,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-bn-Z9B">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-bn-Z9B">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="操作系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tn-5f-utH">
@@ -788,7 +788,6 @@
                                                 <exclude reference="Lv7-9h-r9S"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=compact-widthClass=compact"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                             <mask key="subviews">
@@ -917,7 +916,7 @@
                         <outlet property="noDynamicMemWce_img" destination="ZA9-Tv-0iP" id="pdV-OX-JHG"/>
                         <outlet property="osType" destination="OUi-lo-yL1" id="xej-E7-I2U"/>
                         <outlet property="osType_image" destination="Z4A-C3-IAJ" id="zc9-5b-dUA"/>
-                        <outlet property="scrollView" destination="ozM-bn-Z9B" id="erC-fP-J27"/>
+                        <outlet property="scrollView" destination="ozM-bn-Z9B" id="WtE-LF-mNG"/>
                         <outlet property="snopshotNum" destination="FMw-5D-H9T" id="TfW-DL-fW8"/>
                         <outlet property="vcpu" destination="hw2-ks-FKy" id="bzE-Ae-QFw"/>
                         <outletCollection property="allLabels" destination="9aX-3m-jaB" id="4he-Ca-5op"/>

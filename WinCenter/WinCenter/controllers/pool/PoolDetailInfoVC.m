@@ -81,13 +81,15 @@
 
     self.view.backgroundColor = [UIColor clearColor];
     [super viewDidLoad];
-    
+    [self.scrollView addHeaderWithCallback:^{
+        [self reloadData];
+    }];
     // Do any additional setup after loading the view.
     [self reloadData];
 }
 
 - (IBAction)refreshAction:(id)sender {
-    [self reloadData];
+    [self.scrollView headerBeginRefreshing];
 }
 
 -(void)reloadData{
@@ -102,6 +104,7 @@
                     self.haInfoVO = object;
                     [self refreshMainInfo];
                     [self refreshElasticInfo];
+                    [self.scrollView headerEndRefreshing];
                 }];
             }];
         }];

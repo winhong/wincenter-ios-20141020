@@ -640,7 +640,7 @@
                             <userLayoutGuide location="320" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxs-dy-ZZO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxs-dy-ZZO">
                                 <rect key="frame" x="0.0" y="-20" width="969" height="543"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-QP-8Fc">
@@ -1354,7 +1354,7 @@
                         <outlet property="memoryUsedSize" destination="soJ-ea-rEp" id="Kwh-tO-gaa"/>
                         <outlet property="model" destination="Vry-Py-BGi" id="CZG-qd-OBy"/>
                         <outlet property="networkNum" destination="fgi-Zb-PCa" id="BA3-5A-NMD"/>
-                        <outlet property="scrollView" destination="xxs-dy-ZZO" id="k8G-0P-gOU"/>
+                        <outlet property="scrollView" destination="xxs-dy-ZZO" id="Sqp-WU-Lj6"/>
                         <outlet property="storageChartGroup" destination="wYV-By-EJt" id="z4e-gy-Iqk"/>
                         <outlet property="storageSize" destination="veJ-3m-o34" id="oRr-dW-mi5"/>
                         <outlet property="storageUnusedSize" destination="Lhg-00-HBc" id="TVu-Mj-0c8"/>

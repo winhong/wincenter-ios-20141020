@@ -767,7 +767,7 @@
                         <outlet property="memoryUnusedSize" destination="uhc-82-g0V" id="LhA-1U-QhF"/>
                         <outlet property="memoryUsedSize" destination="JPb-ll-QYi" id="pdr-Rl-ZJT"/>
                         <outlet property="nextCheckTime" destination="IHl-ge-3wH" id="1bo-eE-8FF"/>
-                        <outlet property="scrollView" destination="rNU-g4-zo3" id="b1c-hk-hw4"/>
+                        <outlet property="scrollView" destination="rNU-g4-zo3" id="UUe-WJ-skP"/>
                         <outlet property="storageChartGroup" destination="MFk-IA-6Td" id="rvz-3x-cla"/>
                         <outlet property="storageSize" destination="2W2-Cx-iK9" id="2oc-du-XS5"/>
                         <outlet property="storageUnusedSize" destination="frF-ay-9Cs" id="IjA-St-5Me"/>

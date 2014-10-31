@@ -85,12 +85,14 @@
         label.text = @"";
     }
     [super viewDidLoad];
-    
+    [self.scrollView addHeaderWithCallback:^{
+        [self reloadData];
+    }];
     [self reloadData];
 }
 
 - (IBAction)refreshAction:(id)sender {
-    [self reloadData];
+    [self.scrollView headerBeginRefreshing];
 }
 
 - (void)reloadData{
@@ -103,9 +105,11 @@
                 [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
                     self.statVO = object;
                     [self refreshStatInfo];
+                    [self.scrollView headerEndRefreshing];
                 }];
             }else{
                 [self refreshStatInfo];
+                [self.scrollView headerEndRefreshing];                
             }
             
         }];
