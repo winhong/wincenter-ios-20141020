@@ -148,11 +148,11 @@
     }];
     }
 - (IBAction)showBusinessListSelect:(id)sender {
-    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(NSArray *allRemote, NSError *error) {
-        self.busDomainsList = allRemote;
+    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
+        self.busDomainsList = ((BusDomainsListResult*)object).busDomains;
         
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部业务系统" otherButtonTitles: nil];
-        for(BusDomainsVO *busDomains in allRemote){
+        for(BusDomainsVO *busDomains in self.busDomainsList){
             [sheet addButtonWithTitle:busDomains.busDomainName];
         }
         if([self isKindOfClass:HostDashboardVC.class]){

@@ -105,15 +105,12 @@
         self.btnMigrate.enabled = true;
     }
     
-    [self.vmVO getVmVolumnListAsync:^(NSArray *allRemote, NSError *error) {
-        if (allRemote.count != 0) {
-            for (StorageVolumnVO *volumn in  allRemote) {
-                if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
-                    self.btnMigrate.enabled = false;
-                }
+    [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
+        for (StorageVolumnVO *volumn in  ((VmDiskListResult*)object).volumes) {
+            if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
+                self.btnMigrate.enabled = false;
             }
         }
-        
     }];
     
 }
