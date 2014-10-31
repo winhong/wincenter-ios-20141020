@@ -63,13 +63,13 @@
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount.text = [NSString stringWithFormat:@"%ld",self.allBusList.count];
+    header.busDomainsCount.text = [NSString stringWithFormat:@"%ld",self.allBusDomainsList.count];
     header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //缩起
     header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.businessVmCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
+    //header.businessVmCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
