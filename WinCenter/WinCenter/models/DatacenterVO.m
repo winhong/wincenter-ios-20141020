@@ -210,7 +210,20 @@
     }];
 }
 
-- (void) getBusinessAllAsync:(FetchObjectCompletionBlock)completionBlock{
+- (void) getBusDomainsListAsync:(FetchAllCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[BusDomainsListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DatacenterVO.getBusDomainsListAsync" ofType:@"json"]]].busDomains, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/pc/rm/busDomains"]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[BusDomainsListResult alloc] initWithJSONData:jsonResponse.rawBody].busDomains, error);
+    }];
+}
+
+- (void) getBusinessAllAsync:(FetchAllCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[BusinessListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DatacenterVO.getBusinessListAsync" ofType:@"json"]]], nil);
         return;
