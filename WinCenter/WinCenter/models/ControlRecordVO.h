@@ -11,8 +11,8 @@
 @interface ControlRecordVO : NSObject
 
 @property NSString *taskName;
-@property int executeTime;
-@property NSString *endTime;
+@property float executeTime;
+@property float endTime;
 @property int progress;
 @property NSString *state;
 @property NSString *user;

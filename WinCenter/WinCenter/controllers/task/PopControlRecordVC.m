@@ -67,11 +67,26 @@
     PopControlRecordCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ControlRecordCell" forIndexPath:indexPath];
     
     ControlRecordVO *controlRecordVO = self.dataList[indexPath.row];
+    //时间格式化
+    NSDate *date = [[NSDate alloc]initWithTimeIntervalSince1970:controlRecordVO.executeTime/1000];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSString *nowtimeStr = [formatter stringFromDate:date];
+    
+    //状态转换
+    NSString *state_text;
+    if ([controlRecordVO.state isEqualToString:@"success"]) {
+        state_text = @"成功";
+    }else if ([controlRecordVO.state isEqualToString:@"completedAndError"]) {
+        state_text = @"失败";
+    }else if ([controlRecordVO.state isEqualToString:@"in-progress"]) {
+        state_text = @"执行中";
+    }
     cell.label1.text = controlRecordVO.taskName;
-    cell.label2.text = [NSString stringWithFormat:@"%d 时",(controlRecordVO.executeTime)/3600];
+    cell.label2.text = [NSString stringWithFormat:@"%@",nowtimeStr];
     cell.label3.text = controlRecordVO.targetName;
     cell.label4.text = controlRecordVO.progress == 100 ? @"完成" : @"进行中";
-    cell.label5.text = controlRecordVO.state;
+    cell.label5.text = state_text;
     cell.label6.text = controlRecordVO.user;
     //"tasks": [
     //          {
