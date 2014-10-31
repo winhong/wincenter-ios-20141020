@@ -1014,6 +1014,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="资源池总览" id="Jb5-Vj-smb">
                         <barButtonItem key="leftBarButtonItem" title="   " id="PSP-np-Fnh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="BcQ-n1-NLc">
+                            <connections>
+                                <action selector="refreshAction:" destination="buB-ce-6JP" id="GD2-UU-hNf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -1480,6 +1485,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="数据中心总览" id="fha-aA-CHi">
                         <barButtonItem key="leftBarButtonItem" title="   " id="TuY-wu-MG6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sxv-o1-9yn">
+                            <connections>
+                                <action selector="refreshAction:" destination="cSx-41-28X" id="x7V-hc-pAN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -1498,7 +1508,7 @@
                         <outlet property="memoryUnusedSize" destination="60A-ua-jKz" id="hEI-yB-MFe"/>
                         <outlet property="name" destination="TuY-wu-MG6" id="Lc3-xy-t3N"/>
                         <outlet property="poolCount" destination="zqY-g2-gCH" id="nrr-Z0-zak"/>
-                        <outlet property="scrollView" destination="vq1-ei-cxf" id="fFO-lh-0kc"/>
+                        <outlet property="scrollView" destination="V8Q-mN-loo" id="hhC-dm-5gZ"/>
                         <outlet property="storageChartGroup" destination="C50-vk-uSV" id="6BX-Kr-s8m"/>
                         <outlet property="storageSize" destination="D6W-39-ml1" id="YW1-gb-uda"/>
                         <outlet property="storageSize2" destination="poX-NF-ibS" id="zfz-hQ-OB6"/>
@@ -2114,6 +2124,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="物理机总览" id="UHz-Uf-ULe">
                         <barButtonItem key="leftBarButtonItem" title="   " id="OL7-NI-Ma3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="g4U-u9-d8D">
+                            <connections>
+                                <action selector="refreshAction:" destination="tNF-5l-310" id="O9g-EU-GWp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -2629,6 +2644,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="存储池总览" id="NVZ-Rm-y5V">
                         <barButtonItem key="leftBarButtonItem" title="   " id="KpP-j0-2Yt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QxL-3K-sr1">
+                            <connections>
+                                <action selector="refreshAction:" destination="Vdc-u6-N4C" id="Nd0-Yk-3A7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -3127,6 +3147,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="虚拟机总览" id="mID-sn-LYh">
                         <barButtonItem key="leftBarButtonItem" title="   " id="HOR-tp-gmx"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="bed-jq-p8b">
+                            <connections>
+                                <action selector="refreshAction:" destination="8QM-yF-skn" id="qo0-xT-lDm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -3464,6 +3489,11 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="业务系统总览" id="cco-aI-dK4">
                         <barButtonItem key="leftBarButtonItem" title="   " id="ROt-1z-Eh0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="mlc-hJ-ixU">
+                            <connections>
+                                <action selector="refreshAction:" destination="rJv-N2-owX" id="cNi-Sl-g14"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>

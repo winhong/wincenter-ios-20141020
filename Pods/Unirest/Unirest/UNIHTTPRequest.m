@@ -103,6 +103,9 @@ int hudCounter = 0;
     return [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:response];
 }
 
+-(void)showHud{
+    [SVProgressHUD show];
+}
 -(UNIUrlConnection*) asJsonAsync:(UNIHTTPJsonResponseBlock) response {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     //if(!self.jgHud){
@@ -112,8 +115,9 @@ int hudCounter = 0;
     //[self.jgHud showInView:[UIApplication sharedApplication].keyWindow animated:NO];
     //self.mbHud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     hudCounter++;
+    NSTimer *timer;
     if(hudCounter==1){
-        [SVProgressHUD show];
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(showHud) userInfo:nil repeats:NO];
     }
     
     return [UNIHTTPClientHelper requestAsync:self handler:^(UNIHTTPResponse * res, NSError * error) {
@@ -122,6 +126,9 @@ int hudCounter = 0;
             //[self.jgHud dismissAnimated:NO];
             //[self.mbHud hide:NO];
             if(hudCounter==1){
+                if(timer){
+                    [timer invalidate];
+                }
                 [SVProgressHUD dismiss];
             }
             hudCounter--;
