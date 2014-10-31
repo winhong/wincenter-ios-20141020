@@ -148,12 +148,12 @@
     }];
 }
 - (IBAction)showBusinessListSelect:(id)sender {
-    [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(id object, NSError *error) {
-        self.businessList = ((BusinessListResult*)object).resultList;
+    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(NSArray *allRemote, NSError *error) {
+        self.busDomainsList = allRemote;
         
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部业务系统" otherButtonTitles: nil];
-        for(BusinessVO *business in self.businessList){
-            [sheet addButtonWithTitle:[NSString stringWithFormat:@"%d",business.busDomainId]];
+        for(BusDomainsVO *busDomains in allRemote){
+            [sheet addButtonWithTitle:busDomains.busDomainName];
         }
         if([self isKindOfClass:HostDashboardVC.class]){
             [sheet addButtonWithTitle:@"未分配业务系统"];
