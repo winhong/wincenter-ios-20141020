@@ -12,7 +12,7 @@ typedef void(^BasicCompletionBlock)(NSError *error);
 
 typedef void(^FetchObjectCompletionBlock)(id object, NSError *error);
 
-#define per_page 2
+#define per_page 12
 
 @class DatacenterVO;
 
