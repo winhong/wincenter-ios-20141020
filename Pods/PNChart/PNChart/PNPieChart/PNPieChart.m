@@ -53,6 +53,9 @@
 		_duration = 1.0;
         
 		[self loadDefault];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(strokeChart)];
+        [self addGestureRecognizer:tap];
 	}
 	
 	return self;

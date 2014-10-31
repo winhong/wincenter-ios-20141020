@@ -58,11 +58,13 @@
         [_countingLabel setCenter:CGPointMake(self.center.x, self.center.y)];
         _countingLabel.method = UILabelCountingMethodEaseInOut;
         [self addSubview:_countingLabel];;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(strokeChart)];
+        [self addGestureRecognizer:tap];
     }
 
     return self;
 }
-
 
 - (void)strokeChart
 {
