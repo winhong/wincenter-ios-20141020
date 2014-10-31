@@ -104,6 +104,18 @@
         self.btnRestart.enabled = false;
         self.btnMigrate.enabled = true;
     }
+    
+    [self.vmVO getVmVolumnListAsync:^(NSArray *allRemote, NSError *error) {
+        if (allRemote.count != 0) {
+            for (StorageVolumnVO *volumn in  allRemote) {
+                if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
+                    self.btnMigrate.enabled = false;
+                }
+            }
+        }
+        
+    }];
+    
 }
 - (IBAction)operateAction:(id)sender {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"操作提示" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"开机",@"关机",@"重启",@"迁移", nil];
