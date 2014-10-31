@@ -12,15 +12,16 @@
 @implementation HostNetworkCollectionVC
 
 -(void)reloadData{
-    [self.hostVO getHostNetworkExternalListAsync:^(id object, NSError *error) {
+    [self.hostVO getHostNetworkListAsync:^(id object, NSError *error) {
         [self.dataList addObjectsFromArray:((HostNetworkListResult*)object).networks];
-        [self.hostVO getHostNetworkInternalListAsync:^(id object, NSError *error) {
-            [self.dataList addObjectsFromArray:((HostNetworkListResult*)object).networks];
-            [self.collectionView headerEndRefreshing];
+        [self.collectionView headerEndRefreshing];
+        if(self.dataList.count >= ((HostNicListResult*)object).recordTotal){
+            [self.collectionView footerFinishingLoading];
+        }else{
             [self.collectionView footerEndRefreshing];
-            [self.collectionView reloadData];
-        }];
-    }];
+        }
+        [self.collectionView reloadData];
+    } withType:self.isExternal referTo:self.dataList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

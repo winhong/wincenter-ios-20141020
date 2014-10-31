@@ -11,5 +11,6 @@
 @interface HostNetworkCollectionVC : MasterCollectionVC
 
 @property HostVO *hostVO;
+@property BOOL isExternal;
 
 @end

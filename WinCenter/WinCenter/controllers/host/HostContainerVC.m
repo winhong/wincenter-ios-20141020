@@ -66,13 +66,25 @@
     hostStorageCollectionVC.hostVO = self.hostVO;
     [pages addObject:hostStorageCollectionVC];
     
-    HostNetworkCollectionVC *hostNetworkCollectionVC = [self.storyboard instantiateViewController:@"HostNetworkCollectionVC"];
-    hostNetworkCollectionVC.hostVO = self.hostVO;
-    [pages addObject:hostNetworkCollectionVC];
+    HostNetworkCollectionVC *hostNetworkCollectionVC1 = [self.storyboard instantiateViewController:@"HostNetworkCollectionVC"];
+    hostNetworkCollectionVC1.hostVO = self.hostVO;
+    hostNetworkCollectionVC1.isExternal = TRUE;
+    [pages addObject:hostNetworkCollectionVC1];
     
-    HostNicCollectionVC *hostNicCollectionVC = [self.storyboard instantiateViewController:@"HostNicCollectionVC"];
-    hostNicCollectionVC.hostVO = self.hostVO;
-    [pages addObject:hostNicCollectionVC];
+    HostNetworkCollectionVC *hostNetworkCollectionVC2 = [self.storyboard instantiateViewController:@"HostNetworkCollectionVC"];
+    hostNetworkCollectionVC2.hostVO = self.hostVO;
+    hostNetworkCollectionVC2.isExternal = FALSE;
+    [pages addObject:hostNetworkCollectionVC2];
+    
+    HostNicCollectionVC *hostNicCollectionVC1 = [self.storyboard instantiateViewController:@"HostNicCollectionVC"];
+    hostNicCollectionVC1.hostVO = self.hostVO;
+    hostNicCollectionVC1.isGrouped = TRUE;
+    [pages addObject:hostNicCollectionVC1];
+    
+    HostNicCollectionVC *hostNicCollectionVC2 = [self.storyboard instantiateViewController:@"HostNicCollectionVC"];
+    hostNicCollectionVC2.hostVO = self.hostVO;
+    hostNicCollectionVC2.isGrouped = FALSE;
+    [pages addObject:hostNicCollectionVC2];
     
     self.pages = pages;
     

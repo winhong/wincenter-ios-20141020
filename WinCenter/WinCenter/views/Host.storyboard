@@ -234,18 +234,30 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="d51-zZ-yzc"/>
-                                    <barButtonItem tag="4" title="网络连接" id="8oa-Hp-8Ka">
+                                    <barButtonItem tag="4" title="外部网络" id="8oa-Hp-8Ka">
                                         <connections>
                                             <action selector="showPageBarItemClick:" destination="SdQ-oO-Giu" id="KfZ-Yn-oJw"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hcn-NX-TFC"/>
+                                    <barButtonItem tag="5" title="内部网络" id="h6J-ZE-We1">
+                                        <connections>
+                                            <action selector="showPageBarItemClick:" destination="SdQ-oO-Giu" id="zSh-8E-rh2"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="llm-pO-KeC"/>
-                                    <barButtonItem tag="5" title="网络适配器" id="3N0-gp-aJo">
+                                    <barButtonItem tag="6" title="聚合网卡" id="3N0-gp-aJo">
                                         <connections>
                                             <action selector="showPageBarItemClick:" destination="SdQ-oO-Giu" id="htP-qc-o0Q"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="q8Z-et-cTU"/>
+                                    <barButtonItem tag="7" title="非聚合网卡" id="lbJ-Fy-LEc">
+                                        <connections>
+                                            <action selector="showPageBarItemClick:" destination="SdQ-oO-Giu" id="h5j-b0-wV4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rCq-fs-1hO"/>
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>

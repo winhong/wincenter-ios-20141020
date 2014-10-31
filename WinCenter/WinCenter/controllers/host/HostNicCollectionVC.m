@@ -12,15 +12,16 @@
 @implementation HostNicCollectionVC
 
 -(void)reloadData{
-    [self.hostVO getHostNicUngroupedListAsync:^(id object, NSError *error) {
+    [self.hostVO getHostNicListAsync:^(id object, NSError *error) {
         [self.dataList addObjectsFromArray:((HostNicListResult*)object).pnis];
-        [self.hostVO getHostNicGroupedListAsync:^(id object, NSError *error) {
-            [self.dataList addObjectsFromArray:((HostNicListResult*)object).pnis];
-            [self.collectionView headerEndRefreshing];
+        [self.collectionView headerEndRefreshing];
+        if(self.dataList.count >= ((HostNicListResult*)object).recordTotal){
+            [self.collectionView footerFinishingLoading];
+        }else{
             [self.collectionView footerEndRefreshing];
-            [self.collectionView reloadData];
-        }];
-    }];
+        }
+        [self.collectionView reloadData];
+    } withType:self.isGrouped referTo:self.dataList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

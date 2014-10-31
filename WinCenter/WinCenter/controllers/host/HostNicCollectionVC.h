@@ -11,5 +11,6 @@
 @interface HostNicCollectionVC : MasterCollectionVC
 
 @property HostVO *hostVO;
+@property BOOL isGrouped;
 
 @end
