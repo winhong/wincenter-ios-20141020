@@ -10,7 +10,6 @@
 
 @interface VmCollectionVC : MasterCollectionVC
 
-@property PoolVO *poolVO;
 @property HostVO *hostVO;
 
 @end

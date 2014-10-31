@@ -13,6 +13,7 @@
 
 @property NSArray *poolList;
 @property PoolVO *poolVO;
+@property BOOL isOutofPool;
 @property NSMutableArray *dataList;
 @property NSArray *businessList;
 @property NSArray *busDomainsList;
@@ -25,7 +26,6 @@
 @property UIPopoverController *popover;
 
 -(void)reloadData;
--(void)reloadOtherHosts;
 
 -(IBAction)backToCollectionVC:(UIStoryboardSegue*)segue;
 -(IBAction)dismissModal:(id)sender;

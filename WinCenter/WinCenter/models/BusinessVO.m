@@ -30,14 +30,14 @@
     }];
 }
 
-- (void) getBusinessVmListAsync:(FetchObjectCompletionBlock)completeBlock{
+- (void) getBusinessVmListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[BusinessVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"BusinessVO.getBusinessVOAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.wce.vApp.getVApp&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.busId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.wce.vApp.getVApp&placeholder=%d&param=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.busId, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completeBlock([[BusinessVO alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];

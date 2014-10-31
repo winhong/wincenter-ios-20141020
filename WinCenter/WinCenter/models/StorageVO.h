@@ -45,6 +45,6 @@
 -(UIColor *)allocatedRatioColor;
 
 - (void) getStorageVOAsync:(FetchObjectCompletionBlock)completeBlock;
-- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock;
+- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
 
 @end

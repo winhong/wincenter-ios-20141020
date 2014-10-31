@@ -37,6 +37,8 @@
                     }
                     [self.collectionView reloadData];
                 } referTo:self.dataList];
+            }else if(self.isOutofPool){
+                //游离物理主机
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
                     [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];

@@ -44,6 +44,8 @@
                         [self.collectionView reloadData];
                     } referTo:self.dataList];
                 }];
+            }else if(self.isOutofPool){
+                //游离物理主机
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
                     NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
@@ -64,11 +66,6 @@
         }];
     }];
 
-}
-
-- (void)reloadOtherHosts{
-    //查询游离物理主机
-    [self.collectionView reloadData];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -30,9 +30,7 @@
 -(void)reloadData{
     
 }
--(void)reloadOtherHosts{
-    
-}
+
 - (void)viewDidAppear:(BOOL)animated{
     //[self.collectionView reloadData];
 }
@@ -113,22 +111,24 @@
     [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    self.isOutofPool = FALSE;
+    
     if(buttonIndex==0){
         self.poolVO = nil;
         self.allPoolOptionBarButton.title = @"全部资源池";
-        [self.dataList removeAllObjects];
-        [self reloadData];
+        [self.collectionView headerBeginRefreshing];
     }else if([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"游离物理主机"]){
         self.poolVO = nil;
         self.allPoolOptionBarButton.title = @"游离物理主机";
-        [self.dataList removeAllObjects];
-        [self reloadOtherHosts];
+        self.isOutofPool = TRUE;
+        [self.collectionView headerBeginRefreshing];
     }else{
-        self.poolVO = self.poolList[(buttonIndex-2)];
-        self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
-        [self.dataList removeAllObjects];
-        [self reloadData];
+        if(buttonIndex>=2){
+            self.poolVO = self.poolList[(buttonIndex-2)];
+            self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
+            [self.collectionView headerBeginRefreshing];
+        }
     }
 }
 - (IBAction)showPoolListSelect:(id)sender {
@@ -139,9 +139,7 @@
         for(PoolVO *pool in self.poolList){
             [sheet addButtonWithTitle:pool.resourcePoolName];
         }
-        if([self isKindOfClass:HostDashboardVC.class]){
-            [sheet addButtonWithTitle:@"游离物理主机"];
-        }
+        [sheet addButtonWithTitle:@"游离物理主机"];
         [sheet showFromBarButtonItem:sender animated:YES];
 
     }];

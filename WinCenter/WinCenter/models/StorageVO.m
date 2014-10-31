@@ -88,14 +88,14 @@
     }];
 }
 
-- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock{
+- (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[StorageVolumnListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageVO.getStorageVolumnListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.volumn.getVolumns&params=storagePoolId%%3D%d", [RemoteObject getCurrentDatacenterVO].id, self.storagePoolId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.volumn.getVolumns&params=storagePoolId%%3D%d%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.storagePoolId, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completeBlock([[StorageVolumnListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];

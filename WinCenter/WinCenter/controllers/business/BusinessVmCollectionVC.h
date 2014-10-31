@@ -11,7 +11,7 @@
 @interface BusinessVmCollectionVC : UICollectionViewController
 
 @property BusinessVO *businessVO;
-@property NSArray *dataList;
+@property NSMutableArray *dataList;
 @property BOOL isDetailPagePushed;
 
 @end

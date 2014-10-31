@@ -20,11 +20,15 @@
         self.collectionView.backgroundColor = [UIColor clearColor];
     }
     
+    
+    self.dataList = [[NSMutableArray alloc] initWithCapacity:0];
+    
     [super viewDidLoad];
     
     __unsafe_unretained typeof(self) week_self = self;
     
     [self.collectionView addHeaderWithCallback:^{
+        [week_self.dataList removeAllObjects];
         [week_self reloadData];
     } dateKey:@"collection"];
     
@@ -44,11 +48,15 @@
 
 - (void) reloadData{
     [self.storageVO getStorageVolumnListAsync:^(id object, NSError *error) {
-        self.dataList = ((StorageVolumnListResult*)object).resultList;
+        [self.dataList addObjectsFromArray:((StorageVolumnListResult*)object).resultList];
         [self.collectionView headerEndRefreshing];
-        [self.collectionView footerEndRefreshing];
+        if(self.dataList.count >= ((StorageVolumnListResult*)object).recordTotal){
+            [self.collectionView footerFinishingLoading];
+        }else{
+            [self.collectionView footerEndRefreshing];
+        }
         [self.collectionView reloadData];
-    }];
+    } referTo:self.dataList];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

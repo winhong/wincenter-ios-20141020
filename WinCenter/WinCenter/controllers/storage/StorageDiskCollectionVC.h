@@ -11,6 +11,6 @@
 @interface StorageDiskCollectionVC : UICollectionViewController
 
 @property StorageVO *storageVO;
-@property NSArray *dataList;
+@property NSMutableArray *dataList;
 
 @end
