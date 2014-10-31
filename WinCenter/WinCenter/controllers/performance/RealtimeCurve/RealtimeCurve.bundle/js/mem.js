@@ -40,7 +40,6 @@ function drawLineMemory(data){
 	        plotBackgroundColor: '#FFFFFF',
 	        marginTop: 30,
 	        marginBottom: 35,
-	        zoomType: 'x,y',
 	        events:{
 	        	load:function(){
 	        		var series = this.series;
