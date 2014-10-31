@@ -58,7 +58,7 @@ function drawLineCpu(data,cpuType){
 	    chart: {
 	        renderTo: 'cpuChart',
 	        defaultSeriesType: 'spline',
-	        height: 180,
+	        height: 280,
 	        plotBorderColor: '#e3e6e8',
 	        plotBorderWidth: 1,
 	        plotBorderRadius: 0,
