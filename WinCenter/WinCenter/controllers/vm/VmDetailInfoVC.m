@@ -203,6 +203,10 @@
     [self reloadData];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
+
 -(void)reloadData{
     [self.vmVO getVmVOAsync:^(id object, NSError *error) {
         self.vmVO = object;

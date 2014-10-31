@@ -24,8 +24,7 @@
 
 @implementation MasterCollectionVC
 - (IBAction)refreshAction:(id)sender {
-    [self.dataList removeAllObjects];
-    [self reloadData];
+    [self.collectionView headerBeginRefreshing];
 }
 
 -(void)reloadData{

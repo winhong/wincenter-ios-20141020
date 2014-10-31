@@ -67,6 +67,10 @@
     [self reloadData];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
+
 -(void)reloadData{
     
     [self.storageVO getStorageVOAsync:^(id object, NSError *error) {

@@ -47,6 +47,11 @@
     [super viewDidLoad];
     [self reloadData];
 }
+
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
+
 -(void) reloadData{
     [self.businessVO getBusinessVOAsync:^(id object, NSError *error) {
         self.businessVO = object;

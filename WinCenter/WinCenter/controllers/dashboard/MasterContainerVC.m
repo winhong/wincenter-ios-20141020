@@ -73,8 +73,8 @@
 }
 
 - (void)refreshCurrentPage{
-    if([self.pages[self.showIndex] respondsToSelector:@selector(reloadData)]){
-        [self.pages[self.showIndex] performSelector:@selector(reloadData) withObject:nil];
+    if([self.pages[self.showIndex] respondsToSelector:@selector(refreshAction:)]){
+        [self.pages[self.showIndex] performSelector:@selector(refreshAction:) withObject:nil];
     }
 }
 

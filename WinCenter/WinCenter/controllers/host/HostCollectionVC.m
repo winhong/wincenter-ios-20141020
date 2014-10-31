@@ -12,6 +12,10 @@
 
 @implementation HostCollectionVC
 
+- (IBAction)refreshAction:(id)sender {
+    [self.collectionView headerBeginRefreshing];
+}
+
 -(void)reloadData{
     [self.poolVO getHostListAsync:^(id object, NSError *error) {
         NSUInteger recordTotal = ((HostListResult*)object).hosts.count;

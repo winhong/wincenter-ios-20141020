@@ -48,8 +48,9 @@
     }];
     [self refresh];
 }
+
 - (IBAction)refreshAction:(id)sender {
-    [self refresh];
+    [self.scrollView headerBeginRefreshing];
 }
 
 - (void)refresh{

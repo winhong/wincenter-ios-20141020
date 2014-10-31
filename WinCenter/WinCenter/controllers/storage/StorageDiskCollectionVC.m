@@ -38,6 +38,10 @@
     //[self.collectionView footerEndRefreshing];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self.collectionView headerBeginRefreshing];
+}
+
 - (void) reloadData{
     [self.storageVO getStorageVolumnListAsync:^(id object, NSError *error) {
         self.dataList = ((StorageVolumnListResult*)object).resultList;

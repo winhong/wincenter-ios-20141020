@@ -89,6 +89,10 @@
     [self reloadData];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
+
 - (void)reloadData{
     [self.hostVO getHostVOAsync:^(id object, NSError *error) {
         self.hostVO = object;

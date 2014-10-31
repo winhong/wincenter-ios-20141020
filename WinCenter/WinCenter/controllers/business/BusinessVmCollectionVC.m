@@ -40,6 +40,10 @@
     //[self.collectionView footerEndRefreshing];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self.collectionView headerBeginRefreshing];
+}
+
 - (void) reloadData{
     [self.businessVO getBusinessVmListAsync:^(id object, NSError *error) {
         self.dataList = ((BusinessVO*)object).wceBusVms;

@@ -86,6 +86,10 @@
     [self reloadData];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+}
+
 -(void)reloadData{
     
     [self.poolVO getPoolElasticAsync:^(id object, NSError *error) {
