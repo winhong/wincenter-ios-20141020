@@ -3551,7 +3551,13 @@
                             <outlet property="delegate" destination="0NJ-3p-Vzw" id="xrX-ac-f1O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="数据中心选择" id="SqD-qw-gYx"/>
+                    <navigationItem key="navigationItem" title="数据中心选择" id="SqD-qw-gYx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="w8e-Xv-pMH">
+                            <connections>
+                                <action selector="refreshAction:" destination="0NJ-3p-Vzw" id="a91-ro-aPT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

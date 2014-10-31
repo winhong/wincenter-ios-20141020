@@ -22,6 +22,8 @@
 @property BOOL resCaseCanDel;
 
 + (void) getDatacenterListAsync:(FetchObjectCompletionBlock)completionBlock;
++ (void) getDatacenterListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+
 - (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;

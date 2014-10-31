@@ -10,22 +10,46 @@
 #import "DatacenterTableCell.h"
 
 @interface DatacenterTableVC ()
-@property NSArray *datacenters;
+@property NSMutableArray *datacenters;
 @end
 
 @implementation DatacenterTableVC
 
 - (void)viewDidLoad
 {
+    self.datacenters = [[NSMutableArray alloc] initWithCapacity:0];
+    
     [super viewDidLoad];
     
-    self.datacenters = @[];
+    __unsafe_unretained typeof(self) week_self = self;
     
-    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
-        self.datacenters = ((DatacenterListResult*)object).dataCenters;
-        [self.tableView reloadData];
+    [self.tableView addHeaderWithCallback:^{
+        [week_self.datacenters removeAllObjects];
+        [week_self reloadData];
     }];
-    
+    [self.tableView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+    [self reloadData];
+}
+
+- (void)reloadData{
+    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+        NSUInteger recordTotal = ((DatacenterListResult*)object).dataCenters.count;
+        [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+            [self.datacenters addObjectsFromArray:((DatacenterListResult*)object).dataCenters];
+            [self.tableView headerEndRefreshing];
+            if(self.datacenters.count >= recordTotal){
+                [self.tableView footerFinishingLoading];
+            }else{
+                [self.tableView footerEndRefreshing];
+            }
+            [self.tableView reloadData];
+        } referTo:self.datacenters];
+    }];
+}
+- (IBAction)refreshAction:(id)sender {
+    [self.tableView headerBeginRefreshing];
 }
 
 #pragma mark - Table view data source
