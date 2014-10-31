@@ -50,6 +50,7 @@
 - (void) getIpPoolsDetailAsync:(FetchObjectCompletionBlock)completionBlock withPoolId:(int)poolId;
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
-- (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getNetworkIpVmAsync:(FetchAllCompletionBlock)completionBlock;
+- (void) getBusDomainsListAsync:(FetchAllCompletionBlock)completionBlock;
 
 @end
