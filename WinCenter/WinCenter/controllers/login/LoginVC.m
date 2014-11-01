@@ -163,6 +163,9 @@
 
 - (void) toLogin{
     
+    self.userName.text = @"";
+    self.password.text = @"";
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
         vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
