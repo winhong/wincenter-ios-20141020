@@ -37,15 +37,7 @@
         sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
     })
     var chartMap = new Map();
-	function counXInterval(lineNum,xInterval){
-		xInterval = xInterval * 2;
-		lineNum = lineNum/2;
-		if(Math.ceil(lineNum)>5){
-			return counXInterval(lineNum,xInterval);
-		}else{
-			return lineNum+","+xInterval;
-		}
-	}
+	
     //刷新图标
 	function updateData(Data){
 		 drawLineCpu($.PERFORMANCE.formHostJson(Data), "all");

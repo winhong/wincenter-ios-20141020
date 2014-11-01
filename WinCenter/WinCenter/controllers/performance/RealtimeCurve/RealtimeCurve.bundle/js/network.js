@@ -124,10 +124,10 @@ function drawLineNetWork(data,type){
         	enabled: false
         },
         tooltip: {
-            // formatter: function() {
-            //         return '<b>'+pc.util.timeToStr(this.x) +'</b><br/>'+
-            //         this.series.name+$("#performance_js_network_useSpeed").html()+ this.y.toFixed(2) +'Kbps';//使用速率： 
-            // }
+            formatter: function() {
+                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm") +'</b><br/>'+
+                    this.series.name+"使用速率："+ this.y.toFixed(2) +'Kbps';//使用速率： 
+            }
         },
 
 	    xAxis: {
@@ -137,7 +137,7 @@ function drawLineNetWork(data,type){
 	        tickInterval: xInterval, // 1 day
 	        labels: {
 	            formatter: function() {
-	               // return pc.util.timeToFormatStr(this.value,"MM-dd HH:mm");
+	                return timeToFormatStr(this.value,"MM-dd HH:mm");
 	            },
 	            x: 0,
 	            style: {

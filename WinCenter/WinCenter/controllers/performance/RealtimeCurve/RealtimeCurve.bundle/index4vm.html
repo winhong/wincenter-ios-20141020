@@ -34,15 +34,7 @@
 <script type="text/javascript">
     var type="VM";
     var vcpu=999;
-    function counXInterval(lineNum,xInterval){
-		xInterval = xInterval * 2;
-		lineNum = lineNum/2;
-		if(Math.ceil(lineNum)>5){
-			return counXInterval(lineNum,xInterval);
-		}else{
-			return lineNum+","+xInterval;
-		}
-	}
+
     $("#submitBtn").bind("click",function(){
                               
         sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
@@ -51,10 +43,10 @@
     
     //刷新图标
 	function updateData(Data){
-		 drawLineCpu($.PERFORMANCE.formApiVmJson(Data),vcpu);
-		 drawLineMemory($.PERFORMANCE.formApiVmJson(Data),vcpu);
-         drawLineVbd($.PERFORMANCE.formApiVmJson(Data),vcpu);
-		 drawLineNetWork($.PERFORMANCE.formApiVmJson(Data),vcpu);
+		 drawLineCpu($.PERFORMANCE.formApiVmJson(Data,vcpu));
+		 drawLineMemory($.PERFORMANCE.formApiVmJson(Data,vcpu));
+         drawLineVbd($.PERFORMANCE.formApiVmJson(Data,vcpu));
+		 drawLineNetWork($.PERFORMANCE.formApiVmJson(Data,vcpu));
 	}
     //与ios通信
     var _bridge;
@@ -75,6 +67,10 @@
 	            responseCallback("Right back atcha")
 	        }
 	    })
+
+	    bridge.registerHandler('sendVcpuCount', function(data, responseCallback) {
+            vcpu = parseInt(data);
+		})
 
 	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
             if(typeof data != "string"){

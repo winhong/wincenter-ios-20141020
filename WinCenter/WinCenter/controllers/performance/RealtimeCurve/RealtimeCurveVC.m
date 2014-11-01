@@ -145,6 +145,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         if ([self.vmVO.state isEqualToString:@"OK"]) {
             [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
                 self.performanceData = object;
+                [_bridge callHandler:@"sendVcpuCount" data:[NSString stringWithFormat:@"%d",self.vmVO.vcpu ]];
                 [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
             } withStartTime:self.startTime];
         }else{
