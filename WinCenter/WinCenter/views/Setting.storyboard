@@ -1418,13 +1418,7 @@ Winserver是CNware自有的虚拟化技术，为云计算数据中心实现底�
                             <outlet property="delegate" destination="RpT-4z-TE5" id="0UT-Fp-vdZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="系统设置" id="br8-np-hAY">
-                        <barButtonItem key="rightBarButtonItem" title="关闭" id="ICT-S7-oLn">
-                            <connections>
-                                <action selector="close:" destination="RpT-4z-TE5" id="AfV-Op-cFm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="系统设置" id="br8-np-hAY"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
