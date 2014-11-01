@@ -46,21 +46,36 @@
             }
         }
     }];
+    
+    __unsafe_unretained typeof(self) week_self = self;
+    
+    [self.tableView addHeaderWithCallback:^{
+        [week_self.ipList removeAllObjects];
+        [week_self reloadData];
+    }];
+    
+    [self.tableView addFooterWithCallback:^{
+    }];
+
 }
 - (IBAction)refreshAction:(id)sender {
-    [self reloadData];
+    [self.tableView headerBeginRefreshing];
 }
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
-        self.ipList = [NSMutableArray new];
-        for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
-            if(detailVO.state == 2){
-                [self.ipList addObject:detailVO];
+    if(self.ipPoolVO){
+        [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
+            self.ipList = [NSMutableArray new];
+            for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
+                if(detailVO.state == 2){
+                    [self.ipList addObject:detailVO];
+                }
             }
-        }
-        [self.tableView reloadData];
-    } withPoolId:self.ipPoolVO.ipPoolId];
+            [self.tableView headerEndRefreshing];
+            [self.tableView footerFinishingLoading];
+            [self.tableView reloadData];
+        } withPoolId:self.ipPoolVO.ipPoolId];
+    }
 }
 
 - (void)didReceiveMemoryWarning
