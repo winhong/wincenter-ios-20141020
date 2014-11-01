@@ -11,7 +11,8 @@
 	<script type="text/javascript" src="js/mem.js"></script>
 	<script type="text/javascript" src="js/network.js"></script>
 	<style type="text/css">
-		#submitBtn{border:1px #046395 solid; background: #0683c7;color: #fff;padding: 3px 10px;}
+		#submitBtn{color: #0683c7;padding: 3px 10px;border:none;background: #fff;font-size: 14px;}
+		#submitBtn.active{background: #eee; opacity: 0.7}
 	</style>
 </head>
 <body>
@@ -32,20 +33,19 @@
 </html>
 <script type="text/javascript">
 
+	$("#submitBtn").bind("touchstart",function(){
+    	$(this).addClass("active");
+    });
+    $(document).bind("touchend",function(){
+    	$("#submitBtn").removeClass("active");
+    });
+    
     $("#submitBtn").bind("click",function(){
                               
         sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
     })
     var chartMap = new Map();
-	function counXInterval(lineNum,xInterval){
-		xInterval = xInterval * 2;
-		lineNum = lineNum/2;
-		if(Math.ceil(lineNum)>5){
-			return counXInterval(lineNum,xInterval);
-		}else{
-			return lineNum+","+xInterval;
-		}
-	}
+	
     //刷新图标
 	function updateData(Data){
 		 drawLineCpu($.PERFORMANCE.formHostJson(Data), "all");
