@@ -392,6 +392,7 @@
 		686B32BF19FDDD7200742984 /* NetworkCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BA19FDDD7200742984 /* NetworkCollectionCell.m */; };
 		686B32C019FDDD7200742984 /* NetworkCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */; };
 		686B32C119FDDD7200742984 /* NetworkContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 686B32BE19FDDD7200742984 /* NetworkContainerVC.m */; };
+		686E383E1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */; };
 		6870D4EA1A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */; };
 		6870D4ED1A032ED800E803B9 /* BusDomainsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */; };
 		6870D4F01A032EF300E803B9 /* BusDomainsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6870D4EF1A032EF300E803B9 /* BusDomainsVO.m */; };
@@ -1083,6 +1084,7 @@
 		686B32BC19FDDD7200742984 /* NetworkCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCollectionVC.m; sourceTree = "<group>"; };
 		686B32BD19FDDD7200742984 /* NetworkContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkContainerVC.h; sourceTree = "<group>"; };
 		686B32BE19FDDD7200742984 /* NetworkContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkContainerVC.m; sourceTree = "<group>"; };
+		686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BusDomainsVO.getBusinessListAsync.json; sourceTree = "<group>"; };
 		6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusDomainsListAsync.json; sourceTree = "<group>"; };
 		6870D4EB1A032ED800E803B9 /* BusDomainsListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDomainsListResult.h; sourceTree = "<group>"; };
 		6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDomainsListResult.m; sourceTree = "<group>"; };
@@ -1534,6 +1536,7 @@
 				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */,
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
+				686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -2507,6 +2510,7 @@
 				181DECE319F17CB100998835 /* piechart_shadow.png in Resources */,
 				18763C0619F4E4E400669CC3 /* bg2@2x.png in Resources */,
 				68F39D8019FE530900F5BACF /* Network.getOutsideAsync.json in Resources */,
+				686E383E1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json in Resources */,
 				1824362819F4FE05007E4D6C /* distance@2x.png in Resources */,
 				1824365F19F56A38007E4D6C /* SUNButtonBoard_button2.png in Resources */,
 				18C5216719F8A43A00C033C6 /* complete.m4r in Resources */,

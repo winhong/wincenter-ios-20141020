@@ -11,5 +11,8 @@
 @interface BusDomainsVO : NSObject
 
 @property NSString *busDomainName;
+@property int busDomainId;
+
+- (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 
 @end

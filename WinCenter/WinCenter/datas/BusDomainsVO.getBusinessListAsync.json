@@ -1,0 +1,29 @@
+{
+    "busDomainId": 1,
+    "busDomainName": "aaaa",
+    "description": "",
+    "createTime": "2014-11-01 15:34:19 000",
+    "createUser": "admin",
+    "principal": "admin",
+    "dataCenterId": "1",
+    "hostList": [],
+    "ipPoolList": [
+                   {
+                   "ipPoolId": 1
+                   }
+                   ],
+    "resPoolList": [
+                    {
+                    "resPoolId": 1
+                    }
+                    ],
+    "vAppList": [
+                 {
+                 "vAppId": 1
+                 }
+                 ],
+    "hostNum": 0,
+    "ipPoolNum": 1,
+    "resPoolNum": 1,
+    "vAppNum": 1
+}

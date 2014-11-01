@@ -163,8 +163,8 @@
 
 - (void) toLogin{
     
-    self.userName.text = @"";
-    self.password.text = @"";
+//    self.userName.text = @"";
+//    self.password.text = @"";
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];

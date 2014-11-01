@@ -25,35 +25,39 @@
 
 
 -(void)reloadData{
-
-    [[RemoteObject getCurrentDatacenterVO] getBusinessAllAsync:^(id object, NSError *error) {
-        self.allBusList = ((BusinessListResult*)object).resultList;
+    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
         
-        [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
-            self.unalloctedBusList = ((BusinessListResult*)object).resultList;
+        self.allBusDomainsList = ((BusDomainsListResult*)object).busDomains;
+    
+        [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+            self.allBusList = ((BusinessListResult*)object).resultList;
             
-            if(self.busDomainVO){
-                //陈洁补充：根据业务域查询业务系统
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
-            }else if(self.isUnGroup){
-                //陈洁补充：查询未分配的业务系统
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
-            }else{
-                [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
-                    [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
+            [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
+                self.unalloctedBusList = ((BusinessListResult*)object).resultList;
+                
+                if(self.busDomainVO){
+                    //陈洁补充：根据业务域查询业务系统
                     [self.collectionView headerEndRefreshing];
-                    if(self.dataList.count >= ((BusinessListResult*)object).recordTotal){
-                        [self.collectionView footerFinishingLoading];
-                    }else{
-                        [self.collectionView footerEndRefreshing];
-                    }
+                    [self.collectionView footerEndRefreshing];
                     [self.collectionView reloadData];
-                } referTo:self.dataList];
-            }
+                }else if(self.isUnGroup){
+                    //陈洁补充：查询未分配的业务系统
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerEndRefreshing];
+                    [self.collectionView reloadData];
+                }else{
+                    [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= ((BusinessListResult*)object).recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
+                        }
+                        [self.collectionView reloadData];
+                    } referTo:self.dataList];
+                }
+            }];
         }];
     }];
     

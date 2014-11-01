@@ -24,8 +24,11 @@
 + (void) getDatacenterListAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getBusDomainsListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getBusinessListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+//- (void) getBusinessAllAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getBusinessUnallocatedAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getPoolListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getPoolListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock;
@@ -41,9 +44,6 @@
 
 - (void) getStorageSubVOAsync:(FetchObjectCompletionBlock)completionBlock;
 
-- (void) getBusinessAllAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getBusinessUnallocatedAsync:(FetchObjectCompletionBlock)completionBlock;
-
 - (void) getNetworkListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList;
 
 - (void) getIpPoolsAsync:(FetchObjectCompletionBlock)completionBlock;
@@ -51,6 +51,5 @@
 - (void) getHostByIdAsync:(FetchObjectCompletionBlock)completionBlock widthHostId:(int)hostid;
 
 - (void) getNetworkIpVmAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getBusDomainsListAsync:(FetchObjectCompletionBlock)completionBlock;
 
 @end
