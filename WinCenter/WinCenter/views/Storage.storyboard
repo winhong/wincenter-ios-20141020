@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EG6-mW-MKn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--存储池详情-->
@@ -21,7 +20,33 @@
                                 <rect key="frame" x="0.0" y="168" width="969" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-L4-v89">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BtL-bc-Jri">
+                                <rect key="frame" x="0.0" y="45" width="969" height="122"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5d-4j-qSK">
+                                        <rect key="frame" x="0.0" y="0.0" width="969" height="122"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNF-po-bTV">
+                                                <rect key="frame" x="0.0" y="0.0" width="969" height="122"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="存储池名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWm-BY-hW8">
+                                                        <rect key="frame" x="148" y="39" width="779" height="32"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="存储-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-6a-yhI">
+                                                        <rect key="frame" x="32" y="10" width="95" height="95"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-L4-v89">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -47,32 +72,13 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNF-po-bTV">
-                                <rect key="frame" x="0.0" y="45" width="969" height="122"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="存储池名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWm-BY-hW8">
-                                        <rect key="frame" x="148" y="39" width="779" height="32"/>
-                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="存储-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-6a-yhI">
-                                        <rect key="frame" x="32" y="10" width="95" height="95"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="G2l-L4-v89" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leadingMargin" constant="-16" id="DYE-gJ-D39"/>
-                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leadingMargin" id="EfW-Wr-s9I"/>
-                            <constraint firstItem="G2l-L4-v89" firstAttribute="top" secondItem="Ntn-C8-gGe" secondAttribute="topMargin" id="EoB-Sb-Rb1"/>
-                            <constraint firstItem="1ce-fL-p9d" firstAttribute="top" secondItem="8Xh-kD-J3a" secondAttribute="bottom" id="YwL-Na-JlR"/>
-                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="top" secondItem="DNF-po-bTV" secondAttribute="bottom" constant="1" id="ai1-jH-VJS"/>
-                            <constraint firstItem="DNF-po-bTV" firstAttribute="top" secondItem="G2l-L4-v89" secondAttribute="bottom" constant="1" id="mIQ-Ox-cTr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G2l-L4-v89" secondAttribute="trailing" constant="-16" id="sJl-NW-bUO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Xh-kD-J3a" secondAttribute="trailing" id="wMa-vh-WR4"/>
+                            <constraint firstAttribute="trailing" secondItem="8Xh-kD-J3a" secondAttribute="trailing" id="Ztx-fs-vsg"/>
+                            <constraint firstItem="1ce-fL-p9d" firstAttribute="top" secondItem="8Xh-kD-J3a" secondAttribute="bottom" id="mkh-cp-VEU"/>
+                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="top" secondItem="BtL-bc-Jri" secondAttribute="bottom" constant="1" id="ySG-EL-MiT"/>
+                            <constraint firstItem="8Xh-kD-J3a" firstAttribute="leading" secondItem="Ntn-C8-gGe" secondAttribute="leading" id="yTg-cS-9wd"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
