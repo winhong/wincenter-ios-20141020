@@ -151,7 +151,12 @@
     for(UIView *subView in header.cpuChartGroup.subviews){
         [subView removeFromSuperview];
     }
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/self.datacenterStatWinserver.totalCpu*100] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart;
+    if (self.datacenterStatWinserver.totalCpu == 0) {
+        circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart = [[PNCircleChart alloc] initWithFrame:header.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/self.datacenterStatWinserver.totalCpu*100] andClockwise:YES andShadow:YES];
+    }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -165,7 +170,12 @@
     for(UIView *subView in header.memoryChartGroup.subviews){
         [subView removeFromSuperview];
     }
-    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/self.datacenterStatWinserver.totalMemory*100] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart2;
+    if (self.datacenterStatWinserver.totalMemory == 0) {
+        circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart2 = [[PNCircleChart alloc] initWithFrame:header.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/self.datacenterStatWinserver.totalMemory*100] andClockwise:YES andShadow:YES];
+    }
     circleChart2.backgroundColor = [UIColor clearColor];
     circleChart2.strokeColor = [UIColor clearColor];
     circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -178,7 +188,12 @@
     for(UIView *subView in header.storageChartGroup.subviews){
         [subView removeFromSuperview];
     }
-    PNCircleChart * circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/self.datacenterStatWinserver.totalStorage*100] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart3;
+    if (self.datacenterStatWinserver.totalStorage==0) {
+        circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart3 = [[PNCircleChart alloc] initWithFrame:header.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/self.datacenterStatWinserver.totalStorage*100] andClockwise:YES andShadow:YES];
+    }
     circleChart3.backgroundColor = [UIColor clearColor];
     circleChart3.strokeColor = [UIColor clearColor];
     circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色

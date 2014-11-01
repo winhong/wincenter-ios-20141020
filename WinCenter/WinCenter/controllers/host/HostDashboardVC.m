@@ -46,6 +46,9 @@
                 }];
             }else if(self.isOutofPool){
                 //游离物理主机
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
+                [self.collectionView reloadData];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
                     NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
@@ -141,10 +144,16 @@
     header.statusDis2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //圈图
+    
     for(UIView *subView in header.hostTypeChart.subviews){
         [subView removeFromSuperview];
     }
-    PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart;
+    if(self.datacenterStatWinserver==nil){
+        circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
+    }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
     circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色

@@ -27,6 +27,7 @@
 #import "UNIHTTPClientHelper.h"
 
 int hudCounter = 0;
+NSTimer *hudTimer = nil;
 
 @implementation UNIHTTPRequest
 
@@ -115,9 +116,8 @@ int hudCounter = 0;
     //[self.jgHud showInView:[UIApplication sharedApplication].keyWindow animated:NO];
     //self.mbHud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     hudCounter++;
-    NSTimer *timer;
     if(hudCounter==1){
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(showHud) userInfo:nil repeats:NO];
+        hudTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(showHud) userInfo:nil repeats:NO];
     }
     
     return [UNIHTTPClientHelper requestAsync:self handler:^(UNIHTTPResponse * res, NSError * error) {
@@ -126,8 +126,9 @@ int hudCounter = 0;
             //[self.jgHud dismissAnimated:NO];
             //[self.mbHud hide:NO];
             if(hudCounter==1){
-                if(timer){
-                    [timer invalidate];
+                if(hudTimer){
+                    [hudTimer invalidate];
+                    hudTimer = nil;
                 }
                 [SVProgressHUD dismiss];
             }

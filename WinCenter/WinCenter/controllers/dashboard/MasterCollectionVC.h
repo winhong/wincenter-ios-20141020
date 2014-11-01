@@ -14,9 +14,14 @@
 @property NSArray *poolList;
 @property PoolVO *poolVO;
 @property BOOL isOutofPool;
+@property BOOL isUnGroup;
 @property NSMutableArray *dataList;
 @property NSArray *businessList;
 @property NSArray *busDomainsList;
+@property BusDomainsVO *busDomainVO;
+
+@property UIActionSheet *poolListActionSheet;
+@property UIActionSheet *businessListActionSheet;
 
 @property BOOL isDetailPagePushed;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backActionButton;
