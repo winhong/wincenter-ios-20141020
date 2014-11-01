@@ -58,20 +58,20 @@
         [[NSUserDefaults standardUserDefaults] setValue:@"https://192.168.100.98:8090" forKey:@"SERVER_ROOT"];
     }
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        SUNButtonBoard *board = [SUNButtonBoard defaultButtonBoard];
-        board.boardImage = [UIImage imageNamed:@"SUNButtonBoard_button3.png"];
-        board.buttonNumber = 3;
-        NSArray *imgArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"SUNButtonBoard_button1.png"],
-                             [UIImage imageNamed:@"SUNButtonBoard_button2.png"],
-                             [UIImage imageNamed:@"SUNButtonBoard_button3.png"],nil];
-        board.buttonImageArray = imgArray;
-        if (!board.running) {
-            [board startRunning];
-        }
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(boardButtonClick:) name:SUNButtonBoarButtonClickNotification object:nil];
-    }
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        SUNButtonBoard *board = [SUNButtonBoard defaultButtonBoard];
+//        board.boardImage = [UIImage imageNamed:@"SUNButtonBoard_button3.png"];
+//        board.buttonNumber = 3;
+//        NSArray *imgArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"SUNButtonBoard_button1.png"],
+//                             [UIImage imageNamed:@"SUNButtonBoard_button2.png"],
+//                             [UIImage imageNamed:@"SUNButtonBoard_button3.png"],nil];
+//        board.buttonImageArray = imgArray;
+//        if (!board.running) {
+//            [board startRunning];
+//        }
+//        
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(boardButtonClick:) name:SUNButtonBoarButtonClickNotification object:nil];
+//    }
     
     self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewController:@"LoginVC"];
     
