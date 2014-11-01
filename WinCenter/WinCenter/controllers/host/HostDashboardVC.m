@@ -46,6 +46,9 @@
                 }];
             }else if(self.isOutofPool){
                 //游离物理主机
+                [self.collectionView headerEndRefreshing];
+                [self.collectionView footerEndRefreshing];
+                [self.collectionView reloadData];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
                     NSUInteger recordTotal = ((HostListResult*)object).hosts.count;

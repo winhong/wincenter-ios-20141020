@@ -21,7 +21,7 @@
             [self.collectionView footerEndRefreshing];
         }
         [self.collectionView reloadData];
-    } referTo:self.dataList];
+    } withType:self.isExternal referTo:self.dataList];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{

@@ -112,35 +112,68 @@
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
-    self.isOutofPool = FALSE;
     
-    if(buttonIndex==0){
-        self.poolVO = nil;
-        self.allPoolOptionBarButton.title = @"全部资源池";
-        [self.collectionView headerBeginRefreshing];
-    }else if([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"游离物理主机"]){
-        self.poolVO = nil;
-        self.allPoolOptionBarButton.title = @"游离物理主机";
-        self.isOutofPool = TRUE;
-        [self.collectionView headerBeginRefreshing];
-    }else{
-        if(buttonIndex>=2){
-            self.poolVO = self.poolList[(buttonIndex-2)];
-            self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
+    if(actionSheet==self.poolListActionSheet){
+        if(buttonIndex==0){
+            self.poolVO = nil;
+            self.allPoolOptionBarButton.title = @"全部资源池";
+            self.isOutofPool = FALSE;
+            [self.dataList removeAllObjects];
             [self.collectionView headerBeginRefreshing];
+        }else if(buttonIndex>=2){
+            NSLog(@"%@", [actionSheet buttonTitleAtIndex:buttonIndex]);
+            if([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"游离物理主机"]){
+                self.poolVO = nil;
+                self.allPoolOptionBarButton.title = @"游离物理主机";
+                self.isOutofPool = TRUE;
+                [self.dataList removeAllObjects];
+                [self.collectionView headerBeginRefreshing];
+            }else{
+                self.poolVO = self.poolList[(buttonIndex-2)];
+                self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
+                self.isOutofPool = FALSE;
+                [self.dataList removeAllObjects];
+                [self.collectionView headerBeginRefreshing];
+            }
         }
+    }else{
+        if(buttonIndex==0){
+            self.busDomainVO = nil;
+            self.allBusinessOptionBarButton.title = @"全部业务域";
+            self.isUnGroup = FALSE;
+            [self.dataList removeAllObjects];
+            [self.collectionView headerBeginRefreshing];
+        }else if(buttonIndex>=2){
+            NSLog(@"%@", [actionSheet buttonTitleAtIndex:buttonIndex]);
+            if([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"未分配业务系统"]){
+                self.busDomainVO = nil;
+                self.allBusinessOptionBarButton.title = @"未分配业务系统";
+                self.isUnGroup = TRUE;
+                [self.dataList removeAllObjects];
+                [self.collectionView headerBeginRefreshing];
+            }else{
+                self.busDomainVO = self.busDomainsList[(buttonIndex-2)];
+                self.allBusinessOptionBarButton.title = self.busDomainVO.busDomainName;
+                self.isUnGroup = FALSE;
+                [self.dataList removeAllObjects];
+                [self.collectionView headerBeginRefreshing];
+            }
+        }
+
     }
+
+
 }
 - (IBAction)showPoolListSelect:(id)sender {
     [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
         self.poolList = ((PoolListResult*)object).resourcePools;
         
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部资源池" otherButtonTitles: nil];
+        self.poolListActionSheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部资源池" otherButtonTitles: nil];
         for(PoolVO *pool in self.poolList){
-            [sheet addButtonWithTitle:pool.resourcePoolName];
+            [self.poolListActionSheet addButtonWithTitle:pool.resourcePoolName];
         }
-        [sheet addButtonWithTitle:@"游离物理主机"];
-        [sheet showFromBarButtonItem:sender animated:YES];
+        [self.poolListActionSheet addButtonWithTitle:@"游离物理主机"];
+        [self.poolListActionSheet showFromBarButtonItem:sender animated:YES];
 
     }];
     }
@@ -148,14 +181,12 @@
     [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
         self.busDomainsList = ((BusDomainsListResult*)object).busDomains;
         
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部业务系统" otherButtonTitles: nil];
+        self.businessListActionSheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"全部业务域" otherButtonTitles: nil];
         for(BusDomainsVO *busDomains in self.busDomainsList){
-            [sheet addButtonWithTitle:busDomains.busDomainName];
+            [self.businessListActionSheet addButtonWithTitle:busDomains.busDomainName];
         }
-        if([self isKindOfClass:HostDashboardVC.class]){
-            [sheet addButtonWithTitle:@"未分配业务系统"];
-        }
-        [sheet showFromBarButtonItem:sender animated:YES];
+        [self.businessListActionSheet addButtonWithTitle:@"未分配业务系统"];
+        [self.businessListActionSheet showFromBarButtonItem:sender animated:YES];
         
     }];
 }
