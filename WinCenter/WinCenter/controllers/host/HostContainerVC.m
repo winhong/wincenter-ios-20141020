@@ -116,15 +116,22 @@
 }
 
 -(IBAction)showControlRecordVCWithBarItem:(id)sender{
-    if(self.popover!=nil){
-        [self.popover dismissPopoverAnimated:NO];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+        PopControlRecordVC *controlVC = [[nav childViewControllers] firstObject];
+        controlVC.remoteObject = self.hostVO;
+        [self.navigationController pushViewController:controlVC animated:YES];
+    }else{
+        if(self.popover!=nil){
+            [self.popover dismissPopoverAnimated:NO];
+        }
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+        PopControlRecordVC *controlVC = [[nav childViewControllers] firstObject];
+        controlVC.remoteObject = self.hostVO;
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+        UIBarButtonItem *button = (UIBarButtonItem*)sender;
+        [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
-    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
-    PopControlRecordVC *controlVC = [[nav childViewControllers] firstObject];
-    controlVC.remoteObject = self.hostVO;
-    self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
-    UIBarButtonItem *button = (UIBarButtonItem*)sender;
-    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 @end
