@@ -110,7 +110,13 @@
     for(UIView *subView in header.storageShareChart.subviews){
         [subView removeFromSuperview];
     }
-        PNCircleChart * circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+    PNCircleChart * circleChart;
+    if ((self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field) == 0) {
+        circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+    }
+    
         circleChart.backgroundColor = [UIColor clearColor];
         circleChart.strokeColor = [UIColor clearColor];
         circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
@@ -123,7 +129,13 @@
     for(UIView *subView in header.storageUseChart.subviews){
         [subView removeFromSuperview];
     }
-        PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.capacity.usedStorage*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+    
+    PNCircleChart * circleChart2;
+    if ((self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field) == 0) {
+        circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+    }else{
+        circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.capacity.usedStorage*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+    }
         circleChart2.backgroundColor = [UIColor clearColor];
         circleChart2.strokeColor = [UIColor clearColor];
         circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色

@@ -29,7 +29,7 @@
 	<table>
 		<tr>
 			<td>名称：</td>
-			<td class="tdvalue" id="vm_name">请选择一个快照</td>
+			<td class="tdvalue"><div id="vm_name" style="width:120px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;">请选择一个快照</div></td>
 		</tr>
 		<tr>
 			<td>类型：</td>
@@ -134,7 +134,7 @@ function initRaphael(){
 	var layouter = new Graph.Layout.Tree(g);
 
     /* draw the graph using the RaphaelJS draw implementation */
-    renderer = new Graph.Renderer.Raphael('canvas', g, "500", $("#canvas").height());
+    renderer = new Graph.Renderer.Raphael('canvas', g, $("#canvas").width(), $("#canvas").height());
     
     redraw = function() {
         layouter.layout();
