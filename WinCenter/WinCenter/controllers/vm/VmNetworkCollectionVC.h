@@ -11,5 +11,6 @@
 @interface VmNetworkCollectionVC : MasterCollectionVC
 
 @property VmVO *vmVO;
+@property BOOL isExternal;
 
 @end

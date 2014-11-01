@@ -12,9 +12,12 @@
 
 @property NSString *name;
 @property NSString *type;
+@property NSString *state;
 @property NSString *storagePoolName;
 @property int size;
 
 - (NSString*)type_text;
+- (NSString*)state_text;
+- (UIColor *)state_color;
 
 @end

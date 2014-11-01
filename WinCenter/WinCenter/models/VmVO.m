@@ -146,18 +146,19 @@
 }
 
 
-- (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
+- (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[VmNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmNicListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getNics&placeholder=%d&params=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.vmId, referList.count, referList.count+per_page]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getNics&placeholder=%d&params=type%%3D%@%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.vmId, (isExternal ? @"EXTERNAL" : @"INTERNAL"), referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[VmNetworkListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
+
 
 - (void) vmRestart:(BasicCompletionBlock)completionBlock{
     [[UNIRest post:^(UNISimpleRequest *simpleRequest) {

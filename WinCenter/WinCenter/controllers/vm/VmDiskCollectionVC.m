@@ -34,6 +34,8 @@
 
     VmDiskVO *vmDiskVO = (VmDiskVO *) self.dataList[indexPath.row];
     cell.title.text = vmDiskVO.name;
+    cell.status.text = [vmDiskVO state_text];
+    cell.status.textColor = [vmDiskVO state_color];
     cell.label1.text = [vmDiskVO type_text];
     cell.label2.text = vmDiskVO.storagePoolName;
     cell.label3.text = [NSString stringWithFormat:@"%dGB", vmDiskVO.size];
