@@ -151,7 +151,7 @@
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
     detailVC.ipPoolVO = ipPoolVO;
-    [detailVC reloadData];
+    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
 }
 /*
 // Override to support conditional editing of the table view.
