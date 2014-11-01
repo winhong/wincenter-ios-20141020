@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ve-tC-ML6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--资源池详情-->
@@ -17,7 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7w-LR-ffe">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nb4-J6-LZl">
+                                <rect key="frame" x="0.0" y="45" width="969" height="122"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-Tp-WQf">
+                                        <rect key="frame" x="-20" y="-20" width="1009" height="162"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-x1-bfu">
+                                                <rect key="frame" x="20" y="20" width="969" height="122"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-0J-7SZ">
+                                                        <rect key="frame" x="32" y="10" width="97" height="95"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R-Qiuzhongwen dezyci-资源池" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiv-TM-vQO">
+                                                        <rect key="frame" x="148" y="39" width="779" height="32"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7w-LR-ffe">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -49,21 +74,6 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-x1-bfu">
-                                <rect key="frame" x="0.0" y="45" width="969" height="122"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="资源池-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-0J-7SZ">
-                                        <rect key="frame" x="32" y="10" width="97" height="95"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R-Qiuzhongwen dezyci-资源池" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiv-TM-vQO">
-                                        <rect key="frame" x="148" y="39" width="779" height="32"/>
-                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.34901960780000002" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbR-Ib-os0">
                                 <rect key="frame" x="0.0" y="168" width="969" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,14 +81,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zbR-Ib-os0" firstAttribute="top" secondItem="4sc-x1-bfu" secondAttribute="bottom" constant="1" id="Heg-tY-vYg"/>
-                            <constraint firstItem="t7w-LR-ffe" firstAttribute="leading" secondItem="0pn-UC-Aas" secondAttribute="leadingMargin" constant="-16" id="Mvl-gs-mya"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t7w-LR-ffe" secondAttribute="trailing" constant="-16" id="OOU-rV-GwL"/>
-                            <constraint firstAttribute="trailing" secondItem="zbR-Ib-os0" secondAttribute="trailing" id="Ozz-ve-qVd"/>
-                            <constraint firstItem="4sc-x1-bfu" firstAttribute="top" secondItem="t7w-LR-ffe" secondAttribute="bottom" constant="1" id="UlJ-42-caH"/>
-                            <constraint firstItem="osf-2s-RRl" firstAttribute="top" secondItem="zbR-Ib-os0" secondAttribute="bottom" id="sPB-72-Wwa"/>
-                            <constraint firstItem="zbR-Ib-os0" firstAttribute="leading" secondItem="0pn-UC-Aas" secondAttribute="leading" id="tuZ-6u-uBf"/>
-                            <constraint firstItem="t7w-LR-ffe" firstAttribute="top" secondItem="0pn-UC-Aas" secondAttribute="topMargin" id="wtJ-ws-L12"/>
+                            <constraint firstItem="zbR-Ib-os0" firstAttribute="top" secondItem="nb4-J6-LZl" secondAttribute="bottom" constant="1" id="YcK-VH-UlN"/>
+                            <constraint firstAttribute="trailing" secondItem="zbR-Ib-os0" secondAttribute="trailing" id="hv7-Z2-Diy"/>
+                            <constraint firstItem="zbR-Ib-os0" firstAttribute="leading" secondItem="0pn-UC-Aas" secondAttribute="leading" id="nMs-ws-vHm"/>
+                            <constraint firstItem="osf-2s-RRl" firstAttribute="top" secondItem="zbR-Ib-os0" secondAttribute="bottom" id="r9l-Yn-EsE"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
