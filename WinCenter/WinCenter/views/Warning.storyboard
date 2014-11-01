@@ -79,7 +79,13 @@
                             <outlet property="delegate" destination="OVY-GB-K1z" id="n9A-RU-Gop"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="告警信息" id="8hC-bX-1ha"/>
+                    <navigationItem key="navigationItem" title="告警信息" id="8hC-bX-1ha">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="b7d-8p-LHg">
+                            <connections>
+                                <action selector="refreshAction:" destination="OVY-GB-K1z" id="keN-Jq-cVi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSS-jY-efb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

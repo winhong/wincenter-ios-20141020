@@ -11,14 +11,14 @@
 @implementation WarningInfoVO
 
 
-+ (void) getWarningInfoListAsync:(FetchObjectCompletionBlock)completeBlock{
++ (void) getWarningInfoListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[WarningInfoListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"WarningInfoVO.getWarningInfoListAsync" ofType:@"json"]]], nil);
         return;
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.warning.getVmWarningList&params=firstResult%%3D0%%26maxResult%%3D12", [RemoteObject getCurrentDatacenterVO].id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.warning.getVmWarningList&params=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completeBlock([[WarningInfoListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface WarningInfoListResult : NSObject
-
+@property int recordTotal;
 @property NSArray *alarms;
 
 @end

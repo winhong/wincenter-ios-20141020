@@ -19,12 +19,37 @@
 
 - (void)viewDidLoad
 {
+    self.dataList = [[NSMutableArray alloc] initWithCapacity:0];
     [super viewDidLoad];
     
-    [WarningInfoVO getWarningInfoListAsync:^(id object, NSError *error) {
-        self.dataList = ((WarningInfoListResult*)object).alarms;
-        [self.tableView reloadData];
+    __unsafe_unretained typeof(self) week_self = self;
+    
+    [self.tableView addHeaderWithCallback:^{
+        [week_self.dataList removeAllObjects];
+        [week_self reloadData];
     }];
+    
+    [self.tableView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+
+    [self reloadData];
+}
+
+- (void)reloadData{
+    [WarningInfoVO getWarningInfoListAsync:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((WarningInfoListResult*)object).alarms];
+        [self.tableView headerEndRefreshing];
+        if(self.dataList.count>=((WarningInfoListResult*)object).recordTotal){
+            [self.tableView footerFinishingLoading];
+        }else{
+            [self.tableView footerEndRefreshing];
+        }
+        [self.tableView reloadData];
+    } referTo:self.dataList];
+}
+- (IBAction)refreshAction:(id)sender {
+    [self.tableView headerBeginRefreshing];
 }
 
 - (IBAction)backAction:(id)sender {

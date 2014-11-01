@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ControlRecordListResult : NSObject
-
+@property int recordTotal;
 @property NSArray *tasks;
 
 @end

@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad
 {
+    self.dataList = [[NSMutableArray alloc] initWithCapacity:0];
     [super viewDidLoad];
     
     NSString *prefix = @"";
@@ -37,10 +38,36 @@
     }
     self.title = [NSString stringWithFormat:@"%@的操作日志", prefix];
     
-    [ControlRecordVO getControlRecordListViaObject:self.remoteObject async:^(id object, NSError *error) {
-        self.dataList = ((ControlRecordListResult*)object).tasks;
-        [self.tableView reloadData];
+    __unsafe_unretained typeof(self) week_self = self;
+    
+    [self.tableView addHeaderWithCallback:^{
+        [week_self.dataList removeAllObjects];
+        [week_self reloadData];
     }];
+    
+    [self.tableView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+
+    
+    [self reloadData];
+}
+
+-(void)reloadData{
+    [ControlRecordVO getControlRecordListViaObject:self.remoteObject async:^(id object, NSError *error) {
+        [self.dataList addObjectsFromArray:((ControlRecordListResult*)object).tasks];
+        [self.tableView headerEndRefreshing];
+        if(self.dataList.count>=((WarningInfoListResult*)object).recordTotal){
+            [self.tableView footerFinishingLoading];
+        }else{
+            [self.tableView footerEndRefreshing];
+        }
+        [self.tableView reloadData];
+    } referTo:self.dataList];
+
+}
+- (IBAction)refreshAction:(id)sender {
+    [self.tableView headerBeginRefreshing];
 }
 
 - (IBAction)backAction:(id)sender {

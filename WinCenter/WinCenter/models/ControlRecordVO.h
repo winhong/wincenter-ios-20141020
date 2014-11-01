@@ -21,6 +21,6 @@
 @property int hostId;
 @property int vmId;
 
-+ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchObjectCompletionBlock)completeBlock;
++ (void) getControlRecordListViaObject:(RemoteObject*)remoteObject async:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
 
 @end

@@ -27,6 +27,6 @@
 @property NSString *poolOriginalId;
 @property NSString *uri;
 
-+ (void) getWarningInfoListAsync:(FetchObjectCompletionBlock)completeBlock;
-    
++ (void) getWarningInfoListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
+
 @end

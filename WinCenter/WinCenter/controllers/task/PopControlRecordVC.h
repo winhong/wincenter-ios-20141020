@@ -10,5 +10,5 @@
 
 @interface PopControlRecordVC : UITableViewController
 @property RemoteObject *remoteObject;
-@property NSArray *dataList;
+@property NSMutableArray *dataList;
 @end
