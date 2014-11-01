@@ -28,24 +28,16 @@
         [week_self reloadData];
     }];
     [self.tableView addFooterWithCallback:^{
-        [week_self reloadData];
     }];
     [self reloadData];
 }
 
 - (void)reloadData{
     [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
-        NSUInteger recordTotal = ((DatacenterListResult*)object).dataCenters.count;
-        [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
-            [self.datacenters addObjectsFromArray:((DatacenterListResult*)object).dataCenters];
-            [self.tableView headerEndRefreshing];
-            if(self.datacenters.count >= recordTotal){
-                [self.tableView footerFinishingLoading];
-            }else{
-                [self.tableView footerEndRefreshing];
-            }
-            [self.tableView reloadData];
-        } referTo:self.datacenters];
+        [self.datacenters addObjectsFromArray:((DatacenterListResult*)object).dataCenters];
+        [self.tableView headerEndRefreshing];
+        [self.tableView footerFinishingLoading];
+        [self.tableView reloadData];
     }];
 }
 - (IBAction)refreshAction:(id)sender {
