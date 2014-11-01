@@ -77,9 +77,15 @@
         [pages addObject:performVC];
     }
         
-    VmNetworkCollectionVC *vmNetworkCollectionVC = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];
-    vmNetworkCollectionVC.vmVO = self.vmVO;
-    [pages addObject:vmNetworkCollectionVC];
+    VmNetworkCollectionVC *vmNetworkCollectionVC1 = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];
+    vmNetworkCollectionVC1.vmVO = self.vmVO;
+    vmNetworkCollectionVC1.isExternal = true;
+    [pages addObject:vmNetworkCollectionVC1];
+    
+    VmNetworkCollectionVC *vmNetworkCollectionVC2 = [self.storyboard instantiateViewController:@"VmNetworkCollectionVC"];
+    vmNetworkCollectionVC2.vmVO = self.vmVO;
+    vmNetworkCollectionVC2.isExternal = false;
+    [pages addObject:vmNetworkCollectionVC2];
     
     VmDiskCollectionVC *vmDiskCollectionVC = [self.storyboard instantiateViewController:@"VmDiskCollectionVC"];
     vmDiskCollectionVC.vmVO = self.vmVO;
