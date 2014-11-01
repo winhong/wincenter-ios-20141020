@@ -40,7 +40,7 @@
     cell.label2.text = vmDiskVO.storagePoolName;
     cell.label3.text = [NSString stringWithFormat:@"%dGB", vmDiskVO.size];
     if (indexPath.row % 2 == 1) {
-        cell.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
+        cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
     }else{
         cell.backgroundColor = [UIColor clearColor];
     }
