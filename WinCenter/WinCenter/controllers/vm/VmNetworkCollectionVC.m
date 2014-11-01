@@ -37,7 +37,7 @@
     cell.status.textColor = [vmNetworkVO state_color];
     cell.label4.text = [NSString stringWithFormat:@"%d", vmNetworkVO.vlanId];
     if (indexPath.row % 2 == 1) {
-        cell.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
+        cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
     }else{
         cell.backgroundColor = [UIColor clearColor];
     }

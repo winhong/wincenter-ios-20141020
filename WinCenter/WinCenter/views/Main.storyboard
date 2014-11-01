@@ -194,7 +194,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="72l-3S-uWi" id="ARW-0b-c8I">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" placeholder="用户名" textAlignment="center" minimumFontSize="17" background="input-user" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-dO-zMR">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="center" minimumFontSize="17" background="input-user" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-dO-zMR">
                                                     <rect key="frame" x="359" y="7" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -213,7 +213,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l04-zH-r7b" id="m9o-6r-aH2">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="passw0rd" placeholder="密码" textAlignment="center" minimumFontSize="17" background="input-psd" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-as-2id">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="center" minimumFontSize="17" background="input-psd" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-as-2id">
                                                     <rect key="frame" x="359" y="8" width="306" height="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>

@@ -76,7 +76,7 @@
     cell.belongsVM.text = [volumnVO vmNames_text];
     cell.type.text = [volumnVO type_text];
     if (indexPath.row % 2 == 1) {
-        cell.backgroundColor = [UIColor colorWithHexString:@"#EFEFF4"];
+        cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
     }else{
         cell.backgroundColor = [UIColor clearColor];
     }
