@@ -75,6 +75,10 @@
             [self.tableView footerFinishingLoading];
             [self.tableView reloadData];
         } withPoolId:self.ipPoolVO.ipPoolId];
+    }else{
+        [self.tableView headerEndRefreshing];
+        [self.tableView footerFinishingLoading];
+        [self.tableView reloadData];
     }
 }
 

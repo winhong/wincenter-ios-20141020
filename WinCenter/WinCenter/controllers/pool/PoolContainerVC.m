@@ -16,12 +16,22 @@
 
 @implementation PoolContainerVC
 
--(void)refresh{
+-(void)reloadData{
+    [self.poolVO getPoolVOAsync:^(id object, NSError *error) {
+        self.poolVO = object;
+        [self refreshMainInfo];
+    }];
+}
+-(void)refreshMainInfo{
     self.pathLabel.text = [RemoteObject getCurrentDatacenterVO].name;
     self.titleLabel.text = self.poolVO.resourcePoolName;
     
     self.title = self.poolVO.resourcePoolName;
     self.name.text = self.poolVO.resourcePoolName;
+}
+
+-(void)refresh{
+    [self refreshMainInfo];
         
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:4];
     

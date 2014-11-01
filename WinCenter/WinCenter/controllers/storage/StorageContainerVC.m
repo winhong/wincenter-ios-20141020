@@ -12,7 +12,14 @@
 
 @implementation StorageContainerVC
 
--(void)refresh{
+-(void)reloadData{
+    [self.storageVO getStorageVOAsync:^(id object, NSError *error) {
+        self.storageVO = object;
+        [self refreshMainInfo];
+    }];
+}
+
+-(void)refreshMainInfo{
     if((self.storageVO.hostName ==nil) || [self.storageVO.hostName isEqualToString:@""]){
         self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.storageVO.resourcePoolName];
     }else{
@@ -24,6 +31,10 @@
     self.name.text = self.storageVO.storagePoolName;
     
     self.title = self.storageVO.storagePoolName;
+}
+
+-(void)refresh{
+    [self refreshMainInfo];
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:1];
     

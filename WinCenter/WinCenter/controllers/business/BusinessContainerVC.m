@@ -12,11 +12,22 @@
 
 @implementation BusinessContainerVC
 
--(void)refresh{
+-(void) reloadData{
+    [self.businessVO getBusinessVOAsync:^(id object, NSError *error) {
+        self.businessVO = object;
+        [self refreshMainInfo];
+    }];
+}
+
+-(void)refreshMainInfo{
     self.pathLabel.text = [RemoteObject getCurrentDatacenterVO].name;
     self.titleLabel.text = self.businessVO.name;
     self.name.text = self.businessVO.name;
     self.title = self.businessVO.name;
+}
+
+-(void)refresh{
+    [self refreshMainInfo];
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:1];
     

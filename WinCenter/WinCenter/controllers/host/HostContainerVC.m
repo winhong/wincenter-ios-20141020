@@ -29,13 +29,20 @@
     [self performSegueWithIdentifier:@"toCreateVm" sender:self];
 }
 
--(void)refresh{
+- (void)reloadData{
+    [self.hostVO getHostVOAsync:^(id object, NSError *error) {
+        self.hostVO = object;
+        [self refreshMainInfo];
+    }];
+}
+
+- (void)refreshMainInfo{
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.hostVO.resourcePoolName];
     self.titleLabel.text = self.hostVO.hostName;
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
     //self.statusLabel.textColor = [self.hostVO state_color];
-
+    
     NSDate *Runtime = [[NSDate alloc]initWithTimeIntervalSince1970:self.hostVO.startRunTime];
     NSDate *Now = [NSDate new];
     NSTimeInterval time=[Now timeIntervalSinceDate:Runtime];
@@ -45,6 +52,10 @@
     self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
     
     self.title = self.hostVO.hostName;
+}
+
+-(void)refresh{
+    [self refreshMainInfo];
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:5];
     
