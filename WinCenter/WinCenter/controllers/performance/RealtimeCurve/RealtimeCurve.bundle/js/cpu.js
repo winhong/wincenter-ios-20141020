@@ -41,9 +41,9 @@ function drawLineCpu(data,cpuType){
 	}
 	str +="]";
 	if(lineNum>8){
-		// var result = counXInterval(lineNum,xInterval);
-		// lineNum = result.split(",")[0];
-		// xInterval = result.split(",")[1];
+		var result = counXInterval(lineNum,xInterval);
+		lineNum = result.split(",")[0];
+		xInterval = result.split(",")[1];
 	}
 	/*
 	 * A highcharts spline graph, customized for a nicer Inspiritas-look.
@@ -151,8 +151,8 @@ function drawLineCpu(data,cpuType){
 	    },
 	    tooltip: {
             formatter: function() {
-                    return '<b>'+'' +'</b><br/>'+
-                    this.series.name+$("#performance_js_cpu_usePercent").html()+ this.y.toFixed(2) +'%';//使用率： 
+                    return '<b>'+ timeToFormatStr(this.x,"MM-dd HH:mm") +'</b><br/>'+
+                    this.series.name+"使用率："+ this.y.toFixed(2) +'%';//使用率： 
             }
         },
 
@@ -164,7 +164,7 @@ function drawLineCpu(data,cpuType){
 	        tickInterval:  xInterval, // 1 day
 	        labels: {
 	            formatter: function() {
-	                return "";
+	                return timeToFormatStr(this.value,"MM-dd HH:mm");
 	            },
 	            x: 0,
 	            style: {

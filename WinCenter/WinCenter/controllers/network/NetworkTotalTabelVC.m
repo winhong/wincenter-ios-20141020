@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property NSMutableArray *networkList;
 @property NSMutableDictionary *ipPoolsDict;
+@property BOOL isExternal;
 @end
 
 @implementation NetworkTotalTabelVC
@@ -52,6 +53,7 @@
             [week_self reloadData];
         }];
         
+        self.isExternal = TRUE;
         [self reloadData];
     }];
 }
@@ -74,6 +76,7 @@
 }
 
 - (IBAction)refreshAction:(id)sender {
+    self.isExternal = (self.segment.selectedSegmentIndex==0);
     [self.tableView headerBeginRefreshing];
 }
 
@@ -87,13 +90,15 @@
             [self.tableView footerEndRefreshing];
         }
         [self.tableView reloadData];
-    } withType:(self.segment.selectedSegmentIndex==0) referTo:self.networkList];
+    } withType:self.isExternal referTo:self.networkList];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.segment.selectedSegmentIndex==0) {
+    if (self.isExternal) {
         NetworkTotalTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NetworkTotalTableCell_Outside" forIndexPath:indexPath];
+        
+        if(self.networkList.count==0) return cell;
         
         NetworkVO *network = self.networkList[indexPath.row];
         IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
@@ -113,6 +118,8 @@
     }else
     {
         NetworkTotalTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NetworkTotalTableCell_Inside" forIndexPath:indexPath];
+        
+        if(self.networkList.count==0) return cell;
         
         NetworkVO *network = self.networkList[indexPath.row];
         cell.name.text = network.name;
@@ -144,7 +151,7 @@
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
     detailVC.ipPoolVO = ipPoolVO;
-    [detailVC reloadData];
+    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
 }
 /*
 // Override to support conditional editing of the table view.

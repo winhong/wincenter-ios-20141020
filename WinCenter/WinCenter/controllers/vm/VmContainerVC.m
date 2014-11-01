@@ -43,8 +43,13 @@
     }
 }
 
-
--(void)refresh{
+-(void)reloadData{
+    [self.vmVO getVmVOAsync:^(id object, NSError *error) {
+        self.vmVO = object;
+        [self refreshMainInfo];
+    }];
+}
+-(void)refreshMainInfo{
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.vmVO.poolName, self.vmVO.ownerHostName];
     self.titleLabel.text = self.vmVO.name;
     self.ipLabel.text = self.vmVO.ip;
@@ -63,6 +68,9 @@
     
     
     self.title = self.vmVO.name;
+}
+-(void)refresh{
+    [self refreshMainInfo];
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:4];
     
