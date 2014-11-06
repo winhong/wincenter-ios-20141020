@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Kv-z6-o09">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Kv-z6-o09">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--业务系统详情-->
@@ -203,9 +203,6 @@
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="业务域" translatesAutoresizingMaskIntoConstraints="NO" id="sEl-as-UYb">
                                                 <rect key="frame" x="148" y="164" width="14" height="20"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="所属平台" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-TV-o3h">
-                                                <rect key="frame" x="145" y="210" width="18" height="20"/>
-                                            </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="描述" translatesAutoresizingMaskIntoConstraints="NO" id="I51-KY-cWT">
                                                 <rect key="frame" x="145" y="256" width="20" height="19"/>
                                             </imageView>
@@ -216,6 +213,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="plaform" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-zo-88s">
+                                                <rect key="frame" x="145" y="212" width="20" height="20"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -419,10 +419,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plaform" width="20" height="20"/>
         <image name="业务域" width="14" height="20"/>
         <image name="业务系统－摘要-图标" width="95" height="95"/>
         <image name="业务系统－摘要－虚拟机总数" width="334" height="89"/>
-        <image name="所属平台" width="18" height="20"/>
         <image name="描述" width="20" height="19"/>
         <image name="日期2" width="20" height="20"/>
         <image name="管理员2" width="20" height="20"/>

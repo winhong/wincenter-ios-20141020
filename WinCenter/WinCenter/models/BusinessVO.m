@@ -42,6 +42,12 @@
         completeBlock([[BusinessVO alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
-
+-(NSString*)sysSrc_text{
+    if ([self.sysSrc isEqualToString:@"WINCENTER"]) {
+        return @"WinCenter";
+    }else{
+        return self.sysSrc;
+    }
+}
 
 @end

@@ -23,5 +23,5 @@
 
 - (void) getBusinessVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getBusinessVmListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
-
+-(NSString*)sysSrc_text;
 @end
