@@ -2119,7 +2119,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Lm-PH-T2V"/>
-                        <barButtonItem title="全部资源池" id="4Zr-if-iJO">
+                        <barButtonItem title="全部" id="4Zr-if-iJO">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="tNF-5l-310" id="YbJ-CW-fsP"/>
                             </connections>
@@ -2639,7 +2639,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
-                        <barButtonItem title="全部资源池" id="NHe-7y-NkJ">
+                        <barButtonItem title="全部" id="NHe-7y-NkJ">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="Vdc-u6-N4C" id="4jd-hL-nLQ"/>
                             </connections>
@@ -3142,7 +3142,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="waZ-PP-DQJ"/>
-                        <barButtonItem title="全部资源池" id="Dhp-OO-KwD">
+                        <barButtonItem title="全部" id="Dhp-OO-KwD">
                             <connections>
                                 <action selector="showPoolListSelect:" destination="8QM-yF-skn" id="F9X-Un-Fsu"/>
                             </connections>
@@ -3484,7 +3484,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="uVe-5k-gQ2"/>
-                        <barButtonItem title="全部业务域" id="qXt-3j-g6W">
+                        <barButtonItem title="全部" id="qXt-3j-g6W">
                             <connections>
                                 <action selector="showBusinessListSelect:" destination="rJv-N2-owX" id="bG8-hi-3i4"/>
                             </connections>
