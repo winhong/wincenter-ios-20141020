@@ -42,7 +42,9 @@
         self.vmMigrateTargets = object;
         for(VmMigrateTargetVO *targetVO in self.vmMigrateTargets.targets){
             for(VmMigrateTargetHostVO *hostVO in targetVO.hosts){
-                [self.hosts addObject:hostVO.targetName];
+                if(hostVO.targetId!=self.vmVO.ownerHostId){
+                    [self.hosts addObject:hostVO.targetName];
+                }
             }
         }
         [self.tableView reloadData];
