@@ -29,6 +29,9 @@
     self.statusLabel.text = [self.storageVO state_text];
     self.statusLabel.textColor = [self.storageVO state_color];
     self.name.text = self.storageVO.storagePoolName;
+    if (self.name.text.length > 26) {
+        self.name.font = [UIFont systemFontOfSize:24.0f];
+    }
     
     self.title = self.storageVO.storagePoolName;
 }

@@ -59,6 +59,9 @@
     self.statusLabel.text = [self.vmVO state_text];
     //self.statusLabel.textColor = [self.vmVO state_color];
     self.name.text = self.vmVO.name;
+    if (self.name.text.length > 26) {
+        self.name.font = [UIFont systemFontOfSize:24.0f];
+    }
     
     int time = self.vmVO.runTime/1000;
     int Day = time/(3600*24.0);

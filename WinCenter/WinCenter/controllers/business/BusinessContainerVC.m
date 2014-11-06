@@ -23,6 +23,9 @@
     self.pathLabel.text = [RemoteObject getCurrentDatacenterVO].name;
     self.titleLabel.text = self.businessVO.name;
     self.name.text = self.businessVO.name;
+    if (self.name.text.length > 26) {
+        self.name.font = [UIFont systemFontOfSize:24.0f];
+    }
     self.title = self.businessVO.name;
 }
 

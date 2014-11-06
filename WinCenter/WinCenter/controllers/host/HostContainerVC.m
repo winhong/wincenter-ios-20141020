@@ -39,6 +39,9 @@
 - (void)refreshMainInfo{
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.hostVO.resourcePoolName];
     self.titleLabel.text = self.hostVO.hostName;
+    if (self.titleLabel.text.length > 26) {
+        self.titleLabel.font = [UIFont systemFontOfSize:24.0f];
+    }
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
     //self.statusLabel.textColor = [self.hostVO state_color];
