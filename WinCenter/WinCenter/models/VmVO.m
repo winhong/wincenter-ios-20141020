@@ -69,11 +69,13 @@
         @"RENAMEING":@"修改名称中",
         @"EXPORTING":@"导出中",
         @"UN_MOUNTING_ISO":@"弹出iso中",
-        @"MOUNTING_ISO":@"挂载iso中"
+        @"MOUNTING_ISO":@"挂载iso中",
+        @"CLONING":@"正在克隆",
+        @"SAVE_AS_TEMPLATE":@"另存为模板中"
     };
     
     
-    NSString *result = [stateDict valueForKey:self.state];
+    NSString *result = [stateDict valueForKey:[self.state uppercaseString]];
     if((result==nil) || [result isEqualToString:@""]){
         result = self.state;
     }
