@@ -48,6 +48,7 @@
 
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getHostStatVOAsync:(FetchObjectCompletionBlock)completeBlock;
+- (void) getHostNetworkListAllAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getHostNetworkListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList;
 - (void) getHostNicListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isGrouped referTo:(NSMutableArray*)referList;
 - (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;

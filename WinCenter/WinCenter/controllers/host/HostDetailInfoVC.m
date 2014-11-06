@@ -100,17 +100,21 @@
         self.hostVO = object;
         [self.hostVO getActivityVmAsync:^(id object, NSError *error) {
             self.activityVm = object;
-            [self refreshMainInfo];
-            if([self.hostVO.state isEqualToString:@"OK"]){
-                [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
-                    self.statVO = object;
+            [self.hostVO getHostNetworkListAllAsync:^(id object, NSError *error) {
+                self.hostNetworkList = object;
+                [self refreshMainInfo];
+                if([self.hostVO.state isEqualToString:@"OK"]){
+                    [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
+                            self.statVO = object;
+                            [self refreshStatInfo];
+                            [self.scrollView headerEndRefreshing];
+                        }];
+   
+                }else{
                     [self refreshStatInfo];
                     [self.scrollView headerEndRefreshing];
-                }];
-            }else{
-                [self refreshStatInfo];
-                [self.scrollView headerEndRefreshing];                
-            }
+                }
+            }];
             
         }];
     }];
@@ -120,7 +124,7 @@
     self.name.text = [NSString stringWithFormat:@"%@", self.hostVO.hostName];
     self.virtualMachineNum.text = [NSString stringWithFormat:@"%d", self.hostVO.virtualMachineNum];
     self.activeMachineNum.text = [NSString stringWithFormat:@"%d", self.activityVm.OK];
-    self.networkNum.text = [NSString stringWithFormat:@"%d", self.hostVO.networkNum];
+    self.networkNum.text = [NSString stringWithFormat:@"%d", self.hostNetworkList.recordTotal];
     self.startRunTime.text = [NSString stringWithFormat:@"%d", self.hostVO.startRunTime];
     self.virtualInfo.text = [NSString stringWithFormat:@"%@ %@", self.hostVO.virtualSoftware, self.hostVO.virtualVersion];
     self.virtualDate.text = [NSString stringWithFormat:@"%@", self.hostVO.versionDate];
