@@ -43,6 +43,9 @@
     HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
     cell.label1.text = hostVO.ip;
+    if(hostVO.ip == nil){
+        cell.label1.text = @"(尚未配置IP)";
+    }
     cell.label2.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum];
     cell.label3.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
     cell.label4.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
