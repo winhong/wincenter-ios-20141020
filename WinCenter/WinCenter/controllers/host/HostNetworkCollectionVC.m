@@ -28,6 +28,8 @@
     
     HostNetworkCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostNetworkCollectionCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     HostNetworkVO *hostNetworkVO = (HostNetworkVO *) self.dataList[indexPath.row];
     cell.title.text = hostNetworkVO.name;
     

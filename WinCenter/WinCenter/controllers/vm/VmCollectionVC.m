@@ -54,6 +54,8 @@
     
     VmCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmCollectionCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.label1.text = vmVO.ip;

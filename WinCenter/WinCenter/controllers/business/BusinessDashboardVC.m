@@ -66,6 +66,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BusinessDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BusinessDashboardCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     BusinessVO *businessVO = (BusinessVO *) self.dataList[indexPath.row];
     cell.title.text = businessVO.name;
     cell.manager.text = businessVO.managerId;

@@ -32,6 +32,8 @@
     
     VmDiskCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmDiskCollectionCell" forIndexPath:indexPath];
 
+    if(self.dataList.count==0) return cell;
+    
     VmDiskVO *vmDiskVO = (VmDiskVO *) self.dataList[indexPath.row];
     cell.title.text = vmDiskVO.name;
     cell.status.text = [vmDiskVO state_text];
