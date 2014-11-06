@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *isShared_img;
 @property (weak, nonatomic) IBOutlet UIImageView *noShared_img;
+@property (weak, nonatomic) IBOutlet UIImageView *isDefaulted_img;
+@property (weak, nonatomic) IBOutlet UIImageView *noDefaulted_img;
 @property (weak, nonatomic) IBOutlet UILabel *isshared;
 @property (weak, nonatomic) IBOutlet UILabel *path;
 
@@ -92,13 +94,13 @@
     self.hostNum.text = [NSString stringWithFormat:@"%d", self.storageVO.hostNum];
     self.vmNum.text = [NSString stringWithFormat:@"%d", self.storageVO.vmNum];
     self.shared.hidden = [self.storageVO.shared isEqualToString:@"false"];
-    self.defaulted.hidden = [self.storageVO.defaulted isEqualToString:@"false"];
-    self.defaulted_label.hidden = [self.storageVO.defaulted isEqualToString:@"false"];
+    self.isDefaulted_img.hidden = [self.storageVO defaulted_img];
+    self.noDefaulted_img.hidden = ![self.storageVO defaulted_img];
     self.isShared_img.hidden = ![self.storageVO shared_img];
     self.noShared_img.hidden = [self.storageVO shared_img];
     
-    self.totalStorageLabel1.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value],[self.storageVO totalStorage_unit]];
-    self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value],[self.storageVO totalStorage_unit]];
+    self.totalStorageLabel1.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO usedStorage_value],[self.storageVO totalStorage_unit]];
+    self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO usedStorage_value],[self.storageVO totalStorage_unit]];
     self.usedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO usedStorage_value],[self.storageVO usedStorage_unit]];
     self.allocatedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO allocatedStorage_value],[self.storageVO allocatedStorage_unit]];
     self.type.text = self.storageVO.type;

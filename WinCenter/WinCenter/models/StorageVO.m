@@ -179,7 +179,14 @@
     }];
 }
 -(BOOL)shared_img{
-    if ([self.shared isEqualToString:@"true"]) {
+    if (![self.shared isEqualToString:@"true"]) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+-(BOOL)defaulted_img{
+    if (![self.defaulted isEqualToString:@"true"]) {
         return YES;
     }else{
         return NO;
