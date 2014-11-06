@@ -234,8 +234,11 @@
     self.vcpu.text = [NSString stringWithFormat:@"%d", self.vmVO.vcpu];
     //self.isDynamicCPU
     self.memoryType.text = [self.vmVO memoryType_text];
+    if (self.memoryType.text.length > 3) {
+        self.memoryType.font = [UIFont systemFontOfSize:30.0f];
+    }
     //self.isDynamicMemWce
-    self.memory.text = [NSString stringWithFormat:@"%d", self.vmVO.memory];
+    self.memory.text = [NSString stringWithFormat:@"%.1f", self.vmVO.memory/1024.0];
     //self.snopshotNum.text
     self.osType_image.image = [UIImage imageNamed:[self.vmVO osType_imageName_big]];
     if(self.isDynamicCpu_img){

@@ -288,4 +288,17 @@
     }];
 }
 
+- (void) getStoragePoolAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[PoolStoragesVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getStoragePoolAsync" ofType:@"json"]]].storages, nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.ha.getResPoolStorage&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.resourcePoolId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[PoolStoragesVO alloc] initWithJSONData:jsonResponse.rawBody].storages, error);
+    }];
+}
+
 @end

@@ -428,6 +428,9 @@
 		847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847CA88D19F752B6004C292A /* HostActivityVmVO.m */; };
 		847D91AE19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */; };
 		8487491E19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */; };
+		848DA0AA1A0B802D00F135AC /* PoolStoragesVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 848DA0A71A0B802D00F135AC /* PoolStoragesVO.m */; };
+		848DA0AB1A0B802D00F135AC /* PoolStorageVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 848DA0A91A0B802D00F135AC /* PoolStorageVO.m */; };
+		848DA0AD1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 848DA0AC1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json */; };
 		8499F3581A00E5E100236B38 /* ModifyPasswordResultVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499F3571A00E5E100236B38 /* ModifyPasswordResultVO.m */; };
 		84D8336919F91702001C747A /* PoolMaxHostFailuresVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */; };
 		84D8336C19F9174A001C747A /* PoolHaInfoVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8336B19F9174A001C747A /* PoolHaInfoVO.m */; };
@@ -1143,6 +1146,11 @@
 		847CA88D19F752B6004C292A /* HostActivityVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostActivityVmVO.m; sourceTree = "<group>"; };
 		847D91AD19F4F78D00085B7B /* PoolSubVO.getPoolSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolSubVO.getPoolSubInfoAsync.json; sourceTree = "<group>"; };
 		8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getBusinessUnalloctedListAsync.json; sourceTree = "<group>"; };
+		848DA0A61A0B802D00F135AC /* PoolStoragesVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolStoragesVO.h; sourceTree = "<group>"; };
+		848DA0A71A0B802D00F135AC /* PoolStoragesVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolStoragesVO.m; sourceTree = "<group>"; };
+		848DA0A81A0B802D00F135AC /* PoolStorageVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolStorageVO.h; sourceTree = "<group>"; };
+		848DA0A91A0B802D00F135AC /* PoolStorageVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolStorageVO.m; sourceTree = "<group>"; };
+		848DA0AC1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PoolVO.getStoragePoolAsync.json; sourceTree = "<group>"; };
 		8499F3561A00E5E100236B38 /* ModifyPasswordResultVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordResultVO.h; sourceTree = "<group>"; };
 		8499F3571A00E5E100236B38 /* ModifyPasswordResultVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordResultVO.m; sourceTree = "<group>"; };
 		84D8336719F91702001C747A /* PoolMaxHostFailuresVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolMaxHostFailuresVO.h; sourceTree = "<group>"; };
@@ -1489,6 +1497,7 @@
 				181DEC2319F17CB100998835 /* DatacenterVO.getDatacenterStatWinserverVOAsync.json */,
 				181DEC2419F17CB100998835 /* DatacenterVO.getHostListAsync.json */,
 				181DEC2519F17CB100998835 /* DatacenterVO.getHostListAsync.limit.json */,
+				848DA0AC1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json */,
 				181DEC2619F17CB100998835 /* DatacenterVO.getPoolListAsync.json */,
 				181DEC2719F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json */,
 				181DEC2819F17CB100998835 /* DatacenterVO.getStorageListAsync.json */,
@@ -1608,6 +1617,10 @@
 				84D8336B19F9174A001C747A /* PoolHaInfoVO.m */,
 				84D8336719F91702001C747A /* PoolMaxHostFailuresVO.h */,
 				84D8336819F91702001C747A /* PoolMaxHostFailuresVO.m */,
+				848DA0A61A0B802D00F135AC /* PoolStoragesVO.h */,
+				848DA0A71A0B802D00F135AC /* PoolStoragesVO.m */,
+				848DA0A81A0B802D00F135AC /* PoolStorageVO.h */,
+				848DA0A91A0B802D00F135AC /* PoolStorageVO.m */,
 				181DEC7719F17CB100998835 /* RemoteObject.h */,
 				181DEC7819F17CB100998835 /* RemoteObject.m */,
 				181DEC7919F17CB100998835 /* StorageListResult.h */,
@@ -2481,6 +2494,7 @@
 				1824362A19F4FE05007E4D6C /* hr@2x.png in Resources */,
 				18763C1319F4E4E400669CC3 /* title4@2x.png in Resources */,
 				181DED4E19F17CB100998835 /* DatacenterVO.getPoolListAsync.limit.json in Resources */,
+				848DA0AD1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json in Resources */,
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
 				181DECF419F17CB100998835 /* bmi-80-80.png in Resources */,
@@ -2683,6 +2697,7 @@
 				18C521B719F8CA2000C033C6 /* DLGraphDemoViewController.m in Sources */,
 				684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */,
 				684D90F119FFC587009C4B09 /* IpPoolsVO.m in Sources */,
+				848DA0AB1A0B802D00F135AC /* PoolStorageVO.m in Sources */,
 				181DECB119F17CB100998835 /* PoolDatagridVC.m in Sources */,
 				181DED8D19F17CB100998835 /* VmDiskVO.m in Sources */,
 				18C521E219F8CDF500C033C6 /* MBMapNode.m in Sources */,
@@ -2765,6 +2780,7 @@
 				181DECE119F17CB100998835 /* PercentageChartVC.m in Sources */,
 				843E6C1F19F603450046A5A0 /* StorageTotalVO.m in Sources */,
 				18C521BC19F8CA2000C033C6 /* Example1.m in Sources */,
+				848DA0AA1A0B802D00F135AC /* PoolStoragesVO.m in Sources */,
 				18C2134619F27C2000FCBD23 /* VmCollectionCell.m in Sources */,
 				181DED8C19F17CB100998835 /* VmDiskListResult.m in Sources */,
 				18C2134419F27C2000FCBD23 /* UIBarButtonItem+Badge.m in Sources */,

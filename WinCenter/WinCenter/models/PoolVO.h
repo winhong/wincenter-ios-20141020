@@ -73,4 +73,5 @@
 - (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getHaMaxHostFailuresAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getHaInfoAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getStoragePoolAsync:(FetchObjectCompletionBlock)completionBlock;
 @end
