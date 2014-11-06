@@ -78,6 +78,11 @@
         self.btnStop.enabled = false;
         self.btnRestart.enabled = false;
         self.btnMigrate.enabled = true;
+    }else{
+        self.btnStart.enabled = false;
+        self.btnStop.enabled = false;
+        self.btnRestart.enabled = false;
+        self.btnMigrate.enabled = false;
     }
     
     [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
