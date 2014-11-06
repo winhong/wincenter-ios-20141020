@@ -43,6 +43,13 @@
     }else{
         cell.backgroundColor = [UIColor clearColor];
     }
+    if ([vmNetworkVO.type isEqualToString:@"INTERNAL"]) {
+        cell.vlanLabel.hidden = true;
+        cell.label4.hidden = true;
+    }else{
+        cell.vlanLabel.hidden = false;
+        cell.label4.hidden = false;
+    }
     return cell;
 }
 

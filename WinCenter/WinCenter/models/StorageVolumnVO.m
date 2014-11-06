@@ -17,7 +17,7 @@
     return result;
 }
 - (NSString*)isASnapshot_text{
-    return [self.isASnapshot isEqualToString:@"true"] ? @"快照" : @"虚拟机";
+    return [self.isASnapshot isEqualToString:@"true"] ? @"是" : @"否";
 }
 - (NSString*)state_text{
     NSDictionary *dict = @{

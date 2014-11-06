@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *size;
 @property (weak, nonatomic) IBOutlet UILabel *belongsVM;
 @property (weak, nonatomic) IBOutlet UILabel *type;
+@property (weak, nonatomic) IBOutlet UIImageView *share_image;
 
 @end

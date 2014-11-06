@@ -74,7 +74,8 @@
     cell.state.text = [volumnVO state_text];
     cell.state.textColor = [volumnVO state_color];
     cell.isASnapshot.text = [volumnVO isASnapshot_text];
-    cell.size.text = [NSString stringWithFormat:@"%dGB", volumnVO.size];
+    cell.size.text = [NSString stringWithFormat:@"%.2fGB", volumnVO.size];
+    cell.share_image.hidden = [volumnVO.shared isEqualToString:@"false"];
     cell.belongsVM.text = [volumnVO vmNames_text];
     cell.type.text = [volumnVO type_text];
     if (indexPath.row % 2 == 1) {

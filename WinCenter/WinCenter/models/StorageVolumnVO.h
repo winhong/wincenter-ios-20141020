@@ -12,7 +12,7 @@
 
 @property NSString *name;
 @property NSString *shared;
-@property int size;
+@property float size;
 @property NSString *state;
 @property NSString *isASnapshot;
 @property NSString *type;

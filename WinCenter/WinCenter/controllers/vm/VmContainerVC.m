@@ -11,6 +11,7 @@
 #import "VmDetailInfoVC.h"
 #import "VmDetailSnapshootVC.h"
 #import "VmNetworkCollectionVC.h"
+#import "VmNetworkCollectionCell.h"
 #import "VmDiskCollectionVC.h"
 #import "PopControlRecordVC.h"
 #import "VmMigrateVC.h"
