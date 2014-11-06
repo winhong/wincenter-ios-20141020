@@ -67,6 +67,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     VmDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmDashboardCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.ip.text = vmVO.ip;

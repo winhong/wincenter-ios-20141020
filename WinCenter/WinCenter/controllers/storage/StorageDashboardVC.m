@@ -61,6 +61,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     StorageDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StorageDashboardCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
     cell.availStorage.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];

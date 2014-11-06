@@ -28,6 +28,8 @@
     
     VmNetworkCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VmNetworkCollectionCell" forIndexPath:indexPath];
 
+    if(self.dataList.count==0) return cell;
+    
     VmNetworkVO *vmNetworkVO = (VmNetworkVO *) self.dataList[indexPath.row];
     cell.title.text = vmNetworkVO.name;
     cell.label1.text = [vmNetworkVO type_text];

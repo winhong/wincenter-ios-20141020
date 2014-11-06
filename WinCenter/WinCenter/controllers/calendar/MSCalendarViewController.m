@@ -199,6 +199,9 @@ NSString * const MSTimeRowHeaderReuseIdentifier = @"MSTimeRowHeaderReuseIdentifi
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MSEventCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MSEventCellReuseIdentifier forIndexPath:indexPath];
+    
+    if(self.dataList.count==0) return cell;
+    
     cell.event = ((NSArray *)[self.dataList objectForKey:self.dataList.allKeys[indexPath.section]])[indexPath.row];
     return cell;
 }

@@ -80,7 +80,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getnetWorkAdaptersList&params=hostId%%3D%d%%26%@%%3DbondModel%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.hostId, (isGrouped ? @"isNull" : @"isNotNull"), referList.count, referList.count+per_page]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.network.getnetWorkAdaptersList&params=hostId%%3D%d%%26%@%%3DbondModel%%26firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.hostId, (!isGrouped ? @"isNull" : @"isNotNull"), referList.count, referList.count+per_page]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[HostNicListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];

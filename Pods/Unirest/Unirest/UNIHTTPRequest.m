@@ -151,7 +151,17 @@ NSTimer *hudTimer = nil;
                 return;
             } else {
                 if(res==nil){
-                    response(nil, error);
+                    NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
+                                                                      title:@"请求失败"
+                                                                    message:@"数据中心连接失败或者后台接口访问异常，请切换至其他的数据中心或联系系统管理员！"
+                                                                   delegate:nil];
+                    //[alert setTextAlignment:NSTextAlignmentCenter];
+                    [alert show];
+                    [alert showWithCompletion:^{
+                        NSLog(@"Alert with completion handler");
+                    }];
+
+                    //response(nil, error);
                 }else{
                     UNIHTTPJsonResponse *jsonResponse = [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:res];
                     if(jsonResponse){

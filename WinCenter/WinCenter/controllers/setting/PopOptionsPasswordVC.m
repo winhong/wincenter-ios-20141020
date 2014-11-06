@@ -47,13 +47,19 @@
                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"旧密码输入错误！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                    [alert show];
                }else{
-                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"重新登录" otherButtonTitles:nil];
                    [alert show];
                }
            } withOldPassword:self.passwordOld.text withPassword:self.passwordNew.text];
     }else{
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"重新登录"]){
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

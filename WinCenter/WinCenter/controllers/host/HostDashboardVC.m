@@ -74,6 +74,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     HostDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostDashboardCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
     cell.ip.text = hostVO.ip;

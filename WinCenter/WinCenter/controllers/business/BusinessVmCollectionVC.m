@@ -67,6 +67,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BusinessVmCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BusinessVmCollectionCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     BusinessVmVO *vmvo = (BusinessVmVO*)self.dataList[indexPath.row];
     cell.name.text = vmvo.name;
     cell.startOrder.text = [NSString stringWithFormat:@"%d", vmvo.startOrder];

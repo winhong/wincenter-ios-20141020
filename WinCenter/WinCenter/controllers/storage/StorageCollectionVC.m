@@ -42,6 +42,8 @@
     
     StorageCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StorageCollectionCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
     cell.label1.text = storageVO.type;

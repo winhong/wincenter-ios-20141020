@@ -28,6 +28,8 @@
     
     HostNicCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostNicCollectionCell" forIndexPath:indexPath];
 
+    if(self.dataList.count==0) return cell;
+    
     HostNicVO *hostNicVO = (HostNicVO *) self.dataList[indexPath.row];
     cell.title.text = hostNicVO.name;
     cell.label1.text = hostNicVO.macAddress;

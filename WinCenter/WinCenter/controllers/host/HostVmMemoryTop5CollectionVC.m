@@ -67,6 +67,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HostVmMemoryTop5CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HostVmMemoryTop5CollectionCell" forIndexPath:indexPath];
 
+    if(self.vmList_sorted.count==0) return cell;
+    
     //NSArray *array2 = [(VmVO*)self.vmList[indexPath.row] sortedArrayUsingSelector:@selector(compare:)];
     VmVO *vm = [VmVO new];
     vm = self.vmList_sorted[indexPath.row];

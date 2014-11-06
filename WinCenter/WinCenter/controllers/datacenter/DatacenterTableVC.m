@@ -56,6 +56,8 @@
 {
     DatacenterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DatacenterCell" forIndexPath:indexPath];
     
+    if(self.datacenters.count==0) return cell;
+    
     DatacenterVO *vo = self.datacenters[indexPath.row];
     
     cell.name.text = vo.name;

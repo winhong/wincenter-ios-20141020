@@ -72,11 +72,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WarningInfoVO *warningVO = self.dataList[indexPath.row];
     //PopWarningInfoCellForTime *cell = [tableView dequeueReusableCellWithIdentifier:@"WarningInfoCellForTime" forIndexPath:indexPath];
     
     //cell.label1.text = warningVO.createTime;
     PopWarningInfoCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"WarningInfoCell" forIndexPath:indexPath];
+    
+    if(self.dataList.count==0) return cell2;
+    
+    WarningInfoVO *warningVO = self.dataList[indexPath.row];
     
     cell2.label1.text = warningVO.name;
     cell2.label2.text = warningVO.createTime;
