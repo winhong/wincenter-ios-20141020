@@ -65,7 +65,7 @@
     
     StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
-    cell.availStorage.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
+    cell.availStorage.text = [NSString stringWithFormat:@"%.2f%@剩余,共%.2f%@", [storageVO availStorage_value],[storageVO availStorage_unit],[storageVO totalStorage_value],[storageVO totalStorage_unit]];
     cell.volumeNum.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
     cell.location.text = [NSString stringWithFormat:@"%@", storageVO.location];
     cell.underPool.text = storageVO.resourcePoolName;
@@ -96,6 +96,7 @@
     header.storageSize4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
     header.usedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    
     header.fcSanStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
     header.iscsiStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmoiscsi];
     header.nfsStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.nfs];
@@ -106,6 +107,7 @@
     header.iscsiStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvmoiscsi];
     header.nfsStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.nfs];
     header.localStorageSize3.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvm];
+    
     header.storageSize3.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
     header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
     header.localStorageSize4.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];

@@ -77,9 +77,9 @@
     cell.title.text = poolVO.resourcePoolName;
     cell.hostCount.text = [NSString stringWithFormat:@"%d台", poolVO.hostNumber];
     cell.activeVmCount.text = [NSString stringWithFormat:@"%d台", poolVO.activeVmNumber];
-    cell.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", poolVO.totalCpu/1000.0];
+    cell.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@", [poolVO totalCpu_value], [poolVO totalCpu_unit]];
     cell.memerySize.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalMemory/1024.0];
-    cell.storageSize.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalStorage];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [poolVO totalStorage_value], [poolVO totalStorage_unit]];
     
     cell.progress_1.litEffect = NO;
     cell.progress_1.numBars = 10;
@@ -127,26 +127,26 @@
     header.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     header.haPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
     header.elasticCalPoolCount.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
-    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/1024.0];
-    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.availCpu/1024];
-    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
-    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",self.datacenterStatWinserver.availMemory/1024];
-    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/1024.0];
-    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",self.datacenterStatWinserver.availStorage/1024.0];
+    header.cpuUsedCount.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver usedCpu_value],[self.datacenterStatWinserver usedCpu_unit]];
+    header.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver availCpu_value],[self.datacenterStatWinserver availCpu_unit]];
+    header.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fGB",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
+    header.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.availMemory/1024];
+    header.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver usedStorage_value],[self.datacenterStatWinserver usedStorage_unit]];
+    header.storageUnusedSize.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver availStorage_value],[self.datacenterStatWinserver availStorage_unit]];
 
     //缩起
     header.poolCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
     header.haPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.ha_num];
     header.elasticCalPoolCount2.text = [NSString stringWithFormat:@"%d",self.poolStatWinserver.plan_num];
-    header.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalCpu/1024];
-    header.cpuUsedCount2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalCpu - self.datacenterStatWinserver.availCpu)/1024.0];
-    header.cpuUnitUnusedCount2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availCpu/1024];
-    header.memerySize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalMemory/1024.0];
-    header.memeryUsedSize2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
-    header.memoryUnusedSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availMemory/1024.0];
-    header.storageSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.totalStorage/1024];
-    header.storageUsedSize2.text = [NSString stringWithFormat:@"%.2f",(self.datacenterStatWinserver.totalStorage - self.datacenterStatWinserver.availStorage)/1024.0];
-    header.storageUnusedSize2.text = [NSString stringWithFormat:@"%.2f",self.datacenterStatWinserver.availStorage/1024.0];
+    header.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver totalCpu_value],[self.datacenterStatWinserver totalCpu_unit]];
+    header.cpuUsedCount2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver usedCpu_value],[self.datacenterStatWinserver usedCpu_unit]];
+    header.cpuUnitUnusedCount2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver availCpu_value],[self.datacenterStatWinserver availCpu_unit]];
+    header.memerySize2.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.totalMemory/1024.0];
+    header.memeryUsedSize2.text = [NSString stringWithFormat:@"%.2fGB",(self.datacenterStatWinserver.totalMemory - self.datacenterStatWinserver.availMemory)/1024.0];
+    header.memoryUnusedSize2.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.availMemory/1024.0];
+    header.storageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver totalStorage_value],[self.datacenterStatWinserver totalStorage_unit]];
+    header.storageUsedSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver usedStorage_value],[self.datacenterStatWinserver usedStorage_unit]];
+    header.storageUnusedSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver availStorage_value],[self.datacenterStatWinserver availStorage_unit]];
     
     //圈图
     for(UIView *subView in header.cpuChartGroup.subviews){
