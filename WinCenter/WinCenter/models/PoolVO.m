@@ -165,6 +165,14 @@
     
 }
 
+-(NSString*)hypervisor_text{
+    if ([self.hypervisor isEqualToString:@"winserver"]) {
+        return @"WinServer";
+    }else{
+        return self.hypervisor;
+    }
+}
+
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[PoolVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getPoolVOAsync" ofType:@"json"]]], nil);
