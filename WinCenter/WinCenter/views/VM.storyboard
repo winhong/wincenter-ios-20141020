@@ -1025,7 +1025,7 @@
                                 <action selector="close:" destination="fkW-sS-bPx" id="zPS-nr-2NO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="np5-mJ-Hkh">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="提交" id="np5-mJ-Hkh">
                             <connections>
                                 <action selector="done:" destination="fkW-sS-bPx" id="4MK-qi-V3Y"/>
                             </connections>
@@ -1063,7 +1063,13 @@
                             <outlet property="delegate" destination="LWN-te-8Oe" id="yck-R2-cLQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="目标主机" id="Nha-2k-miu"/>
+                    <navigationItem key="navigationItem" title="目标主机" id="Nha-2k-miu">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="Vuj-43-YR4">
+                            <connections>
+                                <action selector="backAction:" destination="LWN-te-8Oe" id="h7l-YN-NTq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU4-QQ-nrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
