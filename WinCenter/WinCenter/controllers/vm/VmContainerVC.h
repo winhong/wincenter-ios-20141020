@@ -31,5 +31,9 @@
 @property BOOL hasPerformancePage;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
+@property UIAlertView *openAlert;
+@property UIAlertView *shutdownAlert;
+@property UIAlertView *restartAlert;
+
 
 @end
