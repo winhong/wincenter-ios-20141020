@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *availStorage;
 @property (weak, nonatomic) IBOutlet UILabel *volumeNum;
 @property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UILabel *underPool;
 
 
 @end

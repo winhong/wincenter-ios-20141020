@@ -49,8 +49,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *vVersion;
 @property (weak, nonatomic) IBOutlet UILabel *vDate;
 @property (weak, nonatomic) IBOutlet UIView *haInfo;
-@property (weak, nonatomic) IBOutlet UIImageView *haDisable;
 
+@property (weak, nonatomic) IBOutlet UIView *elastic_Info;
+@property (weak, nonatomic) IBOutlet UILabel *haDisable;
+
+@property (weak, nonatomic) IBOutlet UILabel *elasticDisable;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
@@ -142,6 +145,7 @@
         self.haSignalPool.text = self.haInfoVO.haStorageOriginalId == nil ? @"无" :self.haInfoVO.haStorageOriginalId;
     }else{
         self.haDisable.hidden = NO;
+        self.haInfo.hidden = YES;
     }
     
     
@@ -188,13 +192,19 @@
     
 }
 - (void)refreshElasticInfo{
-    self.elasticModel.text = self.elasticInfo.balancingMode;
-    self.cpuLoadBalancing.text = [NSString stringWithFormat:@"%.0f%%", self.elasticInfo.cpuThreshold*100];
-    self.memeryLoadBalancing.text = [NSString stringWithFormat:@"%.0f%%", self.elasticInfo.memThreshold*100];
-    self.intervalTime.text = [self.elasticInfo intervalTime_text];
-    self.nextCheckTime.text = [self.elasticInfo.nextStartTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
-    
-    
+    if (!(self.elasticInfo.balancingMode)) {
+        self.elastic_Info.hidden = YES;
+        self.elasticDisable.hidden = NO;
+    }else{
+        self.elasticDisable.hidden = YES;
+        self.elastic_Info.hidden = NO;
+        self.elasticModel.text = [self.elasticInfo balancingModeStr];
+        self.cpuLoadBalancing.text = [NSString stringWithFormat:@"%.0f%%", self.elasticInfo.cpuThreshold*100];
+        self.memeryLoadBalancing.text = [NSString stringWithFormat:@"%.0f%%", self.elasticInfo.memThreshold*100];
+        self.intervalTime.text = [self.elasticInfo intervalTime_text];
+        self.nextCheckTime.text = [self.elasticInfo.nextStartTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
+    }
+
 }
 
 @end

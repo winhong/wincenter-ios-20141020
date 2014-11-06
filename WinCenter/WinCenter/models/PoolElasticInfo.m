@@ -17,5 +17,14 @@
     result = [result stringByReplacingOccurrencesOfString:@"M" withString:@"分钟"];
     return result;
 }
+- (NSString*)balancingModeStr{
+    NSString *str = [NSString new];
+    if ([self.balancingMode isEqualToString:@"WLB"]) {
+        str = @"负载均衡";
+    }else{
+        str = self.balancingMode;
+    }
+    return str;
+}
 
 @end

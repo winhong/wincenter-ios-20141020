@@ -17,11 +17,17 @@
 
 @property NSString *ip;
 
-@property float storage;
+
 @property int virtualMachineNum;
 @property NSString *state;
 
+
 @property float memory;
+@property float storage;
+@property float availCpu;
+@property float availMemory;
+@property float availStorage;
+
 
 @property int networkNum;
 

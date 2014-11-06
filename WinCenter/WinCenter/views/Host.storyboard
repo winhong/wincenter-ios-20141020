@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SdQ-oO-Giu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SdQ-oO-Giu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--创建虚拟机-->
@@ -948,14 +948,14 @@
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-3J-22z">
-                                                <rect key="frame" x="43" y="133" width="15" height="15"/>
+                                                <rect key="frame" x="43" y="152" width="15" height="15"/>
                                                 <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="152" y="71" width="15" height="15"/>
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-sW-rMI">
-                                                <rect key="frame" x="43" y="154" width="15" height="15"/>
+                                                <rect key="frame" x="43" y="132" width="15" height="15"/>
                                                 <color key="backgroundColor" red="0.26274509800000001" green="0.58431372550000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="152" y="94" width="15" height="15"/>
@@ -1146,7 +1146,7 @@
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0F-51-EBH">
-                                                <rect key="frame" x="41" y="132" width="15" height="15"/>
+                                                <rect key="frame" x="41" y="152" width="15" height="15"/>
                                                 <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="154" y="69" width="15" height="15"/>
@@ -1163,7 +1163,7 @@
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkx-8t-vwi">
-                                                <rect key="frame" x="41" y="152" width="15" height="15"/>
+                                                <rect key="frame" x="41" y="132" width="15" height="15"/>
                                                 <color key="backgroundColor" red="0.26274509800000001" green="0.58431372550000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="154" y="93" width="15" height="15"/>
@@ -1239,14 +1239,14 @@
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCD-Vk-0EB">
-                                                <rect key="frame" x="46" y="133" width="15" height="15"/>
+                                                <rect key="frame" x="46" y="152" width="15" height="15"/>
                                                 <color key="backgroundColor" red="1" green="0.84705882352941175" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="154" y="71" width="15" height="15"/>
                                                 </variation>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvF-bc-GDh">
-                                                <rect key="frame" x="46" y="154" width="15" height="15"/>
+                                                <rect key="frame" x="46" y="132" width="15" height="15"/>
                                                 <color key="backgroundColor" red="0.2627450980392157" green="0.58431372549019611" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="154" y="94" width="15" height="15"/>

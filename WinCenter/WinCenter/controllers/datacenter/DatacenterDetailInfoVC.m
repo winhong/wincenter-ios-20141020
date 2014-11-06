@@ -83,10 +83,24 @@
                         self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
                     }];
                 }
-                [self refreshMainInfo3];
-                
-                [self.scrollView headerEndRefreshing];
-            }];
+                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                    for(HostVO *hostVO in ((HostListResult*)object).hosts){
+                        if (!(hostVO.resourcePoolId)) {
+                            self.datacenterStatWinserver.totalCpu += hostVO.cpuSpeed;
+                            self.datacenterStatWinserver.totalMemory += hostVO.memory;
+                            self.datacenterStatWinserver.totalStorage += hostVO.storage;
+                            self.datacenterStatWinserver.availCpu += hostVO.availCpu;
+                            self.datacenterStatWinserver.availMemory += hostVO.availMemory;
+                            self.datacenterStatWinserver.availStorage += hostVO.availStorage;
+                        }
+                    }
+                    [self refreshMainInfo3];
+                    
+                    [self.scrollView headerEndRefreshing];
+
+                    
+                }];
+                            }];
         }];
     }];
 }
@@ -96,7 +110,7 @@
 }
 - (void)refreshMainInfo{
     self.poolCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.resPoolNumber];
-    self.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    self.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer-self.datacenterStatWinserver.dissociateHostNumber];
     self.vmCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
     self.dissociateHostNumber.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
 }

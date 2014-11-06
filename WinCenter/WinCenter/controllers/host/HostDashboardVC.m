@@ -128,15 +128,15 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     HostDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HostDashboardHeader" forIndexPath:indexPath];
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
-    header.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
-    header.inPoolHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
+    header.inPoolHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer - self.datacenterStatWinserver.dissociateHostNumber];
     header.dissociateHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
     header.statusOthers.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
     header.statusOk.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.OK];
     header.statusDis.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.DISCONNECT];
     
     //缩起
-    header.hostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber];
+    header.hostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer - self.datacenterStatWinserver.dissociateHostNumber];
     header.inPoolHostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
     header.dissociateHostCount2.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];
     header.statusOthers2.text = [NSString stringWithFormat:@"%d",self.hostStatWinserver.other];
@@ -152,7 +152,7 @@
     if(self.datacenterStatWinserver==nil){
         circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
     }else{
-        circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.datacenterStatWinserver.hostNubmer*100/(self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber)] andClockwise:YES andShadow:YES];
+        circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.hostNubmer - self.datacenterStatWinserver.dissociateHostNumber)*100/self.datacenterStatWinserver.hostNubmer] andClockwise:YES andShadow:YES];
     }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
