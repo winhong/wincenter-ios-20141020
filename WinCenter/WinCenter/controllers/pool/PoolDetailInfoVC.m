@@ -145,7 +145,6 @@
     self.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO usedStorage_value],[self.poolVO usedStorage_unit]];
     self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO availStorage_value],[self.poolVO availStorage_unit]];
     self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.poolVO.totalStorage-self.poolVO.availStorage)/self.poolVO.totalStorage*100];
-    NSLog(@"11111111:%@",self.haInfoVO.haEnabled);
     if ([self.haInfoVO.haEnabled isEqualToString:@"true"]) {
         self.haInfo.hidden = NO;
         self.haErrorHostCount.text = [NSString stringWithFormat:@"%d",self.maxHostFailures.maxHostFailures];
@@ -199,7 +198,6 @@
     
 }
 - (void)refreshElasticInfo{
-    NSLog(@"asdfsadf:%@",self.elasticInfo.balancingMode);
     if (!(self.elasticInfo.balancingMode)) {
         self.elastic_Info.hidden = YES;
         self.elasticDisable.hidden = NO;
