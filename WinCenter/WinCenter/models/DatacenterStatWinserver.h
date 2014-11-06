@@ -25,7 +25,6 @@
 @property float availMemory;
 @property float availStorage;
 
-
 -(float)cpuRatio;
 
 -(UIColor *)cpuRatioColor;
@@ -40,5 +39,29 @@
 
 - (float)totalCpu_value;
 - (NSString*)totalCpu_unit;
+
+- (float)availCpu_value;
+- (NSString*)availCpu_unit;
+
+- (float)totalMemory_value;
+- (NSString*)totalMemory_unit;
+
+- (float)availMemory_value;
+- (NSString*)availMemory_unit;
+
+- (float)totalStorage_value;
+- (NSString*)totalStorage_unit;
+
+- (float)availStorage_value;
+- (NSString*)availStorage_unit;
+
+- (float)usedCpu_value;
+- (NSString*)usedCpu_unit;
+
+- (float)usedMemory_value;
+- (NSString*)usedMemory_unit;
+
+- (float)usedStorage_value;
+- (NSString*)usedStorage_unit;
 
 @end

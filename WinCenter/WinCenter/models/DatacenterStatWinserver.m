@@ -77,12 +77,149 @@
     }
     
 }
-
 - (NSString*)totalCpu_unit{
     if(self.totalCpu > 1024.0 ){
         return @"GHz";
     }else{
         return @"MHz";
+    }
+    
+}
+
+- (float)availCpu_value{
+    if(self.availCpu > 1024.0 ){
+        return (self.availCpu/1024.0);
+    }else{
+        return self.availCpu;
+    }
+    
+}
+- (NSString*)availCpu_unit{
+    if(self.availCpu > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
+- (float)totalMemory_value{
+    if(self.totalMemory > 1024.0 ){
+        return (self.totalMemory/1024.0);
+    }else{
+        return self.totalMemory;
+    }
+    
+}
+- (NSString*)totalMemory_unit{
+    if(self.totalMemory > 1024.0 ){
+        return @"GB";
+    }else{
+        return @"MB";
+    }
+    
+}
+
+- (float)availMemory_value{
+    if(self.availMemory > 1024.0 ){
+        return (self.availMemory/1024.0);
+    }else{
+        return self.availMemory;
+    }
+    
+}
+- (NSString*)availMemory_unit{
+    if(self.availMemory > 1024.0 ){
+        return @"GB";
+    }else{
+        return @"MB";
+    }
+    
+}
+
+
+- (float)availStorage_value{
+    if(self.availStorage > 1024.0 ){
+        return (self.availStorage/1024.0);
+    }else{
+        return self.availStorage;
+    }
+    
+}
+- (NSString*)availStorage_unit{
+    if(self.availStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+- (float)totalStorage_value{
+    if(self.totalStorage > 1024.0 ){
+        return (self.totalStorage/1024.0);
+    }else{
+        return self.totalStorage;
+    }
+    
+}
+- (NSString*)totalStorage_unit{
+    if(self.totalStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+- (float)usedCpu_value{
+    if((self.totalCpu - self.availCpu) > 1024.0 ){
+        return ((self.totalCpu - self.availCpu)/1024.0);
+    }else{
+        return (self.totalCpu - self.availCpu);
+    }
+    
+}
+- (NSString*)usedCpu_unit{
+    if((self.totalCpu - self.availCpu) > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
+- (float)usedMemory_value{
+    if((self.totalMemory - self.availMemory) > 1024.0 ){
+        return ((self.totalMemory - self.availMemory)/1024.0);
+    }else{
+        return (self.totalMemory - self.availMemory);
+    }
+    
+}
+- (NSString*)usedMemory_unit{
+    if((self.totalMemory - self.availMemory) > 1024.0 ){
+        return @"GB";
+    }else{
+        return @"MB";
+    }
+    
+}
+
+
+- (float)usedStorage_value{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return ((self.totalStorage -self.availStorage)/1024.0);
+    }else{
+        return (self.totalStorage -self.availStorage);
+    }
+    
+}
+- (NSString*)usedStorage_unit{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
     }
     
 }
