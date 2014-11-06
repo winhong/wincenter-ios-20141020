@@ -14,9 +14,11 @@
 @property NSString *vlanId;
 @property NSString *state;
 @property NSString *linkState;
+@property NSString *pniName;
 
 -(NSString*) state_text;
 -(NSString*) linkState_image;
 -(UIColor*) state_color;
+-(NSString*) vlanId_text;
 
 @end

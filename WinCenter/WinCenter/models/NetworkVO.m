@@ -34,6 +34,14 @@
     }
 }
 
+-(NSString*) vlanId_text{
+    if([self.vlanId rangeOfString:@"-" options:NSCaseInsensitiveSearch].length>0){
+        return @"";
+    }else{
+        return self.vlanId;
+    }
+}
+
 -(NSString*) linkState_image{
     if([self.linkState isEqualToString:@"CONNECTED"]){
         return @"链接";

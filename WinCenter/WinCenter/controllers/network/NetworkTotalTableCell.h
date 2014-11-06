@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIView *state_image;
 @property (weak, nonatomic) IBOutlet UILabel *ipUsed;
 @property (weak, nonatomic) IBOutlet UIImageView *linkState;
+@property (weak, nonatomic) IBOutlet UILabel *nic;
 
 @end
