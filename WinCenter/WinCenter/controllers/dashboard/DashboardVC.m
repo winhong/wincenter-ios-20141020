@@ -56,6 +56,30 @@
     [self.menuVC setSelectedItemIndex:0];
 }
 
+- (void)refreshWhenNil{
+    self.title = @"";
+    
+    for(UIViewController *subVC in self.tabBarVC.childViewControllers){
+        [subVC removeFromParentViewController];
+    }
+    
+    UINavigationController *nav;
+    
+    for(int i=0; i<7; i++){
+        [self.tabBarVC addChildViewController:[UIViewController new]];
+    }
+    
+    //刷新
+    nav = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
+    DatacenterTableVC *tableVC = [[nav childViewControllers] firstObject];
+    tableVC.delegate = self;
+    [self.tabBarVC addChildViewController:nav];
+    
+    //设置
+    nav = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
+    [self.tabBarVC addChildViewController:nav];
+}
+
 - (void)refresh{
     self.title = [RemoteObject getCurrentDatacenterVO].name;
     
