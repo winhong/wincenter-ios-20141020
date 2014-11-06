@@ -103,7 +103,8 @@
         NetworkVO *network = self.networkList[indexPath.row];
         IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
         cell.name.text = network.name;
-        cell.vlan.text = network.vlanId;
+        cell.vlan.text = [network vlanId_text];
+        cell.nic.text = network.pniName;
         cell.linkState.image = [UIImage imageNamed:[network linkState_image]];
         cell.state.text = [network state_text];
         cell.state.textColor = [network state_color];
