@@ -259,7 +259,6 @@
                                                     <state key="selected" image="navIcon-refresh-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="1e7-6y-0uJ"/>
-                                                        <outletCollection property="gestureRecognizers" destination="QGj-aO-NAz" appends="YES" id="yXE-B3-1bI"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -281,7 +280,6 @@
                                                     <state key="selected" image="navIcon-settings-white"/>
                                                     <connections>
                                                         <action selector="switchTabBar:" destination="teZ-Tc-JZU" eventType="touchUpInside" id="dTh-rv-NXF"/>
-                                                        <outletCollection property="gestureRecognizers" destination="LdB-ZM-KjX" appends="YES" id="yJA-pO-wLl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -342,21 +340,6 @@
                 <tapGestureRecognizer numberOfTapsRequired="2" id="lhm-br-WvG">
                     <connections>
                         <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="hPp-di-Awe"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="QGj-aO-NAz">
-                    <connections>
-                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="pee-aU-01e"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="LdB-ZM-KjX">
-                    <connections>
-                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="VNW-mY-dIL"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="3YI-fP-b0w">
-                    <connections>
-                        <action selector="doubleClickItem:" destination="teZ-Tc-JZU" id="RYX-6E-MvZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
