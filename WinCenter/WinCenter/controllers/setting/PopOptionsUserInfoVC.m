@@ -33,6 +33,9 @@
 
 -(void)refresh{
     self.name.text = self.userVO.name;
+    if (self.name.text.length > 31) {
+        self.name.font = [UIFont systemFontOfSize:16.0f];
+    }
     self.account.text = self.userVO.account;
     self.roleName.text = self.userVO.roleName;
     self.email.text = self.userVO.email;

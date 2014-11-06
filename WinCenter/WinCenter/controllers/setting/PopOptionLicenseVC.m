@@ -40,7 +40,13 @@
     self.phone.text = self.licenseVO.wci.phone;
     self.IcType.text = [self.licenseVO.wci IcType_text];
     self.useedInfo.text = [NSString stringWithFormat:@"%d/%d", self.licenseVO.useedCount,self.licenseVO.wci.IcNum];
-    self.remianDays.text = [NSString stringWithFormat:@"%d", self.licenseVO.remianDays];
+    if (self.IcType == 0) {
+        self.remianDays.text = [NSString stringWithFormat:@"%d", self.licenseVO.remianDays];
+    }
+    else{
+        self.remianDays.text = @"永久";
+    }
+    
 }
 
 

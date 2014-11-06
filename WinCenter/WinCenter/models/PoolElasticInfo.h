@@ -17,4 +17,5 @@
 @property NSString *nextStartTime;
 
 - (NSString*)intervalTime_text;
+- (NSString*)balancingModeStr;
 @end

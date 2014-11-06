@@ -46,7 +46,12 @@
 
 
 -(float)usedRatio{
-    return (self.totalStorage - self.availStorage)/self.totalStorage*100;
+    if (self.totalStorage == 0) {
+        return 0;
+    }else{
+        return (self.totalStorage - self.availStorage)/self.totalStorage*100;
+    }
+    
 }
 
 -(UIColor *)usedRatioColor{
@@ -61,7 +66,12 @@
 }
 
 -(float)allocatedRatio{
-    return self.allocatedStorage/self.totalStorage*100;
+    if (self.totalStorage == 0) {
+        return 0;
+    }else{
+        return self.allocatedStorage/self.totalStorage*100;
+    }
+    
 }
 
 -(UIColor *)allocatedRatioColor{

@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *isShared_img;
 @property (weak, nonatomic) IBOutlet UIImageView *noShared_img;
 @property (weak, nonatomic) IBOutlet UILabel *isshared;
+@property (weak, nonatomic) IBOutlet UILabel *path;
 
 @end
 
@@ -101,6 +102,7 @@
     self.usedStorageLabel.text = [NSString stringWithFormat:@"%.2fGB", (self.storageVO.totalStorage-self.storageVO.availStorage)];
     self.allocatedStorageLabel.text = [NSString stringWithFormat:@"%.2fGB", self.storageVO.allocatedStorage];
     self.type.text = self.storageVO.type;
+    self.path.text = self.storageVO.location;
     
     self.usedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO usedRatio]];
     self.allocatedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO allocatedRatio]];

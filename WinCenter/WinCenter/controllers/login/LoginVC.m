@@ -108,6 +108,17 @@
     
     self.viewShaker = [[AFViewShaker alloc] initWithViewsArray:@[self.ipAddress, self.userName, self.password]];
     
+    self.ipAddress.delegate = self;
+    self.userName.delegate = self;
+//    [self.userName addTarget:self action:@selector(nextOnKeyboardUserName:) forControlEvents:UIControlEventEditingDidEndOnExit];
+//    [self.userName addTarget:self action:@selector(nextOnKeyboardUserName:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+}
+-(void)nextOnKeyboardUserName{
+    [self.userName becomeFirstResponder];
+}
+-(void)nextOnKeyboardPassword{
+    [self.password becomeFirstResponder];
 }
 - (IBAction)exitInput:(id)sender {
     [self.ipAddress resignFirstResponder];
@@ -119,6 +130,14 @@
     [textField resignFirstResponder];
     return YES;
 }
+-(IBAction)nextOnKeyboard:(UITextField *)sender{
+    if (sender == self.userName) {
+        [self.password becomeFirstResponder];
+    }else if (sender == self.ipAddress){
+        [self.userName becomeFirstResponder];
+    }
+    
+}
 - (IBAction)enjoyAction:(id)sender {
     [self.ipAddress resignFirstResponder];
     [self.userName resignFirstResponder];
@@ -129,12 +148,16 @@
     [self toLogin];
 }
 
+
 - (IBAction)loginAction:(id)sender {
     [self.ipAddress resignFirstResponder];
     [self.userName resignFirstResponder];
     [self.password resignFirstResponder];
     
     NSString *msg = @"";
+    self.ipAddress.text = [self.ipAddress.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    self.userName.text = [self.userName.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    self.password.text = [self.password.text stringByReplacingOccurrencesOfString:@" " withString:@""];
     if ([self.ipAddress.text isEqualToString:@""]) {
         msg = @"服务器地址不能为空！";
     }else if ([self.userName.text isEqualToString:@""]) {
@@ -143,8 +166,10 @@
         msg = @"密码不能为空！";
     }
     
+    
+    
     if ([msg isEqualToString:@""]) {
-        [[NSUserDefaults standardUserDefaults] setValue:self.ipAddress.text forKey:@"SERVER_ROOT"];        
+        [[NSUserDefaults standardUserDefaults] setValue:self.ipAddress.text forKey:@"SERVER_ROOT"];
         [[NSUserDefaults standardUserDefaults] setValue:@"false" forKey:@"isDemo"];
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
