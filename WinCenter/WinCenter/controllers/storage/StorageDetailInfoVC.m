@@ -103,7 +103,7 @@
     self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO usedStorage_value],[self.storageVO totalStorage_unit]];
     self.usedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO usedStorage_value],[self.storageVO usedStorage_unit]];
     self.allocatedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO allocatedStorage_value],[self.storageVO allocatedStorage_unit]];
-    self.type.text = self.storageVO.type;
+    self.type.text = [self.storageVO.type uppercaseString];
     self.path.text = self.storageVO.location;
     
     self.usedRatio.text = [NSString stringWithFormat:@"%.0f %%", [self.storageVO usedRatio]];
