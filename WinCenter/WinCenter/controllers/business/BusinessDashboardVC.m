@@ -15,7 +15,7 @@
 
 @property NSArray *allBusList;
 @property NSArray *unalloctedBusList;
-@property NSArray *allBusDomainsList;
+@property int allBusDomainsList;
 
 @end
 
@@ -27,7 +27,7 @@
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
         
-        self.allBusDomainsList = ((BusDomainsListResult*)object).busDomains;
+        self.allBusDomainsList = ((BusDomainsListResult*)object).recordTotal;
     
         [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
             self.allBusList = ((BusinessListResult*)object).resultList;
@@ -82,13 +82,13 @@
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-    header.busDomainsCount.text = [NSString stringWithFormat:@"%ld",self.allBusDomainsList.count];
+    header.busDomainsCount.text = [NSString stringWithFormat:@"%d",self.allBusDomainsList];
     header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
     //缩起
     header.businessCount2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
-//    header.busDomainsCount2.text =[NSString stringWithFormat:@"%ld",allBusDomainsList.count];
+//    header.busDomainsCount2.text =[NSString stringWithFormat:@"%d",allBusDomainsList];
     header.alloctedBus2.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];
     header.unalloctedBus2.text =[NSString stringWithFormat:@"%ld",self.unalloctedBusList.count];
     
