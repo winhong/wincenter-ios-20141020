@@ -103,27 +103,27 @@
 
 - (void)refreshMainInfo3{
     self.name.title = [RemoteObject getCurrentDatacenterVO].name;
-    self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
-    self.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.totalCpu/1000.0];
-    self.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1000.0];
-    self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.availCpu/1000.0];
-    self.cpuUsedInfo.text = [NSString stringWithFormat:@"已用%.2fGHz  还剩%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1000.0,self.datacenterStatWinserver.availCpu/1000.0];
+    self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@",self.datacenterStatWinserver.totalCpu_value,self.datacenterStatWinserver.totalCpu_unit];
+    self.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f%@",self.datacenterStatWinserver.totalCpu_value,self.datacenterStatWinserver.totalCpu_unit];
+    self.cpuUsedCount.text = [NSString stringWithFormat:@"%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1024.0];
+    self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz",self.datacenterStatWinserver.availCpu/1024.0];
+    self.cpuUsedInfo.text = [NSString stringWithFormat:@"已用%.2fGHz  还剩%.2fGHz",(self.datacenterStatWinserver.totalCpu-self.datacenterStatWinserver.availCpu)/1024.0,self.datacenterStatWinserver.availCpu/1024.0];
     self.cpuProgress.progress = self.datacenterStatWinserver.cpuRatio/100.0;
     self.cpuProgress.tintColor = [self.datacenterStatWinserver cpuRatioColor];
     
-    self.memerySize.text = [NSString stringWithFormat:@"%.2fG",self.datacenterStatWinserver.totalMemory/1024.0];
-    self.memerySize2.text = [NSString stringWithFormat:@"%.2fG",self.datacenterStatWinserver.totalMemory/1024.0];
-    self.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fG",(self.datacenterStatWinserver.totalMemory-self.datacenterStatWinserver.availMemory)/1024.0];
-    self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fG",self.datacenterStatWinserver.availMemory/1024.0];
-    self.memeryUsedInfo.text = [NSString stringWithFormat:@"已用%.2fG  还剩%.2fG",(self.datacenterStatWinserver.totalMemory-self.datacenterStatWinserver.availMemory)/1024.0,self.datacenterStatWinserver.availMemory/1024.0];
+    self.memerySize.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.totalMemory/1024.0];
+    self.memerySize2.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.totalMemory/1024.0];
+    self.memeryUsedSize.text = [NSString stringWithFormat:@"%.2fGB",(self.datacenterStatWinserver.totalMemory-self.datacenterStatWinserver.availMemory)/1024.0];
+    self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB",self.datacenterStatWinserver.availMemory/1024.0];
+    self.memeryUsedInfo.text = [NSString stringWithFormat:@"已用%.2fGB  还剩%.2fGB",(self.datacenterStatWinserver.totalMemory-self.datacenterStatWinserver.availMemory)/1024.0,self.datacenterStatWinserver.availMemory/1024.0];
     self.memoryProgress.progress = self.datacenterStatWinserver.memoryRatio/100.0;
     self.memoryProgress.tintColor = [self.datacenterStatWinserver memoryRatioColor];
     
-    self.storageSize.text = [NSString stringWithFormat:@"%.2fT",self.datacenterStatWinserver.totalStorage/1024.0];
-    self.storageSize2.text = [NSString stringWithFormat:@"%.2fT",self.datacenterStatWinserver.totalStorage/1024.0];
-    self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fT",(self.datacenterStatWinserver.totalStorage-self.datacenterStatWinserver.availStorage)/1024.0];
-    self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fT",self.datacenterStatWinserver.availStorage/1024.0];
-    self.storageUsedInfo.text = [NSString stringWithFormat:@"已用%.2fT  还剩%.2fT",(self.datacenterStatWinserver.totalStorage-self.datacenterStatWinserver.availStorage)/1024.0,self.datacenterStatWinserver.availStorage/1024.0];
+    self.storageSize.text = [NSString stringWithFormat:@"%.2fTB",self.datacenterStatWinserver.totalStorage/1024.0];
+    self.storageSize2.text = [NSString stringWithFormat:@"%.2fTB",self.datacenterStatWinserver.totalStorage/1024.0];
+    self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB",(self.datacenterStatWinserver.totalStorage-self.datacenterStatWinserver.availStorage)/1024.0];
+    self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fTB",self.datacenterStatWinserver.availStorage/1024.0];
+    self.storageUsedInfo.text = [NSString stringWithFormat:@"已用%.2fTB  还剩%.2fTB",(self.datacenterStatWinserver.totalStorage-self.datacenterStatWinserver.availStorage)/1024.0,self.datacenterStatWinserver.availStorage/1024.0];
     self.storageProgress.progress = self.datacenterStatWinserver.storageRatio/100.0;
     self.storageProgress.tintColor = [self.datacenterStatWinserver storageRatioColor];
     
