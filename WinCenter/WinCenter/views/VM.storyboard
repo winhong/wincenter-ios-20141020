@@ -120,7 +120,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mGd-IN-2B0"/>
-                                    <barButtonItem tag="4" title="虚拟硬盘" id="MXb-aC-q15">
+                                    <barButtonItem tag="4" title="虚拟磁盘" id="MXb-aC-q15">
                                         <connections>
                                             <action selector="showPageBarItemClick:" destination="rda-j3-bYj" id="ut4-oa-lu9"/>
                                         </connections>

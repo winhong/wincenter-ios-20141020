@@ -66,8 +66,32 @@
     int Minute = (time - 3600*24.0*Day - 3600.0*Hour)/60.0;
     self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
     
-    
     self.title = self.vmVO.name;
+    
+    if ([self.vmVO.state isEqualToString:@"OK"]) {
+        self.btnStart.enabled = false;
+        self.btnStop.enabled = true;
+        self.btnRestart.enabled = true;
+        self.btnMigrate.enabled = true;
+    }else if([self.vmVO.state isEqualToString:@"STOPPED"]){
+        self.btnStart.enabled = true;
+        self.btnStop.enabled = false;
+        self.btnRestart.enabled = false;
+        self.btnMigrate.enabled = true;
+    }else{
+        self.btnStart.enabled = false;
+        self.btnStop.enabled = false;
+        self.btnRestart.enabled = false;
+        self.btnMigrate.enabled = false;
+    }
+    
+    [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
+        for (StorageVolumnVO *volumn in  ((VmDiskListResult*)object).volumes) {
+            if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
+                self.btnMigrate.enabled = false;
+            }
+        }
+    }];
 }
 -(void)refresh{
     [self refreshMainInfo];
@@ -106,26 +130,6 @@
     self.pages = pages;
     
     [super refresh];
-    
-    if ([self.vmVO.state isEqualToString:@"OK"]) {
-        self.btnStart.enabled = false;
-        self.btnStop.enabled = true;
-        self.btnRestart.enabled = true;
-        self.btnMigrate.enabled = true;
-    }else if([self.vmVO.state isEqualToString:@"STOPPED"]){
-        self.btnStart.enabled = true;
-        self.btnStop.enabled = false;
-        self.btnRestart.enabled = false;
-        self.btnMigrate.enabled = true;
-    }
-    
-    [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
-        for (StorageVolumnVO *volumn in  ((VmDiskListResult*)object).volumes) {
-            if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
-                self.btnMigrate.enabled = false;
-            }
-        }
-    }];
     
 }
 - (IBAction)operateAction:(id)sender {
