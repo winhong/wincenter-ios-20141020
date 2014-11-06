@@ -105,9 +105,16 @@
                 self.maxHostFailures = object;
                 [self.poolVO getHaInfoAsync:^(id object, NSError *error) {
                     self.haInfoVO = object;
-                    [self refreshMainInfo];
-                    [self refreshElasticInfo];
-                    [self.scrollView headerEndRefreshing];
+                    [self.poolVO getStoragePoolAsync:^(id object, NSError *error) {
+                        for (PoolStorageVO *poolStorage in object) {
+                            if ([poolStorage.originalId isEqualToString:self.haInfoVO.haStorageOriginalId]) {
+                                self.poolStorageVO = poolStorage;
+                            }
+                        }
+                        [self refreshMainInfo];
+                        [self refreshElasticInfo];
+                        [self.scrollView headerEndRefreshing];
+                    }];
                 }];
             }];
         }];
@@ -138,11 +145,11 @@
     self.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO usedStorage_value],[self.poolVO usedStorage_unit]];
     self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO availStorage_value],[self.poolVO availStorage_unit]];
     self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.poolVO.totalStorage-self.poolVO.availStorage)/self.poolVO.totalStorage*100];
-    
+    NSLog(@"11111111:%@",self.haInfoVO.haEnabled);
     if ([self.haInfoVO.haEnabled isEqualToString:@"true"]) {
         self.haInfo.hidden = NO;
         self.haErrorHostCount.text = [NSString stringWithFormat:@"%d",self.maxHostFailures.maxHostFailures];
-        self.haSignalPool.text = self.haInfoVO.haStorageOriginalId == nil ? @"无" :self.haInfoVO.haStorageOriginalId;
+        self.haSignalPool.text = self.haInfoVO.haStorageOriginalId == nil ? @"无" :self.poolStorageVO.storagePoolName;
     }else{
         self.haDisable.hidden = NO;
         self.haInfo.hidden = YES;
@@ -192,6 +199,7 @@
     
 }
 - (void)refreshElasticInfo{
+    NSLog(@"asdfsadf:%@",self.elasticInfo.balancingMode);
     if (!(self.elasticInfo.balancingMode)) {
         self.elastic_Info.hidden = YES;
         self.elasticDisable.hidden = NO;
