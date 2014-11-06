@@ -71,6 +71,7 @@
  
     PoolDashboardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PoolDashboardCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
     
     PoolVO *poolVO = (PoolVO *) self.dataList[indexPath.row];
     cell.title.text = poolVO.resourcePoolName;

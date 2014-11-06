@@ -67,6 +67,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     StorageDiskCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StorageDiskCollectionCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     StorageVolumnVO *volumnVO = self.dataList[indexPath.row];
     cell.name.text = volumnVO.name;
     cell.state.text = [volumnVO state_text];

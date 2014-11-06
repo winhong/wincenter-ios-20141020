@@ -55,7 +55,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"SERVER_ROOT"] == nil){
-        [[NSUserDefaults standardUserDefaults] setValue:@"https://192.168.100.98:8090" forKey:@"SERVER_ROOT"];
+        [[NSUserDefaults standardUserDefaults] setValue:@"https://192.168.214.100:8090" forKey:@"SERVER_ROOT"];
     }
     
 //    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

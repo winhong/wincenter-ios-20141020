@@ -38,4 +38,7 @@
 
 -(UIColor *)storageRatioColor;
 
+- (float)totalCpu_value;
+- (NSString*)totalCpu_unit;
+
 @end

@@ -68,4 +68,23 @@
         return PNGreen;
     }
 }
+
+- (float)totalCpu_value{
+    if(self.totalCpu > 1024.0 ){
+        return (self.totalCpu/1024.0);
+    }else{
+        return self.totalCpu;
+    }
+    
+}
+
+- (NSString*)totalCpu_unit{
+    if(self.totalCpu > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
 @end

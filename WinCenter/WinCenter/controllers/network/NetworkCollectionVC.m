@@ -106,6 +106,8 @@
 {
     NetworkCollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NetworkCollectionCell" forIndexPath:indexPath];
     
+    if(self.ipList.count==0) return cell;
+    
     // Configure the cell...
     cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
     

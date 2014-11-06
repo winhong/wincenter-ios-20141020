@@ -82,6 +82,8 @@
         cell = [[PoolDatagridCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
     
+    if(data.count==0) return cell;
+    
     cell.model = data[indexPath.row];
     
     return cell;

@@ -93,6 +93,8 @@
 {
     PopControlRecordCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ControlRecordCell" forIndexPath:indexPath];
     
+    if(self.dataList.count==0) return cell;
+    
     ControlRecordVO *controlRecordVO = self.dataList[indexPath.row];
     //时间格式化
     NSDate *date = [[NSDate alloc]initWithTimeIntervalSince1970:controlRecordVO.executeTime/1000];

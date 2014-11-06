@@ -70,6 +70,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     VmMigrateSelectHostListCell *selectedCell = (VmMigrateSelectHostListCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
     self.prevCell.accessoryType = UITableViewCellAccessoryNone;
     selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
     
@@ -83,6 +84,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VmMigrateSelectHostListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VmMigrateSelectHostListCell" forIndexPath:indexPath];
+    
+    if(self.hosts.count==0) return cell;
     
     cell.textLabel.text = self.hosts[indexPath.row];
     
