@@ -30,6 +30,8 @@
 
 -(NSString*)versionDate_text;
 
+-(NSString*)hypervisor_text;
+
 -(float)cpuRatio;
 
 -(UIColor *)cpuRatioColor;
