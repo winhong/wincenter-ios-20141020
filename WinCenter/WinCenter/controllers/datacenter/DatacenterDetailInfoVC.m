@@ -8,6 +8,7 @@
 
 #import "DatacenterDetailInfoVC.h"
 #import "MasterContainerVC.h"
+#import "DashboardVC.h"
 
 @interface DatacenterDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -230,5 +231,34 @@
     UIBarButtonItem *button = (UIBarButtonItem*)sender;
     [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
-
+- (IBAction)gotoVmDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:3];
+    [vc.menuVC setSelectedItemIndex:3];
+}
+- (IBAction)gotoBusinessDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:5];
+    [vc.menuVC setSelectedItemIndex:5];
+}
+- (IBAction)gotoHostDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:2];
+    [vc.menuVC setSelectedItemIndex:2];
+}
+- (IBAction)gotoPoolDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:1];
+    [vc.menuVC setSelectedItemIndex:1];
+}
+- (IBAction)gotoOtherHostDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:2];
+    [vc.menuVC setSelectedItemIndex:2];
+}
+- (IBAction)gotoStorageDashboard:(id)sender {
+    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+    [vc.tabBarVC setSelectedIndex:4];
+    [vc.menuVC setSelectedItemIndex:4];
+}
 @end
