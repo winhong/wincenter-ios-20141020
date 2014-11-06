@@ -134,9 +134,10 @@
 - (void)refreshStatInfo{
     if([self.hostVO.state isEqualToString:@"OK"])
     {
-        self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuTotal/1000.0];
-        self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", self.statVO.cpuUsed/1000.0];
-        self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz", (self.statVO.cpuTotal-self.statVO.cpuUsed)/1000.0];
+        self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO totalCpu_value],[self.statVO totalCpu_unit]];
+        self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO usedCpu_value],[self.statVO usedCpu_unit]];
+
+        self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO availCpu_value],[self.statVO availCpu_unit]];
         self.cpuRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.cpuUsedPer*100];
         
         self.memorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
@@ -146,9 +147,9 @@
         self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
         self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
         
-        self.storageSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.totalStorage/1024.0];
-        self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fTB", self.statVO.usedStorage/1024.0];
-        self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fTB", (self.statVO.totalStorage-self.statVO.usedStorage)/1024.0];
+        self.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO totalStorage_value],[self.statVO totalStorage_unit]];
+        self.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO usedStorage_value],[self.statVO usedStorage_unit]];
+        self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO availStorage_value],[self.statVO availStorage_unit]];
         self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", self.statVO.usedStorage/self.statVO.totalStorage*100];
         
         //圈图

@@ -90,12 +90,12 @@
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
     header.name.title = [RemoteObject getCurrentDatacenterVO].name;
-    header.shareStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
-    header.localStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
-    header.storageSize2.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.storageSize4.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
-    header.usedStorageSize.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    header.shareStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total shareStorage_value],[self.StorageSubVOWinserver.total shareStorage_unit]];
+    header.localStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total localStorage_value],[self.StorageSubVOWinserver.total localStorage_unit]];
+    header.storageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total totalStorage_value],[self.StorageSubVOWinserver.total totalStorage_unit]];
+    header.storageSize4.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total totalStorage_value],[self.StorageSubVOWinserver.total totalStorage_unit]];
+    header.unUsedStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.capacity availStorage_value],[self.StorageSubVOWinserver.capacity availStorage_unit]];
+    header.usedStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.capacity usedStorage_value],[self.StorageSubVOWinserver.capacity usedStorage_unit]];
     
     header.fcSanStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmohba];
     header.iscsiStorageSize.text = [NSString stringWithFormat:@"%d",self.StorageSubVOWinserver.type.lvmoiscsi];
@@ -108,11 +108,11 @@
     header.nfsStorageSize2.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.nfs];
     header.localStorageSize3.text = [NSString stringWithFormat:@"%d个",self.StorageSubVOWinserver.type.lvm];
     
-    header.storageSize3.text = [NSString stringWithFormat:@"%.2fG",(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)];
-    header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.true_field];
-    header.localStorageSize4.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.total.false_field];
-    header.unUsedStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.availStorage];
-    header.usedStorageSize2.text = [NSString stringWithFormat:@"%.2fG",self.StorageSubVOWinserver.capacity.usedStorage];
+    header.storageSize3.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total totalStorage_value],[self.StorageSubVOWinserver.total totalStorage_unit]];
+    header.shareStorageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total shareStorage_value],[self.StorageSubVOWinserver.total shareStorage_unit]];
+    header.localStorageSize4.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total localStorage_value],[self.StorageSubVOWinserver.total localStorage_unit]];
+    header.unUsedStorageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.capacity availStorage_value],[self.StorageSubVOWinserver.capacity availStorage_unit]];
+    header.usedStorageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.capacity usedStorage_value],[self.StorageSubVOWinserver.capacity usedStorage_unit]];
     
     //圈图
     for(UIView *subView in header.storageShareChart.subviews){

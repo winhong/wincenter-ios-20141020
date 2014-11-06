@@ -97,6 +97,73 @@
     
 }
 
+- (float)availCpu_value{
+    if(self.availCpu > 1024.0 ){
+        return (self.availCpu/1024.0);
+    }else{
+        return self.availCpu;
+    }
+    
+}
+- (NSString*)availCpu_unit{
+    if(self.availCpu > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
+- (float)availStorage_value{
+    if(self.availStorage > 1024.0 ){
+        return (self.availStorage/1024.0);
+    }else{
+        return self.availStorage;
+    }
+    
+}
+- (NSString*)availStorage_unit{
+    if(self.availStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+- (float)usedCpu_value{
+    if((self.totalCpu - self.availCpu) > 1024.0 ){
+        return ((self.totalCpu - self.availCpu)/1024.0);
+    }else{
+        return (self.totalCpu - self.availCpu);
+    }
+    
+}
+- (NSString*)usedCpu_unit{
+    if((self.totalCpu - self.availCpu) > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
+- (float)usedStorage_value{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return ((self.totalStorage -self.availStorage)/1024.0);
+    }else{
+        return (self.totalStorage -self.availStorage);
+    }
+    
+}
+- (NSString*)usedStorage_unit{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
 
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){

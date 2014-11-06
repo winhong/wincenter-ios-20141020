@@ -48,6 +48,18 @@
 - (float)totalStorage_value;
 - (NSString*)totalStorage_unit;
 
+- (float)availCpu_value;
+- (NSString*)availCpu_unit;
+
+- (float)availStorage_value;
+- (NSString*)availStorage_unit;
+
+- (float)usedCpu_value;
+- (NSString*)usedCpu_unit;
+
+- (float)usedStorage_value;
+- (NSString*)usedStorage_unit;
+
 
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolVOAsync:(FetchObjectCompletionBlock)completeBlock;

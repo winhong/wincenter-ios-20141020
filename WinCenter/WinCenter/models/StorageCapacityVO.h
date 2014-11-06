@@ -13,4 +13,9 @@
 @property float usedStorage;
 @property float availStorage;
 
+- (float)usedStorage_value;
+- (NSString*)usedStorage_unit;
+- (float)availStorage_value;
+- (NSString*)availStorage_unit;
+
 @end

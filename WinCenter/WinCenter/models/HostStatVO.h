@@ -35,4 +35,21 @@
 
 -(UIColor *)storageRatioColor;
 
+- (float)totalCpu_value;
+- (NSString*)totalCpu_unit;
+
+- (float)availCpu_value;
+- (NSString*)availCpu_unit;
+
+- (float)totalStorage_value;
+- (NSString*)totalStorage_unit;
+
+- (float)availStorage_value;
+- (NSString*)availStorage_unit;
+
+- (float)usedCpu_value;
+- (NSString*)usedCpu_unit;
+
+- (float)usedStorage_value;
+- (NSString*)usedStorage_unit;
 @end

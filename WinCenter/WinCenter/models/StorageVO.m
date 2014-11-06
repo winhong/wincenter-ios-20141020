@@ -119,6 +119,40 @@
     
 }
 
+- (float)allocatedStorage_value{
+    if(self.allocatedStorage > 1024.0 ){
+        return (self.allocatedStorage/1024.0);
+    }else{
+        return self.allocatedStorage;
+    }
+    
+}
+- (NSString*)allocatedStorage_unit{
+    if(self.allocatedStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+- (float)usedStorage_value{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return ((self.totalStorage -self.availStorage)/1024.0);
+    }else{
+        return (self.totalStorage -self.availStorage);
+    }
+    
+}
+- (NSString*)usedStorage_unit{
+    if((self.totalStorage -self.availStorage) > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
 - (void) getStorageVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[StorageVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageVO.getStorageVOAsync" ofType:@"json"]]], nil);

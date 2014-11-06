@@ -124,9 +124,9 @@
     self.vDate.text = [self.poolVO versionDate_text];
     
 
-    self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2fGHz", self.poolVO.totalCpu/1000.0];
-    self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2fGHz", (self.poolVO.totalCpu-self.poolVO.availCpu)/1000.0];
-    self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2fGHz", self.poolVO.availCpu/1000.0];
+    self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO totalCpu_value],[self.poolVO totalCpu_unit]];
+    self.cpuUnitUsedCount.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO usedCpu_value],[self.poolVO usedCpu_unit]];
+    self.cpuUnitUnusedCount.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO availCpu_value],[self.poolVO availCpu_unit]];
     self.cpuRatio.text = [NSString stringWithFormat:@"%.0f%%", [self.poolVO cpuRatio]];
     
     self.memorySize.text = [NSString stringWithFormat:@"%.2fGB", self.poolVO.totalMemory/1024.0];
@@ -134,9 +134,9 @@
     self.memoryUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.poolVO.availMemory/1024.0];
     self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.poolVO.totalMemory-self.poolVO.availMemory)/self.poolVO.totalMemory*100];
     
-    self.storageSize.text = [NSString stringWithFormat:@"%.2fGB", self.poolVO.totalStorage/1024.0];
-    self.storageUsedSize.text = [NSString stringWithFormat:@"%.2fGB", (self.poolVO.totalStorage - self.poolVO.availStorage)/1024.0];
-    self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2fGB", self.poolVO.availStorage/1024.0];
+    self.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO totalStorage_value],[self.poolVO totalStorage_unit]];
+    self.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO usedStorage_value],[self.poolVO usedStorage_unit]];
+    self.storageUnusedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.poolVO availStorage_value],[self.poolVO availStorage_unit]];
     self.storageRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.poolVO.totalStorage-self.poolVO.availStorage)/self.poolVO.totalStorage*100];
     
     if ([self.haInfoVO.haEnabled isEqualToString:@"true"]) {

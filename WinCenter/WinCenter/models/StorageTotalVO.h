@@ -13,4 +13,11 @@
 @property float true_field;
 @property float false_field;
 
+- (float)totalStorage_value;
+- (NSString*)totalStorage_unit;
+- (float)shareStorage_value;
+- (NSString*)shareStorage_unit;
+- (float)localStorage_value;
+- (NSString*)localStorage_unit;
+
 @end

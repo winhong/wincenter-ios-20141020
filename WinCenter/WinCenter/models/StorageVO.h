@@ -33,6 +33,10 @@
 - (NSString*)totalStorage_unit;
 - (float)availStorage_value;
 - (NSString*)availStorage_unit;
+- (float)usedStorage_value;
+- (NSString*)usedStorage_unit;
+- (float)allocatedStorage_value;
+- (NSString*)allocatedStorage_unit;
 
 -(NSString *)state_text;
 - (UIColor *)state_color;
