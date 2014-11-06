@@ -79,6 +79,7 @@
 -(void)didSelecteded:(VmMigrateTargetHostVO *)vo{
     self.targetHost.text = vo.targetName;
     self.targetHostId = vo.targetId;
+    self.navigationItem.rightBarButtonItem.enabled = true;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

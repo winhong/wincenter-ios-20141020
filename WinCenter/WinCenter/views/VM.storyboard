@@ -1025,7 +1025,7 @@
                                 <action selector="close:" destination="fkW-sS-bPx" id="zPS-nr-2NO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="np5-mJ-Hkh">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="提交" id="np5-mJ-Hkh">
                             <connections>
                                 <action selector="done:" destination="fkW-sS-bPx" id="4MK-qi-V3Y"/>
                             </connections>
