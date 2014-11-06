@@ -106,6 +106,23 @@
     return result;
 }
 
+- (float)storage_value{
+    if(self.storage > 1024.0 ){
+        return (self.storage/1024.0);
+    }else{
+        return self.storage;
+    }
+    
+}
+- (NSString*)storage_unit{
+    if(self.storage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[VmVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmVOAsync" ofType:@"json"]]], nil);

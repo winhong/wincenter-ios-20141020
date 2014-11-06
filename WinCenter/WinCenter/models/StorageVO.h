@@ -29,7 +29,10 @@
 @property NSString *defaulted;
 @property NSString *type;
 @property NSString *location;
-
+- (float)totalStorage_value;
+- (NSString*)totalStorage_unit;
+- (float)availStorage_value;
+- (NSString*)availStorage_unit;
 
 -(NSString *)state_text;
 - (UIColor *)state_color;

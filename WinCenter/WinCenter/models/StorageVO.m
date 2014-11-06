@@ -85,6 +85,40 @@
     }
 }
 
+- (float)availStorage_value{
+    if(self.availStorage > 1024.0 ){
+        return (self.availStorage/1024.0);
+    }else{
+        return self.availStorage;
+    }
+    
+}
+- (NSString*)availStorage_unit{
+    if(self.availStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+- (float)totalStorage_value{
+    if(self.totalStorage > 1024.0 ){
+        return (self.totalStorage/1024.0);
+    }else{
+        return self.totalStorage;
+    }
+    
+}
+- (NSString*)totalStorage_unit{
+    if(self.totalStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
 - (void) getStorageVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[StorageVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"StorageVO.getStorageVOAsync" ofType:@"json"]]], nil);

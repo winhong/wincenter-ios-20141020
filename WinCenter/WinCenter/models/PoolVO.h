@@ -42,6 +42,13 @@
 
 -(UIColor *)storageRatioColor;
 
+- (float)totalCpu_value;
+- (NSString*)totalCpu_unit;
+
+- (float)totalStorage_value;
+- (NSString*)totalStorage_unit;
+
+
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getPoolElasticAsync:(FetchObjectCompletionBlock)completeBlock;

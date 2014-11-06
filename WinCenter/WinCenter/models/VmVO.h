@@ -41,6 +41,8 @@
 - (NSString *)memoryType_text;
 - (BOOL) isDynamicCpu_img;
 - (BOOL) isDynamicMemWce_img;
+- (float)storage_value;
+- (NSString*)storage_unit;
 
 - (void) getVmVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getVmVolumnListAsync:(FetchObjectCompletionBlock)completionBlock;

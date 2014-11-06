@@ -62,6 +62,42 @@
         return PNGreen;
     }
 }
+
+- (float)totalCpu_value{
+    if(self.totalCpu > 1024.0 ){
+        return (self.totalCpu/1024.0);
+    }else{
+        return self.totalCpu;
+    }
+    
+}
+- (NSString*)totalCpu_unit{
+    if(self.totalCpu > 1024.0 ){
+        return @"GHz";
+    }else{
+        return @"MHz";
+    }
+    
+}
+
+- (float)totalStorage_value{
+    if(self.totalStorage > 1024.0 ){
+        return (self.totalStorage/1024.0);
+    }else{
+        return self.totalStorage;
+    }
+    
+}
+- (NSString*)totalStorage_unit{
+    if(self.totalStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
+
 - (void) getPoolVOSync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[PoolVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PoolVO.getPoolVOAsync" ofType:@"json"]]], nil);

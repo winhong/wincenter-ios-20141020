@@ -77,7 +77,7 @@
     }
     cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
-    cell.storageSize.text = [NSString stringWithFormat:@"%dGB", vmVO.storage];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [vmVO storage_value], [vmVO storage_unit]];
     cell.status.text = [vmVO state_text];
     cell.status.textColor = [vmVO state_color];
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
