@@ -36,8 +36,18 @@
     cell.label2.text = @"";
     cell.label3.text = @"";
     cell.label4.text = @"";
-    cell.label5.text = hostNetworkVO.vlanId;
-    cell.label6.text = hostNetworkVO.pniName;
+    if (hostNetworkVO.vlanId && ![hostNetworkVO.vlanId isEqualToString:@"-1"]) {
+        cell.label5.text = hostNetworkVO.vlanId;
+    }else{
+        cell.label5.text = @"无";
+    }
+    if (hostNetworkVO.pniName && ![hostNetworkVO.pniName isEqualToString:@""]) {
+        cell.label6.text = hostNetworkVO.pniName;
+    }else{
+        cell.label6.text = @"无";
+    }
+    
+    
     cell.status.text = [hostNetworkVO state_text];
     cell.status.textColor = [hostNetworkVO state_color];
     cell.linkState.image = [UIImage imageNamed:[hostNetworkVO linkState_image]];

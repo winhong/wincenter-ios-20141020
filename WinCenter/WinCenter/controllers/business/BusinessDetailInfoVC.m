@@ -70,7 +70,7 @@
     self.name.text = self.businessVO.name;
     self.vmCount.text = [NSString stringWithFormat:@"%d",self.businessVO.vmNum];
     self.managerId.text = self.businessVO.managerId;
-    self.platform.text = self.businessVO.sysSrc;
+    self.platform.text = [self.businessVO sysSrc_text];
     self.createTime.text = [self.businessVO.createTime stringByReplacingOccurrencesOfString:@" 000" withString:@""];
     self.createUser.text = self.businessVO.createUser;
     self.desc.text = self.businessVO.desc;

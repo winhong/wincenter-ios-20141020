@@ -28,6 +28,9 @@
     
     self.title = self.poolVO.resourcePoolName;
     self.name.text = self.poolVO.resourcePoolName;
+    if (self.name.text.length > 26) {
+        self.name.font = [UIFont systemFontOfSize:24.0f];
+    }
 }
 
 -(void)refresh{
