@@ -18,7 +18,7 @@
                                 @"STARTING":@"正在启动",
                                 @"STOPPED":@"已关机",
                                 @"STOPPING":@"关机中",
-                                @"DELETEING":@"删除中",
+                                @"DELETING":@"删除中",
                                 @"RESIZING":@"调整中",
                                 @"RESTARTING":@"重启中",
                                 @"CONVERTING":@"转换中",
