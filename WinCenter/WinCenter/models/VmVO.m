@@ -163,8 +163,33 @@
         completionBlock([[VmDiskListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
+/////////
+- (void) getVmIsoListAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmIsoListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmIsoListAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getVmIsos&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id, self.vmId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmIsoListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
 
-
+- (void) getVmIsoListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmIsoListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmIsoListAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.getVmIsos&placeholder=%d&params=firstResult%%3D%ld%%26maxResult%%3D%ld", [RemoteObject getCurrentDatacenterVO].id, self.vmId, referList.count, referList.count+per_page]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[VmIsoListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
+//////////
 - (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[VmNetworkListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getVmNicListAsync" ofType:@"json"]]], nil);

@@ -1,0 +1,56 @@
+{
+    "isos": [
+             {
+             "isoId": 71,
+             "isoName": "ws-tools.iso",
+             "isoSize": 61071360,
+             "description": "",
+             "path": "ws-tools-2.0.0.iso",
+             "status": "OK",
+             "repositoryId": 4,
+             "updateTime": "2014-11-06 05:13:56 000",
+             "platform": "winserver",
+             "hypervisor": "winserver",
+             "originalId": "ef461a17-48c2-4751-93c4-3c1bae390bab"
+             },
+             {
+             "isoId": 72,
+             "isoName": "ws-tools.iso",
+             "isoSize": 61071360000,
+             "description": "",
+             "path": "ws-tools-2.0.0.iso",
+             "status": "MOVING",
+             "repositoryId": 4,
+             "updateTime": "2014-11-06 05:13:56 000",
+             "platform": "winserver",
+             "hypervisor": "winserver",
+             "originalId": "ef461a17-48c2-4751-93c4-3c1bae390bab"
+             },
+             {
+             "isoId": 73,
+             "isoName": "ws-tools.iso",
+             "isoSize": 94375984237,
+             "description": "",
+             "path": "ws-tools-2.0.0.iso",
+             "status": "USING",
+             "repositoryId": 4,
+             "updateTime": "2014-11-06 05:13:56 000",
+             "platform": "winserver",
+             "hypervisor": "winserver",
+             "originalId": "ef461a17-48c2-4751-93c4-3c1bae390bab"
+             },
+             {
+             "isoId": 74,
+             "isoName": "ws-tools.iso",
+             "isoSize": 61071360,
+             "description": "",
+             "path": "ws-tools-2.0.0.iso",
+             "status": "MOUNTED",
+             "repositoryId": 4,
+             "updateTime": "2014-11-06 05:13:56 000",
+             "platform": "winserver",
+             "hypervisor": "winserver",
+             "originalId": "ef461a17-48c2-4751-93c4-3c1bae390bab"
+             }
+             ]
+}

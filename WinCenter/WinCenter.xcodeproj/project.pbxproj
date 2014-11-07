@@ -383,6 +383,11 @@
 		684D90F319FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */; };
 		684D90F619FFD8AA009C4B09 /* NetworkIpVmListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */; };
 		684D90F919FFD8F5009C4B09 /* NetworkIpVmVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */; };
+		685218FA1A0CAD10002C0441 /* VmIsoCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 685218F91A0CAD10002C0441 /* VmIsoCollectionVC.m */; };
+		685218FD1A0CAD3A002C0441 /* VmIsoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 685218FC1A0CAD39002C0441 /* VmIsoCollectionCell.m */; };
+		685218FF1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 685218FE1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json */; };
+		685219021A0CB1BA002C0441 /* VmIsoListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 685219011A0CB1BA002C0441 /* VmIsoListResult.m */; };
+		685219051A0CB25D002C0441 /* VmIsoVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 685219041A0CB25D002C0441 /* VmIsoVO.m */; };
 		6857913C1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */; };
 		6857913F1A00940F00B78539 /* IpPoolsListDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857913E1A00940F00B78539 /* IpPoolsListDetail.m */; };
 		685791421A00948300B78539 /* IpPoolsListDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 685791411A00948300B78539 /* IpPoolsListDetailResult.m */; };
@@ -1070,6 +1075,15 @@
 		684D90F519FFD8AA009C4B09 /* NetworkIpVmListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmListResult.m; sourceTree = "<group>"; };
 		684D90F719FFD8F5009C4B09 /* NetworkIpVmVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkIpVmVO.h; sourceTree = "<group>"; };
 		684D90F819FFD8F5009C4B09 /* NetworkIpVmVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkIpVmVO.m; sourceTree = "<group>"; };
+		685218F81A0CAD10002C0441 /* VmIsoCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmIsoCollectionVC.h; sourceTree = "<group>"; };
+		685218F91A0CAD10002C0441 /* VmIsoCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmIsoCollectionVC.m; sourceTree = "<group>"; };
+		685218FB1A0CAD39002C0441 /* VmIsoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmIsoCollectionCell.h; sourceTree = "<group>"; };
+		685218FC1A0CAD39002C0441 /* VmIsoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmIsoCollectionCell.m; sourceTree = "<group>"; };
+		685218FE1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getVmIsoListAsync.json; sourceTree = "<group>"; };
+		685219001A0CB1B9002C0441 /* VmIsoListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmIsoListResult.h; sourceTree = "<group>"; };
+		685219011A0CB1BA002C0441 /* VmIsoListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmIsoListResult.m; sourceTree = "<group>"; };
+		685219031A0CB25D002C0441 /* VmIsoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmIsoVO.h; sourceTree = "<group>"; };
+		685219041A0CB25D002C0441 /* VmIsoVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VmIsoVO.m; sourceTree = "<group>"; };
 		6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpPoolsDetailAsync.json; sourceTree = "<group>"; };
 		6857913D1A00940F00B78539 /* IpPoolsListDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListDetail.h; sourceTree = "<group>"; };
 		6857913E1A00940F00B78539 /* IpPoolsListDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListDetail.m; sourceTree = "<group>"; };
@@ -1546,6 +1560,7 @@
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
 				686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */,
+				685218FE1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -1687,6 +1702,10 @@
 				6870D4EC1A032ED800E803B9 /* BusDomainsListResult.m */,
 				6870D4EE1A032EF300E803B9 /* BusDomainsVO.h */,
 				6870D4EF1A032EF300E803B9 /* BusDomainsVO.m */,
+				685219001A0CB1B9002C0441 /* VmIsoListResult.h */,
+				685219011A0CB1BA002C0441 /* VmIsoListResult.m */,
+				685219031A0CB25D002C0441 /* VmIsoVO.h */,
+				685219041A0CB25D002C0441 /* VmIsoVO.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -2177,6 +2196,10 @@
 				18C212FA19F27C2000FCBD23 /* VmNetworkCollectionVC.m */,
 				18C212FB19F27C2000FCBD23 /* VmNewVC.h */,
 				18C212FC19F27C2000FCBD23 /* VmNewVC.m */,
+				685218F81A0CAD10002C0441 /* VmIsoCollectionVC.h */,
+				685218F91A0CAD10002C0441 /* VmIsoCollectionVC.m */,
+				685218FB1A0CAD39002C0441 /* VmIsoCollectionCell.h */,
+				685218FC1A0CAD39002C0441 /* VmIsoCollectionCell.m */,
 			);
 			path = vm;
 			sourceTree = "<group>";
@@ -2530,6 +2553,7 @@
 				18C5216719F8A43A00C033C6 /* complete.m4r in Resources */,
 				68F39D8219FE533300F5BACF /* Network.getInsideAsync.json in Resources */,
 				18763BBA19F4B82300669CC3 /* dial-icon1.png in Resources */,
+				685218FF1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json in Resources */,
 				181DED6A19F17CB100998835 /* VmVO.getVmVolumnListAsync.json in Resources */,
 				181DED6519F17CB100998835 /* StorageVO.getStorageVolumnListAsync.json in Resources */,
 				1824362219F4FE05007E4D6C /* calories@2x.png in Resources */,
@@ -2706,6 +2730,7 @@
 				847A60B719FF832E0090305C /* VmMigrateTargetHostVO.m in Sources */,
 				18C2130E19F27C2000FCBD23 /* MSDayColumnHeader.m in Sources */,
 				181DECC719F17CB100998835 /* ExampleBarVC.m in Sources */,
+				685219051A0CB25D002C0441 /* VmIsoVO.m in Sources */,
 				181DECA419F17CB100998835 /* DoubleYSeriesVC.m in Sources */,
 				181DECF719F17CB100998835 /* CalendarDateUtil.m in Sources */,
 				6857914E1A00C34800B78539 /* NetworkTotalTableCell.m in Sources */,
@@ -2737,6 +2762,8 @@
 				18C2135219F27C2000FCBD23 /* VmMigrateSelectHostListCell.m in Sources */,
 				181DECD519F17CB100998835 /* JYRadarChartVC.m in Sources */,
 				18C2132019F27C2000FCBD23 /* HostDashboardCell.m in Sources */,
+				685218FD1A0CAD3A002C0441 /* VmIsoCollectionCell.m in Sources */,
+				685219021A0CB1BA002C0441 /* VmIsoListResult.m in Sources */,
 				847CA88E19F752B6004C292A /* HostActivityVmVO.m in Sources */,
 				18C521CF19F8CA2000C033C6 /* RealtimeCurveVC.m in Sources */,
 				18C2131719F27C2000FCBD23 /* DashboardTableVC.m in Sources */,
@@ -2815,6 +2842,7 @@
 				181DED8419F17CB100998835 /* PoolVO.m in Sources */,
 				18C2131519F27C2000FCBD23 /* MSTimeRowHeaderBackground.m in Sources */,
 				181DECB819F17CB100998835 /* InfoView.m in Sources */,
+				685218FA1A0CAD10002C0441 /* VmIsoCollectionVC.m in Sources */,
 				18C2133819F27C2000FCBD23 /* StorageCollectionCell.m in Sources */,
 				18C521B619F8CA2000C033C6 /* SimpleLineChartVC.m in Sources */,
 				18C521C919F8CA2000C033C6 /* JBChartTooltipView.m in Sources */,

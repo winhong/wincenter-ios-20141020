@@ -48,6 +48,8 @@
 - (void) getVmVolumnListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getVmVolumnListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getVmNicListAsync:(FetchObjectCompletionBlock)completionBlock withType:(BOOL)isExternal referTo:(NSMutableArray*)referList;
+- (void) getVmIsoListAsync:(FetchObjectCompletionBlock)completionBlock;
+- (void) getVmIsoListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) vmRestart:(BasicCompletionBlock)completionBlock;
 - (void) vmStart:(BasicCompletionBlock)completionBlock;
 - (void) vmStop:(BasicCompletionBlock)completeBlock;

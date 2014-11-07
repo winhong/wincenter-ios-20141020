@@ -13,6 +13,7 @@
 #import "VmNetworkCollectionVC.h"
 #import "VmNetworkCollectionCell.h"
 #import "VmDiskCollectionVC.h"
+#import "VmIsoCollectionVC.h"
 #import "PopControlRecordVC.h"
 #import "VmMigrateVC.h"
 #import "VmDetailCPUConfigVC.h"
@@ -64,6 +65,9 @@
         self.name.font = [UIFont systemFontOfSize:24.0f];
     }
     self.poolName.text = self.vmVO.poolName;
+    if (self.vmVO.poolName == nil) {
+        self.poolName.text = @"(游离)";
+    }
     self.hostName.text = self.vmVO.ownerHostName;
     
     int time = self.vmVO.runTime/1000;
@@ -128,6 +132,10 @@
     VmDiskCollectionVC *vmDiskCollectionVC = [self.storyboard instantiateViewController:@"VmDiskCollectionVC"];
     vmDiskCollectionVC.vmVO = self.vmVO;
     [pages addObject:vmDiskCollectionVC];
+    
+    VmIsoCollectionVC *vmIsoCollectionVC = [self.storyboard instantiateViewController:@"VmIsoCollectionVC"];
+    vmIsoCollectionVC.vmVO = self.vmVO;
+    [pages addObject:vmIsoCollectionVC];
     
     VmDetailSnapshootVC *snapshot = [self.storyboard instantiateViewController:@"VmDetailSnapshootVC"];
     snapshot.vmVO = self.vmVO;

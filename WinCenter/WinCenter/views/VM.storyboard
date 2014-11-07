@@ -155,8 +155,10 @@
                                             <action selector="showPageBarItemClick:" destination="rda-j3-bYj" id="ut4-oa-lu9"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bug-cN-UGR"/>
+                                    <barButtonItem tag="5" title="虚拟光驱" id="nyA-eh-cao"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="16M-lb-fhc"/>
-                                    <barButtonItem tag="5" title="快照" id="Tbr-wq-AHV">
+                                    <barButtonItem tag="6" title="快照" id="Tbr-wq-AHV">
                                         <connections>
                                             <action selector="showPageBarItemClick:" destination="rda-j3-bYj" id="9YM-TK-LZ7"/>
                                         </connections>
@@ -1515,6 +1517,100 @@
             </objects>
             <point key="canvasLocation" x="2529" y="979"/>
         </scene>
+        <!--Vm Iso CollectionVC-->
+        <scene sceneID="7z4-Ed-D3o">
+            <objects>
+                <collectionViewController storyboardIdentifier="VmIsoCollectionVC" autoresizesArchivedViewToFullSize="NO" id="u0H-5J-8eB" customClass="VmIsoCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Vc0-bi-Ta1">
+                        <rect key="frame" x="0.0" y="0.0" width="969" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="0Mi-b3-AmX">
+                            <size key="itemSize" width="969" height="115"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="VmIsoCollectionCell" reuseIdentifier="VmIsoCollectionCell" id="64i-t8-ZWP" customClass="VmIsoCollectionCell">
+                                <rect key="frame" x="684" y="243" width="300" height="190"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <userGuides>
+                                    <userLayoutGuide location="93" affinity="minX"/>
+                                    <userLayoutGuide location="589" affinity="minX"/>
+                                    <userLayoutGuide location="789" affinity="minX"/>
+                                </userGuides>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="1023" height="115"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-Ak-jGS" userLabel="status">
+                                            <rect key="frame" x="789" y="47" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="镜像文件：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPT-Ci-BMc">
+                                            <rect key="frame" x="94" y="47" width="70" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-pa-7Dm">
+                                            <rect key="frame" x="172" y="47" width="411" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG9-gC-fC8" userLabel="title">
+                                            <rect key="frame" x="94" y="8" width="500" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大小：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBB-y5-2kl">
+                                            <rect key="frame" x="592" y="47" width="47" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-1F-rcz">
+                                            <rect key="frame" x="647" y="47" width="139" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-xl-k7b">
+                                            <rect key="frame" x="874" y="49" width="100" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="iso" translatesAutoresizingMaskIntoConstraints="NO" id="iQV-Xa-POW">
+                                            <rect key="frame" x="37" y="26" width="42" height="42"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="1023" height="115"/>
+                                <connections>
+                                    <outlet property="isoName" destination="OG9-gC-fC8" id="WBV-1z-cB3"/>
+                                    <outlet property="isoPath" destination="aj7-pa-7Dm" id="phS-yM-oVQ"/>
+                                    <outlet property="isoSize" destination="PyV-1F-rcz" id="Jay-Yj-iJh"/>
+                                    <outlet property="status" destination="6Qk-Ak-jGS" id="K37-3V-BAx"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="u0H-5J-8eB" id="dP9-ui-ra0"/>
+                            <outlet property="delegate" destination="u0H-5J-8eB" id="cQL-kv-cAR"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="cF9-xm-KY6"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="969" height="768"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wp8-ah-JZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5762.5" y="109"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Network_internal" width="36" height="36"/>
@@ -1524,6 +1620,7 @@
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="ip" width="10" height="11"/>
         <image name="ip-蓝色背景" width="10" height="11"/>
+        <image name="iso" width="42" height="42"/>
         <image name="os-others" width="55" height="55"/>
         <image name="os-others-big" width="110" height="110"/>
         <image name="share" width="29" height="13"/>
