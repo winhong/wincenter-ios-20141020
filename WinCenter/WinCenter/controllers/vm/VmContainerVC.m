@@ -105,6 +105,9 @@
     [hostVO getHostVOAsync:^(id object, NSError *error) {
         HostVO *hostVO = (HostVO*) object;
         if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            self.btnStart.enabled = false;
+            self.btnStop.enabled = false;
+            self.btnRestart.enabled = false;
             self.btnMigrate.enabled = false;
         }
     }];
