@@ -37,11 +37,19 @@
                 
                 if(self.busDomainVO){
                     //陈洁补充：根据业务域查询业务系统
+                    NSMutableArray *alloctedBusList = [NSMutableArray new];
+                    for (BusinessVO *busVO in self.allBusList){
+                        if (busVO.busDomainId == self.busDomainVO.busDomainId) {
+                            [alloctedBusList addObject:busVO];
+                        }
+                    }
+                    [self.dataList addObjectsFromArray:alloctedBusList];
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerEndRefreshing];
                     [self.collectionView reloadData];
                 }else if(self.isUnGroup){
                     //陈洁补充：查询未分配的业务系统
+                    [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerEndRefreshing];
                     [self.collectionView reloadData];
