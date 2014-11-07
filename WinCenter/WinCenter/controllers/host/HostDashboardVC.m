@@ -46,9 +46,18 @@
                 }];
             }else if(self.isOutofPool){
                 //游离物理主机
-                [self.collectionView headerEndRefreshing];
-                [self.collectionView footerEndRefreshing];
-                [self.collectionView reloadData];
+                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                    NSMutableArray *hostOfPoolList = [NSMutableArray new];
+                    for (HostVO *host in ((HostListResult*)object).hosts) {
+                        if (!(host.resourcePoolId)) {
+                            [hostOfPoolList addObject: host];
+                        }
+                    }
+                    [self.dataList addObjectsFromArray:hostOfPoolList];
+                    
+                    [self.collectionView headerEndRefreshing];
+                    [self.collectionView reloadData];
+                } referTo:self.dataList];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
                     NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
