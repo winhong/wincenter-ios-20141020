@@ -73,7 +73,7 @@
     NSString *format;
     switch (self.chartType) {
       case PNChartFormatTypePercent:
-        format = @"%d%%";
+        format = @"%.2f%%";
         break;
       case PNChartFormatTypeDollar:
         format = @"$%d";
@@ -102,7 +102,7 @@
     pathAnimation.toValue = @([_current floatValue] / [_total floatValue]);
     [_circle addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
     _circle.strokeEnd   = [_current floatValue] / [_total floatValue];
-    _countingLabel.format = @"%.2f%%";
+
     [_countingLabel countFrom:0 to:[_current floatValue] withDuration:1.0];
     
     

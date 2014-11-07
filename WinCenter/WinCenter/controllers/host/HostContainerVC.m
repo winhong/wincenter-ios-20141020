@@ -45,6 +45,10 @@
     self.ipLabel.text = self.hostVO.ip;
     self.statusLabel.text = [self.hostVO state_text];
     //self.statusLabel.textColor = [self.hostVO state_color];
+    self.resourcePoolName.text = self.hostVO.resourcePoolName;
+    if ([self.hostVO.resourcePoolName isEqualToString: @"null"]) {
+        self.resourcePoolName.text = @"( 游离 )";
+    }
     
     NSDate *Runtime = [[NSDate alloc]initWithTimeIntervalSince1970:self.hostVO.startRunTime];
     NSDate *Now = [NSDate new];

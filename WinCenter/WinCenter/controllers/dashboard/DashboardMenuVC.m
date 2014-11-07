@@ -51,6 +51,50 @@
 //    [self.menuWarning setBadgeValue:@"8"];
 //    [self.menuWarning setBadgeOriginX:30];
 //    [self.menuWarning setBadgeOriginY:5];
+    self.menuPool.enabled = false;
+    self.menuHost.enabled = false;
+    self.menuVm.enabled = false;
+    self.menuStorage.enabled = false;
+    self.menuBusiness.enabled = false;
+    self.menuNetwork.enabled = false;
+    
+    [UserVO getUserVOAsync:^(id object, NSError *error) {
+        UserVO *user = object;
+        switch (user.role) {
+            case 1:{
+                self.menuPool.enabled = true;
+                self.menuHost.enabled = true;
+                self.menuVm.enabled = true;
+                self.menuStorage.enabled = true;
+                self.menuBusiness.enabled = true;
+                self.menuNetwork.enabled = true;
+                
+                break;
+            }
+            case 2:{
+                self.menuPool.enabled = true;
+                self.menuHost.enabled = true;
+                self.menuVm.enabled = true;
+                self.menuStorage.enabled = true;
+                self.menuBusiness.enabled = false;
+                self.menuNetwork.enabled = true;
+            
+                break;
+            }
+            case 3:{
+                self.menuPool.enabled = false;
+                self.menuHost.enabled = false;
+                self.menuVm.enabled = false;
+                self.menuStorage.enabled = false;
+                self.menuBusiness.enabled = true;
+                self.menuNetwork.enabled = false;
+                
+                break;
+            }
+            default:
+                break;
+        }
+    }];
 }
 
 - (IBAction)switchTabBar:(id)sender {

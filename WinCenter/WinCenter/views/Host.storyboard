@@ -224,19 +224,19 @@
                                                         <rect key="frame" x="32" y="10" width="95" height="95"/>
                                                     </imageView>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运行时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z76-C8-bEJ">
-                                                        <rect key="frame" x="496" y="77" width="70" height="21"/>
+                                                        <rect key="frame" x="741" y="77" width="70" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oti-bd-LUJ">
-                                                        <rect key="frame" x="567" y="77" width="142" height="21"/>
+                                                        <rect key="frame" x="812" y="77" width="142" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="时间" translatesAutoresizingMaskIntoConstraints="NO" id="Qw0-Uf-OmG">
-                                                        <rect key="frame" x="479" y="82" width="11" height="11"/>
+                                                        <rect key="frame" x="724" y="82" width="11" height="11"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsD-uv-mNZ">
                                                         <rect key="frame" x="173" y="76" width="28" height="21"/>
@@ -251,16 +251,31 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="状态：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf0-2B-m9x">
-                                                        <rect key="frame" x="351" y="77" width="44" height="21"/>
+                                                        <rect key="frame" x="611" y="77" width="44" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="dbH-8U-Tuf">
-                                                        <rect key="frame" x="335" y="82" width="11" height="11"/>
+                                                        <rect key="frame" x="595" y="82" width="11" height="11"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运行中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSP-Zb-kI2">
-                                                        <rect key="frame" x="398" y="76" width="51" height="21"/>
+                                                        <rect key="frame" x="658" y="76" width="51" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="所属资源池：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-Do-p5i">
+                                                        <rect key="frame" x="356" y="77" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-G4-vdd">
+                                                        <rect key="frame" x="340" y="82" width="11" height="11"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3b-jw-ebM">
+                                                        <rect key="frame" x="443" y="76" width="130" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -368,6 +383,7 @@
                     <connections>
                         <outlet property="ipLabel" destination="pYF-1q-aYo" id="VBh-1h-8n1"/>
                         <outlet property="pageVCContainer" destination="CEO-rG-YsG" id="pPI-hm-TUi"/>
+                        <outlet property="resourcePoolName" destination="G3b-jw-ebM" id="UWb-Rs-k6h"/>
                         <outlet property="runningTime" destination="Oti-bd-LUJ" id="2FW-Tz-mVa"/>
                         <outlet property="statusLabel" destination="OSP-Zb-kI2" id="X0t-2R-brL"/>
                         <outlet property="titleLabel" destination="tXf-tb-30S" id="0eI-8X-dXT"/>
