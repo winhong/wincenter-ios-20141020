@@ -86,7 +86,7 @@
                         <sections>
                             <tableViewSection id="dlm-na-3DR">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="Kv7-3d-TbZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="Kv7-3d-TbZ">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kv7-3d-TbZ" id="Aw0-mA-bPB">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -108,7 +108,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="9ya-a8-8Rb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="9ya-a8-8Rb">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ya-a8-8Rb" id="7q3-Eo-A0M">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -130,7 +130,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="1ge-2l-UTI">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="1ge-2l-UTI">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ge-2l-UTI" id="7O0-ja-K4d">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -152,7 +152,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="jTs-VF-Au2">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="jTs-VF-Au2">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jTs-VF-Au2" id="e5D-iR-kCF">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -174,7 +174,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="WW6-HG-Bpo">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="WW6-HG-Bpo">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WW6-HG-Bpo" id="L0B-K4-WF6">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +196,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="63Q-xN-VVN">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="63Q-xN-VVN">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="63Q-xN-VVN" id="t8K-sq-2MU">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +218,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.11372549019607843" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="WHi-x7-1RP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="58" id="WHi-x7-1RP">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WHi-x7-1RP" id="YQg-ti-QMN">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1442,58 +1442,58 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-ww-AMO">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqJ-ww-AMO">
                                                                 <rect key="frame" x="262" y="49" width="171" height="67"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoVmDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="Pbc-Jb-KuV"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="dgp-Qd-1kJ"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-gK-udk">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-gK-udk">
                                                                 <rect key="frame" x="659" y="53" width="229" height="83"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoBusinessDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="qzW-t1-76E"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="OKW-te-MSm"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNW-6k-7RC">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNW-6k-7RC">
                                                                 <rect key="frame" x="695" y="144" width="250" height="83"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoHostDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="7bA-No-e5s"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="fbE-nD-KCR"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-4U-Fr2">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-4U-Fr2">
                                                                 <rect key="frame" x="679" y="247" width="250" height="83"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoPoolDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="D8T-No-bVl"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="B5h-21-kmR"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dma-qH-OV3">
-                                                                <rect key="frame" x="580" y="331" width="250" height="83"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dma-qH-OV3">
+                                                                <rect key="frame" x="579" y="331" width="250" height="83"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoOtherHostDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="21N-BD-83B"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="SVT-wv-iyt"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa3-nv-n5O">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa3-nv-n5O">
                                                                 <rect key="frame" x="74" y="283" width="250" height="83"/>
                                                                 <state key="normal">
                                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="gotoStorageDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="k1n-JA-82V"/>
+                                                                    <action selector="gotoDashboard:" destination="cSx-41-28X" eventType="touchUpInside" id="Dbw-0q-fQW"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1551,6 +1551,12 @@
                         <outlet property="cpuUnitUnusedCount" destination="ppz-ka-GQ0" id="h1X-el-QYW"/>
                         <outlet property="cpuUsedCount" destination="gpV-J5-xkb" id="YGy-SO-6ju"/>
                         <outlet property="dissociateHostNumber" destination="rUo-ae-urA" id="knL-BX-PD6"/>
+                        <outlet property="gotoDashboardBusiness" destination="G5g-gK-udk" id="jvs-7L-PWa"/>
+                        <outlet property="gotoDashboardHost" destination="vNW-6k-7RC" id="YL1-aR-gzs"/>
+                        <outlet property="gotoDashboardHostOther" destination="dma-qH-OV3" id="jhc-dp-HNI"/>
+                        <outlet property="gotoDashboardPool" destination="cMk-4U-Fr2" id="I4L-WB-4RO"/>
+                        <outlet property="gotoDashboardStorage" destination="wa3-nv-n5O" id="09b-he-dMD"/>
+                        <outlet property="gotoDashboardVM" destination="hqJ-ww-AMO" id="qk1-d4-TVi"/>
                         <outlet property="hostCount" destination="06P-ic-AGj" id="jmf-hc-1VS"/>
                         <outlet property="memerySize" destination="52a-ZN-NMP" id="dWN-xd-xAx"/>
                         <outlet property="memerySize2" destination="ecz-Fw-qNq" id="2re-rg-9Th"/>
