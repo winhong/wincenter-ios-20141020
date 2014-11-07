@@ -36,7 +36,7 @@
 
 -(NSString*) vlanId_text{
     if([self.vlanId rangeOfString:@"-" options:NSCaseInsensitiveSearch].length>0){
-        return @"";
+        return @"无";
     }else{
         return self.vlanId;
     }
@@ -50,6 +50,19 @@
     }else{
         return @"部分链接";
     }
+}
+
+- (void) getVmsByNetworkIdAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getVmsByNetworkIdAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.vmsByNetworkId&apiType=GET&placeholder=%d",[RemoteObject getCurrentDatacenterVO].id, self.networkId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:jsonResponse.rawBody], error);
+    }];
 }
 
 @end

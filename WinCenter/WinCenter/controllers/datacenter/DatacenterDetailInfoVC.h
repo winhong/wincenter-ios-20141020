@@ -48,6 +48,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *memeryUsedInfo;
 @property (weak, nonatomic) IBOutlet UILabel *storageUsedInfo;
 
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardVM;
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardBusiness;
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardHost;
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardPool;
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardHostOther;
+@property (weak, nonatomic) IBOutlet UIButton *gotoDashboardStorage;
+
 @property PNCircleChart *circleChart;
 @property PNCircleChart *circleChart2;
 @property PNCircleChart *circleChart3;

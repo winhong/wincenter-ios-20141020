@@ -24,10 +24,12 @@
 @property NSString *state;
 
 @property NSString *onLine;
-@property NSString *role;
+@property int role;
 @property NSString *roleName;
 @property NSString *failCount;
 @property NSString *locked;
+
+- (NSString*) roleName_text;
 
 + (void) getUserVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) modifyPassword:(FetchObjectCompletionBlock)completeBlock withOldPassword:(NSString*)OldPassword withPassword:(NSString*)NewPassword;

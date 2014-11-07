@@ -37,7 +37,7 @@
         self.name.font = [UIFont systemFontOfSize:16.0f];
     }
     self.account.text = self.userVO.account;
-    self.roleName.text = self.userVO.roleName;
+    self.roleName.text = [self.userVO roleName_text];
     self.email.text = self.userVO.email;
     self.mobilephone.text = self.userVO.mobilephone;
 }

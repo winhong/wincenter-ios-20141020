@@ -128,7 +128,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 -(void)reloadData{
     if (!self.startTime) {
-        self.startTime = (long long int)[NSDate new];
+        NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+        self.startTime = (long long int)time*1000 - 10*60*1000;
+        //self.startTime = (long long int)[NSDate new];
+        NSLog(@"%.0f",self.startTime);
     }
     if ([self.chartType isEqualToString:@"host"]) {
         if ([self.hostVO.state isEqualToString:@"OK"]) {

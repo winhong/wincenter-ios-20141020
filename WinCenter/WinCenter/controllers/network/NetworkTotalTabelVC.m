@@ -78,6 +78,10 @@
 - (IBAction)refreshAction:(id)sender {
     self.isExternal = (self.segment.selectedSegmentIndex==0);
     [self.tableView headerBeginRefreshing];
+    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
+    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
+    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+    [detailVC clearData];
 }
 
 -(void)reloadData{
@@ -111,6 +115,9 @@
         cell.state_image.layer.cornerRadius = 6;
         cell.state_image.backgroundColor = [network state_color];
         cell.ipSegment.text = ipPoolVO.segment;
+        if (!(ipPoolVO.segment)) {
+            cell.ipSegment.text = @"无";
+        }
         cell.ipTotal.text = [NSString stringWithFormat:@"%d",ipPoolVO.total];
         cell.ipUsable.text = [NSString stringWithFormat:@"%d",ipPoolVO.usable];
         cell.ipUsed.text = [NSString stringWithFormat:@"%d",ipPoolVO.used];
@@ -151,8 +158,16 @@
     UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
-    detailVC.ipPoolVO = ipPoolVO;
-    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    detailVC.isExternal = self.isExternal;
+    if (self.isExternal) {
+        detailVC.network = network;
+        detailVC.ipPoolVO = ipPoolVO;
+        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    }else{
+       // detailVC.ipPoolVO = ipPoolVO;
+        detailVC.network = network;
+        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    }
 }
 /*
 // Override to support conditional editing of the table view.

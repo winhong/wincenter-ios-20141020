@@ -12,6 +12,19 @@
 
 @implementation UserVO
 
+- (NSString*) roleName_text{
+    switch (self.role) {
+        case 1:
+            return @"云平台管理员";
+        case 2:
+            return @"资源池管理员";
+        case 3:
+            return @"业务系统管理员";
+        default:
+            return @"未知类型";
+    }
+}
+
 + (void) getUserVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[UserListResult alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UserVO.getUserVOAsync" ofType:@"json"]]].users[0], nil);
