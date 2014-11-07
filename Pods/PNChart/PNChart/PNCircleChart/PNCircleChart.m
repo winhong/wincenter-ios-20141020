@@ -73,7 +73,7 @@
     NSString *format;
     switch (self.chartType) {
       case PNChartFormatTypePercent:
-        format = @"%d%%";
+        format = @"%.2f%%";
         break;
       case PNChartFormatTypeDollar:
         format = @"$%d";
