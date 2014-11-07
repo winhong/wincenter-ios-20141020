@@ -78,6 +78,10 @@
 - (IBAction)refreshAction:(id)sender {
     self.isExternal = (self.segment.selectedSegmentIndex==0);
     [self.tableView headerBeginRefreshing];
+    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
+    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
+    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+    [detailVC clearData];
 }
 
 -(void)reloadData{
@@ -156,6 +160,7 @@
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
     detailVC.isExternal = self.isExternal;
     if (self.isExternal) {
+        detailVC.network = network;
         detailVC.ipPoolVO = ipPoolVO;
         [detailVC performSelector:@selector(refreshAction:) withObject:nil];
     }else{

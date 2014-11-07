@@ -13,5 +13,6 @@
 @property NetworkVO *network;
 @property BOOL isExternal;
 -(void)reloadData;
+-(void)clearData;
 @property BOOL isDetailPagePushed;
 @end
