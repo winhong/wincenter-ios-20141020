@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad
 {
+    self.title = @"虚拟机列表";
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor whiteColor];
     
@@ -64,7 +65,23 @@
     [self.tableView headerBeginRefreshing];
 }
 
+-(void)clearData{
+    self.title = @"虚拟机列表";
+    if(self.ipList)
+        [self.ipList removeAllObjects];
+
+    if(self.vmList)
+        [self.vmList removeAllObjects];
+    
+    [self.tableView reloadData];
+}
+
 -(void)reloadData{
+    if(self.network)
+        self.title = [NSString stringWithFormat:@"%@下的虚拟机列表", self.network.name];
+    else
+        self.title = @"虚拟机列表";
+    
     if(self.isExternal){
         if(self.ipPoolVO){
             [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
@@ -110,9 +127,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(self.isExternal){
-        return self.ipList.count;
+        return self.ipList ? self.ipList.count : 0;
     }else{
-        return self.vmList.count;
+        return self.vmList ? self.vmList.count : 0;
     }
 }
 
