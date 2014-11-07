@@ -54,7 +54,7 @@
 
 - (void) getVmsByNetworkIdAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
-        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostVOAsync" ofType:@"json"]]], nil);
+        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"NetworkVO.getVmsByNetworkIdAsync" ofType:@"json"]]], nil);
         return;
     }
     

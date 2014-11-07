@@ -418,6 +418,7 @@
 		844546C01A032DE400FBE75A /* RealtimeCurve.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 844546BF1A032DE400FBE75A /* RealtimeCurve.bundle */; };
 		845228941A01E54600117BDA /* VmVO.getVmSnashotAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */; };
 		845228961A02542100117BDA /* VmVO.getPerformanceAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */; };
+		845931DC1A0CC8B100DE6BE2 /* NetworkVO.getVmsByNetworkIdAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 845931DB1A0CC8B100DE6BE2 /* NetworkVO.getVmsByNetworkIdAsync.json */; };
 		845B045D19F4DF00006969CD /* PoolSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B045C19F4DF00006969CD /* PoolSubVO.m */; };
 		847A60B119FF82E90090305C /* VmMigrateTargetsVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B019FF82E90090305C /* VmMigrateTargetsVO.m */; };
 		847A60B419FF83110090305C /* VmMigrateTargetVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 847A60B319FF83110090305C /* VmMigrateTargetVO.m */; };
@@ -1129,6 +1130,7 @@
 		844546BF1A032DE400FBE75A /* RealtimeCurve.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve.bundle; sourceTree = "<group>"; };
 		845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getVmSnashotAsync.json; sourceTree = "<group>"; };
 		845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getPerformanceAsync.json; sourceTree = "<group>"; };
+		845931DB1A0CC8B100DE6BE2 /* NetworkVO.getVmsByNetworkIdAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getVmsByNetworkIdAsync.json; sourceTree = "<group>"; };
 		845B045B19F4DF00006969CD /* PoolSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolSubVO.h; sourceTree = "<group>"; };
 		845B045C19F4DF00006969CD /* PoolSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolSubVO.m; sourceTree = "<group>"; };
 		847A60AF19FF82E90090305C /* VmMigrateTargetsVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VmMigrateTargetsVO.h; path = ../controllers/vm/VmMigrateTargetsVO.h; sourceTree = "<group>"; };
@@ -1546,6 +1548,7 @@
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
 				686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */,
+				845931DB1A0CC8B100DE6BE2 /* NetworkVO.getVmsByNetworkIdAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -2538,6 +2541,7 @@
 				1886A60619F6204D0089A576 /* Performance.storyboard in Resources */,
 				845228961A02542100117BDA /* VmVO.getPerformanceAsync.json in Resources */,
 				1824364F19F544C6007E4D6C /* ActionBtnPress.png in Resources */,
+				845931DC1A0CC8B100DE6BE2 /* NetworkVO.getVmsByNetworkIdAsync.json in Resources */,
 				181DED5319F17CB100998835 /* HostVO.getHostNetworkExternalListAsync.json in Resources */,
 				181DECE819F17CB100998835 /* select.png in Resources */,
 				181DED9419F17CB100998835 /* Business.storyboard in Resources */,
