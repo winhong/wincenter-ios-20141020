@@ -18,12 +18,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *memorySize;
 @property (weak, nonatomic) IBOutlet UILabel *storageSize;
 @property (weak, nonatomic) IBOutlet UIImageView *osType_image;
+@property (weak, nonatomic) IBOutlet UILabel *osType;
 
 @property (weak, nonatomic) IBOutlet F3BarGauge *progress_1;
 @property (weak, nonatomic) IBOutlet F3BarGauge *progress_2;
 @property (weak, nonatomic) IBOutlet F3BarGauge *progress_3;
-@property (weak, nonatomic) IBOutlet F3BarGauge *progress_4;
-@property (weak, nonatomic) IBOutlet F3BarGauge *progress_5;
 
 
 @end
