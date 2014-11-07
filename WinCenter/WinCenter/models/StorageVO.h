@@ -15,7 +15,7 @@
 
 @property int hostId;
 @property NSString *hostName;
-
+@property NSString *hostIp;
 @property int storagePoolId;
 @property NSString *storagePoolName;
 @property float totalStorage;
