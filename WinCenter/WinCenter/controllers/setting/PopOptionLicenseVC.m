@@ -40,7 +40,7 @@
     self.phone.text = self.licenseVO.wci.phone;
     self.IcType.text = [self.licenseVO.wci IcType_text];
     self.useedInfo.text = [NSString stringWithFormat:@"%d/%d", self.licenseVO.useedCount,self.licenseVO.wci.IcNum];
-    if (self.IcType == 0) {
+    if ([self.licenseVO.wci.IcType isEqualToString:@"0"]) {
         self.remianDays.text = [NSString stringWithFormat:@"%d", self.licenseVO.remianDays];
     }
     else{
