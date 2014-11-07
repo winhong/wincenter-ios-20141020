@@ -52,4 +52,17 @@
     }
 }
 
+- (void) getVmsByNetworkIdAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostVOAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.vm.vmsByNetworkId&apiType=GET&placeholder=%d",[RemoteObject getCurrentDatacenterVO].id, self.networkId]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([NSArray arrayOfType:VmVO.class FromJSONData:jsonResponse.rawBody], error);
+    }];
+}
+
 @end

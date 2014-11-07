@@ -13,6 +13,7 @@
 
 @property NSMutableDictionary *vmDict;
 @property NSMutableArray *ipList;
+@property NSMutableArray *vmList;
 
 @end
 
@@ -51,6 +52,7 @@
     
     [self.tableView addHeaderWithCallback:^{
         [week_self.ipList removeAllObjects];
+        [week_self.vmList removeAllObjects];
         [week_self reloadData];
     }];
     
@@ -63,22 +65,32 @@
 }
 
 -(void)reloadData{
-    if(self.ipPoolVO){
-        [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
-            self.ipList = [NSMutableArray new];
-            for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
-                if(detailVO.state == 2){
-                    [self.ipList addObject:detailVO];
+    if(self.isExternal){
+        if(self.ipPoolVO){
+            [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
+                self.ipList = [NSMutableArray new];
+                for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
+                    if(detailVO.state == 2){
+                        [self.ipList addObject:detailVO];
+                    }
                 }
-            }
+                [self.tableView headerEndRefreshing];
+                [self.tableView footerFinishingLoading];
+                [self.tableView reloadData];
+            } withPoolId:self.ipPoolVO.ipPoolId];
+        }else{
             [self.tableView headerEndRefreshing];
             [self.tableView footerFinishingLoading];
             [self.tableView reloadData];
-        } withPoolId:self.ipPoolVO.ipPoolId];
+        }
     }else{
-        [self.tableView headerEndRefreshing];
-        [self.tableView footerFinishingLoading];
-        [self.tableView reloadData];
+        [self.network getVmsByNetworkIdAsync:^(id object, NSError *error) {
+            self.vmList = [NSMutableArray new];
+            [self.vmList addObjectsFromArray:(NSArray*)object];
+            [self.tableView headerEndRefreshing];
+            [self.tableView footerFinishingLoading];
+            [self.tableView reloadData];
+        }];
     }
 }
 
@@ -97,8 +109,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return self.ipList.count;
+    if(self.isExternal){
+        return self.ipList.count;
+    }else{
+        return self.vmList.count;
+    }
 }
 
 
@@ -106,27 +121,46 @@
 {
     NetworkCollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NetworkCollectionCell" forIndexPath:indexPath];
     
-    if(self.ipList.count==0) return cell;
-    
-    // Configure the cell...
-    cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
-    
-    IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
-    
-    NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
-    if(vm){
-        cell.vmName.text = vm.name;
-        cell.vmState.text = [vm state_text];
-        cell.vmState.textColor = [vm state_color];
+    if(self.isExternal){
+        if(self.ipList.count==0) return cell;
+        
+        cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
+        
+        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+        
+        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+        if(vm){
+            cell.vmName.text = vm.name;
+            cell.vmState.text = [vm state_text];
+            cell.vmState.textColor = [vm state_color];
+        }else{
+            cell.vmName.text = @"";
+            cell.vmState.text = @"";
+        }
+        
+        cell.vmIp.text = detailVO.ip;
+        
+        
+        return cell;
     }else{
-        cell.vmName.text = @"";
-        cell.vmState.text = @"";
+        if(self.vmList.count==0) return cell;
+        
+        cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
+
+        VmVO *vm = self.vmList[indexPath.row];
+        if(vm){
+            cell.vmName.text = vm.name;
+            cell.vmState.text = [vm state_text];
+            cell.vmState.textColor = [vm state_color];
+        }else{
+            cell.vmName.text = @"";
+            cell.vmState.text = @"";
+        }
+        
+        cell.vmIp.text = vm.ip;
+
+        return cell;
     }
-    
-    cell.vmIp.text = detailVO.ip;
-    
-    
-    return cell;
 }
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 //    return @"网络名称 （Vlan：20   IP段：192.168.1.1/28 IP总数：30 IP可用数：10）";
@@ -206,20 +240,34 @@
         vc = [[root childViewControllers] firstObject];
     }
     
-    IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
-    
-    NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
-    if(vm){
-        VmVO *vmvo = [[VmVO alloc] init];
-        vmvo.vmId = vm.vmId;
-        vmvo.name = vm.name;
-        vc.vmVO = vmvo;
-        if(self.isDetailPagePushed){
-            [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
-        }else{
-            [self presentViewController:root animated:YES completion:nil];
+    if(self.isExternal){
+        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+        
+        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+        if(vm){
+            VmVO *vmvo = [[VmVO alloc] init];
+            vmvo.vmId = vm.vmId;
+            vmvo.name = vm.name;
+            vc.vmVO = vmvo;
+            if(self.isDetailPagePushed){
+                [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
+            }else{
+                [self presentViewController:root animated:YES completion:nil];
+            }
+        }
+    }else{
+        VmVO *vm = self.vmList[indexPath.row];
+        if(vm){
+            VmVO *vmvo = [[VmVO alloc] init];
+            vmvo.vmId = vm.vmId;
+            vmvo.name = vm.name;
+            vc.vmVO = vmvo;
+            if(self.isDetailPagePushed){
+                [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
+            }else{
+                [self presentViewController:root animated:YES completion:nil];
+            }
         }
     }
 }
-
 @end

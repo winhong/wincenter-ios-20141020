@@ -151,8 +151,15 @@
     UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
-    detailVC.ipPoolVO = ipPoolVO;
-    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    detailVC.isExternal = self.isExternal;
+    if (self.isExternal) {
+        detailVC.ipPoolVO = ipPoolVO;
+        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    }else{
+       // detailVC.ipPoolVO = ipPoolVO;
+        detailVC.network = network;
+        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+    }
 }
 /*
 // Override to support conditional editing of the table view.

@@ -10,6 +10,8 @@
 
 @interface NetworkCollectionVC : UITableViewController
 @property IpPoolsVO *ipPoolVO;
+@property NetworkVO *network;
+@property BOOL isExternal;
 -(void)reloadData;
 @property BOOL isDetailPagePushed;
 @end

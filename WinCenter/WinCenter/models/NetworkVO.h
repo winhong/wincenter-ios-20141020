@@ -10,6 +10,7 @@
 
 @interface NetworkVO : NSObject
 
+@property int networkId;
 @property NSString *name;
 @property NSString *vlanId;
 @property NSString *state;
@@ -20,5 +21,6 @@
 -(NSString*) linkState_image;
 -(UIColor*) state_color;
 -(NSString*) vlanId_text;
+- (void) getVmsByNetworkIdAsync:(FetchObjectCompletionBlock)completionBlock;
 
 @end
