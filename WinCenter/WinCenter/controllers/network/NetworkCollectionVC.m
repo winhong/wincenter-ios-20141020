@@ -67,6 +67,9 @@
 
 -(void)clearData{
     self.title = @"虚拟机列表";
+    self.isExternal = true;
+    self.ipPoolVO = nil;
+    self.network = nil;
     if(self.ipList)
         [self.ipList removeAllObjects];
 
