@@ -372,6 +372,7 @@
 		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
 		5058666B19FE3A45000C813D /* PopOptionFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */; };
 		5058666E19FE3A6F000C813D /* PopOptionHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */; };
+		507077161A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 507077151A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json */; };
 		50D22E8F19FFEF5D00167A35 /* WSChartBusinessModelGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8A19FFEF5D00167A35 /* WSChartBusinessModelGraph.m */; };
 		50D22E9019FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8C19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m */; };
 		50D22E9119FFEF5D00167A35 /* WSChartValueCreationGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */; };
@@ -1059,6 +1060,7 @@
 		5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionFeedbackVC.m; sourceTree = "<group>"; };
 		5058666C19FE3A6F000C813D /* PopOptionHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionHelpVC.h; sourceTree = "<group>"; };
 		5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionHelpVC.m; sourceTree = "<group>"; };
+		507077151A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getVmsByNetworkIdAsync.json; sourceTree = "<group>"; };
 		50D22E8919FFEF5D00167A35 /* WSChartBusinessModelGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartBusinessModelGraph.h; sourceTree = "<group>"; };
 		50D22E8A19FFEF5D00167A35 /* WSChartBusinessModelGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChartBusinessModelGraph.m; sourceTree = "<group>"; };
 		50D22E8B19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartBusinessModelGraphInteractive.h; sourceTree = "<group>"; };
@@ -1558,6 +1560,7 @@
 				684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */,
 				6857913B1A00939A00B78539 /* NetworkVO.getIpPoolsDetailAsync.json */,
 				684D90F219FFD74C009C4B09 /* NetworkVO.getNetworkIpVmAsync.json */,
+				507077151A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json */,
 				845228931A01E54600117BDA /* VmVO.getVmSnashotAsync.json */,
 				845228951A02542100117BDA /* VmVO.getPerformanceAsync.json */,
 				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
@@ -2522,6 +2525,7 @@
 				848DA0AD1A0B803B00F135AC /* PoolVO.getStoragePoolAsync.json in Resources */,
 				181DED4519F17CB100998835 /* BusinessVO.getBusinessVOAsync.json in Resources */,
 				181DECF619F17CB100998835 /* bs-80-80.png in Resources */,
+				507077161A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json in Resources */,
 				181DECF419F17CB100998835 /* bmi-80-80.png in Resources */,
 				684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */,
 				1824362119F4FE05007E4D6C /* calories.off@2x.png in Resources */,
