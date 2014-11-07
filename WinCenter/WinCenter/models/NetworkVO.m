@@ -36,7 +36,7 @@
 
 -(NSString*) vlanId_text{
     if([self.vlanId rangeOfString:@"-" options:NSCaseInsensitiveSearch].length>0){
-        return @"";
+        return @"无";
     }else{
         return self.vlanId;
     }

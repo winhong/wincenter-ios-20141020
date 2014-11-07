@@ -160,7 +160,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.getHostPerformance&startTime=%.f&cf=AVERAGE&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id,startTime, self.hostId]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=%d&apiKey=pc.winserver.host.getHostPerformance&params=startTime=%.f&cf=AVERAGE&placeholder=%d", [RemoteObject getCurrentDatacenterVO].id,startTime, self.hostId]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         NSData *result = jsonResponse.rawBody ;
         NSObject *obj = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];

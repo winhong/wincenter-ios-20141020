@@ -111,6 +111,9 @@
         cell.state_image.layer.cornerRadius = 6;
         cell.state_image.backgroundColor = [network state_color];
         cell.ipSegment.text = ipPoolVO.segment;
+        if (!(ipPoolVO.segment)) {
+            cell.ipSegment.text = @"无";
+        }
         cell.ipTotal.text = [NSString stringWithFormat:@"%d",ipPoolVO.total];
         cell.ipUsable.text = [NSString stringWithFormat:@"%d",ipPoolVO.usable];
         cell.ipUsed.text = [NSString stringWithFormat:@"%d",ipPoolVO.used];
