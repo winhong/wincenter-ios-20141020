@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *runningTime;
+@property (weak, nonatomic) IBOutlet UILabel *resourcePoolName;
 
 @end

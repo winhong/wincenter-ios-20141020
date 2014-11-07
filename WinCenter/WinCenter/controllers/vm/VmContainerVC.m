@@ -63,6 +63,8 @@
     if (self.name.text.length > 26) {
         self.name.font = [UIFont systemFontOfSize:24.0f];
     }
+    self.poolName.text = self.vmVO.poolName;
+    self.hostName.text = self.vmVO.ownerHostName;
     
     int time = self.vmVO.runTime/1000;
     int Day = time/(3600*24.0);
