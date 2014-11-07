@@ -10,6 +10,7 @@
 #import "HostVmMemoryTop5CollectionCell.h"
 
 @interface HostVmMemoryTop5CollectionVC ()
+@property NSMutableArray *vmList2;
 
 @end
 
@@ -28,8 +29,15 @@ static NSString * const reuseIdentifier = @"Cell";
         self.hostVO = object;
         [self.hostVO getVmListAsync:^(id object, NSError *error) {
             self.vmList = ((VmListResult*)object).vms;
+            self.vmList2 = [NSMutableArray new];
+            for (int i=0; i<self.vmList.count; i++) {
+                if (!([((VmVO*)(self.vmList[i])).state isEqualToString:@"STOPPED"] || [((VmVO*)(self.vmList[i])).state isEqualToString:@"SUSPENDED"])) {
+                    [self.vmList2 addObject:self.vmList[i]];
+                }
+            }
+            
             NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"_memory" ascending:NO];
-            self.vmList_sorted = [[NSMutableArray alloc] initWithArray:self.vmList];
+            self.vmList_sorted = [[NSMutableArray alloc] initWithArray:self.vmList2];
             [self.vmList_sorted sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
             [self.collectionView reloadData];
             
