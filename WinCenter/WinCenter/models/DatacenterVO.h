@@ -33,7 +33,9 @@
 - (void) getPoolListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getHostListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
+- (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getStorageListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 
 - (void) getPoolSubVOAsync:(FetchObjectCompletionBlock)completionBlock;

@@ -56,8 +56,9 @@
                     [self.dataList addObjectsFromArray:hostOfPoolList];
                     
                     [self.collectionView headerEndRefreshing];
+                    [self.collectionView footerFinishingLoading];
                     [self.collectionView reloadData];
-                } referTo:self.dataList];
+                }];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
                     NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
