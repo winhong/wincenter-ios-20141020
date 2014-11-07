@@ -46,6 +46,10 @@
     
     StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
     cell.title.text = storageVO.storagePoolName;
+    cell.ip.text = [NSString stringWithFormat:@"(%@)",storageVO.hostIp];
+    if (storageVO.hostIp == nil) {
+        cell.ip.text = @"";
+    }
     cell.label1.text = storageVO.type;
     cell.label2.text = storageVO.location;
     cell.label3.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
