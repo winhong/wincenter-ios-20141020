@@ -30,31 +30,31 @@
                                                 <rect key="frame" x="20" y="20" width="969" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运行时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-Tv-U0L">
-                                                        <rect key="frame" x="491" y="77" width="70" height="21"/>
+                                                        <rect key="frame" x="691" y="82" width="70" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="时间" translatesAutoresizingMaskIntoConstraints="NO" id="mdX-nJ-Ruj">
-                                                        <rect key="frame" x="472" y="82" width="11" height="11"/>
+                                                        <rect key="frame" x="672" y="87" width="11" height="11"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1s-yY-icz">
-                                                        <rect key="frame" x="167" y="76" width="28" height="21"/>
+                                                        <rect key="frame" x="167" y="81" width="28" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="状态：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2n-VI-fHv">
-                                                        <rect key="frame" x="346" y="77" width="44" height="21"/>
+                                                        <rect key="frame" x="551" y="82" width="44" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="OeV-4B-dxg">
-                                                        <rect key="frame" x="328" y="82" width="11" height="11"/>
+                                                        <rect key="frame" x="533" y="87" width="11" height="11"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQQ-O8-49t">
-                                                        <rect key="frame" x="393" y="76" width="71" height="21"/>
+                                                        <rect key="frame" x="593" y="81" width="71" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -63,22 +63,52 @@
                                                         <rect key="frame" x="32" y="10" width="95" height="95"/>
                                                     </imageView>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ip-蓝色背景" translatesAutoresizingMaskIntoConstraints="NO" id="8Kb-pp-VwQ">
-                                                        <rect key="frame" x="148" y="81" width="10" height="11"/>
+                                                        <rect key="frame" x="148" y="86" width="10" height="11"/>
                                                     </imageView>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znD-Wi-Pmd">
-                                                        <rect key="frame" x="559" y="73" width="213" height="28"/>
+                                                        <rect key="frame" x="759" y="78" width="100" height="28"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-Cr-MQi">
-                                                        <rect key="frame" x="148" y="24" width="779" height="32"/>
+                                                        <rect key="frame" x="148" y="14" width="779" height="32"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="28"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9C-Wd-Fse">
-                                                        <rect key="frame" x="193" y="76" width="110" height="21"/>
+                                                        <rect key="frame" x="193" y="81" width="300" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="所属资源池：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLB-Fa-B3H">
+                                                        <rect key="frame" x="164" y="57" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="mtS-Xj-DLL">
+                                                        <rect key="frame" x="148" y="62" width="11" height="11"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzB-Qn-9Lq">
+                                                        <rect key="frame" x="251" y="56" width="250" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="所属物理机：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w4-ur-Av8">
+                                                        <rect key="frame" x="549" y="57" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="pXw-4E-rIr">
+                                                        <rect key="frame" x="533" y="62" width="11" height="11"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Y-W9-7i2">
+                                                        <rect key="frame" x="636" y="56" width="300" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -195,9 +225,11 @@
                         <outlet property="btnRestart" destination="qMp-lJ-Q5s" id="oEe-V7-LbE"/>
                         <outlet property="btnStart" destination="BgJ-I5-oJJ" id="51A-PC-vKE"/>
                         <outlet property="btnStop" destination="oEd-NI-jSb" id="vvg-YE-Q8A"/>
+                        <outlet property="hostName" destination="W5Y-W9-7i2" id="Jwh-Ag-RDQ"/>
                         <outlet property="ipLabel" destination="r9C-Wd-Fse" id="gcS-ui-Zed"/>
                         <outlet property="name" destination="dQP-Cr-MQi" id="Krg-Rn-9co"/>
                         <outlet property="pageVCContainer" destination="9R9-1v-QAk" id="S3p-BO-yIB"/>
+                        <outlet property="poolName" destination="HzB-Qn-9Lq" id="i3B-XV-oEq"/>
                         <outlet property="runningTime" destination="znD-Wi-Pmd" id="NTw-rZ-uyQ"/>
                         <outlet property="statusLabel" destination="LQQ-O8-49t" id="F5r-ms-ZSA"/>
                         <outlet property="topToolBar" destination="9Ur-d1-Age" id="kVm-ub-TEl"/>
@@ -608,6 +640,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="HiO-NH-TeE">
+                                            <rect key="frame" x="51" y="61" width="29" height="13"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -617,6 +652,7 @@
                                     <outlet property="label1" destination="7In-6Q-VId" id="xqZ-BS-mK0"/>
                                     <outlet property="label2" destination="eCs-TD-lgv" id="oeE-hA-rLB"/>
                                     <outlet property="label3" destination="4rD-DM-KQj" id="Xm5-2W-gQU"/>
+                                    <outlet property="share_image" destination="HiO-NH-TeE" id="Gbe-gp-SME"/>
                                     <outlet property="status" destination="OcA-6Y-cXN" id="wMx-79-gEK"/>
                                     <outlet property="title" destination="RxR-x1-4z4" id="32N-GP-7Ag"/>
                                 </connections>
@@ -1490,6 +1526,7 @@
         <image name="ip-蓝色背景" width="10" height="11"/>
         <image name="os-others" width="55" height="55"/>
         <image name="os-others-big" width="110" height="110"/>
+        <image name="share" width="29" height="13"/>
         <image name="内存-black" width="15" height="15"/>
         <image name="勾" width="17" height="12"/>
         <image name="叉－蓝色" width="17" height="17"/>

@@ -80,6 +80,10 @@
     cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [vmVO storage_value], [vmVO storage_unit]];
     cell.status.text = [vmVO state_text];
     cell.status.textColor = [vmVO state_color];
+    cell.osType.text = vmVO.osType;
+    if (vmVO.osType == nil) {
+        cell.osType.text = @"(尚未安装系统)";
+    }
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
     cell.status_image.layer.cornerRadius = 6;
     cell.status_image.backgroundColor = [vmVO state_color];

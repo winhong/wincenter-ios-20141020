@@ -27,9 +27,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *ipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *runningTime;
+@property (weak, nonatomic) IBOutlet UILabel *poolName;
 
 @property BOOL hasPerformancePage;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *hostName;
 
 @property UIAlertView *openAlert;
 @property UIAlertView *shutdownAlert;
