@@ -44,7 +44,10 @@
         self.vmDict = [NSMutableDictionary new];
         for (NetworkIpVmVO *vmvo in ((NetworkIpVmListResult*)object).vms){
             if (vmvo.ip) {
-                [self.vmDict setObject:vmvo forKey:vmvo.ip];
+                NSArray *iplist = [vmvo.ip componentsSeparatedByString:@","];
+                for(NSString *ip in iplist){
+                    [self.vmDict setObject:vmvo forKey:ip];
+                }
             }
         }
     }];
