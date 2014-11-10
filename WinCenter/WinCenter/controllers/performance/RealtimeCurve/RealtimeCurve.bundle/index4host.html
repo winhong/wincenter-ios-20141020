@@ -43,7 +43,7 @@
         now = now + formaterDate((date.getMonth()+1))+"-";//取月的时候取的是当前月-1如果想取当前月+1就可以了
         now = now + formaterDate(date.getDate())+"T";
         now = now + formaterDate(date.getHours())+":";
-        now = now + formaterDate(date.getMinutes())+":";
+        now = now + formaterDate(date.getMinutes()-5)+":";
         now = now + formaterDate(date.getSeconds())+"";
         return now;
     }
@@ -57,8 +57,16 @@
     });
     
     $("#submitBtn").bind("click",function(){
-                              
-        sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
+         var time = $("#dateTimePicker").val().replace("T"," ");
+         var now = new Date();
+         var str = time.replace(/-/g,"/");
+         var date = new Date(str);
+         
+         
+         if(date >= now)
+         	alert("开始时间不能大于或等于当前时间！");
+         else
+         	sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
     })
     var chartMap = new Map();
 	

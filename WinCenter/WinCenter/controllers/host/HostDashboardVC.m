@@ -164,7 +164,7 @@
         [subView removeFromSuperview];
     }
     PNCircleChart * circleChart;
-    if(self.datacenterStatWinserver==nil){
+    if(self.datacenterStatWinserver.hostNubmer == 0){
         circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
     }else{
         circleChart= [[PNCircleChart alloc] initWithFrame:header.hostTypeChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:(self.datacenterStatWinserver.hostNubmer - self.datacenterStatWinserver.dissociateHostNumber)*100/self.datacenterStatWinserver.hostNubmer] andClockwise:YES andShadow:YES];

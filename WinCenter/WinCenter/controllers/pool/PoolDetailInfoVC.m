@@ -126,7 +126,7 @@
     self.name.text = [NSString stringWithFormat:@"%@", self.poolVO.resourcePoolName];
     self.hostCount.text = [NSString stringWithFormat:@"%d", self.poolVO.hostNumber];
     self.vmCount.text = [NSString stringWithFormat:@"%d", self.poolVO.vmNumber];
-    self.vType.text = [self.poolVO hypervisor_text];
+    self.vType.text = [NSString stringWithFormat:@"%@ %@", [self.poolVO hypervisor_text],self.poolVO.productVersion];
     self.vVersion.text = self.poolVO.productVersion;
     self.vDate.text = [self.poolVO versionDate_text];
     
