@@ -192,6 +192,21 @@
         return NO;
     }
 }
-
+-(NSString *)type_text{
+    NSString *str = self.type;
+    if([str isEqualToString:@"lvm"]){
+        return @"本地LVM";
+    }else if([str isEqualToString:@"udev"]){
+        return @"可移动存储";
+    }else if([str isEqualToString:@"lvmoiscsi"]){
+        return @"iSCSI";
+    }else if([str isEqualToString:@"nfs"]){
+        return @"NFS";
+    }else if([str isEqualToString:@"lvmohba"]){
+        return @"FC SAN";
+    }else{
+        return [str uppercaseString];
+    }
+}
 
 @end

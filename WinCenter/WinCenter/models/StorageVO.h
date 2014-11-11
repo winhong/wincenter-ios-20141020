@@ -55,4 +55,5 @@
 - (void) getStorageVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getStorageVolumnListAsync:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
 
+-(NSString *)type_text;
 @end
