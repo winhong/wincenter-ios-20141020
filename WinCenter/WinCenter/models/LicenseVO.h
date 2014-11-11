@@ -14,6 +14,7 @@
 @property int useedCount;
 @property int remianDays;
 
++ (void) checkLicenseAsync:(FetchObjectCompletionBlock)completeBlock;
 + (void) getLicenseVOAsync:(FetchObjectCompletionBlock)completeBlock;
 
 @end

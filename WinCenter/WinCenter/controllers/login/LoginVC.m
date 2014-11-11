@@ -181,7 +181,16 @@
             [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
             [[NSUserDefaults standardUserDefaults] setValue:self.password.text forKey:@"PASSWORD"];
             
-            [self toLogin];
+            [LicenseVO checkLicenseAsync:^(id object, NSError *error) {
+                LicenseCheckVO *checkVO = object;
+                if(checkVO.errorState==0){
+                    [self toLogin];
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:@"许可证检查失败或许可证数量不足！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                    [alert show];
+                }
+            }];
+            
         } withFailedBlock:^(NSError *error){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:@"用户名或密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alert show];

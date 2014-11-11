@@ -99,6 +99,7 @@ typedef NS_ENUM(NSInteger, DatacenterDetailPageType) {
 #import "ControlRecordVO.h"
 #import "ControlRecordListResult.h"
 #import "LicenseWciVO.h"
+#import "LicenseCheckVO.h"
 #import "LicenseVO.h"
 #import "LoginVO.h"
 #import "NetworkVO.h"
