@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        self.navigationItem.rightBarButtonItem.enabled = false;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -97,4 +97,22 @@
         }
     }
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex==1){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+- (IBAction)exitSystem:(id)sender {
+    NSString *prompt;
+    
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        prompt = @"感谢您的体验，确定要退出吗？";
+    }else{
+        prompt = @"确定要退出吗？";
+    }
+    
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"操作提示" message:prompt delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [view show];
+}
 @end

@@ -11,8 +11,8 @@
 #import "VmContainerVC.h"
 @interface NetworkCollectionVC ()
 
-@property NSMutableDictionary *vmDict;
-@property NSMutableArray *ipList;
+//@property NSMutableDictionary *vmDict;
+//@property NSMutableArray *ipList;
 @property NSMutableArray *vmList;
 
 @end
@@ -40,22 +40,22 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(id object, NSError *error) {
-        self.vmDict = [NSMutableDictionary new];
-        for (NetworkIpVmVO *vmvo in ((NetworkIpVmListResult*)object).vms){
-            if (vmvo.ip) {
-                NSArray *iplist = [vmvo.ip componentsSeparatedByString:@","];
-                for(NSString *ip in iplist){
-                    [self.vmDict setObject:vmvo forKey:ip];
-                }
-            }
-        }
-    }];
+//    [[RemoteObject getCurrentDatacenterVO] getNetworkIpVmAsync:^(id object, NSError *error) {
+//        self.vmDict = [NSMutableDictionary new];
+//        for (NetworkIpVmVO *vmvo in ((NetworkIpVmListResult*)object).vms){
+//            if (vmvo.ip) {
+//                NSArray *iplist = [vmvo.ip componentsSeparatedByString:@","];
+//                for(NSString *ip in iplist){
+//                    [self.vmDict setObject:vmvo forKey:ip];
+//                }
+//            }
+//        }
+//    }];
     
     __unsafe_unretained typeof(self) week_self = self;
     
     [self.tableView addHeaderWithCallback:^{
-        [week_self.ipList removeAllObjects];
+        //[week_self.ipList removeAllObjects];
         [week_self.vmList removeAllObjects];
         [week_self reloadData];
     }];
@@ -71,10 +71,10 @@
 -(void)clearData{
     self.title = @"虚拟机列表";
     self.isExternal = true;
-    self.ipPoolVO = nil;
+    //self.ipPoolVO = nil;
     self.network = nil;
-    if(self.ipList)
-        [self.ipList removeAllObjects];
+    //if(self.ipList)
+    //    [self.ipList removeAllObjects];
 
     if(self.vmList)
         [self.vmList removeAllObjects];
@@ -88,25 +88,26 @@
     else
         self.title = @"虚拟机列表";
     
-    if(self.isExternal){
-        if(self.ipPoolVO){
-            [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
-                self.ipList = [NSMutableArray new];
-                for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
-                    if(detailVO.state == 2){
-                        [self.ipList addObject:detailVO];
-                    }
-                }
-                [self.tableView headerEndRefreshing];
-                [self.tableView footerFinishingLoading];
-                [self.tableView reloadData];
-            } withPoolId:self.ipPoolVO.ipPoolId];
-        }else{
-            [self.tableView headerEndRefreshing];
-            [self.tableView footerFinishingLoading];
-            [self.tableView reloadData];
-        }
-    }else{
+//    if(self.isExternal){
+//        if(self.ipPoolVO){
+//            [[RemoteObject getCurrentDatacenterVO] getIpPoolsDetailAsync:^(id object, NSError *error) {
+//                self.ipList = [NSMutableArray new];
+//                for(IpPoolsListDetail *detailVO in ((IpPoolsListDetailResult*)object).ipList){
+//                    if(detailVO.state == 2){
+//                        [self.ipList addObject:detailVO];
+//                    }
+//                }
+//                [self.tableView headerEndRefreshing];
+//                [self.tableView footerFinishingLoading];
+//                [self.tableView reloadData];
+//            } withPoolId:self.ipPoolVO.ipPoolId];
+//        }else{
+//            [self.tableView headerEndRefreshing];
+//            [self.tableView footerFinishingLoading];
+//            [self.tableView reloadData];
+//        }
+//    }else{
+    if(self.network){
         [self.network getVmsByNetworkIdAsync:^(id object, NSError *error) {
             self.vmList = [NSMutableArray new];
             [self.vmList addObjectsFromArray:(NSArray*)object];
@@ -114,7 +115,12 @@
             [self.tableView footerFinishingLoading];
             [self.tableView reloadData];
         }];
+    }else{
+        [self.tableView headerEndRefreshing];
+        [self.tableView footerFinishingLoading];
+        [self.tableView reloadData];
     }
+    //}
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,11 +138,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(self.isExternal){
-        return self.ipList ? self.ipList.count : 0;
-    }else{
+    //if(self.isExternal){
+    //    return self.ipList ? self.ipList.count : 0;
+    //}else{
         return self.vmList ? self.vmList.count : 0;
-    }
+    //}
 }
 
 
@@ -144,28 +150,28 @@
 {
     NetworkCollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NetworkCollectionCell" forIndexPath:indexPath];
     
-    if(self.isExternal){
-        if(self.ipList.count==0) return cell;
-        
-        cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
-        
-        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
-        
-        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
-        if(vm){
-            cell.vmName.text = vm.name;
-            cell.vmState.text = [vm state_text];
-            cell.vmState.textColor = [vm state_color];
-        }else{
-            cell.vmName.text = @"";
-            cell.vmState.text = @"";
-        }
-        
-        cell.vmIp.text = detailVO.ip;
-        
-        
-        return cell;
-    }else{
+//    if(self.isExternal){
+//        if(self.ipList.count==0) return cell;
+//        
+//        cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
+//        
+//        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+//        
+//        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+//        if(vm){
+//            cell.vmName.text = vm.name;
+//            cell.vmState.text = [vm state_text];
+//            cell.vmState.textColor = [vm state_color];
+//        }else{
+//            cell.vmName.text = @"";
+//            cell.vmState.text = @"";
+//        }
+//        
+//        cell.vmIp.text = detailVO.ip;
+//        
+//        
+//        return cell;
+//    }else{
         if(self.vmList.count==0) return cell;
         
         cell.backgroundColor = (indexPath.row%2==1) ? ([UIColor whiteColor]) : ([UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]);
@@ -183,7 +189,7 @@
         cell.vmIp.text = vm.ip;
 
         return cell;
-    }
+    //}
 }
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 //    return @"网络名称 （Vlan：20   IP段：192.168.1.1/28 IP总数：30 IP可用数：10）";
@@ -263,22 +269,22 @@
         vc = [[root childViewControllers] firstObject];
     }
     
-    if(self.isExternal){
-        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
-        
-        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
-        if(vm){
-            VmVO *vmvo = [[VmVO alloc] init];
-            vmvo.vmId = vm.vmId;
-            vmvo.name = vm.name;
-            vc.vmVO = vmvo;
-            if(self.isDetailPagePushed){
-                [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
-            }else{
-                [self presentViewController:root animated:YES completion:nil];
-            }
-        }
-    }else{
+//    if(self.isExternal){
+//        IpPoolsListDetail *detailVO = self.ipList[indexPath.row];
+//        
+//        NetworkIpVmVO *vm = [self.vmDict objectForKey:detailVO.ip];
+//        if(vm){
+//            VmVO *vmvo = [[VmVO alloc] init];
+//            vmvo.vmId = vm.vmId;
+//            vmvo.name = vm.name;
+//            vc.vmVO = vmvo;
+//            if(self.isDetailPagePushed){
+//                [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
+//            }else{
+//                [self presentViewController:root animated:YES completion:nil];
+//            }
+//        }
+//    }else{
         VmVO *vm = self.vmList[indexPath.row];
         if(vm){
             VmVO *vmvo = [[VmVO alloc] init];
@@ -291,6 +297,6 @@
                 [self presentViewController:root animated:YES completion:nil];
             }
         }
-    }
+    //}
 }
 @end

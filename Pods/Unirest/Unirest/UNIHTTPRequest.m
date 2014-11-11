@@ -163,15 +163,27 @@ NSTimer *hudTimer = nil;
 
                     //response(nil, error);
                 }else{
-                    UNIHTTPJsonResponse *jsonResponse = [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:res];
-                    if(jsonResponse){
-                        NSString *cookieStr = [jsonResponse.headers valueForKey:@"Set-Cookie"];
-                        if(cookieStr!=nil){
-                            cookieStr = [cookieStr componentsSeparatedByString:@";"][0];
-                            [UNIRest defaultHeader:@"Cookie" value:cookieStr];
+                    if(res.code==500){
+                        NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
+                                                                          title:@"请求失败"
+                                                                        message:@"账号已被修改密码、已被冻结或者已被删除，请重新登陆！"
+                                                                       delegate:nil];
+                        //[alert setTextAlignment:NSTextAlignmentCenter];
+                        [alert show];
+                        [alert showWithCompletion:^{
+                            NSLog(@"Alert with completion handler");
+                        }];
+                    }else{
+                        UNIHTTPJsonResponse *jsonResponse = [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:res];
+                        if(jsonResponse){
+                            NSString *cookieStr = [jsonResponse.headers valueForKey:@"Set-Cookie"];
+                            if(cookieStr!=nil){
+                                cookieStr = [cookieStr componentsSeparatedByString:@";"][0];
+                                [UNIRest defaultHeader:@"Cookie" value:cookieStr];
+                            }
                         }
+                        response(jsonResponse, error);
                     }
-                    response(jsonResponse, error);
                 }
                 
             }

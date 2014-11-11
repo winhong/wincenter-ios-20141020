@@ -153,21 +153,23 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NetworkVO *network = self.networkList[indexPath.row];
-    IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
+    //IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
     
     UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
     UINavigationController *nav = [[splitVC childViewControllers] lastObject];
     NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
     detailVC.isExternal = self.isExternal;
-    if (self.isExternal) {
-        detailVC.network = network;
-        detailVC.ipPoolVO = ipPoolVO;
-        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
-    }else{
-       // detailVC.ipPoolVO = ipPoolVO;
-        detailVC.network = network;
-        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
-    }
+//    if (self.isExternal) {
+//        detailVC.network = network;
+//        detailVC.ipPoolVO = ipPoolVO;
+//        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+//    }else{
+//       // detailVC.ipPoolVO = ipPoolVO;
+//        detailVC.network = network;
+//        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+//    }
+    detailVC.network = network;
+    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
 }
 /*
 // Override to support conditional editing of the table view.
