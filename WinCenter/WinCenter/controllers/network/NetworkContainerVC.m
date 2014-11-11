@@ -28,8 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.name.title = [RemoteObject getCurrentDatacenterVO].name;
-    // Do any additional setup after loading the view.
+    
+//    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+//        if(!self.navigationItem.leftBarButtonItem){
+//            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+//        }
+//        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+//    }];
 }
 
 - (void)didReceiveMemoryWarning

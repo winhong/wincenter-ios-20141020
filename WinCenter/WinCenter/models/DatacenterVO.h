@@ -21,6 +21,7 @@
 @property BOOL vdcCanDel;
 @property BOOL resCaseCanDel;
 
+- (void) getDatacenterVOAsync:(FetchObjectCompletionBlock)completionBlock;
 + (void) getDatacenterListAsync:(FetchObjectCompletionBlock)completionBlock;
 
 - (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock;

@@ -21,60 +21,66 @@
 @implementation VmDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
         
-        [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
-            self.vmSubVO = object;
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
             
-            if(self.poolVO){
-                [self.poolVO getVmListAsync:^(id object, NSError *error) {
-                    [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
-                    
-                    [self.collectionView headerEndRefreshing];
-                    if(self.dataList.count >= ((VmListResult*)object).recordTotal){
-                        [self.collectionView footerFinishingLoading];
-                    }else{
-                        [self.collectionView footerEndRefreshing];
-                    }
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                } referTo:self.dataList];
-            }else if(self.isOutofPool){
-                //游离物理主机
-                [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(id object, NSError *error) {
-                    NSMutableArray *vmOfPoolList = [NSMutableArray new];
-                    for (VmVO *vm in ((VmListResult*)object).vms) {
-                        if (!(vm.poolId)) {
-                            [vmOfPoolList addObject: vm];
+            [[RemoteObject getCurrentDatacenterVO] getVmSubVOAsync:^(id object, NSError *error) {
+                self.vmSubVO = object;
+                
+                if(self.poolVO){
+                    [self.poolVO getVmListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+                        
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
                         }
-                    }
-                    [self.dataList addObjectsFromArray:vmOfPoolList];
-                    
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerFinishingLoading];
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                }];
-            }else{
-                [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(id object, NSError *error) {
-                    [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
-                    
-                    [self.collectionView headerEndRefreshing];
-                    if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                    } referTo:self.dataList];
+                }else if(self.isOutofPool){
+                    //游离物理主机
+                    [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(id object, NSError *error) {
+                        NSMutableArray *vmOfPoolList = [NSMutableArray new];
+                        for (VmVO *vm in ((VmListResult*)object).vms) {
+                            if (!(vm.poolId)) {
+                                [vmOfPoolList addObject: vm];
+                            }
+                        }
+                        [self.dataList addObjectsFromArray:vmOfPoolList];
+                        
+                        [self.collectionView headerEndRefreshing];
                         [self.collectionView footerFinishingLoading];
-                    }else{
-                        [self.collectionView footerEndRefreshing];
-                    }
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                    
-                } referTo:self.dataList];
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                    }];
+                }else{
+                    [[RemoteObject getCurrentDatacenterVO] getVmListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((VmListResult*)object).vms];
+                        
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= ((VmListResult*)object).recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
+                        }
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                        
+                    } referTo:self.dataList];
 
-            }
+                }
+            }];
         }];
     }];
-
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -131,7 +137,6 @@
 
     VmDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"VmDashboardHeader" forIndexPath:indexPath];
     
-    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.vmCount.text =[NSString stringWithFormat:@"%d",self.datacenterStatWinserver.vmNumber];
     header.osTypeWin.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Windows];
     header.osTypeLinux.text =[NSString stringWithFormat:@"%d",self.vmSubVO.os.Linux];

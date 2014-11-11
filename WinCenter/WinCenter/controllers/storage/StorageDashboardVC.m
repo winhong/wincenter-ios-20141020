@@ -21,52 +21,61 @@
 @implementation StorageDashboardVC
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
-        [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
-            self.StorageSubVOWinserver = object;
+    
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+        
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
             
-            if(self.poolVO){
-                [self.poolVO getStorageListAsync:^(id object, NSError *error) {
-                    [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
-                    [self.collectionView headerEndRefreshing];
-                    if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
-                        [self.collectionView footerFinishingLoading];
-                    }else{
-                        [self.collectionView footerEndRefreshing];
-                    }
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                } referTo:self.dataList];
-            }else if(self.isOutofPool){
-                //游离物理主机
-                [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
-                    NSMutableArray *storageOfPoolList = [NSMutableArray new];
-                    for (StorageVO *storage in ((StorageListResult*)object).resultList) {
-                        if (!(storage.resourcePoolId)) {
-                            [storageOfPoolList addObject: storage];
+            [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
+                self.StorageSubVOWinserver = object;
+                
+                if(self.poolVO){
+                    [self.poolVO getStorageListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
                         }
-                    }
-                    [self.dataList addObjectsFromArray:storageOfPoolList];
-                    
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerFinishingLoading];
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                }];
-            }else{
-                [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
-                    [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
-                    [self.collectionView headerEndRefreshing];
-                    if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                    } referTo:self.dataList];
+                }else if(self.isOutofPool){
+                    //游离物理主机
+                    [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
+                        NSMutableArray *storageOfPoolList = [NSMutableArray new];
+                        for (StorageVO *storage in ((StorageListResult*)object).resultList) {
+                            if (!(storage.resourcePoolId)) {
+                                [storageOfPoolList addObject: storage];
+                            }
+                        }
+                        [self.dataList addObjectsFromArray:storageOfPoolList];
+                        
+                        [self.collectionView headerEndRefreshing];
                         [self.collectionView footerFinishingLoading];
-                    }else{
-                        [self.collectionView footerEndRefreshing];
-                    }
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                } referTo:self.dataList];
-            }
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                    }];
+                }else{
+                    [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
+                        [self.dataList addObjectsFromArray:((StorageListResult*)object).resultList];
+                        [self.collectionView headerEndRefreshing];
+                        if(self.dataList.count >= ((StorageListResult*)object).recordTotal){
+                            [self.collectionView footerFinishingLoading];
+                        }else{
+                            [self.collectionView footerEndRefreshing];
+                        }
+                        [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+                    } referTo:self.dataList];
+                }
+            }];
         }];
     }];
 }
@@ -112,7 +121,6 @@
 
     StorageDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"StorageDashboardHeader" forIndexPath:indexPath];
     
-    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.shareStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total shareStorage_value],[self.StorageSubVOWinserver.total shareStorage_unit]];
     header.localStorageSize.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total localStorage_value],[self.StorageSubVOWinserver.total localStorage_unit]];
     header.storageSize2.text = [NSString stringWithFormat:@"%.2f%@",[self.StorageSubVOWinserver.total totalStorage_value],[self.StorageSubVOWinserver.total totalStorage_unit]];

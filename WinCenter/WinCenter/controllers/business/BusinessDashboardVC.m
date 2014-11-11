@@ -25,53 +25,62 @@
 
 
 -(void)reloadData{
-    [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
-        
-        self.allBusDomainsList = ((BusDomainsListResult*)object).recordTotal;
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
     
-        [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
-            self.allBusList = ((BusinessListResult*)object).resultList;
-            
-            [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
-                self.unalloctedBusList = ((BusinessListResult*)object).resultList;
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+        
+            [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
                 
-                if(self.busDomainVO){
-                    //陈洁补充：根据业务域查询业务系统
-                    NSMutableArray *alloctedBusList = [NSMutableArray new];
-                    for (BusinessVO *busVO in self.allBusList){
-                        if (busVO.busDomainId == self.busDomainVO.busDomainId) {
-                            [alloctedBusList addObject:busVO];
-                        }
-                    }
-                    [self.dataList addObjectsFromArray:alloctedBusList];
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                }else if(self.isUnGroup){
-                    //陈洁补充：查询未分配的业务系统
-                    [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerEndRefreshing];
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                }else{
-                    [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
-                        [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
-                        [self.collectionView headerEndRefreshing];
-                        if(self.dataList.count >= ((BusinessListResult*)object).recordTotal){
-                            [self.collectionView footerFinishingLoading];
-                        }else{
+                self.allBusDomainsList = ((BusDomainsListResult*)object).recordTotal;
+            
+                [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+                    self.allBusList = ((BusinessListResult*)object).resultList;
+                    
+                    [[RemoteObject getCurrentDatacenterVO] getBusinessUnallocatedAsync:^(id object, NSError *error) {
+                        self.unalloctedBusList = ((BusinessListResult*)object).resultList;
+                        
+                        if(self.busDomainVO){
+                            //陈洁补充：根据业务域查询业务系统
+                            NSMutableArray *alloctedBusList = [NSMutableArray new];
+                            for (BusinessVO *busVO in self.allBusList){
+                                if (busVO.busDomainId == self.busDomainVO.busDomainId) {
+                                    [alloctedBusList addObject:busVO];
+                                }
+                            }
+                            [self.dataList addObjectsFromArray:alloctedBusList];
+                            [self.collectionView headerEndRefreshing];
                             [self.collectionView footerEndRefreshing];
+                            [self.collectionView reloadData];
+                            self.navigationItem.rightBarButtonItem.enabled = true;
+                        }else if(self.isUnGroup){
+                            //陈洁补充：查询未分配的业务系统
+                            [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
+                            [self.collectionView headerEndRefreshing];
+                            [self.collectionView footerEndRefreshing];
+                            [self.collectionView reloadData];
+                            self.navigationItem.rightBarButtonItem.enabled = true;
+                        }else{
+                            [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+                                [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
+                                [self.collectionView headerEndRefreshing];
+                                if(self.dataList.count >= ((BusinessListResult*)object).recordTotal){
+                                    [self.collectionView footerFinishingLoading];
+                                }else{
+                                    [self.collectionView footerEndRefreshing];
+                                }
+                                [self.collectionView reloadData];
+                                self.navigationItem.rightBarButtonItem.enabled = true;
+                            } referTo:self.dataList];
                         }
-                        [self.collectionView reloadData];
-                        self.navigationItem.rightBarButtonItem.enabled = true;
-                    } referTo:self.dataList];
-                }
+                    }];
+                }];
             }];
         }];
     }];
-    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -91,7 +100,6 @@
     
     BusinessDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"BusinessDashboardHeader" forIndexPath:indexPath];
     
-    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.businessCount.text =[NSString stringWithFormat:@"%ld",self.allBusList.count];
     header.busDomainsCount.text = [NSString stringWithFormat:@"%d",self.allBusDomainsList];
     header.alloctedBus.text =[NSString stringWithFormat:@"%ld",self.allBusList.count - self.unalloctedBusList.count];

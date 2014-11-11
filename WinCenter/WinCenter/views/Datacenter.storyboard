@@ -960,7 +960,6 @@
                                 <outlet property="memoryChartGroup" destination="9z4-0f-zgI" id="wgy-c2-Zsb"/>
                                 <outlet property="memoryUnusedSize" destination="Grd-Y4-xUp" id="0Jp-s4-GJV"/>
                                 <outlet property="memoryUnusedSize2" destination="Aiw-zc-b5s" id="BMf-5q-9rk"/>
-                                <outlet property="name" destination="PSP-np-Fnh" id="f4D-ll-pqa"/>
                                 <outlet property="poolCount" destination="9pc-2g-JJe" id="2sB-7K-NOM"/>
                                 <outlet property="poolCount2" destination="bau-9y-gTh" id="dcI-ws-S4v"/>
                                 <outlet property="storageChartGroup" destination="2ch-yH-0rD" id="6pR-vZ-y9I"/>
@@ -996,7 +995,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="资源池总览" id="Jb5-Vj-smb">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="PSP-np-Fnh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="BcQ-n1-NLc">
                             <connections>
                                 <action selector="refreshAction:" destination="buB-ce-6JP" id="GD2-UU-hNf"/>
@@ -1535,7 +1533,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="数据中心总览" id="fha-aA-CHi">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="TuY-wu-MG6"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sxv-o1-9yn">
                             <connections>
                                 <action selector="refreshAction:" destination="cSx-41-28X" id="x7V-hc-pAN"/>
@@ -1563,7 +1560,6 @@
                         <outlet property="memeryUsedSize" destination="erL-2E-WhP" id="iin-cg-K4l"/>
                         <outlet property="memoryChartGroup" destination="X2m-1d-Q2q" id="ryE-oU-Sao"/>
                         <outlet property="memoryUnusedSize" destination="60A-ua-jKz" id="hEI-yB-MFe"/>
-                        <outlet property="name" destination="TuY-wu-MG6" id="Lc3-xy-t3N"/>
                         <outlet property="poolCount" destination="zqY-g2-gCH" id="nrr-Z0-zak"/>
                         <outlet property="scrollView" destination="V8Q-mN-loo" id="hhC-dm-5gZ"/>
                         <outlet property="storageChartGroup" destination="C50-vk-uSV" id="6BX-Kr-s8m"/>
@@ -2140,7 +2136,6 @@
                                 <outlet property="hostTypeChart" destination="mfa-DS-bzF" id="Fzc-ma-bDq"/>
                                 <outlet property="inPoolHostCount" destination="jWp-FV-fuv" id="D0O-aH-Fv4"/>
                                 <outlet property="inPoolHostCount2" destination="kCa-Fu-ydr" id="coj-rJ-mMK"/>
-                                <outlet property="name" destination="OL7-NI-Ma3" id="YTW-QS-KMl"/>
                                 <outlet property="statusDis" destination="het-0D-r1R" id="iwt-x5-JJs"/>
                                 <outlet property="statusDis2" destination="WAb-3W-sQO" id="uSX-R9-pta"/>
                                 <outlet property="statusOk" destination="mk7-SZ-7y8" id="rQw-2q-y5G"/>
@@ -2180,7 +2175,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="物理机总览" id="UHz-Uf-ULe">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="OL7-NI-Ma3"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="g4U-u9-d8D">
                             <connections>
                                 <action selector="refreshAction:" destination="tNF-5l-310" id="O9g-EU-GWp"/>
@@ -2665,7 +2659,6 @@
                                 <outlet property="localStorageSize2" destination="5DE-uP-BHM" id="R6h-GT-8QK"/>
                                 <outlet property="localStorageSize3" destination="r5C-2h-JCq" id="2Mz-Iw-lee"/>
                                 <outlet property="localStorageSize4" destination="Gic-6F-xAg" id="Fu1-ZL-yy3"/>
-                                <outlet property="name" destination="KpP-j0-2Yt" id="MCc-5l-KTf"/>
                                 <outlet property="nfsStorageSize" destination="DpZ-NF-atm" id="1Ig-Bw-WBq"/>
                                 <outlet property="nfsStorageSize2" destination="zAG-at-7zG" id="NJk-pe-3gq"/>
                                 <outlet property="shareStorageSize" destination="ChX-CH-aPh" id="21u-hu-vwh"/>
@@ -2712,7 +2705,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="存储池总览" id="NVZ-Rm-y5V">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="KpP-j0-2Yt"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QxL-3K-sr1">
                             <connections>
                                 <action selector="refreshAction:" destination="Vdc-u6-N4C" id="Nd0-Yk-3A7"/>
@@ -3173,7 +3165,6 @@
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <connections>
-                                <outlet property="name" destination="HOR-tp-gmx" id="ssn-9N-dsi"/>
                                 <outlet property="osTypeLinux" destination="QJB-Hi-C7r" id="rfE-0W-E6w"/>
                                 <outlet property="osTypeLinux2" destination="T3Y-Ar-tG4" id="NdD-FE-1P0"/>
                                 <outlet property="osTypeWin" destination="X8V-oV-Q1T" id="dYF-ai-4y9"/>
@@ -3221,7 +3212,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="虚拟机总览" id="mID-sn-LYh">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="HOR-tp-gmx"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="bed-jq-p8b">
                             <connections>
                                 <action selector="refreshAction:" destination="8QM-yF-skn" id="qo0-xT-lDm"/>
@@ -3527,7 +3517,6 @@
                                 <outlet property="businessCount" destination="K5Q-sf-N7A" id="g1d-bz-dJB"/>
                                 <outlet property="businessCount2" destination="ESA-nk-A9s" id="qUE-Dk-GAe"/>
                                 <outlet property="businessVmCount2" destination="K9i-gH-6pf" id="Ly2-2A-H91"/>
-                                <outlet property="name" destination="ROt-1z-Eh0" id="DeD-Hd-J7O"/>
                                 <outlet property="unalloctedBus" destination="Z40-aj-XHx" id="wm2-Rr-ly6"/>
                                 <outlet property="unalloctedBus2" destination="FJk-Ol-hra" id="OjN-UM-Cj6"/>
                             </connections>
@@ -3563,7 +3552,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="业务系统总览" id="cco-aI-dK4">
-                        <barButtonItem key="leftBarButtonItem" title="   " id="ROt-1z-Eh0"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="mlc-hJ-ixU">
                             <connections>
                                 <action selector="refreshAction:" destination="rJv-N2-owX" id="cNi-Sl-g14"/>
