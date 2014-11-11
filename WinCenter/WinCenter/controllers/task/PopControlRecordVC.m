@@ -36,7 +36,7 @@
     }else if([self.remoteObject isKindOfClass:VmVO.class]){
         prefix = ((VmVO*)self.remoteObject).name;
     }
-    self.title = [NSString stringWithFormat:@"%@的操作日志", prefix];
+    self.title = [NSString stringWithFormat:@"%@的任务列表", prefix];
     
     __unsafe_unretained typeof(self) week_self = self;
     
