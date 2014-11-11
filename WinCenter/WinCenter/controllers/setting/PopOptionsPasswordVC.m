@@ -38,7 +38,25 @@
     }
     
 }
+-(BOOL)matchPassword:( NSString*)str{
+    NSString *urlString = str;
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\s`~!@#$%^&*()_+|{}?;:',.><\\-\\]\\[\\/\u0391-\uFFE5]*" options:0 error:&error];
+    
+    NSTextCheckingResult *firstMatch = [regex firstMatchInString:urlString options:0 range:NSMakeRange(0, [urlString length])];
+    
+    NSRange resultRange = [firstMatch rangeAtIndex:0];
+    NSString *result = [urlString substringWithRange:resultRange];
+    if ([result isEqualToString:str]) {
+        return NO;
+    }else{
+        return YES;
+    }
+
+    
+}
 - (IBAction)done:(id)sender {
+    [self matchPassword:@"asdf"];
     NSString *msg = @"";
     if([self.passwordOld.text isEqualToString:@""])
     {
@@ -47,8 +65,9 @@
     else if ([self.passwordNew.text isEqualToString:@""])
     {
         msg = @"请输入新密码！";
-    }
-    else if (![self.passwordNew.text isEqualToString:self.passwordRepeat.text])
+    }else if([self matchPassword:self.passwordNew.text]){
+        msg = @"密码不能包含特殊字符！";
+    }else if (![self.passwordNew.text isEqualToString:self.passwordRepeat.text])
     {
         msg = @"重复新密码与新密码不一致！";
     }
