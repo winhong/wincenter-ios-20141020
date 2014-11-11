@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DatacenterDetailInfoVC.h"
 #import "DatacenterTableVC.h"
+#import "PopWarningInfoVC.h"
 #import <HMSegmentedControl/HMSegmentedControl.h>
 
 @class DatacenterDetailInfoVC;
