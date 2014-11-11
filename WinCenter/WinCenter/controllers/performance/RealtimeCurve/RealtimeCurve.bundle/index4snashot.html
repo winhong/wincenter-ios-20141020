@@ -29,15 +29,15 @@
 	<table>
 		<tr>
 			<td>名称：</td>
-			<td class="tdvalue"><div id="vm_name" style="width:220px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;">请选择一个快照</div></td>
+			<td class="tdvalue"><div id="vm_name" style="width:220px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;">无</div></td>
 		</tr>
 		<tr>
 			<td>类型：</td>
-			<td class="tdvalue" id="vm_type">请选择一个快照</td>
+			<td class="tdvalue" id="vm_type">无</td>
 		</tr>
 		<tr>
 			<td>创建日期：</td>
-			<td class="tdvalue" id="vm_time">请选择一个快照</td>
+			<td class="tdvalue" id="vm_time">无</td>
 		</tr>
 	</table>
 </div>
@@ -94,6 +94,9 @@ function showRaphael(data){
 			{
 				g.addEdge("vm_begin", v.snapShotId);
 			}
+            if(((typeof v.currented) !== undefined )&& v.currented != null){
+               nodeClick(v);
+            }
 				
 		})
 		initRaphael();
