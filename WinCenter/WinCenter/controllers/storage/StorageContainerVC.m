@@ -32,7 +32,7 @@
     if (self.name.text.length > 26) {
         self.name.font = [UIFont systemFontOfSize:24.0f];
     }
-    
+    self.status.text = [self.storageVO state_text];
     self.title = self.storageVO.storagePoolName;
 }
 

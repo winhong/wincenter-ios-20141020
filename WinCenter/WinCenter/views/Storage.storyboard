@@ -38,6 +38,18 @@
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="存储-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-6a-yhI">
                                                         <rect key="frame" x="32" y="10" width="95" height="95"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="状态：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2M-JT-j06">
+                                                        <rect key="frame" x="148" y="74" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-bn-BWY">
+                                                        <rect key="frame" x="193" y="74" width="176" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.96862745100000003" green="0.48627450979999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
@@ -106,6 +118,7 @@
                     <connections>
                         <outlet property="name" destination="mWm-BY-hW8" id="dv0-Bh-bYO"/>
                         <outlet property="pageVCContainer" destination="8Xh-kD-J3a" id="e7h-d2-H0g"/>
+                        <outlet property="status" destination="ckJ-bn-BWY" id="UMy-M4-xa1"/>
                         <outlet property="topToolBar" destination="G2l-L4-v89" id="Ug3-vg-Cnt"/>
                     </connections>
                 </viewController>
