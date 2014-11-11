@@ -105,50 +105,58 @@
 - (void)refresh{
     [self switchButtonSelected:0];
     
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
-        [self refreshMainInfo];
-        
-        [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
-            self.datacenterStatWinserver.appNumber = (int) ((BusinessListResult*)object).resultList.count;
-            [self refreshMainInfo2];
-            
-            self.datacenterStatWinserver.totalCpu = 0;
-            self.datacenterStatWinserver.totalMemory = 0;
-            self.datacenterStatWinserver.totalStorage = 0;
-            self.datacenterStatWinserver.availCpu = 0;
-            self.datacenterStatWinserver.availMemory = 0;
-            self.datacenterStatWinserver.availStorage = 0;
-            [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
-                for(PoolVO *poolVO in ((PoolListResult*)object).resourcePools){
-                    [poolVO getPoolVOSync:^(id object, NSError *error) {
-                        self.datacenterStatWinserver.totalCpu += ((PoolVO *)object).totalCpu;
-                        self.datacenterStatWinserver.totalMemory += ((PoolVO *)object).totalMemory;
-                        self.datacenterStatWinserver.totalStorage += ((PoolVO *)object).totalStorage;
-                        self.datacenterStatWinserver.availCpu += ((PoolVO *)object).availCpu;
-                        self.datacenterStatWinserver.availMemory += ((PoolVO *)object).availMemory;
-                        self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
-                    }];
-                }
-                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
-                    for(HostVO *hostVO in ((HostListResult*)object).hosts){
-                        if (!(hostVO.resourcePoolId)) {
-                            self.datacenterStatWinserver.totalCpu += hostVO.cpuSpeed;
-                            self.datacenterStatWinserver.totalMemory += hostVO.memory;
-                            self.datacenterStatWinserver.totalStorage += hostVO.storage;
-                            self.datacenterStatWinserver.availCpu += hostVO.availCpu;
-                            self.datacenterStatWinserver.availMemory += hostVO.availMemory;
-                            self.datacenterStatWinserver.availStorage += hostVO.availStorage;
-                        }
-                    }
-                    [self refreshMainInfo3];
-                    
-                    [self.scrollView headerEndRefreshing];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
 
-                    
-                }];
-                            }];
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
+            self.datacenterStatWinserver = object;
+            
+            [self refreshMainInfo];
+            
+            [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
+                self.datacenterStatWinserver.appNumber = (int) ((BusinessListResult*)object).resultList.count;
+                [self refreshMainInfo2];
+                
+                self.datacenterStatWinserver.totalCpu = 0;
+                self.datacenterStatWinserver.totalMemory = 0;
+                self.datacenterStatWinserver.totalStorage = 0;
+                self.datacenterStatWinserver.availCpu = 0;
+                self.datacenterStatWinserver.availMemory = 0;
+                self.datacenterStatWinserver.availStorage = 0;
+                [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
+                    for(PoolVO *poolVO in ((PoolListResult*)object).resourcePools){
+                        [poolVO getPoolVOSync:^(id object, NSError *error) {
+                            self.datacenterStatWinserver.totalCpu += ((PoolVO *)object).totalCpu;
+                            self.datacenterStatWinserver.totalMemory += ((PoolVO *)object).totalMemory;
+                            self.datacenterStatWinserver.totalStorage += ((PoolVO *)object).totalStorage;
+                            self.datacenterStatWinserver.availCpu += ((PoolVO *)object).availCpu;
+                            self.datacenterStatWinserver.availMemory += ((PoolVO *)object).availMemory;
+                            self.datacenterStatWinserver.availStorage += ((PoolVO *)object).availStorage;
+                        }];
+                    }
+                    [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                        for(HostVO *hostVO in ((HostListResult*)object).hosts){
+                            if (!(hostVO.resourcePoolId)) {
+                                self.datacenterStatWinserver.totalCpu += hostVO.cpuSpeed;
+                                self.datacenterStatWinserver.totalMemory += hostVO.memory;
+                                self.datacenterStatWinserver.totalStorage += hostVO.storage;
+                                self.datacenterStatWinserver.availCpu += hostVO.availCpu;
+                                self.datacenterStatWinserver.availMemory += hostVO.availMemory;
+                                self.datacenterStatWinserver.availStorage += hostVO.availStorage;
+                            }
+                        }
+                        [self refreshMainInfo3];
+                        
+                        [self.scrollView headerEndRefreshing];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
+
+                        
+                    }];
+                                }];
+            }];
         }];
     }];
 }
@@ -164,7 +172,6 @@
 }
 
 - (void)refreshMainInfo3{
-    self.name.title = [RemoteObject getCurrentDatacenterVO].name;
     self.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver totalCpu_value],[self.datacenterStatWinserver totalCpu_unit]];
     self.cpuUnitCount2.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver totalCpu_value],[self.datacenterStatWinserver totalCpu_unit]];
     self.cpuUsedCount.text = [NSString stringWithFormat:@"%.2f%@",[self.datacenterStatWinserver usedCpu_value],[self.datacenterStatWinserver usedCpu_unit]];

@@ -36,7 +36,18 @@
         completionBlock([[DatacenterListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
-
+- (void) getDatacenterVOAsync:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[DatacenterVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DatacenterVO.getDatacenterVOAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
+    [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=0&apiKey=pc.api.dataCenter.getdataCenterInfo&placeholder=%d", self.id]];
+    }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
+        completionBlock([[DatacenterVO alloc] initWithJSONData:jsonResponse.rawBody], error);
+    }];
+}
 - (void) getDatacenterStatWinserverVOAsync:(FetchObjectCompletionBlock)completionBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completionBlock([[DatacenterStatVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DatacenterVO.getDatacenterStatWinserverVOAsync" ofType:@"json"]]].winserver, nil);

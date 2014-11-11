@@ -21,67 +21,74 @@
 @implementation HostDashboardVC
 
 -(void)reloadData{
-    
-    [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
-        self.datacenterStatWinserver = object;
+
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
         
-        [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
-            self.hostStatWinserver = object;
+        [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
             
-            if(self.poolVO){
-                [self.poolVO getHostListAsync:^(id object, NSError *error) {
-                    NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
-                    
+            self.datacenterStatWinserver = object;
+            
+            [[RemoteObject getCurrentDatacenterVO] getHostSubVOAsync:^(id object, NSError *error) {
+                self.hostStatWinserver = object;
+                
+                if(self.poolVO){
                     [self.poolVO getHostListAsync:^(id object, NSError *error) {
-                        [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                        NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
                         
-                        [self.collectionView headerEndRefreshing];
-                        if(self.dataList.count >= recordTotal){
-                            [self.collectionView footerFinishingLoading];
-                        }else{
-                            [self.collectionView footerEndRefreshing];
-                        }
-                        [self.collectionView reloadData];
-                        self.navigationItem.rightBarButtonItem.enabled = true;
-                    } referTo:self.dataList];
-                }];
-            }else if(self.isOutofPool){
-                //游离物理主机
-                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
-                    NSMutableArray *hostOfPoolList = [NSMutableArray new];
-                    for (HostVO *host in ((HostListResult*)object).hosts) {
-                        if (!(host.resourcePoolId)) {
-                            [hostOfPoolList addObject: host];
-                        }
-                    }
-                    [self.dataList addObjectsFromArray:hostOfPoolList];
-                    
-                    [self.collectionView headerEndRefreshing];
-                    [self.collectionView footerFinishingLoading];
-                    [self.collectionView reloadData];
-                    self.navigationItem.rightBarButtonItem.enabled = true;
-                }];
-            }else{
-                [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
-                    NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
-                    
+                        [self.poolVO getHostListAsync:^(id object, NSError *error) {
+                            [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                            
+                            [self.collectionView headerEndRefreshing];
+                            if(self.dataList.count >= recordTotal){
+                                [self.collectionView footerFinishingLoading];
+                            }else{
+                                [self.collectionView footerEndRefreshing];
+                            }
+                            [self.collectionView reloadData];
+                            self.navigationItem.rightBarButtonItem.enabled = true;
+                        } referTo:self.dataList];
+                    }];
+                }else if(self.isOutofPool){
+                    //游离物理主机
                     [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
-                        [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                        NSMutableArray *hostOfPoolList = [NSMutableArray new];
+                        for (HostVO *host in ((HostListResult*)object).hosts) {
+                            if (!(host.resourcePoolId)) {
+                                [hostOfPoolList addObject: host];
+                            }
+                        }
+                        [self.dataList addObjectsFromArray:hostOfPoolList];
                         
                         [self.collectionView headerEndRefreshing];
-                        if(self.dataList.count >= recordTotal){
-                            [self.collectionView footerFinishingLoading];
-                        }else{
-                            [self.collectionView footerEndRefreshing];
-                        }
+                        [self.collectionView footerFinishingLoading];
                         [self.collectionView reloadData];
                         self.navigationItem.rightBarButtonItem.enabled = true;
-                    } referTo:self.dataList];
-                }];
-            }
+                    }];
+                }else{
+                    [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                        NSUInteger recordTotal = ((HostListResult*)object).hosts.count;
+                        
+                        [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
+                            [self.dataList addObjectsFromArray:((HostListResult*)object).hosts];
+                            
+                            [self.collectionView headerEndRefreshing];
+                            if(self.dataList.count >= recordTotal){
+                                [self.collectionView footerFinishingLoading];
+                            }else{
+                                [self.collectionView footerEndRefreshing];
+                            }
+                            [self.collectionView reloadData];
+                            self.navigationItem.rightBarButtonItem.enabled = true;
+                        } referTo:self.dataList];
+                    }];
+                }
+            }];
         }];
     }];
-
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -146,7 +153,6 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     HostDashboardHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HostDashboardHeader" forIndexPath:indexPath];
-    header.name.title = [RemoteObject getCurrentDatacenterVO].name;
     header.hostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer];
     header.inPoolHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.hostNubmer - self.datacenterStatWinserver.dissociateHostNumber];
     header.dissociateHostCount.text = [NSString stringWithFormat:@"%d",self.datacenterStatWinserver.dissociateHostNumber];

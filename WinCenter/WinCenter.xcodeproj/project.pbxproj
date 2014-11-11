@@ -370,6 +370,7 @@
 		18C521E619F8CDF500C033C6 /* MBSpacialMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E019F8CDF500C033C6 /* MBSpacialMasterViewController.m */; };
 		18C521ED19F8DA6700C033C6 /* DAPIPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521E919F8DA6700C033C6 /* DAPIPView.m */; };
 		18C521EE19F8DA6700C033C6 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C521EC19F8DA6700C033C6 /* SquareViewController.m */; };
+		501BBFF01A1224E0009A683C /* DatacenterVO.getDatacenterVOAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 501BBFEF1A1224E0009A683C /* DatacenterVO.getDatacenterVOAsync.json */; };
 		5058666B19FE3A45000C813D /* PopOptionFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */; };
 		5058666E19FE3A6F000C813D /* PopOptionHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058666D19FE3A6F000C813D /* PopOptionHelpVC.m */; };
 		507077161A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 507077151A0CD7C700691660 /* NetworkVO.getVmsByNetworkIdAsync.json */; };
@@ -1055,6 +1056,7 @@
 		18C521EA19F8DA6700C033C6 /* SquareDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDelegate.h; sourceTree = "<group>"; };
 		18C521EB19F8DA6700C033C6 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		18C521EC19F8DA6700C033C6 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
+		501BBFEF1A1224E0009A683C /* DatacenterVO.getDatacenterVOAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DatacenterVO.getDatacenterVOAsync.json; sourceTree = "<group>"; };
 		5058666919FE3A45000C813D /* PopOptionFeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionFeedbackVC.h; sourceTree = "<group>"; };
 		5058666A19FE3A45000C813D /* PopOptionFeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOptionFeedbackVC.m; sourceTree = "<group>"; };
 		5058666C19FE3A6F000C813D /* PopOptionHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOptionHelpVC.h; sourceTree = "<group>"; };
@@ -1510,6 +1512,7 @@
 				8487491D19F63DBF00372309 /* DatacenterVO.getBusinessUnalloctedListAsync.json */,
 				181DEC2119F17CB100998835 /* DatacenterVO.getBusinessListAsync.limit.json */,
 				181DEC2219F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json */,
+				501BBFEF1A1224E0009A683C /* DatacenterVO.getDatacenterVOAsync.json */,
 				181DEC2319F17CB100998835 /* DatacenterVO.getDatacenterStatWinserverVOAsync.json */,
 				181DEC2419F17CB100998835 /* DatacenterVO.getHostListAsync.json */,
 				181DEC2519F17CB100998835 /* DatacenterVO.getHostListAsync.limit.json */,
@@ -2667,6 +2670,7 @@
 				181DED4F19F17CB100998835 /* DatacenterVO.getStorageListAsync.json in Resources */,
 				181DED4919F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json in Resources */,
 				181DED6219F17CB100998835 /* PoolVO.getVmListAsync.json in Resources */,
+				501BBFF01A1224E0009A683C /* DatacenterVO.getDatacenterVOAsync.json in Resources */,
 				1824360819F4F774007E4D6C /* RATableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
