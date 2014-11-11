@@ -51,7 +51,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
+}
 -(void)reloadData{
 
     [self.vmVO getRaphaelAsync:^(id object, NSError *error) {

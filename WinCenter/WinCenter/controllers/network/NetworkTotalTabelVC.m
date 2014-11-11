@@ -76,6 +76,8 @@
 }
 
 - (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;
+    
     self.isExternal = (self.segment.selectedSegmentIndex==0);
     [self.tableView headerBeginRefreshing];
     UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
@@ -94,6 +96,7 @@
             [self.tableView footerEndRefreshing];
         }
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = true;
     } withType:self.isExternal referTo:self.networkList];
 }
 

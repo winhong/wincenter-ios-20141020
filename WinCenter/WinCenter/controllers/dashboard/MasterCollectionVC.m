@@ -24,6 +24,7 @@
 
 @implementation MasterCollectionVC
 - (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;     
     [self.collectionView headerBeginRefreshing];
 }
 

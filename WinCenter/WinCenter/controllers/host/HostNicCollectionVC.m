@@ -21,6 +21,7 @@
             [self.collectionView footerEndRefreshing];
         }
         [self.collectionView reloadData];
+        self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
     } withType:self.isGrouped referTo:self.dataList];
 }
 

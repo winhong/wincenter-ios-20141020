@@ -114,6 +114,7 @@
                         [self refreshMainInfo];
                         [self refreshElasticInfo];
                         [self.scrollView headerEndRefreshing];
+                        self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
                     }];
                 }];
             }];

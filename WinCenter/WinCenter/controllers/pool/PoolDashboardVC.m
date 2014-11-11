@@ -59,6 +59,7 @@
                         [self.collectionView footerEndRefreshing];
                     }
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 } referTo:self.dataList];
                 
             }];

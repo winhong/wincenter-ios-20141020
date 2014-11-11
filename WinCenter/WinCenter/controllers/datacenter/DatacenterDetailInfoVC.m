@@ -144,6 +144,7 @@
                     [self refreshMainInfo3];
                     
                     [self.scrollView headerEndRefreshing];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
 
                     
                 }];
