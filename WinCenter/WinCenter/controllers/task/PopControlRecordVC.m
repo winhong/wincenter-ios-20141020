@@ -106,18 +106,23 @@
     
     //状态转换
     NSString *state_text;
+    UIColor *state_color;
     if ([controlRecordVO.state isEqualToString:@"success"]) {
         state_text = @"成功";
+        state_color = [UIColor colorWithRed:12.0/255 green:151.0/255 blue:29.0/255 alpha:1];
     }else if ([controlRecordVO.state isEqualToString:@"completedAndError"]) {
         state_text = @"失败";
+        state_color = [UIColor redColor];
     }else if ([controlRecordVO.state isEqualToString:@"in-progress"]) {
         state_text = @"执行中";
+        state_color = [UIColor blueColor];
     }
     cell.label1.text = controlRecordVO.taskName;
     cell.label2.text = [NSString stringWithFormat:@"%@",nowtimeStr];
     cell.label3.text = controlRecordVO.targetName;
     cell.label4.text = controlRecordVO.progress == 100 ? @"完成" : @"进行中";
     cell.label5.text = state_text;
+    cell.label5.textColor = state_color;
     cell.label6.text = controlRecordVO.user;
     //"tasks": [
     //          {
