@@ -129,7 +129,7 @@
     self.virtualInfo.text = [NSString stringWithFormat:@"%@ %@", self.hostVO.virtualSoftware, self.hostVO.virtualVersion];
     self.virtualDate.text = [NSString stringWithFormat:@"%@", self.hostVO.versionDate];
     self.cpuSpeed.text = [NSString stringWithFormat:@"%dMHz", self.hostVO.cpuSpeed];
-    self.model.text = [NSString stringWithFormat:@"%@", self.hostVO.model];
+    self.model.text = [NSString stringWithFormat:@"%@", [self.hostVO.model stringByReplacingOccurrencesOfString:@"    " withString:@""]];
     self.vendor.text = [NSString stringWithFormat:@"%@", self.hostVO.vendor];
     self.cpuSlots.text = [NSString stringWithFormat:@"%d颗", self.hostVO.cpuSlots];
     self.cpu.text = [NSString stringWithFormat:@"%d个", self.hostVO.cpu];
