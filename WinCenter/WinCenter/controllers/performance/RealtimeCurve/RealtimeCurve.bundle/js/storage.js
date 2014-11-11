@@ -114,7 +114,7 @@ function drawLineVbd(data){
 	    },
 	    tooltip: {
             formatter: function() {
-                    return '<b>'+ timeToFormatStr(this.x,"MM-dd HH:mm") +'</b><br/>'+
+                    return '<b>'+ timeToFormatStr(this.x,"MM-dd HH:mm:ss") +'</b><br/>'+
                     this.series.name+"使用速率："+ this.y.toFixed(2) +'KB/s';//使用速率: 
             }
         },

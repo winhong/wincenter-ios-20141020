@@ -120,7 +120,7 @@ function drawLineMemory(data){
         },
         tooltip: {
             formatter: function() {
-                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm") +'</b><br/>'+
+                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm:ss") +'</b><br/>'+
                     this.series.name+'使用率: '+ this.y.toFixed(2) +'%';
             }
         },

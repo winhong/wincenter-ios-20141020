@@ -125,7 +125,7 @@ function drawLineNetWork(data,type){
         },
         tooltip: {
             formatter: function() {
-                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm") +'</b><br/>'+
+                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm:ss") +'</b><br/>'+
                     this.series.name+"使用速率："+ this.y.toFixed(2) +'Kbps';//使用速率： 
             }
         },
