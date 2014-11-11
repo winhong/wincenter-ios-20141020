@@ -240,7 +240,7 @@
         self.memoryType.font = [UIFont systemFontOfSize:30.0f];
     }
     //self.isDynamicMemWce
-    self.memory.text = [NSString stringWithFormat:@"%.1f", self.vmVO.memory/1024.0];
+    self.memory.text = [NSString stringWithFormat:@"%.2f", self.vmVO.memory/1024.0];
     //self.snopshotNum.text
     self.osType_image.image = [UIImage imageNamed:[self.vmVO osType_imageName_big]];
     if(self.isDynamicCpu_img){
