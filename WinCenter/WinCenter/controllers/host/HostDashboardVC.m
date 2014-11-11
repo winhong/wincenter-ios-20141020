@@ -90,7 +90,8 @@
     cell.title.text = hostVO.hostName;
     cell.ip.text = hostVO.ip;
     if(hostVO.ip == nil){
-        cell.ip.text = @"(尚未配置ip)";
+        cell.ip.text = @"无网络";
+        cell.ip.textColor = [UIColor lightGrayColor];
     }
     cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
     cell.storageSize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
