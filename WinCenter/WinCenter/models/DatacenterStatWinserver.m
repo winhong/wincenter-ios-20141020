@@ -70,15 +70,15 @@
 }
 
 - (float)totalCpu_value{
-    if(self.totalCpu > 1024.0 ){
-        return (self.totalCpu/1024.0);
+    if(self.totalCpu > 1000.0 ){
+        return (self.totalCpu/1000.0);
     }else{
         return self.totalCpu;
     }
     
 }
 - (NSString*)totalCpu_unit{
-    if(self.totalCpu > 1024.0 ){
+    if(self.totalCpu > 1000.0 ){
         return @"GHz";
     }else{
         return @"MHz";
@@ -87,15 +87,15 @@
 }
 
 - (float)availCpu_value{
-    if(self.availCpu > 1024.0 ){
-        return (self.availCpu/1024.0);
+    if(self.availCpu > 1000.0 ){
+        return (self.availCpu/1000.0);
     }else{
         return self.availCpu;
     }
     
 }
 - (NSString*)availCpu_unit{
-    if(self.availCpu > 1024.0 ){
+    if(self.availCpu > 1000.0 ){
         return @"GHz";
     }else{
         return @"MHz";
@@ -173,15 +173,15 @@
 }
 
 - (float)usedCpu_value{
-    if((self.totalCpu - self.availCpu) > 1024.0 ){
-        return ((self.totalCpu - self.availCpu)/1024.0);
+    if((self.totalCpu - self.availCpu) > 1000.0 ){
+        return ((self.totalCpu - self.availCpu)/1000.0);
     }else{
         return (self.totalCpu - self.availCpu);
     }
     
 }
 - (NSString*)usedCpu_unit{
-    if((self.totalCpu - self.availCpu) > 1024.0 ){
+    if((self.totalCpu - self.availCpu) > 1000.0 ){
         return @"GHz";
     }else{
         return @"MHz";
