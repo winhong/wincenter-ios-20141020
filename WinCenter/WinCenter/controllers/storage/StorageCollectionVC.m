@@ -50,7 +50,7 @@
     if (storageVO.hostIp == nil) {
         cell.ip.text = @"";
     }
-    cell.label1.text = storageVO.type;
+    cell.label1.text = [storageVO type_text];
     cell.label2.text = storageVO.location;
     cell.label3.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
     cell.label4.text = [NSString stringWithFormat:@"%.2fGB剩余,共%.2fGB", storageVO.availStorage, storageVO.totalStorage];
