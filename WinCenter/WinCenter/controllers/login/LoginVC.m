@@ -22,6 +22,11 @@
 
 @implementation LoginVC
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.userName.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"USER_NAME"];
+    self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -174,6 +179,8 @@
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
             [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
+            [[NSUserDefaults standardUserDefaults] setValue:self.password.text forKey:@"PASSWORD"];
+            
             [self toLogin];
         } withFailedBlock:^(NSError *error){
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:@"用户名或密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];

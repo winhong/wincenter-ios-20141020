@@ -30,7 +30,7 @@
     NSString *msg = @"";
     if([self.passwordOld.text isEqualToString:@""])
     {
-        msg = @"请输入旧密码！";
+        msg = @"请输入原密码！";
     }
     else if ([self.passwordNew.text isEqualToString:@""])
     {
@@ -46,7 +46,7 @@
            [[UserVO new] modifyPassword:^(id object, NSError *error) {
                self.modifyPasswordResultVO = object;
                if ([self.modifyPasswordResultVO.exceptionCode isEqualToString:@"POCS008"]) {
-                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"旧密码输入错误！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                   UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"原密码输入错误！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
                    [alert show];
                }else{
                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"修改密码成功！" delegate:self cancelButtonTitle:@"重新登录" otherButtonTitles:nil];
@@ -61,6 +61,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"重新登录"]){
+        [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"PASSWORD"];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
