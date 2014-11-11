@@ -83,7 +83,8 @@
     cell.title.text = vmVO.name;
     cell.ip.text = vmVO.ip;
     if(vmVO.ip == nil){
-        cell.ip.text = @"(尚未配置ip)";
+        cell.ip.text = @"无网络";
+        cell.ip.textColor = [UIColor lightGrayColor];
     }
     cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];

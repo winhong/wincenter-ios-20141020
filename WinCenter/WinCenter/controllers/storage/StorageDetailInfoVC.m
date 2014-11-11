@@ -100,7 +100,7 @@
     self.noShared_img.hidden = [self.storageVO shared_img];
     
     self.totalStorageLabel1.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO usedStorage_value],[self.storageVO totalStorage_unit]];
-    self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO usedStorage_value],[self.storageVO totalStorage_unit]];
+    self.totalStorageLabel2.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO totalStorage_value]-[self.storageVO allocatedStorage_value],[self.storageVO totalStorage_unit]];
     self.usedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO usedStorage_value],[self.storageVO usedStorage_unit]];
     self.allocatedStorageLabel.text = [NSString stringWithFormat:@"%.2f%@", [self.storageVO allocatedStorage_value],[self.storageVO allocatedStorage_unit]];
     self.type.text = [self.storageVO.type uppercaseString];

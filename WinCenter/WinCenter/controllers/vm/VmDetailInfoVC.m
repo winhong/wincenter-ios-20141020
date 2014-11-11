@@ -220,7 +220,8 @@
 - (void)refresh{
     self.vmIp.text = self.vmVO.ip;
     if(self.vmVO.ip == nil){
-        self.vmIp.text = @"(尚未配置ip)";
+        self.vmIp.text = @"无网络";
+        self.vmIp.textColor = [UIColor lightGrayColor];
     }
     self.name.text = self.vmVO.name;
     self.status.text = [self.vmVO state_text];

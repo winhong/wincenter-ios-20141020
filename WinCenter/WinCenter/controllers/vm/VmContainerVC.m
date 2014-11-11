@@ -56,7 +56,8 @@
     self.titleLabel.text = self.vmVO.name;
     self.ipLabel.text = self.vmVO.ip;
     if(self.vmVO.ip == nil){
-        self.ipLabel.text = @"(尚未配置ip)";
+        self.ipLabel.text = @"无网络";
+        self.ipLabel.textColor = [UIColor lightGrayColor];
     }
     self.statusLabel.text = [self.vmVO state_text];
     //self.statusLabel.textColor = [self.vmVO state_color];
