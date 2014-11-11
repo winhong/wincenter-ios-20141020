@@ -26,6 +26,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+-(IBAction)nextOnKeyboard:(UITextField *)sender{
+    if (sender == self.passwordOld) {
+        [self.passwordNew becomeFirstResponder];
+    }else if (sender == self.passwordNew){
+        [self.passwordRepeat becomeFirstResponder];
+    }
+    
+}
 - (IBAction)done:(id)sender {
     NSString *msg = @"";
     if([self.passwordOld.text isEqualToString:@""])

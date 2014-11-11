@@ -66,8 +66,8 @@
         self.name.font = [UIFont systemFontOfSize:24.0f];
     }
     self.poolName.text = self.vmVO.poolName;
-    if (self.vmVO.poolName == nil) {
-        self.poolName.text = @"(游离)";
+    if ([self.vmVO.poolName isEqualToString:@"null"]) {
+        self.poolName.text = @"无";
     }
     self.hostName.text = self.vmVO.ownerHostName;
     
