@@ -22,6 +22,20 @@
     self.dataList = [[NSMutableArray alloc] initWithCapacity:0];
     [super viewDidLoad];
     
+    NSString *prefix = @"";
+    if(self.remoteObject==nil){
+        prefix = [RemoteObject getCurrentDatacenterVO].name;
+    }else if([self.remoteObject isKindOfClass:PoolVO.class]){
+        prefix = ((PoolVO*)self.remoteObject).resourcePoolName;
+    }else if([self.remoteObject isKindOfClass:HostVO.class]){
+        prefix = ((HostVO*)self.remoteObject).hostName;
+    }else if([self.remoteObject isKindOfClass:StorageVO.class]){
+        prefix = ((StorageVO*)self.remoteObject).storagePoolName;
+    }else if([self.remoteObject isKindOfClass:VmVO.class]){
+        prefix = ((VmVO*)self.remoteObject).name;
+    }
+    self.title = [NSString stringWithFormat:@"%@的告警信息", prefix];
+    
     __unsafe_unretained typeof(self) week_self = self;
     
     [self.tableView addHeaderWithCallback:^{
@@ -37,7 +51,7 @@
 }
 
 - (void)reloadData{
-    [WarningInfoVO getWarningInfoListAsync:^(id object, NSError *error) {
+    [WarningInfoVO getWarningInfoListViaObject:self.remoteObject Async:^(id object, NSError *error) {
         [self.dataList addObjectsFromArray:((WarningInfoListResult*)object).alarms];
         [self.tableView headerEndRefreshing];
         if(self.dataList.count>=((WarningInfoListResult*)object).recordTotal){
