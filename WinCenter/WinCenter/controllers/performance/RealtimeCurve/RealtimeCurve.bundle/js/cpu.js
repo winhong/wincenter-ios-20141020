@@ -118,7 +118,7 @@ function drawLineCpu(data,cpuType){
 	    },
 
 	    title: {
-	        text: "CPU(%)"//CPU使用率
+	        text: "CPU使用率(%)"//CPU使用率
 	    },
 
 	    legend: {

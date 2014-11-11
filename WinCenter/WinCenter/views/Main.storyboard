@@ -175,16 +175,24 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="76l-q3-fo9" id="QCq-zF-bJE">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="服务器地址" textAlignment="center" minimumFontSize="17" background="input-ip" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-iI-HM7">
-                                                    <rect key="frame" x="359" y="10" width="306" height="38"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
-                                                    <connections>
-                                                        <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="aKM-gT-pEZ"/>
-                                                        <outlet property="delegate" destination="qQb-5d-hfB" id="y7u-eS-zDS"/>
-                                                    </connections>
-                                                </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APa-nJ-eY4">
+                                                    <rect key="frame" x="339" y="-10" width="346" height="78"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input-ip" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-o1-QYf">
+                                                            <rect key="frame" x="20" y="20" width="312" height="40"/>
+                                                        </imageView>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="服务器地址" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TCm-iI-HM7">
+                                                            <rect key="frame" x="55" y="20" width="276" height="38"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                            <connections>
+                                                                <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="aKM-gT-pEZ"/>
+                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="y7u-eS-zDS"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -195,16 +203,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="72l-3S-uWi" id="ARW-0b-c8I">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="center" minimumFontSize="17" background="input-user" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-dO-zMR">
-                                                    <rect key="frame" x="359" y="7" width="306" height="38"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
-                                                    <connections>
-                                                        <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="DZV-c7-esj"/>
-                                                        <outlet property="delegate" destination="qQb-5d-hfB" id="NRn-bJ-HuI"/>
-                                                    </connections>
-                                                </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgH-aw-KNk">
+                                                    <rect key="frame" x="339" y="-17" width="346" height="78"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input-user" translatesAutoresizingMaskIntoConstraints="NO" id="8Fb-xc-6zW">
+                                                            <rect key="frame" x="20" y="20" width="312" height="40"/>
+                                                        </imageView>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-dO-zMR">
+                                                            <rect key="frame" x="55" y="20" width="276" height="38"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                            <connections>
+                                                                <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="DZV-c7-esj"/>
+                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="NRn-bJ-HuI"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -215,16 +232,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l04-zH-r7b" id="m9o-6r-aH2">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="center" minimumFontSize="17" background="input-psd" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-as-2id">
-                                                    <rect key="frame" x="359" y="8" width="306" height="38"/>
-                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="qQb-5d-hfB" id="9Mg-By-aVe"/>
-                                                    </connections>
-                                                </textField>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJA-gd-fkA">
+                                                    <rect key="frame" x="339" y="-14" width="346" height="78"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input-psd" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-Cx-zwN">
+                                                            <rect key="frame" x="20" y="16" width="312" height="40"/>
+                                                        </imageView>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-as-2id">
+                                                            <rect key="frame" x="55" y="19" width="276" height="38"/>
+                                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="9Mg-By-aVe"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
