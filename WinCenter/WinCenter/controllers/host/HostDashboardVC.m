@@ -42,6 +42,7 @@
                             [self.collectionView footerEndRefreshing];
                         }
                         [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
                     } referTo:self.dataList];
                 }];
             }else if(self.isOutofPool){
@@ -58,6 +59,7 @@
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerFinishingLoading];
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 }];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getHostListAsync:^(id object, NSError *error) {
@@ -73,6 +75,7 @@
                             [self.collectionView footerEndRefreshing];
                         }
                         [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
                     } referTo:self.dataList];
                 }];
             }

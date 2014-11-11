@@ -65,6 +65,7 @@
 
 }
 - (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;
     [self.tableView headerBeginRefreshing];
 }
 
@@ -114,11 +115,13 @@
             [self.tableView headerEndRefreshing];
             [self.tableView footerFinishingLoading];
             [self.tableView reloadData];
+            self.navigationItem.rightBarButtonItem.enabled = true;
         }];
     }else{
         [self.tableView headerEndRefreshing];
         [self.tableView footerFinishingLoading];
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = true;
     }
     //}
 }

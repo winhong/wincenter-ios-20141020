@@ -36,6 +36,7 @@
                         [self.collectionView footerEndRefreshing];
                     }
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 } referTo:self.dataList];
             }else if(self.isOutofPool){
                 //游离物理主机
@@ -51,6 +52,7 @@
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerFinishingLoading];
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 }];
             }else{
                 [[RemoteObject getCurrentDatacenterVO] getStorageListAsync:^(id object, NSError *error) {
@@ -62,6 +64,7 @@
                         [self.collectionView footerEndRefreshing];
                     }
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 } referTo:self.dataList];
             }
         }];

@@ -108,11 +108,13 @@
                             self.statVO = object;
                             [self refreshStatInfo];
                             [self.scrollView headerEndRefreshing];
+                            self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
                         }];
    
                 }else{
                     [self refreshStatInfo];
                     [self.scrollView headerEndRefreshing];
+                    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
                 }
             }];
             

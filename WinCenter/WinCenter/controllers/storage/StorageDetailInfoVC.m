@@ -86,6 +86,7 @@
         self.storageVO = object;
         [self refreshMainInfo];
         [self.scrollView headerEndRefreshing];
+        self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
     }];
 }
 - (void)refreshMainInfo{

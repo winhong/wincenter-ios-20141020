@@ -38,9 +38,11 @@
         [self.tableView headerEndRefreshing];
         [self.tableView footerFinishingLoading];
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = true;
     }];
 }
 - (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;
     [self.tableView headerBeginRefreshing];
 }
 

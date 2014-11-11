@@ -63,10 +63,12 @@
             [self.tableView footerEndRefreshing];
         }
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = true;
     } referTo:self.dataList];
 
 }
 - (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;
     [self.tableView headerBeginRefreshing];
 }
 

@@ -75,6 +75,7 @@
     
 }
 - (void)refreshCurrentPage{
+    self.navigationItem.rightBarButtonItem.enabled = false;
     if([self.pages[self.showIndex] respondsToSelector:@selector(refreshAction:)]){
         [self.pages[self.showIndex] performSelector:@selector(refreshAction:) withObject:nil];
     }

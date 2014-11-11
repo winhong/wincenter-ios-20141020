@@ -126,6 +126,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 {
     return YES;
 }
+- (IBAction)refreshAction:(id)sender {
+    [self reloadData];
+    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
+}
 -(void)reloadData{
     if (!self.startTime) {
         NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
@@ -155,6 +159,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
         }
      }
+    
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView

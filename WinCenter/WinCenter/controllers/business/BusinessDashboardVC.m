@@ -47,12 +47,14 @@
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerEndRefreshing];
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 }else if(self.isUnGroup){
                     //陈洁补充：查询未分配的业务系统
                     [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
                     [self.collectionView headerEndRefreshing];
                     [self.collectionView footerEndRefreshing];
                     [self.collectionView reloadData];
+                    self.navigationItem.rightBarButtonItem.enabled = true;
                 }else{
                     [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
                         [self.dataList addObjectsFromArray:((BusinessListResult*)object).resultList];
@@ -63,6 +65,7 @@
                             [self.collectionView footerEndRefreshing];
                         }
                         [self.collectionView reloadData];
+                        self.navigationItem.rightBarButtonItem.enabled = true;
                     } referTo:self.dataList];
                 }
             }];
