@@ -22,6 +22,7 @@
 @property NSString *name;
 @property NSString *ip;
 @property NSString *state;
+@property NSString *operationState;
 @property int vcpu;
 @property int memory;
 @property int storage;

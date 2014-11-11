@@ -41,11 +41,19 @@
                                 @"SAVE_AS_TEMPLATE":@"另存为模板中"
                                 };
     
-    NSString *result = [stateDict valueForKey:[self.state uppercaseString]];
-    if((result==nil) || [result isEqualToString:@""]){
-        result = self.state;
+    if(self.operationState){
+        NSString *result = [stateDict valueForKey:[self.operationState uppercaseString]];
+        if((result==nil) || [result isEqualToString:@""]){
+            result = self.operationState;
+        }
+        return result;
+    }else{
+        NSString *result = [stateDict valueForKey:[self.state uppercaseString]];
+        if((result==nil) || [result isEqualToString:@""]){
+            result = self.state;
+        }
+        return result;
     }
-    return result;
 }
 
 - (UIColor *)state_color{

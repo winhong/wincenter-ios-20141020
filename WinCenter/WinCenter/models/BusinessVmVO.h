@@ -14,6 +14,7 @@
 @property int startOrder;
 @property int delayInterval;
 @property NSString *state;
+@property NSString *operationState;
 
 - (NSString*)state_text;
 - (UIColor *)state_color;
