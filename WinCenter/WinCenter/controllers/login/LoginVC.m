@@ -178,12 +178,12 @@
         [[NSUserDefaults standardUserDefaults] setValue:@"false" forKey:@"isDemo"];
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
+            [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
+            [[NSUserDefaults standardUserDefaults] setValue:self.password.text forKey:@"PASSWORD"];
+            
             [LicenseVO checkLicenseAsync:^(id object, NSError *error) {
                 LicenseCheckVO *checkVO = object;
                 if(checkVO.errorState==0){
-                    [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
-                    [[NSUserDefaults standardUserDefaults] setValue:self.password.text forKey:@"PASSWORD"];
-                    
                     [self toLogin];
                 }else{
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:@"许可证检查失败或许可证数量不足！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
