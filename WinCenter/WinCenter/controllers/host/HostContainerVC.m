@@ -62,7 +62,7 @@
 }
 
 -(void)refresh{
-    [self refreshMainInfo];
+    [self reloadData];
     
     NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:5];
     
