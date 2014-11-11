@@ -48,7 +48,7 @@
         @"OK":@"运行中",
         @"EXECUTING":@"部署中",
         @"CREATED":@"待部署",
-        @"STARTING":@"正在启动",
+        @"STARTING":@"正在开机",
         @"STOPPED":@"已关机",
         @"STOPPING":@"关机中",
         @"DELETING":@"删除中",
@@ -74,7 +74,7 @@
         @"SAVE_AS_TEMPLATE":@"另存为模板中"
     };
     
-    if(self.operationState){
+    if(self.operationState && !([self.operationState isEqualToString:@""])){
         NSString *result = [stateDict valueForKey:[self.operationState uppercaseString]];
         if((result==nil) || [result isEqualToString:@""]){
             result = self.operationState;

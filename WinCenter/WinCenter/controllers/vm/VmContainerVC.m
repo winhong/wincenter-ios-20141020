@@ -84,19 +84,26 @@
     self.btnRestart.enabled = false;
     self.btnMigrate.enabled = false;
     
-    if ([self.vmVO.state isEqualToString:@"OK"])
-    {
+    if(self.vmVO.operationState && !([self.vmVO.operationState isEqualToString:@""])){
         self.btnStart.enabled = false;
-        self.btnStop.enabled = true;
-        self.btnRestart.enabled = true;
-        self.btnMigrate.enabled = true;
-    }
-    else if([self.vmVO.state isEqualToString:@"STOPPED"])
-    {
-        self.btnStart.enabled = true;
         self.btnStop.enabled = false;
         self.btnRestart.enabled = false;
-        self.btnMigrate.enabled = true;
+        self.btnMigrate.enabled = false;
+    }else{
+        if ([self.vmVO.state isEqualToString:@"OK"])
+        {
+            self.btnStart.enabled = false;
+            self.btnStop.enabled = true;
+            self.btnRestart.enabled = true;
+            self.btnMigrate.enabled = true;
+        }
+        else if([self.vmVO.state isEqualToString:@"STOPPED"])
+        {
+            self.btnStart.enabled = true;
+            self.btnStop.enabled = false;
+            self.btnRestart.enabled = false;
+            self.btnMigrate.enabled = true;
+        }
     }
     
     //虚拟机在游离主机上时，不支持虚拟机迁移
