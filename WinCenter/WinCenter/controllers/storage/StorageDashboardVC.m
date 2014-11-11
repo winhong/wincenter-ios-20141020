@@ -74,7 +74,7 @@
     if(self.dataList.count==0) return cell;
     
     StorageVO *storageVO = (StorageVO *) self.dataList[indexPath.row];
-    cell.title.text = storageVO.storagePoolName;
+    
     cell.availStorage.text = [NSString stringWithFormat:@"%.2f%@剩余,共%.2f%@", [storageVO availStorage_value],[storageVO availStorage_unit],[storageVO totalStorage_value],[storageVO totalStorage_unit]];
     cell.volumeNum.text = [NSString stringWithFormat:@"%d个", storageVO.volumeNum];
     cell.location.text = [NSString stringWithFormat:@"%@", storageVO.location];
@@ -86,7 +86,14 @@
     cell.status.textColor = [storageVO state_color];
     cell.status_image.layer.cornerRadius = 6;
     cell.status_image.backgroundColor = [storageVO state_color];
-    cell.share_image.hidden = [storageVO.shared isEqualToString:@"false"];
+    if ([storageVO.shared isEqualToString:@"false"]) {
+        cell.share_image.hidden = YES;
+        cell.title.text = [NSString stringWithFormat:@"%@(%@)",storageVO.storagePoolName,storageVO.hostIp];
+    }else{
+        cell.share_image.hidden = NO;
+        cell.title.text = storageVO.storagePoolName;
+    }
+    
     cell.progress.progress = (storageVO.totalStorage-storageVO.availStorage)/storageVO.totalStorage;
     if(cell.progress.progress>0.8){
         cell.progress.progressTintColor = PNRed;
