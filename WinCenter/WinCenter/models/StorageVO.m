@@ -13,7 +13,14 @@
     NSDictionary *state_dict = @{
                                  @"OK":@"活动",
                                  @"plugException":@"挂载异常",
-                                 @"unPlug":@"未挂载"
+                                 @"unPlug":@"未挂载",
+                                 @"Pluging":@"挂载中",
+                                 @"DeletIng":@"删除中",
+                                 @"RemoveIng":@"移除中",
+                                 @"UnPlugIng":@"卸载中",
+                                 @"DetachIng":@"分离中",
+                                 @"ReattachIng":@"连接中"
+                                 
                                  };
     NSString *result = [state_dict valueForKey:self.state];
     
