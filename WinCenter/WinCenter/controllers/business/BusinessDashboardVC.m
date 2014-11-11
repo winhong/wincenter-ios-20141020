@@ -123,7 +123,11 @@
     }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
-    circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    if (self.allBusList.count == 0) {
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     circleChart.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart.lineWidth = @11.0f;//线宽度
     [circleChart setStrokeColor:[UIColor colorWithRed:0.0/255 green:181.0/255 blue:185.0/255 alpha:1]];//已使用填充颜色

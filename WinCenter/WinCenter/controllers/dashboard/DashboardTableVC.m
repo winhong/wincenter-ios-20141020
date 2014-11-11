@@ -32,7 +32,7 @@
             [self.infoVC refresh];
             [self refresh];
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"友情提示" message:@"尚没有配置任何数据中心，请联系虚拟化平台管理员！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"友情提示" message:@"尚没有配置任何数据中心，请联系系统管理员！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
             [alert show];
         }
     }];
