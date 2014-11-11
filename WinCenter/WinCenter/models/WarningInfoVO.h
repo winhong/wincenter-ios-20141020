@@ -28,5 +28,7 @@
 @property NSString *uri;
 
 + (void) getWarningInfoListViaObject:(RemoteObject*)remoteObject Async:(FetchObjectCompletionBlock)completeBlock referTo:(NSMutableArray*)referList;
+-(NSString*)readed_text;
+-(UIColor*)readed_Color;
 
 @end

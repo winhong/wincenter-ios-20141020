@@ -101,6 +101,8 @@
     cell2.label2.text = warningVO.createTime;
     cell2.label3.text = warningVO.objectName;
     cell2.label4.text = warningVO.body;
+    cell2.label5.text = [warningVO readed_text ];
+    cell2.label5.textColor = [warningVO readed_Color];
 
 //    switch (indexPath.row) {
 //        case 0:{

@@ -34,6 +34,19 @@
         completeBlock([[WarningInfoListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
-
+-(UIColor*)readed_Color{
+    if ([self.readed isEqualToString:@"false"]) {
+        return [UIColor redColor];
+    }else{
+        return [UIColor lightGrayColor];
+    }
+}
+-(NSString*)readed_text{
+    if ([self.readed isEqualToString:@"false"]) {
+        return @"未读";
+    }else{
+        return @"已读";
+    }
+}
 
 @end
