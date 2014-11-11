@@ -91,4 +91,23 @@
     }
 }
 
+-(IBAction)showWarningInfoVCWithBarItem:(id)sender{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+        PopWarningInfoVC *controlVC = [[nav childViewControllers] firstObject];
+        controlVC.remoteObject = self.poolVO;
+        [self.navigationController pushViewController:controlVC animated:YES];
+    }else{
+        if(self.popover!=nil){
+            [self.popover dismissPopoverAnimated:NO];
+        }
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+        PopWarningInfoVC *controlVC = [[nav childViewControllers] firstObject];
+        controlVC.remoteObject = self.poolVO;
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+        UIBarButtonItem *button = (UIBarButtonItem*)sender;
+        [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    }
+}
+
 @end

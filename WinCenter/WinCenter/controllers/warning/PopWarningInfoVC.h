@@ -11,7 +11,7 @@
 @interface PopWarningInfoVC : UITableViewController
 
 @property NSMutableArray *dataList;
-
+@property RemoteObject *remoteObject;
 
 
 

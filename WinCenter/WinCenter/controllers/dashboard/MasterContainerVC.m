@@ -203,14 +203,14 @@
 -(IBAction)showWarningInfoVCWithBarItem:(id)sender{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
-        UIViewController *vc = [[nav childViewControllers] firstObject];
-        [self.navigationController pushViewController:vc animated:YES];
+        PopWarningInfoVC *controlVC = [[nav childViewControllers] firstObject];
+        [self.navigationController pushViewController:controlVC animated:YES];
     }else{
         if(self.popover!=nil){
             [self.popover dismissPopoverAnimated:NO];
         }
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
-        self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
         UIBarButtonItem *button = (UIBarButtonItem*)sender;
         [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
