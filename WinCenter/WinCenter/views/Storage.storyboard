@@ -38,14 +38,17 @@
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="存储-摘要-图标" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-6a-yhI">
                                                         <rect key="frame" x="32" y="10" width="95" height="95"/>
                                                     </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="状态" translatesAutoresizingMaskIntoConstraints="NO" id="he1-yN-BjC">
+                                                        <rect key="frame" x="148" y="79" width="11" height="11"/>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="状态：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2M-JT-j06">
-                                                        <rect key="frame" x="148" y="74" width="42" height="21"/>
+                                                        <rect key="frame" x="164" y="74" width="42" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-bn-BWY">
-                                                        <rect key="frame" x="193" y="74" width="176" height="21"/>
+                                                        <rect key="frame" x="209" y="74" width="176" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -783,6 +786,7 @@
         <image name="存储-摘要-挂载物理机数" width="334" height="89"/>
         <image name="存储-摘要-物理机数" width="334" height="89"/>
         <image name="存储-摘要-虚拟磁盘数" width="334" height="89"/>
+        <image name="状态" width="11" height="11"/>
         <image name="白色线框2" width="234" height="107"/>
         <image name="资源池－存储池－面板" width="288" height="253"/>
     </resources>
