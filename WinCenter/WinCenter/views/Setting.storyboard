@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="wincenter介绍" id="e8q-aT-uRc">
+                            <tableViewSection headerTitle="系统简介" id="e8q-aT-uRc">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="c7c-be-yre">
                                         <rect key="frame" x="0.0" y="119" width="540" height="80"/>
@@ -187,8 +187,7 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-Ol-Zyc">
                                                     <rect key="frame" x="15" y="11" width="1735" height="141"/>
-                                                    <string key="text">CNware构建兼容各种虚拟化技术的资源池，包括资源统一管理软件(WinCenter)、云中间件（WCE）、虚拟化技术（Winserver）。WinCenter针对数据中心各种资源池进行统一管理，实现资源弹性伸缩、安全高可靠、自动化运维等；
-WCE云中间件实现对X86和小型机等设备的自动发现与纳管，兼容跨厂商的虚拟化技术。
+                                                    <string key="text">CNware构建兼容各种虚拟化技术的资源池，包括资源统一管理软件(WinCenter)、云中间件（WCE）、虚拟化技术（Winserver）。WinCenter针对数据中心各种资源池进行统一管理，实现资源弹性伸缩、安全高可靠、自动化运维等；WCE云中间件实现对X86和小型机等设备的自动发现与纳管，兼容跨厂商的虚拟化技术。 
 Winserver是CNware自有的虚拟化技术，为云计算数据中心实现底层虚拟化。</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
