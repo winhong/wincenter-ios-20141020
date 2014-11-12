@@ -90,9 +90,15 @@
 }
 
 - (UIColor *)state_color{
-    if([self.state isEqualToString:@"OK"]){
+    NSString *result;
+    if(self.operationState && !([self.operationState isEqualToString:@""])){
+        result = self.operationState;
+    }else{
+        result = self.state;
+    }
+    if([result isEqualToString:@"OK"]){
         return PNGreen;
-    }else if([self.state isEqualToString:@"STOPPED"]){
+    }else if([result isEqualToString:@"STOPPED"]){
         return [UIColor lightGrayColor];
     }else{
         return PNBlue;
