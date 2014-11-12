@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--虚拟机详情-->
@@ -718,156 +718,6 @@
                                             <rect key="frame" x="128" y="286" width="180" height="90"/>
                                         </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44o-1J-rVu">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="500"/>
-                                        <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要黄色框1" translatesAutoresizingMaskIntoConstraints="NO" id="65f-eI-jkL">
-                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="9" y="16" width="301" height="54"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要蓝色框1" translatesAutoresizingMaskIntoConstraints="NO" id="mC3-Qn-8Ij">
-                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="9" y="89" width="301" height="54"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要绿色框1" translatesAutoresizingMaskIntoConstraints="NO" id="cAw-Ip-T3F">
-                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="9" y="163" width="301" height="54"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－内存配置类型" translatesAutoresizingMaskIntoConstraints="NO" id="zJ3-lg-c9d">
-                                                <rect key="frame" x="25" y="158" width="334" height="89"/>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－分配CPU" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-XK-V12">
-                                                <rect key="frame" x="25" y="40" width="334" height="89"/>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－专享内存" translatesAutoresizingMaskIntoConstraints="NO" id="VAg-te-5on">
-                                                <rect key="frame" x="25" y="276" width="334" height="133"/>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aX-3m-jaB">
-                                                <rect key="frame" x="162" y="290" width="157" height="68"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
-                                                <color key="textColor" red="0.35686274509803922" green="0.83529411764705885" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
-                                                    <rect key="frame" x="129" y="163" width="157" height="54"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自定义调整" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNt-XV-nTc">
-                                                <rect key="frame" x="152" y="170" width="200" height="62"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
-                                                <color key="textColor" red="0.27843137254901962" green="0.56862745098039214" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
-                                                    <rect key="frame" x="175" y="89" width="130" height="54"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw2-ks-FKy">
-                                                <rect key="frame" x="166" y="50" width="152" height="68"/>
-                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
-                                                <color key="textColor" red="1" green="0.84705882352941175" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
-                                                    <rect key="frame" x="156" y="16" width="130" height="54"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分配VCPU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-qJ-SUT">
-                                                <rect key="frame" x="93" y="68" width="81" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="67" y="32" width="81" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-3M-cTN">
-                                                <rect key="frame" x="323" y="89" width="17" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="288" y="46" width="17" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-ss-e68">
-                                                <rect key="frame" x="323" y="323" width="25" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="287" y="193" width="25" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内存大小" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqn-Q4-lhS">
-                                                <rect key="frame" x="93" y="296" width="68" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="67" y="179" width="68" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内存配置类型" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-FL-Syi">
-                                                <rect key="frame" x="93" y="172" width="102" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="67" y="105" width="102" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-vcpu" translatesAutoresizingMaskIntoConstraints="NO" id="yNH-4y-QkB">
-                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="25" y="24" width="37" height="37"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-memorytype" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-bq-zEL">
-                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="25" y="97" width="37" height="37"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-memory" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-9h-r9S">
-                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="25" y="171" width="37" height="37"/>
-                                                </variation>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="65f-eI-jkL"/>
-                                                <exclude reference="mC3-Qn-8Ij"/>
-                                                <exclude reference="cAw-Ip-T3F"/>
-                                                <exclude reference="yNH-4y-QkB"/>
-                                                <exclude reference="fjs-bq-zEL"/>
-                                                <exclude reference="Lv7-9h-r9S"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
-                                            <mask key="subviews">
-                                                <include reference="65f-eI-jkL"/>
-                                                <include reference="mC3-Qn-8Ij"/>
-                                                <include reference="cAw-Ip-T3F"/>
-                                                <exclude reference="zJ3-lg-c9d"/>
-                                                <exclude reference="RWJ-XK-V12"/>
-                                                <exclude reference="VAg-te-5on"/>
-                                                <include reference="yNH-4y-QkB"/>
-                                                <include reference="fjs-bq-zEL"/>
-                                                <include reference="Lv7-9h-r9S"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5n-jj-5lN">
                                         <rect key="frame" x="399" y="230" width="520" height="270"/>
                                         <subviews>
@@ -888,7 +738,7 @@
                                                     <rect key="frame" x="13" y="49" width="119" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-C0-aWZ">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-C0-aWZ">
                                                 <rect key="frame" x="483" y="164" width="17" height="12"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -904,7 +754,7 @@
                                                     <rect key="frame" x="13" y="211" width="34" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="Aze-AD-5qN">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="Aze-AD-5qN">
                                                 <rect key="frame" x="483" y="107" width="17" height="12"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -944,13 +794,13 @@
                                                     <rect key="frame" x="140" y="208" width="17" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="P8o-dl-TKt">
+                                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="P8o-dl-TKt">
                                                 <rect key="frame" x="481" y="105" width="17" height="17"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="254" y="105" width="17" height="17"/>
                                                 </variation>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-Tv-0iP">
+                                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-Tv-0iP">
                                                 <rect key="frame" x="483" y="161" width="17" height="17"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="256" y="161" width="17" height="17"/>
@@ -960,6 +810,272 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="404" width="320" height="270"/>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44o-1J-rVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要黄色框1" translatesAutoresizingMaskIntoConstraints="NO" id="65f-eI-jkL">
+                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="9" y="16" width="301" height="54"/>
+                                                </variation>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要蓝色框1" translatesAutoresizingMaskIntoConstraints="NO" id="mC3-Qn-8Ij">
+                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="9" y="89" width="301" height="54"/>
+                                                </variation>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要绿色框1" translatesAutoresizingMaskIntoConstraints="NO" id="cAw-Ip-T3F">
+                                                <rect key="frame" x="0.0" y="-54" width="301" height="54"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="9" y="163" width="301" height="54"/>
+                                                </variation>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－内存配置类型" translatesAutoresizingMaskIntoConstraints="NO" id="zJ3-lg-c9d">
+                                                <rect key="frame" x="25" y="158" width="334" height="89"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－分配CPU" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-XK-V12">
+                                                <rect key="frame" x="25" y="40" width="334" height="89"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－专享内存" translatesAutoresizingMaskIntoConstraints="NO" id="VAg-te-5on">
+                                                <rect key="frame" x="25" y="276" width="334" height="133"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自定义调整" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNt-XV-nTc">
+                                                <rect key="frame" x="152" y="170" width="200" height="62"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                                <color key="textColor" red="0.27843137254901962" green="0.56862745098039214" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                                    <rect key="frame" x="175" y="89" width="130" height="54"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw2-ks-FKy">
+                                                <rect key="frame" x="166" y="50" width="152" height="68"/>
+                                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
+                                                <color key="textColor" red="1" green="0.84705882352941175" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                                    <rect key="frame" x="156" y="16" width="130" height="54"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分配VCPU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-qJ-SUT">
+                                                <rect key="frame" x="93" y="68" width="81" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="67" y="32" width="81" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyd-3M-cTN">
+                                                <rect key="frame" x="323" y="89" width="17" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="288" y="46" width="17" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内存配置类型" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-FL-Syi">
+                                                <rect key="frame" x="93" y="172" width="102" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="67" y="105" width="102" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-vcpu" translatesAutoresizingMaskIntoConstraints="NO" id="yNH-4y-QkB">
+                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="25" y="24" width="37" height="37"/>
+                                                </variation>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-memorytype" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-bq-zEL">
+                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="25" y="97" width="37" height="37"/>
+                                                </variation>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="摘要图标-memory" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-9h-r9S">
+                                                <rect key="frame" x="0.0" y="-37" width="37" height="37"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="25" y="171" width="37" height="37"/>
+                                                </variation>
+                                            </imageView>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuH-Ts-CTB">
+                                                <rect key="frame" x="93" y="294" width="259" height="94"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="规格内存：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpx-K2-fLQ">
+                                                        <rect key="frame" x="8" y="14" width="70" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Lv-b5X">
+                                                        <rect key="frame" x="233" y="18" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxi-f3-c1O">
+                                                        <rect key="frame" x="233" y="56" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="预留内存：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mph-fD-0IH">
+                                                        <rect key="frame" x="8" y="55" width="70" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDZ-D7-muX">
+                                                        <rect key="frame" x="75" y="12" width="156" height="25"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-Vk-9o2">
+                                                        <rect key="frame" x="75" y="50" width="156" height="25"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abT-MA-XtF">
+                                                <rect key="frame" x="93" y="278" width="258" height="125"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="静态最小值：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC9-hk-sr4">
+                                                        <rect key="frame" x="8" y="7" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0x-3d-qX8">
+                                                        <rect key="frame" x="233" y="9" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="动态最小值：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZw-Ar-GsN">
+                                                        <rect key="frame" x="8" y="39" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-wU-IF3">
+                                                        <rect key="frame" x="233" y="41" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="动态最大值：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-vC-BTK">
+                                                        <rect key="frame" x="8" y="68" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O66-nq-X6p">
+                                                        <rect key="frame" x="233" y="70" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="静态最大值：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-SB-m0D">
+                                                        <rect key="frame" x="8" y="100" width="84" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W7-B7-9Uc">
+                                                        <rect key="frame" x="233" y="102" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDU-Mo-02S">
+                                                        <rect key="frame" x="83" y="6" width="146" height="23"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5q-0m-tcH">
+                                                        <rect key="frame" x="83" y="38" width="146" height="23"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91U-yf-VxL">
+                                                        <rect key="frame" x="83" y="67" width="146" height="23"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTV-F3-pbO">
+                                                        <rect key="frame" x="83" y="99" width="146" height="23"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydy-IV-n6a">
+                                                <rect key="frame" x="95" y="294" width="256" height="88"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="共享内存" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqn-Q4-lhS">
+                                                        <rect key="frame" x="0.0" y="26" width="81" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-ss-e68">
+                                                        <rect key="frame" x="230" y="41" width="25" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-C3-tmE">
+                                                        <rect key="frame" x="87" y="14" width="144" height="54"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="60"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="65f-eI-jkL"/>
+                                                <exclude reference="mC3-Qn-8Ij"/>
+                                                <exclude reference="cAw-Ip-T3F"/>
+                                                <exclude reference="yNH-4y-QkB"/>
+                                                <exclude reference="fjs-bq-zEL"/>
+                                                <exclude reference="Lv7-9h-r9S"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                            <mask key="subviews">
+                                                <include reference="65f-eI-jkL"/>
+                                                <include reference="mC3-Qn-8Ij"/>
+                                                <include reference="cAw-Ip-T3F"/>
+                                                <exclude reference="zJ3-lg-c9d"/>
+                                                <exclude reference="RWJ-XK-V12"/>
+                                                <exclude reference="VAg-te-5on"/>
+                                                <include reference="yNH-4y-QkB"/>
+                                                <include reference="fjs-bq-zEL"/>
+                                                <include reference="Lv7-9h-r9S"/>
+                                            </mask>
                                         </variation>
                                     </view>
                                 </subviews>
@@ -972,19 +1088,29 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="969" height="768"/>
                     <connections>
+                        <outlet property="customView" destination="abT-MA-XtF" id="zjH-Ku-C1W"/>
+                        <outlet property="custom_memory1" destination="fDU-Mo-02S" id="7no-De-Vhh"/>
+                        <outlet property="custom_memory2" destination="m5q-0m-tcH" id="4MF-Ms-i5S"/>
+                        <outlet property="custom_memory3" destination="91U-yf-VxL" id="8ts-7g-q2e"/>
+                        <outlet property="custom_memory4" destination="XTV-F3-pbO" id="msl-u7-aQM"/>
                         <outlet property="isDynamicCpu_img" destination="Aze-AD-5qN" id="GO9-0Z-p9F"/>
                         <outlet property="isDynamicMemWce_img" destination="jzE-C0-aWZ" id="660-92-yer"/>
                         <outlet property="isInstalledTool" destination="gBz-Z2-Qht" id="hPe-Dx-qEY"/>
-                        <outlet property="memory" destination="9aX-3m-jaB" id="67x-XW-2Tk"/>
+                        <outlet property="memory" destination="Lek-C3-tmE" id="1ta-Mv-9JC"/>
+                        <outlet property="memoryImage" destination="VAg-te-5on" id="O8y-L0-ydU"/>
                         <outlet property="memoryType" destination="HNt-XV-nTc" id="8yj-kS-YAd"/>
+                        <outlet property="memoryTypeTitle" destination="Kqn-Q4-lhS" id="YkW-Ia-fRu"/>
                         <outlet property="noDynamicCpu_img" destination="P8o-dl-TKt" id="6hV-FS-BRR"/>
                         <outlet property="noDynamicMemWce_img" destination="ZA9-Tv-0iP" id="pdV-OX-JHG"/>
                         <outlet property="osType" destination="OUi-lo-yL1" id="xej-E7-I2U"/>
                         <outlet property="osType_image" destination="Z4A-C3-IAJ" id="zc9-5b-dUA"/>
+                        <outlet property="reservationView" destination="uuH-Ts-CTB" id="hHo-kI-v28"/>
+                        <outlet property="reservation_memory1" destination="bDZ-D7-muX" id="Ymf-yR-G86"/>
+                        <outlet property="reservation_memory2" destination="fUf-Vk-9o2" id="Tu3-t5-KKe"/>
                         <outlet property="scrollView" destination="ozM-bn-Z9B" id="WtE-LF-mNG"/>
                         <outlet property="snopshotNum" destination="FMw-5D-H9T" id="TfW-DL-fW8"/>
+                        <outlet property="usuallyView" destination="ydy-IV-n6a" id="ZOn-hn-laa"/>
                         <outlet property="vcpu" destination="hw2-ks-FKy" id="bzE-Ae-QFw"/>
-                        <outletCollection property="allLabels" destination="9aX-3m-jaB" id="4he-Ca-5op"/>
                         <outletCollection property="allLabels" destination="HNt-XV-nTc" id="uPi-BP-jOm"/>
                         <outletCollection property="allLabels" destination="hw2-ks-FKy" id="y00-5d-pdr"/>
                         <outletCollection property="allLabels" destination="gBz-Z2-Qht" id="kgn-GW-peE"/>
