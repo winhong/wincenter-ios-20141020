@@ -89,6 +89,7 @@
         [self reloadData];
     }];
     [self reloadData];
+    self.network_count =0;
 }
 
 - (IBAction)refreshAction:(id)sender {
@@ -102,6 +103,11 @@
             self.activityVm = object;
             [self.hostVO getHostNetworkListAllAsync:^(id object, NSError *error) {
                 self.hostNetworkList = object;
+                for (HostNetworkVO *hostNetworkVO in self.hostNetworkList.networks) {
+                    if ([hostNetworkVO.type isEqualToString:@"EXTERNAL"] || [hostNetworkVO.type isEqualToString:@"INTERNAL"]) {
+                        self.network_count += 1;
+                    }
+                }
                 [self refreshMainInfo];
                 if([self.hostVO.state isEqualToString:@"OK"]){
                     [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
@@ -126,7 +132,7 @@
     self.name.text = [NSString stringWithFormat:@"%@", self.hostVO.hostName];
     self.virtualMachineNum.text = [NSString stringWithFormat:@"%d", self.hostVO.virtualMachineNum];
     self.activeMachineNum.text = [NSString stringWithFormat:@"%d", self.activityVm.OK];
-    self.networkNum.text = [NSString stringWithFormat:@"%d", self.hostNetworkList.recordTotal];
+    self.networkNum.text = [NSString stringWithFormat:@"%d", self.network_count];
     self.startRunTime.text = [NSString stringWithFormat:@"%d", self.hostVO.startRunTime];
     self.virtualInfo.text = [NSString stringWithFormat:@"%@ %@", self.hostVO.virtualSoftware, self.hostVO.virtualVersion];
     self.virtualDate.text = [NSString stringWithFormat:@"%@", self.hostVO.versionDate];

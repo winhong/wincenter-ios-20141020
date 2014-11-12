@@ -15,6 +15,7 @@
 @property NSString *state;
 @property NSString *pniName;
 @property NSString *vlanId;
+@property NSString *type;
 
 -(NSString*) state_text;
 - (UIColor *)state_color;
