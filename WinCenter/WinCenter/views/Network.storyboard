@@ -222,7 +222,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="7FD5C860-793B-4A83-AB95-593AC536D3D1" translatesAutoresizingMaskIntoConstraints="NO" id="sPg-0e-4dU">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="9A00E87C-03B4-45A5-BAFC-DD0E0BE9F6A2" translatesAutoresizingMaskIntoConstraints="NO" id="sPg-0e-4dU">
                                                     <rect key="frame" x="248" y="39" width="44" height="9"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已连接" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-hO-8Ro">
@@ -279,6 +279,7 @@
                                     <outlet property="nic" destination="yId-mv-CIL" id="vJX-eu-Ldc"/>
                                     <outlet property="state" destination="qQI-hO-8Ro" id="yKh-kj-dH8"/>
                                     <outlet property="vlan" destination="YKf-jz-Cvs" id="oxH-dt-6CY"/>
+                                    <segue destination="r0j-ho-a1P" kind="showDetail" id="BMl-lV-9fT"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NetworkTotalTableCell_Inside" rowHeight="120" id="jTh-Ey-wBm" customClass="NetworkTotalTableCell">
@@ -298,7 +299,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="7FD5C860-793B-4A83-AB95-593AC536D3D1" translatesAutoresizingMaskIntoConstraints="NO" id="06a-Xm-O1m">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="9A00E87C-03B4-45A5-BAFC-DD0E0BE9F6A2" translatesAutoresizingMaskIntoConstraints="NO" id="06a-Xm-O1m">
                                                     <rect key="frame" x="252" y="39" width="44" height="9"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已连接" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-dJ-s2y">
@@ -319,6 +320,7 @@
                                     <outlet property="linkState" destination="06a-Xm-O1m" id="eZs-xj-Esp"/>
                                     <outlet property="name" destination="gKP-XD-QTz" id="871-To-Qut"/>
                                     <outlet property="state" destination="bhB-dJ-s2y" id="4Ka-B3-erM"/>
+                                    <segue destination="r0j-ho-a1P" kind="showDetail" id="I2P-vI-XG1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -400,7 +402,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7FD5C860-793B-4A83-AB95-593AC536D3D1" width="44" height="9">
+        <image name="9A00E87C-03B4-45A5-BAFC-DD0E0BE9F6A2" width="44" height="9">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -482,4 +484,7 @@ EFwAAAAAAAACAQAAAAAAAABCAAAAAAAAAAAAAAAAAAAQXg
         <image name="网络-面板" width="290" height="150"/>
         <image name="网络-面板2" width="290" height="80"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="I2P-vI-XG1"/>
+    </inferredMetricsTieBreakers>
 </document>
