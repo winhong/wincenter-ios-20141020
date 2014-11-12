@@ -16,6 +16,8 @@
 @property HostActivityVmVO *activityVm;
 @property HostNetworkListResult *hostNetworkList;
 
+@property int network_count;
+
 @property PNCircleChart *circleChart;
 @property PNCircleChart *circleChart2;
 @property PNCircleChart *circleChart3;
