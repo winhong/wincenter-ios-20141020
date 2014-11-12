@@ -12,7 +12,7 @@
 - (NSString*)state_text{
     NSDictionary *stateDict = @{
                                 @"OK":@"运行中",
-                                @"DISCONNECT":@"离线",
+                                @"DISCONNECT":@"故障",
                                 @"MAINTAIN":@"维护",
                                 @"RESTART":@"重启"
                                 };
