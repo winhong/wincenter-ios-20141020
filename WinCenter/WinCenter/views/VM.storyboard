@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--虚拟机详情-->
@@ -1130,7 +1131,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="当虚拟磁盘全部在共享存储池上时，才可以进行池内迁移！" id="IKq-sO-D59">
+                            <tableViewSection id="OVU-ae-VIy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="66" id="XH9-ok-mDO">
+                                        <rect key="frame" x="0.0" y="99" width="540" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XH9-ok-mDO" id="gby-f9-E1A">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="当虚拟磁盘全部在共享存储池上时，才可以进行池内迁移！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wF-3d-7p8">
+                                                    <rect key="frame" x="20" y="8" width="540" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1wF-3d-7p8" firstAttribute="top" secondItem="gby-f9-E1A" secondAttribute="topMargin" id="FQK-nn-6mI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1wF-3d-7p8" secondAttribute="trailing" constant="32" id="H9U-1n-a4e"/>
+                                                <constraint firstItem="1wF-3d-7p8" firstAttribute="leading" secondItem="gby-f9-E1A" secondAttribute="leadingMargin" constant="12" id="M2y-Bq-gGC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1wF-3d-7p8" secondAttribute="bottom" constant="1" id="kGR-FX-DUD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="虚拟机名称：" id="IKq-sO-D59">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pZD-Jg-JBO">
                                         <rect key="frame" x="0.0" y="99" width="540" height="44"/>
@@ -1139,24 +1166,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-L2-Ead">
-                                                    <rect key="frame" x="20" y="11" width="102" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq1-bO-Wf1">
-                                                    <rect key="frame" x="124" y="12" width="460" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq1-bO-Wf1">
+                                                    <rect key="frame" x="20" y="13" width="540" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qq1-bO-Wf1" secondAttribute="trailing" constant="32" id="B4P-MD-dXk"/>
+                                                <constraint firstItem="qq1-bO-Wf1" firstAttribute="top" secondItem="iEV-by-sAx" secondAttribute="topMargin" constant="5" id="huO-7m-oJm"/>
+                                                <constraint firstItem="qq1-bO-Wf1" firstAttribute="leading" secondItem="iEV-by-sAx" secondAttribute="leadingMargin" constant="12" id="lbq-1P-TB1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qq1-bO-Wf1" secondAttribute="bottom" constant="2" id="r70-jy-E77"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="11Y-2j-db4">
+                            <tableViewSection headerTitle="目标主机：" id="11Y-2j-db4">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f66-Nt-8rp">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
@@ -1165,19 +1192,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="507" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目标主机：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-KD-y6K">
-                                                    <rect key="frame" x="20" y="11" width="85" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择一个目标主机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3se-70-y4E">
-                                                    <rect key="frame" x="104" y="11" width="281" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="选择一个目标主机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3se-70-y4E">
+                                                    <rect key="frame" x="20" y="13" width="540" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3se-70-y4E" firstAttribute="leading" secondItem="gRY-dX-nav" secondAttribute="leadingMargin" constant="12" id="Chm-Jn-Sv0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3se-70-y4E" secondAttribute="bottom" constant="2" id="FfC-L9-ZSz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3se-70-y4E" secondAttribute="trailing" constant="-1" id="IaA-U4-YUT"/>
+                                                <constraint firstItem="3se-70-y4E" firstAttribute="top" secondItem="gRY-dX-nav" secondAttribute="topMargin" constant="5" id="zFC-tN-lqj"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="LWN-te-8Oe" kind="push" identifier="toMigrateTargetHosts" id="Abb-2o-6Yz"/>
@@ -1210,7 +1237,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxC-5G-cCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600" y="1803"/>
+            <point key="canvasLocation" x="4600" y="1798"/>
         </scene>
         <!--目标主机-->
         <scene sceneID="ifY-QD-unH">

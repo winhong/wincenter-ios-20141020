@@ -51,14 +51,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    [tableView headerViewForSection:0].textLabel.textColor = [UIColor redColor];
-    if (section == 0) {
-        return @"当虚拟磁盘全部在共享存储池上时，才可以进行池内迁移！";
-    }
-    else
-        return nil;
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//    [tableView headerViewForSection:0].textLabel.textColor = [UIColor redColor];
+//    if (section == 0) {
+//        return @"当虚拟磁盘全部在共享存储池上时，才可以进行池内迁移！";
+//    }
+//    else
+//        return nil;
+//}
 - (IBAction)close:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
