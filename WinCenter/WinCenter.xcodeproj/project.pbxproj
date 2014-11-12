@@ -413,6 +413,7 @@
 		840DA54A19FA46F300664F2B /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 840DA54919FA46F300664F2B /* WebViewJavascriptBridge.js.txt */; };
 		843806EB19FA227C00DE3217 /* RealtimeCurve2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */; };
 		843806ED19FA2DF400DE3217 /* Host.getPerformanceAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843806EC19FA2DF400DE3217 /* Host.getPerformanceAsync.json */; };
+		843E5A4A1A13724300DF61AF /* VmVO.getMigrateTargetsAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E5A491A13724300DF61AF /* VmVO.getMigrateTargetsAsync.json */; };
 		843E6C0619F5094F0046A5A0 /* HostSubVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0519F5094F0046A5A0 /* HostSubVO.m */; };
 		843E6C0819F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */; };
 		843E6C0B19F50E830046A5A0 /* HostSubStateVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E6C0A19F50E830046A5A0 /* HostSubStateVO.m */; };
@@ -1128,6 +1129,7 @@
 		840DA54919FA46F300664F2B /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
 		843806EA19FA227C00DE3217 /* RealtimeCurve2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RealtimeCurve2.bundle; sourceTree = "<group>"; };
 		843806EC19FA2DF400DE3217 /* Host.getPerformanceAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Host.getPerformanceAsync.json; sourceTree = "<group>"; };
+		843E5A491A13724300DF61AF /* VmVO.getMigrateTargetsAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VmVO.getMigrateTargetsAsync.json; sourceTree = "<group>"; };
 		843E6C0419F5094F0046A5A0 /* HostSubVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostSubVO.h; sourceTree = "<group>"; };
 		843E6C0519F5094F0046A5A0 /* HostSubVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostSubVO.m; sourceTree = "<group>"; };
 		843E6C0719F50D380046A5A0 /* HostSubVO.getHostSubInfoAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HostSubVO.getHostSubInfoAsync.json; sourceTree = "<group>"; };
@@ -1573,6 +1575,7 @@
 				6870D4E91A032E9000E803B9 /* DatacenterVO.getBusDomainsListAsync.json */,
 				686E383D1A04CB5A00491166 /* BusDomainsVO.getBusinessListAsync.json */,
 				685218FE1A0CB15C002C0441 /* VmVO.getVmIsoListAsync.json */,
+				843E5A491A13724300DF61AF /* VmVO.getMigrateTargetsAsync.json */,
 			);
 			path = datas;
 			sourceTree = "<group>";
@@ -2675,6 +2678,7 @@
 				181DED5719F17CB100998835 /* HostVO.getHostStatVOAsync.json in Resources */,
 				181DED5219F17CB100998835 /* DatacenterVO.getVmListAsync.limit.json in Resources */,
 				18763C0719F4E4E400669CC3 /* bg3@2x.png in Resources */,
+				843E5A4A1A13724300DF61AF /* VmVO.getMigrateTargetsAsync.json in Resources */,
 				181DED9819F17CB100998835 /* Network.storyboard in Resources */,
 				181DED4F19F17CB100998835 /* DatacenterVO.getStorageListAsync.json in Resources */,
 				181DED4919F17CB100998835 /* DatacenterVO.getDatacenterListAsync.json in Resources */,

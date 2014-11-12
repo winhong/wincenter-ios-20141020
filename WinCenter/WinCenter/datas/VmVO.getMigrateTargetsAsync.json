@@ -1,0 +1,34 @@
+{
+    "targets": [
+                {
+                "targetId": 100,
+                "targetName": "资源池(163)大大大大大大大大大大大大大大大大大大大大",
+                "type": "resPool",
+                "isFit": true,
+                "state": "OK",
+                "hosts": [
+                          {
+                          "targetId": 100,
+                          "targetName": "winserver-163",
+                          "type": "host",
+                          "isFit": false,
+                          "state": "CURRENT_SERVER"
+                          },
+                          {
+                          "targetId": 101,
+                          "targetName": "winserver-113",
+                          "type": "host",
+                          "isFit": false,
+                          "state": "CURRENT_SERVER"
+                          },
+                          {
+                          "targetId": 102,
+                          "targetName": "winserver-144",
+                          "type": "host",
+                          "isFit": false,
+                          "state": "CURRENT_SERVER"
+                          }
+                          ]
+                }
+                ]
+}

@@ -251,6 +251,11 @@
 }
 
 - (void) vmGetMigrateTargets:(FetchObjectCompletionBlock)completionBlock{
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        completionBlock([[VmMigrateTargetsVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"VmVO.getMigrateTargetsAsync" ofType:@"json"]]], nil);
+        return;
+    }
+    
     [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
         [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet"]];
         [simpleRequest setParameters:@{@"connectorId":[NSString stringWithFormat:@"%d", [RemoteObject getCurrentDatacenterVO].id],
