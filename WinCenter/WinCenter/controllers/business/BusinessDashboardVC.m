@@ -26,10 +26,16 @@
 
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
-        if(!self.navigationItem.leftBarButtonItem){
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            if(!self.navigationItem.leftBarButtonItem){
+                self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+            }
+            self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+        }else{
+            if(!self.navigationItem.leftBarButtonItem){
+                self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+            }
         }
-        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
     
         [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
         

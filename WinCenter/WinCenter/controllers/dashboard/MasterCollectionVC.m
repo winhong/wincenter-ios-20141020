@@ -23,6 +23,10 @@
 #import "HostDashboardVC.h"
 
 @implementation MasterCollectionVC
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
+
 - (IBAction)refreshAction:(id)sender {
     self.navigationItem.rightBarButtonItem.enabled = false;     
     [self.collectionView headerBeginRefreshing];

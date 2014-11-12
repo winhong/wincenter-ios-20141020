@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "F3BarGauge.h"
+#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface MasterCollectionVC : UICollectionViewController<UIActionSheetDelegate>
 
@@ -36,7 +37,7 @@
 -(IBAction)dismissModal:(id)sender;
 
 - (float) formatCountData:(float) num;
-
+- (IBAction)showMenu:(id)sender;
 -(IBAction)showWarningInfoVC:(id)sender;
 -(IBAction)showControlRecordVC:(id)sender;
 
