@@ -57,9 +57,6 @@
     self.ipLabel.text = self.vmVO.ip;
     if(self.vmVO.ip == nil || [self.vmVO.ip isEqualToString:@""]){
         self.ipLabel.text = @"无法获取网络";
-        self.ipLabel.textColor = [UIColor lightGrayColor];
-    }else{
-        self.ipLabel.textColor = [UIColor blackColor];
     }
     self.statusLabel.text = [self.vmVO state_text];
     //self.statusLabel.textColor = [self.vmVO state_color];

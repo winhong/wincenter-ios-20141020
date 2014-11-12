@@ -25,7 +25,7 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     self.userName.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"USER_NAME"];
-    self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
+    //self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
 }
 - (void)viewDidLoad
 {
@@ -205,7 +205,7 @@
 - (void) toLogin{
     
 //    self.userName.text = @"";
-//    self.password.text = @"";
+    self.password.text = @"";
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
