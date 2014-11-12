@@ -65,6 +65,7 @@
 }
 
 - (IBAction)editPortrait:(id)sender {
+    return;
     UIActionSheet *choiceSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"取消"
