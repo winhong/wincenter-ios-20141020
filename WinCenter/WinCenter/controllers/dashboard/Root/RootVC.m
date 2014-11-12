@@ -21,6 +21,23 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
 }
 
+-(void)showTab:(int)index{
+    NSArray *viewControllers = @[@"DatacenterDetailInfoVCNav",
+                                 @"PoolDashboardVCNav",
+                                 @"HostDashboardVCNav",
+                                 @"VmDashboardVCNav",
+                                 @"StorageDashboardVCNav",
+                                 @"BusinessDashboardVCNav",
+                                 @""];
+    if(index<7){
+        self.contentViewController = [self.storyboard instantiateViewController:viewControllers[index]];
+    }else if(index==7){
+        self.contentViewController = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
+    }else if(index==8){
+        self.contentViewController = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
+    }
+
+}
 
 - (void)viewDidLoad
 {
