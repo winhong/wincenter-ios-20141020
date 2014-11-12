@@ -125,7 +125,7 @@ function drawLineNetWork(data,type){
         },
         tooltip: {
             formatter: function() {
-                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm:ss") +'</b><br/>'+
+                    return '<b>'+timeToFormatStr(this.x,"yyyy-MM-dd HH:mm:ss") +'</b><br/>'+
                     this.series.name+"使用速率："+ this.y.toFixed(2) +'Kbps';//使用速率： 
             }
         },
@@ -137,7 +137,7 @@ function drawLineNetWork(data,type){
 	        tickInterval: xInterval, // 1 day
 	        labels: {
 	            formatter: function() {
-	                return timeToFormatStr(this.value,"MM-dd HH:mm");
+	                return timeToFormatStr(this.value,"yyyy-MM-dd HH:mm");
 	            },
 	            x: 0,
 	            style: {
