@@ -9,6 +9,7 @@
 #import "DatacenterDetailInfoVC.h"
 #import "MasterContainerVC.h"
 #import "DashboardVC.h"
+#import "RootVC.h"
 
 @interface DatacenterDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -329,8 +330,12 @@
     }
 }
 - (IBAction)gotoDashboard:(id)sender {
-    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
-    [vc.tabBarVC setSelectedIndex:((UIButton*)sender).tag];
-    [vc.menuVC setSelectedItemIndex:((UIButton*)sender).tag];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [((RootVC*)self.frostedViewController) showTab:((UIButton*)sender).tag];
+    }else{
+        DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+        [vc.tabBarVC setSelectedIndex:((UIButton*)sender).tag];
+        [vc.menuVC setSelectedItemIndex:((UIButton*)sender).tag];
+    }
 }
 @end
