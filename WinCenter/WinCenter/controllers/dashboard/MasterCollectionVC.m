@@ -23,6 +23,10 @@
 #import "HostDashboardVC.h"
 
 @implementation MasterCollectionVC
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
+
 - (IBAction)refreshAction:(id)sender {
     self.navigationItem.rightBarButtonItem.enabled = false;     
     [self.collectionView headerBeginRefreshing];
@@ -39,10 +43,6 @@
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.collectionView.backgroundColor = [UIColor clearColor];
-    }
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.backActionButton.title = @"";
     }
     
     self.dataList = [[NSMutableArray alloc] initWithCapacity:0];

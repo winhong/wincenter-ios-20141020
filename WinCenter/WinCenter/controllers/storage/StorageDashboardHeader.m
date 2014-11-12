@@ -15,7 +15,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.scrollView.contentSize = CGSizeMake(1600, self.scrollView.frame.size.height);
+        self.scrollView.contentSize = CGSizeMake(1650, self.scrollView.frame.size.height);
     }
 }
 

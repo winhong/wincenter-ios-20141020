@@ -22,10 +22,16 @@
 
 -(void)reloadData{
     [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
-        if(!self.navigationItem.leftBarButtonItem){
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            if(!self.navigationItem.leftBarButtonItem){
+                self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+            }
+            self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+        }else{
+            if(!self.navigationItem.leftBarButtonItem){
+                self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+            }
         }
-        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
         
         [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
             self.datacenterStatWinserver = object;
@@ -91,9 +97,11 @@
     VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.ip.text = vmVO.ip;
-    if(vmVO.ip == nil){
-        cell.ip.text = @"无网络";
+    if(vmVO.ip == nil || [vmVO.ip isEqualToString:@""]){
+        cell.ip.text = @"无法获取网络";
         cell.ip.textColor = [UIColor lightGrayColor];
+    }else{
+        cell.ip.textColor = [UIColor blackColor];
     }
     cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];

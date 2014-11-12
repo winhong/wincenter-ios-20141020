@@ -55,9 +55,11 @@
     self.pathLabel.text = [NSString stringWithFormat:@"%@ → %@ → %@", [RemoteObject getCurrentDatacenterVO].name, self.vmVO.poolName, self.vmVO.ownerHostName];
     self.titleLabel.text = self.vmVO.name;
     self.ipLabel.text = self.vmVO.ip;
-    if(self.vmVO.ip == nil){
-        self.ipLabel.text = @"无网络";
+    if(self.vmVO.ip == nil || [self.vmVO.ip isEqualToString:@""]){
+        self.ipLabel.text = @"无法获取网络";
         self.ipLabel.textColor = [UIColor lightGrayColor];
+    }else{
+        self.ipLabel.textColor = [UIColor blackColor];
     }
     self.statusLabel.text = [self.vmVO state_text];
     //self.statusLabel.textColor = [self.vmVO state_color];
@@ -75,7 +77,7 @@
     int Day = time/(3600*24.0);
     int Hour = (time - 3600*24.0*Day)/3600.0;
     int Minute = (time - 3600*24.0*Day - 3600.0*Hour)/60.0;
-    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
+    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分钟",Day,Hour,Minute];
     
     self.title = self.vmVO.name;
     

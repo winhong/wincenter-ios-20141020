@@ -20,11 +20,13 @@
 {
     [super viewDidLoad];
     
+    /*
     EScrollerView *scroller=[[EScrollerView alloc] initWithFrameRect:CGRectMake(0, 20, 320, 150)
                                                           ImageArray:[NSArray arrayWithObjects:@"EScrollerView_1.jpg",@"EScrollerView_2.jpg",@"EScrollerView_3.jpg", nil]
                                                           TitleArray:[NSArray arrayWithObjects:@"EScrollerView_1",@"EScrollerView_2",@"EScrollerView_3", nil]];
     scroller.delegate=self;
     self.tableView.tableHeaderView = scroller;
+    */
     
     [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
         if(((DatacenterListResult*)object).dataCenters.count>0){
@@ -76,20 +78,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section==1){
-    
+        [self gotoPage:@(indexPath.row)];
     }
     else if(indexPath.section==2){
-        [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Charts" bundle:nil] instantiateViewController:@"ChartTableVC"] animated:YES];
-    }
-    else if(indexPath.section==3){
+        //[self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Charts" bundle:nil] instantiateViewController:@"ChartTableVC"] animated:YES];
+        
+    //}
+    //else if(indexPath.section==3){
         if(indexPath.row==0){
             [self showWarningInfoVC:nil];
         }else if(indexPath.row==1){
             [self showControlRecordVC:nil];
         }
-    }else if(indexPath.section==4){
-        [self.navigationController pushViewController:[MSCalendarViewController new] animated:YES];
     }
+    //else if(indexPath.section==4){
+    //    [self.navigationController pushViewController:[MSCalendarViewController new] animated:YES];
+    //}
 }
 
 - (void)didFinished:(DatacenterVO *)vo{

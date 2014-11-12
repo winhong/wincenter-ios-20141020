@@ -56,7 +56,7 @@
     int Day = (int)time/(3600*24.0);
     int Hour = (int)(time - 3600*24.0*Day)/3600.0;
     int Minute = (int)(time - 3600*24.0*Day - 3600.0*Hour)/60.0;
-    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分",Day,Hour,Minute];
+    self.runningTime.text = [NSString stringWithFormat:@"%d天%d小时%d分钟",Day,Hour,Minute];
     
     self.title = self.hostVO.hostName;
 }

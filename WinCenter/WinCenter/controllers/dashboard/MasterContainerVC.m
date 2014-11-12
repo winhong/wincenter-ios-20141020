@@ -23,6 +23,13 @@
 
 @implementation MasterContainerVC
 
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.bannerScrollView.contentSize = CGSizeMake(1750, self.bannerScrollView.frame.size.height);
+    }
+}
+
 - (void)viewDidLoad
 {    
     [super viewDidLoad];

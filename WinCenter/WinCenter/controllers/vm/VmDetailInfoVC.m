@@ -32,6 +32,17 @@
 @property (weak, nonatomic) IBOutlet UIView *memoryPNChartArea;
 @property (weak, nonatomic) IBOutlet UIView *netPNChartArea;
 @property (weak, nonatomic) IBOutlet UIView *storagePNChartArea;
+@property (weak, nonatomic) IBOutlet UIImageView *memoryImage;
+@property (weak, nonatomic) IBOutlet UILabel *memoryTypeTitle;
+@property (weak, nonatomic) IBOutlet UIView *usuallyView;
+@property (weak, nonatomic) IBOutlet UIView *reservationView;
+@property (weak, nonatomic) IBOutlet UIView *customView;
+@property (weak, nonatomic) IBOutlet UILabel *reservation_memory1;
+@property (weak, nonatomic) IBOutlet UILabel *reservation_memory2;
+@property (weak, nonatomic) IBOutlet UILabel *custom_memory1;
+@property (weak, nonatomic) IBOutlet UILabel *custom_memory2;
+@property (weak, nonatomic) IBOutlet UILabel *custom_memory3;
+@property (weak, nonatomic) IBOutlet UILabel *custom_memory4;
 
 @end
 
@@ -220,9 +231,11 @@
 }
 - (void)refresh{
     self.vmIp.text = self.vmVO.ip;
-    if(self.vmVO.ip == nil){
-        self.vmIp.text = @"无网络";
+    if(self.vmVO.ip == nil || [self.vmVO.ip isEqualToString:@""]){
+        self.vmIp.text = @"无法获取网络";
         self.vmIp.textColor = [UIColor lightGrayColor];
+    }else{
+        self.vmIp.textColor = [UIColor blackColor];
     }
     self.name.text = self.vmVO.name;
     self.status.text = [self.vmVO state_text];
@@ -239,8 +252,35 @@
     if (self.memoryType.text.length > 3) {
         self.memoryType.font = [UIFont systemFontOfSize:30.0f];
     }
-    //self.isDynamicMemWce
+//    //self.isDynamicMemWce
+//    @"shared":@"共享",
+//    @"privilege":@"专享",
+//    @"reservation":@"预留",
+//    @"custom":@"自定义调整"
+
+    if ([self.vmVO.memoryType isEqualToString:@"shared"]) {
+        self.usuallyView.hidden = NO;
+        self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
+        self.memoryTypeTitle.text = @"共享内存：";
+    }else if ([self.vmVO.memoryType isEqualToString:@"privilege"]) {
+        self.usuallyView.hidden = NO;
+        self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
+        self.memoryTypeTitle.text = @"专享内存：";
+    }else if ([self.vmVO.memoryType isEqualToString:@"reservation"]) {
+        self.reservationView.hidden = NO;
+        self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
+        self.reservation_memory1.text = [NSString stringWithFormat:@"%.2f",self.vmVO.memory/1024.0];
+        self.reservation_memory2.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minMem/1024.0];
+    }else if ([self.vmVO.memoryType isEqualToString:@"custom"]) {
+        self.customView.hidden = NO;
+        self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存"];
+        self.custom_memory1.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minStaticMem/1024.0];
+        self.custom_memory2.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minMem/1024.0];
+        self.custom_memory3.text = [NSString stringWithFormat:@"%.2f",self.vmVO.maxMem/1024.0];
+        self.custom_memory4.text = [NSString stringWithFormat:@"%.2f",self.vmVO.maxStaticMen/1024.0];
+    }
     self.memory.text = [NSString stringWithFormat:@"%.2f", self.vmVO.memory/1024.0];
+    
     //self.snopshotNum.text
     self.osType_image.image = [UIImage imageNamed:[self.vmVO osType_imageName_big]];
     if(self.isDynamicCpu_img){

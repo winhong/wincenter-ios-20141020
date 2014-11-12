@@ -42,19 +42,33 @@
     
     UINavigationController *navigationController = (UINavigationController *)self.frostedViewController.contentViewController;
     
-    if (indexPath.section == 0 && indexPath.row == 0) {
-  
-    }else if (indexPath.section == 0 && indexPath.row == 1) {
-        [navigationController pushViewController:[RAViewController new] animated:YES];
+    if (indexPath.section == 0) {
+        NSArray *viewControllers = @[@"DatacenterDetailInfoVCNav",
+                                     @"PoolDashboardVCNav",
+                                     @"HostDashboardVCNav",
+                                     @"VmDashboardVCNav",
+                                     @"StorageDashboardVCNav",
+                                     @"BusinessDashboardVCNav",
+                                     @""];
+        self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:viewControllers[indexPath.row]];
     }
-    else if (indexPath.section == 0 && indexPath.row == 2) {
-        [navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateViewController:@"PopOptionsVC"] animated:YES];
+//    else if (indexPath.section == 0 && indexPath.row == 1) {
+//        [navigationController pushViewController:[RAViewController new] animated:YES];
+//    }
+    else if (indexPath.section == 1){
+
+        if(indexPath.row==0){
+            self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
+        }else{
+            self.frostedViewController.contentViewController = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
+        }
     }
     
     
 }
 
 - (IBAction)editPortrait:(id)sender {
+    return;
     UIActionSheet *choiceSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"取消"
