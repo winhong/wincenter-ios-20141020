@@ -9,6 +9,7 @@
 #import "PopOptionsVC.h"
 #import <TOWebViewController/TOWebViewController.h>
 #import <THPinViewController/THPinViewController.h>
+#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface PopOptionsVC ()
 @property int remainingPinEntries;
@@ -16,6 +17,11 @@
 @end
 
 @implementation PopOptionsVC
+
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,6 +35,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        
+    }else{
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+        }
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

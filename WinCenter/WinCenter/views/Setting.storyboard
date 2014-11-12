@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bp4-kY-Qp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bp4-kY-Qp4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -251,7 +251,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
             <objects>
                 <tableViewController id="0HX-wV-lqa" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="m3V-QI-cS9">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -414,7 +414,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
             <objects>
                 <tableViewController id="UAK-wx-xrw" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2bI-Hd-J82">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -1193,7 +1193,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <segue destination="M0M-TA-G26" kind="unwind" unwindAction="backToLogin:" id="pVH-eX-ygY"/>
+                                        <action selector="exitSystem:" destination="RpT-4z-TE5" eventType="touchUpInside" id="Zgd-L2-1ND"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -1222,7 +1222,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Admin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erE-cu-yaf">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erE-cu-yaf">
                                                     <rect key="frame" x="455" y="11" width="50" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1235,6 +1235,10 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <segue destination="Rmg-sq-peh" kind="show" id="sfL-QP-Kfv"/>
                                         </connections>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="GCg-Yk-Gyv">
+                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="SSb-nB-jpC" style="IBUITableViewCellStyleDefault" id="XTe-ud-PIn">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1255,6 +1259,10 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <segue destination="rxn-hY-iat" kind="show" id="FDj-F1-Eac"/>
                                         </connections>
                                     </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="FxR-hG-Vza">
+                                <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lLs-zK-f9a" detailTextLabel="Ca3-e7-GTD" style="IBUITableViewCellStyleValue1" id="u5v-bn-UiX">
                                         <rect key="frame" x="0.0" y="227" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1269,7 +1277,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="试用（剩余60天）" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ca3-e7-GTD">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ca3-e7-GTD">
                                                     <rect key="frame" x="366" y="11" width="139" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1280,65 +1288,6 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Yvr-L9-kvC" kind="show" id="gQ8-rg-qih"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MjH-At-Lud" style="IBUITableViewCellStyleDefault" id="txb-8B-cNJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="txb-8B-cNJ" id="ccd-vX-D7s">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="锁定屏幕" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MjH-At-Lud">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="GCg-Yk-Gyv">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EzS-gl-v7Y" style="IBUITableViewCellStyleDefault" id="Hbr-In-Gfn">
-                                        <rect key="frame" x="0.0" y="291" width="540" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hbr-In-Gfn" id="96z-So-vah">
-                                            <rect key="frame" x="0.0" y="0.0" width="507" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="告警消息提醒" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EzS-gl-v7Y">
-                                                    <rect key="frame" x="15" y="0.0" width="490" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="UAK-wx-xrw" kind="show" id="h9v-mu-EsN"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="evn-8A-Iro" style="IBUITableViewCellStyleDefault" id="nno-gh-cXN">
-                                        <rect key="frame" x="0.0" y="355" width="540" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nno-gh-cXN" id="xyZ-0H-B44">
-                                            <rect key="frame" x="0.0" y="0.0" width="507" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="虚拟机规格" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="evn-8A-Iro">
-                                                    <rect key="frame" x="15" y="0.0" width="490" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="0HX-wV-lqa" kind="show" id="xiw-9q-3p9"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1365,46 +1314,6 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <segue destination="eWt-rJ-IKi" kind="show" id="eem-JX-f0g"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PnK-wY-OHo" style="IBUITableViewCellStyleDefault" id="IDV-R9-NCE">
-                                        <rect key="frame" x="0.0" y="419" width="540" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDV-R9-NCE" id="Cfz-rf-OV6">
-                                            <rect key="frame" x="0.0" y="0.0" width="507" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="问题反馈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PnK-wY-OHo">
-                                                    <rect key="frame" x="15" y="0.0" width="490" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="WXd-XZ-Xat" kind="show" id="9nw-dL-43m"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f3V-5W-glt" style="IBUITableViewCellStyleDefault" id="Ow5-QN-z2Y">
-                                        <rect key="frame" x="0.0" y="419" width="540" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ow5-QN-z2Y" id="zy1-YV-jo4">
-                                            <rect key="frame" x="0.0" y="0.0" width="507" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="帮助手册" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3V-5W-glt">
-                                                    <rect key="frame" x="15" y="0.0" width="490" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="43b-CK-mNG" kind="show" id="l5z-NH-yea"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1418,7 +1327,6 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhc-z9-PJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="M0M-TA-G26" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-6206" y="-3221"/>
         </scene>
@@ -1443,11 +1351,9 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="DXs-kF-nOV"/>
-        <segue reference="xiw-9q-3p9"/>
-        <segue reference="FDj-F1-Eac"/>
-        <segue reference="eem-JX-f0g"/>
-        <segue reference="gQ8-rg-qih"/>
-        <segue reference="h9v-mu-EsN"/>
         <segue reference="sfL-QP-Kfv"/>
+        <segue reference="eem-JX-f0g"/>
+        <segue reference="FDj-F1-Eac"/>
+        <segue reference="gQ8-rg-qih"/>
     </inferredMetricsTieBreakers>
 </document>

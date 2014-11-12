@@ -8,6 +8,7 @@
 
 #import "DatacenterTableVC.h"
 #import "DatacenterTableCell.h"
+#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface DatacenterTableVC ()
 @property NSMutableArray *datacenters;
@@ -15,9 +16,21 @@
 
 @implementation DatacenterTableVC
 
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
+
 - (void)viewDidLoad
 {
     self.datacenters = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+
+    }else{
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+        }
+    }
     
     [super viewDidLoad];
     

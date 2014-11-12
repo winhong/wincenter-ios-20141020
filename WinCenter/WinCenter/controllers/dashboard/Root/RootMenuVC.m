@@ -50,14 +50,17 @@
                                      @"StorageDashboardVCNav",
                                      @"BusinessDashboardVCNav",
                                      @""];
-        self.frostedViewController.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:viewControllers[indexPath.row]];;
+        self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:viewControllers[indexPath.row]];
     }
 //    else if (indexPath.section == 0 && indexPath.row == 1) {
 //        [navigationController pushViewController:[RAViewController new] animated:YES];
 //    }
     else if (indexPath.section == 1){
-        if(indexPath.row == 1) {
-            [navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Setting" bundle:nil]  instantiateViewController:@"PopOptionsVC"] animated:YES];
+
+        if(indexPath.row==0){
+            self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
+        }else{
+            self.frostedViewController.contentViewController = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
         }
     }
     
