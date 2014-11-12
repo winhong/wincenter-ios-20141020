@@ -97,9 +97,11 @@
     VmVO *vmVO = (VmVO *) self.dataList[indexPath.row];
     cell.title.text = vmVO.name;
     cell.ip.text = vmVO.ip;
-    if(vmVO.ip == nil){
-        cell.ip.text = @"无网络";
+    if(vmVO.ip == nil || [vmVO.ip isEqualToString:@""]){
+        cell.ip.text = @"无法获取网络";
         cell.ip.textColor = [UIColor lightGrayColor];
+    }else{
+        cell.ip.textColor = [UIColor blackColor];
     }
     cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];

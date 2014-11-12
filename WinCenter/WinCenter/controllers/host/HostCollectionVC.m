@@ -45,8 +45,10 @@
     cell.title.text = hostVO.hostName;
     cell.label1.text = hostVO.ip;
     if(hostVO.ip == nil){
-        cell.label1.text = @"无网络";
+        cell.label1.text = @"无法获取网络";
         cell.label1.textColor = [UIColor lightGrayColor];
+    }else{
+        cell.label1.textColor = [UIColor blackColor];
     }
     cell.label2.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum];
     cell.label3.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
