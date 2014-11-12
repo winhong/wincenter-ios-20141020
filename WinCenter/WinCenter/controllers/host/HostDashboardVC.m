@@ -104,7 +104,7 @@
         cell.ip.textColor = [UIColor lightGrayColor];
     }
     cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
-    cell.storageSize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@",[hostVO storage_value],[hostVO storage_unit]];
     cell.cpuSlots.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
     cell.cpu.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.memory/1024.0];

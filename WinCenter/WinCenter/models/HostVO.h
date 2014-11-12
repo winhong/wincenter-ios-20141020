@@ -45,6 +45,8 @@
 
 - (NSString*)state_text;
 - (UIColor *)state_color;
+- (float)storage_value;
+- (NSString*)storage_unit;
 
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getHostStatVOAsync:(FetchObjectCompletionBlock)completeBlock;
