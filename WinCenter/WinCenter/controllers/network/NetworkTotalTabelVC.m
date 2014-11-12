@@ -80,10 +80,13 @@
     
     self.isExternal = (self.segment.selectedSegmentIndex==0);
     [self.tableView headerBeginRefreshing];
-    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
-    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
-    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
-    [detailVC clearData];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
+        UINavigationController *nav = [[splitVC childViewControllers] lastObject];
+        NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+        [detailVC clearData];
+    }
 }
 
 -(void)reloadData{
@@ -154,26 +157,35 @@
     }
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NetworkVO *network = self.networkList[indexPath.row];
-    //IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
-    
-    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
-    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
-    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+    NetworkCollectionVC *detailVC = [[segue.destinationViewController childViewControllers] firstObject];
     detailVC.isExternal = self.isExternal;
-//    if (self.isExternal) {
-//        detailVC.network = network;
-//        detailVC.ipPoolVO = ipPoolVO;
-//        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
-//    }else{
-//       // detailVC.ipPoolVO = ipPoolVO;
-//        detailVC.network = network;
-//        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
-//    }
     detailVC.network = network;
     [detailVC performSelector:@selector(refreshAction:) withObject:nil];
 }
+
+//- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    NetworkVO *network = self.networkList[indexPath.row];
+//    //IpPoolsVO *ipPoolVO = [self.ipPoolsDict objectForKey:network.vlanId];
+//    
+//    UISplitViewController *splitVC = (UISplitViewController*) self.parentViewController.parentViewController;
+//    UINavigationController *nav = [[splitVC childViewControllers] lastObject];
+//    NetworkCollectionVC *detailVC = [[nav childViewControllers] firstObject];
+//    detailVC.isExternal = self.isExternal;
+////    if (self.isExternal) {
+////        detailVC.network = network;
+////        detailVC.ipPoolVO = ipPoolVO;
+////        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+////    }else{
+////       // detailVC.ipPoolVO = ipPoolVO;
+////        detailVC.network = network;
+////        [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+////    }
+//    detailVC.network = network;
+//    [detailVC performSelector:@selector(refreshAction:) withObject:nil];
+//}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
