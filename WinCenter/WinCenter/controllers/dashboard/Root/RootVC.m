@@ -17,7 +17,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 
 - (void)awakeFromNib
 {
-    self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DatacenterDetailInfoVCNav"];;
+    self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DatacenterDetailInfoVCNav"];
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
 }
 

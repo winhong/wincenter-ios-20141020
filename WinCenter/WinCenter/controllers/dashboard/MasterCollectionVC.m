@@ -45,10 +45,6 @@
         self.collectionView.backgroundColor = [UIColor clearColor];
     }
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.backActionButton.title = @"";
-    }
-    
     self.dataList = [[NSMutableArray alloc] initWithCapacity:0];
     
     [super viewDidLoad];

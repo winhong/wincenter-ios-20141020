@@ -962,6 +962,7 @@
                                 <outlet property="memoryUnusedSize2" destination="Aiw-zc-b5s" id="BMf-5q-9rk"/>
                                 <outlet property="poolCount" destination="9pc-2g-JJe" id="2sB-7K-NOM"/>
                                 <outlet property="poolCount2" destination="bau-9y-gTh" id="dcI-ws-S4v"/>
+                                <outlet property="scrollView" destination="2Ij-2H-kfL" id="F0p-it-Aao"/>
                                 <outlet property="storageChartGroup" destination="2ch-yH-0rD" id="6pR-vZ-y9I"/>
                                 <outlet property="storageSize2" destination="4B9-hb-WuO" id="LlE-eR-99x"/>
                                 <outlet property="storageUnusedSize" destination="ivi-k8-isn" id="iLM-2z-eXI"/>
@@ -976,11 +977,6 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="cHL-qn-Gme">
-                            <connections>
-                                <action selector="dismissModal:" destination="buB-ce-6JP" id="RkN-eb-u4e"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4aa-aH-K4Q"/>
                         <barButtonItem image="icon-warning" id="fTb-eo-7Mw">
                             <connections>
@@ -1005,9 +1001,6 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isDetailPagePushed" value="YES"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="backActionButton" destination="cHL-qn-Gme" id="vtG-CS-aIe"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yb-bp-6OX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem id="km4-k6-OsJ"/>
@@ -2136,6 +2129,7 @@
                                 <outlet property="hostTypeChart" destination="mfa-DS-bzF" id="Fzc-ma-bDq"/>
                                 <outlet property="inPoolHostCount" destination="jWp-FV-fuv" id="D0O-aH-Fv4"/>
                                 <outlet property="inPoolHostCount2" destination="kCa-Fu-ydr" id="coj-rJ-mMK"/>
+                                <outlet property="scrollView" destination="Tu9-BC-NMs" id="lcb-e3-zXV"/>
                                 <outlet property="statusDis" destination="het-0D-r1R" id="iwt-x5-JJs"/>
                                 <outlet property="statusDis2" destination="WAb-3W-sQO" id="uSX-R9-pta"/>
                                 <outlet property="statusOk" destination="mk7-SZ-7y8" id="rQw-2q-y5G"/>
@@ -2150,11 +2144,6 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="ndD-Q6-cb8">
-                            <connections>
-                                <action selector="dismissModal:" destination="tNF-5l-310" id="ltl-Af-1mT"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Lm-PH-T2V"/>
                         <barButtonItem title="全部" id="4Zr-if-iJO">
                             <connections>
@@ -2187,7 +2176,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="4Zr-if-iJO" id="tQy-aK-ex3"/>
-                        <outlet property="backActionButton" destination="ndD-Q6-cb8" id="NdE-ZD-Ch5"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKG-Os-SLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2661,6 +2649,7 @@
                                 <outlet property="localStorageSize4" destination="Gic-6F-xAg" id="Fu1-ZL-yy3"/>
                                 <outlet property="nfsStorageSize" destination="DpZ-NF-atm" id="1Ig-Bw-WBq"/>
                                 <outlet property="nfsStorageSize2" destination="zAG-at-7zG" id="NJk-pe-3gq"/>
+                                <outlet property="scrollView" destination="7g8-N3-uac" id="J9u-DH-DdH"/>
                                 <outlet property="shareStorageSize" destination="ChX-CH-aPh" id="21u-hu-vwh"/>
                                 <outlet property="shareStorageSize2" destination="ITG-OC-24O" id="CB9-XF-7Sy"/>
                                 <outlet property="storageShareChart" destination="p3Y-0r-k7Z" id="EGe-vK-8j7"/>
@@ -2680,11 +2669,6 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="P9E-XQ-ZWa">
-                            <connections>
-                                <action selector="dismissModal:" destination="Vdc-u6-N4C" id="RY0-2r-TXp"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="tQv-7A-t93"/>
                         <barButtonItem title="全部" id="NHe-7y-NkJ">
                             <connections>
@@ -2717,7 +2701,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="NHe-7y-NkJ" id="q7n-cB-e4C"/>
-                        <outlet property="backActionButton" destination="P9E-XQ-ZWa" id="4vv-hV-Zeu"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-IU-nqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3169,6 +3152,7 @@
                                 <outlet property="osTypeLinux2" destination="T3Y-Ar-tG4" id="NdD-FE-1P0"/>
                                 <outlet property="osTypeWin" destination="X8V-oV-Q1T" id="dYF-ai-4y9"/>
                                 <outlet property="osTypeWin2" destination="w7y-pO-Xlg" id="2CR-wP-eW0"/>
+                                <outlet property="scrollView" destination="v9n-fk-4iO" id="2Ye-dB-3nG"/>
                                 <outlet property="statusDis" destination="PMl-Lz-MT5" id="Gwy-5Y-Xha"/>
                                 <outlet property="statusDis2" destination="1Lp-VT-LPO" id="UJ2-dF-BHT"/>
                                 <outlet property="statusOk" destination="iWa-cJ-2xP" id="Uei-Dw-xUz"/>
@@ -3187,11 +3171,6 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="LBu-DC-Jfa">
-                            <connections>
-                                <action selector="dismissModal:" destination="8QM-yF-skn" id="vRg-1T-Lx7"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="waZ-PP-DQJ"/>
                         <barButtonItem title="全部" id="Dhp-OO-KwD">
                             <connections>
@@ -3224,7 +3203,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="Dhp-OO-KwD" id="nud-3H-EVy"/>
-                        <outlet property="backActionButton" destination="LBu-DC-Jfa" id="bXr-md-4is"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGA-AF-aKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3517,6 +3495,7 @@
                                 <outlet property="businessCount" destination="K5Q-sf-N7A" id="g1d-bz-dJB"/>
                                 <outlet property="businessCount2" destination="ESA-nk-A9s" id="qUE-Dk-GAe"/>
                                 <outlet property="businessVmCount2" destination="K9i-gH-6pf" id="Ly2-2A-H91"/>
+                                <outlet property="scrollView" destination="4jf-vN-Ay2" id="Tpf-Th-VHg"/>
                                 <outlet property="unalloctedBus" destination="Z40-aj-XHx" id="wm2-Rr-ly6"/>
                                 <outlet property="unalloctedBus2" destination="FJk-Ol-hra" id="OjN-UM-Cj6"/>
                             </connections>
@@ -3527,11 +3506,6 @@
                         </connections>
                     </collectionView>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="f5i-W0-E3V">
-                            <connections>
-                                <action selector="dismissModal:" destination="rJv-N2-owX" id="cDf-38-7BI"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="uVe-5k-gQ2"/>
                         <barButtonItem title="全部" id="qXt-3j-g6W">
                             <connections>
@@ -3564,7 +3538,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allBusinessOptionBarButton" destination="qXt-3j-g6W" id="0DU-VS-cSt"/>
-                        <outlet property="backActionButton" destination="f5i-W0-E3V" id="EKK-Pg-9D6"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0c-p2-TAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3796,12 +3769,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eRs-nL-6LI" style="IBUITableViewCellStyleDefault" id="GuU-bT-9qW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bbv-Iw-d5L" style="IBUITableViewCellStyleDefault" id="aHh-6A-WY7">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GuU-bT-9qW" id="2ra-72-A4q">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aHh-6A-WY7" id="9Sy-RI-ENL">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="业务系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eRs-nL-6LI">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="虚拟机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bbv-Iw-d5L">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3826,12 +3799,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="sG0-72-l05" style="IBUITableViewCellStyleDefault" id="k32-uO-tS7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eRs-nL-6LI" style="IBUITableViewCellStyleDefault" id="GuU-bT-9qW">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k32-uO-tS7" id="Qae-3o-oo3">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GuU-bT-9qW" id="2ra-72-A4q">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="网络" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sG0-72-l05">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="业务系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eRs-nL-6LI">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3841,12 +3814,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bbv-Iw-d5L" style="IBUITableViewCellStyleDefault" id="aHh-6A-WY7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="sG0-72-l05" style="IBUITableViewCellStyleDefault" id="k32-uO-tS7">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aHh-6A-WY7" id="9Sy-RI-ENL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k32-uO-tS7" id="Qae-3o-oo3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="虚拟机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bbv-Iw-d5L">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="网络" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sG0-72-l05">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
