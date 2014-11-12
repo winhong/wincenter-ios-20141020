@@ -12,5 +12,5 @@
 #import <SMPageControl/SMPageControl.h>
 
 @interface RootVC : REFrostedViewController<EAIntroDelegate>
-
+-(void)showTab:(int)index;
 @end

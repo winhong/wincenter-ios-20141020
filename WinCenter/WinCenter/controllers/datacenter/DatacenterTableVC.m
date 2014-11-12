@@ -9,6 +9,7 @@
 #import "DatacenterTableVC.h"
 #import "DatacenterTableCell.h"
 #import <REFrostedViewController/REFrostedViewController.h>
+#import "RootVC.h"
 
 @interface DatacenterTableVC ()
 @property NSMutableArray *datacenters;
@@ -84,7 +85,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.delegate didFinished:self.datacenters[indexPath.row]];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [RemoteObject setCurrentDatacenterVO:self.datacenters[indexPath.row]];
+        [((RootVC*)self.frostedViewController) showTab:0];
+    }else{
+        [self.delegate didFinished:self.datacenters[indexPath.row]];
+    }
 }
 
 @end

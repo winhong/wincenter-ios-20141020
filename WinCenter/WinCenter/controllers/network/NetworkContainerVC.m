@@ -42,11 +42,11 @@
 //        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
 //        }
 //    }];
-
-    if(!self.navigationItem.leftBarButtonItem){
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+        }
     }
-
 }
 
 - (void)didReceiveMemoryWarning

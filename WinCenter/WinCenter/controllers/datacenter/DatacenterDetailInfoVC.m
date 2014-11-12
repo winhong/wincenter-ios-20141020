@@ -9,6 +9,7 @@
 #import "DatacenterDetailInfoVC.h"
 #import "MasterContainerVC.h"
 #import "DashboardVC.h"
+#import "RootVC.h"
 
 @interface DatacenterDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -298,27 +299,43 @@
 }
 
 -(IBAction)showWarningInfoVC:(id)sender{
-    if(self.popover!=nil){
-        [self.popover dismissPopoverAnimated:NO];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+        UIViewController *vc = [[nav childViewControllers] firstObject];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        if(self.popover!=nil){
+            [self.popover dismissPopoverAnimated:NO];
+        }
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+        UIBarButtonItem *button = (UIBarButtonItem*)sender;
+        [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Warning" bundle:nil] instantiateInitialViewController];
-    self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
-    UIBarButtonItem *button = (UIBarButtonItem*)sender;
-    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 -(IBAction)showControlRecordVC:(id)sender{
-    if(self.popover!=nil){
-        [self.popover dismissPopoverAnimated:NO];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+        UIViewController *vc = [[nav childViewControllers] firstObject];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        if(self.popover!=nil){
+            [self.popover dismissPopoverAnimated:NO];
+        }
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
+        self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+        UIBarButtonItem *button = (UIBarButtonItem*)sender;
+        [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
-    UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Task" bundle:nil] instantiateInitialViewController];
-    self.popover = [[UIPopoverController alloc] initWithContentViewController:nav];
-    UIBarButtonItem *button = (UIBarButtonItem*)sender;
-    [self.popover presentPopoverFromBarButtonItem:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 - (IBAction)gotoDashboard:(id)sender {
-    DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
-    [vc.tabBarVC setSelectedIndex:((UIButton*)sender).tag];
-    [vc.menuVC setSelectedItemIndex:((UIButton*)sender).tag];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [((RootVC*)self.frostedViewController) showTab:((UIButton*)sender).tag];
+    }else{
+        DashboardVC *vc = (DashboardVC*)self.parentViewController.parentViewController.parentViewController;
+        [vc.tabBarVC setSelectedIndex:((UIButton*)sender).tag];
+        [vc.menuVC setSelectedItemIndex:((UIButton*)sender).tag];
+    }
 }
 @end

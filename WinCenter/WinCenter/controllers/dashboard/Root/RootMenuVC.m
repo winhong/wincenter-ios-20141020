@@ -12,6 +12,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "RAViewController.h"
+#import "RootVC.h"
 #define ORIGINAL_MAX_WIDTH 640.0f
 
 
@@ -40,30 +41,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.frostedViewController hideMenuViewController];
     
-    UINavigationController *navigationController = (UINavigationController *)self.frostedViewController.contentViewController;
+    [((RootVC*)self.frostedViewController) showTab:indexPath.row];
     
-    if (indexPath.section == 0) {
-        NSArray *viewControllers = @[@"DatacenterDetailInfoVCNav",
-                                     @"PoolDashboardVCNav",
-                                     @"HostDashboardVCNav",
-                                     @"VmDashboardVCNav",
-                                     @"StorageDashboardVCNav",
-                                     @"BusinessDashboardVCNav",
-                                     @""];
-        self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:viewControllers[indexPath.row]];
-    }
-//    else if (indexPath.section == 0 && indexPath.row == 1) {
-//        [navigationController pushViewController:[RAViewController new] animated:YES];
-//    }
-    else if (indexPath.section == 1){
-
-        if(indexPath.row==0){
-            self.frostedViewController.contentViewController = [self.storyboard instantiateViewController:@"DatacenterTableVCNav"];
-        }else{
-            self.frostedViewController.contentViewController = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
-        }
-    }
-    
+    //[navigationController pushViewController:[RAViewController new] animated:YES];
     
 }
 
