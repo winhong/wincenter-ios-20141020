@@ -85,7 +85,12 @@
     self.btnMigrate.enabled = false;
     
     //中间状态
-    if(self.vmVO.operationState && !([self.vmVO.operationState isEqualToString:@""])){
+    if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+        self.btnStart.enabled = true;
+        self.btnStop.enabled = true;
+        self.btnRestart.enabled = true;
+        self.btnMigrate.enabled = true;
+    }else if(self.vmVO.operationState && !([self.vmVO.operationState isEqualToString:@""])){
         self.btnStart.enabled = false;
         self.btnStop.enabled = false;
         self.btnRestart.enabled = false;
