@@ -717,7 +717,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="asc-RT-NUB">
+                            <tableViewSection headerTitle="原密码" id="asc-RT-NUB">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N6X-Sr-FWY">
                                         <rect key="frame" x="0.0" y="99" width="540" height="44"/>
@@ -726,14 +726,8 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原密码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vw-TV-ntO">
-                                                    <rect key="frame" x="54" y="11" width="68" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="原密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-TT-0rJ">
-                                                    <rect key="frame" x="130" y="7" width="462" height="29"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="原密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-TT-0rJ">
+                                                    <rect key="frame" x="20" y="7" width="560" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                                     <connections>
@@ -743,18 +737,16 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="trailing" secondItem="9Yc-gr-T0Y" secondAttribute="trailingMargin" id="266-5k-Olm"/>
-                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="leading" secondItem="3Vw-TV-ntO" secondAttribute="trailing" constant="8" id="GaK-ap-bkX"/>
-                                                <constraint firstItem="3Vw-TV-ntO" firstAttribute="centerY" secondItem="9Yc-gr-T0Y" secondAttribute="centerY" id="H9y-Sm-bbp"/>
-                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="top" secondItem="9Yc-gr-T0Y" secondAttribute="topMargin" constant="-1" id="SO4-MS-lBF"/>
-                                                <constraint firstItem="3Vw-TV-ntO" firstAttribute="leading" secondItem="9Yc-gr-T0Y" secondAttribute="leadingMargin" constant="46" id="ktH-U6-BBh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="c6w-TT-0rJ" secondAttribute="bottom" constant="-1" id="prq-L3-S8S"/>
+                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="leading" secondItem="9Yc-gr-T0Y" secondAttribute="leadingMargin" constant="12" id="U7L-K3-wDa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="c6w-TT-0rJ" secondAttribute="trailing" constant="12" id="dDw-Em-DB9"/>
+                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="top" secondItem="9Yc-gr-T0Y" secondAttribute="topMargin" constant="-1" id="grN-E4-OXu"/>
+                                                <constraint firstItem="c6w-TT-0rJ" firstAttribute="bottom" secondItem="9Yc-gr-T0Y" secondAttribute="bottomMargin" id="rxz-Rr-UmF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Q7V-AF-ZCf">
+                            <tableViewSection headerTitle="新密码" id="Q7V-AF-ZCf">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kDI-lb-7kf">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
@@ -763,13 +755,8 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新密码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGL-Rv-W97">
-                                                    <rect key="frame" x="54" y="11" width="68" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMw-ll-HKv">
-                                                    <rect key="frame" x="130" y="7" width="462" height="29"/>
+                                                    <rect key="frame" x="20" y="7" width="560" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                                     <connections>
@@ -779,18 +766,16 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aMw-ll-HKv" firstAttribute="leading" secondItem="GGL-Rv-W97" secondAttribute="trailing" constant="8" id="5Gu-tO-Uu8"/>
-                                                <constraint firstItem="GGL-Rv-W97" firstAttribute="centerY" secondItem="n57-FZ-4pt" secondAttribute="centerY" id="BDc-RI-Vzs"/>
-                                                <constraint firstItem="aMw-ll-HKv" firstAttribute="trailing" secondItem="n57-FZ-4pt" secondAttribute="trailingMargin" id="hVy-9H-4df"/>
-                                                <constraint firstItem="aMw-ll-HKv" firstAttribute="top" secondItem="n57-FZ-4pt" secondAttribute="topMargin" constant="-1" id="mqS-DS-S3v"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="aMw-ll-HKv" secondAttribute="bottom" constant="-1" id="pWJ-o0-sM9"/>
-                                                <constraint firstItem="GGL-Rv-W97" firstAttribute="leading" secondItem="n57-FZ-4pt" secondAttribute="leadingMargin" constant="46" id="wWr-q8-Z1Q"/>
+                                                <constraint firstItem="aMw-ll-HKv" firstAttribute="leading" secondItem="n57-FZ-4pt" secondAttribute="leadingMargin" constant="12" id="6kf-Dx-l78"/>
+                                                <constraint firstItem="aMw-ll-HKv" firstAttribute="top" secondItem="n57-FZ-4pt" secondAttribute="topMargin" constant="-1" id="Gxa-hq-kxG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aMw-ll-HKv" secondAttribute="trailing" constant="12" id="STZ-aH-wNJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aMw-ll-HKv" secondAttribute="bottom" constant="-1" id="m5K-fe-03c"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="DOh-Kg-qts">
+                            <tableViewSection headerTitle="重复新密码" id="DOh-Kg-qts">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fKY-Er-nup">
                                         <rect key="frame" x="0.0" y="227" width="540" height="44"/>
@@ -799,13 +784,8 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重复新密码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Qd-5z1">
-                                                    <rect key="frame" x="20" y="11" width="102" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="重复新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHa-jr-5yH">
-                                                    <rect key="frame" x="130" y="7" width="462" height="29"/>
+                                                    <rect key="frame" x="20" y="7" width="560" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                     <connections>
@@ -814,12 +794,10 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4qe-Qd-5z1" firstAttribute="leading" secondItem="BZa-dO-6gC" secondAttribute="leadingMargin" constant="12" id="4aS-ax-XAi"/>
-                                                <constraint firstItem="4qe-Qd-5z1" firstAttribute="centerY" secondItem="BZa-dO-6gC" secondAttribute="centerY" id="8wc-65-TGE"/>
-                                                <constraint firstItem="DHa-jr-5yH" firstAttribute="top" secondItem="BZa-dO-6gC" secondAttribute="topMargin" constant="-1" id="Bfh-ZK-v4j"/>
-                                                <constraint firstItem="DHa-jr-5yH" firstAttribute="leading" secondItem="4qe-Qd-5z1" secondAttribute="trailing" constant="8" id="cmT-dN-gSE"/>
-                                                <constraint firstItem="DHa-jr-5yH" firstAttribute="trailing" secondItem="BZa-dO-6gC" secondAttribute="trailingMargin" id="w8z-6J-Csa"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="DHa-jr-5yH" secondAttribute="bottom" constant="-1" id="xfb-2E-rS1"/>
+                                                <constraint firstItem="DHa-jr-5yH" firstAttribute="leading" secondItem="BZa-dO-6gC" secondAttribute="leadingMargin" constant="12" id="07d-Zn-MMq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DHa-jr-5yH" secondAttribute="trailing" constant="12" id="HYG-2B-19K"/>
+                                                <constraint firstItem="DHa-jr-5yH" firstAttribute="top" secondItem="BZa-dO-6gC" secondAttribute="topMargin" constant="-1" id="LvY-oT-d0A"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DHa-jr-5yH" secondAttribute="bottom" constant="-1" id="jSS-gF-lna"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -847,7 +825,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3U-eg-CYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3813" y="-2212"/>
+            <point key="canvasLocation" x="-3813" y="-2213"/>
         </scene>
         <!--个人信息-->
         <scene sceneID="oNY-Z5-506">
