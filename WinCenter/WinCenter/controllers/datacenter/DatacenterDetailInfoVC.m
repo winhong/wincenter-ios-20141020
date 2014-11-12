@@ -12,6 +12,8 @@
 
 @interface DatacenterDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *topScrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *cpuChartGroup;
 @property (weak, nonatomic) IBOutlet UIView *memoryChartGroup;
@@ -28,11 +30,12 @@
     [self.frostedViewController presentMenuViewController];
 }
 
-- (void)viewDidLayoutSubviews{
-    if(self.scrollView){
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            self.scrollView.contentSize = CGSizeMake(275, 420);
-        }
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width,1000);
+        self.topScrollView.contentSize = CGSizeMake(1750, self.topScrollView.frame.size.height);
+        self.bottomScrollView.contentSize = CGSizeMake(1750, self.bottomScrollView.frame.size.height);
     }
 }
 
