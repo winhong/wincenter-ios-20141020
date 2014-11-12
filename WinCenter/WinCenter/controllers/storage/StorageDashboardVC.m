@@ -33,6 +33,15 @@
             
             [[RemoteObject getCurrentDatacenterVO] getStorageSubVOAsync:^(id object, NSError *error) {
                 self.StorageSubVOWinserver = object;
+                if(!self.StorageSubVOWinserver.capacity){
+                    self.StorageSubVOWinserver.capacity = [StorageCapacityVO new];
+                }
+                if(!self.StorageSubVOWinserver.total){
+                    self.StorageSubVOWinserver.total = [StorageTotalVO new];
+                }
+                if(!self.StorageSubVOWinserver.type){
+                    self.StorageSubVOWinserver.type = [StorageTypeVO new];
+                }
                 
                 if(self.poolVO){
                     [self.poolVO getStorageListAsync:^(id object, NSError *error) {
