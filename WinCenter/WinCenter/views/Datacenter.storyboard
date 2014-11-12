@@ -1065,7 +1065,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8Q-mN-loo">
-                                <rect key="frame" x="-20" y="-65" width="1064" height="765"/>
+                                <rect key="frame" x="-20" y="-65" width="1043" height="765"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BP-Ng-FhQ">
                                         <rect key="frame" x="20" y="466" width="969" height="273"/>
