@@ -28,6 +28,10 @@
                 self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
             }
             self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+        }else{
+            if(!self.navigationItem.leftBarButtonItem){
+                self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+            }
         }
         
         [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {

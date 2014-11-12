@@ -7,6 +7,7 @@
 //
 
 #import "NetworkContainerVC.h"
+#import <REFrostedViewController/REFrostedViewController.h>
 
 @interface NetworkContainerVC ()
 @property UIPopoverController *popover;
@@ -15,6 +16,10 @@
 @end
 
 @implementation NetworkContainerVC
+
+- (IBAction)showMenu:(id)sender {
+    [self.frostedViewController presentMenuViewController];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +42,11 @@
 //        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
 //        }
 //    }];
+
+    if(!self.navigationItem.leftBarButtonItem){
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
