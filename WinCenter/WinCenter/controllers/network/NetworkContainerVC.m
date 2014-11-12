@@ -30,10 +30,12 @@
     [super viewDidLoad];
     
 //    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 //        if(!self.navigationItem.leftBarButtonItem){
 //            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
 //        }
 //        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+//        }
 //    }];
 }
 
