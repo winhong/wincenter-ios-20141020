@@ -120,7 +120,7 @@ function drawLineMemory(data){
         },
         tooltip: {
             formatter: function() {
-                    return '<b>'+timeToFormatStr(this.x,"MM-dd HH:mm:ss") +'</b><br/>'+
+                    return '<b>'+timeToFormatStr(this.x,"yyyy-MM-dd HH:mm:ss") +'</b><br/>'+
                     this.series.name+'使用率: '+ this.y.toFixed(2) +'%';
             }
         },
@@ -132,7 +132,7 @@ function drawLineMemory(data){
 	        tickInterval: xInterval, // 1 day
 	        labels: {
 	            formatter: function() {
-	                return timeToFormatStr(this.value,"MM-dd HH:mm");
+	                return timeToFormatStr(this.value,"yyyy-MM-dd HH:mm");
 	            },
 	            x: 0,
 	            style: {
