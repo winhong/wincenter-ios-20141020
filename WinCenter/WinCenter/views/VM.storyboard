@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--虚拟机详情-->
@@ -746,7 +746,7 @@
                                                 <rect key="frame" x="25" y="40" width="334" height="89"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="虚拟机－摘要－专享内存" translatesAutoresizingMaskIntoConstraints="NO" id="VAg-te-5on">
-                                                <rect key="frame" x="25" y="276" width="334" height="89"/>
+                                                <rect key="frame" x="25" y="276" width="334" height="133"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aX-3m-jaB">
                                                 <rect key="frame" x="162" y="290" width="157" height="68"/>
@@ -1643,7 +1643,7 @@
         <image name="时间" width="11" height="11"/>
         <image name="状态" width="11" height="11"/>
         <image name="虚拟机2" width="11" height="12"/>
-        <image name="虚拟机－摘要－专享内存" width="334" height="89"/>
+        <image name="虚拟机－摘要－专享内存" width="334" height="133"/>
         <image name="虚拟机－摘要－内存配置类型" width="334" height="89"/>
         <image name="虚拟机－摘要－分配CPU" width="334" height="89"/>
         <image name="虚拟机－摘要－图标" width="95" height="95"/>
