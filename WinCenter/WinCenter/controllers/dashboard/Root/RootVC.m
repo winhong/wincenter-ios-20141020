@@ -27,10 +27,11 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
                                  @"HostDashboardVCNav",
                                  @"VmDashboardVCNav",
                                  @"StorageDashboardVCNav",
-                                 @"BusinessDashboardVCNav",
-                                 @""];
-    if(index<7){
+                                 @"BusinessDashboardVCNav"];
+    if(index<6){
         self.contentViewController = [self.storyboard instantiateViewController:viewControllers[index]];
+    }else if(index==6){
+        self.contentViewController = [[UIStoryboard storyboardWithName:@"Network" bundle:nil] instantiateViewController:@"NetworkDashboardVCNav"];
     }else if(index==7){
         //
     }else if(index==8){
