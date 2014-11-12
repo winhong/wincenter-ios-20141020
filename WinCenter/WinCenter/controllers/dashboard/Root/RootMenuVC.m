@@ -41,16 +41,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.frostedViewController hideMenuViewController];
     
-    if (indexPath.section == 0) {
-        [((RootVC*)self.frostedViewController) showTab:indexPath.row];
-    }
-//    else if (indexPath.section == 0 && indexPath.row == 1) {
-//        [navigationController pushViewController:[RAViewController new] animated:YES];
-//    }
-    else if (indexPath.section == 1){
-        [((RootVC*)self.frostedViewController) showTab:(7+indexPath.row)];
-    }
+    [((RootVC*)self.frostedViewController) showTab:indexPath.row];
     
+    //[navigationController pushViewController:[RAViewController new] animated:YES];
     
 }
 
