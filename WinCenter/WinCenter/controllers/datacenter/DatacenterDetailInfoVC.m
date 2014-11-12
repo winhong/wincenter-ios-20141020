@@ -12,6 +12,8 @@
 
 @interface DatacenterDetailInfoVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *bottomScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *topScrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *cpuChartGroup;
 @property (weak, nonatomic) IBOutlet UIView *memoryChartGroup;
