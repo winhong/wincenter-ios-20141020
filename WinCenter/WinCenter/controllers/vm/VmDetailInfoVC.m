@@ -231,9 +231,11 @@
 }
 - (void)refresh{
     self.vmIp.text = self.vmVO.ip;
-    if(self.vmVO.ip == nil){
-        self.vmIp.text = @"无网络";
+    if(self.vmVO.ip == nil || [self.vmVO.ip isEqualToString:@""]){
+        self.vmIp.text = @"无法获取网络";
         self.vmIp.textColor = [UIColor lightGrayColor];
+    }else{
+        self.vmIp.textColor = [UIColor blackColor];
     }
     self.name.text = self.vmVO.name;
     self.status.text = [self.vmVO state_text];

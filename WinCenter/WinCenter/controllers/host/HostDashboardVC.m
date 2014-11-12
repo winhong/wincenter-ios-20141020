@@ -106,8 +106,10 @@
     cell.title.text = hostVO.hostName;
     cell.ip.text = hostVO.ip;
     if(hostVO.ip == nil){
-        cell.ip.text = @"无网络";
+        cell.ip.text = @"无法获取网络";
         cell.ip.textColor = [UIColor lightGrayColor];
+    }else{
+        cell.ip.textColor = [UIColor blackColor];
     }
     cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
     cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@",[hostVO storage_value],[hostVO storage_unit]];
