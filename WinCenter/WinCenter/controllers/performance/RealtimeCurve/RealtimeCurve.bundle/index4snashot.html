@@ -74,9 +74,9 @@ function showRaphael(data){
 		getVmInfo();
 		$.each(Data.snapShots,function(n,v){
 			if(v.type == "DISK")
-				imgSrc =  "img/vm_snapshot_icon1.png";
+				imgSrc =  "img/vm_snapshot_icon2.png";
 			else
-				imgSrc = "img/vm_snapshot_icon2.png"
+				imgSrc = "img/vm_snapshot_icon1.png"
 			g.addNode(v.snapShotId, {
 		        label: v.name,
 		        src: imgSrc, height:55, width:55,
@@ -95,6 +95,7 @@ function showRaphael(data){
 				g.addEdge("vm_begin", v.snapShotId);
 			}
             if(((typeof v.currented) !== undefined )&& v.currented != null){
+               g.addEdge(v.snapShotId, "vm_end");
                nodeClick(v);
             }
 				
@@ -126,10 +127,10 @@ function getVmInfo(){
 	        label: '基础',//基础
 	        src: "img/vm_snapshot_icon3.png", height:55, width:55
 	    });
-		// g.addNode("vm_end", {
-	 //        label:'立即',//立即
-	 //        src: "img/vm_snapshot_icon4.png", height:55, width:55
-	 //    });
+		g.addNode("vm_end", {
+	        label:'立即',//立即
+	        src: "img/vm_snapshot_icon4.png", height:55, width:55
+	    });
 	    
 }
 
