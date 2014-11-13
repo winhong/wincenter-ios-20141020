@@ -109,7 +109,7 @@
                     }
                 }
                 [self refreshMainInfo];
-                if([self.hostVO.state isEqualToString:@"OK"]){
+                if([self.hostVO.state isEqualToString:@"OK"] || [self.hostVO.state isEqualToString:@"MAINTAIN"]){
                     [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
                             self.statVO = object;
                             [self refreshStatInfo];
