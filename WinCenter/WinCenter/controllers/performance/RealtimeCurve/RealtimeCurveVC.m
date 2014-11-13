@@ -149,7 +149,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         
         
      }else if([self.chartType isEqualToString:@"vm"]){
-        if ([self.vmVO.state isEqualToString:@"OK"]) {
+        if ([self.vmVO.state isEqualToString:@"OK"] && (!self.vmVO.operationState || [self.vmVO.operationState isEqualToString:@""]) ) {
             [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
                 self.performanceData = object;
                 [_bridge callHandler:@"sendVcpuCount" data:[NSString stringWithFormat:@"%d",self.vmVO.vcpu ]];
