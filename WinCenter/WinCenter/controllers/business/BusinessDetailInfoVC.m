@@ -63,6 +63,7 @@
         self.businessVO = object;
         [self refresh];
         [self.scrollView headerEndRefreshing];
+        self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
     }];
 }
 

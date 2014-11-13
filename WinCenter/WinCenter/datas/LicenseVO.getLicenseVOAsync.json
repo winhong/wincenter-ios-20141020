@@ -12,7 +12,8 @@
         "cid": "Not Found SN#Not MAC SN",
         "IcNum": 1000,
         "applicationTime": "2999-12-31",
-        "diskSn": ""
+        "diskSn": "",
+        "version":"diamond"
     },
     "useedCount": 8,
     "remianDays": 0

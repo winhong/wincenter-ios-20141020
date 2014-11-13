@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *orgName;
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UILabel *phone;
+@property (weak, nonatomic) IBOutlet UILabel *versionField;
 @property (weak, nonatomic) IBOutlet UILabel *IcType;
 @property (weak, nonatomic) IBOutlet UILabel *useedInfo;
 @property (weak, nonatomic) IBOutlet UILabel *remianDays;
@@ -38,7 +39,7 @@
     self.orgName.text = self.licenseVO.wci.orgName;
     self.email.text = self.licenseVO.wci.email;
     self.phone.text = self.licenseVO.wci.phone;
-    self.IcType.text = [NSString stringWithFormat:@"%@版本", [self.licenseVO.wci IcType_text] ];
+    self.IcType.text = [NSString stringWithFormat:@"%@", [self.licenseVO.wci IcType_text] ];
     self.useedInfo.text = [NSString stringWithFormat:@"%d/%d", self.licenseVO.useedCount,self.licenseVO.wci.IcNum];
     if ([self.licenseVO.wci.IcType isEqualToString:@"0"]) {
         self.remianDays.text = [NSString stringWithFormat:@"%d", self.licenseVO.remianDays];
@@ -46,6 +47,7 @@
     else{
         self.remianDays.text = @"永久";
     }
+    self.versionField.text = [self.licenseVO.wci version_text];
     
 }
 

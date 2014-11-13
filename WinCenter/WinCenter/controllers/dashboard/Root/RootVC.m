@@ -39,8 +39,10 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
     }else if(index==9){
         self.contentViewController = [[UIStoryboard storyboardWithName:@"Setting" bundle:nil] instantiateViewController:@"PopOptionsVCNav"];
     }
-    ((UINavigationController*)self.contentViewController).navigationBar.translucent = true;
-    ((UINavigationController*)self.contentViewController).toolbar.translucent = true;
+    if(index!=9){
+        ((UINavigationController*)self.contentViewController).navigationBar.translucent = true;
+        ((UINavigationController*)self.contentViewController).toolbar.translucent = true;
+    }
 
 }
 

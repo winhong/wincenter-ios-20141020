@@ -174,12 +174,76 @@
         }
         
     }
-    
-    
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"toPoolTable"]){
+        
+        UINavigationController *nav = segue.destinationViewController;
+        PoolTableVC *tableVC = [[nav childViewControllers] firstObject];
+        tableVC.delegate = self;
+        tableVC.currentName = self.allPoolOptionBarButton.title;
+        
+    }else if([segue.identifier isEqualToString:@"toBusinessDomainTable"]){
+        UINavigationController *nav = segue.destinationViewController;
+        BusinessDomainTableVC *tableVC = [[nav childViewControllers] firstObject];
+        tableVC.delegate = self;
+        tableVC.currentName = self.allBusinessOptionBarButton.title;
+    }
+}
+
+- (void)didFinishedBusDomainSelect:(BusDomainsVO *)vo withTitle:(NSString*)title{
+    if([title isEqualToString:@"全部"]){
+        self.busDomainVO = nil;
+        self.allBusinessOptionBarButton.title = @"全部";
+        self.isUnGroup = FALSE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }else if([title isEqualToString:@"未分配业务系统"]){
+        self.busDomainVO = nil;
+        self.allBusinessOptionBarButton.title = @"未分配业务系统";
+        self.isUnGroup = TRUE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }else{
+        self.busDomainVO = vo;
+        self.allBusinessOptionBarButton.title = self.busDomainVO.busDomainName;
+        self.isUnGroup = FALSE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }
+}
+
+-(void)didFinishedPoolSelect:(PoolVO *)vo withTitle:(NSString *)title{
+    if([title isEqualToString:@"全部"]){
+        self.poolVO = nil;
+        self.allPoolOptionBarButton.title = @"全部";
+        self.isOutofPool = FALSE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }else if([title isEqualToString:@"游离物理主机"]){
+        self.poolVO = nil;
+        self.allPoolOptionBarButton.title = @"游离物理主机";
+        self.isOutofPool = TRUE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }else{
+        self.poolVO = vo;
+        self.allPoolOptionBarButton.title = self.poolVO.resourcePoolName;
+        self.isOutofPool = FALSE;
+        [self.dataList removeAllObjects];
+        [self.collectionView headerBeginRefreshing];
+    }
+}
+
 - (IBAction)showPoolListSelect:(id)sender {
     [[RemoteObject getCurrentDatacenterVO] getPoolListAsync:^(id object, NSError *error) {
         self.poolList = ((PoolListResult*)object).resourcePools;
+        
+        if(self.poolList && (self.poolList.count>5)){
+            [self performSegueWithIdentifier:@"toPoolTable" sender:self];
+            return;
+        }
         
         self.poolListActionSheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:[NSString stringWithFormat:@"当前：%@", self.allPoolOptionBarButton.title] otherButtonTitles: nil];
         [self.poolListActionSheet addButtonWithTitle:@"全部"];
@@ -195,6 +259,11 @@
     [[RemoteObject getCurrentDatacenterVO] getBusDomainsListAsync:^(id object, NSError *error) {
         self.busDomainsList = ((BusDomainsListResult*)object).busDomains;
         
+        if(self.busDomainsList && (self.busDomainsList.count>5)){
+            [self performSegueWithIdentifier:@"toBusinessDomainTable" sender:self];
+            return;
+        }
+
         self.businessListActionSheet = [[UIActionSheet alloc] initWithTitle:@"过滤条件" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:[NSString stringWithFormat:@"当前：%@", self.allBusinessOptionBarButton.title] otherButtonTitles: nil];
         [self.businessListActionSheet addButtonWithTitle:@"全部"];
         for(BusDomainsVO *busDomains in self.busDomainsList){

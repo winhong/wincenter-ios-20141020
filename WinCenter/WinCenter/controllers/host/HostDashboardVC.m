@@ -112,7 +112,7 @@
         cell.ip.textColor = [UIColor blackColor];
     }
     cell.vmCount.text = [NSString stringWithFormat:@"%d",hostVO.virtualMachineNum ];
-    cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@",[hostVO storage_value],[hostVO storage_unit]];
+    cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@",[hostVO localStorage_value],[hostVO localStorage_unit]];
     cell.cpuSlots.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
     cell.cpu.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB",hostVO.memory/1024.0];
@@ -130,7 +130,7 @@
     
     cell.progress_2.litEffect = NO;
     cell.progress_2.numBars = 10;
-    cell.progress_2.value = [self formatCountData:hostVO.storage/640.0];
+    cell.progress_2.value = [self formatCountData:hostVO.localStorage/640.0];
     cell.progress_2.backgroundColor = [UIColor clearColor];
     cell.progress_2.outerBorderColor = [UIColor clearColor];
     cell.progress_2.innerBorderColor = [UIColor clearColor];

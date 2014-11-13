@@ -380,6 +380,8 @@
 		50D22E9019FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8C19FFEF5D00167A35 /* WSChartBusinessModelGraphInteractive.m */; };
 		50D22E9119FFEF5D00167A35 /* WSChartValueCreationGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */; };
 		50D22E9319FFEF9100167A35 /* PowerPlot_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D22E9219FFEF9100167A35 /* PowerPlot_lib.framework */; };
+		50DC969C1A147F1F00A82DA2 /* PoolTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DC969B1A147F1F00A82DA2 /* PoolTableVC.m */; };
+		50DC969F1A1480FA00A82DA2 /* BusinessDomainTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DC969E1A1480FA00A82DA2 /* BusinessDomainTableVC.m */; };
 		5183B171CB6D487D89BE3E60 /* libPods-WinCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF038FAC302E46D8862274E3 /* libPods-WinCenter.a */; };
 		684D90EB19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json in Resources */ = {isa = PBXBuildFile; fileRef = 684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */; };
 		684D90EE19FFC562009C4B09 /* IpPoolsListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */; };
@@ -1075,6 +1077,10 @@
 		50D22E8D19FFEF5D00167A35 /* WSChartValueCreationGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSChartValueCreationGraph.h; sourceTree = "<group>"; };
 		50D22E8E19FFEF5D00167A35 /* WSChartValueCreationGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSChartValueCreationGraph.m; sourceTree = "<group>"; };
 		50D22E9219FFEF9100167A35 /* PowerPlot_lib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PowerPlot_lib.framework; path = WinCenter/controllers/vm/PowerPlot_lib.framework; sourceTree = "<group>"; };
+		50DC969A1A147F1F00A82DA2 /* PoolTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoolTableVC.h; sourceTree = "<group>"; };
+		50DC969B1A147F1F00A82DA2 /* PoolTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoolTableVC.m; sourceTree = "<group>"; };
+		50DC969D1A1480FA00A82DA2 /* BusinessDomainTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessDomainTableVC.h; sourceTree = "<group>"; };
+		50DC969E1A1480FA00A82DA2 /* BusinessDomainTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessDomainTableVC.m; sourceTree = "<group>"; };
 		684D90EA19FFC4E8009C4B09 /* NetworkVO.getIpPoolsAsync.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkVO.getIpPoolsAsync.json; sourceTree = "<group>"; };
 		684D90EC19FFC562009C4B09 /* IpPoolsListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpPoolsListResult.h; sourceTree = "<group>"; };
 		684D90ED19FFC562009C4B09 /* IpPoolsListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpPoolsListResult.m; sourceTree = "<group>"; };
@@ -1966,6 +1972,8 @@
 				18C2124E19F27C2000FCBD23 /* BusinessDashboardHeader.m */,
 				18C2124F19F27C2000FCBD23 /* BusinessDashboardVC.h */,
 				18C2125019F27C2000FCBD23 /* BusinessDashboardVC.m */,
+				50DC969D1A1480FA00A82DA2 /* BusinessDomainTableVC.h */,
+				50DC969E1A1480FA00A82DA2 /* BusinessDomainTableVC.m */,
 				18C2125119F27C2000FCBD23 /* BusinessDetailInfoVC.h */,
 				18C2125219F27C2000FCBD23 /* BusinessDetailInfoVC.m */,
 				18C2125319F27C2000FCBD23 /* BusinessVmCollectionCell.h */,
@@ -2102,6 +2110,8 @@
 				18C212AE19F27C2000FCBD23 /* PoolDashboardHeader.m */,
 				18C212AF19F27C2000FCBD23 /* PoolDashboardVC.h */,
 				18C212B019F27C2000FCBD23 /* PoolDashboardVC.m */,
+				50DC969A1A147F1F00A82DA2 /* PoolTableVC.h */,
+				50DC969B1A147F1F00A82DA2 /* PoolTableVC.m */,
 				18C212B119F27C2000FCBD23 /* PoolDetailInfoVC.h */,
 				18C212B219F27C2000FCBD23 /* PoolDetailInfoVC.m */,
 			);
@@ -2969,6 +2979,7 @@
 				181DED6E19F17CB100998835 /* BusinessVmVO.m in Sources */,
 				18C2133219F27C2000FCBD23 /* PoolDashboardHeader.m in Sources */,
 				181DECFB19F17CB100998835 /* UIBaseClass.m in Sources */,
+				50DC969C1A147F1F00A82DA2 /* PoolTableVC.m in Sources */,
 				181DED6F19F17CB100998835 /* BusinessVO.m in Sources */,
 				18763BBF19F4B82300669CC3 /* DialScrollVC.m in Sources */,
 				181DED6D19F17CB100998835 /* BusinessListResult.m in Sources */,
@@ -2989,6 +3000,7 @@
 				181DED8019F17CB100998835 /* NetworkListResult.m in Sources */,
 				847CA88B19F7503B004C292A /* HostActivityVmStateVO.m in Sources */,
 				18C2131D19F27C2000FCBD23 /* HostCollectionCell.m in Sources */,
+				50DC969F1A1480FA00A82DA2 /* BusinessDomainTableVC.m in Sources */,
 				18C5215719F89DF300C033C6 /* UIScrollView+MJRefresh.m in Sources */,
 				181DED7219F17CB100998835 /* DatacenterListResult.m in Sources */,
 				685791511A00C64100B78539 /* NetworkTotalTabelVC.m in Sources */,

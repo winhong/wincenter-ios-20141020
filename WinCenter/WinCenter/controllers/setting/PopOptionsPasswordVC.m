@@ -25,19 +25,33 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
-}
--(IBAction)nextOnKeyboard:(UITextField *)sender{
-    if (sender == self.passwordOld) {
+- (IBAction)exitPasswordOld:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyNext){
         [self.passwordNew becomeFirstResponder];
-    }else if (sender == self.passwordNew){
-        [self.passwordRepeat becomeFirstResponder];
+    }else{
+        [self.passwordOld resignFirstResponder];
     }
-    
 }
+- (IBAction)exitPasswordNew:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyNext){
+        [self.passwordRepeat becomeFirstResponder];
+    }else{
+        [self.passwordNew resignFirstResponder];
+    }
+}
+- (IBAction)exitPasswordConfirm:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyDone){
+        if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
+            [self.passwordRepeat resignFirstResponder];
+        }else{
+            [self done:nil];
+        }
+    }else{
+        [self.passwordRepeat resignFirstResponder];
+    }
+}
+
+
 -(BOOL)matchPassword:( NSString*)str{
     NSString *urlString = str;
     NSError *error;
@@ -56,7 +70,6 @@
     
 }
 - (IBAction)done:(id)sender {
-    [self matchPassword:@"asdf"];
     NSString *msg = @"";
     if([self.passwordOld.text isEqualToString:@""])
     {

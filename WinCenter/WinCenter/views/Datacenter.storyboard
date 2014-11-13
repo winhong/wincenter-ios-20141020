@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EdM-4a-ek9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -430,7 +430,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="运行虚拟机：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIw-OB-WNG">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="虚拟机：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIw-OB-WNG">
                                             <rect key="frame" x="37" y="123" width="87" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1006,6 +1006,69 @@
                 <navigationItem id="km4-k6-OsJ"/>
             </objects>
             <point key="canvasLocation" x="783.5" y="-391"/>
+        </scene>
+        <!--过滤条件-->
+        <scene sceneID="fPs-kd-nJf">
+            <objects>
+                <tableViewController storyboardIdentifier="PoolTableVC" id="yTH-hz-2oP" customClass="PoolTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="D4a-ER-KSd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoolTableCell" textLabel="Uqr-Yw-unM" style="IBUITableViewCellStyleDefault" id="NAa-jn-QjM">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NAa-jn-QjM" id="Ksh-cb-Is9">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uqr-Yw-unM">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yTH-hz-2oP" id="WWo-Zv-yH3"/>
+                            <outlet property="delegate" destination="yTH-hz-2oP" id="RQy-wl-K0a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="过滤条件" id="sNW-fR-YBI">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="XGY-jK-fPs">
+                            <connections>
+                                <action selector="exitAction:" destination="yTH-hz-2oP" id="phw-8x-YoW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="SN3-Wl-Srv">
+                            <connections>
+                                <action selector="refreshAction:" destination="yTH-hz-2oP" id="qvH-5U-Bvs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSO-ql-ccE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666" y="1511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HtS-ue-vZk">
+            <objects>
+                <navigationController storyboardIdentifier="PoolTableVCNav" id="fDw-fo-eHt" sceneMemberID="viewController">
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zM3-DS-a1L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yTH-hz-2oP" kind="relationship" relationship="rootViewController" id="6w6-r3-bNn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6H-Lg-pkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="1511"/>
         </scene>
         <!--Item-->
         <scene sceneID="TtQ-8a-X7K">
@@ -2180,6 +2243,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="4Zr-if-iJO" id="tQy-aK-ex3"/>
+                        <segue destination="fDw-fo-eHt" kind="modal" identifier="toPoolTable" modalPresentationStyle="formSheet" id="eoh-3q-Dmp"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKG-Os-SLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2705,6 +2769,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="NHe-7y-NkJ" id="q7n-cB-e4C"/>
+                        <segue destination="fDw-fo-eHt" kind="modal" identifier="toPoolTable" modalPresentationStyle="formSheet" id="r4c-KN-qAK"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHT-IU-nqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3207,6 +3272,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allPoolOptionBarButton" destination="Dhp-OO-KwD" id="nud-3H-EVy"/>
+                        <segue destination="fDw-fo-eHt" kind="modal" identifier="toPoolTable" modalPresentationStyle="formSheet" id="a9i-R4-33X"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGA-AF-aKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3542,12 +3608,75 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="allBusinessOptionBarButton" destination="qXt-3j-g6W" id="0DU-VS-cSt"/>
+                        <segue destination="JTv-6o-AIi" kind="modal" identifier="toBusinessDomainTable" modalPresentationStyle="formSheet" id="6xM-3J-C4c"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0c-p2-TAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationItem id="eln-21-zlI"/>
             </objects>
             <point key="canvasLocation" x="775.5" y="3525"/>
+        </scene>
+        <!--过滤条件-->
+        <scene sceneID="eck-vD-FZ2">
+            <objects>
+                <tableViewController storyboardIdentifier="BusinessDomainTableVC" id="dXy-6V-AHF" customClass="BusinessDomainTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ess-X3-pRh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessDomainTableCell" textLabel="Zcd-P2-g6a" style="IBUITableViewCellStyleDefault" id="khF-b3-GWh">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="khF-b3-GWh" id="McD-Sb-7WG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zcd-P2-g6a">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dXy-6V-AHF" id="iJ5-kp-ySK"/>
+                            <outlet property="delegate" destination="dXy-6V-AHF" id="fCu-Qg-ypV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="过滤条件" id="C64-5O-e2h">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="ibI-Xn-fiX">
+                            <connections>
+                                <action selector="exitAction:" destination="dXy-6V-AHF" id="uVC-2P-w2C"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5lE-hq-Min">
+                            <connections>
+                                <action selector="refreshAction:" destination="dXy-6V-AHF" id="ioI-2v-R4l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIM-FQ-h8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770" y="3525"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X8b-cr-LGL">
+            <objects>
+                <navigationController storyboardIdentifier="BusinessDomainTableVCNav" id="JTv-6o-AIi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A7c-tx-O8v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dXy-6V-AHF" kind="relationship" relationship="rootViewController" id="bun-4T-EyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6h-Z1-OSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="3525"/>
         </scene>
         <!--数据中心选择-->
         <scene sceneID="lHf-09-koY">
@@ -3976,4 +4105,7 @@
         <image name="资源池－存储池－面板" width="288" height="253"/>
         <image name="资源池－物理机－面板" width="288" height="280"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="r4c-KN-qAK"/>
+    </inferredMetricsTieBreakers>
 </document>

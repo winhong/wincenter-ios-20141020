@@ -10,6 +10,15 @@
 
 @implementation LicenseWciVO
 
+-(NSString*) version_text{
+    NSDictionary *dict = @{@"standard":@"标准版", @"enterprise":@"企业版", @"diamond":@"企业增强版"};
+
+    NSString *result = [dict valueForKey:self.version_field];
+    if((result==nil) || [result isEqualToString:@""]){
+        result = self.version_field;
+    }
+    return result;
+}
 -(NSString*) IcType_text{
     NSDictionary *stateDict = @{@"0":@"试用", @"1":@"永久"};
     

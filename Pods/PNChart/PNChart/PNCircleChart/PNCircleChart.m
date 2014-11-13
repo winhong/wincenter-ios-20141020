@@ -99,9 +99,13 @@
     pathAnimation.duration = self.duration;
     pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pathAnimation.fromValue = @0.0f;
-    pathAnimation.toValue = @([_current floatValue] / [_total floatValue]);
+    CGFloat targetValue = [_current floatValue] / [_total floatValue];
+    if(targetValue>0.95 && targetValue<1.0){
+        targetValue = 0.95;
+    }
+    pathAnimation.toValue = @(targetValue);
     [_circle addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
-    _circle.strokeEnd   = [_current floatValue] / [_total floatValue];
+    _circle.strokeEnd   =  targetValue;
 
     [_countingLabel countFrom:0 to:[_current floatValue] withDuration:1.0];
     

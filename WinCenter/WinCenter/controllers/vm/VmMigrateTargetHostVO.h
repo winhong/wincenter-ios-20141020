@@ -12,5 +12,6 @@
 
 @property int targetId;
 @property NSString *targetName;
+@property BOOL isFit;
 
 @end

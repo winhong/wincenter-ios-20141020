@@ -145,7 +145,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 - (IBAction)refreshAction:(id)sender {
     [self reloadData];
-    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
 }
 -(void)reloadData{
     if (!self.startTime) {
@@ -159,21 +158,25 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             [self.hostVO getPerformanceAsync:^(id object, NSError *error) {
                 self.performanceData = object;
                 [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+                 self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
             } withStartTime:self.startTime];
         }else{
             [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+             self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
         }
         
         
      }else if([self.chartType isEqualToString:@"vm"]){
-        if ([self.vmVO.state isEqualToString:@"OK"]) {
+        if ([self.vmVO.state isEqualToString:@"OK"] && (!self.vmVO.operationState || [self.vmVO.operationState isEqualToString:@""]) ) {
             [self.vmVO getPerformanceAsync:^(id object, NSError *error) {
                 self.performanceData = object;
                 [_bridge callHandler:@"sendVcpuCount" data:[NSString stringWithFormat:@"%d",self.vmVO.vcpu ]];
                 [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+                 self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
             } withStartTime:self.startTime];
         }else{
             [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+             self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
         }
      }
     

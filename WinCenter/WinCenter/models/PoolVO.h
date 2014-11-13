@@ -20,6 +20,7 @@
 @property NSString *productVersion;
 @property int versionDate;
 
+@property int cpuSlots;
 @property float totalCpu;
 @property float totalMemory;
 @property float totalStorage;

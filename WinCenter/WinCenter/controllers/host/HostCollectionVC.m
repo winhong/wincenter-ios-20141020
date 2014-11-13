@@ -54,7 +54,7 @@
     cell.label3.text = [NSString stringWithFormat:@"%d",hostVO.cpuSlots];
     cell.label4.text = [NSString stringWithFormat:@"%d",hostVO.cpu];
     cell.label5.text = [NSString stringWithFormat:@"%.2fGB",hostVO.memory/1024.0];
-    cell.label6.text = [NSString stringWithFormat:@"%.2fGB",hostVO.storage];
+    cell.label6.text = [NSString stringWithFormat:@"%.2f%@",[hostVO localStorage_value],[hostVO localStorage_unit]];
     cell.status.text = [hostVO state_text];
     cell.status.textColor = [hostVO state_color];
     cell.status_image.layer.cornerRadius = 6;
@@ -69,7 +69,7 @@
     
     cell.progress_2.litEffect = NO;
     cell.progress_2.numBars = 10;
-    cell.progress_2.value = [self formatCountData:hostVO.storage/640.0];
+    cell.progress_2.value = [self formatCountData:hostVO.localStorage/640.0];
     cell.progress_2.backgroundColor = [UIColor clearColor];
     cell.progress_2.outerBorderColor = [UIColor clearColor];
     cell.progress_2.innerBorderColor = [UIColor clearColor];

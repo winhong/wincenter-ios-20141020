@@ -106,8 +106,19 @@
     cell.vCpu.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
     cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [vmVO storage_value], [vmVO storage_unit]];
-    cell.status.text = [vmVO state_text];
-    cell.status.textColor = [vmVO state_color];
+    
+    HostVO *hostVO = [HostVO new];
+    hostVO.hostId = vmVO.ownerHostId;
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            cell.status.text = @"未知";
+        }else{
+            cell.status.text = [vmVO state_text];
+            cell.status.textColor = [vmVO state_color];
+        }
+    }];
+    
     cell.osType.text = vmVO.osType;
     if (vmVO.osType == nil) {
         cell.osType.text = @"(尚未安装系统)";

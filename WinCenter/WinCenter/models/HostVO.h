@@ -24,6 +24,7 @@
 
 @property float memory;
 @property float storage;
+@property float localStorage;
 @property float availCpu;
 @property float availMemory;
 @property float availStorage;
@@ -47,6 +48,8 @@
 - (UIColor *)state_color;
 - (float)storage_value;
 - (NSString*)storage_unit;
+- (float)localStorage_value;
+- (NSString*)localStorage_unit;
 
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getHostStatVOAsync:(FetchObjectCompletionBlock)completeBlock;
