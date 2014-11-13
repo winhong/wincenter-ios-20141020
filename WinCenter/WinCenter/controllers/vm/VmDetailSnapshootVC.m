@@ -53,13 +53,13 @@
 }
 - (IBAction)refreshAction:(id)sender {
     [self reloadData];
-    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
 }
 -(void)reloadData{
 
     [self.vmVO getRaphaelAsync:^(id object, NSError *error) {
         self.snashotData = object;
         [_bridge callHandler:@"testJavascriptHandler" data:self.snashotData];
+        self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
     }];
 }
 

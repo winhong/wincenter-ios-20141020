@@ -128,7 +128,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 - (IBAction)refreshAction:(id)sender {
     [self reloadData];
-    self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
 }
 -(void)reloadData{
     if (!self.startTime) {
@@ -142,9 +141,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             [self.hostVO getPerformanceAsync:^(id object, NSError *error) {
                 self.performanceData = object;
                 [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+                 self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
             } withStartTime:self.startTime];
         }else{
             [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+             self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
         }
         
         
@@ -154,9 +155,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
                 self.performanceData = object;
                 [_bridge callHandler:@"sendVcpuCount" data:[NSString stringWithFormat:@"%d",self.vmVO.vcpu ]];
                 [_bridge callHandler:@"testJavascriptHandler" data:self.performanceData];
+                 self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
             } withStartTime:self.startTime];
         }else{
             [_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
+             self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
         }
      }
     
