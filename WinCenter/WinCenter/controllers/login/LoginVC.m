@@ -113,36 +113,39 @@
     
     self.viewShaker = [[AFViewShaker alloc] initWithViewsArray:@[self.ipAddress, self.userName, self.password]];
     
-    self.ipAddress.delegate = self;
-    self.userName.delegate = self;
 //    [self.userName addTarget:self action:@selector(nextOnKeyboardUserName:) forControlEvents:UIControlEventEditingDidEndOnExit];
 //    [self.userName addTarget:self action:@selector(nextOnKeyboardUserName:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
 }
--(void)nextOnKeyboardUserName{
-    [self.userName becomeFirstResponder];
+
+- (IBAction)exitAddress:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyNext){
+        [self.userName becomeFirstResponder];
+    }else{
+        [self.ipAddress resignFirstResponder];
+    }
 }
--(void)nextOnKeyboardPassword{
-    [self.password becomeFirstResponder];
+- (IBAction)exitUsername:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyNext){
+        [self.password becomeFirstResponder];
+    }else{
+        [self.userName resignFirstResponder];
+    }
 }
+- (IBAction)exitPassword:(id)sender {
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyDone){
+        [self loginAction:nil];
+    }else{
+        [self.password resignFirstResponder];
+    }
+}
+
 - (IBAction)exitInput:(id)sender {
     [self.ipAddress resignFirstResponder];
     [self.userName resignFirstResponder];
     [self.password resignFirstResponder];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
-}
--(IBAction)nextOnKeyboard:(UITextField *)sender{
-    if (sender == self.userName) {
-        [self.password becomeFirstResponder];
-    }else if (sender == self.ipAddress){
-        [self.userName becomeFirstResponder];
-    }
-    
-}
 - (IBAction)enjoyAction:(id)sender {
     [self.ipAddress resignFirstResponder];
     [self.userName resignFirstResponder];

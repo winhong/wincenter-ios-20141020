@@ -51,9 +51,9 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.213.147:8090" placeholder="server address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-ub-fP3">
                                                     <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="4L9-cv-sgF" id="Tbn-DI-Rs9"/>
+                                                        <action selector="exitAddress:" destination="4L9-cv-sgF" eventType="editingDidEndOnExit" id="ahD-qf-6a7"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -71,9 +71,9 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m0J-VO-uI7">
                                                     <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="4L9-cv-sgF" id="wZo-Kd-Ft5"/>
+                                                        <action selector="exitUsername:" destination="4L9-cv-sgF" eventType="editingDidEndOnExit" id="Szp-M3-yXL"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -91,9 +91,9 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="passw0rd" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Df6-VM-Ijw">
                                                     <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="4L9-cv-sgF" id="4PM-Hg-XxM"/>
+                                                        <action selector="exitPassword:" destination="4L9-cv-sgF" eventType="editingDidEndOnExit" id="D7G-tf-Vg0"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -147,6 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections>
@@ -169,6 +170,10 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3qb-1d-GKo" appends="YES" id="YT7-R4-klH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="76l-q3-fo9">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -187,8 +192,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                                             <connections>
-                                                                <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="aKM-gT-pEZ"/>
-                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="y7u-eS-zDS"/>
+                                                                <action selector="exitAddress:" destination="qQb-5d-hfB" eventType="editingDidEndOnExit" id="cUx-cP-UqS"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -197,6 +201,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="08X-uG-nPc" appends="YES" id="qhC-Yd-eCX"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="47" id="72l-3S-uWi">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -215,8 +223,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                                             <connections>
-                                                                <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="DZV-c7-esj"/>
-                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="NRn-bJ-HuI"/>
+                                                                <action selector="exitUsername:" destination="qQb-5d-hfB" eventType="editingDidEndOnExit" id="jd7-ir-Hdi"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -226,6 +233,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="qsv-ZT-sq3" appends="YES" id="XxF-o4-4wc"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="46" id="l04-zH-r7b">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -245,7 +256,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
                                                             <connections>
-                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="9Mg-By-aVe"/>
+                                                                <action selector="exitPassword:" destination="qQb-5d-hfB" eventType="editingDidEndOnExit" id="qvQ-8l-P6f"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -256,6 +267,10 @@
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="V1z-Pj-192" appends="YES" id="xOh-4F-cL4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="250" id="DZ3-ax-HbK">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -294,6 +309,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="KyW-wb-R5X" appends="YES" id="2q7-93-a11"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -318,6 +337,31 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWm-y5-Xky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3qb-1d-GKo">
+                    <connections>
+                        <action selector="exitInput:" destination="qQb-5d-hfB" id="Adx-hB-QZz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="08X-uG-nPc">
+                    <connections>
+                        <action selector="exitInput:" destination="qQb-5d-hfB" id="dKs-fg-obP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qsv-ZT-sq3">
+                    <connections>
+                        <action selector="exitInput:" destination="qQb-5d-hfB" id="6eC-Ca-Y4l"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="V1z-Pj-192">
+                    <connections>
+                        <action selector="exitInput:" destination="qQb-5d-hfB" id="qvd-LQ-SRD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="KyW-wb-R5X">
+                    <connections>
+                        <action selector="exitInput:" destination="qQb-5d-hfB" id="zqb-Ek-Qrp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1046" y="80"/>
         </scene>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UITableViewController<UITextFieldDelegate, NSURLSessionDelegate>
+@interface LoginVC : UITableViewController<NSURLSessionDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ipAddress;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
