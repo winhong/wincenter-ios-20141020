@@ -125,14 +125,12 @@
             }
         }
 
+        self.datacenterStatWinserver = [DatacenterStatWinserver new];
         [[RemoteObject getCurrentDatacenterVO] getDatacenterStatWinserverVOAsync:^(id object, NSError *error) {
             self.datacenterStatWinserver = object;
             
-            [self refreshMainInfo];
-            
             [[RemoteObject getCurrentDatacenterVO] getBusinessListAsync:^(id object, NSError *error) {
                 self.datacenterStatWinserver.appNumber = (int) ((BusinessListResult*)object).resultList.count;
-                [self refreshMainInfo2];
                 
                 self.datacenterStatWinserver.totalCpu = 0;
                 self.datacenterStatWinserver.totalMemory = 0;
@@ -162,6 +160,9 @@
                                 self.datacenterStatWinserver.availStorage += hostVO.availStorage;
                             }
                         }
+                        
+                        [self refreshMainInfo];
+                        [self refreshMainInfo2];
                         [self refreshMainInfo3];
                         
                         [self.scrollView headerEndRefreshing];
@@ -169,7 +170,7 @@
 
                         
                     }];
-                                }];
+                }];
             }];
         }];
     }];
