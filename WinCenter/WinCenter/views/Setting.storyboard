@@ -637,6 +637,30 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Dam-4Q-lbv" detailTextLabel="dXG-cA-lTi" style="IBUITableViewCellStyleValue1" id="hDQ-6k-CVy">
+                                        <rect key="frame" x="0.0" y="275" width="540" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hDQ-6k-CVy" id="lC3-th-bBc">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="版本" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dam-4Q-lbv">
+                                                    <rect key="frame" x="15" y="11" width="68" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Version" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dXG-cA-lTi">
+                                                    <rect key="frame" x="491" y="11" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="9ak-z0-ehP" detailTextLabel="ydp-e6-cJU" style="IBUITableViewCellStyleValue1" id="XJJ-M2-Wc7">
                                         <rect key="frame" x="0.0" y="319" width="540" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -702,6 +726,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                         <outlet property="phone" destination="8Yv-Hi-jZf" id="ICt-9W-vKq"/>
                         <outlet property="remianDays" destination="gns-Xb-reQ" id="SJa-qN-ScR"/>
                         <outlet property="useedInfo" destination="ydp-e6-cJU" id="4sp-ez-LhY"/>
+                        <outlet property="versionField" destination="dXG-cA-lTi" id="EJI-qD-hIE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vZ-gY-wEx" userLabel="First Responder" sceneMemberID="firstResponder"/>

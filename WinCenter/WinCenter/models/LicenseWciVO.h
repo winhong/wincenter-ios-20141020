@@ -14,8 +14,10 @@
 @property NSString *email;
 @property NSString *phone;
 @property NSString *IcType;
+@property NSString *version_field;
 @property int IcNum;
 
+-(NSString*) version_text;
 -(NSString*) IcType_text;
 
 @end
