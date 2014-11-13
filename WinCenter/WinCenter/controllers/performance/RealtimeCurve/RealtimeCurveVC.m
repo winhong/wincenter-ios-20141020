@@ -22,7 +22,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property(retain,nonatomic)NSTimer* timer;
 @property NSObject *performanceData;
 @property WebViewJavascriptBridge* bridge;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *timepicker;
+@property (weak, nonatomic) IBOutlet UIView *datepickerView;
 @property float startTime;
+@property NSString *startTimeStr;
 @end
 
 @implementation RealtimeCurveVC
@@ -38,8 +42,18 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webview webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"ObjC received message from JS: %@", data);
         responseCallback(@"Response for message from ObjC");
+        if ([data isEqualToString:@"选择开始时间"]) {
+            [self showDatepickerView];
+        }
+        if ([data isEqualToString:@"开始查询"]) {
+            [self queryData];
+        }
         
-        [self setChartStartTime:data];
+        if ([data isEqualToString:@"取消选择"]) {
+            [self hideDatepickerView];
+        }
+        
+        //取消选择
         
     }];
 
@@ -85,6 +99,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 //        //TODO: add handler
 //    };
 //    [self.segmentControlContainer addSubview:segmentedControl];
+    NSDate *now = [NSDate new];
+    self.datepicker.maximumDate = now;
+    [self.datepicker setDate:now animated:YES];
     
 }
 
@@ -135,7 +152,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
         self.startTime = (long long int)time*1000 - 10*60*1000;
         //self.startTime = (long long int)[NSDate new];
-        NSLog(@"%.0f",self.startTime);
+        
     }
     if ([self.chartType isEqualToString:@"host"]) {
         if ([self.hostVO.state isEqualToString:@"OK"]) {
@@ -169,13 +186,59 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 }
 
--(void)setChartStartTime:(NSString*)startTime{
+-(void)queryData{
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *date=[dateFormatter dateFromString:startTime];
+    NSDate *date=[dateFormatter dateFromString:self.startTimeStr];
     NSTimeInterval time=[date timeIntervalSince1970]*1000;
     self.startTime = (float)time;
     [self reloadData];
+}
+- (IBAction)selectDate:(id)sender {
+    
+    
+    NSDate *selectDate = [self.datepicker date];
+    NSDate *selectTime = [self.timepicker date];
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    [dateFormatter1 setDateFormat:@"yyyy-MM-dd"];
+    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
+    [dateFormatter2 setDateFormat:@"HH:mm:ss"];
+    
+    NSString *date =  [dateFormatter1 stringFromDate:selectDate];
+    NSString *time =  [dateFormatter2 stringFromDate:selectTime];
+    
+    NSString *dateAndTime = [NSString stringWithFormat:@"%@ %@",date,time ];
+    
+    NSDateFormatter *dateFormatter3=[[NSDateFormatter alloc]init];
+    [dateFormatter3 setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *dateSelect=[dateFormatter3 dateFromString:dateAndTime];
+    
+    NSDate *Now = [NSDate new];
+    NSTimeInterval result=[Now timeIntervalSinceDate:dateSelect];
+    if (result<=0) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"选择的日期不能大于或者等于当前日期！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+    }else{
+        [self hideDatepickerView];
+        self.startTimeStr = dateAndTime;
+        [_bridge callHandler:@"setStartTime" data:(@"%@",dateAndTime)];
+    }
+    
+}
+
+- (void) showDatepickerView
+{
+    [_bridge callHandler:@"webviewShowLayer" data:@"遮罩"];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.datepickerView.frame = CGRectMake(-20, 311, 1019, 202);
+    }];
+}
+- (void) hideDatepickerView
+{
+    [_bridge callHandler:@"webviewHideLayer" data:@"遮罩"];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.datepickerView.frame = CGRectMake(-20, 524, 1019, 202);
+    }];
 }
 
 @end

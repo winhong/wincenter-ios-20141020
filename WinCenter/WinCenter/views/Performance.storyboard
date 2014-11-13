@@ -831,6 +831,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dc2-7m-Kg9">
+                                <rect key="frame" x="-20" y="566" width="1019" height="202"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="F4j-ih-4qm">
+                                        <rect key="frame" x="261" y="40" width="250" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="437550601.03406698">
+                                            <!--2014-11-13 05:50:01 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="svn-4m-L1V">
+                                        <rect key="frame" x="508" y="40" width="239" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="437551264.99772799">
+                                            <!--2014-11-13 06:01:04 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <view alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-qu-MzN">
+                                        <rect key="frame" x="20" y="0.0" width="979" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYs-BZ-KQy">
+                                        <rect key="frame" x="831" y="60" width="121" height="121"/>
+                                        <state key="normal" title="确定">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDate:" destination="bS5-zy-Gs2" eventType="touchUpInside" id="Wj5-gz-awk"/>
+                                            <action selector="selectDate:" destination="Od8-Qj-eqe" eventType="touchUpInside" id="vWJ-hQ-flb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -843,6 +875,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="979" height="768"/>
                     <connections>
+                        <outlet property="datepicker" destination="F4j-ih-4qm" id="Tm7-6j-y8f"/>
+                        <outlet property="datepickerView" destination="dc2-7m-Kg9" id="nhg-Bu-bvA"/>
+                        <outlet property="timepicker" destination="svn-4m-L1V" id="opD-ZZ-5A3"/>
                         <outlet property="webview" destination="ivX-0B-c4I" id="hRb-cS-6ss"/>
                     </connections>
                 </viewController>
@@ -866,6 +901,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="979" height="768"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arx-Zs-UKH">
+                                <rect key="frame" x="-20" y="524" width="1019" height="202"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-Qo-t9B">
+                                        <rect key="frame" x="261" y="40" width="250" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="437550601.03406698">
+                                            <!--2014-11-13 05:50:01 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="w6W-C6-g2C">
+                                        <rect key="frame" x="508" y="40" width="239" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="437551264.99772799">
+                                            <!--2014-11-13 06:01:04 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-a1-DQj">
+                                        <rect key="frame" x="20" y="0.0" width="979" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvQ-Jd-lLS">
+                                        <rect key="frame" x="832" y="76" width="112" height="90"/>
+                                        <state key="normal" title="确定">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDate:" destination="bS5-zy-Gs2" eventType="touchUpInside" id="oby-S5-miP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -878,6 +944,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="979" height="768"/>
                     <connections>
+                        <outlet property="datepicker" destination="7yo-Qo-t9B" id="9jC-lq-teb"/>
+                        <outlet property="datepickerView" destination="arx-Zs-UKH" id="JCb-wV-HJi"/>
+                        <outlet property="timepicker" destination="w6W-C6-g2C" id="WGW-yX-PRj"/>
                         <outlet property="webview" destination="Hmn-DL-7s5" id="SZY-I0-T2c"/>
                     </connections>
                 </viewController>

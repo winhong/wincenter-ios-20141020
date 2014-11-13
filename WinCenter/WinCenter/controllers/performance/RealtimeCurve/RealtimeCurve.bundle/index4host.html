@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/highcharts.js"></script>
 	
@@ -11,8 +12,9 @@
 	<script type="text/javascript" src="js/mem.js"></script>
 	<script type="text/javascript" src="js/network.js"></script>
 	<style type="text/css">
-		#submitBtn{color: #0683c7;padding: 3px 10px;border:none;background: #fff;font-size: 14px;}
-		#submitBtn.active{background: #eee; opacity: 0.7}
+		#submitBtn,#selectStartTime{color: #0683c7;padding: 3px 10px;border:none;background: #fff;font-size: 14px;}
+        #submitBtn.active,#selectStartTime.active{background: #eee; opacity: 0.7}
+        #layer{position: absolute; left:0; top:0; right:0; background: #ccc;opacity: 0}
 	</style>
 </head>
 <body>
@@ -22,27 +24,30 @@
 </div>
 <div id="chart">
     <div style="text-align:center;padding:7px 0 0">
-    	开始时间：<input type="datetime-local" id="dateTimePicker" /> <button id="submitBtn">确定</button>
+    	开始时间：<input type="input" id="dateTimePicker" readonly /> <button id="selectStartTime">选择开始时间</button> <button id="submitBtn">确定</button>
     </div>
     <div id="dateTips" style="color:red;padding:0;margin:3px 0;text-align:center">&nbsp;</div>
     <div id="cpuChart" style="width:100%;height:300px"></div>
 	<div id="memChart" style="width:100%;height:300px"></div>
 	<div id="networkChart" style="width:100%;height:300px"></div>
 </div>
-
+<div id="layer" style="display:none;"></div>
 </body>
 </html>
 <script type="text/javascript">
     function formaterDate(num){
         return parseInt(num) <= 9 ? "0"+num : num
     }
+    $("#layer").height($(document).height()).bind("touchstart",function(){
+        canclePick("取消选择");
+    });
 
     function show(){
         var date = new Date(); //日期对象
         var now = "";
         now = date.getFullYear()+"-"; //读英文就行了
         now = now + formaterDate((date.getMonth()+1))+"-";//取月的时候取的是当前月-1如果想取当前月+1就可以了
-        now = now + formaterDate(date.getDate())+"T";
+        now = now + formaterDate(date.getDate())+" ";
         now = now + formaterDate(date.getHours())+":";
         now = now + formaterDate(date.getMinutes()-10)+":";
         now = now + formaterDate(date.getSeconds())+"";
@@ -50,26 +55,20 @@
     }
 
     document.getElementById("dateTimePicker").value = show();
-	$("#submitBtn").bind("touchstart",function(){
-    	$(this).addClass("active");
+
+	$("#submitBtn,#selectStartTime").bind("touchstart",function(){
+        $(this).addClass("active");
     });
     $(document).bind("touchend",function(){
-    	$("#submitBtn").removeClass("active");
+        $("#submitBtn,#selectStartTime").removeClass("active");
     });
-    
-    $("#submitBtn").bind("click",function(){
-         var time = $("#dateTimePicker").val().replace("T"," ");
-         var now = new Date();
-         var str = time.replace(/-/g,"/");
-         var date = new Date(str);
-         
-         
-         if(date >= now)
-            $("#dateTips").html("开始时间不能大于或等于当前时间！");
-         else{
-            $("#dateTips").html("&nbsp;");
-            sendTimeToIOS($("#dateTimePicker").val().replace("T"," "));
-         }
+
+    $("#selectStartTime").bind("touchstart",function(){
+        pickeDateTime("选择开始时间");
+    });
+
+    $("#submitBtn").bind("touchstart",function(){
+         sendTimeToIOS("开始查询");
     })
     var chartMap = new Map();
 	
@@ -99,6 +98,18 @@
 	        }
 	    })
 
+        bridge.registerHandler('setStartTime', function(data, responseCallback) {
+            $("#dateTimePicker").val(data);
+        })
+
+        bridge.registerHandler('webviewShowLayer', function(data, responseCallback) {
+            $("#layer").show();
+        })
+
+        bridge.registerHandler('webviewHideLayer', function(data, responseCallback) {
+            $("#layer").hide();
+        })
+
 	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
 	    	if(typeof data != "string"){
            		updateData(JSON.stringify(data));
@@ -118,6 +129,18 @@
     
     function sendTimeToIOS(time){
         _bridge.send(time, function responseCallback(responseData) {
+            console.log("Javascript got its response", responseData)
+        })
+    }
+
+    function pickeDateTime(msg){
+        _bridge.send(msg, function responseCallback(responseData) {
+            console.log("Javascript got its response", responseData)
+        })
+    }
+
+    function canclePick(msg){
+        _bridge.send(msg, function responseCallback(responseData) {
             console.log("Javascript got its response", responseData)
         })
     }

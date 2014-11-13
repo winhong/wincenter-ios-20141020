@@ -135,11 +135,14 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 -(IBAction)nextOnKeyboard:(UITextField *)sender{
     if (sender == self.userName) {
         [self.password becomeFirstResponder];
     }else if (sender == self.ipAddress){
         [self.userName becomeFirstResponder];
+    }else{
+        [sender resignFirstResponder];
     }
     
 }
