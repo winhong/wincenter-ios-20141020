@@ -1268,6 +1268,11 @@
                                 <action selector="backAction:" destination="LWN-te-8Oe" id="h7l-YN-NTq"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="YOj-b7-AQe">
+                            <connections>
+                                <action selector="refreshAction:" destination="LWN-te-8Oe" id="sdh-b3-dZd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU4-QQ-nrv" userLabel="First Responder" sceneMemberID="firstResponder"/>

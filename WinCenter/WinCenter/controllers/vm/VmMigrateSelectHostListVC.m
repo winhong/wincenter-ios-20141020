@@ -30,27 +30,44 @@
 
 - (void)viewDidLoad
 {
+    self.hosts = [NSMutableArray new];
+    
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    __unsafe_unretained typeof(self) week_self = self;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.hosts = [NSMutableArray new];
+    [self.tableView addHeaderWithCallback:^{
+        [week_self.hosts removeAllObjects];
+        [week_self reloadData];
+    }];
+    [self.tableView addFooterWithCallback:^{
+        [week_self reloadData];
+    }];
+    [self reloadData];
+    
+}
+
+- (IBAction)refreshAction:(id)sender {
+    self.navigationItem.rightBarButtonItem.enabled = false;
+    [self.tableView headerBeginRefreshing];
+}
+
+-(void)reloadData{
+
     [self.vmVO vmGetMigrateTargets:^(id object, NSError *error) {
         self.vmMigrateTargets = object;
         for(VmMigrateTargetVO *targetVO in self.vmMigrateTargets.targets){
             for(VmMigrateTargetHostVO *hostVO in targetVO.hosts){
-                if(hostVO.targetId!=self.vmVO.ownerHostId){
+                if(hostVO.targetId!=self.vmVO.ownerHostId && hostVO.isFit){
                     [self.hosts addObject:hostVO.targetName];
                 }
             }
         }
+        [self.tableView headerEndRefreshing];
+        [self.tableView footerFinishingLoading];
         [self.tableView reloadData];
+        self.navigationItem.rightBarButtonItem.enabled = true;
     }];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
