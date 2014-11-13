@@ -192,8 +192,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                                             <connections>
-                                                                <action selector="nextOnKeyboard:" destination="qQb-5d-hfB" eventType="editingDidEnd" id="QA7-pD-CWC"/>
-                                                                <outlet property="delegate" destination="qQb-5d-hfB" id="y7u-eS-zDS"/>
+                                                                <action selector="exitAddress:" destination="qQb-5d-hfB" eventType="editingDidEndOnExit" id="cUx-cP-UqS"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
