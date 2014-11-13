@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "F3BarGauge.h"
 #import <REFrostedViewController/REFrostedViewController.h>
+#import "PoolTableVC.h"
+#import "BusinessDomainTableVC.h"
 
-@interface MasterCollectionVC : UICollectionViewController<UIActionSheetDelegate>
+@interface MasterCollectionVC : UICollectionViewController<UIActionSheetDelegate, BusinessDomainTableVCDelegate, PoolTableVCDelegate>
 
 @property NSArray *poolList;
 @property PoolVO *poolVO;
