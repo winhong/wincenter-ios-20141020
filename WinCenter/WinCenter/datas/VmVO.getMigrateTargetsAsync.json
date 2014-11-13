@@ -11,21 +11,21 @@
                           "targetId": 100,
                           "targetName": "winserver-163",
                           "type": "host",
-                          "isFit": false,
+                          "isFit": true,
                           "state": "CURRENT_SERVER"
                           },
                           {
                           "targetId": 101,
                           "targetName": "winserver-113",
                           "type": "host",
-                          "isFit": false,
+                          "isFit": true,
                           "state": "CURRENT_SERVER"
                           },
                           {
                           "targetId": 102,
                           "targetName": "winserver-144",
                           "type": "host",
-                          "isFit": false,
+                          "isFit": true,
                           "state": "CURRENT_SERVER"
                           }
                           ]
