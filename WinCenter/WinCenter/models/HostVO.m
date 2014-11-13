@@ -35,6 +35,23 @@
 }
 
 
+- (float)localStorage_value{
+    if(self.localStorage > 1024.0 ){
+        return (self.localStorage/1024.0);
+    }else{
+        return self.localStorage;
+    }
+    
+}
+- (NSString*)localStorage_unit{
+    if(self.localStorage > 1024.0 ){
+        return @"TB";
+    }else{
+        return @"GB";
+    }
+    
+}
+
 - (float)storage_value{
     if(self.storage > 1024.0 ){
         return (self.storage/1024.0);
