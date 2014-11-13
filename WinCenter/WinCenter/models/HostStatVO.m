@@ -10,8 +10,30 @@
 
 @implementation HostStatVO
 
+-(id)init{
+    if(self==[super init]){
+        self.cpuUsed = 0;
+        self.cpuTotal = 0;
+        self.cpuUsedPer = 0;
+        
+        self.vmMemUsed = 0;
+        self.freeMem = 0;
+        self.xenMemUsed = 0;
+        self.totalMem = 0;
+        
+        self.totalStorage = 0;
+        self.usedStorage = 0;
+        self.storageUsedPer = 0;
+    }
+    return self;
+}
+
 -(float)cpuRatio{
-    return self.cpuUsed/self.cpuTotal*100;
+    if(self.cpuTotal==0){
+        return 0;
+    }else{
+        return self.cpuUsed/self.cpuTotal*100;
+    }
 }
 
 -(UIColor *)cpuRatioColor{
@@ -27,7 +49,11 @@
 
 
 -(float)memoryRatio{
-    return (self.totalMem - self.freeMem)/self.totalMem*100;
+    if(self.totalMem==0){
+        return 0;
+    }else{
+        return (self.totalMem - self.freeMem)/self.totalMem*100;
+    }
 }
 
 -(UIColor *)memoryRatioColor{
@@ -42,7 +68,11 @@
 }
 
 -(float)storageRatio{
-    return self.usedStorage/self.totalStorage*100;
+    if(self.totalStorage==0){
+        return 0;
+    }else{
+        return self.usedStorage/self.totalStorage*100;
+    }
 }
 
 -(UIColor *)storageRatioColor{
