@@ -1157,7 +1157,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="虚拟机名称：" id="IKq-sO-D59">
+                            <tableViewSection headerTitle="虚拟机名称" id="IKq-sO-D59">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pZD-Jg-JBO">
                                         <rect key="frame" x="0.0" y="99" width="540" height="44"/>
@@ -1183,7 +1183,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="目标主机：" id="11Y-2j-db4">
+                            <tableViewSection headerTitle="目标主机" id="11Y-2j-db4">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f66-Nt-8rp">
                                         <rect key="frame" x="0.0" y="163" width="540" height="44"/>
