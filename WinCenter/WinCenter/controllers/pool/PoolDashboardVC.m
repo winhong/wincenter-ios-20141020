@@ -91,8 +91,8 @@
     PoolVO *poolVO = (PoolVO *) self.dataList[indexPath.row];
     cell.title.text = poolVO.resourcePoolName;
     cell.hostCount.text = [NSString stringWithFormat:@"%d台", poolVO.hostNumber];
-    cell.activeVmCount.text = [NSString stringWithFormat:@"%d台", poolVO.activeVmNumber];
-    cell.cpuUnitCount.text = [NSString stringWithFormat:@"%.2f%@", [poolVO totalCpu_value], [poolVO totalCpu_unit]];
+    cell.activeVmCount.text = [NSString stringWithFormat:@"%d台", poolVO.vmNumber];
+    cell.cpuUnitCount.text = [NSString stringWithFormat:@"%d颗", poolVO.cpuSlots];
     cell.memerySize.text = [NSString stringWithFormat:@"%.2fGB", poolVO.totalMemory/1024.0];
     cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [poolVO totalStorage_value], [poolVO totalStorage_unit]];
     
@@ -106,14 +106,14 @@
     
     cell.progress_2.litEffect = NO;
     cell.progress_2.numBars = 10;
-    cell.progress_2.value = [self formatCountData:poolVO.activeVmNumber/(16*16.0)];
+    cell.progress_2.value = [self formatCountData:poolVO.vmNumber/(16*16.0)];
     cell.progress_2.backgroundColor = [UIColor clearColor];
     cell.progress_2.outerBorderColor = [UIColor clearColor];
     cell.progress_2.innerBorderColor = [UIColor clearColor];
     
     cell.progress_3.litEffect = NO;
     cell.progress_3.numBars = 10;
-    cell.progress_3.value = 1;
+    cell.progress_3.value = [self formatCountData:poolVO.cpuSlots/(16*16.0)];
     cell.progress_3.backgroundColor = [UIColor clearColor];
     cell.progress_3.outerBorderColor = [UIColor clearColor];
     cell.progress_3.innerBorderColor = [UIColor clearColor];

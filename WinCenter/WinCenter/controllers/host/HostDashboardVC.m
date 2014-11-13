@@ -130,7 +130,7 @@
     
     cell.progress_2.litEffect = NO;
     cell.progress_2.numBars = 10;
-    cell.progress_2.value = [self formatCountData:hostVO.storage/640.0];
+    cell.progress_2.value = [self formatCountData:hostVO.localStorage/640.0];
     cell.progress_2.backgroundColor = [UIColor clearColor];
     cell.progress_2.outerBorderColor = [UIColor clearColor];
     cell.progress_2.innerBorderColor = [UIColor clearColor];
