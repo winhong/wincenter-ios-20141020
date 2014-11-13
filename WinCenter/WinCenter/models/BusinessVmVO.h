@@ -10,6 +10,7 @@
 
 @interface BusinessVmVO : NSObject
 @property int vmId;
+@property int hostId;
 @property NSString *name;
 @property int startOrder;
 @property int delayInterval;

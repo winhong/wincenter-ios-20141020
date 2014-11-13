@@ -238,8 +238,19 @@
         self.vmIp.textColor = [UIColor blackColor];
     }
     self.name.text = self.vmVO.name;
-    self.status.text = [self.vmVO state_text];
-    self.status.textColor = [self.vmVO state_color];
+
+    HostVO *hostVO = [HostVO new];
+    hostVO.hostId = self.vmVO.ownerHostId;
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            self.status.text = @"未知";
+        }else{
+            self.status.text = [self.vmVO state_text];
+            self.status.textColor = [self.vmVO state_color];
+        }
+    }];
+    
     self.osType.text = self.vmVO.osType;
     if(self.vmVO.osType == nil){
         self.osType.text = @"(尚未安装)";

@@ -70,8 +70,19 @@
     cell.label2.text = [NSString stringWithFormat:@"%d", vmVO.vcpu];
     cell.label3.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
     cell.label4.text = [NSString stringWithFormat:@"%dGB", vmVO.storage];
-    cell.status.text = [vmVO state_text];
-    cell.status.textColor = [vmVO state_color];
+    
+    HostVO *hostVO = [HostVO new];
+    hostVO.hostId = vmVO.ownerHostId;
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            cell.status.text = @"未知";
+        }else{
+            cell.status.text = [vmVO state_text];
+            cell.status.textColor = [vmVO state_color];
+        }
+    }];
+
     cell.status_image.layer.cornerRadius = 6;
     cell.status_image.backgroundColor = [vmVO state_color];
     cell.osType.text = vmVO.osType;

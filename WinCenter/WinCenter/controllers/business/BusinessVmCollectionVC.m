@@ -74,8 +74,20 @@
     cell.name.text = vmvo.name;
     cell.startOrder.text = [NSString stringWithFormat:@"%d", vmvo.startOrder];
     cell.delayInterval.text = [NSString stringWithFormat:@"%d", vmvo.delayInterval];
-    cell.state.text = [vmvo state_text];
-    cell.state.textColor = [vmvo state_color];
+    
+    
+    HostVO *hostVO = [HostVO new];
+    hostVO.hostId = vmvo.hostId;
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            cell.state.text = @"未知";
+        }else{
+            cell.state.text = [vmvo state_text];
+            cell.state.textColor = [vmvo state_color];
+        }
+    }];
+    
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
     }else{

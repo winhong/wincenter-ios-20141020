@@ -182,8 +182,18 @@
         VmVO *vm = self.vmList[indexPath.row];
         if(vm){
             cell.vmName.text = vm.name;
-            cell.vmState.text = [vm state_text];
-            cell.vmState.textColor = [vm state_color];
+            
+            HostVO *hostVO = [HostVO new];
+            hostVO.hostId = vm.ownerHostId;
+            [hostVO getHostVOAsync:^(id object, NSError *error) {
+                HostVO *hostVO = (HostVO*) object;
+                if([hostVO.state isEqualToString:@"MAINTAIN"]){
+                    cell.vmState.text = @"未知";
+                }else{
+                    cell.vmState.text = [vm state_text];
+                    cell.vmState.textColor = [vm state_color];
+                }
+            }];
         }else{
             cell.vmName.text = @"";
             cell.vmState.text = @"";

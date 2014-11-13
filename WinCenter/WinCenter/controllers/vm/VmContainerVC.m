@@ -58,8 +58,18 @@
     if(self.vmVO.ip == nil || [self.vmVO.ip isEqualToString:@""]){
         self.ipLabel.text = @"无法获取网络";
     }
-    self.statusLabel.text = [self.vmVO state_text];
-    //self.statusLabel.textColor = [self.vmVO state_color];
+    HostVO *hostVO = [HostVO new];
+    hostVO.hostId = self.vmVO.ownerHostId;
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            self.statusLabel.text = @"未知";
+        }else{
+            self.statusLabel.text = [self.vmVO state_text];
+            //self.statusLabel.textColor = [self.vmVO state_color];            
+        }
+    }];
+
     self.name.text = self.vmVO.name;
     if (self.name.text.length > 26) {
         self.name.font = [UIFont systemFontOfSize:24.0f];
