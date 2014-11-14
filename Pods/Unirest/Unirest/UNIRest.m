@@ -30,7 +30,7 @@
 @end
 
 static NSMutableDictionary* defaultHeaders  = nil;
-static int UNIRestTimeout = 20;
+static int UNIRestTimeout = 10;
 
 @implementation UNIRest
 
