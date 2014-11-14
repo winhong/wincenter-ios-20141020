@@ -111,7 +111,7 @@
     hostVO.hostId = vmVO.ownerHostId;
     [hostVO getHostVOAsync:^(id object, NSError *error) {
         HostVO *hostVO = (HostVO*) object;
-        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+        if([hostVO.state isEqualToString:@"DISCONNECT"]){
             cell.status.text = @"未知";
         }else{
             cell.status.text = [vmVO state_text];

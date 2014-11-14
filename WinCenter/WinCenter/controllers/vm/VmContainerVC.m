@@ -62,7 +62,7 @@
     hostVO.hostId = self.vmVO.ownerHostId;
     [hostVO getHostVOAsync:^(id object, NSError *error) {
         HostVO *hostVO = (HostVO*) object;
-        if([hostVO.state isEqualToString:@"MAINTAIN"]){
+        if([hostVO.state isEqualToString:@"DISCONNECT"]){
             self.statusLabel.text = @"未知";
         }else{
             self.statusLabel.text = [self.vmVO state_text];
@@ -110,7 +110,7 @@
         hostVO.hostId = self.vmVO.ownerHostId;
         [hostVO getHostVOAsync:^(id object, NSError *error) {
             HostVO *hostVO = (HostVO*) object;
-            if([hostVO.state isEqualToString:@"MAINTAIN"]){
+            if([hostVO.state isEqualToString:@"DISCONNECT"]){
                 self.btnStart.enabled = false;
                 self.btnStop.enabled = false;
                 self.btnRestart.enabled = false;
@@ -128,8 +128,8 @@
                 self.btnRestart.enabled = false;
             }
             
-            if([hostVO.state isEqualToString:@"MAINTAIN"]){
-                //虚拟机所在物理机处于维护状态时，不支持虚拟机迁移
+            if([hostVO.state isEqualToString:@"DISCONNECT"]){
+                //虚拟机所在物理机处于故障状态时，不支持虚拟机迁移
                 self.btnMigrate.enabled = false;
             }
             else if([self.vmVO.poolName isEqualToString:@""]){
