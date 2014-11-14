@@ -42,8 +42,8 @@
 - (NSString*)state_text;
 - (UIColor *)state_color;
 - (NSString *)memoryType_text;
-- (BOOL) isDynamicCpu_img;
-- (BOOL) isDynamicMemWce_img;
+- (NSString*) isDynamicCpu_text;
+- (NSString*) isDynamicMemWce_text;
 - (float)storage_value;
 - (NSString*)storage_unit;
 
