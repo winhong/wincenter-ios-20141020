@@ -503,27 +503,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－橘黄色" translatesAutoresizingMaskIntoConstraints="NO" id="l93-zD-Bn7">
-                                        <rect key="frame" x="881" y="363" width="17" height="17"/>
-                                    </imageView>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="勾－橘黄色" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-uA-ZYi">
-                                        <rect key="frame" x="882" y="366" width="17" height="12"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="路径" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkK-8V-RPn">
                                         <rect key="frame" x="422" y="269" width="40" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="勾－橘黄色" translatesAutoresizingMaskIntoConstraints="NO" id="0d3-OL-uhe">
-                                        <rect key="frame" x="883" y="415" width="17" height="12"/>
-                                    </imageView>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－橘黄色" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-dT-5mm">
-                                        <rect key="frame" x="882" y="413" width="17" height="17"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-IE-Myf">
                                         <rect key="frame" x="424" y="293" width="504" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="是" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-GQ-re8">
+                                        <rect key="frame" x="881" y="361" width="17" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="是" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-j0-fFb">
+                                        <rect key="frame" x="883" y="412" width="17" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -542,10 +542,8 @@
                         <outlet property="allocatedStorageGroup" destination="qpd-uP-Gfa" id="Kkb-VH-eoS"/>
                         <outlet property="allocatedStorageLabel" destination="iB8-az-6O1" id="8QS-hQ-457"/>
                         <outlet property="hostNum" destination="74s-rR-8Ol" id="VlJ-g8-yaW"/>
-                        <outlet property="isDefaulted_img" destination="0d3-OL-uhe" id="vAU-G2-h2P"/>
-                        <outlet property="isShared_img" destination="l93-zD-Bn7" id="0df-oe-HtQ"/>
-                        <outlet property="noDefaulted_img" destination="i4G-dT-5mm" id="gEB-kj-5mP"/>
-                        <outlet property="noShared_img" destination="EK8-uA-ZYi" id="pbc-Q6-12v"/>
+                        <outlet property="isdefault" destination="NQu-j0-fFb" id="ZBr-8B-70X"/>
+                        <outlet property="isshared" destination="gZY-GQ-re8" id="6Hw-3Q-Vlb"/>
                         <outlet property="path" destination="1Hp-IE-Myf" id="ioh-Xn-ZKb"/>
                         <outlet property="scrollView" destination="Hix-A6-GSG" id="qhr-ow-P95"/>
                         <outlet property="totalStorage" destination="Koe-4U-Pch" id="dL9-N6-LQp"/>
@@ -787,8 +785,6 @@
         <image name="icon-warning" width="32" height="32"/>
         <image name="icon-存储-black" width="10" height="11"/>
         <image name="share" width="29" height="13"/>
-        <image name="勾－橘黄色" width="17" height="12"/>
-        <image name="叉－橘黄色" width="17" height="17"/>
         <image name="存储-摘要-图标" width="95" height="95"/>
         <image name="存储-摘要-容量数" width="334" height="89"/>
         <image name="存储-摘要-挂载物理机数" width="334" height="89"/>

@@ -185,18 +185,18 @@
         completeBlock([[StorageVolumnListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
 }
--(BOOL)shared_img{
+-(NSString *)is_shared{
     if (![self.shared isEqualToString:@"true"]) {
-        return YES;
+        return @"是";
     }else{
-        return NO;
+        return @"否";
     }
 }
--(BOOL)defaulted_img{
+-(NSString *)is_defaulted{
     if (![self.defaulted isEqualToString:@"true"]) {
-        return YES;
+        return @"是";
     }else{
-        return NO;
+        return @"否";
     }
 }
 -(NSString *)type_text{
