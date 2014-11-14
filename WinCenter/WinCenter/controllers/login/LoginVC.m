@@ -25,7 +25,8 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     self.userName.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"USER_NAME"];
-    //self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
+    self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"PASSWORD"];
+    [self loginAction:nil];
 }
 - (void)viewDidLoad
 {
@@ -216,7 +217,9 @@
     }else{
         //UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         //[alert show];
-        [self.viewShaker shake];
+        if(sender!=nil){
+            [self.viewShaker shake];
+        }
     }
 }
 
