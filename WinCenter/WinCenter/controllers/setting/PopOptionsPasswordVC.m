@@ -110,6 +110,42 @@
     }
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{  //string就是此时输入的那个字符 textField就是此时正在输入的那个输入框 返回YES就是可以改变输入框的值 NO相反
+    if ([string isEqualToString:@"\n"])  //按会车可以改变
+    {
+        return YES;
+    }
+    
+    NSString * toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string]; //得到输入框的内容
+    
+    if (self.passwordNew == textField)  //判断是否时我们想要限定的那个输入框
+    {
+        if ([toBeString length] > 20) { //如果输入框内容大于20则弹出警告
+            self.passwordNew.text = [toBeString substringToIndex:20];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码长度最大只能是20个字符！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+            return NO;
+        }
+    }
+    return YES;
+}
+
+//-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+//    // Check for non-numeric characters
+//    NSUInteger lengthOfString = string.length;
+//    for (NSInteger loopIndex = 0; loopIndex < lengthOfString; loopIndex++) {//只允许数字输入
+//        unichar character = [string characterAtIndex:loopIndex];
+//        if (character < 48) return NO; // 48 unichar for 0
+//        if (character > 57) return NO; // 57 unichar for 9
+//    }
+//    // Check for total length
+//    NSUInteger proposedNewLength = textField.text.length - range.length + string.length;
+//    if (proposedNewLength > 3) return NO;//限制长度
+//    return YES;
+//}
+
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
