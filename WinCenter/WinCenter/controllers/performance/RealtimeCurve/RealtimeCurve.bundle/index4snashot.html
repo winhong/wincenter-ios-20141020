@@ -39,6 +39,10 @@
 			<td>创建日期：</td>
 			<td class="tdvalue" id="vm_time">无</td>
 		</tr>
+        <tr>
+            <td>描述：</td>
+            <td class="tdvalue" id="vm_desc">无</td>
+        </tr>
 	</table>
 </div>
 </body>
@@ -110,7 +114,7 @@ function nodeClick(v){
 			vmType = "磁盘快照";
 			break;
 		case "MEMORY":
-			vmType = "内存快照";
+			vmType = "磁盘和内存快照";
 			break;
 		default:
 			vmType = "虚拟机快照";
@@ -119,6 +123,7 @@ function nodeClick(v){
 	$("#vm_name").html(v.name);
 	$("#vm_type").html(vmType);
 	$("#vm_time").html(time);
+    $("#vm_desc").html(v.description);
 }
 function getVmInfo(){
 		$("#canvas").html("");
