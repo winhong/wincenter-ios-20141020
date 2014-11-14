@@ -359,18 +359,18 @@
     }];
 }
 
-- (BOOL) isDynamicCpu_img{
+- (NSString*) isDynamicCpu_text{
     if ([self.isDynamicCpu isEqualToString:@"true"]) {
-        return YES;
+        return @"是";
     }else{
-        return NO;
+        return @"否";
     }
 }
-- (BOOL) isDynamicMemWce_img{
+- (NSString*) isDynamicMemWce_text{
     if ([self.isDynamicMem isEqualToString:@"true"]) {
-        return YES;
+        return @"是";
     }else{
-        return NO;
+        return @"否";
     }
 }
 

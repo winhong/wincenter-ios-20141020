@@ -22,10 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *osType_image;
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UILabel *vmIp;
-@property (weak, nonatomic) IBOutlet UIImageView *noDynamicCpu_img;
-@property (weak, nonatomic) IBOutlet UIImageView *isDynamicCpu_img;
-@property (weak, nonatomic) IBOutlet UIImageView *isDynamicMemWce_img;
-@property (weak, nonatomic) IBOutlet UIImageView *noDynamicMemWce_img;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *cpuPNChartArea;
@@ -43,6 +39,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *custom_memory2;
 @property (weak, nonatomic) IBOutlet UILabel *custom_memory3;
 @property (weak, nonatomic) IBOutlet UILabel *custom_memory4;
+@property (weak, nonatomic) IBOutlet UILabel *isDynamicCpu_text;
+@property (weak, nonatomic) IBOutlet UILabel *isDynamicMemWce_text;
 
 @end
 
@@ -299,18 +297,9 @@
     
     //self.snopshotNum.text
     self.osType_image.image = [UIImage imageNamed:[self.vmVO osType_imageName_big]];
-    if(self.isDynamicCpu_img){
-        self.isDynamicCpu_img.hidden = ![self.vmVO isDynamicCpu_img];
-    }
-    if(self.noDynamicCpu_img){
-        self.noDynamicCpu_img.hidden = [self.vmVO isDynamicCpu_img];
-    }
-    if(self.isDynamicMemWce_img){
-        self.isDynamicMemWce_img.hidden = ![self.vmVO isDynamicMemWce_img];
-    }
-    if(self.noDynamicMemWce_img){
-        self.noDynamicMemWce_img.hidden = [self.vmVO isDynamicMemWce_img];
-    }
+    
+    self.isDynamicCpu_text.text = [self.vmVO isDynamicCpu_text];
+    self.isDynamicMemWce_text.text = [self.vmVO isDynamicMemWce_text];
 }
 
 @end

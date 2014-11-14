@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rda-j3-bYj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -753,13 +753,6 @@
                                                     <rect key="frame" x="13" y="49" width="119" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="jzE-C0-aWZ">
-                                                <rect key="frame" x="483" y="164" width="17" height="12"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="256" y="164" width="17" height="12"/>
-                                                </variation>
-                                            </imageView>
                                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快照" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHS-s0-MMx">
                                                 <rect key="frame" x="20" y="211" width="34" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -769,13 +762,6 @@
                                                     <rect key="frame" x="13" y="211" width="34" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="勾" translatesAutoresizingMaskIntoConstraints="NO" id="Aze-AD-5qN">
-                                                <rect key="frame" x="483" y="107" width="17" height="12"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="256" y="107" width="17" height="12"/>
-                                                </variation>
-                                            </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="允许开机调整VCPU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyr-Ea-935">
                                                 <rect key="frame" x="20" y="103" width="149" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -809,18 +795,16 @@
                                                     <rect key="frame" x="140" y="208" width="17" height="21"/>
                                                 </variation>
                                             </label>
-                                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="P8o-dl-TKt">
-                                                <rect key="frame" x="481" y="105" width="17" height="17"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="254" y="105" width="17" height="17"/>
-                                                </variation>
-                                            </imageView>
-                                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="叉－蓝色" translatesAutoresizingMaskIntoConstraints="NO" id="ZA9-Tv-0iP">
-                                                <rect key="frame" x="483" y="161" width="17" height="17"/>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="256" y="161" width="17" height="17"/>
-                                                </variation>
-                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="允许" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-jR-woQ">
+                                                <rect key="frame" x="396" y="103" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="允许" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-VR-cwk">
+                                                <rect key="frame" x="396" y="159" width="79" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -1108,15 +1092,13 @@
                         <outlet property="custom_memory2" destination="m5q-0m-tcH" id="4MF-Ms-i5S"/>
                         <outlet property="custom_memory3" destination="91U-yf-VxL" id="8ts-7g-q2e"/>
                         <outlet property="custom_memory4" destination="XTV-F3-pbO" id="msl-u7-aQM"/>
-                        <outlet property="isDynamicCpu_img" destination="Aze-AD-5qN" id="GO9-0Z-p9F"/>
-                        <outlet property="isDynamicMemWce_img" destination="jzE-C0-aWZ" id="660-92-yer"/>
+                        <outlet property="isDynamicCpu_text" destination="q1f-jR-woQ" id="vZh-uQ-rfa"/>
+                        <outlet property="isDynamicMemWce_text" destination="DWt-VR-cwk" id="eP1-8f-wAo"/>
                         <outlet property="isInstalledTool" destination="gBz-Z2-Qht" id="hPe-Dx-qEY"/>
                         <outlet property="memory" destination="Lek-C3-tmE" id="1ta-Mv-9JC"/>
                         <outlet property="memoryImage" destination="VAg-te-5on" id="O8y-L0-ydU"/>
                         <outlet property="memoryType" destination="HNt-XV-nTc" id="8yj-kS-YAd"/>
                         <outlet property="memoryTypeTitle" destination="Kqn-Q4-lhS" id="YkW-Ia-fRu"/>
-                        <outlet property="noDynamicCpu_img" destination="P8o-dl-TKt" id="6hV-FS-BRR"/>
-                        <outlet property="noDynamicMemWce_img" destination="ZA9-Tv-0iP" id="pdV-OX-JHG"/>
                         <outlet property="osType" destination="OUi-lo-yL1" id="xej-E7-I2U"/>
                         <outlet property="osType_image" destination="Z4A-C3-IAJ" id="zc9-5b-dUA"/>
                         <outlet property="reservationView" destination="uuH-Ts-CTB" id="hHo-kI-v28"/>
@@ -1805,8 +1787,6 @@
         <image name="os-others-big" width="110" height="110"/>
         <image name="share" width="29" height="13"/>
         <image name="内存-black" width="15" height="15"/>
-        <image name="勾" width="17" height="12"/>
-        <image name="叉－蓝色" width="17" height="17"/>
         <image name="摘要图标-memory" width="37" height="37"/>
         <image name="摘要图标-memorytype" width="37" height="37"/>
         <image name="摘要图标-vcpu" width="37" height="37"/>
