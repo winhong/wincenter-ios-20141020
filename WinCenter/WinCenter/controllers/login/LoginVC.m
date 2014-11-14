@@ -217,14 +217,16 @@
     }else{
         //UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"登录提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         //[alert show];
-        [self.viewShaker shake];
+        if(sender!=nil){
+            [self.viewShaker shake];
+        }
     }
 }
 
 - (void) toLogin{
     
 //    self.userName.text = @"";
-//    self.password.text = @"";
+    self.password.text = @"";
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UIViewController *vc = [[UIStoryboard storyboardWithName:@"Datacenter" bundle:nil] instantiateInitialViewController];
