@@ -186,14 +186,14 @@
     }];
 }
 -(NSString *)is_shared{
-    if (![self.shared isEqualToString:@"true"]) {
+    if ([self.shared isEqualToString:@"true"]) {
         return @"是";
     }else{
         return @"否";
     }
 }
 -(NSString *)is_defaulted{
-    if (![self.defaulted isEqualToString:@"true"]) {
+    if ([self.defaulted isEqualToString:@"true"]) {
         return @"是";
     }else{
         return @"否";
