@@ -41,8 +41,8 @@
 -(NSString *)state_text;
 - (UIColor *)state_color;
 -(NSString *)shared_text;
--(BOOL)shared_img;
--(BOOL)defaulted_img;
+-(NSString*)is_shared;
+-(NSString*)is_defaulted;
 
 -(float)usedRatio;
 
