@@ -40,7 +40,7 @@
     self.email.text = self.licenseVO.wci.email;
     self.phone.text = self.licenseVO.wci.phone;
     self.IcType.text = [NSString stringWithFormat:@"%@", [self.licenseVO.wci IcType_text] ];
-    self.useedInfo.text = [NSString stringWithFormat:@"%d/%d", self.licenseVO.useedCount,self.licenseVO.wci.IcNum];
+    self.useedInfo.text = [NSString stringWithFormat:@"%d个/%d个", self.licenseVO.useedCount,self.licenseVO.wci.IcNum];
     if ([self.licenseVO.wci.IcType isEqualToString:@"0"]) {
         self.remianDays.text = [NSString stringWithFormat:@"%d", self.licenseVO.remianDays];
     }
