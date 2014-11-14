@@ -269,6 +269,11 @@
 //    @"reservation":@"预留",
 //    @"custom":@"自定义调整"
 
+    self.usuallyView.hidden = YES;
+    self.usuallyView.hidden = YES;
+    self.reservationView.hidden = YES;
+    self.customView.hidden = YES;
+    
     if ([self.vmVO.memoryType isEqualToString:@"shared"]) {
         self.usuallyView.hidden = NO;
         self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
