@@ -78,6 +78,8 @@
     else if ([self.passwordNew.text isEqualToString:@""])
     {
         msg = @"请输入新密码！";
+    }else if([self.passwordNew.text isEqualToString:self.passwordOld.text]){
+        msg = @"新密码不能与原密码相同！";
     }else if([self matchPassword:self.passwordNew.text]){
         msg = @"密码不能包含特殊字符！";
     }else if(self.passwordNew.text.length < 6){
