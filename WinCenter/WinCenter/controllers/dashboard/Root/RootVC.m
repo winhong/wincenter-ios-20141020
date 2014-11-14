@@ -17,7 +17,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 
 - (void)awakeFromNib
 {
-    self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DatacenterDetailInfoVCNav"];
+    self.contentViewController = [[UIViewController alloc] init];
     self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
 }
 
@@ -57,7 +57,15 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 //    [self showIntroWithCustomViewFromNib];
 //    [self showIntroWithSeparatePagesInitAndPageCallback];
 //    [self showCustomIntro];
-    
+    [DatacenterVO getDatacenterListAsync:^(id object, NSError *error) {
+        if(((DatacenterListResult*)object).dataCenters.count>0){
+            [RemoteObject setCurrentDatacenterVO:[((DatacenterListResult*)object).dataCenters firstObject]];
+            [self showTab:0];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"友情提示" message:@"尚没有配置任何数据中心，请联系系统管理员！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+    }];
 }
 
 
