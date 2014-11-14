@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--WinCenter-->
@@ -91,7 +91,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Df6-VM-Ijw">
                                                     <rect key="frame" x="15" y="7" width="290" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                                     <connections>
                                                         <action selector="exitPassword:" destination="4L9-cv-sgF" eventType="editingDidEndOnExit" id="D7G-tf-Vg0"/>
                                                     </connections>
@@ -254,7 +254,7 @@
                                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" secureTextEntry="YES"/>
                                                             <connections>
                                                                 <action selector="exitPassword:" destination="qQb-5d-hfB" eventType="editingDidEndOnExit" id="qvQ-8l-P6f"/>
                                                             </connections>

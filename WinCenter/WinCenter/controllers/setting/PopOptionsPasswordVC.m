@@ -40,7 +40,7 @@
     }
 }
 - (IBAction)exitPasswordConfirm:(id)sender {
-    if(((UITextField*)sender).returnKeyType==UIReturnKeyDone){
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyGo){
         if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
             [self.passwordRepeat resignFirstResponder];
         }else{

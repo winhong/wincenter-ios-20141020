@@ -810,7 +810,7 @@ WinServer是CNware自有的虚拟化技术，为云计算数据中心实现底�
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="重复新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHa-jr-5yH">
                                                     <rect key="frame" x="20" y="7" width="560" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                                     <connections>
                                                         <action selector="exitPasswordConfirm:" destination="rxn-hY-iat" eventType="editingDidEndOnExit" id="klt-wd-eAe"/>
                                                     </connections>

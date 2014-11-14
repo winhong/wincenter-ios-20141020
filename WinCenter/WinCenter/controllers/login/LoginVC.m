@@ -134,7 +134,7 @@
     }
 }
 - (IBAction)exitPassword:(id)sender {
-    if(((UITextField*)sender).returnKeyType==UIReturnKeyDone){
+    if(((UITextField*)sender).returnKeyType==UIReturnKeyGo){
         [self loginAction:nil];
     }else{
         [self.password resignFirstResponder];
