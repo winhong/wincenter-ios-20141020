@@ -53,10 +53,10 @@
 
 -(void)reloadData{
     [self.vmVO vmGetMigrateTargets:^(id object, NSError *error) {
-        for(VmMigrateTargetVO *targetVO in object){
+        for(VmMigrateTargetVO *targetVO in ((VmMigrateTargetsVO*)object).targets){
             for(VmMigrateTargetHostVO *hostVO in targetVO.hosts){
                 if(hostVO.targetId!=self.vmVO.ownerHostId && hostVO.isFit){
-                    [self.hosts addObject:hostVO.targetName];
+                    [self.hosts addObject:hostVO];
                 }
             }
         }
@@ -94,7 +94,7 @@
     
     if(self.hosts.count==0) return cell;
     
-    cell.textLabel.text = self.hosts[indexPath.row];
+    cell.textLabel.text = ((VmMigrateTargetHostVO*)self.hosts[indexPath.row]).targetName;
     
     return cell;
 }
