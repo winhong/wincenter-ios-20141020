@@ -172,7 +172,11 @@
     self.circleChart = [[PNCircleChart alloc] initWithFrame:self.cpuChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO cpuRatio]] andClockwise:YES andShadow:YES];
     self.circleChart.backgroundColor = [UIColor clearColor];
     self.circleChart.strokeColor = [UIColor clearColor];
-    self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+    if (self.statVO.cpuTotal == 0) {
+        self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        self.circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     self.circleChart.circle.lineCap = kCALineCapSquare;
     self.circleChart.lineWidth = @7.0f;
     [self.circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
@@ -185,7 +189,11 @@
     self.circleChart2 = [[PNCircleChart alloc] initWithFrame:self.memoryChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO memoryRatio]] andClockwise:YES andShadow:YES];
     self.circleChart2.backgroundColor = [UIColor clearColor];
     self.circleChart2.strokeColor = [UIColor clearColor];
-    self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+    if (self.statVO.totalMem == 0) {
+        self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        self.circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     self.circleChart2.circle.lineCap = kCALineCapSquare;
     self.circleChart2.lineWidth = @7.0f;
     [self.circleChart2 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];
@@ -198,7 +206,11 @@
     self.circleChart3 = [[PNCircleChart alloc] initWithFrame:self.storageChartGroup.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:[self.statVO storageRatio]] andClockwise:YES andShadow:YES];
     self.circleChart3.backgroundColor = [UIColor clearColor];
     self.circleChart3.strokeColor = [UIColor clearColor];
-    self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;
+    if (self.statVO.totalStorage == 0) {
+        self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        self.circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     self.circleChart3.circle.lineCap = kCALineCapSquare;
     self.circleChart3.lineWidth = @7.0f;
     [self.circleChart3 setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];

@@ -174,7 +174,11 @@
     }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
-    circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    if (self.datacenterStatWinserver.totalCpu == 0) {
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     circleChart.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart.lineWidth = @11.0f;//线宽度
     [circleChart setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
@@ -193,7 +197,11 @@
     }
     circleChart2.backgroundColor = [UIColor clearColor];
     circleChart2.strokeColor = [UIColor clearColor];
-    circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    if (self.datacenterStatWinserver.totalMemory == 0) {
+        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart2.lineWidth = @11.0f;//线宽度
     [circleChart2 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色
@@ -211,7 +219,11 @@
     }
     circleChart3.backgroundColor = [UIColor clearColor];
     circleChart3.strokeColor = [UIColor clearColor];
-    circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    if (self.datacenterStatWinserver.totalStorage == 0) {
+        circleChart3.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        circleChart3.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     circleChart3.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart3.lineWidth = @11.0f;//线宽度
     [circleChart3 setStrokeColor:[UIColor colorWithRed:88.0/255 green:206.0/255 blue:96.0/255 alpha:1]];//已使用填充颜色

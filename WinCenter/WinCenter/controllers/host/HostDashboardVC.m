@@ -189,29 +189,44 @@
     }
     circleChart.backgroundColor = [UIColor clearColor];
     circleChart.strokeColor = [UIColor clearColor];
-    circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    if ((self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber) == 0) {
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
+    }else{
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
+    }
     circleChart.circle.lineCap = kCALineCapSquare;//直角填充
     circleChart.lineWidth = @11.0f;//线宽度
     [circleChart setStrokeColor:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1]];//已使用填充颜色
     [circleChart strokeChart];
     [header.hostTypeChart addSubview:circleChart];
     
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
-                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
-                       [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.DISCONNECT color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
-                       ];
-    
-    
-    if (self.hostStatWinserver.total > 0) {
-        for(UIView *subView in header.hostStatusChart.subviews){
-            [subView removeFromSuperview];
-        }
+    if ((self.datacenterStatWinserver.hostNubmer + self.datacenterStatWinserver.dissociateHostNumber) == 0) {
+        NSArray *items = @[[PNPieChartDataItem dataItemWithValue:5 color:[UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1] description:@""]
+                  ];
         PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
         pieChart.descriptionTextColor = [UIColor whiteColor];
         pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
         [pieChart strokeChart];
         [header.hostStatusChart addSubview:pieChart];
+    }else{
+       NSArray *items = @[[PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.other color:[UIColor colorWithRed:71.0/255 green:145.0/255 blue:210.0/255 alpha:1] description:@""],
+                           [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.OK color:[UIColor colorWithRed:91.0/255 green:213.0/255 blue:68.0/255 alpha:1] description:@""],
+                           [PNPieChartDataItem dataItemWithValue:self.hostStatWinserver.DISCONNECT color:[UIColor colorWithRed:255.0/255 green:216.0/255 blue:0.0/255 alpha:1] description:@""],
+                           ];
+        if (self.hostStatWinserver.total > 0) {
+            for(UIView *subView in header.hostStatusChart.subviews){
+                [subView removeFromSuperview];
+            }
+            PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.hostStatusChart.bounds items:items];
+            pieChart.descriptionTextColor = [UIColor whiteColor];
+            pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+            [pieChart strokeChart];
+            [header.hostStatusChart addSubview:pieChart];
+        }
     }
+    
+    
+    
     
 //    PNCircleChart * circleChart2 = [[PNCircleChart alloc] initWithFrame:header.hostStatusChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:50] andClockwise:YES andShadow:YES];
 //    circleChart2.backgroundColor = [UIColor clearColor];

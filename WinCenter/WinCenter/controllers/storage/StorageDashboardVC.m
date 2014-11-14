@@ -167,16 +167,16 @@
     PNCircleChart * circleChart;
     if ((self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field) == 0) {
         circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
     }else{
         circleChart = [[PNCircleChart alloc] initWithFrame:header.storageShareChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.total.false_field*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
     }
     
         circleChart.backgroundColor = [UIColor clearColor];
         circleChart.strokeColor = [UIColor clearColor];
-        circleChart.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
         circleChart.circle.lineCap = kCALineCapSquare;//直角填充
         circleChart.lineWidth = @11.0f;//线宽度
-        [circleChart setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
         [circleChart strokeChart];
         [header.storageShareChart addSubview:circleChart];
     
@@ -187,12 +187,13 @@
     PNCircleChart * circleChart2;
     if ((self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field) == 0) {
         circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:0 andClockwise:YES andShadow:YES];
+        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1].CGColor;
     }else{
         circleChart2 = [[PNCircleChart alloc] initWithFrame:header.storageUseChart.bounds andTotal:@100 andCurrent:[NSNumber numberWithFloat:self.StorageSubVOWinserver.capacity.usedStorage*100/(self.StorageSubVOWinserver.total.true_field + self.StorageSubVOWinserver.total.false_field)] andClockwise:YES andShadow:YES];
+        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
     }
         circleChart2.backgroundColor = [UIColor clearColor];
         circleChart2.strokeColor = [UIColor clearColor];
-        circleChart2.circleBG.strokeColor = [UIColor colorWithRed:255.0/255 green:216.0/255 blue:0/255 alpha:1].CGColor;//未使用填充颜色
         circleChart2.circle.lineCap = kCALineCapSquare;//直角填充
         circleChart2.lineWidth = @11.0f;//线宽度
         [circleChart2 setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色

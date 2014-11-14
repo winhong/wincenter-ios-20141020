@@ -185,6 +185,16 @@
     pieChart2.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
     [pieChart2 strokeChart];
     [header.vmOsTypeChart addSubview:pieChart2];
+    }else{
+        
+        NSArray *items = @[[PNPieChartDataItem dataItemWithValue:5 color:[UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1] description:@""]
+                           ];
+        PNPieChart *pieChart2 = [[PNPieChart alloc] initWithFrame:header.vmOsTypeChart.bounds items:items];
+        pieChart2.descriptionTextColor = [UIColor whiteColor];
+        pieChart2.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+        [pieChart2 strokeChart];
+        [header.vmOsTypeChart addSubview:pieChart2];
+
     }
     
     if([self.vmSubVO.state total]>0){
@@ -200,6 +210,15 @@
     pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
     [pieChart strokeChart];
     [header.vmStatusChart addSubview:pieChart];
+    }else{
+    
+        NSArray *items = @[[PNPieChartDataItem dataItemWithValue:5 color:[UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1] description:@""]
+                           ];
+        PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:header.vmStatusChart.bounds items:items];
+        pieChart.descriptionTextColor = [UIColor whiteColor];
+        pieChart.descriptionTextFont  = [UIFont fontWithName:@"" size:14.0];
+        [pieChart strokeChart];
+        [header.vmStatusChart addSubview:pieChart];
     }
     
     
