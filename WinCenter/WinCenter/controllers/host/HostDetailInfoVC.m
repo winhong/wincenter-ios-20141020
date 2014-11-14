@@ -103,6 +103,7 @@
             self.activityVm = object;
             [self.hostVO getHostNetworkListAllAsync:^(id object, NSError *error) {
                 self.hostNetworkList = object;
+                self.network_count = 0;
                 for (HostNetworkVO *hostNetworkVO in self.hostNetworkList.networks) {
                     if ([hostNetworkVO.type isEqualToString:@"EXTERNAL"] || [hostNetworkVO.type isEqualToString:@"INTERNAL"]) {
                         self.network_count += 1;
