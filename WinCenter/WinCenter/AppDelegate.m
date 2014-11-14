@@ -57,8 +57,8 @@
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"SERVER_ROOT"] == nil){
         [[NSUserDefaults standardUserDefaults] setValue:@"https://192.168.213.52:8090" forKey:@"SERVER_ROOT"];
     }
-    [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"USER_NAME"];
-    [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"PASSWORD"];
+    //[[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"USER_NAME"];
+    //[[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"PASSWORD"];
     
 //    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 //        SUNButtonBoard *board = [SUNButtonBoard defaultButtonBoard];

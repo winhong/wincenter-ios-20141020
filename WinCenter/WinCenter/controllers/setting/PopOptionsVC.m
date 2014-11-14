@@ -114,6 +114,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
+        [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"PASSWORD"];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
