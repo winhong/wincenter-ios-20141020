@@ -110,7 +110,7 @@
                     }
                 }
                 [self refreshMainInfo];
-                if([self.hostVO.state isEqualToString:@"OK"] || [self.hostVO.state isEqualToString:@"MAINTAIN"]){
+                if(![self.hostVO.state isEqualToString:@"DISCONNECT"]){
                     [self.hostVO getHostStatVOAsync:^(id object, NSError *error) {
                             self.statVO = object;
                             [self refreshStatInfo];
