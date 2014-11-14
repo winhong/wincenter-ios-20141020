@@ -24,7 +24,11 @@
 }
 
 -(float)cpuRatio{
-    return (self.totalCpu-self.availCpu)/self.totalCpu*100;
+    if(self.totalCpu==0){
+        return 0;
+    }else{
+        return (self.totalCpu-self.availCpu)/self.totalCpu*100;
+    }
 }
 
 -(UIColor *)cpuRatioColor{
@@ -40,7 +44,11 @@
 
 
 -(float)memoryRatio{
-    return (self.totalMemory-self.availMemory)/self.totalMemory*100;
+    if(self.totalMemory==0){
+        return 0;
+    }else{
+        return (self.totalMemory-self.availMemory)/self.totalMemory*100;
+    }
 }
 
 -(UIColor *)memoryRatioColor{
@@ -55,7 +63,11 @@
 }
 
 -(float)storageRatio{
-    return (self.totalStorage-self.availStorage)/self.totalStorage*100;
+    if(self.totalStorage==0){
+        return 0;
+    }else{
+        return (self.totalStorage-self.availStorage)/self.totalStorage*100;
+    }
 }
 
 -(UIColor *)storageRatioColor{

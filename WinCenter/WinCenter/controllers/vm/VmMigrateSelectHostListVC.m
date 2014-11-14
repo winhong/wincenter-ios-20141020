@@ -11,7 +11,6 @@
 #import "VmMigrateVC.h"
 
 @interface VmMigrateSelectHostListVC ()
-@property VmMigrateSelectHostListCell *prevCell;
 @property NSMutableArray *hosts;
 @property int selectedHostId;
 @property NSString *selectedHostName;
@@ -53,10 +52,8 @@
 }
 
 -(void)reloadData{
-
     [self.vmVO vmGetMigrateTargets:^(id object, NSError *error) {
-        self.vmMigrateTargets = object;
-        for(VmMigrateTargetVO *targetVO in self.vmMigrateTargets.targets){
+        for(VmMigrateTargetVO *targetVO in object){
             for(VmMigrateTargetHostVO *hostVO in targetVO.hosts){
                 if(hostVO.targetId!=self.vmVO.ownerHostId && hostVO.isFit){
                     [self.hosts addObject:hostVO.targetName];
@@ -87,17 +84,8 @@
 {
     return self.hosts.count;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    VmMigrateSelectHostListCell *selectedCell = (VmMigrateSelectHostListCell*)[tableView cellForRowAtIndexPath:indexPath];
-    
-    self.prevCell.accessoryType = UITableViewCellAccessoryNone;
-    selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
-    self.prevCell = selectedCell;
-    VmMigrateTargetVO *targets = self.vmMigrateTargets.targets[0];
-    VmMigrateTargetHostVO *host= targets.hosts[indexPath.row];
-    
-    [self.delegate didSelecteded:host];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{    
+    [self.delegate didSelecteded:self.hosts[indexPath.row]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
