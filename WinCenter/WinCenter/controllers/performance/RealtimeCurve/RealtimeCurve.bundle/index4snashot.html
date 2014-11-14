@@ -17,6 +17,10 @@
         .tdvalue{
         	color:#999;
         }
+    .descinfo{
+        width:220px;
+        word-break:break-all;
+    }
     </style>
 </head>
 
@@ -40,8 +44,8 @@
 			<td class="tdvalue" id="vm_time">无</td>
 		</tr>
         <tr>
-            <td>描述：</td>
-            <td class="tdvalue" id="vm_desc">无</td>
+            <td style="position:relative;"><span style="position:absolute;top:2px;">描述：<span></td>
+            <td class="tdvalue" id="vm_desc"><div class="descinfo">无</div></td>
         </tr>
 	</table>
 </div>
@@ -123,7 +127,7 @@ function nodeClick(v){
 	$("#vm_name").html(v.name);
 	$("#vm_type").html(vmType);
 	$("#vm_time").html(time);
-    $("#vm_desc").html(v.description);
+    $("#vm_desc .descinfo").html(v.description);
 }
 function getVmInfo(){
 		$("#canvas").html("");
