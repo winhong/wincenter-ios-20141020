@@ -175,6 +175,7 @@
     
         circleChart.backgroundColor = [UIColor clearColor];
         circleChart.strokeColor = [UIColor clearColor];
+        [circleChart setStrokeColor:[UIColor colorWithRed:248.0/255 green:123.0/255 blue:56.0/255 alpha:1]];//已使用填充颜色
         circleChart.circle.lineCap = kCALineCapSquare;//直角填充
         circleChart.lineWidth = @11.0f;//线宽度
         [circleChart strokeChart];
