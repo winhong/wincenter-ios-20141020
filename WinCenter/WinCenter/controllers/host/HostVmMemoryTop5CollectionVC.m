@@ -100,7 +100,7 @@ static NSString * const reuseIdentifier = @"Cell";
             break;
     }
     cell.name.text = [NSString stringWithFormat:@"%@",vm.name == nil ? @"" :  vm.name];
-    cell.percent.text = [NSString stringWithFormat:@"%.1f%%",self.hostVO.memory == 0 ? 0 : vm.memory*100/self.hostVO.memory ];
+    cell.percent.text = [NSString stringWithFormat:@"%.2f%%",self.hostVO.memory == 0 ? 0 : vm.memory*100/self.hostVO.memory ];
     cell.size.text = [NSString stringWithFormat:@"%.2fG",vm.memory/1024.0 ];
     
     return cell;
