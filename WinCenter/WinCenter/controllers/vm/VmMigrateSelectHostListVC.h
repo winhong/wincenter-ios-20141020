@@ -17,7 +17,6 @@
 @interface VmMigrateSelectHostListVC : UITableViewController
 
 @property VmVO *vmVO;
-@property VmMigrateTargetsVO *vmMigrateTargets;
 
 @property (weak, nonatomic) id <VmMigrateSelectHostListVCDelegate> delegate;
 
