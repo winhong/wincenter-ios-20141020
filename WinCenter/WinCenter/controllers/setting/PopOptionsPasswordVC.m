@@ -80,6 +80,8 @@
         msg = @"请输入新密码！";
     }else if([self matchPassword:self.passwordNew.text]){
         msg = @"密码不能包含特殊字符！";
+    }else if(self.passwordNew.text.length < 6){
+        msg = @"密码长度必须大于或等于6字符！";
     }else if (![self.passwordNew.text isEqualToString:self.passwordRepeat.text])
     {
         msg = @"重复新密码与新密码不一致！";
