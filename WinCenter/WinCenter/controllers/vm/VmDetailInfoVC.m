@@ -272,11 +272,11 @@
     if ([self.vmVO.memoryType isEqualToString:@"shared"]) {
         self.usuallyView.hidden = NO;
         self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
-        self.memoryTypeTitle.text = @"共享内存：";
+        self.memoryTypeTitle.text = @"共享内存";
     }else if ([self.vmVO.memoryType isEqualToString:@"privilege"]) {
         self.usuallyView.hidden = NO;
         self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
-        self.memoryTypeTitle.text = @"专享内存：";
+        self.memoryTypeTitle.text = @"专享内存";
     }else if ([self.vmVO.memoryType isEqualToString:@"reservation"]) {
         self.reservationView.hidden = NO;
         self.memoryImage.image = [UIImage imageNamed:@"虚拟机－摘要－专享内存-min"];
