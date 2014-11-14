@@ -139,7 +139,7 @@ NSTimer *hudTimer = nil;
                     // There are several ways to init, just look at the class header
                     NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
                                                                       title:@"请求超时"
-                                                                    message:@"网络连接失败或请求后台超时(20秒)，请检查网络状态或服务器地址是否正确！"
+                                                                    message:@"网络连接失败或请求后台超时(10秒)，请检查网络状态或服务器地址是否正确！"
                                                                    delegate:nil];
                     //[alert setTextAlignment:NSTextAlignmentCenter];
                     [alert show];
