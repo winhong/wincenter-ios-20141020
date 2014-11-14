@@ -94,7 +94,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=0&apiKey=pc.api.busDomain.getBusDom&params=firstResult%%3D0%%26maxResult%%3D12%%26dataCenterId%%3D%d", self.id]];
+        [simpleRequest setUrl:[NSString stringWithFormat:@"/restServlet?connectorId=0&apiKey=pc.api.busDomain.getBusDom&params=dataCenterId%%3D%d", self.id]];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completionBlock([[BusDomainsListResult alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
