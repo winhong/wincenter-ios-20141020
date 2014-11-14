@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *isASnapshot;
 @property (weak, nonatomic) IBOutlet UILabel *size;
 @property (weak, nonatomic) IBOutlet UILabel *belongsVM;
+@property (weak, nonatomic) IBOutlet UITextView *belongsVM_textView;
 @property (weak, nonatomic) IBOutlet UILabel *type;
 @property (weak, nonatomic) IBOutlet UIImageView *share_image;
 

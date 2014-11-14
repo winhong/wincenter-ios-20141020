@@ -78,6 +78,7 @@
     cell.size.text = [NSString stringWithFormat:@"%.2fGB", volumnVO.size];
     cell.share_image.hidden = [volumnVO.shared isEqualToString:@"false"];
     cell.belongsVM.text = [volumnVO vmNames_text];
+    cell.belongsVM_textView.text = [volumnVO vmNames_text];
     cell.type.text = [volumnVO type_text];
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
