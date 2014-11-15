@@ -111,12 +111,16 @@
     hostVO.hostId = vmVO.ownerHostId;
     [hostVO getHostVOAsync:^(id object, NSError *error) {
         HostVO *hostVO = (HostVO*) object;
-        if([hostVO.state isEqualToString:@"DISCONNECT"]){
-            cell.status.text = @"未知";
-            cell.status.text = [UIColor lightGrayColor];
-        }else{
-            cell.status.text = [vmVO state_text];
-            cell.status.textColor = [vmVO state_color];
+        if(cell){
+            if([hostVO.state isEqualToString:@"DISCONNECT"]){
+                cell.status.text = @"未知";
+                cell.status.text = [UIColor lightGrayColor];
+            }else{
+                if(vmVO){
+                    cell.status.text = [vmVO state_text];
+                    cell.status.textColor = [vmVO state_color];
+                }
+            }
         }
     }];
     
