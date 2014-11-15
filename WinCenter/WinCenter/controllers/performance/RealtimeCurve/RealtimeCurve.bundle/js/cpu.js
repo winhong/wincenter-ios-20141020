@@ -30,7 +30,7 @@ function drawLineCpu(data,cpuType){
 			if(data.cpuData[i].name!="CPU"){
 				lineNum = data.cpuData[i].value.length;
 				str +="{pointStart:"+data.start+",pointInterval:"+ data.step
-				+",name:'"+data.cpuData[i].name+"',marker:{symbol:'circle'},data:["+data.cpuData[i].value+"]}";
+				+",name:'"+data.cpuData[i].name.toUpperCase()+"',marker:{symbol:'circle'},data:["+data.cpuData[i].value+"]}";
 				if(type=="HOST"){
 					if(i<data.cpuData.length-1) str+=",";
 				}else{
