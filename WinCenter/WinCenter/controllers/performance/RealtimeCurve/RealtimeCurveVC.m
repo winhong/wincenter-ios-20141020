@@ -195,7 +195,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
              }
         }else{
             //[_bridge callHandler:@"testJavascriptHandler" data:@"无法获取性能数据！"];
-            self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
+            //self.parentViewController.parentViewController.navigationItem.rightBarButtonItem.enabled = true;
+            [_bridge callHandler:@"businessUser" data:@"业务管理员不能查看性能数据！"];
         }
         
     }];

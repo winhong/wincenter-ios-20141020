@@ -70,6 +70,14 @@
     $("#submitBtn").bind("touchstart",function(){
          sendTimeToIOS("开始查询");
     })
+    
+    bridge.registerHandler('businessUser', function(data, responseCallback) {
+         $("#chart").hide();
+         $("#tips").show().find("p").html("无性能数据！");
+                        
+    })
+                           
+                           
     var chartMap = new Map();
 	
     //刷新图标

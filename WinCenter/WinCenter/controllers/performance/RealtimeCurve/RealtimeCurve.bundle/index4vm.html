@@ -118,6 +118,11 @@
         bridge.registerHandler('webviewHideLayer', function(data, responseCallback) {
             $("#layer").hide();
         })
+                                   
+        bridge.registerHandler('businessUser', function(data, responseCallback) {
+               $("#chart").hide();
+               $("#tips").show().find("p").html("无性能数据！");
+        })
 
 	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
             if(typeof data != "string"){
