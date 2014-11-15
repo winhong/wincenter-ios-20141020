@@ -121,6 +121,8 @@
 
 	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
             if(typeof data != "string"){
+                $("#chart").show();
+                $("#tips").hide();
            		updateData(data);
             }else{
                 $("#chart").hide();
