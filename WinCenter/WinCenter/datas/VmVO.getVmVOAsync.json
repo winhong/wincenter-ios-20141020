@@ -64,7 +64,7 @@
     "vcpuUtilization": null,
     "vmId": 1,
     "templateId": null,
-    "name": "公测环境勿删勿动",
+    "name": "虚拟机-1",
     "description": "",
     "state": "OK",
     "hostName": null,

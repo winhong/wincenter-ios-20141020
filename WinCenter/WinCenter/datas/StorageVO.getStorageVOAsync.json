@@ -5,7 +5,7 @@
     "operateState": "OK",
     "relationHostUri": null,
     "storagePoolId": 1,
-    "storagePoolName": "DVD drives",
+    "storagePoolName": "存储池-1",
     "totalStorage": 20,
     "availStorage": 10,
     "allocatedStorage": 12,
