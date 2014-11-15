@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *activeMachineNum;
 @property (weak, nonatomic) IBOutlet UILabel *top5MemorySize;
 @property (weak, nonatomic) IBOutlet UILabel *top5UnUsedMemory;
+@property (weak, nonatomic) IBOutlet UIProgressView *memoryTopProgressbar;
 
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitCount;
 @property (weak, nonatomic) IBOutlet UILabel *cpuUnitUsedCount;
@@ -159,6 +160,7 @@
     self.memoryRatio.text = [NSString stringWithFormat:@"%.0f%%", (self.statVO.totalMem-self.statVO.freeMem)/self.statVO.totalMem*100];
     self.top5MemorySize.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.totalMem/1024.0];
     self.top5UnUsedMemory.text = [NSString stringWithFormat:@"%.2fGB", self.statVO.freeMem/1024.0];
+    self.memoryTopProgressbar.progress = (self.statVO.totalMem - self.statVO.freeMem)/self.statVO.totalMem;
     
     self.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO totalStorage_value],[self.statVO totalStorage_unit]];
     self.storageUsedSize.text = [NSString stringWithFormat:@"%.2f%@", [self.statVO usedStorage_value],[self.statVO usedStorage_unit]];

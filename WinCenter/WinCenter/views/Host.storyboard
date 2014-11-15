@@ -1350,7 +1350,7 @@
                                                     <rect key="frame" x="261" y="21" width="63" height="21"/>
                                                 </variation>
                                             </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-wE-cNl">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-wE-cNl">
                                                 <rect key="frame" x="20" y="48" width="389" height="2"/>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="8" y="48" width="300" height="2"/>
@@ -1386,6 +1386,7 @@
                         <outlet property="cpuUnitUsedCount" destination="JNa-Cs-ha8" id="QnF-VV-iNe"/>
                         <outlet property="memoryChartGroup" destination="M7r-8O-y3n" id="x4U-th-uMW"/>
                         <outlet property="memorySize" destination="oWD-s0-fCK" id="x64-cg-JDR"/>
+                        <outlet property="memoryTopProgressbar" destination="Cde-wE-cNl" id="bP9-oO-efx"/>
                         <outlet property="memoryUnusedSize" destination="4Hy-cu-4F0" id="MNu-eY-17x"/>
                         <outlet property="memoryUsedSize" destination="soJ-ea-rEp" id="Kwh-tO-gaa"/>
                         <outlet property="model" destination="Vry-Py-BGi" id="CZG-qd-OBy"/>
