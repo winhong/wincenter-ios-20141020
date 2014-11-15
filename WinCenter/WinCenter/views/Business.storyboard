@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="969" height="724"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBv-hy-79D">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1J-dA-lcT">
                                 <rect key="frame" x="0.0" y="0.0" width="969" height="44"/>
                                 <items>
@@ -44,7 +41,7 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoy-qF-pvq">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoy-qF-pvq">
                                 <rect key="frame" x="0.0" y="45" width="969" height="122"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-dQ-Rgm">
@@ -70,8 +67,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.72941176470000002" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBv-hy-79D">
+                                <rect key="frame" x="0.0" y="168" width="969" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LBv-hy-79D" firstAttribute="leading" secondItem="t1V-7H-79c" secondAttribute="leading" id="79h-wD-wLN"/>
+                            <constraint firstItem="LBv-hy-79D" firstAttribute="top" secondItem="zoy-qF-pvq" secondAttribute="bottom" constant="1" id="RzV-Xp-kpE"/>
+                            <constraint firstAttribute="trailing" secondItem="LBv-hy-79D" secondAttribute="trailing" id="jij-bx-ZTl"/>
+                            <constraint firstItem="5Kf-ER-oi0" firstAttribute="top" secondItem="LBv-hy-79D" secondAttribute="bottom" id="xRw-rD-Kp5"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
