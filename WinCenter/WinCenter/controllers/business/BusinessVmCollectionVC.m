@@ -80,7 +80,7 @@
     hostVO.hostId = vmvo.hostId;
     [hostVO getHostVOAsync:^(id object, NSError *error) {
         HostVO *hostVO = (HostVO*) object;
-        if(cell){
+        if(hostVO && cell){
             if([hostVO.state isEqualToString:@"DISCONNECT"]){
                 cell.state.text = @"未知";
                 cell.state.text = [UIColor lightGrayColor];
