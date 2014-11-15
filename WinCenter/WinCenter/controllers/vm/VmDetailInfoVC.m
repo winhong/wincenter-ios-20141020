@@ -244,7 +244,7 @@
         if(hostVO){
             if([hostVO.state isEqualToString:@"DISCONNECT"]){
                 self.status.text = @"未知";
-                self.status.text = [UIColor lightGrayColor];
+                self.status.textColor = [UIColor lightGrayColor];
             }else{
                 self.status.text = [self.vmVO state_text];
                 self.status.textColor = [self.vmVO state_color];

@@ -78,7 +78,7 @@
         if(hostVO && cell){
             if([hostVO.state isEqualToString:@"DISCONNECT"]){
                 cell.status.text = @"未知";
-                cell.status.text = [UIColor lightGrayColor];
+                cell.status.textColor = [UIColor lightGrayColor];
             }else{
                 if(vmVO){
                     cell.status.text = [vmVO state_text];

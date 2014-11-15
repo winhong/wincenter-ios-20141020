@@ -190,7 +190,7 @@
                 if(hostVO && cell){
                     if([hostVO.state isEqualToString:@"DISCONNECT"]){
                         cell.vmState.text = @"未知";
-                        cell.vmState.text = [UIColor lightGrayColor];
+                        cell.vmState.textColor = [UIColor lightGrayColor];
                     }else{
                         if(vm){
                             cell.vmState.text = [vm state_text];
