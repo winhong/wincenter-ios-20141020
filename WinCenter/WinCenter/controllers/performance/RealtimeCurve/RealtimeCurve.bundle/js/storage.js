@@ -92,7 +92,7 @@ function drawLineVbd(data){
             verticalAlign: 'top',
             borderWidth: 0,
             width:120,
-            height:120,
+            maxHeight:180,
 	        itemStyle: {
 	            fontSize: '11px',
 	            color: '#1E1E1E'

@@ -99,7 +99,7 @@ function drawLineNetWork(data,type){
             align: 'right',
             verticalAlign: 'right',
             width:120,
-            height:120,
+            maxHeight:180,
             borderWidth: 0,
 	        itemStyle: {
 	            fontSize: '11px',
