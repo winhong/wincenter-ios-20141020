@@ -362,11 +362,6 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
-                        <barButtonItem title="返回" id="6HX-uc-HcG">
-                            <connections>
-                                <action selector="backAction:" destination="SdQ-oO-Giu" id="vrE-y0-VyO"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4yb-zh-MX9"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="fNg-Wf-QuI"/>
                         <barButtonItem image="icon-warning" id="X5K-Ro-uDW">
