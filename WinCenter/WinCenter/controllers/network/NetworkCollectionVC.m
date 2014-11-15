@@ -308,12 +308,17 @@
             VmVO *vmvo = [[VmVO alloc] init];
             vmvo.vmId = vm.vmId;
             vmvo.name = vm.name;
-            vc.vmVO = vmvo;
-            if(self.isDetailPagePushed){
-                [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
-            }else{
-                [self presentViewController:root animated:YES completion:nil];
-            }
+            
+            [vmvo getVmVOAsync:^(id object, NSError *error) {
+                vc.vmVO = object;
+                if(self.isDetailPagePushed){
+                    [self.parentViewController.parentViewController.parentViewController.navigationController pushViewController:vc animated:YES];
+                }else{
+                    [self presentViewController:root animated:YES completion:nil];
+                }
+            }];
+            
+            
         }
     //}
 }
