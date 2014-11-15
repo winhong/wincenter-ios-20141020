@@ -102,58 +102,66 @@
         self.btnStop.enabled = true;
         self.btnRestart.enabled = true;
         self.btnMigrate.enabled = true;
-    }else if(self.vmVO.operationState && !([self.vmVO.operationState isEqualToString:@""])){
-        self.btnStart.enabled = false;
-        self.btnStop.enabled = false;
-        self.btnRestart.enabled = false;
-        self.btnMigrate.enabled = false;
-    }else if ([self.vmVO.state isEqualToString:@"OK"] || [self.vmVO.state isEqualToString:@"STOPPED"]){
-
-        HostVO *hostVO = [HostVO new];
-        hostVO.hostId = self.vmVO.ownerHostId;
-        [hostVO getHostVOAsync:^(id object, NSError *error) {
-            HostVO *hostVO = (HostVO*) object;
-            if([hostVO.state isEqualToString:@"DISCONNECT"]){
-                self.btnStart.enabled = false;
-                self.btnStop.enabled = false;
-                self.btnRestart.enabled = false;
-            }
-            else if ([self.vmVO.state isEqualToString:@"OK"])
-            {
-                self.btnStart.enabled = false;
-                self.btnStop.enabled = true;
-                self.btnRestart.enabled = true;
-            }
-            else if([self.vmVO.state isEqualToString:@"STOPPED"])
-            {
-                self.btnStart.enabled = true;
-                self.btnStop.enabled = false;
-                self.btnRestart.enabled = false;
-            }
-            
-            if([hostVO.state isEqualToString:@"DISCONNECT"]){
-                //虚拟机所在物理机处于故障状态时，不支持虚拟机迁移
-                self.btnMigrate.enabled = false;
-            }
-            else if([self.vmVO.poolName isEqualToString:@""]){
-                //虚拟机在游离主机上时，不支持虚拟机迁移
-                self.btnMigrate.enabled = false;
-            }else{
-                [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
-                    BOOL isLocalStorage = false;
-                    for (StorageVolumnVO *volumn in  ((VmDiskListResult*)object).volumes) {
-                        if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
-                            isLocalStorage = true;
-                            break;
+    }else{
+        [UserVO getUserVOAsync:^(id object, NSError *error) {
+            UserVO *userVO = object;
+            //非业务系统管理员
+            if(userVO.role!=3){
+                if(self.vmVO.operationState && !([self.vmVO.operationState isEqualToString:@""])){
+                    self.btnStart.enabled = false;
+                    self.btnStop.enabled = false;
+                    self.btnRestart.enabled = false;
+                    self.btnMigrate.enabled = false;
+                }else if ([self.vmVO.state isEqualToString:@"OK"] || [self.vmVO.state isEqualToString:@"STOPPED"]){
+                    
+                    HostVO *hostVO = [HostVO new];
+                    hostVO.hostId = self.vmVO.ownerHostId;
+                    [hostVO getHostVOAsync:^(id object, NSError *error) {
+                        HostVO *hostVO = (HostVO*) object;
+                        if([hostVO.state isEqualToString:@"DISCONNECT"]){
+                            self.btnStart.enabled = false;
+                            self.btnStop.enabled = false;
+                            self.btnRestart.enabled = false;
                         }
-                    }
-                    //没有本地存储时，处于开机、关机状态时，非游离主机中，不在维护状态的物理机中时，可以迁移
-                    if(!isLocalStorage){
-                        self.btnMigrate.enabled = true;
-                    }
-                }];
+                        else if ([self.vmVO.state isEqualToString:@"OK"])
+                        {
+                            self.btnStart.enabled = false;
+                            self.btnStop.enabled = true;
+                            self.btnRestart.enabled = true;
+                        }
+                        else if([self.vmVO.state isEqualToString:@"STOPPED"])
+                        {
+                            self.btnStart.enabled = true;
+                            self.btnStop.enabled = false;
+                            self.btnRestart.enabled = false;
+                        }
+                        
+                        if([hostVO.state isEqualToString:@"DISCONNECT"]){
+                            //虚拟机所在物理机处于故障状态时，不支持虚拟机迁移
+                            self.btnMigrate.enabled = false;
+                        }
+                        else if([self.vmVO.poolName isEqualToString:@""]){
+                            //虚拟机在游离主机上时，不支持虚拟机迁移
+                            self.btnMigrate.enabled = false;
+                        }else{
+                            [self.vmVO getVmVolumnListAsync:^(id object, NSError *error) {
+                                BOOL isLocalStorage = false;
+                                for (StorageVolumnVO *volumn in  ((VmDiskListResult*)object).volumes) {
+                                    if ([volumn.storagePoolName isEqualToString:@"Local storage"]) {
+                                        isLocalStorage = true;
+                                        break;
+                                    }
+                                }
+                                //没有本地存储时，处于开机、关机状态时，非游离主机中，不在维护状态的物理机中时，可以迁移
+                                if(!isLocalStorage){
+                                    self.btnMigrate.enabled = true;
+                                }
+                            }];
+                        }
+                        
+                    }];
+                }
             }
-            
         }];
     }
 }
