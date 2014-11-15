@@ -15,7 +15,7 @@
                                 @"OK":@"运行中",
                                 @"EXECUTING":@"部署中",
                                 @"CREATED":@"待部署",
-                                @"STARTING":@"正在开机",
+                                @"STARTING":@"开机中",
                                 @"STOPPED":@"已关机",
                                 @"STOPPING":@"关机中",
                                 @"DELETING":@"删除中",
