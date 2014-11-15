@@ -60,6 +60,6 @@
 - (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock;
 - (void) getVmListAsync:(FetchObjectCompletionBlock)completionBlock referTo:(NSMutableArray*)referList;
 - (void) getActivityVmAsync:(FetchObjectCompletionBlock)completionBlock;
-- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(int)startTime;
+- (void) getPerformanceAsync:(FetchObjectCompletionBlock)completionBlock withStartTime:(float)startTime;
 
 @end
