@@ -114,11 +114,16 @@
     VmVO *vmvo = [[VmVO alloc] init];
     vmvo.vmId = businessVmvo.vmId;
     vmvo.name = businessVmvo.name;
-    vc.vmVO = vmvo;
-    if(self.isDetailPagePushed){
-        [self.navigationController pushViewController:vc animated:YES];
-    }else{
-        [self presentViewController:root animated:YES completion:nil];
-    }
+    
+    [vmvo getVmVOAsync:^(id object, NSError *error) {
+        vc.vmVO = object;
+        if(self.isDetailPagePushed){
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            [self presentViewController:root animated:YES completion:nil];
+        }
+    }];
+
+    
 }
 @end
