@@ -74,6 +74,7 @@
     cell.name.text = vmvo.name;
     cell.startOrder.text = [NSString stringWithFormat:@"%d", vmvo.startOrder];
     cell.delayInterval.text = [NSString stringWithFormat:@"%d", vmvo.delayInterval];
+    cell.host.text = vmvo.hostName;
     
     
     HostVO *hostVO = [HostVO new];

@@ -16,6 +16,7 @@
 @property int delayInterval;
 @property NSString *state;
 @property NSString *operationState;
+@property NSString *hostName;
 
 - (NSString*)state_text;
 - (UIColor *)state_color;
