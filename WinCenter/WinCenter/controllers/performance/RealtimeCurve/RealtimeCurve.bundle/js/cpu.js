@@ -125,6 +125,7 @@ function drawLineCpu(data,cpuType){
 	    	layout: 'vertical',
             align: 'right',
             width:120,
+            height:120,
             verticalAlign: 'top',
             borderWidth: 0,
 	        itemStyle: {

@@ -93,6 +93,7 @@ function drawLineMemory(data){
             align: 'right',
             verticalAlign: 'right',
             width:120,
+            height:120,
             borderWidth: 0,
 	        itemStyle: {
 	            fontSize: '11px',
