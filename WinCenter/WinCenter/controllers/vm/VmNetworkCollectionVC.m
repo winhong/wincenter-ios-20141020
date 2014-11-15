@@ -39,6 +39,9 @@
     cell.status.text = [vmNetworkVO state_text];
     cell.status.textColor = [vmNetworkVO state_color];
     cell.label4.text = [NSString stringWithFormat:@"%d", vmNetworkVO.vlanId];
+    if ([cell.label4.text isEqualToString:@"-1"]) {
+        cell.label4.text = @"无";
+    }
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
     }else{
