@@ -73,16 +73,16 @@
     
     HostVO *hostVO = [HostVO new];
     hostVO.hostId = vmVO.ownerHostId;
-//    [hostVO getHostVOAsync:^(id object, NSError *error) {
-//        HostVO *hostVO = (HostVO*) object;
-//        if([hostVO.state isEqualToString:@"DISCONNECT"]){
-//            cell.status.text = @"未知";
-//            cell.status.text = [UIColor lightGrayColor];
-//        }else{
-//            cell.status.text = [vmVO state_text];
-//            cell.status.textColor = [vmVO state_color];
-//        }
-//    }];
+    [hostVO getHostVOAsync:^(id object, NSError *error) {
+        HostVO *hostVO = (HostVO*) object;
+        if([hostVO.state isEqualToString:@"DISCONNECT"]){
+            cell.status.text = @"未知";
+            cell.status.text = [UIColor lightGrayColor];
+        }else{
+            cell.status.text = [vmVO state_text];
+            cell.status.textColor = [vmVO state_color];
+        }
+    }];
 
     cell.status_image.layer.cornerRadius = 6;
     cell.status_image.backgroundColor = [vmVO state_color];
