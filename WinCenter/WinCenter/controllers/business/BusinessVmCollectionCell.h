@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *state;
 @property (weak, nonatomic) IBOutlet UILabel *startOrder;
 @property (weak, nonatomic) IBOutlet UILabel *delayInterval;
-@property (weak, nonatomic) IBOutlet UILabel *host;
+@property (weak, nonatomic) IBOutlet UITextView *host;
+
 
 @end

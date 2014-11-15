@@ -320,19 +320,19 @@
                                             <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-Vh-uzi">
-                                            <rect key="frame" x="471" y="19" width="108" height="21"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="adfadsfsadfsdfsadf" translatesAutoresizingMaskIntoConstraints="NO" id="0vl-at-54g">
+                                            <rect key="frame" x="470" y="12" width="111" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delayInterval" destination="Guf-vO-D0J" id="sde-S9-PBh"/>
-                                    <outlet property="host" destination="dUH-Vh-uzi" id="Cih-FI-RK1"/>
+                                    <outlet property="host" destination="0vl-at-54g" id="kUR-ek-5Il"/>
                                     <outlet property="name" destination="cJE-JZ-bof" id="CxS-7q-5X0"/>
                                     <outlet property="startOrder" destination="oyJ-cR-ZGV" id="fed-T6-xOQ"/>
                                     <outlet property="state" destination="7iq-XD-N6B" id="fG3-wn-oAl"/>
