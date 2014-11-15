@@ -70,13 +70,6 @@
     $("#submitBtn").bind("touchstart",function(){
          sendTimeToIOS("开始查询");
     })
-    
-    bridge.registerHandler('businessUser', function(data, responseCallback) {
-         $("#chart").hide();
-         $("#tips").show().find("p").html("无性能数据！");
-                        
-    })
-                           
                            
     var chartMap = new Map();
 	
@@ -116,6 +109,11 @@
 
         bridge.registerHandler('webviewHideLayer', function(data, responseCallback) {
             $("#layer").hide();
+        })
+                                   
+        bridge.registerHandler('businessUser', function(data, responseCallback) {
+             $("#chart").hide();
+             $("#tips").show().find("p").html("无性能数据！");
         })
 
 	    bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
