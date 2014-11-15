@@ -30,18 +30,23 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        if(!self.navigationItem.leftBarButtonItem){
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        }
+        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
+        }
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-//    [[RemoteObject getCurrentDatacenterVO] getDatacenterVOAsync:^(id object, NSError *error) {
-//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        if(!self.navigationItem.leftBarButtonItem){
-//            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
-//        }
-//        self.navigationItem.leftBarButtonItem.title = ((DatacenterVO *)object).name;
-//        }
-//    }];
+
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         if(!self.navigationItem.leftBarButtonItem){
             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(showMenu:)];
