@@ -34,7 +34,7 @@
 @property int maxMem;
 @property int minMem;
 @property int minStaticMem;
-@property int maxStaticMen;
+@property int maxStaticMem;
 
 - (NSString *) isInstallTools_text;
 - (NSString*)osType_imageName;

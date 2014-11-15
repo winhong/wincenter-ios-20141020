@@ -294,7 +294,7 @@
         self.custom_memory1.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minStaticMem/1024.0];
         self.custom_memory2.text = [NSString stringWithFormat:@"%.2f",self.vmVO.minMem/1024.0];
         self.custom_memory3.text = [NSString stringWithFormat:@"%.2f",self.vmVO.maxMem/1024.0];
-        self.custom_memory4.text = [NSString stringWithFormat:@"%.2f",self.vmVO.maxStaticMen/1024.0];
+        self.custom_memory4.text = [NSString stringWithFormat:@"%.2f",self.vmVO.maxStaticMem/1024.0];
     }
     self.memory.text = [NSString stringWithFormat:@"%.2f", self.vmVO.memory/1024.0];
     
