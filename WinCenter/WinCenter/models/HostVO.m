@@ -69,6 +69,14 @@
     
 }
 
+- (NSString*)resourcePoolName_text{
+    if (self.resourcePoolName && ![self.resourcePoolName isEqualToString:@""] && ![self.resourcePoolName isEqualToString:@"null"]) {
+        return self.resourcePoolName;
+    }else{
+        return @"(游离)";
+    }
+}
+
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock{
     if([[[NSUserDefaults standardUserDefaults] stringForKey:@"isDemo"] isEqualToString:@"true"]){
         completeBlock([[HostVO alloc] initWithJSONData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HostVO.getHostVOAsync" ofType:@"json"]]], nil);

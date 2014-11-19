@@ -10,6 +10,7 @@
 #import "F3BarGauge.h"
 
 @interface HostCollectionCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *belongs;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *status;
 @property (weak, nonatomic) IBOutlet UIView *status_image;

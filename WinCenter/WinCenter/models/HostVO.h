@@ -50,6 +50,7 @@
 - (NSString*)storage_unit;
 - (float)localStorage_value;
 - (NSString*)localStorage_unit;
+- (NSString*)resourcePoolName_text;
 
 - (void) getHostVOAsync:(FetchObjectCompletionBlock)completeBlock;
 - (void) getHostStatVOAsync:(FetchObjectCompletionBlock)completeBlock;

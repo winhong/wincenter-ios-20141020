@@ -43,6 +43,7 @@
     
     HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
+    cell.belongs.text = [hostVO resourcePoolName_text];
     cell.label1.text = hostVO.ip;
     if(hostVO.ip == nil){
         cell.label1.text = @"无法获取网络";

@@ -104,6 +104,8 @@
     
     HostVO *hostVO = (HostVO *) self.dataList[indexPath.row];
     cell.title.text = hostVO.hostName;
+    NSString *str = [hostVO resourcePoolName_text];
+    cell.belongs.text = str;
     cell.ip.text = hostVO.ip;
     if(hostVO.ip == nil){
         cell.ip.text = @"无法获取网络";
