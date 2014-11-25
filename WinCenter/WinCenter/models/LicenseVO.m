@@ -17,7 +17,7 @@
     }
     
     [[UNIRest get:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:@"/pc/licServlet?action=checkLic"];
+        [simpleRequest setUrl:@"/pc/licServlet?action=checkLic&timeout=5"];
     }] asJsonAsync:^(UNIHTTPJsonResponse *jsonResponse, NSError *error) {
         completeBlock([[LicenseCheckVO alloc] initWithJSONData:jsonResponse.rawBody], error);
     }];
