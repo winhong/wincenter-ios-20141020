@@ -135,6 +135,14 @@
     return YES;
 }
 
+-(BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if ([UIMenuController sharedMenuController]) {
+        [UIMenuController sharedMenuController].menuVisible = NO;
+    }
+    return NO;
+}
+
 //-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 //    // Check for non-numeric characters
 //    NSUInteger lengthOfString = string.length;
