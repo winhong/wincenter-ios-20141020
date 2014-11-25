@@ -107,6 +107,10 @@
     cell.memorySize.text = [NSString stringWithFormat:@"%.2fGB", vmVO.memory/1024.0];
     cell.storageSize.text = [NSString stringWithFormat:@"%.2f%@", [vmVO storage_value], [vmVO storage_unit]];
     
+    cell.status_image.layer.cornerRadius = 6;
+    cell.status_image.backgroundColor = [vmVO state_color];
+
+    
     HostVO *hostVO = [HostVO new];
     hostVO.hostId = vmVO.ownerHostId;
     [hostVO getHostVOAsync:^(id object, NSError *error) {
@@ -115,6 +119,7 @@
             if([hostVO.state isEqualToString:@"DISCONNECT"]){
                 cell.status.text = @"未知";
                 cell.status.textColor = [UIColor lightGrayColor];
+                 cell.status_image.backgroundColor = [UIColor lightGrayColor];
             }else{
                 if(vmVO){
                     cell.status.text = [vmVO state_text];
@@ -129,8 +134,6 @@
         cell.osType.text = @"(尚未安装系统)";
     }
     cell.osType_image.image = [UIImage imageNamed:[vmVO osType_imageName]];
-    cell.status_image.layer.cornerRadius = 6;
-    cell.status_image.backgroundColor = [vmVO state_color];
     
     cell.progress_1.litEffect = NO;
     cell.progress_1.numBars = 10;
