@@ -14,7 +14,7 @@
 @property NSString *type;
 @property NSString *state;
 @property NSString *storagePoolName;
-@property int size;
+@property float size;
 @property NSString *shared;
 
 - (NSString*)type_text;

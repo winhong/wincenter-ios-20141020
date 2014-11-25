@@ -41,7 +41,7 @@
     cell.status.textColor = [vmDiskVO state_color];
     cell.label1.text = [vmDiskVO type_text];
     cell.label2.text = vmDiskVO.storagePoolName;
-    cell.label3.text = [NSString stringWithFormat:@"%dGB", vmDiskVO.size];
+    cell.label3.text = [NSString stringWithFormat:@"%.2fGB", vmDiskVO.size];
     cell.share_image.hidden = [vmDiskVO.shared isEqualToString:@"false"];
     if (indexPath.row % 2 == 1) {
         cell.backgroundColor = [UIColor colorWithHexString:@"#f9f9f9"];
