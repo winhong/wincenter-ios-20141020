@@ -163,17 +163,17 @@ NSTimer *hudTimer = nil;
 
                     //response(nil, error);
                 }else{
-                    if(res.code==500){
-                        NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
-                                                                          title:@"请求失败"
-                                                                        message:@"当前会话失效，可能的原因是服务器重启、账号已被修改密码、账号已被冻结或者账号已被删除，请重新登陆！"
-                                                                       delegate:nil];
-                        //[alert setTextAlignment:NSTextAlignmentCenter];
-                        [alert show];
-                        [alert showWithCompletion:^{
-                            NSLog(@"Alert with completion handler");
-                        }];
-                    }else{
+//                    if(res.code==500){
+//                        NZAlertView *alert = [[NZAlertView alloc] initWithStyle:NZAlertStyleError
+//                                                                          title:@"请求失败"
+//                                                                        message:@"当前会话失效，可能的原因是服务器重启、账号已被修改密码、账号已被冻结或者账号已被删除，请重新登陆！"
+//                                                                       delegate:nil];
+//                        //[alert setTextAlignment:NSTextAlignmentCenter];
+//                        [alert show];
+//                        [alert showWithCompletion:^{
+//                            NSLog(@"Alert with completion handler");
+//                        }];
+//                    }else{
                         UNIHTTPJsonResponse *jsonResponse = [[UNIHTTPJsonResponse alloc] initWithSimpleResponse:res];
                         if(jsonResponse){
                             NSString *cookieStr = [jsonResponse.headers valueForKey:@"Set-Cookie"];
@@ -183,7 +183,7 @@ NSTimer *hudTimer = nil;
                             }
                         }
                         response(jsonResponse, error);
-                    }
+//                    }
                 }
                 
             }
