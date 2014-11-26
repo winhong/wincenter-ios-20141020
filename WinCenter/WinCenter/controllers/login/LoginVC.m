@@ -196,7 +196,7 @@
         [[NSUserDefaults standardUserDefaults] setValue:self.ipAddress.text forKey:@"SERVER_ROOT"];
         [[NSUserDefaults standardUserDefaults] setValue:@"false" forKey:@"isDemo"];
         //有可能更换了成功登陆后退出，切换其他的服务器地址，因此必须每次登陆前清空Cookie
-        [UNIRest defaultHeader:@"Cookie" value:@""];
+        //[UNIRest defaultHeader:@"Cookie" value:@""];
         
         [LoginVO login:self.userName.text withPassword:self.password.text withSucceedBlock:^(NSError *error){
             [[NSUserDefaults standardUserDefaults] setValue:self.userName.text forKey:@"USER_NAME"];
