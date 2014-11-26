@@ -245,7 +245,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     }else{
         [self hideDatepickerView];
         self.startTimeStr = dateAndTime;
-        [_bridge callHandler:@"setStartTime" data:(@"%@",dateAndTime)];
+        [_bridge callHandler:@"setStartTime" data:[NSString stringWithFormat:@"%@",dateAndTime ]];
     }
     
 }
