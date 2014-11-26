@@ -23,7 +23,7 @@
 </div>
 <div id="chart">
     <div style="text-align:center;padding:7px 0 0">
-    	开始时间：<input type="input" id="dateTimePicker" style="width:130px;" readonly /> <button id="selectStartTime">选择开始时间</button>  <button id="submitBtn">查询</button> 
+    	开始时间：<input type="input" id="dateTimePicker" style="width:110px;" readonly /> <button id="selectStartTime">选择开始时间</button>  <button id="submitBtn">查询</button>
     </div>
     <div id="dateTips" style="color:red;padding:0;margin:3px 0;text-align:center">&nbsp;</div>
     <div id="cpuChart" style="width:100%;height:300px"></div>
@@ -46,14 +46,17 @@
     }
 
     function show(){
-        var date = new Date(); //日期对象
+        var timestamp =Date.parse(new Date());
+        var preTenMinute = timestamp - 10*60*1000;
+        var date = new Date(preTenMinute);
+        
         var now = "";
         now = date.getFullYear()+"-"; //读英文就行了
         now = now + formaterDate((date.getMonth()+1))+"-";//取月的时候取的是当前月-1如果想取当前月+1就可以了
         now = now + formaterDate(date.getDate())+" ";
         now = now + formaterDate(date.getHours())+":";
-        now = now + formaterDate(date.getMinutes()-10)+":";
-        now = now + formaterDate(date.getSeconds())+"";
+        now = now + formaterDate(date.getMinutes());
+        //now = now + formaterDate(date.getSeconds())+"";
         return now;
     }
     document.getElementById("dateTimePicker").value = show();
@@ -108,7 +111,7 @@
 		})
 
         bridge.registerHandler('setStartTime', function(data, responseCallback) {
-            $("#dateTimePicker").val(data);
+            $("#dateTimePicker").val(data.substring(0, 16));
         })
 
         bridge.registerHandler('webviewShowLayer', function(data, responseCallback) {
