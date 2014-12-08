@@ -22,7 +22,7 @@
 @property (nonatomic,strong) UILabel *selLabel;
 @end
 
-@implementation PieChartVC
+@implementation PieChartVC 
 
 - (void)viewDidLoad
 {
