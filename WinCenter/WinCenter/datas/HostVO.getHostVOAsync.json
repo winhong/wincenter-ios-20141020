@@ -1,7 +1,7 @@
 {
     "multipathhandle": null,
     "multipathing": false,
-    "productVersion": "2.0.0",
+    "productVersion": "5.4.0",
     "productBrand": "WinServer",
     "hostId": 1,
     "resourcePoolId": 1,
@@ -28,7 +28,7 @@
     "authorization": null,
     "cpuSlots": 1,
     "serverVendor": "Intel",
-    "virtualVersion": "2.0.0",
+    "virtualVersion": "5.4.0",
     "virtualSoftware": "WinServer",
     "versionDate": "2014-09-04",
     "startRunTime": 1409799000,

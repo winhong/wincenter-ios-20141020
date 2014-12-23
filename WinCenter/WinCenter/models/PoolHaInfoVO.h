@@ -18,7 +18,7 @@
 //    "masterIp": "192.168.212.163",
 //    "version": "1.0",
 //    "versionDate": 1414060936986,
-//    "productVersion": "2.0.0",
+//    "productVersion": "5.4.0",
 //    "productBrand": "WinServer",
 //    "resourcePoolId": 7,
 //    "resourcePoolName": "璧勬簮姹�(鍕跨Щ鍑轰富鏈�163鍜�161锛�",
